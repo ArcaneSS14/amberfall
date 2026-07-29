@@ -3,7 +3,8 @@
 - type: gameMap
   id: Atlas
   mapName: Atlas
-  mapPath: /Maps/_Trauma/atlas.yml
+  mapLayers:
+    - /Maps/_Trauma/atlas.yml
   minPlayers: 0
   maxPlayers: 20
   stations:

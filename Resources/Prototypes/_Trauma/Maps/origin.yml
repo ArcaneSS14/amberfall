@@ -3,7 +3,8 @@
 - type: gameMap
   id: Origin
   mapName: 'Origin'
-  mapPath: /Maps/_Trauma/origin.yml
+  mapLayers:
+    - /Maps/_Trauma/origin.yml
   minPlayers: 50
   stations:
     Origin:

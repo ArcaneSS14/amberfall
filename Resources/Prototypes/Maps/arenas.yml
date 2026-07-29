@@ -1,7 +1,8 @@
 - type: gameMap
   id: MeteorArena
   mapName: Meteor Arena
-  mapPath: /Maps/Nonstations/meteor-arena.yml
+  mapLayers:
+    - /Maps/Nonstations/meteor-arena.yml
   minPlayers: 0
   stations:
     Arena:
@@ -15,7 +16,8 @@
 - type: gameMap
   id: dm01-entryway
   mapName: DM01 Entryway
-  mapPath: /Maps/_Goobstation/Nonstations/dm01-entryway.yml # Trauma
+  mapLayers:
+    - /Maps/_Goobstation/Nonstations/dm01-entryway.yml # Trauma
   minPlayers: 0
   stations:
     dm01-entryway:

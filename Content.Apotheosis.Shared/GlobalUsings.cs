@@ -1,0 +1,10 @@
+global using System;
+global using System.Collections.Generic;
+global using System.Numerics;
+global using Robust.Shared.Analyzers;
+global using Robust.Shared.GameObjects;
+global using Robust.Shared.GameStates;
+global using Robust.Shared.IoC;
+global using Robust.Shared.Map;
+global using Robust.Shared.Maths;
+global using Robust.Shared.Serialization.Manager.Attributes;

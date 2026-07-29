@@ -1261,6 +1261,7 @@
     collection: FootstepTile
   itemDrop: SheetGlass1
   tileRipResistance: 150 # Goob
+  renderZLevelBelow: true
 
 - type: tile
   id: FloorRGlass
@@ -1277,6 +1278,7 @@
     collection: FootstepTile
   itemDrop: SheetRGlass1
   tileRipResistance: 175 # Goob
+  renderZLevelBelow: true
 
 - type: tile
   id: FloorMetalFoam

@@ -35,7 +35,7 @@ public class MapLoadBenchmark
 
         Paths = server.ResolveDependency<IPrototypeManager>()
             .EnumeratePrototypes<GameMapPrototype>()
-            .ToDictionary(x => x.ID, x => x.MapPath.ToString());
+            .ToDictionary(x => x.ID, x => x.MapLayers.ToArray());
 
         _mapLoader = server.ResolveDependency<IEntitySystemManager>().GetEntitySystem<MapLoaderSystem>();
         _mapSys = server.ResolveDependency<IEntitySystemManager>().GetEntitySystem<SharedMapSystem>();
@@ -53,20 +53,24 @@ public class MapLoadBenchmark
     [ParamsSource(nameof(MapsSource))]
     public string Map;
 
-    public Dictionary<string, string> Paths;
-    private MapId _mapId;
+    public Dictionary<string, ResPath[]> Paths;
+    private readonly List<MapId> _mapIds = new();
 
     [Benchmark]
     public async Task LoadMap()
     {
-        var mapPath = new ResPath(Paths[Map]);
         var server = _pair.Server;
         await server.WaitPost(() =>
         {
-            var success = _mapLoader.TryLoadMap(mapPath, out var map, out _);
-            if (!success)
-                throw new Exception("Map load failed");
-            _mapId = map.Value.Comp.MapId;
+            _mapIds.Clear();
+            foreach (var mapPath in Paths[Map])
+            {
+                var success = _mapLoader.TryLoadMap(mapPath, out var map, out _);
+                if (!success)
+                    throw new Exception($"Map layer {mapPath} failed to load");
+
+                _mapIds.Add(map.Value.Comp.MapId);
+            }
         });
     }
 
@@ -74,7 +78,15 @@ public class MapLoadBenchmark
     public void IterationCleanup()
     {
         var server = _pair.Server;
-        server.WaitPost(() => _mapSys.DeleteMap(_mapId))
+        server.WaitPost(() =>
+            {
+                foreach (var mapId in _mapIds)
+                {
+                    _mapSys.DeleteMap(mapId);
+                }
+
+                _mapIds.Clear();
+            })
             .Wait();
     }
 }

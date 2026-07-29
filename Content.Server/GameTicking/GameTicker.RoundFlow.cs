@@ -31,6 +31,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.EntitySerialization;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
@@ -59,6 +60,10 @@ namespace Content.Server.GameTicking
 
         [ViewVariables]
         private bool _startingRound;
+
+        private readonly HashSet<MapId> _roundMapsToInitialize = new();
+
+        public IReadOnlyCollection<MapId> LoadedGameMaps => _roundMapsToInitialize;
 
         [ViewVariables]
         private GameRunLevel _runLevel;
@@ -102,8 +107,12 @@ namespace Content.Server.GameTicking
         private void LoadMaps()
         {
             if (_map.MapExists(DefaultMap))
+            {
+                _roundMapsToInitialize.Add(DefaultMap);
                 return;
+            }
 
+            _roundMapsToInitialize.Clear();
             AddGamePresetRules();
 
             var maps = new List<GameMapPrototype>();
@@ -147,13 +156,21 @@ namespace Content.Server.GameTicking
             {
                 _map.CreateMap(out var mapId, runMapInit: false);
                 DefaultMap = mapId;
+                _roundMapsToInitialize.Add(mapId);
                 return;
             }
 
             for (var i = 0; i < maps.Count; i++)
             {
-                LoadGameMap(maps[i], out var mapId);
+                var grids = LoadGameMap(maps[i], out var mapId);
                 DebugTools.Assert(!_map.IsInitialized(mapId));
+                _roundMapsToInitialize.Add(mapId);
+
+                foreach (var grid in grids)
+                {
+                    if (TryComp(grid, out TransformComponent? transform))
+                        _roundMapsToInitialize.Add(transform.MapID);
+                }
 
                 if (i == 0)
                     DefaultMap = mapId;
@@ -175,6 +192,14 @@ namespace Content.Server.GameTicking
             var ev = new PreGameMapLoad(proto, opts.Value, offset.Value, rot.Value);
             RaiseLocalEvent(ev);
             return ev;
+        }
+
+        private static IReadOnlyCollection<ResPath> GetMapLayers(GameMapPrototype proto)
+        {
+            if (proto.MapLayers is not { Count: > 0 })
+                throw new InvalidOperationException($"Game map {proto.ID} does not define any map layers.");
+
+            return proto.MapLayers;
         }
 
         /// <summary>
@@ -201,39 +226,56 @@ namespace Content.Server.GameTicking
             Angle? rot = null)
         {
             var ev = RaisePreLoad(proto, options, offset, rot);
+            var layers = GetMapLayers(ev.GameMap);
+            var gridUids = new List<EntityUid>();
+            mapId = default;
+            var firstLayer = true;
 
-            if (ev.GameMap.IsGrid)
+            foreach (var layer in layers)
             {
-                var mapUid = _map.CreateMap(out mapId, runMapInit: options?.InitializeMaps ?? false);
-                if (!_loader.TryLoadGrid(mapId,
-                        ev.GameMap.MapPath,
-                        out var grid,
-                        ev.Options,
-                        ev.Offset,
-                        ev.Rotation))
+                Entity<MapComponent> map;
+                if (ev.GameMap.IsGrid)
                 {
-                    throw new Exception($"Failed to load game-map grid {ev.GameMap.ID}");
+                    if (!_loader.TryLoadGrid(
+                            layer,
+                            out var loadedMap,
+                            out var grid,
+                            ev.Options,
+                            ev.Offset,
+                            ev.Rotation))
+                    {
+                        throw new Exception($"Failed to load layer {layer} of game-map grid {ev.GameMap.ID}");
+                    }
+
+                    map = loadedMap.Value;
+                    gridUids.Add(grid.Value.Owner);
+                }
+                else
+                {
+                    if (!_loader.TryLoadMap(
+                            layer,
+                            out var loadedMap,
+                            out var grids,
+                            ev.Options,
+                            ev.Offset,
+                            ev.Rotation))
+                    {
+                        throw new Exception($"Failed to load layer {layer} of game map {ev.GameMap.ID}");
+                    }
+
+                    map = loadedMap.Value;
+                    gridUids.AddRange(grids.Select(x => x.Owner));
                 }
 
-                _metaData.SetEntityName(mapUid, proto.MapName);
-                var g = new List<EntityUid> {grid.Value.Owner};
-                RaiseLocalEvent(new PostGameMapLoad(proto, mapId, g, stationName));
-                return g;
+                if (firstLayer)
+                {
+                    mapId = map.Comp.MapId;
+                    firstLayer = false;
+                }
+
+                _metaData.SetEntityName(map.Owner, proto.MapName);
             }
 
-            if (!_loader.TryLoadMap(ev.GameMap.MapPath,
-                    out var map,
-                    out var grids,
-                    ev.Options,
-                    ev.Offset,
-                    ev.Rotation))
-            {
-                throw new Exception($"Failed to load game map {ev.GameMap.ID}");
-            }
-
-            mapId = map.Value.Comp.MapId;
-            _metaData.SetEntityName(map.Value.Owner, proto.MapName);
-            var gridUids = grids.Select(x => x.Owner).ToList();
             RaiseLocalEvent(new PostGameMapLoad(proto, mapId, gridUids, stationName));
             return gridUids;
         }
@@ -251,40 +293,87 @@ namespace Content.Server.GameTicking
             Angle? rot = null)
         {
             var ev = RaisePreLoad(proto, opts, offset, rot);
+            var layers = GetMapLayers(ev.GameMap);
+            var gridUids = new List<EntityUid>();
+            var firstLayer = true;
 
-            if (ev.GameMap.IsGrid)
+            foreach (var layer in layers)
             {
-                var mapUid = _map.CreateMap(mapId);
-                if (!_loader.TryLoadGrid(mapId,
-                        ev.GameMap.MapPath,
-                        out var grid,
-                        ev.Options,
-                        ev.Offset,
-                        ev.Rotation))
+                Entity<MapComponent> map;
+                if (ev.GameMap.IsGrid)
                 {
-                    throw new Exception($"Failed to load game-map grid {ev.GameMap.ID}");
+                    if (firstLayer)
+                    {
+                        var mapUid = _map.CreateMap(mapId, runMapInit: ev.Options.InitializeMaps);
+                        if (!_loader.TryLoadGrid(
+                                mapId,
+                                layer,
+                                out var grid,
+                                ev.Options,
+                                ev.Offset,
+                                ev.Rotation))
+                        {
+                            throw new Exception($"Failed to load layer {layer} of game-map grid {ev.GameMap.ID}");
+                        }
+
+                        map = (mapUid, Comp<MapComponent>(mapUid));
+                        gridUids.Add(grid.Value.Owner);
+                    }
+                    else
+                    {
+                        if (!_loader.TryLoadGrid(
+                                layer,
+                                out var loadedMap,
+                                out var grid,
+                                ev.Options,
+                                ev.Offset,
+                                ev.Rotation))
+                        {
+                            throw new Exception($"Failed to load layer {layer} of game-map grid {ev.GameMap.ID}");
+                        }
+
+                        map = loadedMap.Value;
+                        gridUids.Add(grid.Value.Owner);
+                    }
+                }
+                else if (firstLayer)
+                {
+                    if (!_loader.TryLoadMapWithId(
+                            mapId,
+                            layer,
+                            out var loadedMap,
+                            out var grids,
+                            ev.Options,
+                            ev.Offset,
+                            ev.Rotation))
+                    {
+                        throw new Exception($"Failed to load layer {layer} of game map {ev.GameMap.ID}");
+                    }
+
+                    map = loadedMap.Value;
+                    gridUids.AddRange(grids.Select(x => x.Owner));
+                }
+                else
+                {
+                    if (!_loader.TryLoadMap(
+                            layer,
+                            out var loadedMap,
+                            out var grids,
+                            ev.Options,
+                            ev.Offset,
+                            ev.Rotation))
+                    {
+                        throw new Exception($"Failed to load layer {layer} of game map {ev.GameMap.ID}");
+                    }
+
+                    map = loadedMap.Value;
+                    gridUids.AddRange(grids.Select(x => x.Owner));
                 }
 
-                _metaData.SetEntityName(mapUid, proto.MapName);
-                var g = new List<EntityUid> {grid.Value.Owner};
-                RaiseLocalEvent(new PostGameMapLoad(proto, mapId, g, stationName));
-                return g;
+                _metaData.SetEntityName(map.Owner, proto.MapName);
+                firstLayer = false;
             }
 
-            if (!_loader.TryLoadMapWithId(
-                    mapId,
-                    ev.GameMap.MapPath,
-                    out var map,
-                    out var grids,
-                    ev.Options,
-                    ev.Offset,
-                    ev.Rotation))
-            {
-                throw new Exception($"Failed to load map");
-            }
-
-            _metaData.SetEntityName(map.Value.Owner, proto.MapName);
-            var gridUids = grids.Select(x => x.Owner).ToList();
             RaiseLocalEvent(new PostGameMapLoad(proto, mapId, gridUids, stationName));
             return gridUids;
         }
@@ -303,36 +392,41 @@ namespace Content.Server.GameTicking
             // TODO MAP LOADING use a new event?
             // This is quite different from the other methods, which will actually create a **new** map.
             var ev = RaisePreLoad(proto, opts, offset, rot);
+            var layers = GetMapLayers(ev.GameMap);
+            var gridUids = new List<EntityUid>();
 
-            if (ev.GameMap.IsGrid)
+            foreach (var layer in layers)
             {
-                if (!_loader.TryLoadGrid(targetMap,
-                        ev.GameMap.MapPath,
-                        out var grid,
+                if (ev.GameMap.IsGrid)
+                {
+                    if (!_loader.TryLoadGrid(
+                            targetMap,
+                            layer,
+                            out var grid,
+                            ev.Options,
+                            ev.Offset,
+                            ev.Rotation))
+                    {
+                        throw new Exception($"Failed to merge layer {layer} of game-map grid {ev.GameMap.ID}");
+                    }
+
+                    gridUids.Add(grid.Value.Owner);
+                    continue;
+                }
+
+                if (!_loader.TryMergeMap(
+                        targetMap,
+                        layer,
+                        out var grids,
                         ev.Options,
                         ev.Offset,
                         ev.Rotation))
                 {
-                    throw new Exception($"Failed to load game-map grid {ev.GameMap.ID}");
+                    throw new Exception($"Failed to merge layer {layer} of game map {ev.GameMap.ID}");
                 }
 
-                var g = new List<EntityUid> {grid.Value.Owner};
-                // TODO MAP LOADING use a new event?
-                RaiseLocalEvent(new PostGameMapLoad(proto, targetMap, g, stationName));
-                return g;
+                gridUids.AddRange(grids.Select(x => x.Owner));
             }
-
-            if (!_loader.TryMergeMap(targetMap,
-                    ev.GameMap.MapPath,
-                    out var grids,
-                    ev.Options,
-                    ev.Offset,
-                    ev.Rotation))
-            {
-                throw new Exception($"Failed to load map");
-            }
-
-            var gridUids = grids.Select(x => x.Owner).ToList();
 
             // TODO MAP LOADING use a new event?
             RaiseLocalEvent(new PostGameMapLoad(proto, targetMap, gridUids, stationName));
@@ -434,7 +528,11 @@ namespace Content.Server.GameTicking
             }
 
             // MapInitialize *before* spawning players, our codebase is too shit to do it afterwards...
-            _map.InitializeMap(DefaultMap);
+            foreach (var mapId in _roundMapsToInitialize)
+            {
+                if (_map.MapExists(mapId) && !_map.IsInitialized(mapId))
+                    _map.InitializeMap(mapId);
+            }
 
             SpawnPlayers(readyPlayers, readyPlayerProfiles, force);
 

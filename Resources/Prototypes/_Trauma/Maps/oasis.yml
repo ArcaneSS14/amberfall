@@ -3,7 +3,8 @@
 - type: gameMap
   id: Oasis
   mapName: 'Oasis'
-  mapPath: /Maps/_Trauma/oasis.yml
+  mapLayers:
+    - /Maps/_Trauma/oasis.yml
   minPlayers: 30
   stations:
     Oasis:

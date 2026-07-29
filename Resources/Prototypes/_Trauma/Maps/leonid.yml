@@ -3,7 +3,8 @@
 - type: gameMap
   id: Leonid
   mapName: 'Leonid Station'
-  mapPath: /Maps/_Trauma/leonid.yml
+  mapLayers:
+    - /Maps/_Trauma/leonid.yml
   minPlayers: 50
   stations:
     Leonid:

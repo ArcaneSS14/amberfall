@@ -3,7 +3,8 @@
 - type: gameMap
   id: Bagel
   mapName: 'Bagel Station'
-  mapPath: /Maps/_Trauma/bagel.yml
+  mapLayers:
+    - /Maps/_Trauma/bagel.yml
   minPlayers: 20
   maxPlayers: 80
   stations:

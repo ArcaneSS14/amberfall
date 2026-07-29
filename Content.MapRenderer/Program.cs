@@ -172,7 +172,7 @@ namespace Content.MapRenderer
                     {
                         foreach (var mapPrototype in mapPrototypes)
                         {
-                            if (mapPrototype.MapPath.Filename == toFind)
+                            if (mapPrototype.MapLayers.Any(layer => layer.Filename == toFind))
                             {
                                 maps.Add(new RenderMapPrototype { Prototype = mapPrototype, });
                                 Console.WriteLine($"Found matching map prototype: {mapPrototype.MapName}");

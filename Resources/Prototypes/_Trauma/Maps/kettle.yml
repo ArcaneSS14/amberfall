@@ -3,7 +3,8 @@
 - type: gameMap
   id: Kettle
   mapName: 'Kettle'
-  mapPath: /Maps/_Trauma/kettle.yml
+  mapLayers:
+    - /Maps/_Trauma/kettle.yml
   minPlayers: 35
   stations:
     Kettle:

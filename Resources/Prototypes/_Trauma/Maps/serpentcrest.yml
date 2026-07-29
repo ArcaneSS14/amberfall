@@ -3,7 +3,8 @@
 - type: gameMap
   id: Serpentcrest
   mapName: 'Serpentcrest'
-  mapPath: /Maps/_Trauma/serpentcrest.yml
+  mapLayers:
+    - /Maps/_Trauma/serpentcrest.yml
   minPlayers: 40
   stations:
     Serpentcrest:

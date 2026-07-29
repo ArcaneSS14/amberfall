@@ -3,7 +3,8 @@
 - type: gameMap
   id: Cog
   mapName: 'Cog'
-  mapPath: /Maps/_Trauma/cog.yml
+  mapLayers:
+    - /Maps/_Trauma/cog.yml
   minPlayers: 40
   stations:
     Cog:

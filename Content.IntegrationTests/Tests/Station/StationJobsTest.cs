@@ -42,7 +42,8 @@ public sealed class StationJobsTest : GameTest
   id: {StationMapId}
   minPlayers: 0
   mapName: {StationMapId}
-  mapPath: /Maps/Test/empty.yml
+  mapLayers:
+    - /Maps/Test/empty.yml
   stations:
     Station:
       mapNameTemplate: {StationMapId}

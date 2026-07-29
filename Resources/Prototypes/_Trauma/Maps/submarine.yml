@@ -3,7 +3,8 @@
 - type: gameMap
   id: Submarine
   mapName: 'Submarine'
-  mapPath: /Maps/_Trauma/submarine.yml
+  mapLayers:
+    - /Maps/_Trauma/submarine.yml
   minPlayers: 60
   stations:
     Submarine:

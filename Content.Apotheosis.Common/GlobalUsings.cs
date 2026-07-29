@@ -1,0 +1,5 @@
+global using System;
+global using System.Collections.Generic;
+global using Robust.Shared.GameObjects;
+global using Robust.Shared.IoC;
+global using Robust.Shared.Serialization.Manager.Attributes;

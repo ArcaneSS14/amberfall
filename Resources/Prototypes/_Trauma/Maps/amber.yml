@@ -3,7 +3,8 @@
 - type: gameMap
   id: Amber
   mapName: 'Amber'
-  mapPath: /Maps/_Trauma/amber.yml
+  mapLayers:
+    - /Maps/_Trauma/amber.yml
   minPlayers: 7
   maxPlayers: 50
   stations:

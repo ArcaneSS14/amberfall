@@ -3,7 +3,8 @@
 - type: gameMap
   id: Nume
   mapName: 'Nume Station'
-  mapPath: /Maps/_Trauma/nume.yml
+  mapLayers:
+    - /Maps/_Trauma/nume.yml
   minPlayers: 35
   stations:
     Nume:

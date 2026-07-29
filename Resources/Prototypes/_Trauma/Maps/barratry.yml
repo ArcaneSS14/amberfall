@@ -3,7 +3,8 @@
 - type: gameMap
   id: Barratry
   mapName: 'Barratry'
-  mapPath: /Maps/_Trauma/barratry.yml
+  mapLayers:
+    - /Maps/_Trauma/barratry.yml
   minPlayers: 30
   maxPlayers: 60
   stations:

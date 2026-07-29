@@ -186,8 +186,11 @@ namespace Content.MapRenderer.Painters
 
                 if (_map is RenderMapPrototype)
                 {
-                    var mapId = sEntityManager.System<GameTicker>().DefaultMap;
-                    _grids = mapSys.GetAllGrids(mapId).ToArray();
+                    var ticker = sEntityManager.System<GameTicker>();
+                    _grids = ticker.LoadedGameMaps
+                        .SelectMany(mapId => mapSys.GetAllGrids(mapId))
+                        .DistinctBy(grid => grid.Owner)
+                        .ToArray();
                 }
 
                 foreach (var (uid, _) in _grids)

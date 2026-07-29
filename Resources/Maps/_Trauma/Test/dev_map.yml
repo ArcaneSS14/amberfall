@@ -1790,6 +1790,9 @@ entities:
     - type: MetaData
       name: Map Entity
     - type: Transform
+    - type: ZLevel
+      group: dev
+      level: 0
     - type: Map
       mapPaused: True
     - type: GridTree

@@ -9,7 +9,7 @@ public sealed partial class ContentTileDefinition
     public bool RenderZLevelBelow { get; private set; }
 
     /// <summary>
-    /// Makes moving physical entities fall through this tile to a linked lower Z-level.
+    /// Makes moving physical entities fall through this tile to a linked lower map.
     /// Empty tiles always allow falling regardless of this value.
     /// </summary>
     [DataField]

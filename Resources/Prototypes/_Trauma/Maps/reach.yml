@@ -3,7 +3,8 @@
 - type: gameMap
   id: Reach
   mapName: 'Reach'
-  mapPath: /Maps/_Trauma/reach.yml
+  mapLayers:
+    - /Maps/_Trauma/reach.yml
   minPlayers: 0
   maxPlayers: 10
   ignoredRequiredEntities:

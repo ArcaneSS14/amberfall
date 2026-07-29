@@ -3,7 +3,8 @@
 - type: gameMap
   id: Fland
   mapName: 'Fland Installation'
-  mapPath: /Maps/_Trauma/fland.yml
+  mapLayers:
+    - /Maps/_Trauma/fland.yml
   minPlayers: 40
   stations:
     Fland:

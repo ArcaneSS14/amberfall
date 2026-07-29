@@ -3,7 +3,8 @@
 - type: gameMap
   id: Box
   mapName: 'Box Station'
-  mapPath: /Maps/_Trauma/box.yml
+  mapLayers:
+    - /Maps/_Trauma/box.yml
   minPlayers: 30
   maxPlayers: 85
   stations:

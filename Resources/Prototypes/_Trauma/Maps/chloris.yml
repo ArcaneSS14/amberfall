@@ -3,7 +3,8 @@
 - type: gameMap
   id: Chloris
   mapName: 'Chloris'
-  mapPath: /Maps/_Trauma/chloris.yml
+  mapLayers:
+    - /Maps/_Trauma/chloris.yml
   minPlayers: 80
   stations:
     Chloris:

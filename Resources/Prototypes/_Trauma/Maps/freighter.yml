@@ -3,7 +3,8 @@
 - type: gameMap
   id: Freighter
   mapName: 'Freighter'
-  mapPath: /Maps/_Trauma/freighter.yml
+  mapLayers:
+    - /Maps/_Trauma/freighter.yml
   minPlayers: 30
   maxPlayers: 70
   stations:

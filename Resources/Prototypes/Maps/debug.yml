@@ -1,7 +1,8 @@
 - type: gameMap
   id: Empty
   mapName: Empty
-  mapPath: /Maps/Test/empty.yml
+  mapLayers:
+    - /Maps/Test/empty.yml
   minPlayers: 0
   stations:
     Empty:
@@ -16,7 +17,9 @@
 - type: gameMap
   id: Dev
   mapName: Dev
-  mapPath: /Maps/_Trauma/Test/dev_map.yml # Trauma
+  mapLayers:
+    - /Maps/_Trauma/Test/dev_map.yml # Trauma
+    - /Maps/_Apotheosis/Test/dev_map_second_layer.yml
   minPlayers: 0
   stations:
     Dev:
@@ -35,7 +38,8 @@
 - type: gameMap
   id: TestTeg
   mapName: Test TEG
-  mapPath: /Maps/Test/test_teg.yml
+  mapLayers:
+    - /Maps/Test/test_teg.yml
   minPlayers: 0
   stations:
     TEG:

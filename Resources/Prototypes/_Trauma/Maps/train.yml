@@ -3,7 +3,8 @@
 - type: gameMap
   id: Train
   mapName: 'Train'
-  mapPath: /Maps/_Trauma/train.yml
+  mapLayers:
+    - /Maps/_Trauma/train.yml
   maxRandomOffset: 0
   randomRotation: false
   minPlayers: 30

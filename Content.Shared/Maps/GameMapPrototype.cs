@@ -39,10 +39,10 @@ public sealed partial class GameMapPrototype : IPrototype
     public string MapName { get; private set; } = default!;
 
     /// <summary>
-    /// Relative directory path to the given map, i.e. `/Maps/saltern.yml`
+    /// Relative paths to all map layers, i.e. `/Maps/saltern.yml`.
     /// </summary>
     [DataField(required: true)]
-    public ResPath MapPath { get; private set; } = default!;
+    public HashSet<ResPath> MapLayers { get; private set; } = default!;
 
     [DataField("stations", required: true)]
     private Dictionary<string, StationConfig> _stations = new();
@@ -53,7 +53,7 @@ public sealed partial class GameMapPrototype : IPrototype
     public IReadOnlyDictionary<string, StationConfig> Stations => _stations;
 
     /// <summary>
-    /// Performs a shallow clone of this map prototype, replacing <c>MapPath</c> with the argument.
+    /// Performs a shallow clone of this map prototype, replacing <see cref="MapLayers"/> with a single persistent layer.
     /// </summary>
     public GameMapPrototype Persistence(ResPath mapPath)
     {
@@ -63,7 +63,7 @@ public sealed partial class GameMapPrototype : IPrototype
         {
             ID = ID,
             MapName = MapName,
-            MapPath = mapPath,
+            MapLayers = new HashSet<ResPath> { mapPath },
             _stations = _stations
         };
 #pragma warning restore RA0039

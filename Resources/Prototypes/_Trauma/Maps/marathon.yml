@@ -3,7 +3,8 @@
 - type: gameMap
   id: Marathon
   mapName: 'Marathon Station'
-  mapPath: /Maps/_Trauma/marathon.yml
+  mapLayers:
+    - /Maps/_Trauma/marathon.yml
   minPlayers: 35
   maxPlayers: 70
   stations:

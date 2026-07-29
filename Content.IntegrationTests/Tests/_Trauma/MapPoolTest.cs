@@ -54,67 +54,59 @@ public sealed class MapPoolTest : GameTest
                     foreach (var mapId in pool.Maps)
                     {
                         var mapProto = proto.Index<GameMapPrototype>(mapId);
-                        var map = mapProto.MapPath;
-                        if (!loader.TryReadFile(map, out var data))
-                        {
-                            Assert.Fail($"Failed to read {map}");
-                            continue;
-                        }
-
-                        // parses the yml but doesn't spawn anything, not terribly slow
-                        var reader = new EntityDeserializer(deps,
-                            data,
-                            options,
-                            ev.RenamedPrototypes,
-                            ev.DeletedPrototypes);
-
-                        if (!reader.TryProcessData())
-                        {
-                            Assert.Fail($"Failed to process {map}");
-                            continue;
-                        }
-
                         missingAreas.Clear();
-                        foreach (var area in requiredAreas)
+                        missingAreas.UnionWith(requiredAreas);
+
+                        missingEnts.Clear();
+                        missingEnts.UnionWith(requiredEnts);
+                        missingEnts.ExceptWith(mapProto.IgnoredRequiredEntities);
+
+                        foreach (var map in mapProto.MapLayers)
                         {
-                            missingAreas.Add(area);
-                        }
-
-                        // check that at least 1 grid maybe uses each required area
-                        foreach (var gridId in reader.GridYamlIds)
-                        {
-                            var grid = reader.YamlEntities[gridId].Components;
-                            if (!grid.TryGetValue("AreaGrid", out var comp))
-                                continue; // outdated map?
-
-                            if (!comp.TryGet<MappingDataNode>("areaMap", out var areaMap))
-                                continue; // no areas
-
-                            foreach (var node in areaMap.Values)
+                            if (!loader.TryReadFile(map, out var data))
                             {
-                                var area = ((ValueDataNode) node).Value;
-                                missingAreas.Remove(area);
-                                if (missingAreas.Count == 0)
-                                    goto entities;
+                                Assert.Fail($"Failed to read {map}");
+                                continue;
                             }
+
+                            // parses the yml but doesn't spawn anything, not terribly slow
+                            var reader = new EntityDeserializer(deps,
+                                data,
+                                options,
+                                ev.RenamedPrototypes,
+                                ev.DeletedPrototypes);
+
+                            if (!reader.TryProcessData())
+                            {
+                                Assert.Fail($"Failed to process {map}");
+                                continue;
+                            }
+
+                            // check that at least 1 grid maybe uses each required area
+                            foreach (var gridId in reader.GridYamlIds)
+                            {
+                                var grid = reader.YamlEntities[gridId].Components;
+                                if (!grid.TryGetValue("AreaGrid", out var comp))
+                                    continue; // outdated map?
+
+                                if (!comp.TryGet<MappingDataNode>("areaMap", out var areaMap))
+                                    continue; // no areas
+
+                                foreach (var node in areaMap.Values)
+                                {
+                                    var area = ((ValueDataNode) node).Value;
+                                    missingAreas.Remove(area);
+                                }
+                            }
+
+                            missingEnts.RemoveWhere(id => reader.Prototypes.ContainsKey(id));
                         }
 
                         Assert.That(missingAreas, Is.Empty,
-                            $"Map {mapId} ({map}) was missing these areas required by the pool: {string.Join(", ", missingAreas)}");
-
-                    entities:
-
-                        missingEnts.Clear();
-                        foreach (var id in requiredEnts)
-                        {
-                            if (reader.Prototypes.ContainsKey(id) || mapProto.IgnoredRequiredEntities.Contains(id))
-                                continue;
-
-                            missingEnts.Add(id);
-                        }
+                            $"Map {mapId} ({string.Join(", ", mapProto.MapLayers)}) was missing these areas required by the pool: {string.Join(", ", missingAreas)}");
 
                         Assert.That(missingEnts, Is.Empty,
-                            $"Map {mapId} ({map}) was missing these entities required by the pool: {string.Join(", ", missingEnts)}");
+                            $"Map {mapId} ({string.Join(", ", mapProto.MapLayers)}) was missing these entities required by the pool: {string.Join(", ", missingEnts)}");
                     }
                 }
             });

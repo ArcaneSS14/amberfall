@@ -498,7 +498,10 @@ namespace Content.IntegrationTests.Tests
             var protoManager = server.ResolveDependency<IPrototypeManager>();
             var cfg = server.ResolveDependency<IConfigurationManager>();
 
-            var gameMaps = protoManager.EnumeratePrototypes<GameMapPrototype>().Select(o => o.MapPath).ToHashSet();
+            var gameMaps = protoManager
+                .EnumeratePrototypes<GameMapPrototype>()
+                .SelectMany(o => o.MapLayers)
+                .ToHashSet();
             if (gameMaps.Contains(mapPath))
             {
                 // TODO: You might be able to save like, 1-2 seconds of test time if you eliminate these before
