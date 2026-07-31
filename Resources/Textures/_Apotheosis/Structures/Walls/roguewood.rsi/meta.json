@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/Twilight-Fortress-SS13/Twilight-Axis/blob/main/icons/turf/walls/roguewood.dmi and converted from BYOND format for Space Station 14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "rough_wood0",
+      "directions": 4
+    },
+    {
+      "name": "rough_wood1",
+      "directions": 4
+    },
+    {
+      "name": "rough_wood2",
+      "directions": 4
+    },
+    {
+      "name": "rough_wood3",
+      "directions": 4
+    },
+    {
+      "name": "rough_wood4",
+      "directions": 4
+    },
+    {
+      "name": "rough_wood5",
+      "directions": 4
+    },
+    {
+      "name": "rough_wood6",
+      "directions": 4
+    },
+    {
+      "name": "rough_wood7",
+      "directions": 4
+    },
+    {
+      "name": "full"
+    }
+  ]
+}

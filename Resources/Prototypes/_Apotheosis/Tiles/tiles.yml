@@ -1,0 +1,631 @@
+# Apotheosis
+# BYOND directions are represented as tile variants.
+- type: tile
+  id: FloorApotheosisAsh
+  name: tiles-apotheosis-ash
+  sprite: /Textures/_Apotheosis/Tiles/ash.png
+  variants: 8
+  placementVariants: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisBarograte
+  name: tiles-apotheosis-barograte
+  sprite: /Textures/_Apotheosis/Tiles/barograte.png
+
+- type: tile
+  id: FloorApotheosisBarograteopen
+  name: tiles-apotheosis-barograteopen
+  sprite: /Textures/_Apotheosis/Tiles/barograteopen.png
+
+- type: tile
+  id: FloorApotheosisBathtile
+  name: tiles-apotheosis-bathtile
+  sprite: /Textures/_Apotheosis/Tiles/bathtile.png
+
+- type: tile
+  id: FloorApotheosisBfloorz
+  name: tiles-apotheosis-bfloorz
+  sprite: /Textures/_Apotheosis/Tiles/bfloorz.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisBlackice
+  name: tiles-apotheosis-blackice
+  sprite: /Textures/_Apotheosis/Tiles/blackice.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/blackice-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/blackice-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/blackice-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/blackice-west.png
+
+- type: tile
+  id: FloorApotheosisBlocks
+  name: tiles-apotheosis-blocks
+  sprite: /Textures/_Apotheosis/Tiles/blocks.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisBluestone
+  name: tiles-apotheosis-bluestone
+  sprite: /Textures/_Apotheosis/Tiles/bluestone.png
+
+- type: tile
+  id: FloorApotheosisBluestone2
+  name: tiles-apotheosis-bluestone2
+  sprite: /Textures/_Apotheosis/Tiles/bluestone2.png
+
+- type: tile
+  id: FloorApotheosisBricktile
+  name: tiles-apotheosis-bricktile
+  sprite: /Textures/_Apotheosis/Tiles/bricktile.png
+
+- type: tile
+  id: FloorApotheosisBrown
+  name: tiles-apotheosis-brown
+  sprite: /Textures/_Apotheosis/Tiles/brown.png
+
+- type: tile
+  id: FloorApotheosisCarvedstone
+  name: tiles-apotheosis-carvedstone
+  sprite: /Textures/_Apotheosis/Tiles/carvedstone.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisChess
+  name: tiles-apotheosis-chess
+  sprite: /Textures/_Apotheosis/Tiles/chess.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisChurch
+  name: tiles-apotheosis-church
+  sprite: /Textures/_Apotheosis/Tiles/church.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisChurchBrick
+  name: tiles-apotheosis-church-brick
+  sprite: /Textures/_Apotheosis/Tiles/church_brick.png
+
+- type: tile
+  id: FloorApotheosisChurchMarble
+  name: tiles-apotheosis-church-marble
+  sprite: /Textures/_Apotheosis/Tiles/church_marble.png
+
+- type: tile
+  id: FloorApotheosisChurchRough
+  name: tiles-apotheosis-church-rough
+  sprite: /Textures/_Apotheosis/Tiles/church_rough.png
+
+- type: tile
+  id: FloorApotheosisCobblerock
+  name: tiles-apotheosis-cobblerock
+  sprite: /Textures/_Apotheosis/Tiles/cobblerock.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/cobblerock-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/cobblerock-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/cobblerock-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/cobblerock-west.png
+
+- type: tile
+  id: FloorApotheosisCobblestone1
+  name: tiles-apotheosis-cobblestone1
+  sprite: /Textures/_Apotheosis/Tiles/cobblestone1.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/cobblestone-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/cobblestone-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/cobblestone-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/cobblestone-west.png
+
+- type: tile
+  id: FloorApotheosisCobblestone2
+  name: tiles-apotheosis-cobblestone2
+  sprite: /Textures/_Apotheosis/Tiles/cobblestone2.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/cobblestone-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/cobblestone-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/cobblestone-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/cobblestone-west.png
+
+- type: tile
+  id: FloorApotheosisCobblestone3
+  name: tiles-apotheosis-cobblestone3
+  sprite: /Textures/_Apotheosis/Tiles/cobblestone3.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/cobblestone-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/cobblestone-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/cobblestone-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/cobblestone-west.png
+
+- type: tile
+  id: FloorApotheosisConcretefloor1
+  name: tiles-apotheosis-concretefloor1
+  sprite: /Textures/_Apotheosis/Tiles/concretefloor1.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisConcretefloor2
+  name: tiles-apotheosis-concretefloor2
+  sprite: /Textures/_Apotheosis/Tiles/concretefloor2.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisCrawlspace1
+  name: tiles-apotheosis-crawlspace-1
+  sprite: /Textures/_Apotheosis/Tiles/crawlspace_1.png
+
+- type: tile
+  id: FloorApotheosisCrawlspace2
+  name: tiles-apotheosis-crawlspace-2
+  sprite: /Textures/_Apotheosis/Tiles/crawlspace_2.png
+
+- type: tile
+  id: FloorApotheosisCrawlspace3
+  name: tiles-apotheosis-crawlspace-3
+  sprite: /Textures/_Apotheosis/Tiles/crawlspace_3.png
+
+- type: tile
+  id: FloorApotheosisCrawlspace4
+  name: tiles-apotheosis-crawlspace-4
+  sprite: /Textures/_Apotheosis/Tiles/crawlspace_4.png
+
+- type: tile
+  id: FloorApotheosisDigstone
+  name: tiles-apotheosis-digstone
+  sprite: /Textures/_Apotheosis/Tiles/digstone.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisDirt
+  name: tiles-apotheosis-dirt
+  sprite: /Textures/_Apotheosis/Tiles/dirt.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/dirt-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/dirt-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/dirt-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/dirt-west.png
+
+- type: tile
+  id: FloorApotheosisGrass
+  name: tiles-apotheosis-grass
+  sprite: /Textures/_Apotheosis/Tiles/grass.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/grass-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/grass-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/grass-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/grass-west.png
+
+- type: tile
+  id: FloorApotheosisGrassCold
+  name: tiles-apotheosis-grass-cold
+  sprite: /Textures/_Apotheosis/Tiles/grass_cold.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/grass_cold-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/grass_cold-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/grass_cold-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/grass_cold-west.png
+
+- type: tile
+  id: FloorApotheosisGrassRed
+  name: tiles-apotheosis-grass-red
+  sprite: /Textures/_Apotheosis/Tiles/grass_red.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/grass_red-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/grass_red-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/grass_red-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/grass_red-west.png
+
+- type: tile
+  id: FloorApotheosisGrassYel
+  name: tiles-apotheosis-grass-yel
+  sprite: /Textures/_Apotheosis/Tiles/grass_yel.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/grass_yel-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/grass_yel-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/grass_yel-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/grass_yel-west.png
+
+- type: tile
+  id: FloorApotheosisGreenblocks
+  name: tiles-apotheosis-greenblocks
+  sprite: /Textures/_Apotheosis/Tiles/greenblocks.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisGreenstone
+  name: tiles-apotheosis-greenstone
+  sprite: /Textures/_Apotheosis/Tiles/greenstone.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisGrimshart
+  name: tiles-apotheosis-grimshart
+  sprite: /Textures/_Apotheosis/Tiles/grimshart.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/grimshart-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/grimshart-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/grimshart-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/grimshart-west.png
+
+- type: tile
+  id: FloorApotheosisHarem
+  name: tiles-apotheosis-harem
+  sprite: /Textures/_Apotheosis/Tiles/harem.png
+
+- type: tile
+  id: FloorApotheosisHarem1
+  name: tiles-apotheosis-harem1
+  sprite: /Textures/_Apotheosis/Tiles/harem1.png
+
+- type: tile
+  id: FloorApotheosisHarem2
+  name: tiles-apotheosis-harem2
+  sprite: /Textures/_Apotheosis/Tiles/harem2.png
+
+- type: tile
+  id: FloorApotheosisHay
+  name: tiles-apotheosis-hay
+  sprite: /Textures/_Apotheosis/Tiles/hay.png
+
+- type: tile
+  id: FloorApotheosisHellgrass
+  name: tiles-apotheosis-hellgrass
+  sprite: /Textures/_Apotheosis/Tiles/hellgrass.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/hellgrass-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/hellgrass-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/hellgrass-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/hellgrass-west.png
+
+- type: tile
+  id: FloorApotheosisHerringbone
+  name: tiles-apotheosis-herringbone
+  sprite: /Textures/_Apotheosis/Tiles/herringbone.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Apotheosis/Tiles/Edges/herringbone-southeast.png
+    NorthEast: /Textures/_Apotheosis/Tiles/Edges/herringbone-northeast.png
+    NorthWest: /Textures/_Apotheosis/Tiles/Edges/herringbone-northwest.png
+    SouthWest: /Textures/_Apotheosis/Tiles/Edges/herringbone-southwest.png
+    South: /Textures/_Apotheosis/Tiles/Edges/herringbone-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/herringbone-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/herringbone-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/herringbone-west.png
+
+- type: tile
+  id: FloorApotheosisHerringbonewood
+  name: tiles-apotheosis-herringbonewood
+  sprite: /Textures/_Apotheosis/Tiles/herringbonewood.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Apotheosis/Tiles/Edges/herringbonewood-southeast.png
+    NorthEast: /Textures/_Apotheosis/Tiles/Edges/herringbonewood-northeast.png
+    NorthWest: /Textures/_Apotheosis/Tiles/Edges/herringbonewood-northwest.png
+    SouthWest: /Textures/_Apotheosis/Tiles/Edges/herringbonewood-southwest.png
+    South: /Textures/_Apotheosis/Tiles/Edges/herringbonewood-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/herringbonewood-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/herringbonewood-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/herringbonewood-west.png
+
+- type: tile
+  id: FloorApotheosisHerringbonewood2
+  name: tiles-apotheosis-herringbonewood2
+  sprite: /Textures/_Apotheosis/Tiles/herringbonewood2.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Apotheosis/Tiles/Edges/herringbonewood2-southeast.png
+    NorthEast: /Textures/_Apotheosis/Tiles/Edges/herringbonewood2-northeast.png
+    NorthWest: /Textures/_Apotheosis/Tiles/Edges/herringbonewood2-northwest.png
+    SouthWest: /Textures/_Apotheosis/Tiles/Edges/herringbonewood2-southwest.png
+    South: /Textures/_Apotheosis/Tiles/Edges/herringbonewood2-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/herringbonewood2-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/herringbonewood2-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/herringbonewood2-west.png
+
+- type: tile
+  id: FloorApotheosisHexstone
+  name: tiles-apotheosis-hexstone
+  sprite: /Textures/_Apotheosis/Tiles/hexstone.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisHorzw
+  name: tiles-apotheosis-horzw
+  sprite: /Textures/_Apotheosis/Tiles/horzw.png
+
+- type: tile
+  id: FloorApotheosisLinoleum
+  name: tiles-apotheosis-linoleum
+  sprite: /Textures/_Apotheosis/Tiles/linoleum.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisMossystone1
+  name: tiles-apotheosis-mossystone1
+  sprite: /Textures/_Apotheosis/Tiles/mossystone1.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Apotheosis/Tiles/Edges/mossystone-southeast.png
+    NorthEast: /Textures/_Apotheosis/Tiles/Edges/mossystone-northeast.png
+    NorthWest: /Textures/_Apotheosis/Tiles/Edges/mossystone-northwest.png
+    SouthWest: /Textures/_Apotheosis/Tiles/Edges/mossystone-southwest.png
+    South: /Textures/_Apotheosis/Tiles/Edges/mossystone-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/mossystone-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/mossystone-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/mossystone-west.png
+
+- type: tile
+  id: FloorApotheosisMossystone2
+  name: tiles-apotheosis-mossystone2
+  sprite: /Textures/_Apotheosis/Tiles/mossystone2.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Apotheosis/Tiles/Edges/mossystone-southeast.png
+    NorthEast: /Textures/_Apotheosis/Tiles/Edges/mossystone-northeast.png
+    NorthWest: /Textures/_Apotheosis/Tiles/Edges/mossystone-northwest.png
+    SouthWest: /Textures/_Apotheosis/Tiles/Edges/mossystone-southwest.png
+    South: /Textures/_Apotheosis/Tiles/Edges/mossystone-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/mossystone-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/mossystone-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/mossystone-west.png
+
+- type: tile
+  id: FloorApotheosisMossystone3
+  name: tiles-apotheosis-mossystone3
+  sprite: /Textures/_Apotheosis/Tiles/mossystone3.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Apotheosis/Tiles/Edges/mossystone-southeast.png
+    NorthEast: /Textures/_Apotheosis/Tiles/Edges/mossystone-northeast.png
+    NorthWest: /Textures/_Apotheosis/Tiles/Edges/mossystone-northwest.png
+    SouthWest: /Textures/_Apotheosis/Tiles/Edges/mossystone-southwest.png
+    South: /Textures/_Apotheosis/Tiles/Edges/mossystone-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/mossystone-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/mossystone-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/mossystone-west.png
+
+- type: tile
+  id: FloorApotheosisMud1
+  name: tiles-apotheosis-mud1
+  sprite: /Textures/_Apotheosis/Tiles/mud1.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisNewstone2
+  name: tiles-apotheosis-newstone2
+  sprite: /Textures/_Apotheosis/Tiles/newstone2.png
+
+- type: tile
+  id: FloorApotheosisOldcobblerock
+  name: tiles-apotheosis-oldcobblerock
+  sprite: /Textures/_Apotheosis/Tiles/oldcobblerock.png
+
+- type: tile
+  id: FloorApotheosisPaving
+  name: tiles-apotheosis-paving
+  sprite: /Textures/_Apotheosis/Tiles/paving.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisPavingT
+  name: tiles-apotheosis-paving-t
+  sprite: /Textures/_Apotheosis/Tiles/paving-t.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisPlating1
+  name: tiles-apotheosis-plating1
+  sprite: /Textures/_Apotheosis/Tiles/plating1.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisPlating2
+  name: tiles-apotheosis-plating2
+  sprite: /Textures/_Apotheosis/Tiles/plating2.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisRoad
+  name: tiles-apotheosis-road
+  sprite: /Textures/_Apotheosis/Tiles/road.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/road-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/road-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/road-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/road-west.png
+
+- type: tile
+  id: FloorApotheosisRock
+  name: tiles-apotheosis-rock
+  sprite: /Textures/_Apotheosis/Tiles/rock.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisRocky
+  name: tiles-apotheosis-rocky
+  sprite: /Textures/_Apotheosis/Tiles/rocky.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisSnow
+  name: tiles-apotheosis-snow
+  sprite: /Textures/_Apotheosis/Tiles/snow.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/snow-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/snow-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/snow-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/snow-west.png
+
+- type: tile
+  id: FloorApotheosisSnowpatchyGrass
+  name: tiles-apotheosis-snowpatchy-grass
+  sprite: /Textures/_Apotheosis/Tiles/snowpatchy_grass.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/snowpatchy_grass-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/snowpatchy_grass-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/snowpatchy_grass-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/snowpatchy_grass-west.png
+
+- type: tile
+  id: FloorApotheosisSnowrough
+  name: tiles-apotheosis-snowrough
+  sprite: /Textures/_Apotheosis/Tiles/snowrough.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Apotheosis/Tiles/Edges/snowrough-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/snowrough-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/snowrough-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/snowrough-west.png
+
+- type: tile
+  id: FloorApotheosisStoneredlarge
+  name: tiles-apotheosis-stoneredlarge
+  sprite: /Textures/_Apotheosis/Tiles/stoneredlarge.png
+
+- type: tile
+  id: FloorApotheosisStoneredtiny
+  name: tiles-apotheosis-stoneredtiny
+  sprite: /Textures/_Apotheosis/Tiles/stoneredtiny.png
+
+- type: tile
+  id: FloorApotheosisTile
+  name: tiles-apotheosis-tile
+  sprite: /Textures/_Apotheosis/Tiles/tile.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisTilerg
+  name: tiles-apotheosis-tilerg
+  sprite: /Textures/_Apotheosis/Tiles/tilerg.png
+
+- type: tile
+  id: FloorApotheosisTreetop1
+  name: tiles-apotheosis-treetop1
+  sprite: /Textures/_Apotheosis/Tiles/treetop1.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisTreetop2
+  name: tiles-apotheosis-treetop2
+  sprite: /Textures/_Apotheosis/Tiles/treetop2.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisTwig
+  name: tiles-apotheosis-twig
+  sprite: /Textures/_Apotheosis/Tiles/twig.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorApotheosisUndervoid
+  name: tiles-apotheosis-undervoid
+  sprite: /Textures/_Apotheosis/Tiles/undervoid.png
+
+- type: tile
+  id: FloorApotheosisUndervoid2
+  name: tiles-apotheosis-undervoid2
+  sprite: /Textures/_Apotheosis/Tiles/undervoid2.png
+
+- type: tile
+  id: FloorApotheosisUndervoid3
+  name: tiles-apotheosis-undervoid3
+  sprite: /Textures/_Apotheosis/Tiles/undervoid3.png
+
+- type: tile
+  id: FloorApotheosisVertw
+  name: tiles-apotheosis-vertw
+  sprite: /Textures/_Apotheosis/Tiles/vertw.png
+
+- type: tile
+  id: FloorApotheosisWoodenFloor
+  name: tiles-apotheosis-wooden-floor
+  sprite: /Textures/_Apotheosis/Tiles/wooden_floor.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Apotheosis/Tiles/Edges/wooden_floor-southeast.png
+    NorthEast: /Textures/_Apotheosis/Tiles/Edges/wooden_floor-northeast.png
+    NorthWest: /Textures/_Apotheosis/Tiles/Edges/wooden_floor-northwest.png
+    SouthWest: /Textures/_Apotheosis/Tiles/Edges/wooden_floor-southwest.png
+    South: /Textures/_Apotheosis/Tiles/Edges/wooden_floor-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/wooden_floor-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/wooden_floor-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/wooden_floor-west.png
+
+- type: tile
+  id: FloorApotheosisWoodenFloor2
+  name: tiles-apotheosis-wooden-floor2
+  sprite: /Textures/_Apotheosis/Tiles/wooden_floor2.png
+
+- type: tile
+  id: FloorApotheosisWoodenFloor2t
+  name: tiles-apotheosis-wooden-floor2t
+  sprite: /Textures/_Apotheosis/Tiles/wooden_floor2t.png
+
+- type: tile
+  id: FloorApotheosisWoodenFloort
+  name: tiles-apotheosis-wooden-floort
+  sprite: /Textures/_Apotheosis/Tiles/wooden_floort.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Apotheosis/Tiles/Edges/wooden_floort-southeast.png
+    NorthEast: /Textures/_Apotheosis/Tiles/Edges/wooden_floort-northeast.png
+    NorthWest: /Textures/_Apotheosis/Tiles/Edges/wooden_floort-northwest.png
+    SouthWest: /Textures/_Apotheosis/Tiles/Edges/wooden_floort-southwest.png
+    South: /Textures/_Apotheosis/Tiles/Edges/wooden_floort-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/wooden_floort-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/wooden_floort-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/wooden_floort-west.png

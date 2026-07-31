@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/Twilight-Fortress-SS13/Twilight-Axis/blob/main/icons/turf/walls/craftstone.dmi and converted from BYOND format for Space Station 14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "crafted_stone0",
+      "directions": 4
+    },
+    {
+      "name": "crafted_stone1",
+      "directions": 4
+    },
+    {
+      "name": "crafted_stone2",
+      "directions": 4
+    },
+    {
+      "name": "crafted_stone3",
+      "directions": 4
+    },
+    {
+      "name": "crafted_stone4",
+      "directions": 4
+    },
+    {
+      "name": "crafted_stone5",
+      "directions": 4
+    },
+    {
+      "name": "crafted_stone6",
+      "directions": 4
+    },
+    {
+      "name": "crafted_stone7",
+      "directions": 4
+    },
+    {
+      "name": "full"
+    }
+  ]
+}

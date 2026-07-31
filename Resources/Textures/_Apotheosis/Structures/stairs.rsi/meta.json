@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/Twilight-Fortress-SS13/Twilight-Axis/blob/main/icons/obj/stairs.dmi and converted from BYOND format for Space Station 14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "deep_descend",
+      "directions": 4
+    },
+    {
+      "name": "fancy_stairs",
+      "directions": 4
+    },
+    {
+      "name": "fancy_stairs_c",
+      "directions": 4
+    },
+    {
+      "name": "fancy_stairs_l",
+      "directions": 4
+    },
+    {
+      "name": "fancy_stairs_r",
+      "directions": 4
+    },
+    {
+      "name": "solo-descend",
+      "directions": 4
+    },
+    {
+      "name": "stairs",
+      "directions": 4
+    },
+    {
+      "name": "stonestairs_old",
+      "directions": 4
+    },
+    {
+      "name": "stonestairs",
+      "directions": 4
+    }
+  ]
+}

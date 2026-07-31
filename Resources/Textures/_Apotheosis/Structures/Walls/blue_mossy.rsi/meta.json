@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/Twilight-Fortress-SS13/Twilight-Axis/blob/main/icons/turf/walls/blue_mossy.dmi and converted from BYOND format for Space Station 14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "blue_mossy0",
+      "directions": 4
+    },
+    {
+      "name": "blue_mossy1",
+      "directions": 4
+    },
+    {
+      "name": "blue_mossy2",
+      "directions": 4
+    },
+    {
+      "name": "blue_mossy3",
+      "directions": 4
+    },
+    {
+      "name": "blue_mossy4",
+      "directions": 4
+    },
+    {
+      "name": "blue_mossy5",
+      "directions": 4
+    },
+    {
+      "name": "blue_mossy6",
+      "directions": 4
+    },
+    {
+      "name": "blue_mossy7",
+      "directions": 4
+    },
+    {
+      "name": "full"
+    }
+  ]
+}

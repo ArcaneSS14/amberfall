@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/Twilight-Fortress-SS13/Twilight-Axis/blob/main/icons/turf/walls/cwall.dmi and converted from BYOND format for Space Station 14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "castle_stone0",
+      "directions": 4
+    },
+    {
+      "name": "castle_stone1",
+      "directions": 4
+    },
+    {
+      "name": "castle_stone2",
+      "directions": 4
+    },
+    {
+      "name": "castle_stone3",
+      "directions": 4
+    },
+    {
+      "name": "castle_stone4",
+      "directions": 4
+    },
+    {
+      "name": "castle_stone5",
+      "directions": 4
+    },
+    {
+      "name": "castle_stone6",
+      "directions": 4
+    },
+    {
+      "name": "castle_stone7",
+      "directions": 4
+    },
+    {
+      "name": "full"
+    }
+  ]
+}

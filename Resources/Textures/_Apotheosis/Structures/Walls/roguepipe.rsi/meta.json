@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/Twilight-Fortress-SS13/Twilight-Axis/blob/main/icons/turf/walls/roguepipe.dmi and converted from BYOND format for Space Station 14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "pipework0",
+      "directions": 4
+    },
+    {
+      "name": "pipework1",
+      "directions": 4
+    },
+    {
+      "name": "pipework2",
+      "directions": 4
+    },
+    {
+      "name": "pipework3",
+      "directions": 4
+    },
+    {
+      "name": "pipework4",
+      "directions": 4
+    },
+    {
+      "name": "pipework5",
+      "directions": 4
+    },
+    {
+      "name": "pipework6",
+      "directions": 4
+    },
+    {
+      "name": "pipework7",
+      "directions": 4
+    },
+    {
+      "name": "full"
+    }
+  ]
+}
