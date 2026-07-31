@@ -1,0 +1,47 @@
+                           CLA License
+           Copyright (c) 2026 Arcane SS14 Organization
+
+                           Preamble
+
+  This Contributor License Agreement (“CLA”) is entered into between Arcane SS14 Organization and the contributor (“Contributor”). By making a submission to the Arcane SS14 Organization project, Contributor agrees to be bound by the terms of this CLA.
+
+                            Definitions.
+
+  – “Contribution” means any original work of authorship (including modifications, enhancements, bug fixes, documentation, code, or other materials) submitted by Contributor to the Arcane SS14 Organization project.
+  – “Project” refers to any repository or software project managed by Arcane SS14 Organization.
+  – “Contributor” is any individual or entity submitting a Contribution to the Project.
+  – “Licensor” means Arcane14 Organization. For licensing inquiries, contact: puroslavking@yahoo.com.
+
+  Contribution – means any original author's work of Contributors, including any
+modifications or additions to the Build (any source code, object code, correction, tool,
+sample, graphics, assets, specifications, manuals, documentation), which is intentionally
+provided by the Licensee to the Licensor. For the purposes of this definition,
+submission means any form of electronic, oral or written communication sent to Licensor
+or its representatives, including, but not limited to, messages on electronic mailing lists,
+source code control systems and issue tracking systems operated by or on behalf of the
+Organization for the purposes of discussing or improving software or project documentation
+and source. Communications for which it is explicitly stated in writing as "Not a
+contribution" will not be considered a contribution. When providing a Contribution to the
+Project, the Contributor provides the Organization with a simple, free, irrevocable, non-exclusive
+license for the entire period of validity of the Contributor's rights to the Contribution provided
+for by the legislation of the state-jurisdiction of the Contributor
+and/or international legislation for certain forms of Contribution.
+
+                            Grant of Rights.
+
+  By submitting a Contribution, Contributor hereby grants to Arcane SS14 Organization:
+  – Contributor retains copyright ownership of the Contribution but agrees that Arcane SS14 Organization may distribute it under any license selected by Arcane SS14 Organization.
+  – Contributor grants Arcane SS14 Organization a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license under any necessary patent claims owned or controlled by Contributor to make, have made, use, offer to sell, sell, import, and otherwise transfer the Contribution.
+
+                            License Types.
+
+  Source code and software components may be distributed by Arcane SS14 Organization under any license selected by Arcane SS14 Organization, including but not limited to AGPL-3.0.
+  Documentation, graphics, and non-code assets may be distributed by Arcane SS14 Organization under any license selected by Arcane SS14 Organization, including but not limited to CC-BY-SA 3.0.
+  Arcane SS14 Organization may change the licensing terms of any asset at any time.
+
+                            Acceptance.
+
+  This CLA is accepted if one of these conditions is met:
+  – Submitting a Pull Request to an Arcane SS14 Organization repository.
+  – Making a commit with a signed-off line: Signed-off-by: Name <email@example.com>.
+  – Acceptance through the GitHub Pull Request license checkbox.
