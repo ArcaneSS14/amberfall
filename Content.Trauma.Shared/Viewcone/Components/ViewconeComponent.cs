@@ -42,10 +42,10 @@ public sealed partial class ViewconeComponent : Component
     /// Instead, use <see cref="ViewconeAngleSystem.GetAngle"/>
     /// </remarks>
     [DataField]
-    public float BaseConeAngle = 270f; // typical human peripheral vision
+    public float BaseConeAngle = 230f; // typical human peripheral vision
 
     [DataField]
-    public float ConeFeather = 24f;
+    public float ConeFeather = 18f;
 
     [DataField]
     public float ConeIgnoreRadius = 1.35f;

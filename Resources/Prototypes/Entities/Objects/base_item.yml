@@ -15,6 +15,7 @@
       params:
         volume: -7
   - type: ViewconeOccludable # can't remember items that are out of view. ideally they would linger for like 5 seconds?
+    useMemory: false
   # </Trauma>
   - type: Item
     size: Small
