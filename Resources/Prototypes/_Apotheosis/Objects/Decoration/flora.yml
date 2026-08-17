@@ -1,0 +1,52 @@
+- type: entity
+  abstract: true
+  parent: BaseStructure
+  id: BaseWildFlora
+  name: wild herb
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _Apotheosis/Objects/Decoration/rogueflora.rsi
+    drawdepth: FloorObjects
+  - type: Icon
+    sprite: _Apotheosis/Objects/Decoration/rogueflora.rsi
+  - type: Physics
+    canCollide: false
+  - type: Fixtures
+
+- type: entity
+  parent: BaseWildFlora
+  id: WildFloraWormwood
+  name: wormwood
+  components: [{ type: Sprite, state: worm_wood }, { type: Icon, state: worm_wood }]
+
+- type: entity
+  parent: BaseWildFlora
+  id: WildFloraMarigold
+  name: marigold
+  components: [{ type: Sprite, state: marigold }, { type: Icon, state: marigold }]
+
+- type: entity
+  parent: BaseWildFlora
+  id: WildFloraNettles
+  name: nettles
+  components: [{ type: Sprite, state: nettles }, { type: Icon, state: nettles }]
+
+- type: entity
+  parent: BaseWildFlora
+  id: WildFloraThistle
+  name: thistle
+  components: [{ type: Sprite, state: thistle }, { type: Icon, state: thistle }]
+
+- type: entity
+  parent: BaseWildFlora
+  id: WildFloraPoppy
+  name: poppy
+  components: [{ type: Sprite, state: poppy }, { type: Icon, state: poppy }]
+
+- type: entity
+  parent: BaseWildFlora
+  id: WildFloraZizoBane
+  name: Zizo bane
+  components: [{ type: Sprite, state: zizo_bane }, { type: Icon, state: zizo_bane }]

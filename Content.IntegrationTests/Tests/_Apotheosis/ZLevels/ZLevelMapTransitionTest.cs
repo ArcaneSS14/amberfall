@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.IntegrationTests.Fixtures;
+using Content.Apotheosis;
 using Content.Apotheosis.Common.ZLevels;
 using Content.Apotheosis.Server.ZLevels;
 using Content.Apotheosis.Shared.ZLevels;
@@ -161,6 +162,80 @@ public sealed class ZLevelMapTransitionTest : GameTest
                 Assert.That(mapCoordinates.Position.X, Is.EqualTo(9.5f).Within(0.001f));
                 Assert.That(mapCoordinates.Position.Y, Is.EqualTo(0.5f).Within(0.001f));
             });
+        });
+
+        await server.WaitPost(() =>
+        {
+            mapSystem.DeleteMap(upperMapId);
+            mapSystem.DeleteMap(lowerMapId);
+        });
+    }
+
+    [Test]
+    public async Task TreeCanopiesFollowLateLinksAndRestoreOverlaps()
+    {
+        var server = Pair.Server;
+        var entityManager = server.EntMan;
+        var mapSystem = entityManager.System<MapSystem>();
+        var zLevelSystem = entityManager.System<ZLevelSystem>();
+
+        MapId upperMapId = default;
+        MapId lowerMapId = default;
+        EntityUid upperMap = default;
+        EntityUid lowerMap = default;
+        EntityUid upperGrid = default;
+        EntityUid lowerGrid = default;
+        EntityUid firstTree = default;
+        EntityUid secondTree = default;
+        Tile originalTile = default;
+        Tile canopyTile = default;
+
+        await server.WaitAssertion(() =>
+        {
+            upperMap = mapSystem.CreateMap(out upperMapId);
+            lowerMap = mapSystem.CreateMap(out lowerMapId);
+            var upperGridEntity = mapSystem.CreateGridEntity(upperMapId);
+            var lowerGridEntity = mapSystem.CreateGridEntity(lowerMapId);
+            upperGrid = upperGridEntity.Owner;
+            lowerGrid = lowerGridEntity.Owner;
+
+            for (var x = 0; x < 3; x++)
+            {
+                for (var y = 0; y < 3; y++)
+                {
+                    mapSystem.SetTile(upperGridEntity, new Vector2i(x, y), new Tile(1));
+                    mapSystem.SetTile(lowerGridEntity, new Vector2i(x, y), new Tile(1));
+                }
+            }
+
+            var upperGridComponent = entityManager.GetComponent<MapGridComponent>(upperGrid);
+            originalTile = mapSystem.GetTileRef(upperGrid, upperGridComponent, new Vector2i(1, 1)).Tile;
+            firstTree = entityManager.SpawnEntity(
+                "AncientTree1",
+                new EntityCoordinates(lowerGrid, 1.5f, 1.5f));
+
+            Assert.That(entityManager.GetComponent<TreeCanopyComponent>(firstTree).SpawnedBranches, Is.Empty);
+            Assert.That(zLevelSystem.LinkMaps(upperMap, lowerMap), Is.True);
+
+            var firstCanopy = entityManager.GetComponent<TreeCanopyComponent>(firstTree);
+            canopyTile = mapSystem.GetTileRef(upperGrid, upperGridComponent, new Vector2i(1, 1)).Tile;
+            Assert.Multiple(() =>
+            {
+                Assert.That(firstCanopy.SpawnedBranches, Has.Count.EqualTo(8));
+                Assert.That(firstCanopy.CanopyTiles, Has.Count.EqualTo(9));
+                Assert.That(canopyTile, Is.Not.EqualTo(originalTile));
+            });
+
+            secondTree = entityManager.SpawnEntity(
+                "AncientTree1",
+                new EntityCoordinates(lowerGrid, 1.5f, 1.5f));
+            Assert.That(entityManager.GetComponent<TreeCanopyComponent>(secondTree).SpawnedBranches, Has.Count.EqualTo(8));
+
+            entityManager.DeleteEntity(firstTree);
+            Assert.That(mapSystem.GetTileRef(upperGrid, upperGridComponent, new Vector2i(1, 1)).Tile, Is.EqualTo(canopyTile));
+
+            entityManager.DeleteEntity(secondTree);
+            Assert.That(mapSystem.GetTileRef(upperGrid, upperGridComponent, new Vector2i(1, 1)).Tile, Is.EqualTo(originalTile));
         });
 
         await server.WaitPost(() =>

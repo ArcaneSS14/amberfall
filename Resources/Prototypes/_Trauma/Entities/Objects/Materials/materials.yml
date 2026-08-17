@@ -18,6 +18,8 @@
   components:
   - type: Stack
     stackType: Charcoal
+  - type: FireFuel
+    amount: 240
   - type: Sprite
     state: coal
   - type: Material

@@ -1,5 +1,6 @@
 # Apotheosis
 # BYOND directions are represented as tile variants.
+
 - type: tile
   id: FloorApotheosisAsh
   name: tiles-apotheosis-ash
@@ -550,14 +551,14 @@
   sprite: /Textures/_Apotheosis/Tiles/tilerg.png
 
 - type: tile
-  id: FloorApotheosisTreetop1
+  id: FloorTreeCanopy1
   name: tiles-apotheosis-treetop1
   sprite: /Textures/_Apotheosis/Tiles/treetop1.png
   variants: 4
   placementVariants: [1.0, 1.0, 1.0, 1.0]
 
 - type: tile
-  id: FloorApotheosisTreetop2
+  id: FloorTreeCanopy2
   name: tiles-apotheosis-treetop2
   sprite: /Textures/_Apotheosis/Tiles/treetop2.png
   variants: 4

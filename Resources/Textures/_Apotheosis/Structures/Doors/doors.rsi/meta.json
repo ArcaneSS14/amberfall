@@ -1,0 +1,500 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "wood"
+    },
+    {
+      "name": "woodbr"
+    },
+    {
+      "name": "wooddir",
+      "directions": 4
+    },
+    {
+      "name": "woodopening",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "woodclosing",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "woodopen"
+    },
+    {
+      "name": "dungeonover"
+    },
+    {
+      "name": "dungeonover-o"
+    },
+    {
+      "name": "woodover"
+    },
+    {
+      "name": "woodhandle"
+    },
+    {
+      "name": "woodhandlebr"
+    },
+    {
+      "name": "woodhandleclosing",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "woodhandleopening",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "woodhandleopen"
+    },
+    {
+      "name": "wcg"
+    },
+    {
+      "name": "wcgbr"
+    },
+    {
+      "name": "wcgopening",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "wcgclosing",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "wcgopen"
+    },
+    {
+      "name": "wcv"
+    },
+    {
+      "name": "wcvbr"
+    },
+    {
+      "name": "wcvopening",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "wcvclosing",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "wcvopen"
+    },
+    {
+      "name": "wcr"
+    },
+    {
+      "name": "wcropening",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "wcrclosing",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "wcrbr"
+    },
+    {
+      "name": "wcropen"
+    },
+    {
+      "name": "donjonbr"
+    },
+    {
+      "name": "donjon"
+    },
+    {
+      "name": "donjonclosing",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "donjonopening",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "dunjonopen"
+    },
+    {
+      "name": "donjondir",
+      "directions": 4
+    },
+    {
+      "name": "woodwindowbr"
+    },
+    {
+      "name": "woodwindowopening",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "woodwindowclosing",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "woodwindowopen"
+    },
+    {
+      "name": "woodwindow"
+    },
+    {
+      "name": "fancy_woodbr"
+    },
+    {
+      "name": "fancy_wood"
+    },
+    {
+      "name": "fancy_woodopen"
+    },
+    {
+      "name": "fancy_woodclosing",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "fancy_woodopening",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "stone"
+    },
+    {
+      "name": "stoneclosing",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "stoneopening",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "stoneopen"
+    },
+    {
+      "name": "stonebr"
+    },
+    {
+      "name": "barsopening",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "bars"
+    },
+    {
+      "name": "barsopen"
+    },
+    {
+      "name": "barsclosing",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "barsbr"
+    },
+    {
+      "name": "swing"
+    },
+    {
+      "name": "swingbr"
+    },
+    {
+      "name": "swingopening",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "swingclosing",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "swingopen"
+    },
+    {
+      "name": "serving"
+    },
+    {
+      "name": "servingopen"
+    },
+    {
+      "name": "servingclosing",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "servingopening",
+      "delays": [
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ]
+      ]
+    },
+    {
+      "name": "servingbr"
+    },
+    {
+      "name": "arcyne"
+    },
+    {
+      "name": "arcyneopening",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "arcyneclosing",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "arcyneopen"
+    }
+  ]
+}

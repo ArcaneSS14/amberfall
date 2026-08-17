@@ -1,0 +1,17 @@
+ent-BaseDecorativeWindow = old window
+    .desc = A window of old-fashioned construction. It can be opened and climbed through.
+ent-DecorativeWindowSolid = solid old window
+ent-DecorativeWindowWood = wooden window
+ent-DecorativeWindowWoodWhite = white wooden window
+ent-DecorativeWindowMoonlight = moonlight sliding window
+ent-DecorativeWindowElectric = electric sliding window
+ent-DecorativeWindowReinforced = reinforced old window
+ent-DecorativeWindowReinforcedWhite = white reinforced window
+ent-DecorativeWindowBrick = brick window
+ent-DecorativeWindowHarem1 = harem window
+ent-DecorativeWindowHarem2 = harem window
+ent-DecorativeWindowHarem3 = harem window
+ent-DecorativeWindowStainedSilver = silver stained-glass window
+ent-DecorativeWindowStainedSilverAlt = silver stained-glass window
+ent-DecorativeWindowStainedYellow = yellow stained-glass window
+ent-DecorativeWindowStainedZizo = Zizo stained-glass window

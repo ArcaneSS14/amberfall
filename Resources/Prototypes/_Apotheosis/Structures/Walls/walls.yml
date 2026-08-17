@@ -151,6 +151,19 @@
   - type: IconSmooth
     key: walls
     base: rough_wood
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:DoActsBehavior
+        acts: [Destruction]
 
 - type: entity
   parent: BaseStyledWall

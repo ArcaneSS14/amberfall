@@ -45,6 +45,8 @@
     damage:
       types:
         Heat: 1
+  - type: FireFuel
+    amount: 5
   - type: FireVisuals
     sprite: Effects/fire.rsi
     normalState: fire

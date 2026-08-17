@@ -132,6 +132,9 @@ public sealed partial class ZLevelSystem
             Dirty(upperMap, projection);
         }
 
+        var linkChanged = new ZLevelLinkChangedEvent(lowerMap);
+        RaiseLocalEvent(ref linkChanged);
+
         return true;
     }
 
@@ -187,6 +190,9 @@ public sealed partial class ZLevelSystem
 
         RemComp<MapProjectionComponent>(upperMap);
         RemComp<ZLevelManagedComponent>(upperMap);
+
+        var linkChanged = new ZLevelLinkChangedEvent(lowerMap);
+        RaiseLocalEvent(ref linkChanged);
         return true;
     }
 }

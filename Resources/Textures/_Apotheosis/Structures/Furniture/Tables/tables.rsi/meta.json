@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "tablewood"
+    },
+    {
+      "name": "tablewood_alt"
+    },
+    {
+      "name": "tablewood1"
+    },
+    {
+      "name": "tablewood2"
+    },
+    {
+      "name": "tablewood3"
+    },
+    {
+      "name": "longtable",
+      "directions": 4
+    },
+    {
+      "name": "longtable_mid",
+      "directions": 4
+    },
+    {
+      "name": "largetable",
+      "directions": 8
+    },
+    {
+      "name": "largetable_mid"
+    },
+    {
+      "name": "largetable_alt",
+      "directions": 8
+    },
+    {
+      "name": "largetable_mid_alt"
+    },
+    {
+      "name": "largetable_alt2",
+      "directions": 8
+    },
+    {
+      "name": "largetable_mid_alt2"
+    },
+    {
+      "name": "map1"
+    },
+    {
+      "name": "map2"
+    },
+    {
+      "name": "map3"
+    },
+    {
+      "name": "map4"
+    },
+    {
+      "name": "map5"
+    },
+    {
+      "name": "map6"
+    },
+    {
+      "name": "tablefine"
+    },
+    {
+      "name": "tablefine2"
+    },
+    {
+      "name": "churchtable_end",
+      "directions": 4
+    },
+    {
+      "name": "churchtable_end_alt",
+      "directions": 4
+    },
+    {
+      "name": "churchtable",
+      "directions": 4
+    },
+    {
+      "name": "churchtable_alt",
+      "directions": 4
+    },
+    {
+      "name": "churchtable_mid"
+    },
+    {
+      "name": "churchtable_mid_alt"
+    },
+    {
+      "name": "vtable"
+    },
+    {
+      "name": "vtable2"
+    },
+    {
+      "name": "stonetable_small"
+    },
+    {
+      "name": "art_table",
+      "delays": [
+        [
+          0.6,
+          0.6,
+          0.6,
+          0.6
+        ]
+      ]
+    }
+  ]
+}

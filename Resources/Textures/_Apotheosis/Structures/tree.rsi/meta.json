@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "center-leaf1",
+      "directions": 4
+    },
+    {
+      "name": "center-leaf2",
+      "directions": 4
+    },
+    {
+      "name": "corner-leaf1",
+      "directions": 8
+    },
+    {
+      "name": "corner-leaf2",
+      "directions": 8
+    },
+    {
+      "name": "tree1_old",
+      "directions": 4
+    },
+    {
+      "name": "tree2_old",
+      "directions": 4
+    },
+    {
+      "name": "burnt_old",
+      "directions": 4
+    },
+    {
+      "name": "branch-end1_old",
+      "directions": 4
+    },
+    {
+      "name": "branch-end2_old",
+      "directions": 4
+    },
+    {
+      "name": "branch-extend_old",
+      "directions": 4
+    },
+    {
+      "name": "branchburnt-end1_old",
+      "directions": 4
+    },
+    {
+      "name": "branchburnt-end2_old",
+      "directions": 4
+    },
+    {
+      "name": "branchburnt-extend_old",
+      "directions": 4
+    },
+    {
+      "name": "st1"
+    },
+    {
+      "name": "st2"
+    },
+    {
+      "name": "stumpt1"
+    },
+    {
+      "name": "stumpt2"
+    },
+    {
+      "name": "stumpt3"
+    },
+    {
+      "name": "stumpt4"
+    },
+    {
+      "name": "center-leaf-cold1",
+      "directions": 4
+    },
+    {
+      "name": "corner-leaf-cold1",
+      "directions": 8
+    },
+    {
+      "name": "tree1",
+      "directions": 4
+    },
+    {
+      "name": "tree2",
+      "directions": 4
+    },
+    {
+      "name": "burnt",
+      "directions": 4
+    },
+    {
+      "name": "branch-end1",
+      "directions": 4
+    },
+    {
+      "name": "branch-end2",
+      "directions": 4
+    },
+    {
+      "name": "branch-extend",
+      "directions": 4
+    },
+    {
+      "name": "branchburnt-end1",
+      "directions": 4
+    },
+    {
+      "name": "branchburnt-end2",
+      "directions": 4
+    },
+    {
+      "name": "branchburnt-extend",
+      "directions": 4
+    }
+  ]
+}

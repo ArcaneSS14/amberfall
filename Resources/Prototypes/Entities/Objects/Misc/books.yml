@@ -4,6 +4,8 @@
   id: BookBase
   description: A hardcover book.
   components:
+  - type: FireFuel
+    amount: 30
   # <Trauma>
   - type: Edible
     requiresSpecialDigestion: true

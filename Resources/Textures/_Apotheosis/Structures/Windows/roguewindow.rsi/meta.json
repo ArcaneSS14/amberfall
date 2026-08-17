@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "window-solid"
+    },
+    {
+      "name": "window-solidbr"
+    },
+    {
+      "name": "woodwindowdir",
+      "directions": 4
+    },
+    {
+      "name": "woodwindow"
+    },
+    {
+      "name": "woodwindowop"
+    },
+    {
+      "name": "woodwindowbr"
+    },
+    {
+      "name": "w-woodwindow"
+    },
+    {
+      "name": "w-woodwindowop"
+    },
+    {
+      "name": "w-woodwindowbr"
+    },
+    {
+      "name": "sliding-moonlight-closed"
+    },
+    {
+      "name": "sliding-moonlight-open"
+    },
+    {
+      "name": "sliding-moonlight-broken"
+    },
+    {
+      "name": "sliding-electric-closed"
+    },
+    {
+      "name": "sliding-electric-open"
+    },
+    {
+      "name": "sliding-electric-broken"
+    },
+    {
+      "name": "reinforcedwindowdir",
+      "directions": 4
+    },
+    {
+      "name": "reinforcedwindow"
+    },
+    {
+      "name": "reinforcedwindowop"
+    },
+    {
+      "name": "w-reinforcedwindowop"
+    },
+    {
+      "name": "w-reinforcedwindow"
+    },
+    {
+      "name": "reinforcedwindowbr"
+    },
+    {
+      "name": "w-reinforcedwindowbr"
+    },
+    {
+      "name": "brickwindow"
+    },
+    {
+      "name": "brickwindowop"
+    },
+    {
+      "name": "brickwindowbr"
+    },
+    {
+      "name": "harem1-solid"
+    },
+    {
+      "name": "harem3-solid"
+    },
+    {
+      "name": "harem2-solid"
+    },
+    {
+      "name": "stained-silverbr"
+    },
+    {
+      "name": "stained-silver"
+    },
+    {
+      "name": "stained-silver1"
+    },
+    {
+      "name": "stained-yellowbr"
+    },
+    {
+      "name": "stained-yellow"
+    },
+    {
+      "name": "stained-zizobr"
+    },
+    {
+      "name": "stained-zizo"
+    },
+    {
+      "name": "harem1-solidbr"
+    },
+    {
+      "name": "harem3-solidbr"
+    },
+    {
+      "name": "harem2-solidbr"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "worm_wood"
+    },
+    {
+      "name": "marigold"
+    },
+    {
+      "name": "nettles"
+    },
+    {
+      "name": "thistle"
+    },
+    {
+      "name": "poppy"
+    },
+    {
+      "name": "zizo_bane"
+    }
+  ]
+}

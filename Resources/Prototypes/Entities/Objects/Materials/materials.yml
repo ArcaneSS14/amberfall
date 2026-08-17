@@ -7,6 +7,8 @@
   - type: PhysicalComposition
     materialComposition:
       Cardboard: 100
+  - type: FireFuel
+    amount: 20
   - type: Stack
     stackType: Cardboard
     baseLayer: base
@@ -86,6 +88,8 @@
     - cloth
     - cloth_2
     - cloth_3
+  - type: FireFuel
+    amount: 15
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -207,6 +211,8 @@
   - type: PhysicalComposition
     materialComposition:
       Wood: 100
+  - type: FireFuel
+    amount: 60
   - type: Stack
     stackType: WoodPlank
     baseLayer: base

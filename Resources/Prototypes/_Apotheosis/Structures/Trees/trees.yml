@@ -1,0 +1,240 @@
+- type: entity
+  abstract: true
+  id: BaseAncientTreeBranch
+  name: tree branch
+  save: false
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _Apotheosis/Structures/tree.rsi
+    drawdepth: Overdoors
+    noRot: false
+  - type: Icon
+    sprite: _Apotheosis/Structures/tree.rsi
+
+- type: entity
+  parent: BaseAncientTreeBranch
+  id: AncientTreeBranchExtend
+  components: [{ type: Sprite, state: branch-extend }, { type: Icon, state: branch-extend }]
+
+- type: entity
+  parent: BaseAncientTreeBranch
+  id: AncientTreeBranchEnd1
+  components: [{ type: Sprite, state: branch-end1 }, { type: Icon, state: branch-end1 }]
+
+- type: entity
+  parent: BaseAncientTreeBranch
+  id: AncientTreeBranchEnd2
+  components: [{ type: Sprite, state: branch-end2 }, { type: Icon, state: branch-end2 }]
+
+- type: entity
+  parent: BaseAncientTreeBranch
+  id: AncientTreeBranchBurntExtend
+  components: [{ type: Sprite, state: branchburnt-extend }, { type: Icon, state: branchburnt-extend }]
+
+- type: entity
+  parent: BaseAncientTreeBranch
+  id: AncientTreeBranchBurntEnd
+  components: [{ type: Sprite, state: branchburnt-end1 }, { type: Icon, state: branchburnt-end1 }]
+
+- type: entity
+  parent: BaseAncientTreeBranch
+  id: AncientTreeBranchOldExtend
+  components: [{ type: Sprite, state: branch-extend_old }, { type: Icon, state: branch-extend_old }]
+
+- type: entity
+  parent: BaseAncientTreeBranch
+  id: AncientTreeBranchOldEnd1
+  components: [{ type: Sprite, state: branch-end1_old }, { type: Icon, state: branch-end1_old }]
+
+- type: entity
+  parent: BaseAncientTreeBranch
+  id: AncientTreeBranchOldEnd2
+  components: [{ type: Sprite, state: branch-end2_old }, { type: Icon, state: branch-end2_old }]
+
+- type: entity
+  parent: BaseAncientTreeBranch
+  id: AncientTreeBranchBurntOldExtend
+  components: [{ type: Sprite, state: branchburnt-extend_old }, { type: Icon, state: branchburnt-extend_old }]
+
+- type: entity
+  parent: BaseAncientTreeBranch
+  id: AncientTreeBranchBurntOldEnd
+  components: [{ type: Sprite, state: branchburnt-end1_old }, { type: Icon, state: branchburnt-end1_old }]
+
+- type: entity
+  abstract: true
+  parent: BaseStructure
+  id: BaseAncientTree
+  name: ancient tree
+  description: Its roots and branches spread far around the trunk.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _Apotheosis/Structures/tree.rsi
+    drawdepth: Overdoors
+  - type: Icon
+    sprite: _Apotheosis/Structures/tree.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.42
+        density: 500
+        mask: [Impassable]
+        layer: [MidImpassable, LowImpassable]
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Injurable
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: BaseAncientTree
+  id: AncientTree1
+  name: sprawling tree
+  components:
+  - type: Sprite
+    state: tree1
+  - type: Icon
+    state: tree1
+  - type: TreeCanopy
+    extendPrototype: AncientTreeBranchExtend
+    endPrototype: AncientTreeBranchEnd1
+    foliageTile: FloorTreeCanopy1
+
+- type: entity
+  parent: BaseAncientTree
+  id: AncientTree2
+  name: broad sprawling tree
+  components:
+  - type: Sprite
+    state: tree2
+  - type: Icon
+    state: tree2
+  - type: TreeCanopy
+    extendPrototype: AncientTreeBranchExtend
+    endPrototype: AncientTreeBranchEnd2
+    foliageTile: FloorTreeCanopy2
+
+- type: entity
+  parent: BaseAncientTree
+  id: AncientTreeBurnt
+  name: burnt sprawling tree
+  components:
+  - type: Sprite
+    state: burnt
+  - type: Icon
+    state: burnt
+  - type: TreeCanopy
+    extendPrototype: AncientTreeBranchBurntExtend
+    endPrototype: AncientTreeBranchBurntEnd
+    foliageTile: FloorTreeCanopy1
+
+- type: entity
+  parent: BaseAncientTree
+  id: AncientTreeOld1
+  name: old sprawling tree
+  components:
+  - type: Sprite
+    state: tree1_old
+  - type: Icon
+    state: tree1_old
+  - type: TreeCanopy
+    extendPrototype: AncientTreeBranchOldExtend
+    endPrototype: AncientTreeBranchOldEnd1
+    foliageTile: FloorTreeCanopy1
+
+- type: entity
+  parent: BaseAncientTree
+  id: AncientTreeOld2
+  name: old broad sprawling tree
+  components:
+  - type: Sprite
+    state: tree2_old
+  - type: Icon
+    state: tree2_old
+  - type: TreeCanopy
+    extendPrototype: AncientTreeBranchOldExtend
+    endPrototype: AncientTreeBranchOldEnd2
+    foliageTile: FloorTreeCanopy2
+
+- type: entity
+  parent: BaseAncientTree
+  id: AncientTreeBurntOld
+  name: old burnt sprawling tree
+  components:
+  - type: Sprite
+    state: burnt_old
+  - type: Icon
+    state: burnt_old
+  - type: TreeCanopy
+    extendPrototype: AncientTreeBranchBurntOldExtend
+    endPrototype: AncientTreeBranchBurntOldEnd
+    foliageTile: FloorTreeCanopy1
+
+- type: entity
+  parent: BaseStructure
+  id: AncientTreeStump1
+  name: tree stump
+  components:
+  - type: Sprite
+    sprite: _Apotheosis/Structures/tree.rsi
+    state: stumpt1
+  - type: Icon
+    sprite: _Apotheosis/Structures/tree.rsi
+    state: stumpt1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 300
+        mask: [TableMask]
+        layer: [TableLayer]
+  - type: Climbable
+    delay: 1
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Injurable
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:DoActsBehavior
+        acts: [Destruction]
+
+- type: entity
+  parent: AncientTreeStump1
+  id: AncientTreeStump2
+  components: [{ type: Sprite, state: stumpt2 }, { type: Icon, state: stumpt2 }]
+
+- type: entity
+  parent: AncientTreeStump1
+  id: AncientTreeStump3
+  components: [{ type: Sprite, state: stumpt3 }, { type: Icon, state: stumpt3 }]
+
+- type: entity
+  parent: AncientTreeStump1
+  id: AncientTreeStump4
+  components: [{ type: Sprite, state: stumpt4 }, { type: Icon, state: stumpt4 }]

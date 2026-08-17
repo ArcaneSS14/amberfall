@@ -199,6 +199,8 @@
   name: tower-cap log
   description: It's better than bad, it's good!
   components:
+  - type: FireFuel
+    amount: 300
   # <Trauma>
   - type: PhysicalComposition
     materialComposition:

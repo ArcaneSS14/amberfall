@@ -1,0 +1,15 @@
+ent-BaseMedievalDoor = old door
+    .desc = A heavy door of old-fashioned construction.
+ent-MedievalDoorWood = rough wooden door
+ent-MedievalDoorWoodHandle = wooden handled door
+ent-MedievalDoorWoodGreen = green wooden door
+ent-MedievalDoorWoodViolet = violet wooden door
+ent-MedievalDoorWoodRed = red wooden door
+ent-MedievalDoorDungeon = dungeon door
+ent-MedievalDoorWoodWindow = windowed wooden door
+ent-MedievalDoorFancyWood = ornate wooden door
+ent-MedievalDoorStone = stone door
+ent-MedievalDoorBars = barred door
+ent-MedievalDoorSwing = swinging door
+ent-MedievalDoorServing = serving hatch
+ent-MedievalDoorArcyne = arcyne door
