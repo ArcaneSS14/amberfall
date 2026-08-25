@@ -212,12 +212,6 @@
         range: 14
         sound:
           path: /Audio/Effects/Grenades/Supermatter/supermatter_loop.ogg
-      - type: GravityWell
-        maxRange: 5
-        minRange: 0.25
-        baseRadialAcceleration: 25
-        baseTangentialAcceleration: 5
-        gravPulsePeriod: 0.03
       - type: SingularityDistortion
         intensity: 150
         falloffPower: 1.5
@@ -277,11 +271,6 @@
         range: 14
         sound:
           path: /Audio/Effects/Grenades/Supermatter/whitehole_loop.ogg
-      - type: GravityWell
-        maxRange: 10
-        baseRadialAcceleration: -180
-        baseTangentialAcceleration: -5
-        gravPulsePeriod: 0.01
       - type: SingularityDistortion
         intensity: -200
         falloffPower: 1.5

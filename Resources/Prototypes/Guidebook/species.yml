@@ -1,24 +1,4 @@
 - type: guideEntry
-  id: Species
-  name: guide-entry-species
-  text: "/ServerInfo/Guidebook/Mobs/Species.xml"
-  children:
-  - Arachnid
-  - Diona
-  - Dwarf
-  - Human
-  - Moth
-  - Reptilian
-  - SlimePerson
-  - Vox
-  # <Trauma>
-  #- Vulpkanin
-  - IPC
-  - Plasmaman
-  - Decapoid
-  # </Trauma>
-
-- type: guideEntry
   id: Arachnid
   name: species-name-arachnid
   text: "/ServerInfo/Guidebook/Mobs/Arachnid.xml"

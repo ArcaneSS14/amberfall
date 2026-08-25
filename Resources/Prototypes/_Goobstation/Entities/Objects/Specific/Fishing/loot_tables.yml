@@ -1,6 +1,60 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entityTable
+  id: WaterFishingLootTable
+  table: !type:GroupSelector
+    children:
+      - !type:NestedSelector
+        tableId: CommonFishTable
+        weight: 7
+      - !type:NestedSelector
+        tableId: RareFishTable
+        weight: 1
+      - !type:NestedSelector
+        tableId: FishingScrapLootTable
+        weight: 1
+      - !type:NestedSelector
+        tableId: HostileFishTableWater
+        weight: 1
+
+# Items from Lava
+- type: entityTable
+  id: LavaFishingLootTable
+  table: !type:GroupSelector
+    children:
+      - !type:NestedSelector
+        tableId: FishingScrapLootTable
+        weight: 5
+      - !type:NestedSelector
+        tableId: FishingOreCrabTable
+        weight: 3
+      - !type:NestedSelector
+        tableId: LavaLandHostile
+        weight: 1
+
+# Items from Plasma
+- type: entityTable
+  id: PlasmaFishingLootTable
+  table: !type:GroupSelector
+    children:
+      - !type:NestedSelector
+        tableId: FishingScrapLootTable # Make this one better
+        weight: 5
+- type: entityTable
+  id: ToiletFishingLootTable
+  table: !type:GroupSelector
+    children:
+      - !type:NestedSelector
+        tableId: HostileFishTableWater
+        weight: 4
+      - !type:NestedSelector
+        tableId: GrossTable
+        weight: 5
+      - !type:NestedSelector
+        tableId: CommonFishTable
+        weight: 1
+
+- type: entityTable
   id: CommonFishTable
   table: !type:GroupSelector
     children:
@@ -19,6 +73,7 @@
     - id: FishNeedle
     - id: MobCrab
 
+
 - type: entityTable
   id: RareFishTable
   table: !type:GroupSelector
@@ -34,6 +89,7 @@
     - id: FishIan
     - id: FishAbductor
     - id: FishSquid
+
 
 - type: entityTable
   id: HostileFishTableWater
@@ -55,6 +111,7 @@
       weight: 1
     - id: MobDragonDungeon
       weight: 0.1
+
 
 - type: entityTable
   id: GrossTable
@@ -89,6 +146,7 @@
     - id: MobMoproach
       weight: 1
 
+
 - type: entityTable
   id: FishingOreCrabTable
   table: !type:GroupSelector
@@ -107,6 +165,7 @@
       weight: 1
     - id: MobSilverCrab
       weight: 1
+
 
 - type: entityTable
   id: LavaLandHostile
@@ -133,17 +192,6 @@
     - id: LavalandMobAshWhelp
       weight: 1
     - id: LavalandMobBrimdemon
-      weight: 1
-
-- type: entityTable
-  id: PreciousMetals
-  table: !type:GroupSelector
-    children:
-    - id: SilverIngot
-      weight: 2
-    - id: GoldIngot
-      weight: 2
-    - id: AdamantineIngot
       weight: 1
 
 
@@ -181,65 +229,3 @@
     # 1% Chance of golden rod
 
 # Items from Water
-- type: entityTable
-  id: WaterFishingLootTable
-  table: !type:GroupSelector
-    children:
-      - !type:NestedSelector
-        tableId: CommonFishTable
-        weight: 7
-      - !type:NestedSelector
-        tableId: RareFishTable
-        weight: 1
-      - !type:NestedSelector
-        tableId: FishingScrapLootTable
-        weight: 1
-      - !type:NestedSelector
-        tableId: HostileFishTableWater
-        weight: 1
-
-# Items from Lava
-- type: entityTable
-  id: LavaFishingLootTable
-  table: !type:GroupSelector
-    children:
-      - !type:NestedSelector
-        tableId: FishingScrapLootTable
-        weight: 5
-      - !type:NestedSelector
-        tableId: FishingOreCrabTable
-        weight: 3
-      - !type:NestedSelector
-        tableId: LavaLandHostile
-        weight: 1
-      - !type:NestedSelector
-        tableId: PreciousMetals
-        weight: 2
-
-# Items from Plasma
-- type: entityTable
-  id: PlasmaFishingLootTable
-  table: !type:GroupSelector
-    children:
-      - !type:NestedSelector
-        tableId: FishingScrapLootTable # Make this one better
-        weight: 5
-      - !type:GroupSelector
-        weight: 5
-        children:
-        - id: MobPlasmamanRandom
-
-# Items from Toilets
-- type: entityTable
-  id: ToiletFishingLootTable
-  table: !type:GroupSelector
-    children:
-      - !type:NestedSelector
-        tableId: HostileFishTableWater
-        weight: 4
-      - !type:NestedSelector
-        tableId: GrossTable
-        weight: 5
-      - !type:NestedSelector
-        tableId: CommonFishTable
-        weight: 1

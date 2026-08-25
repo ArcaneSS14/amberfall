@@ -47,21 +47,6 @@
       - 0,0,7,4
     - type: TileFrictionModifier
       modifier: 0.4 # makes it slide
-    - type: AntiRottingContainer # Trauma
-
-# Add this if freezing/heating container/objects thermodynamics becomes a thing
-
-    #- type: PowerCellSlot
-    #  cellSlotId: cell_slot
-    #- type: ContainerContainer
-    #  containers:
-    #    cell_slot: !type:ContainerSlot
-    #- type: ItemSlots
-    #  slots:
-    #    cell_slot:
-    #      name: power-cell-slot-component-slot-name-default
-    #      startingItem: PowerCellMedium
-
 - type: entity
   name: hot food cart
   id: FoodCartHot

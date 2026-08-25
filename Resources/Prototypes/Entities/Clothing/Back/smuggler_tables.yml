@@ -1,16 +1,16 @@
 #Table
+
 - type: entityTable
   id: RandomSatchelTable
   table: !type:GroupSelector
     children:
     - id: ClothingBackpackSatchelSmugglerFilled
       weight: 85
-    - id: BriefcaseSmugglerCash
-      weight: 10
     - id: ClothingBackpackDuffelClownSmuggler
       weight: 5
 
 #Table
+
 - type: entityTable
   id: FillSmugglerBackpack
   table: !type:GroupSelector
@@ -29,6 +29,7 @@
       tableId: RandomSatchelTable6
 
   #number after each group indicates potential max inventory fill. If all combined fills are too high, it could result in an over-filled bag/error.
+
 - type: entityTable
   id: RandomSatchelTable1
   table: !type:AllSelector
@@ -45,6 +46,77 @@
       tableId: RandomSatchelGizmosTable #2x small
     - !type:NestedSelector
       tableId: RandomSatchelChemsTable #5x tiny
+
+- type: entityTable
+  id: RandomSatchelTable2
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomSatchelTobaccoTable #2x 2x3(12 slots)
+    - !type:NestedSelector
+      tableId: RandomSatchelPartyTable #5x small
+    - !type:NestedSelector
+      tableId: RandomSatchelClothingTable #1x small
+    - !type:NestedSelector
+      tableId: RandomSatchelPayloadTable #2x small
+    - !type:NestedSelector
+      tableId: RandomSatchelCircuitboardsTable #1x small
+
+- type: entityTable
+  id: RandomSatchelTable3
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomSatchelBurgerTable #2x medium
+    - !type:NestedSelector
+      tableId: RandomSatchelPresentsOrToysTable #3x small
+    - !type:NestedSelector
+      tableId: RandomSatchelCashTable #1x small
+    - !type:NestedSelector
+      tableId: RandomSatchelWeaponTable #5x small
+    - !type:NestedSelector
+      tableId: RandomSatchelGenericTableSmall #1x small
+    - !type:NestedSelector
+      tableId: RandomSatchelKeysTable #1x small
+
+- type: entityTable
+  id: RandomSatchelTable4
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomSatchelMaterialsTable #1x medium
+    - !type:NestedSelector
+      tableId: RandomSatchelImplantersTable #1x small
+    - !type:NestedSelector
+      tableId: RandomSatchelCellsTable #1x small
+    - !type:NestedSelector
+      tableId: RandomSatchelSyndicateTable #1x medium
+    - !type:NestedSelector
+      tableId: RandomSatchelToolsTable #1x small
+
+- type: entityTable
+  id: RandomSatchelTable5
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomSatchelAlcoholTable #2x medium
+    - !type:NestedSelector
+      tableId: RandomSatchelInstrumentTable #1x Medium
+    - !type:NestedSelector
+      tableId: RandomSatchelMedsTable #5x tiny
+    - !type:NestedSelector
+      tableId: RandomSatchelMysteriesTable #1x Medium
+
+- type: entityTable
+  id: RandomSatchelTable6
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomSatchelGearTable #1x Huge
+    - !type:NestedSelector
+      tableId: RandomSatchelGadgetsTable #2x small
+    - !type:NestedSelector
+      tableId: CubeTable #10x tiny
 
 - type: entityTable
   id: RandomSatchelFunnyTable
@@ -130,21 +202,6 @@
     - id: ChemistryBottleNocturine
     - id: VestineChemistryVial
 
-- type: entityTable
-  id: RandomSatchelTable2
-  table: !type:AllSelector
-    children:
-    - !type:NestedSelector
-      tableId: RandomSatchelTobaccoTable #2x 2x3(12 slots)
-    - !type:NestedSelector
-      tableId: RandomSatchelPartyTable #5x small
-    - !type:NestedSelector
-      tableId: RandomSatchelClothingTable #1x small
-    - !type:NestedSelector
-      tableId: RandomSatchelPayloadTable #2x small
-    - !type:NestedSelector
-      tableId: RandomSatchelCircuitboardsTable #1x small
-
 - type: entityTable #2x 2x3(12 slots)
   id: RandomSatchelTobaccoTable
   table: !type:GroupSelector
@@ -225,34 +282,14 @@
     - id: DawInstrumentMachineCircuitboard
     - id: PortableGeneratorPacmanMachineCircuitboard
     - id: PortableGeneratorSuperPacmanMachineCircuitboard
-    - id: HellfireFreezerMachineCircuitBoard
-    - id: HellfireHeaterMachineCircuitBoard
     - id: ReagentGrinderMachineCircuitboard
     - id: ReagentGrinderIndustrialMachineCircuitboard
     - id: BoozeDispenserMachineCircuitboard
     - id: MiniGravityGeneratorCircuitboard
     - id: AmmoTechFabCircuitboard
-    - id: CryoPodMachineCircuitboard
     - id: PowerCageRechargerCircuitboard
     - id: ShuttleConsoleCircuitboard
     - id: TurboItemRechargerCircuitboard
-
-- type: entityTable
-  id: RandomSatchelTable3
-  table: !type:AllSelector
-    children:
-    - !type:NestedSelector
-      tableId: RandomSatchelBurgerTable #2x medium
-    - !type:NestedSelector
-      tableId: RandomSatchelPresentsOrToysTable #3x small
-    - !type:NestedSelector
-      tableId: RandomSatchelCashTable #1x small
-    - !type:NestedSelector
-      tableId: RandomSatchelWeaponTable #5x small
-    - !type:NestedSelector
-      tableId: RandomSatchelGenericTableSmall #1x small
-    - !type:NestedSelector
-      tableId: RandomSatchelKeysTable #1x small
 
 - type: entityTable #3x small
   id: RandomSatchelPresentsOrToysTable
@@ -372,21 +409,6 @@
     - id: EncryptionKeyStationMaster
       weight: 0.01
 
-- type: entityTable
-  id: RandomSatchelTable4
-  table: !type:AllSelector
-    children:
-    - !type:NestedSelector
-      tableId: RandomSatchelMaterialsTable #1x medium
-    - !type:NestedSelector
-      tableId: RandomSatchelImplantersTable #1x small
-    - !type:NestedSelector
-      tableId: RandomSatchelCellsTable #1x small
-    - !type:NestedSelector
-      tableId: RandomSatchelSyndicateTable #1x medium
-    - !type:NestedSelector
-      tableId: RandomSatchelToolsTable #1x small
-
 - type: entityTable #1x medium
   id: RandomSatchelMaterialsTable
   table: !type:GroupSelector
@@ -472,19 +494,6 @@
     - id: ClothingHeadHatWeldingMaskFlame
     - id: WelderExperimental
       weight: 0.50
-
-- type: entityTable
-  id: RandomSatchelTable5
-  table: !type:AllSelector
-    children:
-    - !type:NestedSelector
-      tableId: RandomSatchelAlcoholTable #2x medium
-    - !type:NestedSelector
-      tableId: RandomSatchelInstrumentTable #1x Medium
-    - !type:NestedSelector
-      tableId: RandomSatchelMedsTable #5x tiny
-    - !type:NestedSelector
-      tableId: RandomSatchelMysteriesTable #1x Medium
 
 - type: entityTable #2x medium
   id: RandomSatchelAlcoholTable
@@ -593,24 +602,12 @@
       amount: !type:RangeNumberSelector
         range: 1, 3
 
-- type: entityTable
-  id: RandomSatchelTable6
-  table: !type:AllSelector
-    children:
-    - !type:NestedSelector
-      tableId: RandomSatchelGearTable #1x Huge
-    - !type:NestedSelector
-      tableId: RandomSatchelGadgetsTable #2x small
-    - !type:NestedSelector
-      tableId: CubeTable #10x tiny
-
 - type: entityTable #1x Huge
   id: RandomSatchelGearTable
   table: !type:GroupSelector
     children:
     - id: SpaceCash100
       weight: 8
-    - id: JetpackMiniFilled
     - id: HandheldGPSBasic
     - id: WelderIndustrialAdvanced
     - id: HandheldStationMap

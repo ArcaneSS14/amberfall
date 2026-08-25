@@ -27,3 +27,4 @@ public sealed partial class PuddleCreateAnomalyComponent : Component
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public string Solution { get; set; } = "default";
 }
+

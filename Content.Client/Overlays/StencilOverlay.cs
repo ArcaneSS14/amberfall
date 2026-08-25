@@ -2,7 +2,6 @@ using System.Numerics;
 using Content.Client.Graphics;
 using Content.Client.Parallax;
 using Content.Client.Weather;
-using Content.Shared.Salvage;
 using Content.Shared.StatusEffectNew;
 using Content.Shared.StatusEffectNew.Components;
 using Content.Shared.Weather;
@@ -70,9 +69,6 @@ public sealed partial class StencilOverlay : Overlay
 
         if (_statusEffects.TryEffectsWithComp(mapUid, out _weatherSet))
             DrawWeather(args, res, _weatherSet, invMatrix);
-
-        if (_entManager.TryGetComponent<RestrictedRangeComponent>(mapUid, out var restrictedRangeComponent))
-            DrawRestrictedRange(args, res, restrictedRangeComponent, invMatrix);
 
         args.WorldHandle.UseShader(null);
         args.WorldHandle.SetTransform(Matrix3x2.Identity);

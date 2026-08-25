@@ -17,49 +17,6 @@
   - type: Transform
     noRot: false
   # Deep fryer stuff
-  - type: DeepFryer
-    containersToRemove:
-    - storagebase
-    componentsToAdd:
-    - type: DeepFried
-    - type: Solution
-      id: food
-      solution:
-        maxVol: 15
-    - type: NameModifier
-    componentsToAddObjects:
-    - type: Edible
-    - type: FlavorProfile
-      flavors:
-      - DeepFried
-      - oily
-    componentsToRemoveObjects:
-    - type: Storage
-    - type: Tool
-    - type: RadioSpeaker
-    - type: RadioMicrophone
-    - type: ActiveListener
-    - type: AmmoSelector
-    - type: Multishot
-    - type: GunWieldBonus
-    - type: MeleeWeapon
-      damage: {}
-    - type: RotInto
-      entity: FoodRot
-      stage: 1
-    - type: ItemToggle
-    - type: Explosive
-      explosionType: HardBomb
-    - type: AmmoCounter
-    - type: Battery
-    - type: Gun
-    - type: RCD
-    - type: UserInterface
-    - type: HealthAnalyzer
-    - type: CablePlacer
-    componentsToRemove:
-    - type: Perishable
-  # -----------------
   - type: Electrified
     enabled: false
     usesApcPower: true

@@ -3,15 +3,6 @@
 ## PARITY
 
 - type: scrollPrayer
-  id: BaconEggs
-  verb: GIVE
-  subjects: [ "BACON & EGGS" ]
-  items: !type:AllSelector
-    children:
-    - id: FoodMeatBaconCooked
-    - id: FoodMealFriedegg
-
-- type: scrollPrayer
   id: Cabbage
   verb: GIVE
   subjects: [ "CABBAGE" ]
@@ -45,20 +36,6 @@
   subjects: [ "MUSHROOM", "DRIED MUSHROOM", "GLOW MUSHROOM" ]
   items:
     id: FoodMushroom # not dried sorry chud
-
-- type: scrollPrayer
-  id: Egg
-  verb: GIVE
-  subjects: [ "EGG" ]
-  items: !type:GroupSelector
-    children:
-    - id: FoodEgg
-    - id: EggSpider
-      weight: 0.05
-    - id: EggSpiderFertilized
-      weight: 0.05
-    - id: XenoEgg
-      weight: 0.1
 
 - type: scrollPrayer
   id: MeatPie

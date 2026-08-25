@@ -26,6 +26,7 @@
       tableId: RandomRareSodaTable
       weight: 0.05
 
+
 - type: entityTable
   id: RandomCommonSodaTable
   table: !type:GroupSelector

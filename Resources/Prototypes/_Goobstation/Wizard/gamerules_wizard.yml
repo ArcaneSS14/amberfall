@@ -19,10 +19,6 @@
 - type: entity
   parent: BaseGameRule
   id: SleepersOnWizardDeath
-  components:
-  - type: RuleOnWizardDeathRule
-    rule: SleeperAgentsWizard
-
 - type: entity
   parent: BaseTraitorRule
   id: SleeperAgentsWizard

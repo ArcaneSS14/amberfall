@@ -1,14 +1,4 @@
 - type: guideEntry
-  id: Security
-  name: guide-entry-security
-  text: "/ServerInfo/Guidebook/Security/Security.xml"
-  children:
-  - Forensics
-  - Defusal
-  - CriminalRecords
-  - SpaceLaw # Goobstation
-
-- type: guideEntry
   id: Forensics
   name: guide-entry-forensics
   text: "/ServerInfo/Guidebook/Security/Forensics.xml"

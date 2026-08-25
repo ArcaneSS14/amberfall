@@ -205,17 +205,6 @@
     grindableSolutionName: bloodstream
   - type: PotencyVisuals
   - type: Appearance
-  - type: Produce
-    seedId: killerTomato
-  # Goobstation - Remove killer tomato timed live
-  # billions must die
-  #- type: PassiveDamage # Slight passive damage. 35 hp \ 5 min \ 60 sec = 0.08
-  #  allowedStates:
-  #  - Alive
-  #  - Dead
-  #  damage:
-  #    types:
-  #      Blunt: 0.11
   - type: StaticPrice
     price: 400
   - type: FadingTimedDespawn # Trauma, otherwise its too easy to make hell armies

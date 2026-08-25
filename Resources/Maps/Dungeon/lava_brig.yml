@@ -3113,28 +3113,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 24.5,42.5
       parent: 588
-- proto: BedsheetSpawner
-  entities:
-  - uid: 301
-    components:
-    - type: Transform
-      pos: 11.5,4.5
-      parent: 588
-  - uid: 1041
-    components:
-    - type: Transform
-      pos: 20.5,28.5
-      parent: 588
-  - uid: 1225
-    components:
-    - type: Transform
-      pos: 14.5,34.5
-      parent: 588
-  - uid: 1226
-    components:
-    - type: Transform
-      pos: 20.5,36.5
-      parent: 588
 - proto: BedsheetSyndie
   entities:
   - uid: 1037
@@ -3172,13 +3150,6 @@ entities:
     - type: Transform
       pos: 15.616387,0.61007345
       parent: 588
-- proto: BookEscalationSecurity
-  entities:
-  - uid: 373
-    components:
-    - type: Transform
-      pos: 19.42657,0.6288943
-      parent: 588
 - proto: BookRandom
   entities:
   - uid: 1835
@@ -3192,52 +3163,6 @@ entities:
     components:
     - type: Transform
       pos: 32.41844,8.400207
-      parent: 588
-- proto: BoxFolderBlack
-  entities:
-  - uid: 365
-    components:
-    - type: Transform
-      pos: 27.841173,1.5632035
-      parent: 588
-  - uid: 728
-    components:
-    - type: Transform
-      pos: 10.690479,19.262342
-      parent: 588
-- proto: BoxFolderGrey
-  entities:
-  - uid: 364
-    components:
-    - type: Transform
-      pos: 25.072409,1.4780562
-      parent: 588
-  - uid: 727
-    components:
-    - type: Transform
-      pos: 7.2148314,22.575037
-      parent: 588
-- proto: BoxFolderRed
-  entities:
-  - uid: 329
-    components:
-    - type: Transform
-      pos: 21.42984,3.6329575
-      parent: 588
-  - uid: 362
-    components:
-    - type: Transform
-      pos: 24.788435,1.6057768
-      parent: 588
-  - uid: 363
-    components:
-    - type: Transform
-      pos: 28.196142,1.5773941
-      parent: 588
-  - uid: 726
-    components:
-    - type: Transform
-      pos: 10.428753,19.429379
       parent: 588
 - proto: BoxMouthSwab
   entities:
@@ -7360,13 +7285,6 @@ entities:
     - type: Transform
       pos: 18.47467,24.458666
       parent: 588
-- proto: ClothingOuterCoatDetectiveLoadout
-  entities:
-  - uid: 574
-    components:
-    - type: Transform
-      pos: 13.396446,12.479115
-      parent: 588
 - proto: ClothingOuterRobesJudge
   entities:
   - uid: 370
@@ -7408,26 +7326,6 @@ entities:
     components:
     - type: Transform
       pos: 33.484257,28.42918
-      parent: 588
-- proto: ComputerAlert
-  entities:
-  - uid: 999
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 17.5,30.5
-      parent: 588
-  - uid: 1001
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 23.5,30.5
-      parent: 588
-  - uid: 1561
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 21.5,46.5
       parent: 588
 - proto: computerBodyScanner
   entities:
@@ -7497,70 +7395,6 @@ entities:
     - type: Transform
       pos: 22.5,36.5
       parent: 588
-- proto: CrateEngineeringGear
-  entities:
-  - uid: 1008
-    components:
-    - type: Transform
-      pos: 26.5,30.5
-      parent: 588
-- proto: CrateFunBoardGames
-  entities:
-  - uid: 1845
-    components:
-    - type: Transform
-      pos: 26.5,48.5
-      parent: 588
-- proto: CrateFunParty
-  entities:
-  - uid: 1876
-    components:
-    - type: Transform
-      pos: 25.5,43.5
-      parent: 588
-- proto: CrateHydroponicsSeedsExotic
-  entities:
-  - uid: 1660
-    components:
-    - type: Transform
-      pos: 31.5,22.5
-      parent: 588
-- proto: CrayonBox
-  entities:
-  - uid: 1057
-    components:
-    - type: Transform
-      pos: 20.47107,24.608877
-      parent: 588
-  - uid: 1116
-    components:
-    - type: Transform
-      pos: 20.607256,14.646415
-      parent: 588
-- proto: CryoPod
-  entities:
-  - uid: 1395
-    components:
-    - type: Transform
-      pos: 8.5,47.5
-      parent: 588
-  - uid: 1397
-    components:
-    - type: Transform
-      pos: 14.5,47.5
-      parent: 588
-- proto: DebugSMES
-  entities:
-  - uid: 971
-    components:
-    - type: Transform
-      pos: 22.5,32.5
-      parent: 588
-  - uid: 974
-    components:
-    - type: Transform
-      pos: 18.5,32.5
-      parent: 588
 - proto: DeployableBarrier
   entities:
   - uid: 1233
@@ -7568,53 +7402,12 @@ entities:
     - type: Transform
       pos: 32.5,24.5
       parent: 588
-- proto: DiceBag
-  entities:
-  - uid: 552
-    components:
-    - type: Transform
-      pos: 20.294882,15.426926
-      parent: 588
 - proto: DiseaseDiagnoser
   entities:
   - uid: 1424
     components:
     - type: Transform
       pos: 14.5,44.5
-      parent: 588
-- proto: DisposalUnit
-  entities:
-  - uid: 550
-    components:
-    - type: Transform
-      pos: 22.5,16.5
-      parent: 588
-  - uid: 725
-    components:
-    - type: Transform
-      pos: 21.5,22.5
-      parent: 588
-  - uid: 766
-    components:
-    - type: Transform
-      pos: 9.5,22.5
-      parent: 588
-  - uid: 1288
-    components:
-    - type: Transform
-      pos: 22.5,38.5
-      parent: 588
-- proto: DonkpocketBoxSpawner
-  entities:
-  - uid: 526
-    components:
-    - type: Transform
-      pos: 16.5,13.5
-      parent: 588
-  - uid: 723
-    components:
-    - type: Transform
-      pos: 18.5,21.5
       parent: 588
 - proto: DoorElectronics
   entities:
@@ -8487,105 +8280,6 @@ entities:
     - type: Transform
       pos: 17.405733,12.600882
       parent: 588
-- proto: GasFilter
-  entities:
-  - uid: 1415
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 12.5,47.5
-      parent: 588
-- proto: GasPipeBend
-  entities:
-  - uid: 1412
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 8.5,46.5
-      parent: 588
-  - uid: 1414
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 14.5,46.5
-      parent: 588
-  - uid: 1416
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 11.5,47.5
-      parent: 588
-  - uid: 1421
-    components:
-    - type: Transform
-      pos: 13.5,47.5
-      parent: 588
-- proto: GasPipeStraight
-  entities:
-  - uid: 1418
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 10.5,47.5
-      parent: 588
-  - uid: 1420
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 12.5,46.5
-      parent: 588
-- proto: GasPipeTJunction
-  entities:
-  - uid: 1410
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 9.5,46.5
-      parent: 588
-  - uid: 1411
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 13.5,46.5
-      parent: 588
-  - uid: 1417
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 10.5,46.5
-      parent: 588
-  - uid: 1419
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 11.5,46.5
-      parent: 588
-- proto: GasPort
-  entities:
-  - uid: 1404
-    components:
-    - type: Transform
-      pos: 9.5,48.5
-      parent: 588
-  - uid: 1422
-    components:
-    - type: Transform
-      pos: 12.5,48.5
-      parent: 588
-- proto: GasPressurePump
-  entities:
-  - uid: 1409
-    components:
-    - type: Transform
-      pos: 9.5,47.5
-      parent: 588
-- proto: GasThermoMachineFreezer
-  entities:
-  - uid: 1403
-    components:
-    - type: Transform
-      pos: 10.5,48.5
-      parent: 588
 - proto: GatfruitSeeds
   entities:
   - uid: 562
@@ -9146,20 +8840,6 @@ entities:
     - type: Transform
       pos: 28.5,25.5
       parent: 588
-- proto: MedkitAdvancedFilled
-  entities:
-  - uid: 1153
-    components:
-    - type: Transform
-      pos: 30.614443,28.392822
-      parent: 588
-- proto: MedkitCombatFilled
-  entities:
-  - uid: 1154
-    components:
-    - type: Transform
-      pos: 30.40146,28.066427
-      parent: 588
 - proto: OperatingTable
   entities:
   - uid: 1389
@@ -9322,13 +9002,6 @@ entities:
     - type: Transform
       pos: 20.5,44.5
       parent: 588
-- proto: PortableScrubber
-  entities:
-  - uid: 1101
-    components:
-    - type: Transform
-      pos: 18.5,30.5
-      parent: 588
 - proto: PosterContrabandBountyHunters
   entities:
   - uid: 1578
@@ -9388,18 +9061,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,19.5
-      parent: 588
-- proto: PottedPlantRandom
-  entities:
-  - uid: 1286
-    components:
-    - type: Transform
-      pos: 16.5,38.5
-      parent: 588
-  - uid: 1287
-    components:
-    - type: Transform
-      pos: 22.5,40.5
       parent: 588
 - proto: PowerCellHyper
   entities:
@@ -10608,13 +10269,6 @@ entities:
     - type: Transform
       pos: 12.5,12.5
       parent: 588
-- proto: RandomFoodSingle
-  entities:
-  - uid: 764
-    components:
-    - type: Transform
-      pos: 6.5,19.5
-      parent: 588
 - proto: RandomInstruments
   entities:
   - uid: 546
@@ -10675,13 +10329,6 @@ entities:
     components:
     - type: Transform
       pos: 8.5,24.5
-      parent: 588
-- proto: RandomVending
-  entities:
-  - uid: 539
-    components:
-    - type: Transform
-      pos: 17.5,16.5
       parent: 588
 - proto: ReinforcedWindow
   entities:
@@ -10793,43 +10440,6 @@ entities:
     components:
     - type: Transform
       pos: 1.5481212,16.543125
-      parent: 588
-- proto: SalvageCanisterSpawner
-  entities:
-  - uid: 998
-    components:
-    - type: Transform
-      pos: 22.5,30.5
-      parent: 588
-  - uid: 1009
-    components:
-    - type: Transform
-      pos: 19.5,30.5
-      parent: 588
-  - uid: 1025
-    components:
-    - type: Transform
-      pos: 21.5,30.5
-      parent: 588
-  - uid: 1190
-    components:
-    - type: Transform
-      pos: 9.5,36.5
-      parent: 588
-  - uid: 1210
-    components:
-    - type: Transform
-      pos: 9.5,48.5
-      parent: 588
-  - uid: 1413
-    components:
-    - type: Transform
-      pos: 13.5,48.5
-      parent: 588
-  - uid: 1470
-    components:
-    - type: Transform
-      pos: 12.5,48.5
       parent: 588
 - proto: SawAdvanced
   entities:
@@ -11614,26 +11224,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 12.5,43.5
-      parent: 588
-- proto: ToiletEmpty
-  entities:
-  - uid: 932
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,24.5
-      parent: 588
-  - uid: 933
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 10.5,24.5
-      parent: 588
-  - uid: 934
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,25.5
       parent: 588
 - proto: UniformScrubsColorPurple
   entities:

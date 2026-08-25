@@ -26,11 +26,6 @@
           - SlipLayer
   - type: Physics
     bodyType: Static
-  - type: WizardTrap # Wizard cuz yeah
-    canReveal: false
-    ignoredEntityWhitelist:
-      components:
-      - Ghoul
   - type: Tag
     tags:
     - HideContextMenu
@@ -63,19 +58,6 @@
     state: tentacle_rune
   - type: Sprite
     state: tentacle_rune
-  - type: WizardTrap
-    timeBetweenTriggers: 45
-    triggerSound:
-      path: /Audio/_Goobstation/Heretic/demon_attack1.ogg
-    stunTime: 5
-  - type: DamageTrap
-    damage:
-      types:
-        Blunt: 20
-      woundSeverityMultipliers:
-        Blunt: 2
-      partDamageVariation: 2
-
 - type: entity
   parent: BaseCarving
   id: MadCarving
@@ -89,11 +71,6 @@
     state: madness_rune
   - type: Sprite
     state: madness_rune
-  - type: WizardTrap
-    timeBetweenTriggers: 20
-    charges: 2
-    triggerSound:
-      path: /Audio/_Goobstation/Heretic/blind.ogg
   - type: MadCarving
 
 - type: entity
@@ -110,15 +87,4 @@
   - type: Sprite
     color: '#FFFFFF0a'
     state: alert_rune
-  - type: WizardTrap
-    sparks: false
-    silent: true
-    stunTime: 0
-    charges: 50
-    ignoredEntityWhitelist:
-      components: []
-    targetedEntityWhitelist:
-      components:
-      - HumanoidProfile
-      - BorgChassis
   - type: AlertCarving

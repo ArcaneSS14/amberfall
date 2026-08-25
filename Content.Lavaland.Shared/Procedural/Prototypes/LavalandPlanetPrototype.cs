@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Shared.Atmos;
 using Content.Shared.EntityEffects;
 using Content.Shared.Parallax.Biomes;
 using Content.Shared.Parallax.Biomes.Markers;
@@ -29,12 +28,6 @@ public sealed partial class LavalandPlanetPrototype : IPrototype, IInheritingPro
 
     [DataField]
     public float RestrictedRange = 512f;
-
-    [DataField(required: true)]
-    public GasMixture Atmosphere = GasMixture.SpaceGas;
-
-    [DataField]
-    public float Temperature = Atmospherics.T20C;
 
     [DataField]
     public Color MapLight = Color.FromHex("#D8B059");

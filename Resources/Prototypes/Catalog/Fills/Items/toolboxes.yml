@@ -11,7 +11,6 @@
         - id: CrowbarRed
         - id: RadioHandheld
         - id: WelderMini
-        - id: FireExtinguisherMini
         # Random lighting item GroupSelector
         - !type:GroupSelector
           children:

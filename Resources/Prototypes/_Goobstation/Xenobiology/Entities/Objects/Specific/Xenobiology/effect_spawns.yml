@@ -63,8 +63,6 @@
           bounds: "-0.5,-0.5,0.5,0.5"
         layer:
         - MidImpassable
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
   - type: SpeedModifierContacts
     walkSpeedModifier: 0.5
     sprintSpeedModifier: 0.5

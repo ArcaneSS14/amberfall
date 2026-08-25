@@ -6,11 +6,8 @@
     edges:
     - to: gunpowder
       steps:
-      - tag: Pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
-        name: construction-graph-tag-pipe
+      - material: Steel
+        amount: 1
       - material: Steel
         amount: 1
         doAfter: 3

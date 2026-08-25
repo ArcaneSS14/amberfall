@@ -107,3 +107,4 @@ public sealed partial class ProjectileAnomalySystem : EntitySystem
         _gunSystem.ShootProjectile(ent, direction, Vector2.Zero, uid, uid, component.ProjectileSpeed);
     }
 }
+

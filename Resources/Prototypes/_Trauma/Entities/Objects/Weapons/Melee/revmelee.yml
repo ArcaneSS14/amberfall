@@ -280,11 +280,6 @@
     energy: 5.0
   - type: Item
     size: Ginormous
-  - type: IgnitionSource
-    temperature: 700
-  - type: AlwaysHot
-  - type: IgniteOnMeleeHit
-    fireStacks: 1
   - type: Construction
     graph: RevTorch
 

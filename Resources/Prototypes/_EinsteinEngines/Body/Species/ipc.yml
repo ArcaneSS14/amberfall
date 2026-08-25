@@ -231,20 +231,6 @@
         - MobMask
         layer:
         - MobLayer
-  - type: Temperature
-    currentTemperature: 310.15 # 310K is the standard operating temperature of a home circuit breaker
-    specificHeat: 42
-    atmosTemperatureTransferEfficiency: 0.05
-  - type: TemperatureDamage
-    heatDamageThreshold: 450 # Wanted to do 363.15 for le realism, but reptiles have 400K limit which is ????
-    coldDamageThreshold: 260
-    coldDamage:
-      types:
-        Cold: 0.1 #per second, scales with temperature & other constants
-    heatDamage:
-      types:
-        Heat: 2 #per second, scales with temperature & other constants
-  - type: KillOnOverheat
   - type: Deathgasp
     prototype: SiliconDeathgasp
     needsCritical: false

@@ -23,15 +23,6 @@
     state: grinder_empty
 
 - type: mixingCategory
-  id: DummyCondense
-  verbText: mixing-verb-default-condense
-  icon:
-    sprite: Structures/Piping/Atmospherics/condenser.rsi
-    state: display
-
-# Alternative Mixing Methods
-
-- type: mixingCategory
   id: Centrifuge
   verbText: mixing-verb-centrifuge
   icon:

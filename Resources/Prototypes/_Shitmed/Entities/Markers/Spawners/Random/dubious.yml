@@ -1,5 +1,19 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+- type: entity
+  name: Dubious Organ Spawner
+  id: DubiousOrganSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _Shitmed/Mobs/Species/Misc/Dubious/organs.rsi
+        state: gland
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: DubiousOrgansTable
+
 - type: entityTable
   id: DubiousOrgansTable
   table: !type:GroupSelector
@@ -37,16 +51,3 @@
       - id: OrganDubiousSpiderEggs
       - id: OrganDubiousSlimeEggs
 
-- type: entity
-  name: Dubious Organ Spawner
-  id: DubiousOrganSpawner
-  parent: MarkerBase
-  components:
-  - type: Sprite
-    layers:
-      - state: red
-      - sprite: _Shitmed/Mobs/Species/Misc/Dubious/organs.rsi
-        state: gland
-  - type: EntityTableSpawner
-    table: !type:NestedSelector
-      tableId: DubiousOrgansTable

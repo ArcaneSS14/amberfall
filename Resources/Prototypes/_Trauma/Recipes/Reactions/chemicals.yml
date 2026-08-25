@@ -13,17 +13,6 @@
     Cement: 5
 
 - type: reaction
-  id: CementWetReaction
-  reactants:
-    Cement:
-      amount: 5
-    Water:
-      amount: 5
-  effects:
-    - !type:SpawnEntity
-      entity: WetCement
-
-- type: reaction
   id: SodiumBicarbonate
   reactants:
     SodiumCarbonate:
@@ -95,19 +84,6 @@
   products:
     CalciumOxide: 1
     CarbonDioxide: 1
-
-- type: reaction
-  id: CalciumOxideHydration
-  reactants:
-    CalciumOxide:
-      amount: 1
-    Water:
-      amount: 1
-  products:
-    CalciumHydroxide: 1
-  effects:
-    - !type:AdjustTemperature
-      amount: 200 # Like cryostylane-iodine reaction, but making heat
 
 - type: reaction
   id: FullFatOilReaction

@@ -14,7 +14,6 @@
     - type: ChameleonClothing
       slot: [mask]
       default: ClothingMaskGas
-    - type: BreathMask
     - type: IdentityBlocker # need that for default ClothingMaskGas
     - type: HideLayerClothing
       slots:

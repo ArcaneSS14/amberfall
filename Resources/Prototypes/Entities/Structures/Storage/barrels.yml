@@ -54,29 +54,6 @@
     intensity: 1.0
     slope: 0.25
 
-- type: entityTable
-  id: RandomChemicalBarrel
-  table: !type:GroupSelector
-    children:
-    - id: BarrelChemFilledIodine
-    - id: BarrelChemFilledFluorine
-    - id: BarrelChemFilledChlorine
-    - id: BarrelChemFilledEthanol
-    - id: BarrelChemFilledPhosphorus
-    - id: BarrelChemFilledSilicon
-    - id: BarrelChemFilledMercury
-    - id: BarrelChemFilledLube # oiled up...
-      weight: 0.1
-
-- type: entityTable
-  id: RandomChemicalBarrelRadioactive
-  table: !type:GroupSelector
-    children:
-    - id: BaseBarrelChemRadioactiveEmpty
-      weight: 2
-    - id: BaseBarrelChemRadioactiveFilledRadium
-    - id: BaseBarrelChemRadioactiveFilledUranium
-
 - type: entity
   parent: BaseBarrelChem
   id: BarrelChemEmpty
@@ -201,3 +178,26 @@
       reagents:
       - ReagentId: Uranium
         Quantity: 960
+
+- type: entityTable
+  id: RandomChemicalBarrel
+  table: !type:GroupSelector
+    children:
+    - id: BarrelChemFilledIodine
+    - id: BarrelChemFilledFluorine
+    - id: BarrelChemFilledChlorine
+    - id: BarrelChemFilledEthanol
+    - id: BarrelChemFilledPhosphorus
+    - id: BarrelChemFilledSilicon
+    - id: BarrelChemFilledMercury
+    - id: BarrelChemFilledLube # oiled up...
+      weight: 0.1
+
+- type: entityTable
+  id: RandomChemicalBarrelRadioactive
+  table: !type:GroupSelector
+    children:
+    - id: BaseBarrelChemRadioactiveEmpty
+      weight: 2
+    - id: BaseBarrelChemRadioactiveFilledRadium
+    - id: BaseBarrelChemRadioactiveFilledUranium

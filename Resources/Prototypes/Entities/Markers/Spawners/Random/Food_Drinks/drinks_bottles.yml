@@ -27,6 +27,7 @@
       tableId: RandomRareAlcoholTable
       weight: 0.05
 
+
 - type: entityTable
   id: RandomCommonAlcoholTable
   table: !type:GroupSelector

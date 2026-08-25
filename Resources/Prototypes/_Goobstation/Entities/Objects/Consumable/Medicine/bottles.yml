@@ -66,6 +66,7 @@
     - id: ChemistryBottleBicaridine
     - id: ChemistryBottleHyronalin
 
+
 - type: entityTable
   id: RandomChemistryBottleMedicalTier2
   table: !type:GroupSelector
@@ -80,6 +81,7 @@
     - id: ChemistryBottleTricordrazine
     - id: ChemistryBottleIpecac
     - id: ChemistryBottleOculine
+
 
 - type: entityTable
   id: RandomChemistryBottleMedicalTier3

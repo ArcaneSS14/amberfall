@@ -98,13 +98,6 @@
   description: alerts-high-pressure-desc
 
 - type: alert
-  id: Fire
-  icons: [ /Textures/Interface/Alerts/Fire/fire.png ]
-  clickEvent: !type:ResistFireAlertEvent
-  name: alerts-on-fire-name
-  description: alerts-on-fire-desc
-
-- type: alert
   id: Cold
   category: Temperature
   icons:

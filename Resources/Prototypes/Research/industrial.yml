@@ -125,24 +125,6 @@
   position: 0,1
 
 - type: technology
-  id: AtmosphericTech
-  name: research-technology-atmospheric-tech
-  icon:
-    sprite: Structures/Piping/Atmospherics/thermomachine.rsi
-    state: freezerOff
-  discipline: Industrial
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - ThermomachineFreezerMachineCircuitBoard
-  - GasRecyclerMachineCircuitboard
-  # Goobstation R&D Console rework start
-  position: -1,-1
-  technologyPrerequisites:
-  - SpaceScanning
-  # Goobstation R&D Console rework end
-
-- type: technology
   id: RipleyAPLU
   name: research-technology-ripley-aplu
   icon:
@@ -186,25 +168,6 @@
   position: 2,-1
   technologyPrerequisites:
   - MechanicalCompression
-  # Goobstation R&D Console rework end
-
-- type: technology
-  id: AdvancedAtmospherics
-  name: research-technology-advanced-atmospherics
-  icon:
-    sprite: Objects/Devices/Holoprojectors/atmos.rsi
-    state: icon
-  discipline: Industrial
-  tier: 2
-  cost: 7500
-  recipeUnlocks:
-  - HellfireFreezerMachineCircuitBoard
-  - PortableScrubberMachineCircuitBoard
-  - HolofanProjector
-  technologyPrerequisites:
-  - AtmosphericTech
-  # Goobstation R&D Console rework start
-  position: -1,-2
   # Goobstation R&D Console rework end
 
 - type: technology

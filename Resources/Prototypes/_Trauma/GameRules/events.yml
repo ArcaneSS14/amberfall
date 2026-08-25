@@ -1,43 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-- type: entityTable
-  id: BasicCalmEventsTrauma
-  table: !type:AllSelector
-    children:
-    - id: TidemindDevelop
-    - id: MothmaggotSpawn
-    - id: DerelictCyborgSyndicateSpawn
-    - id: MalignRiftSpawn
-    - id: FloorGoblinMidRound
-    - id: ClownGoblinMigration
-    - id: RadiationStormRule
-
-- type: entityTable
-  id: BasicAntagEventsTrauma
-  table: !type:AllSelector
-    children:
-    - id: CarpMigrationRule
-    # TOOD: remove these if they fucking suck lmao
-    - id: SingulothKnightsMidround
-    - id: MimeAssassinMidround
-    - id: VoxRaidersMidround
-    - id: TunnelClownMidround
-    - id: WraithMidround # Unchuddified version | no evolution | no absorbing corpses
-    - id: ParadoxCloneSpawn
-    - id: MorphRule
-
-- type: entityTable
-  id: ModerateAntagEventsTrauma
-  table: !type:AllSelector
-    children:
-    - id: BlobMidround
-    - id: DuoAbductorSpawn
-    - id: BingleSpawn
-    - id: XenomorphsInfestation
-    #- id: SlasherSpawn # TODO: when slasher is ready
-    - id: ColossusSpawn
-    - id: FugitiveSpawn
-
 - type: entity
   parent: BaseGameRule
   id: CarpMigrationRule
@@ -78,11 +40,6 @@
     weight: 3
     duration: 5
     reoccurrenceDelay: 30
-  - type: VentHordeRule
-    table:
-      id: MobRatma
-      amount: 1, 1
-
 - type: entity
   parent: BaseStationEventShortDelay
   id: WailingHorseSpawn
@@ -95,11 +52,6 @@
     weight: 3
     duration: 5
     reoccurrenceDelay: 30
-  - type: VentHordeRule
-    table:
-      id: MobWailingHorse
-      amount: 1, 1
-
 - type: entity
   parent: BaseStationEventShortDelay
   id: CoconutCrabSpawn
@@ -112,16 +64,6 @@
     weight: 3
     duration: 5
     reoccurrenceDelay: 30
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      - id: MobCoconutCrab
-        weight: 0.75
-      - id: MobCrabTiny
-      - id: MobCoconutCrabFloofy # because it looks funny
-        weight: 0.05 # NEVER BASICALLY
-
 - type: entity
   parent: BaseStationEventShortDelay
   id: DartFrogSpawn
@@ -135,17 +77,6 @@
     weight: 2
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      - id: MobDartFrog1
-      - id: MobDartFrog2
-      - id: MobDartFrog3
-      - id: MobDartFrog4
-      - id: MobDartFrog5
-      - id: MobDartFrog6
-
 - type: entity
   parent: BaseStationEventShortDelay
   id: MantisSpawn
@@ -159,13 +90,6 @@
     weight: 2
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      - id: MobMantis
-      - id: MobMantisShrimp
-
 - type: entity
   parent: BaseStationEventShortDelay
   id: ShrimpSpawn
@@ -179,13 +103,6 @@
     weight: 2
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      - id: MobMantisShrimp
-      - id: MobShrimp
-
 - type: entity
   parent: BaseStationEventShortDelay
   id: SnakeSpawn
@@ -199,14 +116,6 @@
     weight: 2
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      - id: MobCobra
-      - id: MobYellowBellySnake
-      - id: MobKraitSea
-
 - type: entity
   parent: BaseStationEventShortDelay
   id: EelSpawn
@@ -220,12 +129,6 @@
     weight: 2
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      - id: MobEelSea
-
 - type: entity
   parent: BaseStationEventShortDelay
   id: BunnySpawn
@@ -239,14 +142,6 @@
     weight: 2
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      - id: MobBunny
-      - id: MobBunnySea
-      - id: MobBunnyEvil
-
 - type: entity
   parent: BaseStationEventShortDelay
   id: SpiderCrabSpawn
@@ -260,12 +155,6 @@
     weight: 2
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      - id: MobSpiderCrabSea
-
 - type: entity
   parent: BaseAntagGhostRoleRule
   id: FugitiveSpawn
@@ -323,3 +212,41 @@
     effects:
     - !type:NestedEffect
       proto: TraitorSkills
+
+- type: entityTable
+  id: BasicCalmEventsTrauma
+  table: !type:AllSelector
+    children:
+    - id: TidemindDevelop
+    - id: MothmaggotSpawn
+    - id: DerelictCyborgSyndicateSpawn
+    - id: MalignRiftSpawn
+    - id: FloorGoblinMidRound
+    - id: ClownGoblinMigration
+    - id: RadiationStormRule
+
+- type: entityTable
+  id: BasicAntagEventsTrauma
+  table: !type:AllSelector
+    children:
+    - id: CarpMigrationRule
+    # TOOD: remove these if they fucking suck lmao
+    - id: SingulothKnightsMidround
+    - id: MimeAssassinMidround
+    - id: VoxRaidersMidround
+    - id: TunnelClownMidround
+    - id: WraithMidround # Unchuddified version | no evolution | no absorbing corpses
+    - id: ParadoxCloneSpawn
+    - id: MorphRule
+
+- type: entityTable
+  id: ModerateAntagEventsTrauma
+  table: !type:AllSelector
+    children:
+    - id: BlobMidround
+    - id: DuoAbductorSpawn
+    - id: BingleSpawn
+    - id: XenomorphsInfestation
+    #- id: SlasherSpawn # TODO: when slasher is ready
+    - id: ColossusSpawn
+    - id: FugitiveSpawn

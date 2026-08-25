@@ -192,7 +192,6 @@
     stateDoorClosed: freezer_door
   - type: ExplosionResistance
     damageCoefficient: 0.01 # Trauma - was 0.5
-  - type: AntiRottingContainer
   - type: Construction
     graph: ClosetFreezer
     node: done

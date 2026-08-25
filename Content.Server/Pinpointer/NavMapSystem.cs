@@ -1,6 +1,4 @@
 using Content.Server.Administration.Logs;
-using Content.Server.Atmos.Components;
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Station.Systems;
 using Content.Shared.Database;
 using Content.Shared.Localizations;
@@ -27,7 +25,6 @@ public sealed partial class NavMapSystem : SharedNavMapSystem
     [Dependency] private IGameTiming _gameTiming = default!;
     [Dependency] private TurfSystem _turfSystem = default!;
 
-    [Dependency] private EntityQuery<AirtightComponent> _airtightQuery = default!;
     [Dependency] private EntityQuery<MapGridComponent> _gridQuery = default!;
     [Dependency] private EntityQuery<NavMapComponent> _navQuery = default!;
 
@@ -48,8 +45,6 @@ public sealed partial class NavMapSystem : SharedNavMapSystem
         // Grid change events
         SubscribeLocalEvent<GridSplitEvent>(OnNavMapSplit);
         SubscribeLocalEvent<TileChangedEvent>(OnTileChanged);
-
-        SubscribeLocalEvent<AirtightChanged>(OnAirtightChange);
 
         // Beacon events
         SubscribeLocalEvent<NavMapBeaconComponent, MapInitEvent>(OnNavMapBeaconMapInit);
@@ -132,28 +127,6 @@ public sealed partial class NavMapSystem : SharedNavMapSystem
 
         chunk.LastUpdate = _gameTiming.CurTick;
         Dirty(entity);
-    }
-
-    private void OnAirtightChange(ref AirtightChanged args)
-    {
-        if (args.AirBlockedChanged)
-            return;
-
-        var gridUid = args.Position.Grid;
-
-        if (!_navQuery.TryComp(gridUid, out var navMap) ||
-            !_gridQuery.TryComp(gridUid, out var mapGrid))
-        {
-            return;
-        }
-
-        var chunkOrigin = SharedMapSystem.GetChunkIndices(args.Position.Tile, ChunkSize);
-        var (newValue, chunk) = RefreshTileEntityContents(gridUid, navMap, mapGrid, chunkOrigin, args.Position.Tile, setFloor: false);
-
-        if (newValue == 0 && PruneEmpty((gridUid, navMap), chunk))
-            return;
-
-        DirtyChunk((gridUid, navMap), chunk);
     }
 
     #endregion
@@ -268,20 +241,6 @@ public sealed partial class NavMapSystem : SharedNavMapSystem
             tileData = FloorMask;
         else
             tileData &= FloorMask;
-
-        var enumerator = _mapSystem.GetAnchoredEntitiesEnumerator(uid, mapGrid, tile);
-        while (enumerator.MoveNext(out var ent))
-        {
-            if (!_airtightQuery.TryComp(ent, out var airtight))
-                continue;
-
-            var category = GetEntityType(ent.Value);
-            if (category == NavMapChunkType.Invalid)
-                continue;
-
-            var directions = (int)airtight.AirBlockedDirection;
-            tileData |= directions << (int) category;
-        }
 
         // Remove walls that intersect with doors (unless they can both physically fit on the same tile)
         // TODO NAVMAP why can this even happen?

@@ -26,7 +26,3 @@
           state: small
       - tool: Screwing
         doAfter: 1
-  - node: vim
-    actions:
-    - !type:BuildMech
-      mechPrototype: MechVim

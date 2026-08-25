@@ -11,8 +11,6 @@
         children:
         - id: ClothingOuterHardsuitSalvage
         - id: ClothingMaskBreath
-        - id: OxygenTankFilled
-        - id: FireExtinguisher
         - id: ClothingShoesBootsMag
         - id: HandheldGPSBasic # Goob - was HandHeldMassScanner
         - id: Pickaxe
@@ -36,8 +34,6 @@
       entity_storage: !type:AllSelector
         children:
           # Normal (10%)
-        - id: OxygenTankFilled
-          prob: 0.1
         - id: SheetPlasma
           prob: 0.1
         - id: IngotGold
@@ -121,21 +117,6 @@
 
 - type: entity
   parent: CrateGenericSteel
-  id: CrateDoubleEmergencyTank
-  name: double emergency tank crate
-  description: Contains 2 double emergency oxygen tanks and 2 double emergency nitrogen tanks
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: DoubleEmergencyOxygenTankFilled
-          amount: 2
-        - id: DoubleEmergencyNitrogenTankFilled
-          amount: 2
-
-- type: entity
-  parent: CrateGenericSteel
   id: CrateCrusher
   name: crusher crate
   description: Contains 2 crushers for use by salvage.
@@ -183,8 +164,6 @@
         children:
         - id: ClothingOuterHardsuitSalvage
         - id: ClothingMaskBreath
-        - id: OxygenTankFilled
-        - id: NitrogenTankFilled
 
 - type: entity
   parent: CrateGenericSteel

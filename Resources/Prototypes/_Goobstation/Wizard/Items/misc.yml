@@ -83,7 +83,6 @@
     sprite:
       sprite: /Textures/Effects/lightning.rsi
       state: yellow_lightning
-  - type: ThrownLightning
   - type: FadingTimedDespawn
     lifetime: 0
     fadeOutTime: 5
@@ -133,8 +132,6 @@
     - ApprenticeSanguine
     - ApprenticeRobeless
     - ApprenticeChaos
-  - type: GrantTargetObjectiveOnGhostTakeover
-    objective: KeepWizardAliveObjective
   - type: StaticPrice
     price: 1000
 

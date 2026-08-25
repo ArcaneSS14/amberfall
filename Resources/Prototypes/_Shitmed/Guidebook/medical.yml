@@ -1,16 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: guideEntry
-  id: Surgery
-  name: guide-entry-surgery
-  text: "/ServerInfo/_Shitmed/Guidebook/Medical/Surgery.xml"
-  children:
-  - PartManipulation
-  - OrganManipulation
-  - UtilitySurgeries
-  - Autodoc
-
-- type: guideEntry
   id: PartManipulation
   name: guide-entry-partmanipulation
   text: "/ServerInfo/_Shitmed/Guidebook/Medical/PartManipulation.xml"

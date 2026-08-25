@@ -107,8 +107,6 @@
           layer:
           - SlipLayer
     - type: DeleteOnTrigger
-    - type: IgniteOnCollide
-      fireStacks: 5
     - type: Sprite
       sprite: Structures/Magic/Cult/trap.rsi
       layers:

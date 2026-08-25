@@ -26,7 +26,7 @@
         children:
         - id: WeaponPulsePistol
         - id: HandheldFaxOfficial
-        - id: NukeOverride # No need for codes.
+        - id: NukeOverride
         - id: MagazineLightRifleUranium
           amount: 2
         - id: DeterrentCaseFilled

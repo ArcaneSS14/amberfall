@@ -370,19 +370,6 @@
       - !type:ObjectivesCompleteCondition
         applyOn: Mind
         cancelLoc: heretic-ritual-fail-cannot-ascend-objectives
-    - !type:SaveResultRitualEffect
-      applyOn: Look
-      result: Eligible
-      individualConditions:
-      - !type:WhitelistCondition
-        whitelist:
-          components:
-          - HumanoidProfile
-      - !type:MobStateCondition
-        mobstate: Alive
-        inverted: true
-      - !type:HadMindCondition
-      - !type:OnFireCondition
     - !type:SacrificeEffect
       applyOn: Targets
       conditions:
@@ -960,11 +947,6 @@
     - !type:SplitIngredientsRitualEffect
       applyOn: Split
       conditions:
-      - !type:ConditionsRitualCondition
-        applyOn: Platform
-        conditions:
-        - !type:EnvironmentTemperatureCondition
-        cancelLoc: heretic-ritual-fail-temperature-hot
       - !type:ProcessIngredientsCondition
         applyOn: Look
         deleteEntitiesKey: Delete
@@ -1015,11 +997,6 @@
     - !type:SplitIngredientsRitualEffect
       applyOn: Split
       conditions:
-      - !type:ConditionsRitualCondition
-        applyOn: Platform
-        conditions:
-        - !type:EnvironmentTemperatureCondition
-        cancelLoc: heretic-ritual-fail-temperature-hot
       - !type:ProcessIngredientsCondition
         applyOn: Look
         deleteEntitiesKey: Delete
@@ -1072,11 +1049,6 @@
       - !type:ObjectivesCompleteCondition
         applyOn: Mind
         cancelLoc: heretic-ritual-fail-cannot-ascend-objectives
-      - !type:ConditionsRitualCondition
-        applyOn: Platform
-        conditions:
-        - !type:EnvironmentTemperatureCondition
-        cancelLoc: heretic-ritual-fail-temperature-hot
     - !type:SaveResultRitualEffect
       applyOn: Look
       result: Eligible
@@ -2219,11 +2191,6 @@
     - !type:SplitIngredientsRitualEffect
       applyOn: Split
       conditions:
-      - !type:ConditionsRitualCondition
-        applyOn: Platform
-        conditions:
-        - !type:EnvironmentTemperatureCondition
-        cancelLoc: heretic-ritual-fail-temperature-hot
       - !type:ProcessIngredientsCondition
         applyOn: Look
         deleteEntitiesKey: Delete

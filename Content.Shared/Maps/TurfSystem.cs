@@ -129,7 +129,7 @@ public sealed partial class TurfSystem : EntitySystem
     /// <returns>True if the tile is considered to be space, false otherwise.</returns>
     public bool IsSpace(Tile tile)
     {
-        return GetContentTileDefinition(tile).MapAtmosphere;
+        return GetContentTileDefinition(tile).ID == ContentTileDefinition.SpaceID;
     }
 
     /// <summary>

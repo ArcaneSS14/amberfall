@@ -66,10 +66,6 @@
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
-      - !type:SpawnGasBehavior
-        gasMixture:
-          moles:
-            Ammonia: 25
       - !type:PlaySoundBehavior
         sound:
           path: /Audio/Effects/gib1.ogg

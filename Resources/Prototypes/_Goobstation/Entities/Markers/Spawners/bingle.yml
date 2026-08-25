@@ -23,21 +23,6 @@
 
 # Random spawner
 - type: entity
-  parent: MarkerBase
-  id: SpawnPointGhostBingle
-  name: random bingle spawner
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Mobs/Bingle/bingle.rsi
-    state: alive
-  - type: EntityTableSpawner
-    table: !type:GroupSelector
-      children:
-      - id: SpawnPointGhostBingleHunk
-      - id: SpawnPointGhostBingleSlavering
-      - id: SpawnPointGhostBingleBoney
-
-- type: entity
   parent: BaseSpawnPointGhostBingle
   id: SpawnPointGhostBingleHunk
   suffix: Hunk

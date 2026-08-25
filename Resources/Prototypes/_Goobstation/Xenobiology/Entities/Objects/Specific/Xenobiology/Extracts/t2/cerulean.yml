@@ -27,11 +27,6 @@
       effects:
       - !type:NestedEffect
         proto: XenobioExtractReaction
-      - !type:RelayNearby
-        compName: OnFire
-        range: 12
-        effect: !type:Extinguish
-          fireStacksAdjustment: -20
     - reagents: [ Blood ]
       methods: [ Touch, Injection ]
       effects:

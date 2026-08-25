@@ -122,7 +122,3 @@
       - tool: Welding
         doAfter: 1
 
-  - node: ripley
-    actions:
-    - !type:BuildMech
-      mechPrototype: MechRipley

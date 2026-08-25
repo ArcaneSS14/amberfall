@@ -1,21 +1,5 @@
 # Medical supply lockers
 
-- type: entityTable
-  id: LockerFillMedicine
-  table: !type:AllSelector
-    children:
-    - !type:NestedSelector
-      tableId: CoreMedicineReagentBottleTable
-      rolls: 2
-    - !type:GroupSelector # Basic topicals
-      rolls: 7
-      children:
-      - id: Brutepack
-      - id: Ointment
-      - id: Bloodpack
-      - id: Gauze
-        weight: 0.5
-
 - type: entity
   parent: LockerMedicine
   id: LockerMedicineFilled
@@ -39,23 +23,6 @@
 
 # Medical role lockers
 
-- type: entityTable
-  id: LockerFillMedicalDoctor
-  table: !type:AllSelector
-    children:
-    - id: ClothingEyesHudMedical
-    - id: ClothingBeltMedicalFilled
-    #- id: JetInjector # Trauma - le quirky syringe
-    - id: HandheldHealthAnalyzer
-    - id: ChemistryBottleLaughter # Widely recognized as the best medicine :o)
-      prob: 0.01
-    - id: PlushieLizardJobMedicaldoctor
-      prob: 0.02
-    - id: PlushieLizardJobMedicalintern
-      prob: 0.02
-    - id: PlushieLizardJobPsychologist
-      prob: 0.02
-
 - type: entity
   parent: LockerMedical
   id: LockerMedicalFilled
@@ -77,6 +44,70 @@
       entity_storage: !type:NestedSelector
         tableId: LockerFillMedicalDoctor
 
+- type: entity
+  parent: LockerChemistry
+  id: LockerChemistryFilled
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillChemistry
+
+- type: entity
+  parent: LockerParamedic
+  id: LockerParamedicFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: UndeterminedVoidsuitParamedic # Goob edit
+      - id: ClothingOuterCoatParamedicWB
+      - id: ClothingHeadHatParamedicsoft
+      - id: ClothingOuterWinterPara
+      - id: ClothingUniformJumpsuitParamedic
+      - id: ClothingUniformJumpskirtParamedic
+      - id: ClothingEyesHudMedical
+      - id: ClothingHandsGlovesLatex
+      - id: ClothingHeadsetMedical
+      - id: ClothingMaskSterile
+      - id: HandheldGPSBasic
+      - id: MedkitFilled
+        prob: 0.3
+
+- type: entityTable
+  id: LockerFillMedicine
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: CoreMedicineReagentBottleTable
+      rolls: 2
+    - !type:GroupSelector # Basic topicals
+      rolls: 7
+      children:
+      - id: Brutepack
+      - id: Ointment
+      - id: Bloodpack
+      - id: Gauze
+        weight: 0.5
+
+
+- type: entityTable
+  id: LockerFillMedicalDoctor
+  table: !type:AllSelector
+    children:
+    - id: ClothingEyesHudMedical
+    - id: HandheldHealthAnalyzer
+    - id: ChemistryBottleLaughter # Widely recognized as the best medicine :o)
+      prob: 0.01
+    - id: PlushieLizardJobMedicaldoctor
+      prob: 0.02
+    - id: PlushieLizardJobMedicalintern
+      prob: 0.02
+    - id: PlushieLizardJobPsychologist
+      prob: 0.02
+
+
 - type: entityTable
   id: LockerFillChemistry
   table: !type:AllSelector
@@ -91,8 +122,6 @@
       children:
       - id: BoxSyringe
       - id: BoxBottle
-      - id: BoxVial
-      - id: BoxBeaker
       - id: BoxPillCanister
       - !type:GroupSelector # Remind chemists once in a while of alternate storage options
         prob: 0.2
@@ -103,53 +132,3 @@
     - id: PlushieLizardJobChemist
       prob: 0.02
 
-- type: entity
-  parent: LockerChemistry
-  id: LockerChemistryFilled
-  suffix: Filled
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: LockerFillChemistry
-
-- type: entityTable
-  id: LockerFillParamedic
-  table: !type:AllSelector
-    children:
-    - id: ClothingEyesHudMedical
-    - id: ClothingOuterHardsuitVoidParamed
-    - id: ClothingBeltMedicalEMTFilled
-    #- id: JetInjector # Trauma - le quirky syringe
-    - id: HandheldHealthAnalyzer
-    - id: BoxBodyBag
-    - !type:GroupSelector
-      children:
-      - id: RollerBedSpawnFolded
-      - id: CheapRollerBedSpawnFolded
-      - id: EmergencyRollerBedSpawnFolded
-    - id: PlushieLizardJobParamedic
-      prob: 0.02
-
-- type: entity
-  parent: LockerParamedic
-  id: LockerParamedicFilled
-  suffix: Filled
-  components:
-  - type: StorageFill
-    contents:
-      - id: UndeterminedVoidsuitParamedic # Goob edit
-      - id: OxygenTankFilled
-      - id: NitrogenTankFilled
-      - id: ClothingOuterCoatParamedicWB
-      - id: ClothingHeadHatParamedicsoft
-      - id: ClothingOuterWinterPara
-      - id: ClothingUniformJumpsuitParamedic
-      - id: ClothingUniformJumpskirtParamedic
-      - id: ClothingEyesHudMedical
-      - id: ClothingHandsGlovesLatex
-      - id: ClothingHeadsetMedical
-      - id: ClothingMaskSterile
-      - id: HandheldGPSBasic
-      - id: MedkitFilled
-        prob: 0.3

@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 01/08/2026 12:18:11
-  entityCount: 98
+  entityCount: 91
 maps: []
 grids:
 - 1
@@ -112,50 +112,6 @@ entities:
             6: 3,4
             7: 3,5
             8: 3,6
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 46080
-          0,1:
-            0: 48637
-          -1,0:
-            0: 32768
-          -1,1:
-            0: 36044
-          0,2:
-            0: 4
-          1,0:
-            0: 61440
-          1,1:
-            0: 65535
-          2,0:
-            0: 256
-          2,2:
-            0: 1
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
 - proto: AirlockMiningGlass
@@ -172,14 +128,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 8.5,5.5
-      parent: 1
-- proto: AtmosDeviceFanDirectional
-  entities:
-  - uid: 4
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,5.5
       parent: 1
 - proto: Bed
   entities:
@@ -487,32 +435,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 6.5,8.5
       parent: 1
-- proto: NitrogenCanister
-  entities:
-  - uid: 63
-    components:
-    - type: Transform
-      pos: 4.5,7.5
-      parent: 1
-- proto: OxygenCanister
-  entities:
-  - uid: 64
-    components:
-    - type: Transform
-      pos: 5.5,7.5
-      parent: 1
-- proto: PottedPlantRandom
-  entities:
-  - uid: 65
-    components:
-    - type: Transform
-      pos: 3.5,4.5
-      parent: 1
-  - uid: 66
-    components:
-    - type: Transform
-      pos: 3.5,6.5
-      parent: 1
 - proto: Poweredlight
   entities:
   - uid: 67
@@ -531,20 +453,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,7.5
-      parent: 1
-- proto: RandomVendingDrinks
-  entities:
-  - uid: 70
-    components:
-    - type: Transform
-      pos: 3.5,3.5
-      parent: 1
-- proto: RandomVendingSnacks
-  entities:
-  - uid: 71
-    components:
-    - type: Transform
-      pos: 3.5,7.5
       parent: 1
 - proto: SalvageSpawnerTreasureValuable
   entities:

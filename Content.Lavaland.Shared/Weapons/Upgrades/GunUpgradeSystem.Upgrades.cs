@@ -3,7 +3,6 @@
 using Content.Goobstation.Common.Weapons;
 using Content.Lavaland.Common.Weapons;
 using Content.Lavaland.Common.Weapons.Ranged;
-using Content.Lavaland.Shared.Pressure;
 using Content.Lavaland.Shared.Weapons.Upgrades.Components;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Projectiles;
@@ -35,9 +34,6 @@ public sealed partial class GunUpgradeSystem
         SubscribeLocalEvent<GunUpgradeBayonetComponent, GetRelayMeleeWeaponEvent>(OnGetMeleeRelay);
 
         SubscribeLocalEvent<GunUpgradeDamageComponent, ProjectileShotEvent>(OnDamageShot);
-
-        SubscribeLocalEvent<GunUpgradePressureComponent, EntGotInsertedIntoContainerMessage>(OnPressureInsert);
-        SubscribeLocalEvent<GunUpgradePressureComponent, EntGotRemovedFromContainerMessage>(OnPressureEject);
 
         SubscribeLocalEvent<WeaponUpgradeDamageComponent, GetMeleeDamageEvent>(OnGetMeleeDamage);
 
@@ -123,51 +119,6 @@ public sealed partial class GunUpgradeSystem
             projectile.Damage += bonus;
         projectile.Damage *= ent.Comp.Modifier;
         Dirty(args.FiredProjectile, projectile);
-    }
-
-    private void OnPressureInsert(Entity<GunUpgradePressureComponent> ent, ref EntGotInsertedIntoContainerMessage args)
-    {
-        var weapon = args.Container.Owner;
-        var comp = ent.Comp;
-        if (!TryComp<PressureEfficiencyComponent>(weapon, out var pec) ||
-            !TryComp<PressureDamageChangeComponent>(weapon, out var pdc))
-            return;
-
-        comp.SavedAppliedModifier = pdc.AppliedModifier;
-        comp.SavedApplyWhenInRange = pec.ApplyWhenInRange;
-        comp.SavedLowerBound = pec.LowerBound;
-        comp.SavedUpperBound = pec.UpperBound;
-
-        if (comp.NewAppliedModifier is { } newModifier)
-        {
-            pdc.AppliedModifier = newModifier;
-            Dirty(weapon, pdc);
-        }
-        if (comp.NewApplyWhenInRange is { } newApplyInRange)
-            pec.ApplyWhenInRange = newApplyInRange;
-        if (comp.NewLowerBound is { } newLower)
-            pec.LowerBound = newLower;
-        if (comp.NewUpperBound is { } newUpper)
-            pec.UpperBound = newUpper;
-        Dirty(weapon, pec);
-    }
-
-    private void OnPressureEject(Entity<GunUpgradePressureComponent> ent, ref EntGotRemovedFromContainerMessage args)
-    {
-        var weapon = args.Container.Owner;
-        var comp = ent.Comp;
-        if (!TryComp<PressureEfficiencyComponent>(weapon, out var pec))
-            return;
-
-        if (TryComp<PressureDamageChangeComponent>(weapon, out var pdc))
-        {
-            pdc.AppliedModifier = comp.SavedAppliedModifier;
-            Dirty(weapon, pdc);
-        }
-        pec.ApplyWhenInRange = comp.SavedApplyWhenInRange;
-        pec.LowerBound = comp.SavedLowerBound;
-        pec.UpperBound = comp.SavedUpperBound;
-        Dirty(weapon, pec);
     }
 
     private void OnEffectsUpgradeHit(Entity<WeaponUpgradeEffectsComponent> ent, ref MeleeHitEvent args)

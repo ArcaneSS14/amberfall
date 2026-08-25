@@ -20,8 +20,6 @@
         Quantity: 4
   - type: Sprite
     sprite: _Goobstation/Objects/Specific/Hydroponics/strange_berries.rsi
-  - type: Produce
-    seedId: strangeBerries
   - type: Extractable
     juiceSolution:
       reagents:
@@ -37,8 +35,6 @@
   - type: Sprite
     sprite: _Goobstation/Objects/Specific/Hydroponics/nevcotta.rsi
     state: icon
-  - type: Produce
-    seedId: towercap # Shhh, I don't want to make this an actual plant yet!
   - type: ToolRefinable
     refineResult:
     - id: NevcottaBark
@@ -86,8 +82,6 @@
     sprite: _Goobstation/Objects/Specific/Hydroponics/bluespace_tomato.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: bluespaceTomato
   - type: Extractable
     grindableSolutionName: food
     juiceSolution:

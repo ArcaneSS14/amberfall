@@ -359,13 +359,6 @@ entities:
     - type: SpreaderGrid
     - type: GridTree
     - type: GridPathfinding
-- proto: AirCanister
-  entities:
-  - uid: 302
-    components:
-    - pos: 20.5,38.5
-      parent: 1653
-      type: Transform
 - proto: AirlockMining
   entities:
   - uid: 149
@@ -548,13 +541,6 @@ entities:
   - uid: 288
     components:
     - pos: 17.527935,7.630492
-      parent: 1653
-      type: Transform
-- proto: ClothingHeadHatFlowerCrown
-  entities:
-  - uid: 233
-    components:
-    - pos: 27.441708,39.437607
       parent: 1653
       type: Transform
 - proto: ClothingHeadHatGladiator
@@ -845,20 +831,6 @@ entities:
           occludes: True
           ent: null
       type: ContainerContainer
-- proto: CrateEmergencyRadiation
-  entities:
-  - uid: 364
-    components:
-    - pos: 15.5,36.5
-      parent: 1653
-      type: Transform
-- proto: CrateEmptySpawner
-  entities:
-  - uid: 128
-    components:
-    - pos: 4.5,40.5
-      parent: 1653
-      type: Transform
 - proto: CrateFilledSpawner
   entities:
   - uid: 111
@@ -1000,20 +972,6 @@ entities:
   - uid: 308
     components:
     - pos: 31.5,36.5
-      parent: 1653
-      type: Transform
-- proto: DoubleEmergencyNitrogenTankFilled
-  entities:
-  - uid: 309
-    components:
-    - pos: 21.254128,38.485172
-      parent: 1653
-      type: Transform
-- proto: DresserFilled
-  entities:
-  - uid: 413
-    components:
-    - pos: 20.5,44.5
       parent: 1653
       type: Transform
 - proto: FenceMetalCorner
@@ -1490,104 +1448,6 @@ entities:
     - pos: 25.5,14.5
       parent: 1653
       type: Transform
-- proto: FloraRockSolid01
-  entities:
-  - uid: 63
-    components:
-    - pos: 1.4643247,15.527116
-      parent: 1653
-      type: Transform
-  - uid: 230
-    components:
-    - pos: 25.553497,34.710487
-      parent: 1653
-      type: Transform
-  - uid: 281
-    components:
-    - pos: 7.4866443,6.552367
-      parent: 1653
-      type: Transform
-  - uid: 295
-    components:
-    - pos: 0.911531,32.452705
-      parent: 1653
-      type: Transform
-  - uid: 303
-    components:
-    - pos: 21.638557,19.381065
-      parent: 1653
-      type: Transform
-  - uid: 374
-    components:
-    - pos: 3.5664039,19.498943
-      parent: 1653
-      type: Transform
-- proto: FloraRockSolid02
-  entities:
-  - uid: 64
-    components:
-    - pos: 11.966135,14.804356
-      parent: 1653
-      type: Transform
-  - uid: 171
-    components:
-    - pos: 8.535091,20.608318
-      parent: 1653
-      type: Transform
-  - uid: 306
-    components:
-    - pos: 12.087021,32.358955
-      parent: 1653
-      type: Transform
-- proto: FloraRockSolid03
-  entities:
-  - uid: 90
-    components:
-    - pos: 23.53006,1.5159609
-      parent: 1653
-      type: Transform
-  - uid: 170
-    components:
-    - pos: 1.9101539,21.811443
-      parent: 1653
-      type: Transform
-  - uid: 199
-    components:
-    - pos: 44.689724,39.621048
-      parent: 1653
-      type: Transform
-  - uid: 243
-    components:
-    - pos: 21.468937,26.614876
-      parent: 1653
-      type: Transform
-  - uid: 296
-    components:
-    - pos: 9.355139,30.733953
-      parent: 1653
-      type: Transform
-  - uid: 330
-    components:
-    - pos: 35.552525,31.574036
-      parent: 1653
-      type: Transform
-  - uid: 361
-    components:
-    - pos: 5.433075,13.527116
-      parent: 1653
-      type: Transform
-  - uid: 375
-    components:
-    - pos: 1.5647693,8.536742
-      parent: 1653
-      type: Transform
-- proto: FoodBoxDonkpocketPizza
-  entities:
-  - uid: 209
-    components:
-    - pos: 0.9877088,26.184813
-      parent: 1653
-      type: Transform
 - proto: FoodCornTrash
   entities:
   - uid: 2
@@ -1640,13 +1500,6 @@ entities:
   - uid: 187
     components:
     - pos: 34.64263,40.511673
-      parent: 1653
-      type: Transform
-- proto: FoodMeatLizardtailKebab
-  entities:
-  - uid: 42
-    components:
-    - pos: 38.036457,12.588582
       parent: 1653
       type: Transform
 - proto: FoodMeatRouny
@@ -1812,13 +1665,6 @@ entities:
     - pos: 25.5,19.5
       parent: 1653
       type: Transform
-- proto: ImprovisedExplosiveFuel
-  entities:
-  - uid: 203
-    components:
-    - pos: 36.443645,31.673359
-      parent: 1653
-      type: Transform
 - proto: IngotGold1
   entities:
   - uid: 312
@@ -1851,13 +1697,6 @@ entities:
   - uid: 262
     components:
     - pos: 20.52197,46.638992
-      parent: 1653
-      type: Transform
-- proto: KitchenElectricGrill
-  entities:
-  - uid: 205
-    components:
-    - pos: 35.5,40.5
       parent: 1653
       type: Transform
 - proto: KitchenMicrowave
@@ -1980,13 +1819,6 @@ entities:
     - canCollide: False
       type: Physics
     - type: InsideEntityStorage
-- proto: MedkitOxygenFilled
-  entities:
-  - uid: 225
-    components:
-    - pos: 17.973127,40.40886
-      parent: 1653
-      type: Transform
 - proto: MiningWindow
   entities:
   - uid: 155
@@ -2024,18 +1856,6 @@ entities:
   - uid: 488
     components:
     - pos: 29.5,8.5
-      parent: 1653
-      type: Transform
-- proto: OreProcessor
-  entities:
-  - uid: 269
-    components:
-    - pos: 24.5,10.5
-      parent: 1653
-      type: Transform
-  - uid: 320
-    components:
-    - pos: 3.5,46.5
       parent: 1653
       type: Transform
 - proto: OrganHumanAppendix
@@ -2124,28 +1944,6 @@ entities:
   - uid: 392
     components:
     - pos: 37.5,31.5
-      parent: 1653
-      type: Transform
-- proto: PottedPlantRandom
-  entities:
-  - uid: 44
-    components:
-    - pos: 44.5,14.5
-      parent: 1653
-      type: Transform
-  - uid: 50
-    components:
-    - pos: 45.5,14.5
-      parent: 1653
-      type: Transform
-  - uid: 94
-    components:
-    - pos: 42.5,14.5
-      parent: 1653
-      type: Transform
-  - uid: 347
-    components:
-    - pos: 41.5,14.5
       parent: 1653
       type: Transform
 - proto: PowerCellHyperPrinted
@@ -2271,25 +2069,6 @@ entities:
   - uid: 400
     components:
     - pos: 19.5,45.5
-      parent: 1653
-      type: Transform
-- proto: SalvageMaterialCrateSpawner
-  entities:
-  - uid: 481
-    components:
-    - pos: 27.5,8.5
-      parent: 1653
-      type: Transform
-  - uid: 491
-    components:
-    - pos: 30.5,8.5
-      parent: 1653
-      type: Transform
-- proto: ShadowTree03
-  entities:
-  - uid: 68
-    components:
-    - pos: 19.477606,14.337568
       parent: 1653
       type: Transform
 - proto: SheetSteel1
@@ -2466,13 +2245,6 @@ entities:
     - pos: 36.5,31.5
       parent: 1653
       type: Transform
-- proto: ToiletDirtyWater
-  entities:
-  - uid: 406
-    components:
-    - pos: 32.5,20.5
-      parent: 1653
-      type: Transform
 - proto: Torch
   entities:
   - uid: 58
@@ -2498,13 +2270,6 @@ entities:
   - uid: 366
     components:
     - pos: 10.669119,46.594402
-      parent: 1653
-      type: Transform
-- proto: ChestSkeleton
-  entities:
-  - uid: 325
-    components:
-    - pos: 32.5085,20.620539
       parent: 1653
       type: Transform
 - proto: TrashBakedBananaPeel

@@ -145,8 +145,6 @@
     duration: 4
     dropItems: true
     knockdownOnHeavyAttack: false
-  - type: UseDelayBlockKnockdown
-    delay: knockdown
   - type: SupermatterHalberd
     obliterateWhitelist:
       components:
@@ -158,7 +156,6 @@
       - Window
       - Airlock
       - GlassAirlock
-  - type: SupermatterImmune
   - type: StaticPrice
     price: 50000
 

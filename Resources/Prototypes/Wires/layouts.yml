@@ -77,9 +77,6 @@
   - !type:PowerWireAction
   - !type:AccessWireAction
   - !type:LogWireAction
-  - !type:AirAlarmPanicWire
-  - !type:AtmosMonitorDeviceNetWire
-
 - type: wireLayout
   id: Intercom
   wires:
@@ -92,9 +89,6 @@
   wires:
   - !type:AiInteractWireAction
   - !type:PowerWireAction
-  - !type:AtmosMonitorDeviceNetWire
-    alarmOnPulse: true
-
 - type: wireLayout
   id: Arcade
   wires:
@@ -117,16 +111,10 @@
   dummyWires: 2
   wires:
   - !type:PowerWireAction
-  - !type:CryoPodEjectLockWireAction
-
 - type: wireLayout
   id: ParticleAccelerator
   dummyWires: 1
   wires:
-  - !type:ParticleAcceleratorKeyboardWireAction
-  - !type:ParticleAcceleratorLimiterWireAction
-  - !type:ParticleAcceleratorPowerWireAction
-  - !type:ParticleAcceleratorStrengthWireAction
   - !type:AccessWireAction # Trauma - no access wire is chud hugbox shit, shouldnt have to break open hops locker to set up power if theres no engis
 
 - type: wireLayout
@@ -146,24 +134,10 @@
   id: Defusable
   dummyWires: 3
   wires:
-    - !type:ActivateWireAction
-    - !type:BoltWireAction
-    - !type:DelayWireAction
-    - !type:ProceedWireAction
-    - !type:BoomWireAction
-    - !type:BoomWireAction
-    - !type:BoomWireAction
-
 - type: wireLayout
   id: TrainingDefusable
   dummyWires: 0
   wires:
-  - !type:ActivateWireAction
-  - !type:BoltWireAction
-  - !type:DelayWireAction
-  - !type:ProceedWireAction
-  - !type:BoomWireAction
-
 - type: wireLayout
   id: Jukebox
   dummyWires: 2

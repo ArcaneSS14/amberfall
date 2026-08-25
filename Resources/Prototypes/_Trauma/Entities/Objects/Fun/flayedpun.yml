@@ -14,5 +14,3 @@
     sprite: _Trauma/Objects/Fun/flayedpunpun.rsi
     state: flayedpun
     scale: 0.05, 0.05
-  - type: ScaleData
-    scale: 0.05, 0.05

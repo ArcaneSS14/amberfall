@@ -16,18 +16,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 0
-    # add every path here because you shouldn't be able to buy more starter knowledge
-    blacklist:
-    - Ash
-    - Blade
-    - Flesh
-    - Lock
-    - Void
-    - Rust
-    - Cosmos
-
 - type: listing
   id: HereticFleshPath2
   name: knowledge-path-flesh-s2-name
@@ -44,11 +32,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 1
-    whitelist:
-    - Flesh
-
 - type: listing
   id: HereticFleshPath3
   name: knowledge-path-flesh-s3-name
@@ -65,12 +48,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 2
-    whitelist:
-    - Flesh
-
-# side
 - type: listing
   id: HereticFleshPath4
   name: knowledge-path-flesh-s4-name
@@ -87,11 +64,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 3
-    whitelist:
-    - Flesh
-
 - type: listing
   id: HereticFleshPath5
   name: knowledge-path-flesh-s5-name
@@ -108,11 +80,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 4
-    whitelist:
-    - Flesh
-
 - type: listing
   id: HereticFleshArmor
   name: knowledge-path-flesh-armor-name
@@ -129,12 +96,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 5
-    whitelist:
-    - Flesh
-
-# side
 - type: listing
   id: HereticFleshPath6
   name: knowledge-path-flesh-s6-name
@@ -151,11 +112,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 5
-    whitelist:
-    - Flesh
-
 - type: listing
   id: HereticFleshPath7
   name: knowledge-path-flesh-s7-name
@@ -172,12 +128,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 6
-    whitelist:
-    - Flesh
-
-# side
 - type: listing
   id: HereticFleshPath8
   name: knowledge-path-flesh-s8-name
@@ -194,11 +144,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 7
-    whitelist:
-    - Flesh
-
 - type: listing
   id: HereticFleshPath9
   name: knowledge-path-flesh-s9-name
@@ -215,8 +160,3 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    requiresCanAscend: true
-    stage: 8
-    whitelist:
-    - Flesh

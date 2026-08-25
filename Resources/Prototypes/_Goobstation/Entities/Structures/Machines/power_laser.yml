@@ -53,7 +53,6 @@
     damageModifierSet: StructuralMetallicStrong
   - type: Injurable
     damageContainer: StructuralInorganic
-  - type: BatterySensor
   - type: Gun
     showExamineText: false
     fireRate: 10

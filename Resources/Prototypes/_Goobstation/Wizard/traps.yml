@@ -31,7 +31,6 @@
   - type: AnimationPlayer
   - type: TimedDespawn
     lifetime: 300
-  - type: WizardTrap
   - type: Tag
     tags:
       - HideContextMenu
@@ -46,11 +45,6 @@
   components:
   - type: Sprite
     color: '#FFFF000e'
-  - type: WizardTrap
-    stunTime: 0
-    effect: StunTrapFlashEffect
-  - type: StunTrap
-
 - type: entity
   parent: BaseTrap
   id: TrapFlame
@@ -61,10 +55,6 @@
   components:
   - type: Sprite
     color: '#FF00000e'
-  - type: WizardTrap
-    effect: FlameTrapFlashEffect
-  - type: FlameTrap
-
 - type: entity
   parent: BaseTrap
   id: TrapDamage
@@ -75,17 +65,6 @@
   components:
   - type: Sprite
     color: '#00FF000e'
-  - type: WizardTrap
-    effect: DamageTrapFlashEffect
-  - type: DamageTrap
-    spawnedEntity: FloraRockSolidFading
-    damage:
-      types:
-        Blunt: 50
-      woundSeverityMultipliers:
-        Blunt: 2
-      partDamageVariation: 2
-
 - type: entity
   parent: BaseTrap
   id: TrapChill
@@ -96,11 +75,6 @@
   components:
   - type: Sprite
     color: '#00FFFF0e'
-  - type: WizardTrap
-    stunTime: 0
-    effect: ChillTrapFlashEffect
-  - type: ChillTrap
-
 - type: entity
   parent: BaseTrap
   id: TrapBlind
@@ -108,7 +82,3 @@
   description: A trap that will blind you temporarily. You'd better avoid it.
   placement:
     mode: SnapgridCenter
-  components:
-  - type: WizardTrap
-    effect: BlindingTrapFlashEffect
-  - type: BlindingTrap

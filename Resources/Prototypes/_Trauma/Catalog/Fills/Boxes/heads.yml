@@ -9,6 +9,7 @@
   - type: Storage
     whitelist: null # just a box
 
+
 - type: entity
   parent: BoxSkillChipsBase
   id: BoxSkillChipsService

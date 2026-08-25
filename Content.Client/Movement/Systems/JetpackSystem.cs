@@ -25,7 +25,7 @@ public sealed partial class JetpackSystem : SharedJetpackSystem
 
     protected override bool CanEnable(EntityUid uid, JetpackComponent component)
     {
-        // No predicted atmos so you'd have to do a lot of funny to get this working.
+        // Server-authoritative activation.
         return false;
     }
 

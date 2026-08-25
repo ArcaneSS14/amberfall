@@ -23,11 +23,8 @@
           state: door_electronics
       - tool: Screwing
         doAfter: 1
-      - tag: Pipe
-        name: construction-graph-tag-pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
+      - material: Steel
+        amount: 1
       - tool: Welding
         doAfter: 1
   - node: barrel

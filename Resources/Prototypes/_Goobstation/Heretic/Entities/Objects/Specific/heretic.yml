@@ -332,7 +332,6 @@
   - type: IgniteOnFlash
     fireStacks: 2
     fireProtectionPenetration: 0.35
-  - type: AlwaysHot
   - type: CrackedLantern
   - type: Tag
     tags:

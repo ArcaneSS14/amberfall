@@ -31,10 +31,6 @@
     - SkillChipBrigmedic
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-    - type: SecurityStaff
-
 - type: chameleonOutfit
   id: BrigmedicChameleonOutfit
   job: Brigmedic

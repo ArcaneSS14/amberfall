@@ -20,7 +20,6 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Transform
     noRot: false
-  - type: AnomalyVessel
   - type: ResearchClient
   - type: ActivatableUI
     key: enum.ResearchClientUiKey.Key
@@ -99,8 +98,6 @@
     offset: 0,0.5
     drawdepth: Mobs
   - type: SpriteFade
-  - type: AnomalyVessel
-    pointMultiplier: 2
   - type: RadiationSource
     intensity: 0.75
     slope: 0.1
@@ -260,11 +257,6 @@
       path: /Audio/Ambience/Objects/anomaly_generator.ogg
   - type: Physics
     bodyType: Static
-  - type: AnomalyGenerator
-    generatingSound:
-      path: /Audio/Machines/anomaly_generate.ogg
-    generatingFinishedSound:
-      path: /Audio/Machines/beep.ogg
   - type: MaterialStorage
     whitelist:
       tags:

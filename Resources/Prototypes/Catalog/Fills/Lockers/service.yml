@@ -8,6 +8,67 @@
       entity_storage: !type:NestedSelector
         tableId: FillLockerBooze
 
+- type: entity
+  id: ClosetChefFilled
+  suffix: Filled
+  parent: ClosetChef
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillClosetChef
+
+- type: entity
+  id: ClosetJanitorFilled
+  suffix: Filled
+  parent: ClosetJanitor
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillClosetJanitor
+
+- type: entity
+  id: ClosetLegalFilled
+  suffix: Filled
+  parent: ClosetLegal
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillClosetLegal
+
+- type: entity
+  id: LockerBotanistFilled
+  suffix: Filled
+  parent: LockerBotanist
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillLockerBotanist
+
+- type: entity
+  id: LockerBotanistLoot
+  suffix: Loot
+  parent: LockerBotanist
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillLockerBotanistLoot
+
+- type: entity
+  id: ClosetJanitorBombFilled
+  parent: ClosetJanitorBomb
+  suffix: DO NOT MAP, Filled
+  categories: [ DoNotMap ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillClosetJanitorBomb
+
 - type: entityTable
   id: FillLockerBooze
   table: !type:AllSelector
@@ -39,21 +100,11 @@
 #  suffix: Filled
 #  parent: LockerFormal
 
-- type: entity
-  id: ClosetChefFilled
-  suffix: Filled
-  parent: ClosetChef
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillClosetChef
 
 - type: entityTable
   id: FillClosetChef
   table: !type:AllSelector
     children:
-    - id: VariantCubeBox
     - id: SprayBottleWater
     - id: FoodBoxCloth
     - id: ReagentContainerSugar
@@ -78,15 +129,6 @@
     - id: PlushieLizardJobServiceworker
       prob: 0.02
 
-- type: entity
-  id: ClosetJanitorFilled
-  suffix: Filled
-  parent: ClosetJanitor
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillClosetJanitor
 
 - type: entityTable
   id: FillClosetJanitor
@@ -95,7 +137,6 @@
     - id: WetFloorSign
       amount: 3
     - id: LightReplacer
-    - id: BoxLightMixed
     - id: Holoprojector
     - id: WireBrush
     - !type:AllSelector
@@ -110,15 +151,6 @@
     - id: PlushieLizardJobJanitor
       prob: 0.02
 
-- type: entity
-  id: ClosetLegalFilled
-  suffix: Filled
-  parent: ClosetLegal
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillClosetLegal
 
 - type: entityTable
   id: FillClosetLegal
@@ -130,27 +162,16 @@
     - id: PlushieLizardJobLawyer
       prob: 0.02
 
-- type: entity
-  id: LockerBotanistFilled
-  suffix: Filled
-  parent: LockerBotanist
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillLockerBotanist
 
 - type: entityTable
   id: FillLockerBotanist
   table: !type:AllSelector
     children:
-    - id: PlantAnalyzer # Trauma
     - id: ClothingHandsGlovesLeather
     - id: ClothingOuterApronBotanist
     - id: ClothingHeadBandBotany
     - id: ChemistryBottleRobustHarvest
       prob: 0.3
-    - id: ClothingBeltPlantFilled
     - id: PlantBag ##Some maps don't have nutrivend
     - id: BoxMouthSwab
     - id: Dropper
@@ -163,15 +184,6 @@
     - id: PlushieLizardJobServiceworker
       prob: 0.02
 
-- type: entity
-  id: LockerBotanistLoot
-  suffix: Loot
-  parent: LockerBotanist
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillLockerBotanistLoot
 
 - type: entityTable
   id: FillLockerBotanistLoot
@@ -187,16 +199,6 @@
     - id: NettleSeeds
       prob: 0.7
 
-- type: entity
-  id: ClosetJanitorBombFilled
-  parent: ClosetJanitorBomb
-  suffix: DO NOT MAP, Filled
-  categories: [ DoNotMap ]
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillClosetJanitorBomb
 
 - type: entityTable
   id: FillClosetJanitorBomb

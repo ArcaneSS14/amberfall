@@ -6,8 +6,6 @@
   id: TriggerBZ
   tip: xenoarch-trigger-tip-bz
   components:
-  - type: XATGas
-    targetGas: BZ
   - type: XATReactive
     reagents:
     - BZ
@@ -16,8 +14,6 @@
   id: TriggerNitrium
   tip: xenoarch-trigger-tip-nitrium
   components:
-  - type: XATGas
-    targetGas: Nitrium
   - type: XATReactive
     reagents:
     - Nitrium
@@ -26,8 +22,6 @@
   id: TriggerHealium
   tip: xenoarch-trigger-tip-healium
   components:
-  - type: XATGas
-    targetGas: Healium
   - type: XATReactive
     reagents:
     - Healium
@@ -36,8 +30,6 @@
   id: TriggerPluoxium
   tip: xenoarch-trigger-tip-pluoxium
   components:
-  - type: XATGas
-    targetGas: Pluoxium
   - type: XATReactive
     reagents:
     - Pluoxium

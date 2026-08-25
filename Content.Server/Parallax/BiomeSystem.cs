@@ -3,12 +3,10 @@ using Content.Lavaland.Common.Procedural;
 // </Trauma>
 using System.Numerics;
 using System.Threading.Tasks;
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Decals;
 using Content.Server.Ghost.Roles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Shuttles.Systems;
-using Content.Shared.Atmos;
 using Content.Shared.Ghost;
 using Content.Shared.Gravity;
 using Content.Shared.Light.Components;
@@ -42,7 +40,6 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
     [Dependency] private IParallelManager _parallel = default!;
     [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private IRobustRandom _random = default!;
-    [Dependency] private AtmosphereSystem _atmos = default!;
     [Dependency] private DecalSystem _decals = default!;
     [Dependency] private SharedMapSystem _mapSystem = default!;
     [Dependency] private SharedPhysicsSystem _physics = default!;
@@ -1041,13 +1038,6 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
         EnsureComp<SunShadowComponent>(mapUid);
         EnsureComp<SunShadowCycleComponent>(mapUid);
 
-        var moles = new float[Atmospherics.AdjustedNumberOfGases];
-        moles[(int)Gas.Oxygen] = 21.824779f;
-        moles[(int)Gas.Nitrogen] = 82.10312f;
-
-        var mixture = new GasMixture(moles, Atmospherics.T20C);
-
-        _atmos.SetMapAtmosphere(mapUid, false, mixture);
     }
 
     /// <summary>

@@ -54,7 +54,6 @@
     sprite: Structures/Storage/Crates/freezer.rsi
   - type: Sprite
     sprite: Structures/Storage/Crates/freezer.rsi
-  - type: AntiRottingContainer
   - type: ExplosionResistance
     damageCoefficient: 0.50
   - type: Construction
@@ -480,8 +479,6 @@
   abstract: true
   components:
   # <Trauma>
-  - type: AntiRottingContainer # needed for plant bounties and it costs money so
-  # </Trauma>
   - type: Sprite
     sprite: Structures/Storage/Crates/lockbox.rsi
   - type: GenericVisualizer
@@ -807,7 +804,6 @@
   - type: Physics
     bodyType: Static
   - type: Grave
-  - type: ProRottingContainer
   - type: EntityStorage
     airtight: true
     isCollidableWhenOpen: false

@@ -151,7 +151,3 @@
       - tool: Welding
         doAfter: 1
 
-  - node: clarke
-    actions:
-    - !type:BuildMech
-      mechPrototype: MechClarke

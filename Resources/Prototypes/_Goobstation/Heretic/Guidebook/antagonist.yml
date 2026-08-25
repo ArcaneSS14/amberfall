@@ -1,22 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: guideEntry
-  id: Heretics
-  name: guide-entry-heretics
-  text: "/ServerInfo/_Goobstation/Guidebook/Antagonist/Heretics.xml"
-  children:
-  - AshPath
-  - VoidPath
-  - FleshPath
-  - LockPath
-  - RustPath
-  - BladePath
-  - CosmosPath
-  - HereticRituals
-  - HereticCurses
-  - HereticPotions
-
-- type: guideEntry
   id: HereticCurses
   name: guide-entry-heretic-curses
   text: "/ServerInfo/_Goobstation/Guidebook/Antagonist/HereticCurses.xml"

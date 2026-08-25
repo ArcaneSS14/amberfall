@@ -120,5 +120,3 @@
         Heat: 16
     soundHit:
       collection: MeatLaserImpact
-  - type: IgniteOnCollide
-    fireStacks: 0.8

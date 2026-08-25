@@ -3,7 +3,6 @@
 using Content.Lavaland.Server.Procedural.Components;
 using Content.Lavaland.Shared.CCVar;
 using Content.Lavaland.Shared.Procedural.Components;
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Decals;
 using Content.Server.GameTicking;
 using Content.Server.Parallax;
@@ -32,7 +31,6 @@ public sealed partial class LavalandSystem : EntitySystem
     [Dependency] private ITileDefinitionManager _tiledef = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private INetConfigurationManager _config = default!;
-    [Dependency] private AtmosphereSystem _atmos = default!;
     [Dependency] private BiomeSystem _biome = default!;
     [Dependency] private DecalSystem _decals = default!;
     [Dependency] private EntityLookupSystem _lookup = default!;

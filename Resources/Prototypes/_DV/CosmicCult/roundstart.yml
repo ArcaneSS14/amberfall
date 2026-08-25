@@ -4,7 +4,6 @@
   parent: BaseGameRule
   id: CosmicCult
   components:
-  - type: CosmicCultRule
   - type: LoadMapRule
     mapPath: /Maps/_DV/Nonstations/cosmicvoid.yml
   - type: GameRule

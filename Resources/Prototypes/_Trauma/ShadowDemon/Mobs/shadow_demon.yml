@@ -97,7 +97,6 @@
     factions:
     - DevilFaction
   - type: AlwaysTakeHoly
-  - type: PressureImmunity
   - type: TriggerOnMobstateChange
     mobState:
     - Dead
@@ -116,15 +115,6 @@
       - ReagentId: Sulfur
         Quantity: 300
     bleedReductionAmount: 30
-  - type: TemperatureDamage
-    coldDamage:
-      types:
-        Cold: 0
-    heatDamage:
-      types:
-        Heat: 0
-    heatDamageThreshold: 666
-    coldDamageThreshold: 66
   - type: ActionGrant
     actions:
       - ShadowDemonicWhisperAction

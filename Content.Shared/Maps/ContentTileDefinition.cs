@@ -1,4 +1,3 @@
-using Content.Shared.Atmos;
 using Content.Shared.Light.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Shuttles.Systems;
@@ -92,19 +91,8 @@ namespace Content.Shared.Maps
         /// </summary>
         [DataField("placementVariants")] public float[] PlacementVariants { get; set; } = { 1f };
 
-        [DataField("thermalConductivity")] public float ThermalConductivity = 0.04f;
-
-        // Heat capacity is opt-in, not opt-out.
-        [DataField("heatCapacity")] public float HeatCapacity = Atmospherics.MinimumHeatCapacity;
-
         [DataField("itemDrop", customTypeSerializer:typeof(PrototypeIdSerializer<EntityPrototype>))]
         public string ItemDropPrototypeName { get; private set; } = "FloorTileItemSteel";
-
-        // TODO rename data-field in yaml
-        /// <summary>
-        /// Whether or not the tile is exposed to the map's atmosphere.
-        /// </summary>
-        [DataField("isSpace")] public bool MapAtmosphere { get; private set; }
 
         /// <summary>
         ///     Friction override for mob mover in <see cref="SharedMoverController"/>

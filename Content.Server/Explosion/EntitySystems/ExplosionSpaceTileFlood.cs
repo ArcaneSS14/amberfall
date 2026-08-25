@@ -1,4 +1,3 @@
-using Content.Shared.Atmos;
 using Robust.Shared.Map;
 
 namespace Content.Server.Explosion.EntitySystems;
@@ -51,7 +50,7 @@ public sealed class ExplosionSpaceTileFlood : ExplosionTileFlood
         // Tiles entering space from some grid.
         foreach (var tile in inputSpaceTiles)
         {
-            ProcessNewTile(iteration, tile, AtmosDirection.All);
+            ProcessNewTile(iteration, tile, ExplosionDirection.All);
         }
 
         // Store new tiles
@@ -87,12 +86,12 @@ public sealed class ExplosionSpaceTileFlood : ExplosionTileFlood
         {
             var unblockedDirections = GetUnblockedDirectionOrAll(tile);
 
-            if (unblockedDirections == AtmosDirection.Invalid)
+            if (unblockedDirections == ExplosionDirection.Invalid)
                 continue;
 
-            for (var i = 0; i < Atmospherics.Directions; i++)
+            for (var i = 0; i < 4; i++)
             {
-                var direction = (AtmosDirection) (1 << i);
+                var direction = (ExplosionDirection) (1 << i);
 
                 if (!unblockedDirections.IsFlagSet(direction))
                     continue; // explosion cannot propagate in this direction. Ever.
@@ -114,7 +113,7 @@ public sealed class ExplosionSpaceTileFlood : ExplosionTileFlood
             JumpToGrid(blocker);
     }
 
-    protected override void ProcessNewTile(int iteration, Vector2i tile, AtmosDirection entryDirection)
+    protected override void ProcessNewTile(int iteration, Vector2i tile, ExplosionDirection entryDirection)
     {
         if (!_gridBlockMap.TryGetValue(tile, out var blocker))
         {
@@ -156,8 +155,9 @@ public sealed class ExplosionSpaceTileFlood : ExplosionTileFlood
         JumpToGrid(blocker);
     }
 
-    protected override AtmosDirection GetUnblockedDirectionOrAll(Vector2i tile)
+    protected override ExplosionDirection GetUnblockedDirectionOrAll(Vector2i tile)
     {
-        return _gridBlockMap.TryGetValue(tile, out var blocker) ? blocker.UnblockedDirections : AtmosDirection.All;
+        return _gridBlockMap.TryGetValue(tile, out var blocker) ? blocker.UnblockedDirections : ExplosionDirection.All;
     }
 }
+

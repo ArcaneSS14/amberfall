@@ -6,7 +6,6 @@
   components:
   - type: Sprite
     sprite: Structures/Power/Generation/PA/control_box.rsi
-  - type: ParticleAcceleratorControlBox
   - type: ApcPowerReceiver
     powerLoad: 250
   - type: ExtensionCableReceiver

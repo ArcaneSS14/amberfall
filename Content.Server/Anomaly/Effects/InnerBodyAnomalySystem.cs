@@ -233,3 +233,4 @@ public sealed partial class InnerBodyAnomalySystem : SharedInnerBodyAnomalySyste
         RemCompDeferred<AnomalyComponent>(ent);
     }
 }
+

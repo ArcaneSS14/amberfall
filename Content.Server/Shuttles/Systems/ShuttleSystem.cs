@@ -11,7 +11,6 @@ using Content.Shared.Damage.Systems;
 using Content.Shared.Gibbing;
 using Content.Shared.Light.Components;
 using Content.Shared.Movement.Events;
-using Content.Shared.Salvage;
 using Content.Shared.Shuttles.Systems;
 using Content.Shared.Throwing;
 using JetBrains.Annotations;
@@ -51,7 +50,6 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private SharedPhysicsSystem _physics = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
-    [Dependency] private SharedSalvageSystem _salvage = default!;
     [Dependency] private ShuttleConsoleSystem _console = default!;
     [Dependency] private StationSystem _station = default!;
     [Dependency] private StunSystem _stuns = default!;

@@ -26,7 +26,6 @@
     sprite: Clothing/Mask/gas.rsi
   - type: Clothing
     sprite: Clothing/Mask/gas.rsi
-  - type: BreathMask
   - type: IngestionBlocker
   - type: IdentityBlocker
   - type: Tag
@@ -145,7 +144,6 @@
     sprite: Clothing/Mask/gascaptain.rsi
   - type: Clothing
     sprite: Clothing/Mask/gascaptain.rsi
-  - type: BreathMask
   - type: IngestionBlocker
     blockSmokeIngestion: true # Goobstation
 
@@ -160,7 +158,6 @@
     sprite: Clothing/Mask/gascentcom.rsi
   - type: Clothing
     sprite: Clothing/Mask/gascentcom.rsi
-  - type: BreathMask
   - type: IngestionBlocker
     blockSmokeIngestion: true # Goobstation
 
@@ -222,7 +219,6 @@
     sprite: Clothing/Mask/medical.rsi
   - type: Clothing
     sprite: Clothing/Mask/medical.rsi
-  - type: BreathMask
   - type: IngestionBlocker
   - type: Tag
     tags:
@@ -284,7 +280,6 @@
     sprite: Clothing/Mask/breath.rsi
   - type: Clothing
     sprite: Clothing/Mask/breath.rsi
-  - type: BreathMask
   - type: IngestionBlocker
   - type: Tag
     tags:
@@ -310,7 +305,6 @@
     sprite: Clothing/Mask/clown.rsi
   - type: Clothing
     sprite: Clothing/Mask/clown.rsi
-  - type: BreathMask
   - type: IdentityBlocker
   - type: Tag
     tags:
@@ -410,7 +404,6 @@
     sprite: Clothing/Mask/joy.rsi
   - type: Clothing
     sprite: Clothing/Mask/joy.rsi
-  - type: BreathMask
   - type: IdentityBlocker
   - type: HideLayerClothing
     slots:
@@ -429,7 +422,6 @@
     sprite: Clothing/Mask/mime.rsi
   - type: Clothing
     sprite: Clothing/Mask/mime.rsi
-  - type: BreathMask
   - type: IdentityBlocker
   - type: Tag
     tags:
@@ -530,7 +522,6 @@
     sprite: Clothing/Mask/plaguedoctormask.rsi
   - type: Clothing
     sprite: Clothing/Mask/plaguedoctormask.rsi
-  - type: BreathMask
   - type: IngestionBlocker
   - type: IdentityBlocker
   - type: HideLayerClothing
@@ -982,7 +973,6 @@
   - type: Item
     storedRotation: -90
   - type: EyeProtection
-  - type: BreathMask
   - type: IdentityBlocker
   - type: Tag
     tags:
@@ -999,7 +989,6 @@
     state: icon
   - type: Clothing
     sprite: Clothing/Mask/welding-gas.rsi
-  - type: BreathMask
   - type: IngestionBlocker
   - type: IdentityBlocker
   - type: FlashImmunity
@@ -1018,6 +1007,7 @@
     - Snout
 
 # Entity tables
+
 - type: entityTable
   id: AnimalMaskTable
   table: !type:GroupSelector

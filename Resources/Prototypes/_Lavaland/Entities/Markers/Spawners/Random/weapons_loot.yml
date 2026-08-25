@@ -100,6 +100,24 @@
       tableId: SecondaryKineticWeapons
 
 # All lavaland weapons
+- type: entity
+  name: lavaland weapons loot spawner
+  id: LavalandWeaponLootSpawner
+  parent: MarkerBase
+  suffix: Lavaland
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Weapons/Melee/crusher.rsi
+      state: icon
+    - sprite: _Lavaland/Objects/Weapons/Guns/Basic/kinetic_repeater.rsi
+      state: icon
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: LavalandWeapons
+
 - type: entityTable
   id: LavalandWeapons
   table: !type:GroupSelector
@@ -129,20 +147,3 @@
       weight: 0.5
       tableId: SecondaryKineticWeapons
 
-- type: entity
-  name: lavaland weapons loot spawner
-  id: LavalandWeaponLootSpawner
-  parent: MarkerBase
-  suffix: Lavaland
-  components:
-  - type: Sprite
-    layers:
-    - state: red
-    - sprite: Objects/Weapons/Melee/crusher.rsi
-      state: icon
-    - sprite: _Lavaland/Objects/Weapons/Guns/Basic/kinetic_repeater.rsi
-      state: icon
-  - type: EntityTableSpawner
-    offset: 0
-    table: !type:NestedSelector
-      tableId: LavalandWeapons

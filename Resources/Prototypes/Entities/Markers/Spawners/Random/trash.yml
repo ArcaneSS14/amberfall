@@ -1,50 +1,3 @@
-- type: entityTable
-  id: GenericTrashItems
-  table: !type:GroupSelector
-    children:
-    - !type:GroupSelector
-      weight: 90
-      children:
-      - id: FoodPacketBoritosTrash
-      - id: FoodPacketCheesieTrash
-      - id: FoodPacketChipsTrash
-      - id: FoodPacketChocolateTrash
-      - id: FoodPacketChowMeinTrash
-      - id: FoodPacketCnDsTrash
-      - id: FoodPacketDanDanTrash
-      - id: FoodPacketPistachioTrash
-      - id: FoodPacketEnergyTrash
-      - id: FoodPacketPopcornTrash
-      - id: FoodPacketRaisinsTrash
-      - id: FoodPacketSemkiTrash
-      - id: FoodPacketSusTrash
-      - id: FoodPacketSyndiTrash
-      - id: FoodSnackLollypopTrash # Goobstation - Lollypops
-      - id: FoodPacketLollypopTrash # Goobstation - Lollypops
-      - id: BrokenBottle
-    - !type:GroupSelector
-      weight: 5
-      children:
-      - id: FoodPlateSmallTrash
-      - id: FoodBowlBigTrash
-    - !type:NestedSelector
-      weight: 5
-      tableId: AllBananaPeelsTable
-
-- type: entityTable # max size 1x2
-  id: AllBananaPeelsTable
-  table: !type:GroupSelector
-    children:
-    - id: TrashBananaPeel
-      weight: 3
-    - id: TrashBakedBananaPeel
-      weight: 2
-    - id: TrashMimanaPeel
-    - id: TrashBananiumPeel
-      weight: 0.5
-    - id: TrashBananaPeelExplosive
-      weight: 0.010 # Trauma - 1 in 650 :godo:
-
 - type: entity
   parent: MarkerBase
   id: RandomSpawner
@@ -90,3 +43,52 @@
     table: !type:NestedSelector
       tableId: AllBananaPeelsTable
       prob: 0.9
+
+- type: entityTable
+  id: GenericTrashItems
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 90
+      children:
+      - id: FoodPacketBoritosTrash
+      - id: FoodPacketCheesieTrash
+      - id: FoodPacketChipsTrash
+      - id: FoodPacketChocolateTrash
+      - id: FoodPacketChowMeinTrash
+      - id: FoodPacketCnDsTrash
+      - id: FoodPacketDanDanTrash
+      - id: FoodPacketPistachioTrash
+      - id: FoodPacketEnergyTrash
+      - id: FoodPacketPopcornTrash
+      - id: FoodPacketRaisinsTrash
+      - id: FoodPacketSemkiTrash
+      - id: FoodPacketSusTrash
+      - id: FoodPacketSyndiTrash
+      - id: FoodSnackLollypopTrash # Goobstation - Lollypops
+      - id: FoodPacketLollypopTrash # Goobstation - Lollypops
+      - id: BrokenBottle
+    - !type:GroupSelector
+      weight: 5
+      children:
+      - id: FoodPlateSmallTrash
+      - id: FoodBowlBigTrash
+    - !type:NestedSelector
+      weight: 5
+      tableId: AllBananaPeelsTable
+
+
+- type: entityTable # max size 1x2
+  id: AllBananaPeelsTable
+  table: !type:GroupSelector
+    children:
+    - id: TrashBananaPeel
+      weight: 3
+    - id: TrashBakedBananaPeel
+      weight: 2
+    - id: TrashMimanaPeel
+    - id: TrashBananiumPeel
+      weight: 0.5
+    - id: TrashBananaPeelExplosive
+      weight: 0.010 # Trauma - 1 in 650 :godo:
+

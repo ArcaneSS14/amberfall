@@ -15,3 +15,4 @@ public sealed partial class GeneratingAnomalyGeneratorComponent : Component
 
     public EntityUid? AudioStream;
 }
+

@@ -1,4 +1,5 @@
 using Content.Server.Administration.Logs;
+using Content.Server.Administration;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.UI;
 using Content.Server.Afk;
@@ -14,7 +15,6 @@ using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Configurable;
 using Content.Shared.Database;
-using Content.Shared.Disposal.Tube;
 using Content.Shared.Examine;
 using Content.Shared.GameTicking;
 using Content.Shared.Inventory;
@@ -51,7 +51,6 @@ namespace Content.Server.Administration.Systems
         [Dependency] private IGameTiming _gameTiming = default!;
         [Dependency] private SharedMapSystem _map = default!;
         [Dependency] private AdminSystem _adminSystem = default!;
-        [Dependency] private DisposalTubeSystem _disposalTubes = default!;
         [Dependency] private EuiManager _euiManager = default!;
         [Dependency] private GhostRoleSystem _ghostRoleSystem = default!;
         [Dependency] private UserInterfaceSystem _uiSystem = default!;
@@ -67,6 +66,8 @@ namespace Content.Server.Administration.Systems
         [Dependency] private IPlayerManager _playerManager = default!;
         [Dependency] private SiliconLawSystem _siliconLawSystem = default!;
         [Dependency] private AfkConfirmSystem _afkConfirm = default!;
+        [Dependency] private QuickDialogSystem _quickDialog = default!;
+        [Dependency] private SharedTransformSystem _transformSystem = default!;
 
         private readonly Dictionary<ICommonSession, List<EditSolutionsEui>> _openSolutionUis = new();
 
@@ -84,8 +85,6 @@ namespace Content.Server.Administration.Systems
         {
             AddAdminVerbs(ev);
             AddDebugVerbs(ev);
-            AddSmiteVerbs(ev);
-            AddTricksVerbs(ev);
             AddAntagVerbs(ev);
         }
 
@@ -541,20 +540,6 @@ namespace Content.Server.Administration.Systems
 
                         _popup.PopupEntity(message, args.Target, args.User);
                     }
-                };
-                args.Verbs.Add(verb);
-            }
-
-            // Get Disposal tube direction verb
-            if (_groupController.CanCommand(player, "tubeconnections") &&
-                TryComp(args.Target, out DisposalTubeComponent? tube))
-            {
-                Verb verb = new()
-                {
-                    Text = Loc.GetString("tube-direction-verb-get-data-text"),
-                    Category = VerbCategory.Debug,
-                    Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/information.svg.192dpi.png")),
-                    Act = () => _disposalTubes.PopupDirections((args.Target, tube), args.User)
                 };
                 args.Verbs.Add(verb);
             }

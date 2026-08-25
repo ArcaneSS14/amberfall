@@ -99,7 +99,6 @@
   - type: ComponentsImplant
     added:
     - type: BreathingImmunity
-    - type: PressureImmunity
     - type: SpecialLowTempImmunity
 
 - type: entity

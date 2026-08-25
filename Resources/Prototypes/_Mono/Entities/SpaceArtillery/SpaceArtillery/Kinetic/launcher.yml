@@ -43,7 +43,6 @@
   - type: Actions
   - type: CombatMode
     isInCombatMode: true
-  - type: Airtight
   - type: BatteryAmmoProvider
     proto: 20mmBulletArmorPiercing
     fireCost: 15

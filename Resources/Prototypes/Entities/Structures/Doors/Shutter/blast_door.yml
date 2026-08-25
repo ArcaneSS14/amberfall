@@ -68,8 +68,6 @@
     enabled: false
   - type: Physics
     canCollide: false
-  - type: Airtight
-    airBlocked: false
   - type: RadiationBlocker
     enabled: false
 
@@ -151,7 +149,5 @@
     enabled: false
   - type: Physics
     canCollide: false
-  - type: Airtight
-    airBlocked: false
   - type: RadiationBlocker
     enabled: false

@@ -187,20 +187,10 @@
         - !type:ReagentCondition
           reagent: Amnestizine
           min: 30
-      - !type:Flammable
-        multiplier: 0.3
       - !type:ModifyParalysis
         probability: 0.05
         time: 2
   reactiveEffects:
-    Flammable:
-      methods: [ Touch ]
-      effects:
-      - !type:Flammable
-        multiplier: 0.4
-
-# Homemade hyperzine, should be worse than it and harder to make, but
-# doesn't require vestine. Should NOT be addictive when we get addictions
 - type: reagent
   id: Aranesp
   name: reagent-name-aranesp

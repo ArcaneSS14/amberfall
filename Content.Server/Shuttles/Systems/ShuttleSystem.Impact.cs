@@ -1,5 +1,4 @@
 using Content.Server.Shuttles.Components;
-using Content.Shared.Atmos.Components;
 using Content.Shared.Audio;
 using Content.Shared.CCVar;
 using Content.Shared.Damage;
@@ -25,7 +24,6 @@ namespace Content.Server.Shuttles.Systems;
 public sealed partial class ShuttleSystem
 {
     [Dependency] private EntityQuery<DamageableComponent> _damageableQuery = default!;
-    [Dependency] private EntityQuery<MovedByPressureComponent> _movedByPressureQuery = default!;
 
     private bool _enabled;
     private float _minimumImpactInertia;
@@ -240,10 +238,6 @@ public sealed partial class ShuttleSystem
         {
             // don't throw if buckled
             if (_buckle.IsBuckled(ent, _buckleQuery.CompOrNull(ent)))
-                continue;
-
-            // don't throw them if they have magboots
-            if (_movedByPressureQuery.TryComp(ent, out var moved) && !moved.Enabled)
                 continue;
 
             if (direction.LengthSquared() > minsq)

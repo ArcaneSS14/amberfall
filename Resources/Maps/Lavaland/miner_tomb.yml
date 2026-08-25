@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/20/2025 03:08:17
-  entityCount: 33
+  entityCount: 32
 maps: []
 grids:
 - 1
@@ -140,48 +140,7 @@ entities:
             id: thinline
           decals:
             9: 0.15837723,0.25062823
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 52155
-          0,-1:
-            0: 57088
-          -1,0:
-            0: 27306
-          0,1:
-            0: 15
-          -1,1:
-            0: 14
-          -1,-1:
-            0: 28160
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
-- proto: AirCanister
-  entities:
-  - uid: 23
-    components:
-    - type: Transform
-      pos: 1.5,2.5
-      parent: 1
 - proto: AirlockMiningGlass
   entities:
   - uid: 2

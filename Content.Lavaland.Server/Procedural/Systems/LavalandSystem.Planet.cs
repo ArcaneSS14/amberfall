@@ -4,11 +4,9 @@ using Content.Lavaland.Server.Biome;
 using Content.Lavaland.Server.Procedural.Components;
 using Content.Lavaland.Shared.Procedural.Components;
 using Content.Lavaland.Shared.Procedural.Prototypes;
-using Content.Shared.Atmos.Components;
 using Content.Shared.EntityEffects;
 using Content.Shared.Gravity;
 using Content.Shared.Parallax.Biomes;
-using Content.Shared.Salvage;
 using Content.Shared.Shuttles.Components;
 using Robust.Shared.Map;
 
@@ -114,12 +112,6 @@ public sealed partial class LavalandSystem
         gravity.Enabled = true;
         Dirty(lavalandMap, gravity);
 
-        var atmos = EnsureComp<MapAtmosphereComponent>(lavalandMap);
-        _atmos.SetMapGasMixture(lavalandMap, prototype.Atmosphere, atmos);
-
-        // Restricted Range
-        var restricted = EnsureComp<RestrictedRangeComponent>(lavalandMap);
-        restricted.Range = prototype.RestrictedRange;
     }
 
     private void SetupLayout(EntityUid lavaland, MapId lavalandMapId, LavalandLayoutPrototype? proto, out List<EntityUid> spawned)

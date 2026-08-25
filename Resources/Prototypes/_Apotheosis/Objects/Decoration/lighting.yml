@@ -22,13 +22,10 @@
   - type: FuelableFire
     capacity: 300
     burnRate: 1
-  - type: IgnitionSource
-    temperature: 700
-    ignited: false
   - type: PointLight
     enabled: false
     radius: 12
-    energy: 2
+    energy: 3
     color: "#FF8A30"
   - type: AmbientSound
     enabled: false
@@ -371,7 +368,7 @@
           True: { state: wallcandle1, shader: null }
           False: { state: wallcandle0, shader: null }
   - type: PointLight
-    radius: 2
+    radius: 12
     energy: 1.5
   - type: Fixtures
   - type: Physics
@@ -456,3 +453,94 @@
           False: { state: wallcandlep0, shader: null }
   - type: PointLight
     color: "#B060FF"
+
+# Eternal variants for mapping. BaseEternalFire can also be mixed into another
+# FuelableFire structure to make it start lit, consume no fuel, and resist manual extinguishing.
+- type: entity
+  abstract: true
+  id: BaseEternalFire
+  suffix: Eternal
+  components:
+  - type: FuelableFire
+    fuel: 0
+    capacity: 0
+    burnRate: 0
+    burning: true
+    infiniteFuel: true
+    canExtinguish: false
+
+- type: entity
+  parent: [RusticStoneFire, BaseEternalFire]
+  id: RusticStoneFireEternal
+
+- type: entity
+  parent: [RusticStumpFire, BaseEternalFire]
+  id: RusticStumpFireEternal
+
+- type: entity
+  parent: [RusticChurchFire, BaseEternalFire]
+  id: RusticChurchFireEternal
+
+- type: entity
+  parent: [RusticDenseFire, BaseEternalFire]
+  id: RusticDenseFireEternal
+
+- type: entity
+  parent: [RusticBadFire, BaseEternalFire]
+  id: RusticBadFireEternal
+
+- type: entity
+  parent: [RusticWallTorch, BaseEternalFire]
+  id: RusticWallTorchEternal
+
+- type: entity
+  parent: [RusticHearth, BaseEternalFire]
+  id: RusticHearthEternal
+
+- type: entity
+  parent: [RusticOven, BaseEternalFire]
+  id: RusticOvenEternal
+
+- type: entity
+  parent: [RusticHoboStove, BaseEternalFire]
+  id: RusticHoboStoveEternal
+
+- type: entity
+  parent: [RusticStandingLight, BaseEternalFire]
+  id: RusticStandingLightEternal
+
+- type: entity
+  parent: [RusticStandingLightBlue, BaseEternalFire]
+  id: RusticStandingLightBlueEternal
+
+- type: entity
+  parent: [RusticStandingLightGreen, BaseEternalFire]
+  id: RusticStandingLightGreenEternal
+
+- type: entity
+  parent: [RusticStandingLightRed, BaseEternalFire]
+  id: RusticStandingLightRedEternal
+
+- type: entity
+  parent: [RusticStandingLightPurple, BaseEternalFire]
+  id: RusticStandingLightPurpleEternal
+
+- type: entity
+  parent: [RusticWallCandle, BaseEternalFire]
+  id: RusticWallCandleEternal
+
+- type: entity
+  parent: [RusticWallCandleBlue, BaseEternalFire]
+  id: RusticWallCandleBlueEternal
+
+- type: entity
+  parent: [RusticWallCandleGreen, BaseEternalFire]
+  id: RusticWallCandleGreenEternal
+
+- type: entity
+  parent: [RusticWallCandleRed, BaseEternalFire]
+  id: RusticWallCandleRedEternal
+
+- type: entity
+  parent: [RusticWallCandlePurple, BaseEternalFire]
+  id: RusticWallCandlePurpleEternal

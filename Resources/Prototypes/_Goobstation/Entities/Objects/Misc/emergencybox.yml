@@ -47,13 +47,7 @@
         ejectOnInteract: false
         whitelist:
           tags:
-          - EmergencyOxygenTank
-          - ExtendedEmergencyOxygenTank
           - ClownEmergencyOxygenTank
-          - EmergencyNitrogenTank
-          - ExtendedEmergencyNitrogenTank
-          - EmergencyPlasmaTank
-          - ExtendedEmergencyPlasmaTank
       mask:
         ejectOnInteract: false
         whitelist:
@@ -77,8 +71,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyOxygenTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -118,11 +110,9 @@
       oxy:
         whitelist:
           tags:
-          - EmergencyOxygenTank
       oxyextend:
         whitelist:
           tags:
-          - ExtendedEmergencyOxygenTank
       oxyclown:
         whitelist:
           tags:
@@ -130,7 +120,6 @@
       nit:
         whitelist:
           tags:
-          - EmergencyNitrogenTank
       battery:
         whitelist:
           tags:
@@ -156,8 +145,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyNitrogenTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -180,8 +167,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - ExtendedEmergencyOxygenTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -202,8 +187,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - ExtendedEmergencyNitrogenTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -228,8 +211,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - ExtendedEmergencyOxygenTankFilled
       mask:
       - ClothingMaskGasSecurity
       emergencypen:
@@ -250,8 +231,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - ExtendedEmergencyNitrogenTankFilled
       mask:
       - ClothingMaskGasSecurity
       emergencypen:
@@ -276,8 +255,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyOxygenTankFilled
       mask:
       - ClothingMaskBreathMedical
       emergencypen:
@@ -298,8 +275,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyNitrogenTankFilled
       mask:
       - ClothingMaskBreathMedical
       emergencypen:
@@ -324,8 +299,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyFunnyOxygenTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -351,8 +324,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyNitrogenTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -375,8 +346,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - ExtendedEmergencyOxygenTankFilled
       mask:
       - ClothingMaskGasSyndicate
       emergencypen:
@@ -397,8 +366,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - ExtendedEmergencyNitrogenTankFilled
       mask:
       - ClothingMaskGasSyndicate
       emergencypen:
@@ -421,8 +388,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyOxygenTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -441,8 +406,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyOxygenTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -461,8 +424,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyNitrogenTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -486,8 +447,6 @@
       - DrinkMilkBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyPlasmaTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -508,8 +467,6 @@
       - DrinkMilkBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyPlasmaTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -532,8 +489,6 @@
       - DrinkMilkBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyPlasmaTankFilled
       mask:
       - ClothingMaskGasSecurity
       emergencypen:
@@ -556,8 +511,6 @@
       - DrinkMilkBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyPlasmaTankFilled
       mask:
       - ClothingMaskBreathMedical
       emergencypen:
@@ -580,8 +533,6 @@
       - DrinkMilkBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyPlasmaTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:
@@ -602,8 +553,6 @@
       - DrinkMilkBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyPlasmaTankFilled
       mask:
       - ClothingMaskGasSyndicate
       emergencypen:
@@ -626,8 +575,6 @@
       - DrinkMilkBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyPlasmaTankFilled
       mask:
       - ClothingMaskBreath
       emergencypen:

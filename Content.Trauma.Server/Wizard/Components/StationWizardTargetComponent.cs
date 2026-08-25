@@ -6,3 +6,4 @@ namespace Content.Trauma.Server.Wizard.Components;
 public sealed partial class StationWizardTargetComponent : Component
 {
 }
+

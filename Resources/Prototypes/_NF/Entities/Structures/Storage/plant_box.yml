@@ -35,8 +35,6 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Climbable
-  - type: AntiRottingContainer
-  # plantbox-specific
   - type: Sprite
     noRot: true
     sprite: _NF/Structures/Storage/plantbox.rsi

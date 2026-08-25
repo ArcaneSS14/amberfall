@@ -3,7 +3,6 @@ using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Popups;
-using Content.Shared.Temperature;
 using Content.Shared.Toggleable;
 using Content.Shared.Verbs;
 using Content.Shared.Wieldable;
@@ -40,7 +39,6 @@ public sealed partial class ItemToggleSystem : EntitySystem
         SubscribeLocalEvent<ItemToggleComponent, GetVerbsEvent<ActivationVerb>>(OnActivateVerb);
         SubscribeLocalEvent<ItemToggleComponent, ActivateInWorldEvent>(OnActivate);
 
-        SubscribeLocalEvent<ItemToggleHotComponent, IsHotEvent>(OnIsHotEvent);
 
         SubscribeLocalEvent<ItemToggleActiveSoundComponent, ItemToggledEvent>(UpdateActiveSound);
     }
@@ -330,14 +328,6 @@ public sealed partial class ItemToggleSystem : EntitySystem
             return true; // assume always activated if no component
 
         return ent.Comp.Activated;
-    }
-
-    /// <summary>
-    /// Used to make the item hot when activated.
-    /// </summary>
-    private void OnIsHotEvent(Entity<ItemToggleHotComponent> ent, ref IsHotEvent args)
-    {
-        args.IsHot |= IsActivated(ent.Owner);
     }
 
     /// <summary>

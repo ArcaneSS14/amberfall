@@ -1,13 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: guideEntry
-  id: Devil
-  name: guide-entry-devil
-  text: "/ServerInfo/_Goobstation/Guidebook/Antagonist/Devil.xml"
-  children:
-  - DevilClauses
-
-- type: guideEntry
   id: DevilClauses
   name: guide-entry-devil-clauses
   text: "/ServerInfo/_Goobstation/Guidebook/Antagonist/DevilClauses.xml"

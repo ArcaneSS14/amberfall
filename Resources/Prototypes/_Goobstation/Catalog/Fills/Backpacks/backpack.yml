@@ -1,25 +1,2 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-- type: entity
-  id: ClothingBackpackSyndicateFilledGrenadier
-  parent: ClothingBackpackSyndicate
-  suffix: Grenadier bundle, filled
-  components:                      # How many nades do you want?
-  - type: EntityTableContainerFill # Yes.
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: CleanerGrenade
-        - id: MetalFoamGrenade
-        - id: GrenadeFlashBang
-        - id: TearGasGrenade
-        - id: GrenadeStinger
-        - id: WhiteholeGrenade
-        - id: SmokeGrenade
-        - id: EmpGrenade
-        - id: C4
-        - id: GrenadeShrapnel
-        - id: GrenadeIncendiary
-        - id: ExGrenade
-        - id: SarinGasGrenade
-        - id: SupermatterGrenade

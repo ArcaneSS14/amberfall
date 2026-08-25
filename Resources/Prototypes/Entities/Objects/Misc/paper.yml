@@ -37,19 +37,6 @@
     groups:
       Flammable: [ Touch ]
       Extinguish: [ Touch ]
-  - type: ExtinguishableSetCollisionWake
-  - type: Flammable
-    fireSpread: true
-    alwaysCombustible: true
-    canExtinguish: true
-    damage:
-      types:
-        Heat: 1
-  - type: FireFuel
-    amount: 5
-  - type: FireVisuals
-    sprite: Effects/fire.rsi
-    normalState: fire
   - type: Damageable
     damageModifierSet: Wood
   - type: Injurable
@@ -91,6 +78,8 @@
   name: paper
   description: A piece of white paper.
   components:
+  - type: FireFuel
+    amount: 5
   # <Trauma>
   - type: ActivatableUIRequiresVision # can't read if you're blind
   - type: Construction # so you can click with knife and spray painter
@@ -342,7 +331,6 @@
     contentImageModulate: "#f7e574"
     backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
     contentMargin: 16.0, 16.0, 16.0, 16.0
-  - type: JobBoardLabel
   - type: StaticPrice #infinitely printable
     price: 0
 
@@ -476,17 +464,6 @@
     - Trash
     - Document
   - type: Appearance # Trauma - I'd much rather have weird stamps than no fire, go do displacements yourself
-  - type: Flammable
-    fireSpread: true
-    canResistFire: false
-    alwaysCombustible: true
-    canExtinguish: true
-    damage:
-      types:
-        Heat: 1
-  - type: FireVisuals
-    sprite: Effects/fire.rsi
-    normalState: fire
   - type: Damageable
     damageModifierSet: Wood
   - type: Destructible

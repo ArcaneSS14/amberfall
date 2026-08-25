@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 01/08/2026 11:41:03
-  entityCount: 137
+  entityCount: 132
 maps: []
 grids:
 - 1
@@ -168,11 +168,6 @@ entities:
             25: 5.032137,-2.5774798
             26: 4.922762,-2.9524798
             27: 5.016512,-2.9212298
-    - type: GridAtmosphere
-      version: 2
-      data:
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: ImplicitRoof
     - type: RadiationGridResistance
 - proto: BarrelFire
@@ -263,13 +258,6 @@ entities:
     - type: Transform
       pos: 7.5,-0.5
       parent: 1
-- proto: BedsheetSpawner
-  entities:
-  - uid: 36
-    components:
-    - type: Transform
-      pos: 7.5,-0.5
-      parent: 1
 - proto: ChairWood
   entities:
   - uid: 37
@@ -300,13 +288,6 @@ entities:
       inSlot: neck
     - type: Physics
       canCollide: False
-- proto: CrateTrashCartFilled
-  entities:
-  - uid: 136
-    components:
-    - type: Transform
-      pos: 4.5,-5.5
-      parent: 1
 - proto: CrusherUpgradeLootSpawner
   entities:
   - uid: 63
@@ -675,25 +656,6 @@ entities:
     components:
     - type: Transform
       pos: 17.5,-2.5
-      parent: 1
-- proto: SalvageCanisterSpawner
-  entities:
-  - uid: 72
-    components:
-    - type: Transform
-      pos: 9.5,-0.5
-      parent: 1
-- proto: SalvageMaterialCrateSpawner
-  entities:
-  - uid: 2
-    components:
-    - type: Transform
-      pos: 10.5,-0.5
-      parent: 1
-  - uid: 6
-    components:
-    - type: Transform
-      pos: 13.5,-0.5
       parent: 1
 - proto: SalvageSpawnerScrapCommon75
   entities:

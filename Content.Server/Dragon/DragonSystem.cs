@@ -10,7 +10,6 @@ using Content.Trauma.Common.Dragon;
 using Content.Trauma.Common.Sprite;
 using Robust.Shared.Serialization.Manager;
 // </Trauma>
-using Content.Server.Fluids.EntitySystems;
 using Content.Server.Objectives.Components;
 using Content.Server.Objectives.Systems;
 using Content.Server.Popups;
@@ -51,7 +50,6 @@ public sealed partial class DragonSystem : EntitySystem
     [Dependency] private MobStateSystem _mobState = default!;
     [Dependency] private TurfSystem _turf = default!;
     [Dependency] private GibbingSystem _gibbing = default!;
-    [Dependency] private SmokeSystem _smoke = default!;
 
     [Dependency] private EntityQuery<CarpRiftsConditionComponent> _carpRiftsConditionQuery = default!;
 
@@ -129,9 +127,6 @@ public sealed partial class DragonSystem : EntitySystem
             if (comp.RiftAccumulator >= comp.RiftMaxAccumulator)
             {
                 Roar(uid, comp, Transform(uid).Coordinates);
-                var smoke = Spawn(comp.SmokePrototype, Transform(uid).Coordinates);
-                if (TryComp<SmokeComponent>(smoke, out var smokeComp))
-                    _smoke.StartSmoke(smoke, comp.SmokeSolution, smokeComp.Duration, smokeComp.SpreadAmount, smokeComp);
                 _gibbing.Gib(uid);
             }
         }

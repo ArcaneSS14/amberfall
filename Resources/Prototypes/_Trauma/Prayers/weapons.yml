@@ -10,16 +10,6 @@
     id: BarberScissors # 50% miss chance
 
 - type: scrollPrayer
-  id: Claymore
-  verb: GIVE
-  subjects: [ "CLAYMORE" ]
-  items: !type:GroupSelector
-    children:
-    - id: Claymore
-    - id: HolyClaymore
-      weight: 0.1
-
-- type: scrollPrayer
   id: Dagger
   verb: GIVE
   subjects: [ "DAGGER" ]
@@ -82,14 +72,3 @@
   items:
     id: MaterialToothSharkminnow1
 
-- type: scrollPrayer
-  id: WarScythe
-  verb: GIVE
-  subjects: [ "WAR SCYTHE" ]
-  items: !type:GroupSelector
-    children:
-    - id: ScytheCosmicCult
-    - id: HydroponicsToolScythe
-      weight: 0.4 # trolled
-    - id: ReverbScythe
-      weight: 0.1 # it's crazy strong

@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/19/2025 21:18:18
-  entityCount: 226
+  entityCount: 211
 maps: []
 grids:
 - 1
@@ -65,67 +65,8 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 62719
-          0,-1:
-            0: 65535
-          -1,0:
-            0: 32904
-          0,1:
-            0: 15
-          1,0:
-            0: 61695
-          1,1:
-            0: 15
-          1,-1:
-            0: 65535
-          2,0:
-            0: 5141
-          2,-1:
-            0: 8177
-          2,1:
-            0: 4
-          -1,-1:
-            0: 49147
-          -1,-2:
-            0: 34816
-          0,-2:
-            0: 65292
-          1,-2:
-            0: 65280
-          2,-2:
-            0: 20800
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: NavMap
-- proto: AirCanister
-  entities:
-  - uid: 226
-    components:
-    - type: Transform
-      pos: 5.5,4.5
-      parent: 1
 - proto: AirlockExternal
   entities:
   - uid: 89
@@ -213,13 +154,6 @@ entities:
     components:
     - type: Transform
       pos: 4.5,5.5
-      parent: 1
-- proto: Biofabricator
-  entities:
-  - uid: 122
-    components:
-    - type: Transform
-      pos: 4.5,-3.5
       parent: 1
 - proto: Bucket
   entities:
@@ -513,33 +447,12 @@ entities:
     - type: Transform
       pos: 7.5524035,-5.446327
       parent: 1
-- proto: ClothingBeltPlantFilled
-  entities:
-  - uid: 213
-    components:
-    - type: Transform
-      pos: 3.0792236,4.589468
-      parent: 1
 - proto: ClothingHandsGlovesLeather
   entities:
   - uid: 211
     components:
     - type: Transform
       pos: 4.3292236,4.651968
-      parent: 1
-- proto: CrateHydroponicsSeedsExotic
-  entities:
-  - uid: 128
-    components:
-    - type: Transform
-      pos: 0.5,-5.5
-      parent: 1
-- proto: CrateHydroponicsSeedsMedicinal
-  entities:
-  - uid: 140
-    components:
-    - type: Transform
-      pos: 0.5,1.5
       parent: 1
 - proto: CryogenicSleepUnit
   entities:
@@ -566,51 +479,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -3.5,-3.5
-      parent: 1
-- proto: DisposalBend
-  entities:
-  - uid: 150
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.5,-7.5
-      parent: 1
-- proto: DisposalPipe
-  entities:
-  - uid: 62
-    components:
-    - type: Transform
-      pos: 2.5,-6.5
-      parent: 1
-  - uid: 148
-    components:
-    - type: Transform
-      pos: 2.5,-4.5
-      parent: 1
-  - uid: 149
-    components:
-    - type: Transform
-      pos: 2.5,-5.5
-      parent: 1
-- proto: DisposalTrunk
-  entities:
-  - uid: 147
-    components:
-    - type: Transform
-      pos: 2.5,-3.5
-      parent: 1
-  - uid: 151
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,-7.5
-      parent: 1
-- proto: DisposalUnit
-  entities:
-  - uid: 121
-    components:
-    - type: Transform
-      pos: 2.5,-3.5
       parent: 1
 - proto: GeneratorWallmountAPU
   entities:
@@ -711,14 +579,6 @@ entities:
     components:
     - type: Transform
       pos: -0.5,3.5
-      parent: 1
-- proto: PackPaperRollingFilters
-  entities:
-  - uid: 209
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.38597775,4.679373
       parent: 1
 - proto: PlantBag
   entities:
@@ -845,13 +705,6 @@ entities:
     components:
     - type: Transform
       pos: -0.5,1.5
-      parent: 1
-- proto: SodaDispenser
-  entities:
-  - uid: 124
-    components:
-    - type: Transform
-      pos: 5.5,-3.5
       parent: 1
 - proto: SpawnMobBee
   entities:
@@ -1012,13 +865,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 10.5,-4.5
-      parent: 1
-- proto: ToolboxSyndicateFilled
-  entities:
-  - uid: 143
-    components:
-    - type: Transform
-      pos: 8.505528,-5.352577
       parent: 1
 - proto: ToyFigurineBotanist
   entities:

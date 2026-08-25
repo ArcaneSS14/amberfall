@@ -7,7 +7,6 @@ using Content.Medical.Shared.Surgery;
 using Content.Medical.Shared.Surgery.Conditions;
 using Content.Medical.Shared.Surgery.Effects.Step;
 using Content.Medical.Shared.Surgery.Tools;
-using Content.Server.Atmos.Rotting;
 using Content.Server.Chat.Systems;
 using Content.Server.Popups;
 using Content.Shared.Bed.Sleep;

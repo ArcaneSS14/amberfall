@@ -41,11 +41,6 @@
   name: Leader Responsory modsuit chestplate
   description: A state of the art chestplate designed by NanoTrasen for the Leader Responsory modsuit. It incorporates powered servos to reduce the equipment load.
   categories: [HideSpawnMenu]
-  components:
-  - type: ClothingGrantComponent
-    component:
-      - type: SupermatterImmune
-
 - type: entity
   parent: [ BaseModsuitBootsERT, BaseModsuitPieceERTLeader ]
   id: ClothingModsuitBootsResponsoryLeader
@@ -53,15 +48,3 @@
   description: A state-of-the-art pair of magboots for the Leader Responsory modsuit. So long as the suit is powered, these will not slow the wearer down.
   categories: [HideSpawnMenu]
 
-- type: entity
-  id: SuitStorageResponsoryLeader
-  parent: SuitStorageBase
-  suffix: Leader Responsory Modsuit
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: OxygenTankFilled
-        - id: ClothingModsuitResponsoryLeader
-        - id: ClothingMaskBreath

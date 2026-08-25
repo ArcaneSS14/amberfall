@@ -41,10 +41,6 @@
     range: 5
     sound:
       path: /Audio/Ambience/Objects/fireplace.ogg
-  - type: AlwaysHot
-  - type: IgnitionSource
-    temperature: 700
-    ignited: true
   - type: RequireProjectileTarget
 
 - type: entity

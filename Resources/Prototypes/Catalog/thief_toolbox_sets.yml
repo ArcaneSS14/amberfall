@@ -70,8 +70,6 @@
   - ChemistryBottleNocturine
   - ChemistryBottleNocturine
   - HypopenBox
-  - NitrousOxideTankFilled
-
 - type: thiefBackpackSet
   id: CommunicatorSet
   name: thief-backpack-category-communicator-name

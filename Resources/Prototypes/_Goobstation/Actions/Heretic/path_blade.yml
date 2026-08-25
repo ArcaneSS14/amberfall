@@ -39,10 +39,6 @@
     requireMagicItem: true
   - type: SpeakOnAction
     sentence: heretic-speech-blade-furioussteel
-  - type: ChangeUseDelayOnAscension
-    newUseDelay: 30
-    requiredPath: Blade
-
 - type: entity
   parent: BaseAction
   id: ActionHereticDomainExpansion

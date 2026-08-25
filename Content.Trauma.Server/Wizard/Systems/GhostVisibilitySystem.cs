@@ -66,3 +66,4 @@ public sealed partial class GhostVisibilitySystem : SharedGhostVisibilitySystem
         _log.Add(LogType.EventRan, LogImpact.Extreme, $"Ghosts have been summoned via wizard spellbook.");
     }
 }
+

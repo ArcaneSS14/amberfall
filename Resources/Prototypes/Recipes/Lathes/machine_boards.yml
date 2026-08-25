@@ -126,43 +126,6 @@
 # Atmos
 - type: latheRecipe
   parent: [ BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
-  id: ThermomachineFreezerMachineCircuitBoard
-  icon: { sprite: Structures/Piping/Atmospherics/thermomachine.rsi, state: freezerOff } # Goobstation
-  result: ThermomachineFreezerMachineCircuitBoard
-
-- type: latheRecipe
-  parent: [ BaseSilverCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
-  id: HellfireFreezerMachineCircuitBoard
-  icon: { sprite: Structures/Piping/Atmospherics/hellfirethermomachine.rsi, state: freezerOff } # Goobstation
-  result: HellfireFreezerMachineCircuitBoard
-
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
-  id: SpaceHeaterMachineCircuitBoard
-  icon: { sprite: Structures/Piping/Atmospherics/Portable/portable_sheater.rsi, state: sheaterOff } # Goobstation
-  result: SpaceHeaterMachineCircuitBoard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
-  id: PortableScrubberMachineCircuitBoard
-  icon: { sprite: Structures/Piping/Atmospherics/Portable/portable_scrubber.rsi, state: icon } # Goobstation
-  result: PortableScrubberMachineCircuitBoard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
-  id: CondenserMachineCircuitBoard
-  icon: { sprite: Structures/Piping/Atmospherics/condenser.rsi, state: off } # Goobstation
-  result: CondenserMachineCircuitBoard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
-  id: GasRecyclerMachineCircuitboard
-  icon: { sprite:  Structures/Machines/gasrecycler.rsi, state: icon } # Goobstation
-  result: GasRecyclerMachineCircuitboard
-
-# Power
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
   id: SMESAdvancedMachineCircuitboard
   icon: { sprite:  Structures/Power/smes.rsi, state: advancedsmes } # Goobstation
   result: SMESAdvancedMachineCircuitboard
@@ -225,12 +188,6 @@
   result: ChemDispenserMachineCircuitboard
 
 # Treatment
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseMedicalMachineRecipeCategory ]
-  id: CryoPodMachineCircuitboard
-  icon: { sprite: Structures/Machines/Medical/cryopod.rsi, state: pod-open } # Goobstation
-  result: CryoPodMachineCircuitboard
-
 - type: latheRecipe
   parent: [ BaseGoldCircuitboardRecipe, BaseMedicalMachineRecipeCategory ]
   id: StasisBedMachineCircuitboard
@@ -325,12 +282,6 @@
 # Kitchen
 - type: latheRecipe
   parent: [ BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
-  id: ElectricGrillMachineCircuitboard
-  icon: { sprite:  Structures/Machines/electric_grill.rsi, state: icon } # Goobstation
-  result: ElectricGrillMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
   id: MicrowaveMachineCircuitboard
   icon: { sprite:  Structures/Machines/microwave.rsi, state: mw0 } # Goobstation
   result: MicrowaveMachineCircuitboard
@@ -349,13 +300,6 @@
   icon: { sprite:  Structures/cargo_telepad.rsi, state: display } # Goobstation
   result: CargoTelepadMachineCircuitboard
 
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseSupplyMachineRecipeCategory ]
-  id: SalvageMagnetMachineCircuitboard
-  icon: { sprite: Structures/Machines/salvage.rsi, state: salvage-magnet } # Goobstation
-  result: SalvageMagnetMachineCircuitboard
-
-# Shuttle
 - type: latheRecipe
   parent: [ BaseCircuitboardRecipe, BaseSupplyMachineRecipeCategory ]
   id: ThrusterMachineCircuitboard

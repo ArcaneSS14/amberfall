@@ -3,8 +3,7 @@ using Robust.Shared.Audio;
 namespace Content.Apotheosis;
 
 /// <summary>
-/// A window that blocks movement, air and vision while closed and becomes
-/// climbable while open.
+/// A window that blocks movement and vision while closed and becomes climbable while open.
 /// </summary>
 [RegisterComponent]
 public sealed partial class OpenableWindowComponent : Component

@@ -122,7 +122,3 @@
       - tool: Welding
         doAfter: 1
 
-  - node: hamtr
-    actions:
-    - !type:BuildMech
-      mechPrototype: MechHamtr

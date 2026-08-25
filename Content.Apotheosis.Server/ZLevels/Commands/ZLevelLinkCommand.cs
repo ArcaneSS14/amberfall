@@ -12,7 +12,7 @@ public sealed partial class ZLevelLinkCommand : IConsoleCommand
     public string Command => "zlevel-link";
     public string Description => "Links two maps as adjacent Z-levels.";
     public string Help =>
-        "Usage: zlevel-link <upper map/grid uid> <lower map/grid uid> [darkness 0..1] [render entities true|false]";
+        "Usage: zlevel-link <upper map/grid uid> <lower map/grid uid> [blur radius 0..8] [render entities true|false]";
 
     public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
@@ -34,11 +34,11 @@ public sealed partial class ZLevelLinkCommand : IConsoleCommand
             return;
         }
 
-        var darkness = 0.45f;
+        var blurRadius = 1.5f;
         if (args.Length >= 3 &&
-            (!float.TryParse(args[2], out darkness) || darkness is < 0f or > 1f))
+            (!float.TryParse(args[2], out blurRadius) || blurRadius is < 0f or > 8f))
         {
-            shell.WriteError("Darkness must be a number from 0 to 1.");
+            shell.WriteError("Blur radius must be a number from 0 to 8.");
             return;
         }
 
@@ -52,7 +52,7 @@ public sealed partial class ZLevelLinkCommand : IConsoleCommand
         if (!_entities.System<ZLevelSystem>().LinkMaps(
                 upperMap,
                 lowerMap,
-                darkness,
+                blurRadius,
                 renderEntities))
         {
             shell.WriteError("The maps could not be linked.");
@@ -60,7 +60,7 @@ public sealed partial class ZLevelLinkCommand : IConsoleCommand
         }
 
         shell.WriteLine(
-            $"Map {upperMap} is now above map {lowerMap}; darkness is {darkness:0.##}; " +
+            $"Map {upperMap} is now above map {lowerMap}; blur radius is {blurRadius:0.##}; " +
             $"lower objects are {(renderEntities ? "visible" : "hidden")}.");
     }
 
@@ -69,7 +69,7 @@ public sealed partial class ZLevelLinkCommand : IConsoleCommand
         return args.Length switch
         {
             1 or 2 => ZLevelCommandUtility.Maps(_entities),
-            3 => CompletionResult.FromHint("<darkness 0..1>"),
+            3 => CompletionResult.FromHint("<blur radius 0..8>"),
             4 => CompletionResult.FromHintOptions(["true", "false"], "<render entities>"),
             _ => CompletionResult.Empty,
         };

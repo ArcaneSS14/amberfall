@@ -77,7 +77,6 @@
     interfaces:
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
-  - type: Airtight
   - type: Damageable
     damageModifierSet: StructuralMetallic
   - type: Injurable
@@ -152,8 +151,6 @@
     canCollide: false
   - type: Occluder
     enabled: false
-  - type: Airtight
-    airBlocked: false
   - type: RadiationBlocker
     enabled: false
 
@@ -190,8 +187,6 @@
     enabled: false
   - type: Physics
     canCollide: false
-  - type: Airtight
-    airBlocked: false
   - type: RadiationBlocker
     enabled: false
 
@@ -225,8 +220,6 @@
     state: Open
   - type: Physics
     canCollide: false
-  - type: Airtight
-    airBlocked: false
   - type: RadiationBlocker
     enabled: false
 

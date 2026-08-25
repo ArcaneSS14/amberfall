@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/25/2025 05:09:41
-  entityCount: 167
+  entityCount: 163
 maps: []
 grids:
 - 1
@@ -128,56 +128,6 @@ entities:
             3: 6,0
             25: 9,-4
             26: 9,0
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 131
-          0,-1:
-            0: 65523
-          1,0:
-            0: 240
-          1,-1:
-            0: 32624
-          2,0:
-            0: 27
-          2,-1:
-            0: 49083
-          3,0:
-            0: 1
-          3,-1:
-            0: 13311
-          0,-2:
-            0: 40944
-          -1,-2:
-            0: 52352
-          -1,-1:
-            0: 3276
-          1,-2:
-            0: 65520
-          2,-2:
-            0: 49136
-          3,-2:
-            0: 65392
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: AirlockHatchSyndicate
   entities:
@@ -205,19 +155,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 4.5,-3.5
-      parent: 1
-- proto: AtmosDeviceFanDirectional
-  entities:
-  - uid: 12
-    components:
-    - type: Transform
-      pos: 8.5,-4.5
-      parent: 1
-  - uid: 15
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 8.5,1.5
       parent: 1
 - proto: BasaltFive
   entities:
@@ -657,13 +594,6 @@ entities:
     - type: Transform
       pos: 4.5,-4.5
       parent: 1
-- proto: MedkitFilled
-  entities:
-  - uid: 115
-    components:
-    - type: Transform
-      pos: 12.732981,0.24816239
-      parent: 1
 - proto: PlastitaniumWindow
   entities:
   - uid: 124
@@ -1001,13 +931,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 1.5,-3.5
-      parent: 1
-- proto: ToolboxEmergencyFilled
-  entities:
-  - uid: 113
-    components:
-    - type: Transform
-      pos: 11.717356,-0.9393376
       parent: 1
 - proto: WallPlastitanium
   entities:

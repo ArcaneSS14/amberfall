@@ -15,10 +15,6 @@
     flags:
     - Anchorable
   - type: Rotatable
-  - type: AtmosAlarmable
-    syncWith:
-    - FireAlarm
-    - AirAlarm
   - type: ApcPowerReceiver
   - type: ExtensionCableReceiver
   - type: DeviceNetwork
@@ -126,9 +122,6 @@
         type: WiresBoundUserInterface
   - type: Physics
     canCollide: false
-  - type: Airtight
-    airBlocked: false
-    noAirWhenFullyAirBlocked: true
   - type: RadiationBlocker
     enabled: false
   - type: Occluder
@@ -208,11 +201,6 @@
     - type: Sprite
       sprite: Structures/Doors/edge_door_hazard.rsi
       snapCardinals: false
-    - type: Airtight
-      airBlocked: false
-      noAirWhenFullyAirBlocked: false
-      airBlockedDirection:
-        - South
     - type: Fixtures
       fixtures:
         fix1:

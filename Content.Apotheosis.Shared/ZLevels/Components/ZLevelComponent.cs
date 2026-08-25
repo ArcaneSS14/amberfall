@@ -14,10 +14,17 @@ public sealed partial class ZLevelComponent : Component
     public int Level;
 
     /// <summary>
-    /// Fraction of brightness removed from the floor immediately below this one.
+    /// Whether this level should visually project the floor below it.
+    /// Maps remain physically separate; this only controls rendering.
     /// </summary>
     [DataField]
-    public float Darkness = 0.45f;
+    public bool ProjectBelow = true;
+
+    /// <summary>
+    /// Gaussian blur radius applied to the floor immediately below this one, in screen pixels.
+    /// </summary>
+    [DataField]
+    public float BlurRadius = 1.5f;
 
     /// <summary>
     /// Whether nearby objects from the map below should be sent and rendered.

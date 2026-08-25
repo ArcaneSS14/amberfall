@@ -7,7 +7,6 @@ using Content.Goobstation.Shared.Disease.Components;
 using Content.Medical.Common.Body;
 using Content.Medical.Common.Wounds;
 using Content.Medical.Shared.Wounds;
-using Content.Shared.Atmos.Rotting;
 using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.Components;
@@ -251,15 +250,6 @@ public sealed partial class HealthAnalyzerControl
                 continue;
 
             DrawOrganDiagnostics(organEnt, organName, data.Integrity / data.IntegrityCap * 100);
-
-            if (_entityManager.HasComponent<RottingComponent>(organEnt))
-            {
-                ConditionsListContainer.AddChild(new RichTextLabel
-                {
-                    Text = Loc.GetString("condition-organ-rotting", ("organ", organName)),
-                    Margin = new Thickness(0, 4),
-                });
-            }
 
             /*if (data.Integrity > data.IntegrityCap * 0.90) // Organs without at LEAST some significant damage wont be shown.
                 return;

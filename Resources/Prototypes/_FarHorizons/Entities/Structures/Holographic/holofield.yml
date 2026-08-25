@@ -74,8 +74,6 @@
         chargerLight:
           True: { visible: true }
           False: { visible: false }
-  - type: Airtight
-    noAirWhenFullyAirBlocked: true
   - type: Tag
     tags:
     - Wall
@@ -269,8 +267,6 @@
     sprite: _FarHorizons/Structures/Holo/holographic_field.rsi
     state: field
   - type: SyncSprite
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
   - type: RadiationBlocker
     resistance: 15
   - type: Transform
@@ -328,8 +324,6 @@
     sprite: _FarHorizons/Structures/Holo/holographic_barrier.rsi
     state: field
   - type: SyncSprite
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
   - type: Transform
     anchored: true
   - type: BlockWeather

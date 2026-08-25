@@ -191,19 +191,6 @@
     maxCount: 15
     contents: VGRoidExteriorDungeonsMobs
 
-- type: entityTable
-  id: VGRoidExteriorDungeonsMobs
-  table: !type:GroupSelector
-    children:
-    - id: SalvageSpawnerMobMiningAsteroid
-      amount: 1
-
-#- type: dungeonConfig
-#  id: VGRoidInteriorDungeons
-#  minCount: 3
-#  maxCount: 5
-#  # Just randomly spawn these in bounds, doesn't really matter if they go out.
-
 - type: dungeonConfig
   id: VGRoidSmallPaths
   reserveTiles: true
@@ -226,17 +213,6 @@
     maxCount: 35
     contents: VGRoidSmallPathsMobs
 
-- type: entityTable
-  id: VGRoidSmallPathsMobs
-  table: !type:GroupSelector
-    children:
-    - id: SalvageSpawnerMobMiningAsteroid
-      amount: 1
-
-#- type: dungeonConfig
-#  id: VGRoidOres
-
-# Fill with rocks.
 - type: dungeonConfig
   id: VGRoidFill
   layers:

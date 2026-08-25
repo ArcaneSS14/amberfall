@@ -13,9 +13,6 @@
     sprite: _DV/Clothing/Head/Hardsuits/Combat/standard.rsi
   - type: PointLight
     color: "#ffeead"
-  - type: PressureProtection
-    highPressureMultiplier: 0.50
-    lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.50
   - type: Armor
@@ -52,8 +49,6 @@
     sprite: _DV/Clothing/Head/Hardsuits/Combat/medical.rsi
   - type: PointLight
     color: "#00FFFF"
-  - type: PressureProtection
-    highPressureMultiplier: 0.60
   - type: ExplosionResistance
     damageCoefficient: 0.60
   - type: Armor
@@ -78,8 +73,6 @@
     sprite: _DV/Clothing/Head/Hardsuits/Combat/riot.rsi
   - type: Clothing
     sprite: _DV/Clothing/Head/Hardsuits/Combat/riot.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.45
   - type: ExplosionResistance
     damageCoefficient: 0.40
   - type: Armor

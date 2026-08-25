@@ -88,13 +88,6 @@
   parent: BorgChassisUrist
   suffix: Battery, Module
   components:
-  - type: ContainerFill
-    containers:
-      borg_brain:
-        - PositronicBrain
-      borg_module:
-        - BorgModuleTool
-        - BorgModuleFireExtinguisher
   - type: ItemSlots
     slots:
       cell_slot:

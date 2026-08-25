@@ -1,7 +1,6 @@
 using System.Linq;
 using Content.IntegrationTests.Tests.Construction.Interaction;
 using Content.IntegrationTests.Tests.Interaction;
-using Content.IntegrationTests.Tests.Weldable;
 using Content.Shared.Tools.Components;
 
 namespace Content.IntegrationTests.Tests.DoAfter;
@@ -12,6 +11,8 @@ namespace Content.IntegrationTests.Tests.DoAfter;
 /// </summary>
 public sealed class DoAfterCancellationTests : InteractionTest
 {
+    private const string WeldableLocker = "LockerFreezer";
+
     [Test]
     public async Task CancelWallDeconstruct()
     {
@@ -102,7 +103,7 @@ public sealed class DoAfterCancellationTests : InteractionTest
     [Test]
     public async Task CancelRepeatedWeld()
     {
-        await SpawnTarget(WeldableTests.Locker);
+        await SpawnTarget(WeldableLocker);
         var comp = Comp<WeldableComponent>();
 
         Assert.That(comp.IsWelded, Is.False);

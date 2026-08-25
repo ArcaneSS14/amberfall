@@ -75,24 +75,6 @@
 ## NON PARITY
 
 - type: scrollPrayer
-  id: AllAccess
-  verb: GIVE
-  subjects: [ "ALL ACCESS", "AA", "FREE AA" ]
-  items: !type:GroupSelector
-    children:
-    # FREE AA!!
-    - id: CaptainIDCard
-      weight: 0.6
-    # DIY AA
-    - !type:AllSelector
-      weight: 0.4
-      children:
-      - id: BoxID
-        amount: 4
-      - id: IDComputerCircuitboard
-      - id: KitchenMicrowave # fuck it you get a whole ass microwave
-
-- type: scrollPrayer
   id: KillSign
   verb: GIVE
   subjects: [ "KILLSIGN" ]

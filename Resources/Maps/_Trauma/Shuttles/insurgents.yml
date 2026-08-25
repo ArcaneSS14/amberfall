@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 10/26/2025 18:51:29
-  entityCount: 116
+  entityCount: 113
 maps: []
 grids:
 - 2
@@ -75,63 +75,6 @@ entities:
         nodes: []
     - type: SpreaderGrid
     - type: ImplicitRoof
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          -1,-1:
-            0: 18
-            1: 61120
-          -1,0:
-            1: 3308
-            0: 8448
-          0,-1:
-            1: 13072
-            0: 66
-          0,0:
-            1: 305
-            0: 9216
-        uniqueMixes:
-        - volume: 2500
-          immutable: True
-          moles:
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
 - proto: AltarToolbox
   entities:
   - uid: 113
@@ -146,13 +89,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 2.5,-0.5
-      parent: 2
-- proto: AtmosDeviceFanDirectional
-  entities:
-  - uid: 7
-    components:
-    - type: Transform
-      pos: -0.5,-3.5
       parent: 2
 - proto: CableApcExtension
   entities:
@@ -504,13 +440,6 @@ entities:
     - type: Transform
       pos: 0.5,-3.5
       parent: 2
-- proto: PosterContrabandGoobYakub
-  entities:
-  - uid: 115
-    components:
-    - type: Transform
-      pos: 2.5,-1.5
-      parent: 2
 - proto: PosterContrabandGreyTide
   entities:
   - uid: 114
@@ -713,13 +642,6 @@ entities:
     components:
     - type: Transform
       pos: -1.5299661,-1.7218063
-      parent: 2
-- proto: ToolboxMechanicalFilled
-  entities:
-  - uid: 112
-    components:
-    - type: Transform
-      pos: 1.2512839,-0.22180623
       parent: 2
 - proto: WallSolid
   entities:

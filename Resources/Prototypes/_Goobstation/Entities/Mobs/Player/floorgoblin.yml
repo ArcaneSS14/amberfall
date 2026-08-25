@@ -83,17 +83,6 @@
   - type: Stamina
     baseCritThreshold: 20
     animationThreshold: 10
-  - type: Respirator
-    damage:
-      types:
-        Asphyxiation: 0.25
-    damageRecovery:
-      types:
-        Asphyxiation: -0.25
-  - type: Barotrauma
-    damage:
-      types:
-        Blunt: 0.1
   - type: Puller
     needsHands: false
   - type: Stealth # Hijacking this to prevent huds from showing, tell me if you got a better solution.

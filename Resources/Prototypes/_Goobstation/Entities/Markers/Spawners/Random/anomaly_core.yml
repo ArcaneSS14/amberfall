@@ -48,6 +48,7 @@
     - id: AnomalyCoreSanta
       weight: 0.4 #same % value as AnomalySpawner
 
+
 - type: entityTable
   id: RandomAnomalyCoreInertTable
   table: !type:GroupSelector

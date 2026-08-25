@@ -19,6 +19,7 @@
       prob: 0.85
 
 #Tables
+
 - type: entityTable
   id: MeatTable
   table: !type:GroupSelector

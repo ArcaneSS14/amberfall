@@ -70,15 +70,6 @@
   - type: Damageable
   - type: Injurable
     damageContainer: Inorganic
-  - type: Flammable
-    fireSpread: true
-    alwaysCombustible: true
-    damage:
-      types:
-        Heat: 1
-  - type: FireVisuals
-    sprite: Effects/fire.rsi
-    normalState: fire
   - type: Destructible
     thresholds:
     - trigger:
@@ -111,22 +102,12 @@
   components:
   - type: TimedDespawn
     lifetime: 10
-  - type: IgnitionSource
-    temperature: 400
-    ignited: true
   - type: StepTrigger
     requiredTriggeredSpeed: 0
     intersectRatio: 0.1
     triggerGroups:
       types:
         - Lava
-  - type: TileEntityEffect
-    effects:
-    - !type:Flammable
-      multiplier: 3.75
-      multiplierOnExisting: 0.75
-    - !type:Ignite
-  - type: AlwaysHot
   - type: PointLight
     radius: 5
     energy: 3

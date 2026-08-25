@@ -42,8 +42,9 @@ public sealed partial class ZLevelSystem
             LinkMapsCore(
                 upper.Owner,
                 lower.Owner,
-                upper.Comp.Darkness,
-                upper.Comp.RenderEntities);
+                upper.Comp.BlurRadius,
+                upper.Comp.RenderEntities,
+                upper.Comp.ProjectBelow);
 
             var managed = EnsureComp<ZLevelManagedComponent>(upper.Owner);
             managed.Group = group;
@@ -73,10 +74,10 @@ public sealed partial class ZLevelSystem
     public bool LinkMaps(
         EntityUid upperMap,
         EntityUid lowerMap,
-        float darkness = 0.45f,
+        float blurRadius = 1.5f,
         bool renderEntities = true)
     {
-        if (!LinkMapsCore(upperMap, lowerMap, darkness, renderEntities))
+        if (!LinkMapsCore(upperMap, lowerMap, blurRadius, renderEntities))
             return false;
 
         RemComp<ZLevelManagedComponent>(upperMap);
@@ -86,8 +87,9 @@ public sealed partial class ZLevelSystem
     private bool LinkMapsCore(
         EntityUid upperMap,
         EntityUid lowerMap,
-        float darkness,
-        bool renderEntities)
+        float blurRadius,
+        bool renderEntities,
+        bool projectBelow = true)
     {
         if (upperMap == lowerMap ||
             !HasComp<MapComponent>(upperMap) ||
@@ -118,18 +120,24 @@ public sealed partial class ZLevelSystem
         Dirty(upperMap, upperLink);
         Dirty(lowerMap, lowerLink);
 
-        var projection = EnsureComp<MapProjectionComponent>(upperMap);
-        var brightness = Math.Clamp(1f - darkness, 0f, 1f);
-        var modulate = new Color(brightness, brightness, brightness, 1f);
-
-        if (projection.SourceMap != lowerMap ||
-            projection.Modulate != modulate ||
-            projection.RenderEntities != renderEntities)
+        if (projectBelow)
         {
-            projection.SourceMap = lowerMap;
-            projection.Modulate = modulate;
-            projection.RenderEntities = renderEntities;
-            Dirty(upperMap, projection);
+            var projection = EnsureComp<MapProjectionComponent>(upperMap);
+            blurRadius = Math.Clamp(blurRadius, 0f, 8f);
+
+            if (projection.SourceMap != lowerMap ||
+                projection.BlurRadius != blurRadius ||
+                projection.RenderEntities != renderEntities)
+            {
+                projection.SourceMap = lowerMap;
+                projection.BlurRadius = blurRadius;
+                projection.RenderEntities = renderEntities;
+                Dirty(upperMap, projection);
+            }
+        }
+        else
+        {
+            RemComp<MapProjectionComponent>(upperMap);
         }
 
         var linkChanged = new ZLevelLinkChangedEvent(lowerMap);

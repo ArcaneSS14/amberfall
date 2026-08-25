@@ -75,9 +75,6 @@
     component: GravityWell
     defaults:
       BaseTangentialAcceleration: 6
-  - type: GravityWell
-    maxRange: 4
-
 - type: entity
   id: DiseaseBehaviorGravitosisB
   parent: DiseaseBehaviorBase
@@ -91,9 +88,6 @@
     component: GravityWell
     defaults:
       BaseRadialAcceleration: 6
-  - type: GravityWell
-    maxRange: 4
-
 - type: entity
   id: DiseaseBehaviorGravitosisC
   parent: DiseaseBehaviorBase
@@ -107,9 +101,6 @@
     component: GravityWell
     defaults:
       BaseRadialAcceleration: -6
-  - type: GravityWell
-    maxRange: 4
-
 - type: entity
   id: DiseaseBehaviorOwO
   parent: DiseaseBehaviorBase

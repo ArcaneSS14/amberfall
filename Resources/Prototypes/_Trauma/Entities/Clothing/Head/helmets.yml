@@ -59,8 +59,6 @@
         Heat: 0.1
   - type: ExplosionResistance
     damageCoefficient: 0.4
-  - type: FireProtection
-    reduction: 0.2
   - type: FaceHuggerBlocker
 
 - type: entity

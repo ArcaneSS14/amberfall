@@ -146,30 +146,6 @@
           Heat: 3
 
 - type: entity
-  parent: [ BaseFreeMutation, BaseTriggerMutation ]
-  id: MutationTourettes
-  name: Tourette's Syndrome
-  description: A chronic twitch that forces the user to scream bad words.
-  components:
-  - type: RandomTrigger
-    prob: 0.05
-  - type: EntityEffectOnTrigger
-    effects:
-    - !type:RelayMutated
-      effect: !type:WeightedRandomEffect
-        conditions:
-        - !type:NestedCondition
-          proto: IsAwake
-        children:
-        - effect: !type:Emote # emote 33%
-            emote: Twitch
-        - effect: !type:Speak # local 33%
-            id: TourettesSwearing
-        - effect: !type:Speak # common 33%
-            id: TourettesSwearing
-            prefix: tourettes-prefix-radio
-
-- type: entity
   parent: BaseMutation
   id: MutationDeafness
   name: Deafness

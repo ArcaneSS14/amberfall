@@ -24,7 +24,6 @@ public sealed class HungerThirstTest : InteractionTest
     public async Task HungerThirstIncreaseDecreaseTest()
     {
         // Ensure that the player can breathe and not suffocate
-        await AddAtmosphere();
 
         var hungerComponent = Comp<HungerComponent>(Player);
         var thirstComponent = Comp<ThirstComponent>(Player);

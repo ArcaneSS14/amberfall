@@ -100,3 +100,4 @@ public sealed partial class WizardMirrorSystem : SharedWizardMirrorSystem
         }
     }
 }
+

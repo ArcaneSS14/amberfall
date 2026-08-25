@@ -16,18 +16,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 0
-    # add every path here because you shouldn't be able to buy more starter knowledge
-    blacklist:
-    - Ash
-    - Blade
-    - Flesh
-    - Lock
-    - Void
-    - Rust
-    - Cosmos
-
 - type: listing
   id: HereticBladePath2
   name: knowledge-path-blade-s2-name
@@ -44,11 +32,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 1
-    whitelist:
-    - Blade
-
 - type: listing
   id: HereticBladePath3
   name: knowledge-path-blade-s3-name
@@ -65,12 +48,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 2
-    whitelist:
-    - Blade
-
-# side
 - type: listing
   id: HereticBladePath4
   name: knowledge-path-blade-s4-name
@@ -87,11 +64,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 3
-    whitelist:
-    - Blade
-
 - type: listing
   id: HereticBladePath5
   name: knowledge-path-blade-s5-name
@@ -108,11 +80,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 4
-    whitelist:
-    - Blade
-
 - type: listing
   id: HereticBladeArmor
   name: knowledge-path-blade-armor-name
@@ -129,12 +96,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 5
-    whitelist:
-    - Blade
-
-# side
 - type: listing
   id: HereticBladePath6
   name: knowledge-path-blade-s6-name
@@ -151,11 +112,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 5
-    whitelist:
-    - Blade
-
 - type: listing
   id: HereticBladePath7
   name: knowledge-path-blade-s7-name
@@ -172,12 +128,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 6
-    whitelist:
-    - Blade
-
-# side
 - type: listing
   id: HereticBladePath8
   name: knowledge-path-blade-s8-name
@@ -194,11 +144,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 7
-    whitelist:
-    - Blade
-
 - type: listing
   id: HereticBladePath9
   name: knowledge-path-blade-s9-name
@@ -215,8 +160,3 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    requiresCanAscend: true
-    stage: 8
-    whitelist:
-    - Blade

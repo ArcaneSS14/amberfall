@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 10/21/2025 01:22:46
-  entityCount: 201
+  entityCount: 188
 maps: []
 grids:
 - 1
@@ -129,81 +129,7 @@ entities:
             id: WarnEndW
           decals:
             1: 1,-3
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 6135
-          0,-1:
-            0: 63283
-            1: 8
-          -1,0:
-            0: 3308
-          0,1:
-            0: 887
-            1: 32768
-          -1,1:
-            0: 2252
-            1: 8192
-          0,-2:
-            0: 12544
-            1: 32832
-          -1,-2:
-            0: 32768
-            1: 8256
-          -1,-1:
-            0: 60552
-            1: 2
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          immutable: True
-          moles:
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
-- proto: AirCanister
-  entities:
-  - uid: 140
-    components:
-    - type: Transform
-      pos: -0.5,-3.5
-      parent: 1
 - proto: AirlockCargoGlassLocked
   entities:
   - uid: 107
@@ -245,32 +171,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 2.5,-2.5
-      parent: 1
-- proto: AtmosDeviceFanDirectional
-  entities:
-  - uid: 199
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -2.5,1.5
-      parent: 1
-  - uid: 200
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -2.5,-0.5
-      parent: 1
-  - uid: 201
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,-0.5
-      parent: 1
-  - uid: 202
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,1.5
       parent: 1
 - proto: BlastDoor
   entities:
@@ -796,49 +696,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 3.5,2.5
       parent: 1
-- proto: GasPipeBend
-  entities:
-  - uid: 142
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,-3.5
-      parent: 1
-- proto: GasPipeStraight
-  entities:
-  - uid: 143
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-2.5
-      parent: 1
-  - uid: 144
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-1.5
-      parent: 1
-  - uid: 145
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-0.5
-      parent: 1
-- proto: GasPort
-  entities:
-  - uid: 139
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.5,-3.5
-      parent: 1
-- proto: GasVentPump
-  entities:
-  - uid: 141
-    components:
-    - type: Transform
-      pos: 0.5,0.5
-      parent: 1
 - proto: GeneratorBasic15kW
   entities:
   - uid: 111
@@ -964,13 +821,6 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-2.5
-      parent: 1
-- proto: MedkitFilled
-  entities:
-  - uid: 91
-    components:
-    - type: Transform
-      pos: 2.5400643,5.590234
       parent: 1
 - proto: PlasticFlapsAirtightClear
   entities:
@@ -1252,13 +1102,6 @@ entities:
     components:
     - type: Transform
       pos: 3.5,7.5
-      parent: 1
-- proto: ToolboxEmergencyFilled
-  entities:
-  - uid: 89
-    components:
-    - type: Transform
-      pos: 2.4619393,4.637109
       parent: 1
 - proto: TwoWayLever
   entities:

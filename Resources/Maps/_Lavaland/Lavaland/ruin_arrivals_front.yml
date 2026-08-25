@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 01/07/2026 17:56:03
-  entityCount: 174
+  entityCount: 172
 maps: []
 grids:
 - 1
@@ -73,11 +73,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
 - proto: AirlockAssemblyShuttleGlass
@@ -410,18 +405,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 11.5,4.5
-      parent: 1
-- proto: SalvageMaterialCrateSpawner
-  entities:
-  - uid: 145
-    components:
-    - type: Transform
-      pos: 9.5,1.5
-      parent: 1
-  - uid: 146
-    components:
-    - type: Transform
-      pos: 10.5,1.5
       parent: 1
 - proto: SalvageSpawnerScrapCommon
   entities:

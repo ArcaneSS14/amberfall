@@ -145,7 +145,6 @@
   event: !type:HereticKnowledgeEvent
     addedComponents:
     - type: SpecialLowTempImmunity
-    - type: SpecialPressureImmunity
     - type: FireImmunity
 
 ### blade path
@@ -194,13 +193,6 @@
   stage: 6
   ritualPrototypes:
   - RitualArmorBlade
-
-- type: hereticKnowledge
-  id: BladePassive2
-  stage: 6
-  event: !type:HereticKnowledgeEvent
-    addedComponents:
-    - type: ChampionStance
 
 - type: hereticKnowledge
   id: BladePassive3
@@ -444,7 +436,6 @@
   path: Void
   event: !type:HereticKnowledgeEvent
     addedComponents:
-    - type: SpecialPressureImmunity
     - type: Aristocrat
     - type: MovementAlwaysTouching
     - type: CanMoveInAir
@@ -632,7 +623,6 @@
   event: !type:HereticXRayVisionEvent
     addedComponents:
     - type: SpecialLowTempImmunity
-    - type: SpecialPressureImmunity
     - type: NightVision
       lightingColor: white
   actionPrototypes:
@@ -730,7 +720,6 @@
   event: !type:HereticAscensionLockEvent
     addedComponents:
     - type: SpecialLowTempImmunity
-    - type: SpecialPressureImmunity
   actionPrototypes:
   - ActionHereticShapeshiftLock
 

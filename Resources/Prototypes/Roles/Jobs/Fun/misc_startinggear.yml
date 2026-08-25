@@ -56,9 +56,6 @@
     gloves: ClothingHandsGlovesCombat
     back: ClothingBackpack
     shoes: ClothingShoesBootsCombatFilled
-  storage:
-    back:
-    - BoxSurvivalSyndicate
 
 - type: startingGear
   id: SyndicateFootsoldierTeamLeaderGear
@@ -150,8 +147,6 @@
     id: AdminPDA
   storage:
     back:
-    - GasAnalyzer
-    - trayScanner
     - AccessConfiguratorUniversal
     - Multitool
 

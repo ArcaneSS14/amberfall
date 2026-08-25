@@ -16,7 +16,6 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
 using System.Numerics;
 using JetBrains.Annotations;
-using Content.Shared.Atmos;
 using System.Linq;
 using Robust.Shared.Utility;
 
@@ -504,10 +503,10 @@ public partial class NavMapControl : MapGridControl
         _vertLines.Clear();
         _vertLinesReversed.Clear();
 
-        const int southMask = (int) AtmosDirection.South << (int) NavMapChunkType.Wall;
-        const int eastMask = (int) AtmosDirection.East << (int) NavMapChunkType.Wall;
-        const int westMask = (int) AtmosDirection.West << (int) NavMapChunkType.Wall;
-        const int northMask = (int) AtmosDirection.North << (int) NavMapChunkType.Wall;
+        const int southMask = 2 << (int) NavMapChunkType.Wall;
+        const int eastMask = 4 << (int) NavMapChunkType.Wall;
+        const int westMask = 8 << (int) NavMapChunkType.Wall;
+        const int northMask = 1 << (int) NavMapChunkType.Wall;
 
         foreach (var (chunkOrigin, chunk) in _navMap.Chunks)
         {
@@ -651,7 +650,7 @@ public partial class NavMapControl : MapGridControl
 
             // TODO NAVMAP
             // Consider using faster rotation operations, given that these are always 90 degree increments
-            var angle = -((AtmosDirection) dirMask).ToAngle();
+            var angle = -GetDirectionAngle(dirMask);
             TileRects.Add((angle.RotateVec(leftTop) + tilePosition, angle.RotateVec(rightBottom) + tilePosition));
         }
     }
@@ -670,11 +669,19 @@ public partial class NavMapControl : MapGridControl
                 continue;
 
             var tilePosition = new Vector2(tile.X + 0.5f, -tile.Y - 0.5f);
-            var angle = -((AtmosDirection) dirMask).ToAngle();
+            var angle = -GetDirectionAngle(dirMask);
             TileRects.Add((angle.RotateVec(leftTop) + tilePosition, angle.RotateVec(rightBottom) + tilePosition));
             TileLines.Add((angle.RotateVec(centreTop) + tilePosition, angle.RotateVec(centreBottom) + tilePosition));
         }
     }
+
+    private static Angle GetDirectionAngle(int direction) => direction switch
+    {
+        2 => Angle.FromDegrees(180),
+        4 => Angle.FromDegrees(-90),
+        8 => Angle.FromDegrees(90),
+        _ => Angle.Zero,
+    };
 
     protected void AddOrUpdateNavMapLine(
         Vector2i origin,

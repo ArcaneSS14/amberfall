@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 08/14/2025 11:11:14
-  entityCount: 54
+  entityCount: 51
 maps: []
 grids:
 - 1
@@ -63,11 +63,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
 - proto: Barricade
@@ -175,13 +170,6 @@ entities:
     - type: Transform
       pos: 1.3440838,3.7149057
       parent: 1
-- proto: DoubleEmergencyOxygenTank
-  entities:
-  - uid: 20
-    components:
-    - type: Transform
-      pos: 1.6722088,3.4180307
-      parent: 1
 - proto: FoodTinBeansTrash
   entities:
   - uid: 21
@@ -278,18 +266,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 4.5,3.5
-      parent: 1
-- proto: Spaceshroom
-  entities:
-  - uid: 36
-    components:
-    - type: Transform
-      pos: -0.5,5.5
-      parent: 1
-  - uid: 37
-    components:
-    - type: Transform
-      pos: -1.5,5.5
       parent: 1
 - proto: SurvivalKnife
   entities:

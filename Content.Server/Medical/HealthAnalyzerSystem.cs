@@ -16,7 +16,6 @@ using Content.Shared.MedicalScanner;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Popups;
 using Content.Shared.PowerCell;
-using Content.Shared.Temperature.Components;
 using Content.Shared.Traits.Assorted;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
@@ -250,11 +249,6 @@ public sealed partial class HealthAnalyzerSystem : EntitySystem
             return new HealthAnalyzerUiState();
 
         var entity = target.Value;
-        var bodyTemperature = float.NaN;
-
-        if (TryComp<TemperatureComponent>(entity, out var temp))
-            bodyTemperature = temp.CurrentTemperature;
-
         var bloodAmount = float.NaN;
         //var bleeding = false; // Shitmed - bleeding is stored per-part not global
         var unrevivable = false;
@@ -282,7 +276,7 @@ public sealed partial class HealthAnalyzerSystem : EntitySystem
         // <Shitmed> - multimodal health analyzer
         var state = new HealthAnalyzerUiState(
             GetNetEntity(target),
-            bodyTemperature,
+            float.NaN,
             bloodAmount,
             null,
             new(), // not fetched until it's needed below

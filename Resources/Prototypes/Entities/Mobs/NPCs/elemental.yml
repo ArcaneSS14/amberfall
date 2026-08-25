@@ -12,7 +12,6 @@
   - type: MovementSpeedModifier
     baseWalkSpeed : 2
     baseSprintSpeed : 3
-  - type: MovedByPressure
   - type: StatusEffects
     allowed:
     - Electrocution
@@ -389,37 +388,6 @@
   - type: DrainableSolution
     solution: bloodstream
   - type: Fauna # Lavaland Change
-
-- type: entity
-  parent: MarkerBase
-  id: ReagentSlimeSpawner
-  name: Reagent Slime Spawner
-  components:
-  - type: Sprite
-    layers:
-      - state: red
-      - sprite: Mobs/Aliens/elemental.rsi
-        state: alive
-  - type: EntityTableSpawner
-    table: !type:GroupSelector
-      children:
-      # <Trauma>
-      - id: ReagentSlimeCocaine
-      - id: ReagentSlimeCrackCocaine
-      # </Trauma>
-      - id: ReagentSlime
-      - id: ReagentSlimeBeer
-      - id: ReagentSlimePax
-      - id: ReagentSlimeNocturine
-      - id: ReagentSlimeTHC
-      - id: ReagentSlimeBicaridine
-      - id: ReagentSlimeToxin
-      - id: ReagentSlimeNapalm
-      - id: ReagentSlimeOmnizine
-      - id: ReagentSlimeMuteToxin
-      - id: ReagentSlimeNorepinephricAcid
-      - id: ReagentSlimeEphedrine
-      - id: ReagentSlimeRobustHarvest
 
 - type: entity
   id: ReagentSlimeBeer

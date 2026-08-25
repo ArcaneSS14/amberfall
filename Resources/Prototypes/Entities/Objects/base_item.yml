@@ -14,15 +14,12 @@
       collection: GenericDrop
       params:
         volume: -7
-  - type: ViewconeOccludable # can't remember items that are out of view. ideally they would linger for like 5 seconds?
-    useMemory: false
   # </Trauma>
   - type: Item
     size: Small
   - type: Animateable
   - type: Clickable
   - type: InteractionOutline
-  - type: MovedByPressure
   - type: EmitSoundOnCollide
     sound:
       collection: WeakHit

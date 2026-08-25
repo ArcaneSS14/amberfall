@@ -172,6 +172,66 @@ public sealed class ZLevelMapTransitionTest : GameTest
     }
 
     [Test]
+    public async Task TransparentPitFallsToLinkedLowerLevel()
+    {
+        var server = Pair.Server;
+        var entityManager = server.EntMan;
+        var mapSystem = entityManager.System<MapSystem>();
+        var transformSystem = entityManager.System<TransformSystem>();
+        var zLevelSystem = entityManager.System<ZLevelSystem>();
+        var tileDefinitions = server.ResolveDependency<ITileDefinitionManager>();
+
+        MapId upperMapId = default;
+        MapId lowerMapId = default;
+        EntityUid fallingEntity = default;
+
+        await server.WaitAssertion(() =>
+        {
+            var upperMap = mapSystem.CreateMap(out upperMapId);
+            var lowerMap = mapSystem.CreateMap(out lowerMapId);
+            var upperGrid = mapSystem.CreateGridEntity(upperMapId);
+            var lowerGrid = mapSystem.CreateGridEntity(lowerMapId);
+            var pitDefinition = tileDefinitions["FloorApotheosisTransparentPit"];
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(pitDefinition.RenderZLevelBelow, Is.True);
+                Assert.That(pitDefinition.FallThroughZLevel, Is.True);
+            });
+
+            mapSystem.SetTile(upperGrid, new Vector2i(-1, 0), new Tile(1));
+            mapSystem.SetTile(
+                upperGrid,
+                Vector2i.Zero,
+                new Tile(pitDefinition.TileId));
+            mapSystem.SetTile(lowerGrid, Vector2i.Zero, new Tile(1));
+
+            Assert.That(zLevelSystem.LinkMaps(upperMap, lowerMap), Is.True);
+
+            fallingEntity = entityManager.SpawnEntity(
+                PhysicsDummy,
+                new EntityCoordinates(upperGrid.Owner, -0.5f, 0.5f));
+            transformSystem.SetCoordinates(
+                fallingEntity,
+                new EntityCoordinates(upperGrid.Owner, 0.5f, 0.5f));
+        });
+
+        await server.WaitRunTicks(1);
+
+        await server.WaitAssertion(() =>
+        {
+            var transform = entityManager.GetComponent<TransformComponent>(fallingEntity);
+            Assert.That(transform.MapID, Is.EqualTo(lowerMapId));
+        });
+
+        await server.WaitPost(() =>
+        {
+            mapSystem.DeleteMap(upperMapId);
+            mapSystem.DeleteMap(lowerMapId);
+        });
+    }
+
+    [Test]
     public async Task TreeCanopiesFollowLateLinksAndRestoreOverlaps()
     {
         var server = Pair.Server;

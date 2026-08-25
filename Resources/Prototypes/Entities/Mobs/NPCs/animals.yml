@@ -593,13 +593,6 @@
       reagents:
       - ReagentId: InsectBlood
         Quantity: 20
-  - type: Respirator
-    damage:
-      types:
-        Asphyxiation: 0.5
-    damageRecovery:
-      types:
-        Asphyxiation: -0.5
   - type: CombatMode
   - type: ToolRefinable
     refineResult:
@@ -643,9 +636,6 @@
       - !type:GibBehavior
         deleteGibs: true # Trauma
         recursive: false
-  - type: FireVisuals
-    sprite: Mobs/Effects/onfire.rsi
-    normalState: Mouse_burning
   - type: Strippable
   - type: UserInterface
     interfaces:
@@ -961,8 +951,6 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/cow_moo.ogg
-  - type: Perishable
-    molsPerSecondPerUnitMass: 0.0015
   - type: NpcFactionMember
     factions:
     - Passive
@@ -1280,8 +1268,6 @@
       collection: Sheep
       params:
         variation: 0.05
-  - type: Perishable
-    molsPerSecondPerUnitMass: 0.0015
   - type: NpcFactionMember
     factions:
     - Passive
@@ -1667,9 +1653,6 @@
     sprite:
       sprite: Effects/creampie.rsi
       state: creampie_monkey
-  - type: FireVisuals
-    sprite: Mobs/Effects/onfire.rsi
-    normalState: Monkey_burning
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-monkey
@@ -1902,12 +1885,6 @@
       types:
         Slash: 5
         Piercing: 4
-  - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 42
-  - type: TemperatureDamage
-    heatDamageThreshold: 360
-    coldDamageThreshold: 285
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -2167,17 +2144,6 @@
     - ChefPilot
     - Mouse
     - Meat
-  - type: Respirator
-    damage:
-      types:
-        Asphyxiation: 0.25
-    damageRecovery:
-      types:
-        Asphyxiation: -0.25
-  - type: Barotrauma
-    damage:
-      types:
-        Blunt: 0.1
   - type: Vocal
     emoteSounds: Mouse
     wilhelmProbability: 0.001
@@ -2204,9 +2170,6 @@
     price: 50
   - type: BadFood
   - type: NonSpreaderZombie
-  - type: FireVisuals
-    sprite: Mobs/Effects/onfire.rsi
-    normalState: Mouse_burning
   - type: FoodSequenceElement
     entries:
       Taco: RatTaco
@@ -2668,18 +2631,6 @@
   - type: NpcFactionMember
     factions:
     - Passive
-  - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 46
-  - type: TemperatureDamage
-    heatDamageThreshold: 335
-    coldDamageThreshold: 230
-    coldDamage:
-      types:
-        Cold : 0.05 #per second, scales with temperature & other constants
-    heatDamage:
-      types:
-        Heat : 0.2 #per second, scales with temperature & other constants
   - type: LanguageSpeaker # Einstein Engines - Language
     speaks:
     - Penguin
@@ -3422,19 +3373,6 @@
     damageModifierSet: Infernal
   - type: Injurable
     damageContainer: BiologicalMetaphysical
-  - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 42
-  - type: TemperatureDamage
-    heatDamageThreshold: 4000 #They come from hell, so..
-    coldDamageThreshold: 260
-    coldDamage:
-      types:
-        Cold : 1 #per second, scales with temperature & other constants
-    heatDamage:
-      types:
-        Heat : 1 #per second, scales with temperature & other constants
-
 - type: entity
   name: corgi puppy
   parent: MobCorgi
@@ -3636,15 +3574,10 @@
         Base: spacecat_dead
       Dead:
         Base: spacecat_dead
-  - type: Temperature
-  - type: TemperatureDamage
-    heatDamageThreshold: 423
-    coldDamageThreshold: 0
   - type: Tag
     tags:
       - DoorBumpOpener
   - type: MovementAlwaysTouching
-  - type: PressureImmunity
   - type: ProtectedFromStepTriggers
   - type: Insulated
   - type: InteractionPopup
@@ -3654,9 +3587,6 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/cat_meow.ogg
-  - type: Respirator #It just works?
-    minSaturation: 5.0
-
 - type: entity
   name: caracal cat
   id: MobCatCaracal
@@ -3947,17 +3877,6 @@
     - Trash
     - Hamster
     - Meat
-  - type: Respirator
-    damage:
-      types:
-        Asphyxiation: 0.25
-    damageRecovery:
-      types:
-        Asphyxiation: -0.25
-  - type: Barotrauma
-    damage:
-      types:
-        Blunt: 0.1
   - type: CombatMode
   - type: MeleeWeapon
     soundHit:
@@ -3984,9 +3903,6 @@
   - type: MobPrice
     price: 60
   - type: NonSpreaderZombie
-  - type: FireVisuals
-    sprite: Mobs/Effects/onfire.rsi
-    normalState: Mouse_burning
   - type: Destructible # Goob
     thresholds:
     - trigger:

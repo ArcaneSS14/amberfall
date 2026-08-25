@@ -2,7 +2,6 @@
 using Content.Medical.Common.Damage;
 using Content.Medical.Common.EntityEffects;
 using Content.Medical.Common.Targeting;
-using Content.Shared.Temperature.Components;
 using Content.Trauma.Common.Damage;
 // </Trauma>
 using Content.Shared.Damage;
@@ -29,14 +28,6 @@ public sealed partial class HealthChangeEntityEffectSystem : EntityEffectSystem<
         var damageSpec = new DamageSpecifier(args.Effect.Damage);
 
         damageSpec *= args.Scale;
-
-        // <Goob>
-        if (args.Effect.ScaleByTemperature is { } scaleTemp)
-        {
-            damageSpec *= TryComp<TemperatureComponent>(entity, out var temp)
-                ? scaleTemp.GetEfficiencyMultiplier(temp.CurrentTemperature, args.Scale, false)
-                : FixedPoint2.Zero;
-        }
 
         var ev = new OnHealthChangeEvent(damageSpec);
         RaiseLocalEvent(entity, ref ev);
@@ -71,12 +62,6 @@ public sealed partial class HealthChange : EntityEffectBase<HealthChange>
     public bool IgnoreResistances = true;
 
     // <Trauma>
-    /// <summary>
-    /// How to scale the effect based on the temperature of the target entity.
-    /// </summary>
-    [DataField]
-    public TemperatureScaling? ScaleByTemperature;
-
     [DataField]
     public SplitDamageBehavior SplitDamage = SplitDamageBehavior.SplitEnsureAllOrganic;
 

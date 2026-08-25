@@ -90,10 +90,6 @@
     location: The Monument
   - type: CosmicCultExamine
     cultistText: cosmic-examine-text-forthecult
-  - type: CosmicCorrupting
-    corruptionSpeed: 2
-    floodFillStarting: true
-
 - type: entity
   categories: [ HideSpawnMenu ]
   id: MonumentCosmicCultDestruction

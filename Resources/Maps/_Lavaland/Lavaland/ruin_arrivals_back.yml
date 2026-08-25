@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 01/07/2026 17:52:06
-  entityCount: 144
+  entityCount: 140
 maps: []
 grids:
 - 1
@@ -73,11 +73,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
 - proto: AirlockAssemblyShuttleGlass
@@ -188,30 +183,6 @@ entities:
     components:
     - type: Transform
       pos: -3.5,-1.5
-      parent: 1
-- proto: EmergencyNitrogenTank
-  entities:
-  - uid: 18
-    components:
-    - type: Transform
-      pos: -2.3771338,-5.507987
-      parent: 1
-  - uid: 19
-    components:
-    - type: Transform
-      pos: -2.3146338,0.5388882
-      parent: 1
-- proto: EmergencyOxygenTank
-  entities:
-  - uid: 20
-    components:
-    - type: Transform
-      pos: -2.6115088,-5.461112
-      parent: 1
-  - uid: 21
-    components:
-    - type: Transform
-      pos: -2.5021338,0.6326382
       parent: 1
 - proto: Girder
   entities:

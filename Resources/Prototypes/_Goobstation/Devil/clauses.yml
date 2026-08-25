@@ -93,12 +93,6 @@
   - type: NoSlip
 
 - type: clause
-  id: fearofcrushing
-  clauseWeight: -10
-  addedComponents:
-  - type: SpecialPressureImmunity
-
-- type: clause
   id: fearoffreezing
   clauseWeight: -10
   addedComponents:

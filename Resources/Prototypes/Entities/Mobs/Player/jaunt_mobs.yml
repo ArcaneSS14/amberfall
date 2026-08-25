@@ -45,8 +45,6 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 3 # Goob edit
     baseWalkSpeed: 3 # Goob edit
-  - type: WizardJaunt # Goobstation
-
 - type: entity
   parent: [Incorporeal, BaseMob]
   id: DesynchronizedPocket

@@ -84,7 +84,7 @@ MachineFTLDriveCircuitboard: null
 MachineFTLDriveHighCircuitboard: null
 
 # 2026-01-29 migrate away water vapor tanks because some chud mapped it
-DoubleEmergencyWaterVaporTankFilled: DoubleEmergencyOxygenTankFilled
+DoubleEmergencyWaterVaporTankFilled: null
 LockerShaftMinerFilledHardsuit: LockerSalvageSpecialistFilledHardsuit
 
 # 2026-02-12 renamed a bunch of organs
@@ -124,7 +124,7 @@ NecrosolChemistryBottle: ArcryoxChemistryBottle
 ClosetMaintenanceFilledRandom: RandomMaintsCloset
 
 # 2026-03-28 blockers being mapped is anti fun
-DisposalBlocker: DisposalPipe
+DisposalBlocker: null
 
 # 2026-03-29 no chud boris
 AiRemoteBrain: null
@@ -431,7 +431,7 @@ ReagentContainerMilkSoy: DrinkSoyMilkCarton
 ReagentContainerMilkOat: DrinkOatMilkCarton
 
 # 2023-12-20
-MiasmaCanister: AmmoniaCanister
+MiasmaCanister: null
 
 # 2023-12-28
 WarpPointBeaconBar: null
@@ -532,8 +532,8 @@ SpawnVehicleATV: null
 VehicleJanicartDestroyed: null
 
 # 2024-02-01
-YellowOxygenTank: OxygenTank
-YellowOxygenTankFilled: OxygenTankFilled
+YellowOxygenTank: null
+YellowOxygenTankFilled: null
 
 # 2024-02-12
 FoodDonutBlumpkin: FoodDonutBluePumpkin
@@ -799,7 +799,7 @@ PresentRandomAsh: PresentRandomCoal
 CrateCrewMonitoringBoards: CrateCrewMonitoring
 
 # 2024-11-25
-CrateSlimepersonLifeSupport: CrateNitrogenInternals
+CrateSlimepersonLifeSupport: null
 
 # 2024-12-01
 DungeonMasterCircuitBoard: GameMasterCircuitBoard

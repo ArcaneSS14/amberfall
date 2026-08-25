@@ -10,16 +10,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillSuitStorageEVA
 
-- type: entityTable
-  id: FillSuitStorageEVA
-  table: !type:AllSelector
-    children:
-    - id: OxygenTankFilled
-    - id: ClothingOuterHardsuitEVA
-    - id: ClothingHeadHelmetEVA
-    - id: ClothingMaskBreath
-
-#Basic EVA (Big Ass Helmet)
 - type: entity
   id: SuitStorageEVAAlternate
   parent: SuitStorageBase
@@ -30,16 +20,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillSuitStorageEVAAlternate
 
-- type: entityTable
-  id: FillSuitStorageEVAAlternate
-  table: !type:AllSelector
-    children:
-    - id: OxygenTankFilled
-    - id: ClothingOuterHardsuitEVA
-    - id: ClothingHeadHelmetEVALarge
-    - id: ClothingMaskBreath
-
-#Emergency EVA
 - type: entity
   id: SuitStorageEVAEmergency
   parent: SuitStorageBase
@@ -50,15 +30,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillSuitStorageEVAEmergency
 
-- type: entityTable
-  id: FillSuitStorageEVAEmergency
-  table: !type:AllSelector
-    children:
-    - id: OxygenTankFilled
-    - id: ClothingOuterSuitEmergency
-    - id: ClothingMaskBreath
-
-#Prisoner EVA
 - type: entity
   id: SuitStorageEVAPrisoner
   parent: SuitStorageBase
@@ -69,16 +40,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillSuitStorageEVAPrisoner
 
-- type: entityTable
-  id: FillSuitStorageEVAPrisoner
-  table: !type:AllSelector
-    children:
-    - id: OxygenTankFilled
-    - id: ClothingOuterHardsuitEVAPrisoner
-    - id: ClothingHeadHelmetEVALarge
-    - id: ClothingMaskBreath
-
-#Syndicate EVA
 - type: entity
   id: SuitStorageEVASyndicate
   parent: SuitStorageBase
@@ -89,16 +50,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillSuitStorageEVASyndicate
 
-- type: entityTable
-  id: FillSuitStorageEVASyndicate
-  table: !type:AllSelector
-    children:
-    - id: OxygenTankFilled
-    - id: ClothingOuterEVASuitSyndicate
-    - id: ClothingHeadHelmetSyndicate
-    - id: ClothingMaskGasSyndicate
-
-#Pirate EVA
 - type: entity
   id: SuitStorageEVAPirate
   parent: SuitStorageBase
@@ -109,15 +60,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillSuitStorageEVAPirate
 
-- type: entityTable
-  id: FillSuitStorageEVAPirate
-  table: !type:AllSelector
-    children:
-    - id: OxygenTankFilled
-    - id: ClothingOuterHardsuitPirateEVA
-    - id: ClothingMaskGas
-
-#NTSRA Voidsuit
 - type: entity
   id: SuitStorageNTSRA
   parent: SuitStorageBase
@@ -128,17 +70,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillSuitStorageEVANTSRA
 
-- type: entityTable
-  id: FillSuitStorageEVANTSRA
-  table: !type:AllSelector
-    children:
-    - id: JetpackVoidFilled
-    - id: ClothingOuterHardsuitAncientEVA
-    - id: ClothingHeadHelmetAncient
-    - id: ClothingMaskBreath
-
-#HARDSUITS
-#Engineering hardsuit
 - type: entity
   id: SuitStorageEngi
   parent: SuitStorageBase
@@ -153,19 +84,6 @@
 
 #Atmospherics hardsuit
 - type: entity
-  id: SuitStorageAtmos
-  parent: SuitStorageBase
-  suffix: Atmospheric Technician
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillAtmosphericsHardsuit
-  - type: AccessReader
-    access: [["Atmospherics"]]
-
-#Security hardsuit
-- type: entity
   id: SuitStorageSec
   parent: SuitStorageBase
   suffix: Security
@@ -177,15 +95,6 @@
   - type: AccessReader
     access: [["Security"]]
 
-- type: entityTable
-  id: FillSuitStorageSecurity
-  table: !type:AllSelector
-    children:
-    - id: OxygenTankFilled
-    - id: UndeterminedVoidsuitSecurity # Goob edit
-    - id: ClothingMaskBreath
-
-#CE's hardsuit
 - type: entity
   id: SuitStorageCE
   parent: SuitStorageBase
@@ -271,8 +180,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: OxygenTankFilled
-      - id: NitrogenTankFilled
       - id: ClothingShoesBootsMag
       - id: ClothingOuterHardsuitSalvage #Goobstation
       - id: ClothingMaskGasExplorer
@@ -290,16 +197,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillSuitStorageSyndie
 
-- type: entityTable
-  id: FillSuitStorageSyndie
-  table: !type:AllSelector
-    children:
-    - id: OxygenTankFilled
-    - id: ClothingOuterHardsuitSyndie
-    - id: ClothingShoesBootsMagSyndie
-    - id: ClothingMaskGasSyndicate
-
-#Pirate Captain's hardsuit
 - type: entity
   id: SuitStoragePirateCap
   parent: SuitStorageBase
@@ -310,15 +207,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillSuitStoragePirateCap
 
-- type: entityTable
-  id: FillSuitStoragePirateCap
-  table: !type:AllSelector
-    children:
-    - id: OxygenTankFilled
-    - id: ClothingOuterHardsuitPirateCap
-    - id: ClothingMaskGas
-
-#Wizard
 - type: entity
   id: SuitStorageWizard
   parent: SuitStorageBase
@@ -330,10 +218,104 @@
         tableId: FillSuitStorageWizard
 
 - type: entityTable
+  id: FillSuitStorageEVA
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitEVA
+    - id: ClothingHeadHelmetEVA
+    - id: ClothingMaskBreath
+
+#Basic EVA (Big Ass Helmet)
+
+- type: entityTable
+  id: FillSuitStorageEVAAlternate
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitEVA
+    - id: ClothingHeadHelmetEVALarge
+    - id: ClothingMaskBreath
+
+#Emergency EVA
+
+- type: entityTable
+  id: FillSuitStorageEVAEmergency
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterSuitEmergency
+    - id: ClothingMaskBreath
+
+#Prisoner EVA
+
+- type: entityTable
+  id: FillSuitStorageEVAPrisoner
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitEVAPrisoner
+    - id: ClothingHeadHelmetEVALarge
+    - id: ClothingMaskBreath
+
+#Syndicate EVA
+
+- type: entityTable
+  id: FillSuitStorageEVASyndicate
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterEVASuitSyndicate
+    - id: ClothingHeadHelmetSyndicate
+    - id: ClothingMaskGasSyndicate
+
+#Pirate EVA
+
+- type: entityTable
+  id: FillSuitStorageEVAPirate
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitPirateEVA
+    - id: ClothingMaskGas
+
+#NTSRA Voidsuit
+
+- type: entityTable
+  id: FillSuitStorageEVANTSRA
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitAncientEVA
+    - id: ClothingHeadHelmetAncient
+    - id: ClothingMaskBreath
+
+#HARDSUITS
+#Engineering hardsuit
+
+- type: entityTable
+  id: FillSuitStorageSecurity
+  table: !type:AllSelector
+    children:
+    - id: UndeterminedVoidsuitSecurity # Goob edit
+    - id: ClothingMaskBreath
+
+#CE's hardsuit
+
+- type: entityTable
+  id: FillSuitStorageSyndie
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitSyndie
+    - id: ClothingMaskGasSyndicate
+
+#Pirate Captain's hardsuit
+
+- type: entityTable
+  id: FillSuitStoragePirateCap
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitPirateCap
+    - id: ClothingMaskGas
+
+#Wizard
+
+- type: entityTable
   id: FillSuitStorageWizard
   table: !type:AllSelector
     children:
-    - id: OxygenTankFilled
     - id: ClothingMaskBreath
     - id: ClothingOuterHardsuitWizard
-    - id: JetpackVoidFilled

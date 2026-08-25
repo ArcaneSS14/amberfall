@@ -88,7 +88,6 @@ public abstract partial class SharedHereticAbilitySystem : EntitySystem
     [Dependency] private TagSystem _tag = default!;
     [Dependency] private SharedCuffableSystem _cuffs = default!;
     [Dependency] private SharedEnsnareableSystem _snare = default!;
-    [Dependency] private SharedMansusGraspSystem _grasp = default!;
     [Dependency] private TouchSpellSystem _touchSpell = default!;
     [Dependency] private TraumaSystem _trauma = default!;
     [Dependency] private SharedGhoulSystem _ghoul = default!;

@@ -290,8 +290,6 @@
   - type: Reflective
     reflective:
     - None
-  - type: ChangeTemperatureOnCollide
-    heat: -50000
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -313,8 +311,6 @@
   - type: Reflective
     reflective:
     - None
-  - type: ChangeTemperatureOnCollide # This will probably be tweaked.
-    heat: 50000
   - type: Sprite
     sprite: _Trauma/Objects/Weapons/Guns/Projectiles/laser.rsi
     layers:

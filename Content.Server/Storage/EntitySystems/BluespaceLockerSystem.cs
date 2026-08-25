@@ -110,13 +110,6 @@ public sealed partial class BluespaceLockerSystem : EntitySystem
                     }
                 }
 
-            // Move contained air
-            if (component.BehaviorProperties.TransportGas)
-            {
-                entityStorageComponent.Air.CopyFrom(target.Value.storageComponent.Air);
-                target.Value.storageComponent.Air.Clear();
-            }
-
             // Bluespace effects
             if (component.BehaviorProperties.BluespaceEffectOnTeleportSource)
                 BluespaceEffect(target.Value.uid, component, target.Value.bluespaceLockerComponent);
@@ -326,13 +319,6 @@ public sealed partial class BluespaceLockerSystem : EntitySystem
                     transportedEntities++;
                 }
             }
-
-        // Move contained air
-        if (component.BehaviorProperties.TransportGas)
-        {
-            target.Value.storageComponent.Air.CopyFrom(entityStorageComponent.Air);
-            entityStorageComponent.Air.Clear();
-        }
 
         // Open and empty target
         if (target.Value.storageComponent.Open)

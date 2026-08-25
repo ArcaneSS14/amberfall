@@ -32,12 +32,6 @@
     amount: 2 # 6 every 2 seconds
 
 - type: entityEffect
-  id: EternalDarknessTemp
-  effects:
-  - !type:AdjustTemperature
-    amount: -30000
-
-- type: entityEffect
   id: EternalDarknessProj
   effects:
   - !type:ModifyStatusEffect

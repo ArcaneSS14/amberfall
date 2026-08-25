@@ -2,7 +2,6 @@
 using Content.Shared.Chemistry.Reagent;
 using Content.Trauma.Common.Botany;
 // </Trauma>
-using Content.Shared.Atmos;
 using Content.Shared.Database;
 using Content.Shared.FixedPoint;
 using Content.Shared.Random;
@@ -112,10 +111,6 @@ public partial class SeedData
     public List<EntProtoId> ProductPrototypes = new();
 
     [DataField] public Dictionary<ProtoId<ReagentPrototype>, SeedChemQuantity> Chemicals = new(); // Trauma - use protoid holy shit
-
-    [DataField] public Dictionary<Gas, float> ConsumeGasses = new();
-
-    [DataField] public Dictionary<Gas, float> ExudeGasses = new();
 
     #endregion
 
@@ -248,9 +243,6 @@ public partial class SeedData
             ProductPrototypes = new List<EntProtoId>(ProductPrototypes),
             MutationPrototypes = new List<ProtoId<SeedPrototype>>(MutationPrototypes),
             Chemicals = new Dictionary<ProtoId<ReagentPrototype>, SeedChemQuantity>(Chemicals), // Trauma - protoid
-            ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
-            ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
-
             NutrientConsumption = NutrientConsumption,
             WaterConsumption = WaterConsumption,
             IdealHeat = IdealHeat,
@@ -309,9 +301,6 @@ public partial class SeedData
             MutationPrototypes = new List<ProtoId<SeedPrototype>>(other.MutationPrototypes),
 
             Chemicals = new Dictionary<ProtoId<ReagentPrototype>, SeedChemQuantity>(Chemicals), // Trauma - protoid
-            ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
-            ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
-
             NutrientConsumption = NutrientConsumption,
             WaterConsumption = WaterConsumption,
             IdealHeat = IdealHeat,

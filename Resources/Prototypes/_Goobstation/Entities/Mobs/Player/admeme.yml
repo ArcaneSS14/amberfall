@@ -329,7 +329,6 @@
     stripTimeReduction: 9999
     stealthy: true
   - type: BypassInteractionChecks
-  - type: SupermatterImmune
   - type: MovementIgnoreGravity
 
 # ... Conquest? What the fuck.
@@ -408,14 +407,6 @@
       behaviors:
       - !type:GibBehavior { }
   - type: NoSlip
-  - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 42
-  - type: TemperatureDamage
-    heatDamageThreshold: 5000
-    heatDamage:
-      types:
-        Heat: -1
   - type: MovementIgnoreGravity
   - type: SlowOnDamage
     speedModifierThresholds:

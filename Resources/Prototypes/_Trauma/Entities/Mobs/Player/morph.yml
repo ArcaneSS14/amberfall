@@ -49,20 +49,6 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.5
     baseSprintSpeed: 4
-  - type: Respirator
-    saturation: 25
-    maxSaturation: 25
-    gaspEmoteCooldown: 300
-    damage:
-      types:
-        Asphyxiation: 0.1
-    damageRecovery:
-      types:
-        Asphyxiation: -0.25
-  - type: Barotrauma
-    damage:
-      types:
-        Blunt: 0.1
   - type: CombatMode
   - type: MeleeWeapon
     altDisarm: false

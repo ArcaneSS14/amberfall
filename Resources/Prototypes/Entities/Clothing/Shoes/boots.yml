@@ -12,8 +12,6 @@
     sprite: Clothing/Shoes/Boots/workboots.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/workboots.rsi
-  - type: Matchbox
-
 - type: entity
   parent: [ClothingShoesMilitaryBase, BaseSecurityCargoContraband] # Goob edit - Also allowed for Cargo
   id: ClothingShoesBootsJack
@@ -37,8 +35,6 @@
     sprite: Clothing/Shoes/Boots/explorer.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/explorer.rsi
-  - type: Matchbox
-
 - type: entity
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesBootsPerformer

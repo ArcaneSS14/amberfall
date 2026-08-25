@@ -1,5 +1,6 @@
 # Apotheosis tiles
 
+tiles-apotheosis-transparent-pit = Transparent pit
 tiles-apotheosis-ash = Ash
 tiles-apotheosis-barograte = Barograte
 tiles-apotheosis-barograteopen = Barograteopen

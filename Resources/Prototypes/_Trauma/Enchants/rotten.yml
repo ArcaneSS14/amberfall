@@ -12,9 +12,3 @@
       - StealTarget
   - type: ComponentsEnchant
     added:
-    - type: Perishable
-      rotAfter: 300
-      molsPerSecondPerUnitMass: 0
-    - type: RotInto
-      entity: MobLivingCurse
-      stage: 1

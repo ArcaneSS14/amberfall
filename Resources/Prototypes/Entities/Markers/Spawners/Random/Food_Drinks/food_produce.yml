@@ -17,6 +17,7 @@
       prob: 0.8
 
 #Tables
+
 - type: entityTable
   id: ProduceTable
   table: !type:GroupSelector

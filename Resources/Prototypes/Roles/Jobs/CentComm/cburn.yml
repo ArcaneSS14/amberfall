@@ -33,7 +33,6 @@
     ears: ClothingHeadsetAltCentCom
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitCBURN
-    shoes: ClothingShoesBootsMagEmergencyResponseTeam # Goobstation
     id: CBURNPDA # Todo - Replace it.
     pocket1: InfectionScannerCburn # Goob
     pocket2: WeaponShotgunSawn # Trauma - was WeaponLaserGun

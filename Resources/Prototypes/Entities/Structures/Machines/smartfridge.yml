@@ -77,7 +77,6 @@
   - type: AccessReader
   - type: UseDelay
     delay: 1
-  - type: AntiRottingContainer
   - type: ResistLocker
   - type: Physics
     bodyType: Static
@@ -123,7 +122,6 @@
       collection: MetalThud
   - type: ExplosionResistance
     damageCoefficient: 0.1
-  - type: Airtight
   - type: GenericVisualizer
     visuals:
       enum.PowerDeviceVisuals.Powered:

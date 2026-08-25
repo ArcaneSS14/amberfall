@@ -108,16 +108,8 @@
       - material: Steel
         amount: 3
         doAfter: 1
-      - tag: Pipe
-        name: construction-graph-tag-pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
-  - node: unfinished
-    entity: RevUnfinishedGun
-    edges:
-    - to: liberator
-      steps:
+      - material: Steel
+        amount: 1
       - material: RevBolt
       - material: RevNut
       - tool: Anchoring
@@ -269,27 +261,18 @@
         doAfter: 1
     - to: Devastator
       steps:
-      - tag: Pipe
-        name: construction-graph-tag-pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
+      - material: Steel
+        amount: 1
       - material: Steel
         amount: 2
         doAfter: 1
-      - tag: Pipe
-        name: construction-graph-tag-pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
+      - material: Steel
+        amount: 1
       - material: Steel
         amount: 2
         doAfter: 1
-      - tag: Pipe
-        name: construction-graph-tag-pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
+      - material: Steel
+        amount: 1
       - material: Steel
         amount: 2
         doAfter: 1
@@ -344,11 +327,8 @@
         doAfter: 1
       - tool: Screwing
         doAfter: 1
-      - tag: Pipe
-        name: construction-graph-tag-pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
+      - material: Steel
+        amount: 1
       - tag: ModularReceiver
         name: construction-graph-tag-modular-receiver
         icon:

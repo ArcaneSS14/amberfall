@@ -31,7 +31,6 @@
         - id: Multitool
         # <Goob>
         - id: trayScanner
-        - id: GasAnalyzer
         # </Goob>
 
 - type: entity
@@ -48,7 +47,6 @@
         - id: WelderExperimental
         - id: Multitool
         - id: HolofanProjector
-        - id: GasAnalyzer
         - id: trayScanner
 
 - type: entityTable
@@ -154,7 +152,6 @@
         - id: HydroponicsToolMiniHoe
         - id: HydroponicsToolSpade
         - id: HydroponicsToolClippers
-        - id: PlantAnalyzer # Trauma
         - id: ChemistryBottleRobustHarvest
 
 - type: entity

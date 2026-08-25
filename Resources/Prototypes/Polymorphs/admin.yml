@@ -48,10 +48,3 @@
     inventory: Drop
     ignoreAllowRepeatedMorphs: true
 
-- type: polymorph
-  id: AdminDisposalsSmite
-  configuration:
-    entity: DisposalUnit
-    forced: true
-    inventory: Drop
-    ignoreAllowRepeatedMorphs: true

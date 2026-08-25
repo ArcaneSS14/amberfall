@@ -12,3 +12,4 @@ public sealed partial class AntiAnomalyZoneComponent : Component
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public float ZoneRadius = 10;
 }
+

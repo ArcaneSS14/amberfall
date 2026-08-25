@@ -32,9 +32,6 @@
           # Has to hit mobs, singularity, and singularity generator
           - Opaque
           - FullTileMask
-    - type: ParticleProjectile
-    - type: SinguloFood
-      # Energy is setup by the PA particle fire function.
     - type: TimedDespawn
       lifetime: 3.0
     - type: Appearance
@@ -78,6 +75,3 @@
         Radiation: 10
   - type: TimedDespawn
     lifetime: 0.6
-  - type: SinguloFood
-    energy: -10
-    energyFactor: 0.97

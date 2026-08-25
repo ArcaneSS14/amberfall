@@ -9,6 +9,7 @@
 
 # Letter Bundles
 ## Basically items that should always spawn together, specific to letters
+
 - type: entityTable
   id: UncommonLetterBundleTable
   table: !type:GroupSelector

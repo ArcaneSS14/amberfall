@@ -36,7 +36,6 @@
     prototypeToSpawn: InflatableWallStack1
     disassembleTime: 3
   - type: InflatableSafeDisassembly
-  - type: Airtight
   - type: Transform
     anchored: true
   placement:

@@ -28,12 +28,6 @@
       right:
       - state: inhand-right-big
   - type: MultiHandedItem
-  - type: MechGrabber
-    blacklist: # Goobstation blacklist
-      tags:
-      - MechUnGrabbable
-      components:
-      - Mech
   - type: UIFragment
     ui: !type:MechGrabberUi
   - type: ContainerContainer
@@ -55,15 +49,6 @@
       right:
       - state: inhand-right-small
   - type: MultiHandedItem
-  - type: MechGrabber
-    blacklist: # Goobstation blacklist
-      tags:
-      - MechUnGrabbable
-      components:
-      - Mech
-    maxContents: 4
-    grabDelay: 3
-    grabEnergyDelta: -20
   - type: UIFragment
     ui: !type:MechGrabberUi
   - type: ContainerContainer

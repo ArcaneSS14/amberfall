@@ -117,3 +117,4 @@ public sealed partial class ScryingOrbSystem : SharedScryingOrbSystem
         _ghost.SetCanReturnToBody((ghost, null), true);
     }
 }
+

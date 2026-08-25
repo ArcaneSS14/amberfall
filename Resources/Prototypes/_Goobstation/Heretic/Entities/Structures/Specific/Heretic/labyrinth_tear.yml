@@ -33,7 +33,6 @@
           - ItemMask
         density: 1000
         hard: false
-  - type: LabyrinthPortal
   - type: Tag
     tags:
     - ForceHereticMinion

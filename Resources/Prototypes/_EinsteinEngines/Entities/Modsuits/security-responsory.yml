@@ -56,15 +56,3 @@
     walkModifier: 0.95
     sprintModifier: 0.95
 
-- type: entity
-  id: SuitStorageResponsorySecurity
-  parent: SuitStorageBase
-  suffix: Security Responsory Modsuit
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: OxygenTankFilled
-        - id: ClothingModsuitResponsorySecurity
-        - id: ClothingMaskBreath

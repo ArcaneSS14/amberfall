@@ -52,9 +52,6 @@
     walkModifier: 0.7
     sprintModifier: 0.7
   - type: HeldSpeedModifier
-  - type: TemperatureProtection
-    heatingCoefficient: 0.75
-    coolingCoefficient: 0.5
   - type: ToggleableClothing
     clothingPrototypes: # Trauma - changed to dict for modsuits
       head: ClothingHeadHelmetEVALarge
@@ -82,9 +79,6 @@
     walkModifier: 0.7
     sprintModifier: 0.7
   - type: HeldSpeedModifier
-  - type: TemperatureProtection
-    heatingCoefficient: 0.75
-    coolingCoefficient: 0.5
   - type: Tag
     tags:
     - SuitEVA
@@ -120,17 +114,11 @@
     sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.5
-    lowPressureMultiplier: 1000
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
     requireActivated: false
   - type: HeldSpeedModifier
-  - type: TemperatureProtection
-    heatingCoefficient: 0.1
-    coolingCoefficient: 0.1
   - type: Armor
     coverage: # Shitmed
     - Torso

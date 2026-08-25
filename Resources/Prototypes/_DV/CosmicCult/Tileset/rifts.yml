@@ -24,20 +24,7 @@
     color: "#42a4ae"
   - type: CosmicCultExamine
     cultistText: cosmic-examine-text-forthecult
-  - type: CosmicMalignRift
-  - type: CosmicCorrupting
-    corruptionMaxTicks: 5
-    corruptionSpeed: 12
-    corruptionChance: 1
-    corruptionReduction: 0.1
-
 - type: entity
   id: CosmicMalignRiftDebug
   parent: CosmicMalignRift
   suffix: Debug
-  components:
-  - type: CosmicMalignRift # Very fast, for easier testing
-    bibleTime: 1
-    chaplainTime: 1
-    absorbTime: 1
-    entropyGranted: 0

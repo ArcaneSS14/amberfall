@@ -16,18 +16,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 0
-    # add every path here because you shouldn't be able to buy more starter knowledge
-    blacklist:
-    - Ash
-    - Blade
-    - Flesh
-    - Lock
-    - Void
-    - Rust
-    - Cosmos
-
 - type: listing
   id: HereticLockPath2
   name: knowledge-path-lock-s2-name
@@ -44,11 +32,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 1
-    whitelist:
-    - Lock
-
 - type: listing
   id: HereticLockPath3
   name: knowledge-path-lock-s3-name
@@ -65,11 +48,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 2
-    whitelist:
-    - Lock
-
 - type: listing
   id: HereticLockPath4
   name: knowledge-path-lock-s4-name
@@ -86,11 +64,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 3
-    whitelist:
-    - Lock
-
 - type: listing
   id: HereticLockPath5
   name: knowledge-path-lock-s5-name
@@ -107,11 +80,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 4
-    whitelist:
-    - Lock
-
 - type: listing
   id: HereticLockArmor
   name: knowledge-path-lock-armor-name
@@ -128,11 +96,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 5
-    whitelist:
-    - Lock
-
 - type: listing
   id: HereticLockPath6
   name: knowledge-path-lock-s6-name
@@ -149,11 +112,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 5
-    whitelist:
-    - Lock
-
 - type: listing
   id: HereticLockPath7
   name: knowledge-path-lock-s7-name
@@ -170,11 +128,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 6
-    whitelist:
-    - Lock
-
 - type: listing
   id: HereticLockPath8
   name: knowledge-path-lock-s8-name
@@ -191,11 +144,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    stage: 7
-    whitelist:
-    - Lock
-
 - type: listing
   id: HereticLockPath9
   name: knowledge-path-lock-s9-name
@@ -212,8 +160,3 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:HereticPathCondition
-    requiresCanAscend: true
-    stage: 8
-    whitelist:
-    - Lock

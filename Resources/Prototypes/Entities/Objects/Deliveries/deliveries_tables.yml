@@ -1,4 +1,5 @@
 ### Spawners
+
 - type: entityTable
   id: RandomDeliveryBasic
   table: !type:GroupSelector
@@ -10,6 +11,39 @@
       tableId: RandomDeliveryPackageBasic
       weight: 0.3
 
+# Letters
+
+
+- type: entityTable
+  id: LetterDeliveryRewards
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LetterCommonEntityTable
+      weight: 0.6
+    - !type:NestedSelector
+      tableId: LetterUncommonEntityTable
+      weight: 0.3
+    - !type:NestedSelector
+      tableId: LetterRareEntityTable
+      weight: 0.1
+
+
+- type: entityTable
+  id: PackageDeliveryRewards
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: PackageCommonEntityTable
+      weight: 0.6
+    - !type:NestedSelector
+      tableId: PackageUncommonEntityTable
+      weight: 0.3
+    - !type:NestedSelector
+      tableId: PackageRareEntityTable
+      weight: 0.1
+
+### Loot Tables
 # Letters
 
 - type: entityTable # Used to pick between all different letter types, if there will be more
@@ -28,36 +62,6 @@
 
 ### Reward Tables
 
-- type: entityTable
-  id: LetterDeliveryRewards
-  table: !type:GroupSelector
-    children:
-    - !type:NestedSelector
-      tableId: LetterCommonEntityTable
-      weight: 0.6
-    - !type:NestedSelector
-      tableId: LetterUncommonEntityTable
-      weight: 0.3
-    - !type:NestedSelector
-      tableId: LetterRareEntityTable
-      weight: 0.1
-
-- type: entityTable
-  id: PackageDeliveryRewards
-  table: !type:GroupSelector
-    children:
-    - !type:NestedSelector
-      tableId: PackageCommonEntityTable
-      weight: 0.6
-    - !type:NestedSelector
-      tableId: PackageUncommonEntityTable
-      weight: 0.3
-    - !type:NestedSelector
-      tableId: PackageRareEntityTable
-      weight: 0.1
-
-### Loot Tables
-# Letters
 - type: entityTable
   id: LetterCommonEntityTable # Basically trash and spam mail, maybe something barely useful here and there
   table: !type:GroupSelector
@@ -119,6 +123,7 @@
 
 # Packages
 # TODO: Currently mostly maints loot, should be updated in the future.
+
 - type: entityTable # TODO: Add more variety!
   id: PackageCommonEntityTable
   table: !type:GroupSelector

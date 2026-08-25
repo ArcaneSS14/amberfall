@@ -174,13 +174,6 @@
   id: MobCarpSalvage
   parent: MobCarp
   suffix: "Salvage Ruleset"
-  components:
-    - type: SalvageMobRestrictions
-#    - type: MobThresholds # Lavaland change
-#      thresholds:
-#        0: Alive
-#        30: Dead
-
 - type: entity
   name: space carp
   id: MobCarpDragon
@@ -200,13 +193,6 @@
     - type: HTN
       rootTask:
         task: DragonCarpCompound
-    - type: Flammable
-      damage:
-       types: {}
-    - type: Temperature
-    - type: TemperatureDamage
-      heatDamageThreshold: 1200
-    # <Goob>
     - type: Tag
       tags:
       - Carp
@@ -289,5 +275,3 @@
   id: MobSharkSalvage
   parent: MobShark
   suffix: "Salvage Ruleset"
-  components:
-  - type: SalvageMobRestrictions

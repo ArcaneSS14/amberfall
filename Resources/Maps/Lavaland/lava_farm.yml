@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 05/03/2025 22:08:36
-  entityCount: 235
+  entityCount: 232
 maps: []
 grids:
 - 1
@@ -66,88 +66,7 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,1:
-            0: 65280
-          -1,1:
-            0: 34816
-          0,2:
-            0: 65535
-          -1,2:
-            0: 65533
-          0,3:
-            0: 65535
-          -1,3:
-            0: 65535
-          0,4:
-            0: 65535
-          1,1:
-            0: 65280
-          1,2:
-            0: 65535
-          1,3:
-            0: 65535
-          1,4:
-            0: 65535
-          2,1:
-            0: 53504
-          2,2:
-            0: 61917
-          2,3:
-            0: 65535
-          2,4:
-            0: 16383
-          3,1:
-            0: 12288
-          3,2:
-            0: 4147
-          3,3:
-            0: 4369
-          3,4:
-            0: 4369
-          -1,4:
-            0: 65535
-          0,5:
-            0: 4095
-          -1,5:
-            0: 4095
-          1,5:
-            0: 4095
-          2,5:
-            0: 785
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
-- proto: AirTankFilled
-  entities:
-  - uid: 153
-    components:
-    - type: Transform
-      parent: 149
-    - type: Clothing
-      inSlotFlag: SUITSTORAGE
-      inSlot: suitstorage
-    - type: Physics
-      canCollide: False
 - proto: BasaltFive
   entities:
   - uid: 223
@@ -1275,7 +1194,7 @@ entities:
         suitstorage: !type:ContainerSlot
           showEnts: False
           occludes: False
-          ent: 153
+          ent: null
         back: !type:ContainerSlot
           showEnts: False
           occludes: False

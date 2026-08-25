@@ -1213,61 +1213,6 @@
         Quantity: 30
 
 # Entity tables
-- type: entityTable
-  id: BasicReagentBottlesTable
-  table: !type:GroupSelector
-    children:
-    - id: ChemistryBottleAluminium
-    - id: ChemistryBottleCarbon
-    - id: ChemistryBottleChlorine
-    - id: ChemistryBottleCopper
-    - id: ChemistryBottleEthanol
-    - id: ChemistryBottleFluorine
-    - id: ChemistryBottleHydrogen
-    - id: ChemistryBottleIodine
-    - id: ChemistryBottleIron
-    - id: ChemistryBottleLithium
-    - id: ChemistryBottleMercury
-    - id: ChemistryBottleNitrogen
-    - id: ChemistryBottleOxygen
-    - id: ChemistryBottlePhosphorus
-    - id: ChemistryBottlePotassium
-    - id: ChemistryBottleRadium
-    - id: ChemistryBottleSilicon
-    - id: ChemistryBottleSodium
-    - id: ChemistryBottleSugar
-    - id: ChemistryBottleSulfur
-
-- type: entityTable
-  id: CoreMedicineReagentBottleTable
-  table: !type:GroupSelector
-    children:
-    - !type:NestedSelector # Trauma
-      tableId: CoreMedicineReagentBottleTrauma
-      weight: 3 # keep in sync with the table
-    - id: ChemistryBottleBicaridine
-    - id: ChemistryBottleKelotane
-    - id: ChemistryBottleDylovene
-    - id: ChemistryBottleInaprovaline
-    - id: ChemistryBottleDexalin
-    - id: ChemistryBottleSaline
-    - id: ChemistryBottleTricordrazine
-    - id: ChemistryBottleHyronalin
-
-- type: entityTable
-  id: SpecialtyMedicineReagentBottleTable
-  table: !type:GroupSelector
-    children:
-    - id: ChemistryBottleCryoxadone
-    - id: ChemistryBottleEpinephrine
-    - id: ChemistryBottleHyronalin
-    - id: ChemistryBottleArithrazine
-    - id: ChemistryBottlePhalanximine
-    - id: ChemistryBottleTricordrazine
-    - id: ChemistryBottleTranexamicAcid
-    - id: ChemistryBottleOculine
-    - id: ChemistryBottleCharcoal
-    - id: ChemistryBottleLaughter
 
 - type: entityTable
   id: AllMedicineReagentBottlesTable
@@ -1327,3 +1272,19 @@
     - id: ChemistryBottleUltravasculine
     - id: ChemistryBottleCharcoal
     - id: ChemistryBottleLaughter
+
+- type: entityTable
+  id: CoreMedicineReagentBottleTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector # Trauma
+      tableId: CoreMedicineReagentBottleTrauma
+      weight: 3 # keep in sync with the table
+    - id: ChemistryBottleBicaridine
+    - id: ChemistryBottleKelotane
+    - id: ChemistryBottleDylovene
+    - id: ChemistryBottleInaprovaline
+    - id: ChemistryBottleDexalin
+    - id: ChemistryBottleSaline
+    - id: ChemistryBottleTricordrazine
+    - id: ChemistryBottleHyronalin

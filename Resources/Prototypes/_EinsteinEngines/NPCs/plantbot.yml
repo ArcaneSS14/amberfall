@@ -15,11 +15,6 @@
   branches:
     - tasks:
         - !type:HTNPrimitiveTask
-          operator: !type:PickNearbyServicableHydroponicsTrayOperator
-            targetKey: PlantTarget
-            targetMoveKey: TargetCoordinates
-
-        - !type:HTNPrimitiveTask
           operator: !type:MoveToOperator
             pathfindInPlanning: false
 
@@ -35,6 +30,3 @@
             - !type:KeyExistsPrecondition
               key: IdleTime
 
-        - !type:HTNPrimitiveTask
-          operator: !type:PlantbotServiceOperator
-            targetKey: PlantTarget

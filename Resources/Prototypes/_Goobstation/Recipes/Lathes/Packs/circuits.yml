@@ -1,38 +1,3 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 ## Static
-- type: latheRecipePack
-  id: SecurityBoardsStaticGoob
-  recipes:
-  - ContrabandDetectorCircuitboard
-
-- type: latheRecipePack
-  id: MedicalBoardsStaticGoob
-  recipes:
-  - OperatingTableCircuitboard
-
-- type: latheRecipePack
-  id: ServiceBoardsStaticGoob
-  recipes:
-  - StationRadioCircuitboard
-
-## Dynamic
-
-- type: latheRecipePack
-  id: MedicalBoardsGoob
-  recipes:
-  - AutodocCircuitboard
-
-- type: latheRecipePack
-  id: EngineeringBoardsGoob
-  recipes:
-  - PlumbingPumpCircuitboard
-  - TelecomTransmitterCircuitboard
-
-- type: latheRecipePack
-  id: ServiceBoardsGoob
-  recipes:
-  - VinylPlayerCircuitboard
-  - TapeDeckCircuitboard
-  - StationRadioServerCircuitboard
-  - StationRadioRigCircuitboard

@@ -12,8 +12,6 @@
       entity_storage: !type:AllSelector
         children:
         - id: MechGygaxSyndieFilled
-        - id: DoubleEmergencyOxygenTankFilled
-        - id: DoubleEmergencyNitrogenTankFilled
         - id: ToolboxSyndicateFilled
         - id: PlushieNuke
 
@@ -29,8 +27,6 @@
       entity_storage: !type:AllSelector
         children:
         - id: MechMaulerSyndieFilled
-        - id: DoubleEmergencyOxygenTankFilled
-        - id: DoubleEmergencyNitrogenTankFilled
         - id: ToolboxSyndicateFilled
         - id: PlushieNuke
 
@@ -65,8 +61,6 @@
         - id: ClothingOuterHardsuitCybersunDreadnought
         - id: ClothingMaskGasSyndicate
         - id: ClothingHandsGlovesCombat
-        - id: DoubleEmergencyOxygenTankFilled
-        - id: DoubleEmergencyNitrogenTankFilled
 
 - type: entity
   id: CratePizzaParty
@@ -112,5 +106,3 @@
         - id: ClothingOuterHardsuitSyndie
         - id: ScramImplanter
         - id: EnergySword
-        - id: DoubleEmergencyOxygenTankFilled
-        - id: DoubleEmergencyNitrogenTankFilled

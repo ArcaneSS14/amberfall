@@ -70,7 +70,6 @@
     - box5
     - pink-box6
   - type: Appearance
-  - type: AntiRottingContainer # Trauma
 
 # Egg
 
@@ -160,7 +159,6 @@
     - box11
     - box12
   - type: Appearance
-  - type: AntiRottingContainer # Trauma
   # Someday...
   # - type: DamageOnLand
   # - type: DamageOtherOnHit
@@ -237,7 +235,6 @@
     stateDoorClosed: box
   - type: StaticPrice
     price: 0
-  - type: AntiRottingContainer # Trauma
 
 
 - type: entity
@@ -501,7 +498,6 @@
   suffix: Toy Safe
   description: The toy is more edible than the food.
   components:
-  - type: AntiRottingContainer # Trauma
   - type: Sprite
     sprite: Objects/Storage/Happyhonk/clown.rsi
     state: box

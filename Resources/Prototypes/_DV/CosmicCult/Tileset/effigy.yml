@@ -24,12 +24,6 @@
   - type: CosmicCultExamine
     cultistText: cosmic-examine-text-culteffigy
     othersText: cosmic-examine-text-effigy
-  - type: CosmicCorrupting
-    corruptionReduction: 0.02
-    enabled: true
-    floodFillStarting: true
-    corruptionMaxTicks: 6
-    corruptionSpeed: 1.25
   - type: InteractionOutline
   - type: Fixtures
     fixtures:

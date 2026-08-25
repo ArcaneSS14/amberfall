@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/21/2025 01:45:58
-  entityCount: 194
+  entityCount: 188
 maps: []
 grids:
 - 1
@@ -87,52 +87,6 @@ entities:
             28: 9.197224,6.069517
             29: 9.1925955,5.138962
             30: 8.711114,5.1482205
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,1:
-            0: 65532
-          0,2:
-            0: 52303
-          0,0:
-            0: 51404
-          1,0:
-            0: 7986
-          1,1:
-            0: 7517
-          1,2:
-            0: 61199
-          2,0:
-            0: 51184
-          2,1:
-            0: 61439
-          2,2:
-            0: 61167
-          3,0:
-            0: 4112
-          3,1:
-            0: 13073
-          3,2:
-            0: 13107
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: AirlockExternalGlass
   entities:
@@ -292,13 +246,6 @@ entities:
     - type: Transform
       pos: 5.5,11.5
       parent: 1
-- proto: CrateEmergencyInternals
-  entities:
-  - uid: 183
-    components:
-    - type: Transform
-      pos: 3.5,11.5
-      parent: 1
 - proto: CrateGenericSteel
   entities:
   - uid: 179
@@ -332,30 +279,6 @@ entities:
       removedMasks: 20
     - type: PlaceableSurface
       isPlaceable: True
-- proto: CratePermaEscapeDigging
-  entities:
-  - uid: 180
-    components:
-    - type: Transform
-      pos: 9.5,11.5
-      parent: 1
-  - uid: 193
-    components:
-    - type: Transform
-      pos: 1.5,8.5
-      parent: 1
-- proto: EmergencyOxygenTankFilled
-  entities:
-  - uid: 189
-    components:
-    - type: Transform
-      pos: 13.5,7.5
-      parent: 1
-  - uid: 194
-    components:
-    - type: Transform
-      pos: 3.5,11.5
-      parent: 1
 - proto: FloorChasmEntity
   entities:
   - uid: 78
@@ -632,13 +555,6 @@ entities:
     components:
     - type: Transform
       pos: 12.5,11.5
-      parent: 1
-- proto: ToolboxSyndicateFilled
-  entities:
-  - uid: 181
-    components:
-    - type: Transform
-      pos: 11.5,11.5
       parent: 1
 - proto: WallReinforced
   entities:

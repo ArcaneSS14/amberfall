@@ -5,7 +5,6 @@
   categories: [ HideSpawnMenu ]
   components:
   # <Trauma>
-  - type: SupermatterImmune
   - type: Speech
     speechVerb: HolierThanThou
   - type: Eye

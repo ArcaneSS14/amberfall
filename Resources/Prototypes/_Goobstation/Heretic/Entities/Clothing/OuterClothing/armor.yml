@@ -52,8 +52,6 @@
   - type: HideClothingLayerClothing
     hiddenSlots:
     - jumpsuit
-  - type: FireProtection
-    reduction: 0.2
   - type: HideHereticAura
   - type: HereticClothing
 
@@ -89,8 +87,6 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHatHoodHereticRust
-  - type: FireProtection
-    reduction: 0.3
   - type: SalvagedRemains
   - type: Appearance
   - type: ItemToggle
@@ -131,8 +127,6 @@
         VeinsDamage: 0.0
     - type: ExplosionResistance
       damageCoefficient: 0
-    - type: FireProtection
-      reduction: 0.6
     deactivateComponents:
     - type: Armor
       coverage:
@@ -157,9 +151,6 @@
         VeinsDamage: 0.0
     - type: ExplosionResistance
       damageCoefficient: 0.50
-    - type: FireProtection
-      reduction: 0.3
-
 - type: entity
   abstract: true
   parent: ArmorHeretic
@@ -197,14 +188,7 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHatHoodHereticVoid
-  - type: FireProtection
-    reduction: 0.4
-  - type: PressureProtection
-    lowPressureMultiplier: 1000
   - type: HollowWeave
-  - type: TemperatureProtection
-    coolingCoefficient: 0.01
-
 - type: entity
   abstract: true
   parent: ArmorHeretic
@@ -237,12 +221,6 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHatHoodHereticAsh
-  - type: FireProtection
-    reduction: 1
-  - type: PressureProtection
-    highPressureMultiplier: 0.1
-  - type: TemperatureProtection
-    heatingCoefficient: 0.01
   - type: ScorchedMantle
 
 - type: entity
@@ -279,8 +257,6 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHatHoodHereticFlesh
-  - type: FireProtection
-    reduction: 0
   - type: Storage
     storageOpenSound:
       collection: OrganInteraction
@@ -333,8 +309,6 @@
     clothingPrototypes:
       head: ClothingHeadHatHoodHereticBlade
   - type: Insulated
-  - type: FireProtection
-    reduction: 0.5
   - type: ModifyDelayedKnockdown
     cancel: true
   - type: StaminaResistance
@@ -370,12 +344,7 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHatHoodHereticCosmos
-  - type: PressureProtection
-    lowPressureMultiplier: 1000
   - type: MovementIgnoreGravityClothing
-  - type: TemperatureProtection
-    coolingCoefficient: 0.01
-
 - type: entity
   abstract: true
   parent: ArmorHeretic
@@ -498,7 +467,6 @@
       - CarvingKnife
       - HereticMagicItem
   - type: HereticClothing
-  - type: PressureProtection
   - type: VoidCloak
   - type: Appearance
   - type: GenericVisualizer

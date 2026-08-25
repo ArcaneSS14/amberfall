@@ -281,10 +281,6 @@
     damage:
       types:
         Heat: 20
-  - !type:Flammable
-    multiplier: 4
-    multiplierOnExisting: 0.2
-  - !type:Ignite
   levelRequired: 80
 
 - type: combo

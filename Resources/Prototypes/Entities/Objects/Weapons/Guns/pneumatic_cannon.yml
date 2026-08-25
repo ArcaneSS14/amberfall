@@ -34,7 +34,6 @@
     clumsyProof: true
   - type: ContainerAmmoProvider
     container: storagebase
-  - type: PneumaticCannon
   - type: Storage
     maxItemSize: Normal
     grid:
@@ -193,11 +192,6 @@
   parent: WeaponImprovisedPneumaticCannon
   id: WeaponImprovisedPneumaticCannonGun
   suffix: Gun
-  components:
-  - type: PneumaticCannon
-    throwItems: false
-
-# doesn't need gas, extra capacity
 - type: entity
   parent: WeaponImprovisedPneumaticCannonGun
   id: WeaponImprovisedPneumaticCannonAdmeme
@@ -211,9 +205,6 @@
     - 0,0,19,10
     whitelist:
       tags: [] #dodging a test fail like the IRS
-  - type: PneumaticCannon
-    gasUsage: 0
-    throwItems: false
   - type: Gun
     fireRate: 10
     selectedMode: FullAuto

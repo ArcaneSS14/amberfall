@@ -28,16 +28,6 @@
     sprite: Objects/Tools/matches.rsi
     heldPrefix: unlit
     size: Tiny
-  - type: Matchstick
-    duration: 10
-    igniteSound:
-      path: /Audio/Items/match_strike.ogg
-      params:
-        volume: -0.125
-        variation: 0.125
-  - type: IgnitionSource
-    ignited: false
-    temperature: 400.0
   - type: PointLight
     enabled: false
     radius: 1.1
@@ -66,9 +56,6 @@
   - type: Sprite
     layers:
       - state: match_burnt
-  - type: Matchstick
-    state: Burnt
-
 - type: entity
   name: match box
   parent: [ SmallboxItem, BaseBagOpenClose ]
@@ -92,7 +79,6 @@
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/matchbox_drop.ogg
-  - type: Matchbox
   - type: Sprite
     sprite: Objects/Tools/matches.rsi
     layers:
@@ -155,8 +141,6 @@
       storagebase:
         id: GorlexMatchstick
         amount: 24
-  - type: Matchbox
-
 - type: entity
   name: match stick
   parent: [Matchstick, BaseSyndicateContraband]
@@ -175,7 +159,5 @@
     enabled: false
     radius: 3
     color: green
-  - type: Matchstick
-    duration: 30
   - type: ScannableForPoints # goob edit
     points: 1

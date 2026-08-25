@@ -2,11 +2,3 @@
 
 ## Static
 
-- type: latheRecipePack
-  id: BioGenIngredientsStaticTrauma
-  recipes:
-  - BioGenDylo
-  - BioGenPhalanx
-  - BioGenDiethyl
-  - BioGenUnstableMutagen
-  - BioGenEgg

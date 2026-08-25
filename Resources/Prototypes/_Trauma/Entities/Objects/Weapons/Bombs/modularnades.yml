@@ -176,17 +176,6 @@
     graph: ClusterBangGraph
 
 - type: entity
-  parent: [BaseModularGrenadeCase, BaseEngineeringContraband]
-  id: AirGrenadeModular
-  name: air grenade
-  description: A special solid state chemical grenade used for quickly releasing standard air into a spaced area. Fills up to 30 tiles, this one has been modified.
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Grenades/airboom.rsi
-  - type: Construction
-    graph: AirGrenadeGraph
-
-- type: entity
   parent: BaseModularGrenadeCase
   id: GrenadeFoamDartModular
   name: foam dart grenade

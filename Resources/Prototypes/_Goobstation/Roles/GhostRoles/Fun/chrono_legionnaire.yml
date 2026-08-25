@@ -10,7 +10,6 @@
     ears: ClothingHeadsetChronolegioneerUnremoveable
     gloves: ClothingHandsGlovesChronoLegioneerUnremoveable
     outerClothing: ClothingOuterHardsuitChronolegioneerUnremoveable
-    suitstorage: JetpackChronoUnremoveable
     shoes: ClothingShoesBootsChronoUnremoveable
     id: ChronoPDA
     belt: WeaponStasisGun

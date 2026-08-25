@@ -112,8 +112,6 @@
     follow: true
     location: nuclear bomb
   - type: FTLSmashImmune
-  - type: SupermatterImmune # Goobstation
-
 - type: entity
   parent: NuclearBomb
   id: NuclearBombUnanchored

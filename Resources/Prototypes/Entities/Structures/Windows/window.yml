@@ -73,7 +73,6 @@
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: Airtight
   - type: IconSmooth
     key: walls
     base: window
@@ -211,10 +210,6 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
-    airBlockedDirection:
-    - South
   - type: Construction
     graph: WindowDirectional
     node: windowDirectional
@@ -292,11 +287,6 @@
         - FullTileMask
         layer:
         - GlassLayer
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
-    airBlockedDirection:
-    - South
-    - East
   - type: DamageVisuals
     damageOverlay:
       sprite: Structures/Windows/cracks_diagonal.rsi

@@ -1,5 +1,4 @@
 using Content.Shared.Alert;
-using Content.Shared.Atmos.Components;
 using Content.Shared.Clothing.EntitySystems;
 using Content.Shared.Gravity;
 using Content.Shared.Inventory;
@@ -46,10 +45,6 @@ public sealed partial class SharedMagbootsSystem : EntitySystem
 
     public void UpdateMagbootEffects(EntityUid user, Entity<MagbootsComponent> ent, bool state)
     {
-        // TODO: public api for this and add access
-        if (TryComp<MovedByPressureComponent>(user, out var moved))
-            moved.Enabled = !state;
-
         _gravity.RefreshWeightless(user);
 
         if (state)

@@ -27,7 +27,6 @@
     sprite: Objects/Misc/bureaucracy.rsi
     state: contract-written
   - type: CrematoriumImmune # Dude. You're burning the paper from *hell*? Really?
-  - type: SupermatterImmune # Nope.
   - type: PreventChasmFalling # Nope.
     deleteOnUse: false
   - type: CargoSellBlacklist # Nope.
@@ -80,7 +79,6 @@
   name: contract from the depths
   description: A devilish piece of black parchment detailing a contract of revival. All ink that touches the page seems to turn to blood.
   components:
-  - type: RevivalContract
   - type: Paper
     editingDisabled: true
     content: default-contract-content

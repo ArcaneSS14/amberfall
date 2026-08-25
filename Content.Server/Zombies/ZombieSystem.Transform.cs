@@ -5,7 +5,6 @@ using Content.Shared.Rejuvenate;
 // </Trauma>
 using System.Linq;
 using Content.Server.Administration.Managers;
-using Content.Server.Atmos.Components;
 using Content.Server.Body.Components;
 using Content.Server.Chat;
 using Content.Server.Chat.Managers;
@@ -49,7 +48,6 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Content.Shared.NPC.Prototypes;
 using Content.Shared.Roles;
-using Content.Shared.Temperature.Components;
 using Robust.Shared.Utility;
 
 namespace Content.Server.Zombies;
@@ -146,8 +144,6 @@ public sealed partial class ZombieSystem
 
         //we need to basically remove all of these because zombies shouldn't
         //get diseases, breath, be thirst, be hungry, die in space, get double sentience, have offspring or be paraplegic.
-        RemComp<RespiratorComponent>(target);
-        RemComp<BarotraumaComponent>(target);
         RemComp<HungerComponent>(target);
         RemComp<ThirstComponent>(target);
         RemComp<ReproductiveComponent>(target);
@@ -276,10 +272,6 @@ public sealed partial class ZombieSystem
 
         //Make it sentient if it's an animal or something
         _mind.MakeSentient(target);
-
-        //Make the zombie not die in the cold. Good for space zombies
-        if (TryComp<TemperatureDamageComponent>(target, out var tempComp))
-            tempComp.ColdDamage.ClampMax(0);
 
         //Heals the zombie from all the damage it took while human
         _damageable.ClearAllDamage(target);

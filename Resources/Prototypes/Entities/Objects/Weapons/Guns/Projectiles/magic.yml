@@ -24,11 +24,6 @@
     intensitySlope: 3 # Goob edit
     totalIntensity: 28 # Gobo edit
     maxTileBreak: 0
-  - type: IgnitionSource
-    temperature: 400
-    ignited: true
-  - type: IgniteOnCollide
-    fireStacks: 0.35
   - type: Ammo # Goobstation
     muzzleFlash: null
   - type: FlashOnTrigger # Goobstation
@@ -61,9 +56,6 @@
       shader: unshaded
   - type: Reflective
     reflective: Magic
-  - type: IgnitionSource
-    temperature: 1000
-    ignited: true
   - type: RepeatingTrigger
     delay: 0.2 # Trauma - was 0.5
   # <Trauma> - replaced exploding with spawning tile fires

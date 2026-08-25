@@ -12,9 +12,6 @@
     sprite: _Goobstation/Changeling/ling_spacesuit_helmet.rsi
   - type: Clothing
     sprite: _Goobstation/Changeling/ling_spacesuit_helmet.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.225
-    lowPressureMultiplier: 1000
   - type: Unremoveable
   - type: Armor
     coverage:

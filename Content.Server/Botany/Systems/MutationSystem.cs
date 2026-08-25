@@ -2,7 +2,6 @@
 using Content.Trauma.Common.Botany;
 using Content.Shared.Chemistry.Reagent;
 // </Trauma>
-using Content.Shared.Atmos;
 using Content.Shared.EntityEffects;
 using Content.Shared.Random;
 using Robust.Shared.Prototypes;
@@ -90,9 +89,6 @@ public sealed partial class MutationSystem : EntitySystem
         CrossBool(ref result.TurnIntoKudzu, a.TurnIntoKudzu);
         CrossBool(ref result.CanScream, a.CanScream);
 
-        CrossGasses(ref result.ExudeGasses, a.ExudeGasses);
-        CrossGasses(ref result.ConsumeGasses, a.ConsumeGasses);
-
         // LINQ Explanation
         // For the list of mutation effects on both plants, use a 50% chance to pick each one.
         // Union all of the chosen mutations into one list, and pick ones with a Distinct (unique) name.
@@ -146,37 +142,6 @@ public sealed partial class MutationSystem : EntitySystem
         }
     }
 
-    private void CrossGasses(ref Dictionary<Gas, float> val, Dictionary<Gas, float> other)
-    {
-        // Go through gasses from the pollen in swab
-        foreach (var otherGas in other)
-        {
-            // if both have same gas, randomly pick ammount from the two.
-            if (val.ContainsKey(otherGas.Key))
-            {
-                val[otherGas.Key] = Random(0.5f) ? otherGas.Value : val[otherGas.Key];
-            }
-            // if target plant doesn't have this gas, has 50% chance to add it.
-            else
-            {
-                if (Random(0.5f))
-                {
-                    val.Add(otherGas.Key, otherGas.Value);
-                }
-            }
-        }
-        // if the target plant has gas that the pollen in swab does not, 50% chance to remove it.
-        foreach (var thisGas in val)
-        {
-            if (!other.ContainsKey(thisGas.Key))
-            {
-                if (Random(0.5f))
-                {
-                    val.Remove(thisGas.Key);
-                }
-            }
-        }
-    }
     private void CrossFloat(ref float val, float other)
     {
         val = Random(0.5f) ? val : other;

@@ -58,35 +58,6 @@ entities:
       bodyType: Dynamic
     - type: Fixtures
       fixtures: {}
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          -1,-1:
-            0: 32768
-          0,-1:
-            0: 12288
-          0,0:
-            0: 51
-          -1,0:
-            0: 136
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 20
-          - 80
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
     - type: OccluderTree
     - type: Shuttle
     - type: GridPathfinding
@@ -99,7 +70,6 @@ entities:
         nodes: []
     - type: RadiationGridResistance
     - type: SpreaderGrid
-    - type: GasTileOverlay
 - proto: WallReinforced
   entities:
   - uid: 1

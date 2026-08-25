@@ -231,9 +231,6 @@ public sealed partial class MetabolizerSystem : EntitySystem
             {
                 switch (effect)
                 {
-                    case ModifyLungGas:
-                        _entityEffects.ApplyEffect(ent, effect, scale);
-                        break;
                     case AdjustReagent:
                         _entityEffects.ApplyEffect(solutionEntity.Value, effect, scale);
                         break;

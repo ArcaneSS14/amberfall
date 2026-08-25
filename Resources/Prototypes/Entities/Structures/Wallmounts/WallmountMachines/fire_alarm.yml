@@ -20,29 +20,9 @@
   - type: DeviceList
   - type: WiredNetworkConnection
   - type: DeviceNetworkRequiresPower
-  - type: AtmosDevice
-  - type: AtmosAlarmable
-    syncWith:
-      - FireAlarm
-      - AirSensor
-      - GasVent
-      - GasScrubber
-    monitorAlertTypes:
-      - Temperature
-  - type: AtmosAlarmableVisuals
-    layerMap: "fireAlarmState"
-    alarmStates:
-      Normal: fire_off
-      Warning: fire_off # shouldn't be alarming at a warning
-      Danger: fire_on
-      Emagged: fire_emagged
-    hideOnDepowered: [ "fireAlarmState" ]
   - type: Tag
     tags:
       - FireAlarm
-  - type: FireAlarm
-  - type: AtmosAlertsDevice
-    group: FireAlarm
   - type: ContainerFill
     containers:
       board: [ FireAlarmElectronics ]

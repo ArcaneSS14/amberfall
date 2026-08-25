@@ -6,11 +6,9 @@ using System.Numerics;
 using System.Reflection;
 using Content.Client.Construction;
 using Content.IntegrationTests.Tests.Helpers;
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Construction.Components;
 using Content.Server.Gravity;
 using Content.Server.Power.Components;
-using Content.Shared.Atmos;
 using Content.Shared.CombatMode;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Gravity;
@@ -1529,22 +1527,6 @@ public abstract partial class InteractionTest
         {
             var gravity = SEntMan.EnsureComponent<GravityComponent>(target);
             SEntMan.System<GravitySystem>().EnableGravity(target, gravity);
-        });
-    }
-
-    /// <summary>
-    /// Adds a default atmosphere to the test map.
-    /// </summary>
-    protected async Task AddAtmosphere(EntityUid? uid = null)
-    {
-        var target = uid ?? MapData.MapUid;
-        await Server.WaitPost(() =>
-        {
-            var atmosSystem = SEntMan.System<AtmosphereSystem>();
-            var moles = new float[Atmospherics.AdjustedNumberOfGases];
-            moles[(int)Gas.Oxygen] = 21.824779f;
-            moles[(int)Gas.Nitrogen] = 82.10312f;
-            atmosSystem.SetMapAtmosphere(target, false, new GasMixture(moles, Atmospherics.T20C));
         });
     }
 

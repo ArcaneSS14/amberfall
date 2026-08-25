@@ -37,7 +37,6 @@
       folded: true
     - type: Clickable
     - type: InteractionOutline
-    - type: FultonBeacon
     - type: Appearance
     - type: GenericVisualizer
       visuals:
@@ -70,12 +69,6 @@
       Steel: 50
       Cloth: 125
   # </Trauma>
-  - type: Fulton
-    whitelist: # Trauma - allow mobs to be directly fultoned without needing to build a chair
-      components:
-      - Item
-      - Anchorable
-      - Body
   - type: Item
     size: Normal
     inhandVisuals:
@@ -111,22 +104,3 @@
   - type: Stack
     count: 1
 
-- type: entity
-  id: FultonEffect
-  categories: [ HideSpawnMenu ]
-  name: fulton effect
-  components:
-  - type: TimedDespawn
-    lifetime: 60
-  - type: Sprite
-    drawdepth: Effects
-    noRot: true
-    offset: 0,0.5
-    layers:
-      - map: [ "enum.FultonVisualLayers.Base" ]
-        sprite: Objects/Tools/fulton_balloon.rsi
-        state: fulton_balloon
-  - type: Tag
-    tags:
-      - HideContextMenu
-  - type: AnimationPlayer

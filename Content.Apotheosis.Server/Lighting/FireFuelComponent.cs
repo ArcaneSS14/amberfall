@@ -1,8 +1,7 @@
 namespace Content.Apotheosis;
 
 /// <summary>
-/// Marks an entity as solid fuel and stores how many fuel units one entity, or
-/// one unit of a stack, adds to a fuelable fire.
+/// Solid fuel measured in fuel units per entity or stack item.
 /// </summary>
 [RegisterComponent]
 public sealed partial class FireFuelComponent : Component

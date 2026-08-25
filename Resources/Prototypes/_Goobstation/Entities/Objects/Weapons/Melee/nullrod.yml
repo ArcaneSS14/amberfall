@@ -430,9 +430,6 @@
     dropItems: false
   - type: UseDelay
     delay: 3
-  - type: UseDelayBlockKnockdown
-    knockdownSound: /Audio/Items/bikehorn.ogg
-    doCustom: true
   - type: Tag
     tags:
     - HonkmotherMaw

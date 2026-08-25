@@ -1,6 +1,4 @@
 using Content.Server.Access;
-using Content.Server.Atmos.Components;
-using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Climbing.Components;
 using Content.Shared.Doors;
 using Content.Shared.Doors.Components;
@@ -17,7 +15,6 @@ namespace Content.Apotheosis;
 
 public sealed partial class OpenableWindowSystem : EntitySystem
 {
-    [Dependency] private AirtightSystem _airtight = default!;
     [Dependency] private SharedAppearanceSystem _appearance = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private OccluderSystem _occluder = default!;
@@ -60,9 +57,6 @@ public sealed partial class OpenableWindowSystem : EntitySystem
         }
 
         _occluder.SetEnabled(uid, !open);
-
-        if (TryComp<AirtightComponent>(uid, out var airtight))
-            _airtight.SetAirblocked((uid, airtight), !open);
 
         if (open)
         {

@@ -153,8 +153,6 @@
     knockdownTimeDelta: -2
   - type: StaminaResistance
     damageCoefficient: 0.3
-  - type: FireProtection
-    reduction: 0.8
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototypes:

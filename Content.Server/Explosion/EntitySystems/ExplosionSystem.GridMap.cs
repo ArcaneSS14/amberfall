@@ -1,5 +1,4 @@
 using System.Numerics;
-using Content.Shared.Atmos;
 using Content.Shared.Explosion.Components;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -36,7 +35,6 @@ public sealed partial class ExplosionSystem
 
     private void OnGridRemoved(GridRemovalEvent ev)
     {
-        OnAirtightGridRemoved(ev.EntityUid);
         _gridEdges.Remove(ev.EntityUid);
 
         // this should be a small enough set that iterating all of them is fine
@@ -170,7 +168,7 @@ public sealed partial class ExplosionSystem
                 var data = new BlockedSpaceTile();
                 transformedEdges[tile] = data;
 
-                data.UnblockedDirections = AtmosDirection.Invalid; // all directions are blocked automatically.
+                data.UnblockedDirections = ExplosionDirection.Invalid; // all directions are blocked automatically.
 
                 if ((dir & NeighborFlag.Cardinal) == 0)
                     data.BlockingGridEdges.Add(new(default, null, (tile + Vector2Helpers.Half) * tileSize, 0, tileSize));
@@ -193,7 +191,7 @@ public sealed partial class ExplosionSystem
     {
         foreach (var (tile, data) in transformedEdges)
         {
-            if (data.UnblockedDirections == AtmosDirection.Invalid)
+            if (data.UnblockedDirections == ExplosionDirection.Invalid)
                 continue; // already all blocked.
 
             var tileCenter = (tile + new Vector2(0.5f, 0.5f)) * tileSize;
@@ -202,25 +200,25 @@ public sealed partial class ExplosionSystem
                 // if a blocking edge contains the center of the tile, block all directions
                 if (edge.Box.Contains(tileCenter))
                 {
-                    data.UnblockedDirections = AtmosDirection.Invalid;
+                    data.UnblockedDirections = ExplosionDirection.Invalid;
                     break;
                 }
 
                 // check north
                 if (edge.Box.Contains(tileCenter + new Vector2(0, tileSize / 2f)))
-                    data.UnblockedDirections &= ~AtmosDirection.North;
+                    data.UnblockedDirections &= ~ExplosionDirection.North;
 
                 // check south
                 if (edge.Box.Contains(tileCenter + new Vector2(0, -tileSize / 2f)))
-                    data.UnblockedDirections &= ~AtmosDirection.South;
+                    data.UnblockedDirections &= ~ExplosionDirection.South;
 
                 // check east
                 if (edge.Box.Contains(tileCenter + new Vector2(tileSize / 2f, 0)))
-                    data.UnblockedDirections &= ~AtmosDirection.East;
+                    data.UnblockedDirections &= ~ExplosionDirection.East;
 
                 // check west
                 if (edge.Box.Contains(tileCenter + new Vector2(-tileSize / 2f, 0)))
-                    data.UnblockedDirections &= ~AtmosDirection.West;
+                    data.UnblockedDirections &= ~ExplosionDirection.West;
             }
         }
     }
@@ -313,8 +311,8 @@ public sealed partial class ExplosionSystem
 
     // yeah this is now the third direction flag enum, and the 5th (afaik) direction enum overall.....
     /// <summary>
-    ///     Directional bitflags used to denote the neighbouring tiles of some tile on a grid.. Differ from atmos and
-    ///     normal directional flags as NorthEast != North | East
+    ///     Directional bitflags used to denote the neighbouring tiles of a tile on a grid.
+    ///     They differ from normal directional flags as NorthEast != North | East.
     /// </summary>
     [Flags]
     public enum NeighborFlag : byte
@@ -335,21 +333,21 @@ public sealed partial class ExplosionSystem
     }
 
     /// <summary>
-    /// A simple utility to check for overlap between a NeighborFlag and AtmosDirection value.
+    /// A simple utility to check for overlap between a NeighborFlag and ExplosionDirection value.
     /// </summary>
     /// <returns>Returns true if any of the neighbors flag directions are blocked.</returns>
-    public static bool AnyNeighborBlocked(NeighborFlag neighbors, AtmosDirection blockedDirs)
+    public static bool AnyNeighborBlocked(NeighborFlag neighbors, ExplosionDirection blockedDirs)
     {
-        if ((neighbors & NeighborFlag.North) == NeighborFlag.North && (blockedDirs & AtmosDirection.North) == AtmosDirection.North)
+        if ((neighbors & NeighborFlag.North) == NeighborFlag.North && (blockedDirs & ExplosionDirection.North) == ExplosionDirection.North)
             return true;
 
-        if ((neighbors & NeighborFlag.South) == NeighborFlag.South && (blockedDirs & AtmosDirection.South) == AtmosDirection.South)
+        if ((neighbors & NeighborFlag.South) == NeighborFlag.South && (blockedDirs & ExplosionDirection.South) == ExplosionDirection.South)
             return true;
 
-        if ((neighbors & NeighborFlag.East) == NeighborFlag.East && (blockedDirs & AtmosDirection.East) == AtmosDirection.East)
+        if ((neighbors & NeighborFlag.East) == NeighborFlag.East && (blockedDirs & ExplosionDirection.East) == ExplosionDirection.East)
             return true;
 
-        if ((neighbors & NeighborFlag.West) == NeighborFlag.West && (blockedDirs & AtmosDirection.West) == AtmosDirection.West)
+        if ((neighbors & NeighborFlag.West) == NeighborFlag.West && (blockedDirs & ExplosionDirection.West) == ExplosionDirection.West)
             return true;
 
         return false;
@@ -370,14 +368,14 @@ public sealed partial class ExplosionSystem
 }
 
 /// <summary>
-///     This class has information about the space equivalent of an airtight entity blocking explosions: the edges of grids.
+///     This class has information about the space equivalent of an explosion blocker blocking explosions: the edges of grids.
 /// </summary>
 public sealed class BlockedSpaceTile
 {
     /// <summary>
     ///     What directions of this tile are not blocked?
     /// </summary>
-    public AtmosDirection UnblockedDirections = AtmosDirection.All;
+    public ExplosionDirection UnblockedDirections = ExplosionDirection.All;
 
     /// <summary>
     ///     The set of grid edge-tiles that are blocking this space tile.

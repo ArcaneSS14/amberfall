@@ -17,20 +17,6 @@
       prob: 0.1
 
 - type: entity
-  parent: BaseGameRule
-  id: Insurgency
-  components:
-  - type: GameRule
-    minPlayers: 5
-  - type: NestedRule
-    rules: !type:GroupSelector
-      children:
-      - id: InsurgencyShipVariantTide
-        weight: 30
-      - id: InsurgencyShipVariantInsurgents
-        weight: 70
-
-- type: entity
   abstract: true
   parent: BaseRoundstartAntagRule
   id: BaseInsurgencyRule

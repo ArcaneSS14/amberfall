@@ -2,7 +2,6 @@
 using Content.Medical.Common.Damage;
 using Content.Medical.Common.Targeting;
 // </Trauma>
-using Content.Shared.Atmos.Rotting;
 using Content.Shared.Chat;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
@@ -38,7 +37,6 @@ public abstract partial class SharedDefibrillatorSystem : EntitySystem
     [Dependency] private MobThresholdSystem _mobThreshold = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private PowerCellSystem _powerCell = default!;
-    [Dependency] private SharedRottingSystem _rotting = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private UseDelaySystem _useDelay = default!;
@@ -198,12 +196,7 @@ public abstract partial class SharedDefibrillatorSystem : EntitySystem
         }
 
         var failedRevive = true;
-        if (_rotting.IsRotten(target))
-        {
-            _chat.TrySendInGameICMessage(ent.Owner, Loc.GetString("defibrillator-rotten"),
-                InGameICChatType.Speak, true);
-        }
-        else if (TryComp<UnrevivableComponent>(target, out var unrevivable))
+        if (TryComp<UnrevivableComponent>(target, out var unrevivable))
         {
             _chat.TrySendInGameICMessage(ent.Owner, Loc.GetString(unrevivable.ReasonMessage),
                 InGameICChatType.Speak, true);

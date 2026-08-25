@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 08/14/2025 11:29:03
-  entityCount: 563
+  entityCount: 560
 maps: []
 grids:
 - 1
@@ -61,72 +61,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 61152
-          0,1:
-            0: 61166
-          0,2:
-            0: 61166
-          0,3:
-            0: 61152
-          0,4:
-            0: 238
-          1,0:
-            0: 65520
-          1,1:
-            0: 32767
-          1,2:
-            0: 30583
-          1,3:
-            0: 65520
-          1,4:
-            0: 255
-          2,0:
-            0: 56784
-          2,1:
-            0: 4095
-          2,2:
-            0: 65535
-          2,3:
-            0: 48048
-          2,4:
-            0: 187
-          3,3:
-            0: 30576
-          3,0:
-            0: 1632
-          3,1:
-            0: 28398
-          3,2:
-            0: 59118
-          3,4:
-            0: 119
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
 - proto: AlwaysPoweredLightExterior
@@ -221,14 +155,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 13.5,1.5
-      parent: 1
-- proto: AtmosDeviceFanTiny
-  entities:
-  - uid: 16
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 12.5,6.5
       parent: 1
 - proto: BalloonCorgi
   entities:
@@ -1795,16 +1721,6 @@ entities:
     - type: Transform
       pos: 4.8353815,5.040293
       parent: 1
-- proto: PlushieLouie
-  entities:
-  - uid: 275
-    components:
-    - type: Transform
-      pos: 11.428225,2.8811665
-      parent: 1
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
 - proto: PlushieMagicarp
   entities:
   - uid: 276
@@ -1975,8 +1891,6 @@ entities:
     - type: Transform
       pos: 4.2374835,7.472995
       parent: 1
-    - type: SingularityDistortion
-      intensity: 2000.0001
     - type: Physics
       angularDamping: 0
       linearDamping: 0
@@ -2873,13 +2787,6 @@ entities:
     components:
     - type: Transform
       pos: 6.289399,8.103636
-      parent: 1
-- proto: ToySkeleton
-  entities:
-  - uid: 441
-    components:
-    - type: Transform
-      pos: 9.638412,8.471193
       parent: 1
 - proto: ToySword
   entities:

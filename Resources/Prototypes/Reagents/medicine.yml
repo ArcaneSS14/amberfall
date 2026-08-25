@@ -189,24 +189,6 @@
   - !type:PlantCryoxadone {}
   worksOnTheDead: true # Goobstation
   metabolisms:
-    Bloodstream:
-      effects:
-        - !type:EvenHealthChange
-          conditions:
-          - !type:TemperatureCondition
-            # this is a little arbitrary but they gotta be pretty cold
-            max: 213.0
-          scaleByTemperature: # Shitmed Change
-            min: 100.0
-            max: 213.0
-            scale: 1.6
-          damage:
-          # todo scale with temp like SS13
-            Airloss: -3
-            Brute: -2
-            Burn: -2
-            Toxin: -2
-
 - type: reagent
   id: Doxarubixadone
   name: reagent-name-doxarubixadone
@@ -217,20 +199,6 @@
   color: "#32cd32"
   worksOnTheDead: true # Goobstation - Cryo rebalance
   metabolisms:
-    Bloodstream:
-      effects:
-        - !type:HealthChange
-          conditions:
-          - !type:TemperatureCondition
-            max: 213.0
-          scaleByTemperature: # Shitmed Change
-            min: 100.0
-            max: 213.0
-            scale: 1.6
-          damage:
-            types:
-             Cellular: -2
-
 - type: reagent
   id: Dermaline
   name: reagent-name-dermaline
@@ -539,16 +507,6 @@
         damage:
           types:
             Cold: -4
-      - !type:AdjustTemperature
-        conditions:
-        - !type:TemperatureCondition
-          max: 293.15
-        amount: 100000 # thermal energy, not temperature!
-      - !type:AdjustTemperature
-        conditions:
-        - !type:TemperatureCondition
-          min: 293.15
-        amount: -10000
       - !type:PopupMessage
         type: Local
         visualType: Medium
@@ -808,11 +766,6 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        conditions:
-        damage:
-          types:
-            Poison: 2
       - !type:ModifyStatusEffect
         effectProto: StatusEffectStunned
         time: 3.0
@@ -1228,41 +1181,10 @@
       # </Trauma>
       - !type:SatiateThirst
         factor: 3
-      - !type:HealthChange
-        conditions:
-        damage:
-          types:
-            Blunt: -0.2
-            Poison: -0.2
-            Heat: -0.2
-            Shock: -0.2
-            Cold: -0.2
   reactiveEffects:
-    Extinguish:
-      methods: [ Touch ]
-      effects:
-      - !type:Extinguish
-        holy: true # Trauma - don't let it extinguish its own holy fire
-    Acidic: # Trauma
-      methods: [ Touch ]
-      effects:
-      - !type:HolyIgnite
-        stacks: 3
-        conditions:
-#    Acidic:  # Goobstation - Removing holy water damage on touch pending rework.
-#      methods: [ Touch ]
-#      effects:
-#      - !type:HealthChange
-#        ignoreResistances: false
-#        damage:
-#          types:
-#            Holy: 0.5
   plantMetabolism:
   - !type:PlantAdjustWater
     amount: 1
-  tileReactions:
-  - !type:ExtinguishTileReaction { }
-
 - type: reagent
   id: Pyrazine
   name: reagent-name-pyrazine
@@ -1327,9 +1249,6 @@
         reagent:  Tazinide
         amount: -2
       # makes you a little chilly when not oding
-      - !type:AdjustTemperature
-        amount: -2500
-      # od makes you freeze to death
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -1338,12 +1257,6 @@
         damage:
           types:
             Cold: 1 # 4 per u
-      - !type:AdjustTemperature
-        conditions:
-        - !type:ReagentCondition
-          reagent: Insuzine
-          min: 12
-        amount: -30000
       - !type:Jitter
         conditions:
         - !type:ReagentCondition
@@ -1360,17 +1273,6 @@
   color: "#b5e36d"
   worksOnTheDead: true
   metabolisms:
-    Bloodstream:
-      effects:
-        - !type:ReduceRotting
-          seconds: 10 # Goob - Reduce effectiveness in exchange for easier recipe
-          conditions:
-          #Patient must be dead and in a cryo tube (or something cold)
-          - !type:TemperatureCondition
-            max: 150.0
-          - !type:MobStateCondition
-            mobstate: Dead
-
 - type: reagent
   id: Arcryox
   name: reagent-name-arcryox
@@ -1381,20 +1283,6 @@
   color: "#0cbfe9"
   worksOnTheDead: true
   metabolisms:
-    Bloodstream:
-      effects:
-      - !type:EvenHealthChange
-        conditions:
-        - !type:TemperatureCondition
-          max: 213.0
-        scaleByTemperature: # Trauma
-          min: 100.0
-          max: 213.0
-          scale: 1.6
-        damage:
-          Brute: -4.5 # Trauma - Was 3
-          Burn: -4.5 # Trauma - Was 3
-
 - type: reagent
   id : Aloxadone
   name: reagent-name-aloxadone
@@ -1405,19 +1293,6 @@
   color: "#89f77f"
   worksOnTheDead: true
   metabolisms:
-    Bloodstream:
-      effects:
-      - !type:EvenHealthChange
-        conditions:
-        - !type:TemperatureCondition
-          max: 213.0
-        scaleByTemperature: # Shitmed Change
-          min: 100.0
-          max: 213.0
-          scale: 1.6
-        damage:
-          Burn: -10 # Goob - was -4.5
-
 - type: reagent
   id : Mannitol # currently this is just a way to create psicodine
   name: reagent-name-mannitol

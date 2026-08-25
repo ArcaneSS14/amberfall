@@ -19,8 +19,6 @@
     tags:
     - Lighter # for cig pack storage
   # </Trauma>
-  - type: IgnitionSource
-    ignited: false
   - type: ItemToggle
     predictable: false
     soundActivate:

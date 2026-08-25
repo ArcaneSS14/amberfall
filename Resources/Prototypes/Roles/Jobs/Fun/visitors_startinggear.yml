@@ -447,7 +447,6 @@
     ears: ClothingHeadsetEngineering
     eyes: ClothingEyesGlassesMeson
     outerClothing: ClothingOuterSuitAtmosFire
-    suitstorage: AirTankFilled
     pocket1: CrowbarRed
   inhand:
   - FireExtinguisher
@@ -461,7 +460,6 @@
     head: ClothingHeadHatHardhatYellow
     neck: ClothingNeckScarfStripedLightBlue
     id: VisitorPDA
-    belt: DoubleEmergencyOxygenTankFilled
     back: ClothingBackpackSatchelAtmospherics
     ears: ClothingHeadsetEngineering
     eyes: ClothingEyesGlassesMeson
@@ -501,7 +499,6 @@
     eyes: ClothingEyesGlassesMeson
     outerClothing: ClothingOuterVestHazard
     pocket1: HolofanProjector
-    pocket2: GasAnalyzer
   inhand:
   - SheetSteel
 
@@ -701,7 +698,6 @@
 #    mask: ClothingMaskBreathMedical # right now this is broken for vox, but maybe some day.
     id: VisitorPDA
     belt: ClothingBeltStorageWaistbag
-    back: NitrousOxideTankFilled
     ears: ClothingHeadsetMedical
     eyes: ClothingEyesGlasses
     pocket1: Scalpel
@@ -1891,7 +1887,6 @@
     head: ClothingHeadHatPirate
     ears: ClothingHeadsetAltFreelancer
     neck: ClothingNeckCloakPirateCap
-    outerClothing: ClothingOuterVestWeb
     pocket1: WeaponRevolverPirate
 
 ### Other
@@ -1906,7 +1901,6 @@
     back: ClothingBackpackMerc
     belt: ClothingBeltMercWebbing
     ears: ClothingHeadsetGrey
-    outerClothing: ClothingOuterVestWebMerc
     pocket1: WeaponLaserSvalinn
     pocket2: RadioHandheld
 

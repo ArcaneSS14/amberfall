@@ -1,22 +1,4 @@
 - type: guideEntry
-  id: Chemicals
-  name: guide-entry-chemicals
-  text: "/ServerInfo/Guidebook/Chemicals.xml"
-  children:
-  - Elements
-  - Medicine
-  - Narcotics
-  - Pyrotechnic
-  - Toxins
-  - Foods
-  - Botanical
-  - Biological
-  - Special
-  - Others
-  - Solids # Trauma
-  filterEnabled: True
-
-- type: guideEntry
   id: Elements
   name: guide-entry-elements
   text: "/ServerInfo/Guidebook/ChemicalTabs/Elements.xml"

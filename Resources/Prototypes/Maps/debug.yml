@@ -18,11 +18,11 @@
   id: Dev
   mapName: Dev
   mapLayers:
-    - /Maps/_Trauma/Test/dev_map.yml # Trauma
-    - /Maps/_Apotheosis/Test/dev_map_second_layer.yml
+    - /Maps/_Apotheosis/Test/dev.yml
+    - /Maps/_Apotheosis/Test/dev_2l.yml
   minPlayers: 0
   stations:
-    Dev:
+    Empty:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup

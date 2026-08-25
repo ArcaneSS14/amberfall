@@ -21,8 +21,6 @@
     Plasma:
       amount: 1
   effects:
-  - !type:CreateGas
-    gas: Plasma
   - !type:PopupMessage
     visualType: LargeCaution
     messages: [ "phlogiston-plasma-created" ]

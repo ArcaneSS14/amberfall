@@ -1,13 +1,11 @@
 // <Trauma>
 using Content.Trauma.Common.Botany;
 // </Trauma>
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Botany.Components;
 using Content.Server.Hands.Systems;
 using Content.Server.Popups;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Chemistry.EntitySystems;
-using Content.Shared.Atmos;
 using Content.Shared.Botany;
 using Content.Shared.Burial.Components;
 using Content.Shared.Chemistry.Reagent;
@@ -35,7 +33,6 @@ namespace Content.Server.Botany.Systems;
 
 public sealed partial class PlantHolderSystem : EntitySystem
 {
-    [Dependency] private AtmosphereSystem _atmosphere = default!;
     [Dependency] private BotanySystem _botany = default!;
     [Dependency] private MutationSystem _mutation = default!;
     [Dependency] private AppearanceSystem _appearance = default!;
@@ -529,67 +526,9 @@ public sealed partial class PlantHolderSystem : EntitySystem
                 component.UpdateSpriteAfterUpdate = true;
         }
 
-        var environment = _atmosphere.GetContainingMixture(uid, true, true) ?? GasMixture.SpaceGas;
-
         component.MissingGas = 0;
-        if (component.Seed.ConsumeGasses.Count > 0)
-        {
-            foreach (var (gas, amount) in component.Seed.ConsumeGasses)
-            {
-                if (environment.GetMoles(gas) < amount)
-                {
-                    component.MissingGas++;
-                    continue;
-                }
-
-                environment.AdjustMoles(gas, -amount);
-            }
-
-            if (component.MissingGas > 0)
-            {
-                component.Health -= component.MissingGas * HydroponicsSpeedMultiplier;
-                if (component.DrawWarnings)
-                    component.UpdateSpriteAfterUpdate = true;
-            }
-        }
-
-        // SeedPrototype pressure resistance.
-        var pressure = environment.Pressure;
-        if (pressure < component.Seed.LowPressureTolerance || pressure > component.Seed.HighPressureTolerance)
-        {
-            component.Health -= healthMod;
-            component.ImproperPressure = true;
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
-        }
-        else
-        {
-            component.ImproperPressure = false;
-        }
-
-        // SeedPrototype ideal temperature.
-        if (MathF.Abs(environment.Temperature - component.Seed.IdealHeat) > component.Seed.HeatTolerance)
-        {
-            component.Health -= healthMod;
-            component.ImproperHeat = true;
-            if (component.DrawWarnings)
-                component.UpdateSpriteAfterUpdate = true;
-        }
-        else
-        {
-            component.ImproperHeat = false;
-        }
-
-        // Gas production.
-        var exudeCount = component.Seed.ExudeGasses.Count;
-        if (exudeCount > 0)
-        {
-            foreach (var (gas, amount) in component.Seed.ExudeGasses)
-            {
-                environment.AdjustMoles(gas,
-                    MathF.Max(1f, MathF.Round(amount * MathF.Round(component.Seed.Potency) / exudeCount)));
-            }
-        }
+        component.ImproperPressure = false;
+        component.ImproperHeat = false;
 
         // Toxin levels beyond the plant's tolerance cause damage.
         // They are, however, slowly reduced over time.

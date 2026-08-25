@@ -50,8 +50,6 @@
           Closing: { state: closing }
           Open: { state: open }
           Opening: { state: opening }
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
   - type: Occluder
   - type: Damageable
     damageModifierSet: StrongMetallic

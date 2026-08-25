@@ -184,9 +184,6 @@
       types:
         Blunt: 2
         Heat: 2
-  - type: IgniteOnCollide
-    fireStacks: 2
-
 - type: entity
   parent: BaseBullet
   id: BulletSleepshot

@@ -17,10 +17,6 @@
     - ReagentId: Phlogiston
       Quantity: 30
   attackEffects:
-  - !type:Flammable
-    multiplier: 2
-  - !type:Ignite
-
 - type: blobChem
   id: ReactiveSpines
   name: "reactive spines"

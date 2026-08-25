@@ -51,19 +51,6 @@
   group: SalvageJobReward3
 
 - type: cargoProduct
-  id: CargoVoidJetpack
-  icon:
-    sprite: Objects/Tanks/Jetpacks/void.rsi
-    state: icon
-  product: JetpackVoidFilled
-  container:
-    entity: WrappedParcel
-    containerId: contents
-  cost: 4000
-  category: cargoproduct-category-name-cargo
-  group: SalvageJobReward3
-
-- type: cargoProduct
   id: CargoCrusherGlaive
   icon:
     sprite: Objects/Weapons/Melee/crusher_glaive.rsi

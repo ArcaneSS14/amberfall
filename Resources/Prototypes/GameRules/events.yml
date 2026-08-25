@@ -1,87 +1,3 @@
-- type: entityTable
-  id: BasicCalmEventsTable
-  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
-    children:
-    - !type:NestedSelector # Trauma
-      tableId: BasicCalmEventsTrauma
-    - id: AnomalySpawn
-    - id: BluespaceArtifact
-    - id: BluespaceLocker
-    - id: BreakerFlip
-    - id: BureaucraticError
-    - id: ClericalError
-    - id: CockroachMigration
-    - id: GasLeak
-    - id: GreytideVirus
-    - id: IonStorm # its calm like 90% of the time smh
-    - id: JobDistributionError
-    - id: KudzuGrowth
-    - id: MassHallucinations
-    - id: MouseMigration
-    - id: PowerGridCheck
-    - id: RandomSentience
-    # <Trauma> - moved shit to basic antag
-    #- id: SlimesSpawnHorde
-    - id: SolarFlare
-    #- id: SnakeSpawnHorde
-    #- id: SpiderClownSpawnHorde
-    #- id: SpiderSpawnHorde
-    # </Trauma>
-    - id: VentClog
-
-- type: entityTable
-  id: BasicAntagEventsTable
-  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
-    children:
-    # <Trauma>
-    - id: SlimesSpawnHorde
-    - id: SnakeSpawnHorde
-    - id: SpiderClownSpawnHorde
-    - id: SpiderSpawnHorde
-    - id: CoconutCrabSpawn
-    - !type:NestedSelector
-      tableId: BasicAntagEventsTrauma
-    # </Trauma>
-    - id: ClosetSkeleton
-    - id: KingRatMigration
-    #- id: RevenantSpawn  # GoobStation - removed till rework
-    - !type:NestedSelector
-      tableId: DerelictBorgEventTable
-
-- type: entityTable
-  id: ModerateAntagEventsTable # Stop letting this shit spawn before 50 minutes or ill repo ban everyone
-  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
-    children:
-    - !type:NestedSelector # Trauma
-      tableId: ModerateAntagEventsTrauma
-    - id: DragonSpawn
-    - id: NinjaSpawn
-    #- id: ParadoxCloneSpawn # Trauma, moved to minor
-    #- id: RevenantSpawn  # GoobStation - removed till rework
-    #- id: SleeperAgents # Trauma, moved to minor
-    #- id: ZombieOutbreak Trauma - we dont want this as a midround
-    - id: LoneOpsSpawn
-    #- id: WizardSpawn # Trauma - chud wizard removed pending rework
-    # - !type:NestedSelector # Trauma, moved to minor
-    #   tableId: DerelictBorgEventTable
-
-- type: entityTable
-  id: DerelictBorgEventTable #For Derelict Borg spawns
-  table: !type:GroupSelector
-    children:
-    - !type:GroupSelector # Standard NT Borgs
-      weight: 85
-      children:
-        - id: DerelictEngineerCyborgSpawn
-        - id: DerelictGenericCyborgSpawn
-        - id: DerelictJanitorCyborgSpawn
-        - id: DerelictMedicalCyborgSpawn
-        - id: DerelictMiningCyborgSpawn
-    - !type:GroupSelector # Other Borgs
-      weight: 15
-      children:
-        - id: DerelictSyndicateAssaultCyborgSpawn
-
 - type: entity
   abstract: true
   parent: BaseGameRule
@@ -130,8 +46,6 @@
       path: /Audio/Announcements/announce.ogg
     weight: 8
     duration: 35
-  - type: AnomalySpawnRule
-
 - type: entity
   id: BluespaceArtifact
   parent: BaseStationEventShortDelay
@@ -348,8 +262,6 @@
       path: /Audio/Announcements/attention.ogg
     endAnnouncement: station-event-gas-leak-end-announcement
     weight: 8
-  - type: GasLeakRule
-
 - type: entity
   id: KudzuGrowth
   parent: BaseStationEventLongDelay
@@ -417,10 +329,6 @@
     minimumPlayers: 15
     weight: 5
     duration: 60
-  - type: VentClogRule
-
-# Critters
-
 - type: entity
   id: SlimesSpawnHorde
   parent: BaseStationEventShortDelay
@@ -434,14 +342,6 @@
     weight: 7 # Trauma - was 5
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      # <Trauma>
-      - id: XenobioSlimeBabySpawner # nuke wizden slimes in favor of xenobio
-      # </Trauma>
-
 - type: entity
   id: SnakeSpawnHorde
   parent: BaseStationEventShortDelay
@@ -455,16 +355,6 @@
     weight: 5
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      # <Trauma>
-      - id: MobPurpleSnakeVent
-      - id: MobSmallPurpleSnakeVent
-      - id: MobCobraSpaceVent
-      # </Trauma>
-
 - type: entity
   id: SpiderSpawnHorde
   parent: BaseStationEventShortDelay
@@ -478,12 +368,6 @@
     weight: 7 # Trauma - was 5
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      - id: MobGiantSpiderAngry
-
 - type: entity
   id: SpiderClownSpawnHorde
   parent: BaseStationEventShortDelay
@@ -497,12 +381,6 @@
     weight: 2 # Trauma - was 1.5
     duration: 5
     maxDuration: 20
-  - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
-      children:
-      - id: MobClownSpider
-
 - type: entity
   id: ZombieOutbreak
   parent: BaseGameRule
@@ -716,3 +594,90 @@
     antags:
     - !type:FixedAntagCount
       proto: DerelictSyndicateAssaultCyborg
+
+- type: entityTable
+  id: BasicCalmEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - !type:NestedSelector # Trauma
+      tableId: BasicCalmEventsTrauma
+    - id: AnomalySpawn
+    - id: BluespaceArtifact
+    - id: BluespaceLocker
+    - id: BreakerFlip
+    - id: BureaucraticError
+    - id: ClericalError
+    - id: CockroachMigration
+    - id: GasLeak
+    - id: GreytideVirus
+    - id: IonStorm # its calm like 90% of the time smh
+    - id: JobDistributionError
+    - id: KudzuGrowth
+    - id: MassHallucinations
+    - id: MouseMigration
+    - id: PowerGridCheck
+    - id: RandomSentience
+    # <Trauma> - moved shit to basic antag
+    #- id: SlimesSpawnHorde
+    - id: SolarFlare
+    #- id: SnakeSpawnHorde
+    #- id: SpiderClownSpawnHorde
+    #- id: SpiderSpawnHorde
+    # </Trauma>
+    - id: VentClog
+
+
+- type: entityTable
+  id: BasicAntagEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    # <Trauma>
+    - id: SlimesSpawnHorde
+    - id: SnakeSpawnHorde
+    - id: SpiderClownSpawnHorde
+    - id: SpiderSpawnHorde
+    - id: CoconutCrabSpawn
+    - !type:NestedSelector
+      tableId: BasicAntagEventsTrauma
+    # </Trauma>
+    - id: ClosetSkeleton
+    - id: KingRatMigration
+    #- id: RevenantSpawn  # GoobStation - removed till rework
+    - !type:NestedSelector
+      tableId: DerelictBorgEventTable
+
+
+- type: entityTable
+  id: ModerateAntagEventsTable # Stop letting this shit spawn before 50 minutes or ill repo ban everyone
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - !type:NestedSelector # Trauma
+      tableId: ModerateAntagEventsTrauma
+    - id: DragonSpawn
+    - id: NinjaSpawn
+    #- id: ParadoxCloneSpawn # Trauma, moved to minor
+    #- id: RevenantSpawn  # GoobStation - removed till rework
+    #- id: SleeperAgents # Trauma, moved to minor
+    #- id: ZombieOutbreak Trauma - we dont want this as a midround
+    - id: LoneOpsSpawn
+    #- id: WizardSpawn # Trauma - chud wizard removed pending rework
+    # - !type:NestedSelector # Trauma, moved to minor
+    #   tableId: DerelictBorgEventTable
+
+
+- type: entityTable
+  id: DerelictBorgEventTable #For Derelict Borg spawns
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector # Standard NT Borgs
+      weight: 85
+      children:
+        - id: DerelictEngineerCyborgSpawn
+        - id: DerelictGenericCyborgSpawn
+        - id: DerelictJanitorCyborgSpawn
+        - id: DerelictMedicalCyborgSpawn
+        - id: DerelictMiningCyborgSpawn
+    - !type:GroupSelector # Other Borgs
+      weight: 15
+      children:
+        - id: DerelictSyndicateAssaultCyborgSpawn

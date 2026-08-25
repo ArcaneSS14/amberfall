@@ -23,8 +23,6 @@
     fireCost: 0.1
   - type: Appearance
   - type: AmmoCounter
-  - type: PressureDamageChange
-  - type: PressureEfficiency
   - type: UpgradeableWeapon
     maxUpgradeCapacity: 40
   - type: ContainerContainer

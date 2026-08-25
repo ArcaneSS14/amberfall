@@ -117,9 +117,6 @@
       Steel: 200
   - type: StaticPrice
     price: 40
-  - type: IgnitionSource
-    temperature: 700
-
 - type: entity
   parent: [SolutionToolWelder, BaseWelder]
   id: Welder

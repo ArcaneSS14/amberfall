@@ -12,20 +12,6 @@
       entity_storage: !type:NestedSelector
         tableId: LockerFillRoboticist
 
-- type: entityTable
-  id: LockerFillRoboticist
-  table: !type:AllSelector
-    children:
-    - id: ClothingHandsGlovesRobohands
-    - id: ClothingHeadsetRobotics
-    - id: ClothingMaskSterile
-    - id: ClothingOuterCoatRobo
-    - id: ClothingOuterWinterRobo
-    - id: ClothingBeltUtilityFilled
-    - id: ClothingEyesHudDiagnostic
-
-# Geneticist
-
 - type: entity
   parent: LockerGeneticist
   id: LockerGeneticistFilled
@@ -35,6 +21,20 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: LockerFillGeneticist
+
+- type: entityTable
+  id: LockerFillRoboticist
+  table: !type:AllSelector
+    children:
+    - id: ClothingHandsGlovesRobohands
+    - id: ClothingHeadsetRobotics
+    - id: ClothingMaskSterile
+    - id: ClothingOuterCoatRobo
+    - id: ClothingOuterWinterRobo
+    - id: ClothingEyesHudDiagnostic
+
+# Geneticist
+
 
 - type: entityTable
   id: LockerFillGeneticist

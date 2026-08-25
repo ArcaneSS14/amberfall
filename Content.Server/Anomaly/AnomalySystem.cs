@@ -1,5 +1,4 @@
 using Content.Server.Anomaly.Components;
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Audio;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Materials;
@@ -28,7 +27,6 @@ public sealed partial class AnomalySystem : SharedAnomalySystem
 {
     [Dependency] private IConfigurationManager _configuration = default!;
     [Dependency] private AmbientSoundSystem _ambient = default!;
-    [Dependency] private AtmosphereSystem _atmosphere = default!;
     [Dependency] private ExplosionSystem _explosion = default!;
     [Dependency] private MaterialStorageSystem _material = default!;
     [Dependency] private SharedPointLightSystem _pointLight = default!;
@@ -327,3 +325,4 @@ public sealed partial class AnomalySystem : SharedAnomalySystem
     }
     #endregion
 }
+

@@ -4,14 +4,12 @@ using Content.Trauma.Common.Lathe;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Administration.Logs;
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Fluids.EntitySystems;
 using Content.Server.Lathe.Components;
 using Content.Server.Materials;
 using Content.Server.Popups;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Stack;
-using Content.Shared.Atmos;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
@@ -39,7 +37,6 @@ namespace Content.Server.Lathe
     {
         [Dependency] private IGameTiming _timing = default!;
         [Dependency] private IAdminLogManager _adminLogger = default!;
-        [Dependency] private AtmosphereSystem _atmosphere = default!;
         [Dependency] private SharedAppearanceSystem _appearance = default!;
         [Dependency] private SharedAudioSystem _audio = default!;
         [Dependency] private ContainerSystem _container = default!;
@@ -51,12 +48,6 @@ namespace Content.Server.Lathe
         [Dependency] private ReagentSpeedSystem _reagentSpeed = default!;
         [Dependency] private SharedSolutionContainerSystem _solution = default!;
         [Dependency] private StackSystem _stack = default!;
-        [Dependency] private TransformSystem _transform = default!;
-
-        /// <summary>
-        /// Per-tick cache
-        /// </summary>
-        private readonly List<GasMixture> _environments = new();
 
         public override void Initialize()
         {
@@ -77,7 +68,6 @@ namespace Content.Server.Lathe
             SubscribeLocalEvent<LatheComponent, MaterialAmountChangedEvent>(OnMaterialAmountChanged);
             SubscribeLocalEvent<TechnologyDatabaseComponent, LatheGetRecipesEvent>(OnGetRecipes);
             SubscribeLocalEvent<EmagLatheRecipesComponent, LatheGetRecipesEvent>(GetEmagLatheRecipes);
-            SubscribeLocalEvent<LatheHeatProducingComponent, LatheStartPrintingEvent>(OnHeatStartPrinting);
         }
         public override void Update(float frameTime)
         {
@@ -89,38 +79,6 @@ namespace Content.Server.Lathe
 
                 if (_timing.CurTime - comp.StartTime >= comp.ProductionLength)
                     FinishProducing(uid, lathe);
-            }
-
-            var heatQuery = EntityQueryEnumerator<LatheHeatProducingComponent, LatheProducingComponent, TransformComponent>();
-            while (heatQuery.MoveNext(out var uid, out var heatComp, out _, out var xform))
-            {
-                if (_timing.CurTime < heatComp.NextSecond)
-                    continue;
-                heatComp.NextSecond += TimeSpan.FromSeconds(1);
-
-                var position = _transform.GetGridTilePositionOrDefault((uid, xform));
-                _environments.Clear();
-
-                if (_atmosphere.GetTileMixture(xform.GridUid, xform.MapUid, position, true) is { } tileMix)
-                    _environments.Add(tileMix);
-
-                if (xform.GridUid != null)
-                {
-                    var enumerator = _atmosphere.GetAdjacentTileMixtures(xform.GridUid.Value, position, false, true);
-                    while (enumerator.MoveNext(out var mix))
-                    {
-                        _environments.Add(mix);
-                    }
-                }
-
-                if (_environments.Count > 0)
-                {
-                    var heatPerTile = heatComp.EnergyPerSecond / _environments.Count;
-                    foreach (var env in _environments)
-                    {
-                        _atmosphere.AddHeat(env, heatPerTile);
-                    }
-                }
             }
         }
 
@@ -330,11 +288,6 @@ namespace Content.Server.Lathe
 
             if (TryComp<TechnologyDatabaseComponent>(uid, out var database))
                 AddRecipesFromDynamicPacks(ref args, database, component.EmagDynamicPacks);
-        }
-
-        private void OnHeatStartPrinting(EntityUid uid, LatheHeatProducingComponent component, LatheStartPrintingEvent args)
-        {
-            component.NextSecond = _timing.CurTime;
         }
 
         private void OnMaterialAmountChanged(EntityUid uid, LatheComponent component, ref MaterialAmountChangedEvent args)

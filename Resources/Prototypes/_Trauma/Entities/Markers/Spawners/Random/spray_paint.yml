@@ -16,6 +16,7 @@
     offset: 0.0
 
 # fun fluff spawner / cargo product
+
 - type: entityTable
   id: SprayPaints
   table: !type:GroupSelector
@@ -32,6 +33,7 @@
       weight: 2
 
 # random maints locker loot
+
 - type: entityTable
   id: SprayPaintsDeath
   table: !type:GroupSelector

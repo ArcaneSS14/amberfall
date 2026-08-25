@@ -12,10 +12,6 @@
     size: Large
     shape:
     - 0,0,1,1
-  - type: PressureDamageChange
-    appliedModifier: 3.75
-    applyToMelee: false
-  - type: PressureEfficiency
   - type: UpgradeableWeapon
   - type: ContainerContainer
     containers:

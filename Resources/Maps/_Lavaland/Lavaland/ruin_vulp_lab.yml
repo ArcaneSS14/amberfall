@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 01/08/2026 12:49:26
-  entityCount: 313
+  entityCount: 309
 maps: []
 grids:
 - 1
@@ -441,11 +441,6 @@ entities:
             20: 1.306257,9.0753975
             21: 0.962507,9.0597725
             22: 0.665632,8.5910225
-    - type: GridAtmosphere
-      version: 2
-      data:
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
 - proto: AirlockExternalCommandLocked
@@ -1004,13 +999,6 @@ entities:
     components:
     - type: Transform
       pos: -4.5,8.5
-      parent: 1
-- proto: ClothingBackpackDuffelSurgeryFilled
-  entities:
-  - uid: 101
-    components:
-    - type: Transform
-      pos: 9.537022,8.669647
       parent: 1
 - proto: ClothingEyesGlassesChemical
   entities:
@@ -1695,26 +1683,6 @@ entities:
     components:
     - type: Transform
       pos: 0.5,12.5
-      parent: 1
-- proto: VulpkaninCube
-  entities:
-  - uid: 205
-    components:
-    - type: Transform
-      pos: 3.3710387,9.388218
-      parent: 1
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-  - uid: 206
-    components:
-    - type: Transform
-      pos: 3.501422,9.591343
-      parent: 1
-  - uid: 207
-    components:
-    - type: Transform
-      pos: 3.626422,9.388218
       parent: 1
 - proto: WallReinforced
   entities:

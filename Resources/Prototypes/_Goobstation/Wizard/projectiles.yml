@@ -382,10 +382,6 @@
     damage:
       types:
         Heat: 0
-  - type: RandomTeleportOnProjectileHit
-    whitelist:
-      components:
-      - Body
   - type: RandomTeleport
     radius:
       min: 0
@@ -413,8 +409,6 @@
     damage:
       types:
         Heat: 25
-  - type: IgniteOnCollide
-    fireStacks: 10
   - type: Reflective
     reflective: Magic
   - type: Ammo
@@ -440,12 +434,6 @@
     damage:
       types:
         Cold: 20
-  - type: IceCubeOnProjectileHit
-    whitelist:
-      requireAll: true
-      components:
-      - Temperature
-      - Body
   - type: Reflective
     reflective: Magic
   - type: Ammo
@@ -727,7 +715,6 @@
   description: Step on me.
   components:
   - type: InteractionOutline
-  - type: MovedByPressure
   - type: Clickable
   - type: Pullable
   - type: Physics
@@ -748,8 +735,6 @@
       slipOnStep: false
       knockdownTime: 10
       launchForwardsMultiplier: 1
-  - type: ProjectileHitShooterAfterDelay
-    delay: 0.5
   - type: TileFrictionModifier
     modifier: 0.9
   - type: Projectile

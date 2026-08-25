@@ -10,7 +10,6 @@
     sprite: Structures/Machines/Medical/biomass_reclaimer.rsi
     state: icon
     snapCardinals: true
-  - type: BiomassReclaimer
   - type: Climbable
     delay: 7
   - type: AmbientSound

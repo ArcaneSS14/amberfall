@@ -31,7 +31,7 @@ public sealed partial class ZTransitionSystem
 
     private bool CanTransition(EntityUid uid)
     {
-        if (_transitioning.Contains(uid))
+        if (HasComp<MapGridComponent>(uid) || _transitioning.Contains(uid))
             return false;
 
         if (!TryComp(uid, out ZTransitionCooldownComponent? cooldown))

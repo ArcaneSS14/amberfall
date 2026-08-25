@@ -4,7 +4,6 @@ using Content.Shared.Throwing;
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Physics;
-using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -21,7 +20,6 @@ public abstract partial class SharedGravitySystem : EntitySystem
 
     [Dependency] protected EntityQuery<GravityComponent> GravityQuery = default!;
     [Dependency] private EntityQuery<GravityAffectedComponent> _weightlessQuery = default!;
-    [Dependency] private EntityQuery<PhysicsComponent> _physicsQuery = default!;
 
     public override void Initialize()
     {
@@ -57,7 +55,7 @@ public abstract partial class SharedGravitySystem : EntitySystem
     /// </summary>
     public bool IsWeightless(Entity<GravityAffectedComponent?> entity)
     {
-        return _weightlessQuery.Resolve(entity, ref entity.Comp, false) && entity.Comp.Weightless;
+        return false;
     }
 
     /// <summary>
@@ -65,28 +63,16 @@ public abstract partial class SharedGravitySystem : EntitySystem
     /// </summary>
     public bool IsWeightlessStatusFromGrid(Entity<GravityAffectedComponent?> entity)
     {
-        return _weightlessQuery.Resolve(entity, ref entity.Comp, false) && entity.Comp.GridWeightlessStatus;
+        return false;
     }
 
     /// <summary>
     /// Gets an entity's weightless status.
     /// </summary>
     /// <returns>First bool returns true if the entity is weightless. Second bool returns true if the first bool was given via the grid/map gravity, false if from the entity.</returns>
-    private (bool, bool) GetWeightless(Entity<GravityAffectedComponent, PhysicsComponent?> entity)
+    private (bool, bool) GetWeightless(Entity<GravityAffectedComponent> entity)
     {
-        if (!_physicsQuery.Resolve(entity, ref entity.Comp2, false))
-            return (false, false);
-
-        if (entity.Comp2.BodyType is BodyType.Static or BodyType.Kinematic)
-            return (false, false);
-
-        // Check if something other than the grid or map is overriding our gravity
-        var ev = new IsWeightlessEvent();
-        RaiseLocalEvent(entity, ref ev);
-        if (ev.Handled)
-            return (ev.IsWeightless, false);
-
-        return (!EntityGridOrMapHaveGravity(entity.Owner), true);
+        return (false, false);
     }
 
     /// <summary>
@@ -113,8 +99,8 @@ public abstract partial class SharedGravitySystem : EntitySystem
         if (!_weightlessQuery.Resolve(entity, ref entity.Comp, false)) // Trauma - add false
             return;
 
-        // Only update if we're changing our weightless status
-        if (entity.Comp.Weightless == weightless)
+        // Weightlessness is globally disabled. Clear stale replicated or saved state.
+        if (!entity.Comp.Weightless && !entity.Comp.GridWeightlessStatus)
             return;
 
         UpdateWeightless(entity!);

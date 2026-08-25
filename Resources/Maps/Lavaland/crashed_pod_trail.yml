@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/22/2025 04:29:12
-  entityCount: 308
+  entityCount: 307
 maps: []
 grids:
 - 1
@@ -171,78 +171,6 @@ entities:
             9: 5.4031906,2.7412486
             10: 5.6933136,3.3805819
             11: 4.4340544,2.7968423
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 62695
-          -1,0:
-            0: 50380
-          0,1:
-            0: 61167
-          -1,1:
-            0: 64174
-          1,0:
-            0: 64727
-          1,1:
-            0: 285
-          2,0:
-            0: 65520
-          2,1:
-            0: 207
-          3,0:
-            0: 65392
-          3,1:
-            0: 255
-          4,0:
-            0: 65532
-          4,1:
-            0: 3327
-          5,0:
-            0: 65535
-          5,1:
-            0: 4095
-          6,0:
-            0: 65535
-          6,1:
-            0: 4095
-          7,0:
-            0: 65535
-          7,1:
-            0: 4095
-          8,0:
-            0: 65523
-          8,1:
-            0: 1023
-          9,0:
-            0: 65520
-          9,1:
-            0: 255
-          10,0:
-            0: 65328
-          10,1:
-            0: 63
-          -1,2:
-            0: 1
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: AirlockShuttle
   entities:
@@ -323,14 +251,6 @@ entities:
     components:
     - type: Transform
       pos: 2.8075664,6.3128357
-      parent: 1
-- proto: BoxMRE
-  entities:
-  - uid: 14
-    components:
-    - type: Transform
-      rot: -43.98229715025713 rad
-      pos: 4.486449,6.6190434
       parent: 1
 - proto: Catwalk
   entities:

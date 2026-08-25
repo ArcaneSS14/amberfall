@@ -185,7 +185,6 @@
       - PowerCell
       - Geiger
       - TrayScanner
-      - GasAnalyzer
   - type: Construction
     node: "utility tools panel"
 

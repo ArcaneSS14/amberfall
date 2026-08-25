@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/25/2025 08:42:37
-  entityCount: 160
+  entityCount: 159
 maps: []
 grids:
 - 1
@@ -63,52 +63,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 28262
-          -1,0:
-            0: 61152
-          0,1:
-            0: 3958
-          -1,1:
-            0: 61166
-          0,2:
-            0: 238
-          -1,2:
-            0: 238
-          0,-1:
-            0: 28671
-          1,0:
-            0: 13104
-          1,1:
-            0: 13104
-          1,2:
-            0: 51
-          -1,-1:
-            0: 200
-          1,-1:
-            0: 307
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: BasaltFive
   entities:
@@ -657,13 +611,6 @@ entities:
     components:
     - type: Transform
       pos: 5.5,7.5
-      parent: 1
-- proto: ToolboxMechanicalFilledAllTools
-  entities:
-  - uid: 139
-    components:
-    - type: Transform
-      pos: -0.49396253,1.5581727
       parent: 1
 - proto: Torch
   entities:

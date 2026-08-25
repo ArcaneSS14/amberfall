@@ -7,10 +7,3 @@
     damageModifierSet: VampireCoffin
   - type: Injurable
     damageContainer: VampireCoffin
-  - type: Flammable
-    damage:
-      types:
-        Heat: 2
-  - type: FireVisuals
-    sprite: Effects/fire.rsi
-    normalState: fire

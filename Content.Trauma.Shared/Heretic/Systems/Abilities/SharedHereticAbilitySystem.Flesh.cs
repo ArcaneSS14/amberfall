@@ -96,10 +96,11 @@ public abstract partial class SharedHereticAbilitySystem
             HealGhoul(ghoul);
         }
 
-        var cd = _grasp.CalculateAreaGraspCooldown((float) touchSpell.Cooldown.TotalSeconds,
-            _lookupGhouls.Count,
-            ent.Comp.AreaHealRange,
-            1f);
+        var baseCooldown = (float) touchSpell.Cooldown.TotalSeconds;
+        var cooldownSeconds = baseCooldown *
+            (1f + MathF.Pow(ent.Comp.AreaHealRange, 0.8f) *
+                (1f - 1f / (MathF.Pow(_lookupGhouls.Count, 0.8f) + 1f)));
+        var cd = TimeSpan.FromSeconds(cooldownSeconds);
         if (cd > ent.Comp.MaxAreaCooldown)
             cd = ent.Comp.MaxAreaCooldown;
 

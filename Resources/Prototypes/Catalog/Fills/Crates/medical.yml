@@ -1,43 +1,5 @@
 - type: entity
   parent: CrateMedical
-  id: CrateMedicalSupplies
-  name: medical supplies crate
-  description: Basic medical supplies.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: MedkitFilled
-          amount: 2
-        - id: Gauze
-          amount: 2
-        - id: Bloodpack
-          amount: 2
-        - id: BoxLatexGloves
-        - id: BoxSterileMask
-        - id: BoxMouthSwab
-
-- type: entity
-  parent: CrateMedical
-  id: CrateChemistrySupplies
-  name: chemistry supplies crate
-  description: Basic chemistry supplies.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: BoxSyringe
-        - id: BoxBeaker
-        - id: BoxPillCanister
-        - id: Dropper
-          amount: 2
-        - id: BoxBottle
-          amount: 2
-
-- type: entity
-  parent: CrateMedical
   id: CrateChemistryVials
   name: vial supply crate
   description: Crate filled with a box of vials.
@@ -58,51 +20,6 @@
       entity_storage:
         id: MindShieldImplanter
         amount: 3
-
-- type: entity
-  parent: CrateSurgery
-  id: CrateMedicalSurgery
-  name: surgical supplies crate
-  description: Surgical instruments.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: Scalpel
-        - id: Retractor
-        - id: Cautery
-        - id: Drill
-        - id: SawElectric # Goob - was Saw
-        - id: Hemostat
-        - id: ClothingMaskSterile
-        # <Goob>
-        - id: BoneGel
-        - id: MedicalStitches
-        - id: BoxLatexGloves
-        - id: BoxSterileMask
-        - id: NitrousOxideTankFilled
-        - id: ClothingMaskBreath
-        # </Goob>
-
-- type: entity
-  parent: CrateMedical
-  id: CrateMedicalScrubs
-  name: medical scrubs crate
-  description: Medical clothings.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: UniformScrubsColorGreen
-        - id: UniformScrubsColorPurple
-        - id: UniformScrubsColorBlue
-        - id: ClothingHeadHatSurgcapBlue
-        - id: ClothingHeadHatSurgcapPurple
-        - id: ClothingHeadHatSurgcapGreen
-        - id: ClothingMaskSterile
-          amount: 3
 
 - type: entity
   parent: CrateMedical
@@ -135,7 +52,7 @@
   - type: EntityTableContainerFill
     containers:
       entity_storage:
-        id: MedkitOxygenFilled
+        id: MedkitFilled
 
 - type: entity
   parent: CrateMedical
@@ -182,18 +99,21 @@
         id: BoxBodyBag
         amount: 2
 
+
 - type: entity
-  parent: CrateMedicalSecure
-  id: CrateVirologyBiosuit
-  name: virology bio suit crate
-  description: Contains 2 biohazard suits to ensure that no disease will distract you from treating the crew. Requires Medical access to open.
+  parent: CrateMedical
+  id: CrateChemistrySupplies
+  name: chemistry supplies crate
+  description: Basic chemistry supplies.
   components:
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
         children:
-        - !type:NestedSelector
-          tableId: FillBiohazardGearVirology
-          rolls: 2
-        - id: ClothingMaskSterile
+        - id: BoxSyringe
+        - id: BoxBeaker
+        - id: BoxPillCanister
+        - id: Dropper
+          amount: 2
+        - id: BoxBottle
           amount: 2

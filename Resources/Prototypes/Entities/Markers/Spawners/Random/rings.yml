@@ -1,3 +1,4 @@
+
 - type: entityTable
   id: RingTableCommon
   table: !type:GroupSelector

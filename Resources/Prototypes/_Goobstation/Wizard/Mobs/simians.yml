@@ -57,8 +57,6 @@
     showInExamine: false
   - type: Bloodstream
     maxBleedAmount: 0
-  - type: Respirator
-    suffocationThreshold: -5
   - type: StepTriggerImmune
   - type: NoSlip
   - type: Puller

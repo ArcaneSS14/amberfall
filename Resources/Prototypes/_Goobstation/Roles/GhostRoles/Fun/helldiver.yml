@@ -13,7 +13,6 @@
     neck: ClothingNeckCloakHelldiver
     head: ClothingHeadHelmetHelldiver
     outerClothing: ClothingOuterArmorHelldiver
-    suitstorage: DoubleEmergencyOxygenTankFilled
     shoes: ClothingShoesBootsMercFilled
     id: HelldiverPDA
     pocket1: ToolDebug
@@ -40,4 +39,3 @@
     - id: ExGrenade
       amount: !type:ConstantNumberSelector
         value: 2
-    - id: MedkitCombatFilled

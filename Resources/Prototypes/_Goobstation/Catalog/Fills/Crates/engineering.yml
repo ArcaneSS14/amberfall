@@ -10,17 +10,3 @@
       entity_storage:
         id: MachinePowerTransmissionLaserFlatpack
 
-- type: entity
-  id: CrateEngineeringTEG
-  parent: CrateEngineeringSecure
-  name: thermo-electric generator crate
-  description: Containing thermo-electric generator flatpack to make atmosian happy.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: TegCirculatorFlatpack
-        - id: TegCirculatorFlatpack
-        - id: TegMiddleFlatpack
-        - id: ToyFigurineAtmosTech

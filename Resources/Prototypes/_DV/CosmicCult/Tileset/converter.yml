@@ -81,12 +81,6 @@
   - type: CosmicCultExamine
     cultistText: cosmic-examine-text-forthecult
     othersText: cosmic-examine-text-chantry
-  - type: CosmicCorrupting
-    corruptionReduction: 0.02
-    enabled: true
-    floodFillStarting: true
-    corruptionMaxTicks: 12
-    corruptionSpeed: 1.25
   - type: Damageable
     damageModifierSet: Metallic
   - type: Injurable

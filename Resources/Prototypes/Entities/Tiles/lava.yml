@@ -30,16 +30,10 @@
   - type: TileEntityEffect
     effects:
     # <Trauma>
-    - !type:AdjustTemperature
-      amount: 10000 # thermal energy, not temperature!
     - !type:ModifyStatusEffect
       effectProto: InLavaStatusEffect
       time: 1
     # </Trauma>
-    - !type:Flammable
-      multiplier: 2.5 # Lavaland Change - was 3.75
-      multiplierOnExisting: 0.75
-    - !type:Ignite
   - type: Transform
     anchored: true
   - type: SyncSprite

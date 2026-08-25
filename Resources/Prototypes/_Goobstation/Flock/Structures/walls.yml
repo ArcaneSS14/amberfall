@@ -35,7 +35,6 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: Airtight
   - type: SunShadowCast
   - type: Occluder
   - type: Tag
@@ -446,11 +445,6 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
-    airBlockedDirection:
-    - South
-    - East
   - type: Tag
     tags:
     - Wall

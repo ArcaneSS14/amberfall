@@ -50,15 +50,3 @@
   description: A state-of-the-art pair of magboots for the Corporate modsuit. So long as the suit is powered, these will not slow the wearer down.
   categories: [HideSpawnMenu]
 
-- type: entity
-  parent: SuitStorageBase
-  id: SuitStorageCorporate
-  suffix: Corporate Modsuit
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: OxygenTankFilled
-        - id: ClothingModsuitCorporate
-        - id: ClothingMaskBreath

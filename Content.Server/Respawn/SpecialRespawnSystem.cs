@@ -1,5 +1,4 @@
 using Content.Server.Administration.Logs;
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
 using Content.Shared.Database;
@@ -16,7 +15,6 @@ namespace Content.Server.Respawn;
 public sealed partial class SpecialRespawnSystem : SharedSpecialRespawnSystem
 {
     [Dependency] private IAdminLogManager _adminLog = default!;
-    [Dependency] private AtmosphereSystem _atmosphere = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private SharedMapSystem _map = default!;
@@ -106,9 +104,7 @@ public sealed partial class SpecialRespawnSystem : SharedSpecialRespawnSystem
             foreach (var tile in _map.GetTilesIntersecting(entityGridUid.Value, grid, circle))
             {
                 if (_turf.IsSpace(tile)
-                    || _turf.IsTileBlocked(tile, CollisionGroup.MobMask)
-                    || !_atmosphere.IsTileMixtureProbablySafe(entityGridUid, entityMapUid.Value,
-                        _map.TileIndicesFor((entityGridUid.Value, grid), mapPos)))
+                    || _turf.IsTileBlocked(tile, CollisionGroup.MobMask))
                 {
                     continue;
                 }
@@ -177,7 +173,7 @@ public sealed partial class SpecialRespawnSystem : SharedSpecialRespawnSystem
 
             foreach (var newTileRef in _map.GetTilesIntersecting(targetGrid, grid, circle))
             {
-                if (_turf.IsSpace(newTileRef) || _turf.IsTileBlocked(newTileRef, CollisionGroup.MobMask) || !_atmosphere.IsTileMixtureProbablySafe(targetGrid, targetMap, mapTarget) && checkTileMixture)  // Goob edit - add checkTileMixture
+                if (_turf.IsSpace(newTileRef) || _turf.IsTileBlocked(newTileRef, CollisionGroup.MobMask))
                     continue;
 
                 found = true;

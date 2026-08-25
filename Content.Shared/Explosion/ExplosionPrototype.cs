@@ -9,9 +9,7 @@ namespace Content.Shared.Explosion;
 ///     Explosion Prototype. Determines damage, tile break probabilities, and visuals.
 /// </summary>
 /// <remarks>
-///     Does not currently support prototype hot-reloading. The explosion-intensity required to destroy airtight
-///     entities is evaluated and stored by the explosion system. Adding or removing a prototype would require updating
-///     that map of airtight entities. This could be done, but is just not yet implemented.
+///     Does not currently support prototype hot-reloading. Cached explosion tolerance values would need rebuilding.
 /// </remarks>
 [Prototype]
 public sealed partial class ExplosionPrototype : IPrototype
@@ -129,8 +127,7 @@ public sealed partial class ExplosionPrototype : IPrototype
 
     /// <summary>
     /// Number of states in the rsi of ResPath. To quote the original author:
-    ///  Theres probably a better way to do this. Currently Atmos just hard codes a constant int, so I have no one to
-    /// steal code from.
+    ///  There is probably a better way to do this.
     /// </summary>
     [DataField("fireStates")]
     public int FireStates = 3;

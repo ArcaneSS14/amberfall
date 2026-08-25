@@ -70,7 +70,6 @@
       shader: unshaded
     drawdepth: Ghosts
   - type: NoSlip
-  - type: CosmicAstralBody
   - type: Eye
     drawFov: false
     visMask:

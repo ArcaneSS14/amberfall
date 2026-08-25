@@ -45,11 +45,8 @@
       steps:
       - tool: Screwing
         doAfter: 1
-      - tag: Pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
-        name: construction-graph-tag-pipe
+      - material: Steel
+        amount: 1
         doAfter: 0.5
 
   - node: 4
@@ -201,11 +198,8 @@
       steps:
       - tool: Screwing
         doAfter: 1
-      - tag: Pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
-        name: construction-graph-tag-pipe
+      - material: Steel
+        amount: 1
         doAfter: 0.5
 
   - node: 4
@@ -484,11 +478,8 @@
     edges:
     - to: unfinished
       steps:
-      - tag: Pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
-        name: construction-graph-tag-pipe
+      - material: Steel
+        amount: 1
         doAfter: 1
 
   - node: unfinished

@@ -25,9 +25,6 @@
     coverage:
     - Head
   - type: FaceHuggerBlocker
-  - type: PressureProtection
-    highPressureMultiplier: 0.1
-    lowPressureMultiplier: 1000
   - type: IdentityBlocker
 
 - type: entity
@@ -73,8 +70,6 @@
         VeinsDamage: 0.0
     - type: ExplosionResistance
       damageCoefficient: 0
-    - type: FireProtection
-      reduction: 0.6
     deactivateComponents:
     - type: Armor
       coverage:
@@ -94,9 +89,6 @@
         VeinsDamage: 0.0
     - type: ExplosionResistance
       damageCoefficient: 0.50
-    - type: FireProtection
-      reduction: 0.3
-
 - type: entity
   parent: [ ArmorHereticVoid, ClothingHeadHatHoodHeretic ]
   id: ClothingHeadHatHoodHereticVoid

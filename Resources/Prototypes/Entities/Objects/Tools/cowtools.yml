@@ -132,28 +132,6 @@
     speedModifier: 0.05
 
 - type: entity
-  name: milkalyzer
-  parent: BaseItem
-  id: Milkalyzer
-  description: A hand-held environmental scanner which reports current gas levels. Moo!
-  components:
-  - type: Sprite
-    sprite: Objects/Tools/Cowtools/milkalyzer.rsi
-    layers:
-    - state: milkalyzer
-  - type: GasAnalyzer
-  - type: ActivatableUI
-    inHandsOnly: true
-    singleUser: true
-    requireActiveHand: false
-    key: enum.GasAnalyzerUiKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.GasAnalyzerUiKey.Key:
-        type: GasAnalyzerBoundUserInterface
-  - type: Appearance
-
-- type: entity
   name: cow toolbox
   parent: ToolboxBase
   id: CowToolbox
@@ -169,20 +147,3 @@
       types:
         Blunt: 4
 
-- type: entity
-  id: CowToolboxFilled
-  name: cow toolbox
-  suffix: Filled
-  parent: CowToolbox
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: Haycutters
-        - id: Moodriver
-        - id: Wronch
-        - id: Cowbar
-        - id: Mooltitool
-        - id: Cowelder
-        - id: Milkalyzer

@@ -6,11 +6,8 @@
     edges:
     - to: cannon
       steps:
-      - tag: Pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
-        name: construction-graph-tag-pipe
+      - material: Steel
+        amount: 1
       - tag: Handcuffs
         icon:
           sprite: Objects/Misc/cablecuffs.rsi

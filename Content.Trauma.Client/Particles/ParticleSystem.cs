@@ -55,7 +55,7 @@ public sealed partial class ParticleSystem : EntitySystem
     /// <list type="bullet">
     ///   <item><b>All particle simulation runs entirely on the CPU</b>. Every particle competes
     ///   with gameplay logic, physics, networking, and rendering on the same thread.</item>
-    ///   <item>That 26k figure was measured in isolation. In a real round with entities, atmos, and players,
+    ///   <item>That 26k figure was measured in isolation. In a real round with entities and players,
     ///   performance will degrade significantly sooner.</item>
     ///   <item>Emitters stack multiplicatively. Ten "small" effects at 500 particles each is already
     ///   5,000 particles before considering anything else in the scene.</item>
@@ -342,7 +342,7 @@ public sealed partial class ParticleSystem : EntitySystem
 
     #endregion
 
-    #region Emitter Internals
+    #region Emitter implementation
 
     // <summary>
     // Creates a new ActiveEmitter from a prototype and initial state.

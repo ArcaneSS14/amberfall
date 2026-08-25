@@ -56,15 +56,10 @@
   - !type:PopupMessage
     messages:
     - spacebear-smokey
-  - !type:Extinguish # put it out
   opponentEffects:
   - !type:HealthChange
     targetPart: Chest
     damage:
       types:
         Heat: 10
-  - !type:Flammable
-    multiplier: 4 # actually set on fire
-    multiplierOnExisting: 0.2 # It's powerful enough with just one.
-  - !type:Ignite
   levelRequired: 51 # Skill involved.

@@ -22,8 +22,6 @@
     max: 9
     title: objective-condition-contract-title
     description: objective-condition-contract-description
-  - type: SignContractCondition
-
 - type: entity
   parent: BaseDevilObjective
   id: DevilWeightObjective
@@ -37,4 +35,3 @@
     max: 200
     title: objective-condition-weight-title
     description: objective-condition-weight-description
-  - type: MeetContractWeightCondition

@@ -37,7 +37,6 @@
     ears: ClothingHeadsetDeathsquad # Goobstation
     gloves: ClothingHandsGlovesDeathsquadUnremovable # Rip and TEAR
     outerClothing: ClothingOuterHardsuitDeathsquad
-    shoes: ClothingShoesBootsMagDeathsquad # These boots are cooler.
     id: DeathsquadPDA # New PDA!
     pocket1: PhoronSabre # Goobstation
     pocket2: WeaponRevolverMateba # Goobstation

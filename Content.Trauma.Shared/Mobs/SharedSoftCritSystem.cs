@@ -9,7 +9,6 @@ using Content.Shared.Movement.Systems;
 using Content.Shared.Stunnable;
 using Content.Trauma.Common.Body;
 using Content.Trauma.Common.CCVar;
-using Content.Trauma.Shared.Medical;
 using Robust.Shared.Configuration;
 
 namespace Content.Trauma.Shared.Mobs;
@@ -21,7 +20,6 @@ public abstract partial class SharedSoftCritSystem : EntitySystem
 {
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private MovementSpeedModifierSystem _movement = default!;
-    [Dependency] private SharedCPRSystem _cpr = default!;
 
     /// <summary>
     /// Speed modifier for softcrit mobs, on top of being forced to crawl.
@@ -44,11 +42,9 @@ public abstract partial class SharedSoftCritSystem : EntitySystem
         SubscribeLocalEvent<SoftCritMobComponent, SpeechTypeOverrideEvent>(OnSpeechTypeOverride);
         SubscribeLocalEvent<SoftCritMobComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshSpeed);
         SubscribeLocalEvent<SoftCritMobComponent, StandUpAttemptEvent>(OnStandUpAttempt);
-        SubscribeLocalEvent<SoftCritMobComponent, ModifyInhaledVolumeEvent>(OnModifyInhaledVolume);
         SubscribeLocalEvent<SoftCritMobComponent, UnbuckleAttemptEvent>(OnUnbuckleAttempt);
 
         Subs.CVar(_cfg, TraumaCVars.SoftCritMoveSpeed, x => SoftCritSpeed = x, true);
-        Subs.CVar(_cfg, TraumaCVars.SoftCritInhaleModifier, x => InhaleVolumeModifier = x, true);
     }
 
     private void RefreshSpeed(EntityUid uid, SoftCritMobComponent ent, EntityEventArgs args)
@@ -78,14 +74,6 @@ public abstract partial class SharedSoftCritSystem : EntitySystem
     private void OnStandUpAttempt(Entity<SoftCritMobComponent> ent, ref StandUpAttemptEvent args)
     {
         args.Cancelled = true;
-    }
-
-    private void OnModifyInhaledVolume(Entity<SoftCritMobComponent> ent, ref ModifyInhaledVolumeEvent args)
-    {
-        // don't reduce volume if someone else is helping you breathe
-        // ideally there would be code in respirator to check if it's forced to breathe vs lungs working alone
-        if (!_cpr.IsCPRActive(ent))
-            args.Volume *= InhaleVolumeModifier;
     }
 
     private void OnUnbuckleAttempt(Entity<SoftCritMobComponent> ent, ref UnbuckleAttemptEvent args)

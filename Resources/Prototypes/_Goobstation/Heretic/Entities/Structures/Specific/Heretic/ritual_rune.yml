@@ -52,7 +52,6 @@
         sound:
           path: /Audio/_Goobstation/Heretic/runebreak.ogg
   - type: EnchantingTable
-  - type: AtmosExposed
   - type: TemperatureTracker
 
 - type: entity

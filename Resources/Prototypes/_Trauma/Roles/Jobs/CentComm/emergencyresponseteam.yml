@@ -5,7 +5,6 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTChaplain
     back: ClothingBackpackHolyFirefighterTank
-    shoes: ClothingShoesBootsMagEmergencyResponseTeam
     head: ClothingHeadHatFez
     eyes: ClothingEyesGlasses
     neck: ClothingNeckStoleChaplain

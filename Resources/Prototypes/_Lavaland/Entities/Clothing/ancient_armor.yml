@@ -34,17 +34,12 @@
         Caustic: 0.3
   - type: ExplosionResistance
     damageCoefficient: 0.3
-  - type: FireProtection
-    reduction: 0.7
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:Container {}
   - type: ToggleableClothing
     clothingPrototypes:
       head: LavalandEquipmentAncientArmorHood
-  - type: PressureArmorChange
-  - type: PressureEfficiency
-
 - type: entity
   parent: ClothingHeadBase
   id: LavalandEquipmentAncientArmorHood
@@ -80,5 +75,3 @@
         Ballistic: 0.7
         Heat: 0.65
         Caustic: 0.65
-  - type: PressureArmorChange
-  - type: PressureEfficiency

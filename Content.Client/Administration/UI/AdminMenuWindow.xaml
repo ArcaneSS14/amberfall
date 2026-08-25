@@ -19,7 +19,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     xmlns="https://spacestation14.io"
     xmlns:adminTab="clr-namespace:Content.Client.Administration.UI.Tabs.AdminTab"
     xmlns:adminbusTab="clr-namespace:Content.Client.Administration.UI.Tabs.AdminbusTab"
-    xmlns:atmosTab="clr-namespace:Content.Client.Administration.UI.Tabs.AtmosTab"
     xmlns:tabs="clr-namespace:Content.Client.Administration.UI.Tabs"
     xmlns:playerTab="clr-namespace:Content.Client.Administration.UI.Tabs.PlayerTab"
     xmlns:objectsTab="clr-namespace:Content.Client.Administration.UI.Tabs.ObjectsTab"
@@ -27,7 +26,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     <TabContainer Name="MasterTabContainer">
         <adminTab:AdminTab />
         <adminbusTab:AdminbusTab />
-        <atmosTab:AtmosTab />
         <tabs:RoundTab />
         <tabs:ServerTab />
         <panic:PanicBunkerTab Name="PanicBunkerControl" Access="Public" />

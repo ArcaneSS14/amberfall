@@ -91,29 +91,3 @@
     counterSize: 1
 
 # Sequence crosses
-- type: entity
-  parent: MarkerBase
-  id: HierophantShapeCrossSequence
-  name: hierophant attack cross sequence spawner
-  suffix: Anger
-  categories: [ HideSpawnMenu, Spawner ]
-  components:
-  - type: Sprite
-    state: red
-  - type: ShapeSpawner
-    spawn: LavalandHierophantSquare
-    shape: !type:GroupEntityShape
-      children:
-      - id: BishopCross
-        size: 11
-      - id: RookCross
-        size: 11
-#      - id: QueenCross # TODO expand MobPhases for actions, so it can be "upgraded" to also have a chance to spawn a queen cross.
-#        size: 11
-#        weight: 0.3
-  - type: ShapeSpawnerCounter
-  - type: AngerShapeSpawner
-    counterRange: 2,4
-    periodRange: 0.7,1.2
-    inversePeriod: true
-  - type: ExpandingShapeSpawner

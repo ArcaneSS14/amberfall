@@ -147,11 +147,6 @@
   result: trayScanner
 
 - type: latheRecipe
-  parent: BaseBigToolRecipe
-  id: GasAnalyzer
-  result: GasAnalyzer
-
-- type: latheRecipe
   parent: BaseToolRecipe
   id: SprayPainter
   result: SprayPainterEmpty

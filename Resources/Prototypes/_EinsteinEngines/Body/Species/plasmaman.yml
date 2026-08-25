@@ -120,21 +120,8 @@
       amount: 3
   - type: Inventory
     templateId: plasmaman
-  - type: Temperature
-    specificHeat: 46
-    currentTemperature: 270.15  # -3 celsius
-  - type: TemperatureDamage
-    heatDamageThreshold: 308    # 35 celsius, -17 from base heat damage threshold
-    coldDamage:
-      types:
-        Cold: 0
-    heatDamage:
-      types:
-        Heat: 3
   - type: ThermalRegulator
     normalBodyTemperature: 270.15
-  - type: Flammable
-    firestackFade: -0.05
   - type: TypingIndicator
     proto: plasmaman
   - type: LanguageSpeaker
@@ -144,10 +131,6 @@
     understands:
     - TauCetiBasic
     - Calcic
-  - type: SpawnGasOnGib
-    gasMixture:
-      moles:
-        Plasma: 100
   - type: Fixtures
     fixtures: # TODO: This needs a second fixture just for mob collisions.
       fix1:
@@ -183,15 +166,6 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MeatLaserImpact
-      - !type:SpawnGasBehavior
-        gasMixture:
-          moles:
-            Plasma: 80 # Lower than gas on gibbing
-  - type: TemperatureSpeed
-    thresholds:
-      243: 0.8
-  - type: Fart
-    gasToFart: Plasma
   - type: Hunger
     baseDecayRate: 0 # don't get hungry, still able to eat
 
@@ -240,9 +214,6 @@
   - type: WoundableVisuals
     damageGroupColors:
       Brute: "#743474"
-  - type: IgniteFromGasPart
-    gas: Oxygen
-    fireStacks: 0.02
   - type: ToolRefinable
     refineResult:
     - id: SheetPlasma1
@@ -259,8 +230,6 @@
   parent: [ OrganBaseTorso, OrganPlasmamanExternal ]
   id: OrganPlasmamanTorso
   components:
-  - type: IgniteFromGasPart
-    fireStacks: 0.12
   - type: ToolRefinable
     refineResult:
     - id: SheetPlasma1
@@ -347,9 +316,6 @@
   - type: Sprite
     layers:
     - state: lungs # combined
-  - type: Lung
-    alert: LowPlasma
-
 - type: entity
   parent: [ OrganBaseHeart, OrganPlasmamanInternal, OrganPlasmamanMetabolizer ]
   id: OrganPlasmamanHeart

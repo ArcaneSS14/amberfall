@@ -154,23 +154,6 @@
 # SlotBlocker blocked until UI change
 #  - type: SlotBlock
 #    slots: [innerclothing, feet]
-  - type: PressureProtection
-    highPressureMultiplier: 0.3
-    lowPressureMultiplier: 1000
-  - type: TemperatureProtection
-    heatingCoefficient: 0.01
-    coolingCoefficient: 0.01
-  - type: FireProtection
-    reduction: 0.75 # almost perfectly sealed, atmos firesuit is better
-  - type: IgniteFromGasImmunity # Goob
-    parts:
-    - Torso
-    - ArmLeft
-    - ArmRight
-    - LegLeft
-    - LegRight
-    - FootLeft
-    - FootRight
   - type: ClothingSpeedModifier
     walkModifier: 0.6
     sprintModifier: 0.6
@@ -252,21 +235,6 @@
 # SlotBlocker blocked until UI change
 #  - type: SlotBlock
 #    slots: [innerclothing, feet]
-  - type: PressureProtection
-    highPressureMultiplier: 0.6
-    lowPressureMultiplier: 1000
-  - type: TemperatureProtection
-    heatingCoefficient: 0.01 # Not complete protection from fire
-    coolingCoefficient: 0.01
-  - type: IgniteFromGasImmunity # EE Plasmeme Change
-    parts:
-    - Torso
-    - ArmLeft
-    - ArmRight
-    - LegLeft
-    - LegRight
-    - FootLeft
-    - FootRight
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8

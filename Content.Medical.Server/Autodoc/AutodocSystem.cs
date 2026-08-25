@@ -13,7 +13,6 @@ namespace Content.Medical.Server.Autodoc;
 
 public sealed partial class AutodocSystem : SharedAutodocSystem
 {
-    [Dependency] private InternalsSystem _internals = default!;
     [Dependency] private ChatSystem _chat = default!;
     [Dependency] private SharedPowerReceiverSystem _power = default!;
 
@@ -39,10 +38,6 @@ public sealed partial class AutodocSystem : SharedAutodocSystem
 
     protected override void WakePatient(EntityUid patient)
     {
-        // incase they are using nitrous, disconnect it so they can get woken up later on
-        if (TryComp<InternalsComponent>(patient, out var internals) && _internals.AreInternalsWorking(patient, internals))
-            _internals.DisconnectTank((patient, internals));
-
         base.WakePatient(patient);
     }
 

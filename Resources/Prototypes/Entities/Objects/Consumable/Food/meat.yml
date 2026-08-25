@@ -37,16 +37,6 @@
         restitution: 0.3  # fite me
         friction: 0.2
   # let air cook and freeze meat for cooking and preservation
-  - type: AtmosExposed
-  - type: Temperature
-    currentTemperature: 290
-    specificHeat: 25 # Trauma
-  - type: TemperatureDamage
-  # required for cooking to work
-  - type: InternalTemperature
-    thickness: 0.02
-    area: 0.02 # arbitrary number that sounds right for a slab of meat
-    conductivity: 15 # Trauma - was 0.43
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -61,18 +51,6 @@
     tags:
     - Raw
     - Meat
-  - type: Perishable
-    # raw meat rots in 5 minutes, get it into the freezer fast
-    rotAfter: 300
-    # don't want meat giving off ammonia only bodies
-    molsPerSecondPerUnitMass: 0
-  - type: RotInto
-    entity: FoodMeatRotten
-    # once it would say bloated, turn into the rotten prototype
-    stage: 1
-
-# Raw
-
 - type: entity
   parent: [FoodMeatRawBase, BaseSlicingRefinableFood]
   id: FoodMeat
@@ -85,8 +63,6 @@
     refineResult:
     - id: FoodMeatCutlet
       amount: 5
-  - type: InternalTemperature
-    conductivity: 15 # Trauma - was 0.43
   - type: Construction
     graph: MeatSteak
     node: start
@@ -181,10 +157,6 @@
         Quantity: 6
       - ReagentId: Fat
         Quantity: 9
-  - type: InternalTemperature
-    conductivity: 15 # Trauma - was 0.44
-    thickness: 0.004 # bacon is thin so faster to cook than a steak
-    area: 0.0075 # ~5x15cm
   - type: Construction
     graph: Bacon
     node: start
@@ -259,8 +231,6 @@
     refineResult:
     - id: FoodMeatChickenCutlet
       amount: 5
-  - type: InternalTemperature
-    conductivity: 15 # Trauma - was 0.41
   - type: Construction
     graph: ChickenSteak
     node: start
@@ -355,8 +325,6 @@
   components:
   - type: Sprite
     state: goliath
-  - type: InternalTemperature
-    thickness: 0.1 # very big, do cook it in lava
   - type: Construction
     graph: GoliathSteak
     node: start
@@ -784,8 +752,6 @@
     - Meat
   - type: Sprite
     state: raw_patty
-  - type: InternalTemperature
-    conductivity: 15 # Trauma - was 0.43
   - type: Construction
     graph: CookedPatty
     node: start
@@ -854,8 +820,6 @@
     refineResult:
     - id: FoodMeatCutlet
       amount: 16
-  - type: InternalTemperature
-    conductivity: 15 # Trauma - was 0.43
   - type: Construction
     graph: AnomalyMeatSteak
     node: start

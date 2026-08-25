@@ -196,7 +196,7 @@ public sealed partial class ShuttleSystem
 
                 if (ProtoMan.Resolve(group.NameDataset, out var dataset))
                 {
-                    _metadata.SetEntityName(spawned, _salvage.GetFTLName(dataset, _random.Next()));
+                    _metadata.SetEntityName(spawned, Loc.GetString(_random.Pick(dataset.Values)));
                 }
 
                 if (group.Hide)

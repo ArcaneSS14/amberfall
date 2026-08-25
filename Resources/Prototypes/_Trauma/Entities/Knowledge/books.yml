@@ -21,25 +21,6 @@
       entity_storage: !type:NestedSelector
         tableId: RandomSkillbook
 
-- type: entityTable
-  id: RandomSkillbook
-  table: !type:GroupSelector
-    children:
-    - id: BookJanitor
-    - id: BookFabrication
-    - id: BookSurvival
-    - id: BookDoors
-    - id: BookAirlocks
-    - id: BookToys
-    - id: BookBananium
-    - id: BookBots
-    - id: BookFurniture
-    - id: BookInfrastructure
-    - id: BookElectronics
-    - id: BookWalls
-    - id: BookWindows
-    - id: BookSmokeables
-
 - type: entity
   parent: BaseItem
   id: BookSkillbook
@@ -398,3 +379,23 @@
   - type: Sprite
     layers:
     - state: smokeables
+
+- type: entityTable
+  id: RandomSkillbook
+  table: !type:GroupSelector
+    children:
+    - id: BookJanitor
+    - id: BookFabrication
+    - id: BookSurvival
+    - id: BookDoors
+    - id: BookAirlocks
+    - id: BookToys
+    - id: BookBananium
+    - id: BookBots
+    - id: BookFurniture
+    - id: BookInfrastructure
+    - id: BookElectronics
+    - id: BookWalls
+    - id: BookWindows
+    - id: BookSmokeables
+

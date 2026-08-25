@@ -67,10 +67,6 @@ public abstract partial class GameRuleSystem<T> where T: IComponent
                 _turf.IsSpace(selectedTile))
                 continue;
 
-            if (_atmosphere.IsTileSpace(grid.Owner, Transform(grid.Owner).MapUid, tile)
-                || _atmosphere.IsTileAirBlockedCached(grid.Owner, tile))
-                continue;
-
             targetCoords = _map.GridTileToLocal(grid.Owner, grid.Comp, tile);
             return true;
         }

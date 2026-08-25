@@ -99,5 +99,3 @@
     deconstructionTarget: null
     graph: RevGuns
     node: resistance
-  - type: ContainerFill
-    containers: {}

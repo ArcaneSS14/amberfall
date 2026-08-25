@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Shared.IgnitionSource.Components;
 using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Nutrition.Components;
 using Content.Shared.Popups;
@@ -24,7 +23,6 @@ public sealed partial class SurgeryToolConditionsSystem : EntitySystem
 
         SubscribeLocalEvent<ItemToggleComponent, SurgeryToolUsedEvent>(OnToggleUsed);
         SubscribeLocalEvent<GunComponent, SurgeryToolUsedEvent>(OnGunUsed);
-        SubscribeLocalEvent<MatchstickComponent, SurgeryToolUsedEvent>(OnMatchUsed);
         SubscribeLocalEvent<SmokableComponent, SurgeryToolUsedEvent>(OnSmokableUsed);
     }
 
@@ -48,11 +46,6 @@ public sealed partial class SurgeryToolConditionsSystem : EntitySystem
 
         _popup.PopupEntity(Loc.GetString("surgery-tool-reload"), ent, args.User);
         args.Cancelled = true;
-    }
-
-    private void OnMatchUsed(Entity<MatchstickComponent> ent, ref SurgeryToolUsedEvent args)
-    {
-        SmokableUsed(ent, ent.Comp.State, ref args);
     }
 
     private void OnSmokableUsed(Entity<SmokableComponent> ent, ref SurgeryToolUsedEvent args)

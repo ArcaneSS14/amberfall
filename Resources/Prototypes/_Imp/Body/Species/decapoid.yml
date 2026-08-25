@@ -142,13 +142,6 @@
         tags:
         - Vaporizer
     failMessage: decapoid-cant-speak
-  - type: Respirator
-    damage:
-      types:
-        Asphyxiation: 2
-    damageRecovery:
-      types:
-        Asphyxiation: -1.0
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepDecapoid
@@ -178,23 +171,6 @@
     weightlessAcceleration: 1.5 # move more easily in space
     weightlessFrictionNoInput: 2 # more control over movement in space
     weightlessModifier: 1
-  - type: TemperatureDamage
-    heatDamageThreshold: 380 # slightly more vulnerable to heat
-    coldDamageThreshold: 0 # immune to cold
-    coldDamage:
-      types:
-        Cold : 0 # immune to cold
-    heatDamage:
-      types:
-        Heat : 1
-  - type: Temperature
-    currentTemperature: 310
-    specificHeat: 42
-  - type: TemperatureSpeed
-    thresholds: # lol
-      293: 1.0
-      280: 1.0
-      260: 1.0
   - type: Clumsy
     clumsySound:
       path: /Audio/_Impstation/Effects/Clumsy/crab_snap.ogg

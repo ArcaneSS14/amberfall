@@ -13,7 +13,7 @@ namespace Content.Shared.Pinpointer;
 public abstract partial class SharedNavMapSystem : EntitySystem
 {
     public const int Categories = 3;
-    public const int Directions = 4; // Not directly tied to number of atmos directions
+    public const int Directions = 4;
 
     public const int ChunkSize = 8;
     public const int ArraySize = ChunkSize * ChunkSize;

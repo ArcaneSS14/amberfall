@@ -135,13 +135,6 @@
   description: Molten and unwrought, a hunk of metal warped to cinders and slag. Unmade, it aspires to be more than it is, and shears soot-filled wounds with a blunt edge.
   suffix: Ash
   components:
-  - type: HereticBlade
-    effects:
-    - !type:Flammable
-      multiplier: 2.5
-      fireProtectionPenetration: 0.35
-    - !type:Ignite
-    path: Ash
   - type: Sprite
     sprite: _Goobstation/Heretic/Blades/blade_ash.rsi
     state: icon
@@ -266,18 +259,6 @@
   description: This crescent blade is decrepit, wasting to rust. Yet still it bites, ripping flesh and bone with jagged, rotten teeth.
   suffix: Rust
   components:
-  - type: HereticBlade
-    bonusEvent: !type:HereticBladeBonusDamageEvent
-      extraDamage:
-        types:
-          Poison: 8
-    effects:
-    - !type:ReduceRotting # Increase rotting
-      conditions:
-      - !type:MobStateCondition
-        mobstate: Dead
-      seconds: -60
-    path: Rust
   - type: Sprite
     sprite: _Goobstation/Heretic/Blades/blade_rust.rsi
     state: icon

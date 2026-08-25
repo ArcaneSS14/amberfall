@@ -59,3 +59,4 @@ public sealed partial class MechGrabberComponent : Component
     public EntityWhitelist Blacklist = new();
     //goobstation end
 }
+

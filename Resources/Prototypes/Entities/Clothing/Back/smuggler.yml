@@ -53,20 +53,6 @@
     state: icon
 
 - type: entity
-  parent: [ BaseSubfloorAnchorStorageAnchored, BriefcaseSyndie, BaseMinorContraband ]
-  id: BriefcaseSmugglerCash
-  name: smuggler's briefcase
-  suffix: Smuggler, Do Not Map
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: SpaceCash5000
-          amount: !type:RangeNumberSelector
-            range: 1, 11
-
-- type: entity
   parent: [ BaseSubfloorAnchorStorageAnchored, ClothingBackpackDuffelClown, BaseMinorContraband ]
   id: ClothingBackpackDuffelClownSmuggler
   name: smuggler's clown duffel bag

@@ -12,12 +12,6 @@
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/chronolegioneer.rsi
   - type: Clothing
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/chronolegioneer.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.02
-    lowPressureMultiplier: 1000
-  - type: TemperatureProtection
-    heatingCoefficient: 0.01
-    coolingCoefficient: 0.01
   - type: ExplosionResistance
     damageCoefficient: 0.05
   - type: Armor
@@ -73,9 +67,6 @@
     size: Huge
   - type: Clothing
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/cybersunstealth.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.05
-    lowPressureMultiplier: 1000
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
@@ -109,13 +100,8 @@
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/dreadnought.rsi
     equipDelay: 15
     unequipDelay: 600 # if i add the unremovable comp then you couldnt even put this on
-  - type: PressureProtection
-    highPressureMultiplier: 0.05
-    lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.1 # chinalake meta would go hard
-  - type: FireProtection
-    reduction: 0.9 # atmos fire suit is 0.8, so i guess this is fine? Reduction goes the opossite way right?
   - type: Armor
     traumaDeductions: # not full protection so its damage can actually harm you
       Dismemberment: 0.9
@@ -166,9 +152,6 @@
     sprite: _Goobstation/Clothing/OuterClothing/Voidsuits/security.rsi
   - type: Clothing
     sprite: _Goobstation/Clothing/OuterClothing/Voidsuits/security.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.05
-    lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.65
   - type: Armor
@@ -234,9 +217,6 @@
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/ntr_experimental.rsi
   - type: Clothing
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/ntr_experimental.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.05
-    lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.8
   - type: Armor
@@ -261,11 +241,6 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitExperimentalNanorep
-  - type: FireProtection
-    reduction: 0.4
-
-# Singuloth hardsuit
-
 - type: entity
   parent: [BaseMagicalContraband, ClothingOuterHardsuitEngineeringWhite]
   id: ClothingSingulothArmor

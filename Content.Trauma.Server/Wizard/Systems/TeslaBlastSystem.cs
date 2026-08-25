@@ -82,3 +82,4 @@ public sealed partial class TeslaBlastSystem : SharedTeslaBlastSystem
         _lightning.ShootLightning(performer, target, lightningPrototype, false, action);
     }
 }
+

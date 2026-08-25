@@ -17,8 +17,6 @@
     prototypes: [ApprenticeGearBlue]
     roleLoadout: [RoleSurvivalEVA]
   - type: Apprentice
-  - type: SpellsGrant
-    antagProfile: ApprenticeRule
   - type: NpcFactionMember
     factions:
     - Wizard
@@ -27,22 +25,10 @@
   parent: MobHumanApprenticeBase
   id: MobHumanApprenticeDestruction
   name: destruction apprentice
-  components:
-  - type: SpellsGrant
-    guaranteedActions:
-    - ActionFireball
-    - ActionMutateSpell
-
 - type: entity
   parent: MobHumanApprenticeBase
   id: MobHumanApprenticeEthereal
   name: ethereal apprentice
-  components:
-  - type: SpellsGrant
-    guaranteedActions:
-    - ActionTeleportWizard
-    - ActionPolymorphJaunt
-
 - type: entity
   parent: MobHumanApprenticeBase
   id: MobHumanApprenticeSummon
@@ -50,11 +36,6 @@
   components:
   - type: Loadout
     prototypes: [ApprenticeGearYellow]
-  - type: SpellsGrant
-    guaranteedActions:
-    - ActionLesserSummonBees
-    - ActionSummonSimians
-
 - type: entity
   parent: MobHumanApprenticeBase
   id: MobHumanApprenticeGun
@@ -62,12 +43,6 @@
   components:
   - type: Loadout
     prototypes: [ApprenticeGearBlack]
-  - type: SpellsGrant
-    guaranteedActions:
-    - ActionLesserSummonGuns
-    - ActionSmoke
-    - ActionBlinkSpell
-
 - type: entity
   parent: MobHumanApprenticeBase
   id: MobHumanApprenticeArcane
@@ -75,12 +50,6 @@
   components:
   - type: Loadout
     prototypes: [ApprenticeGearPurple]
-  - type: SpellsGrant
-    guaranteedActions:
-    - ActionArcaneBarrage
-    - ActionChargeSpell
-    - ActionInstantSummons
-
 - type: entity
   parent: MobHumanApprenticeBase
   id: MobHumanApprenticeSanguine
@@ -88,12 +57,6 @@
   components:
   - type: Loadout
     prototypes: [ApprenticeGearRed]
-  - type: SpellsGrant
-    guaranteedActions:
-    - ActionSanguineStrike
-    - ActionScreamForMe
-    - ActionInstantSummons
-
 - type: entity
   parent: MobHumanApprenticeBase
   id: MobHumanApprenticeRobeless
@@ -101,12 +64,6 @@
   components:
   - type: Loadout
     prototypes: [ApprenticeGearRobeless]
-  - type: SpellsGrant
-    guaranteedActions:
-    - ActionMindSwap
-    - ActionForceWall
-    - ActionKnock
-
 - type: entity
   parent: MobHumanApprenticeBase
   id: MobHumanApprenticeChaos
@@ -114,6 +71,3 @@
   components:
   - type: Loadout
     prototypes: [ApprenticeGearPsy]
-  - type: SpellsGrant
-    randomActions: ChaosApprenticeSpellTable
-    totalWeight: 6

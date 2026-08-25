@@ -63,7 +63,6 @@
   - type: EmitSoundOnTrigger
     sound:
       collection: GlassBreak
-  - type: Airtight
   - type: Damageable
   - type: Destructible
     thresholds:

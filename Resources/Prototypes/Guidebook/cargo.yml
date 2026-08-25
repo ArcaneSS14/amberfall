@@ -1,12 +1,4 @@
 - type: guideEntry
-  id: Cargo
-  name: guide-entry-cargo
-  text: "/ServerInfo/Guidebook/Cargo/Cargo.xml"
-  children:
-  - CargoBounties
-  - Salvage
-
-- type: guideEntry
   id: CargoBounties
   name: guide-entry-cargo-bounties
   text: "/ServerInfo/Guidebook/Cargo/CargoBounties.xml"

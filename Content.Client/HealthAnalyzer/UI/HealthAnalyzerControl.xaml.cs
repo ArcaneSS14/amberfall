@@ -3,7 +3,6 @@ using Content.Shared.Chemistry.EntitySystems;
 // </Trauma>
 using System.Linq;
 using System.Numerics;
-using Content.Shared.Atmos;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Damage.Systems;
@@ -97,9 +96,7 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
 
         // Basic Diagnostic
 
-        TemperatureLabel.Text = !float.IsNaN(state.Temperature)
-            ? $"{state.Temperature - Atmospherics.T0C:F1} °C ({state.Temperature:F1} K)"
-            : Loc.GetString("health-analyzer-window-entity-unknown-value-text");
+        TemperatureLabel.Text = Loc.GetString("health-analyzer-window-entity-unknown-value-text");
 
         BloodLabel.Text = !float.IsNaN(state.BloodLevel)
             ? $"{state.BloodLevel * 100:F1} %"

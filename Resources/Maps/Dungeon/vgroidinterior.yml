@@ -212,13 +212,6 @@ entities:
     - type: Transform
       pos: 21.5,9.5
       parent: 1
-- proto: BedsheetSpawner
-  entities:
-  - uid: 8
-    components:
-    - type: Transform
-      pos: 21.5,9.5
-      parent: 1
 - proto: BookshelfFilled
   entities:
   - uid: 9
@@ -252,13 +245,6 @@ entities:
     components:
     - type: Transform
       pos: 9.5,4.5
-      parent: 1
-- proto: CapacitorStockPart
-  entities:
-  - uid: 448
-    components:
-    - type: Transform
-      pos: 20.258081,15.667069
       parent: 1
 - proto: ChairWood
   entities:
@@ -446,18 +432,6 @@ entities:
     components:
     - type: Transform
       pos: 14.5,12.5
-      parent: 1
-- proto: GrilleSpawner
-  entities:
-  - uid: 39
-    components:
-    - type: Transform
-      pos: 16.5,13.5
-      parent: 1
-  - uid: 40
-    components:
-    - type: Transform
-      pos: 15.5,12.5
       parent: 1
 - proto: IronRockDiamond
   entities:
@@ -755,18 +729,6 @@ entities:
       pos: 13.5,3.5
       parent: 1
   - uid: 93
-    components:
-    - type: Transform
-      pos: 15.5,3.5
-      parent: 1
-- proto: SalvageCanisterSpawner
-  entities:
-  - uid: 94
-    components:
-    - type: Transform
-      pos: 20.5,9.5
-      parent: 1
-  - uid: 95
     components:
     - type: Transform
       pos: 15.5,3.5

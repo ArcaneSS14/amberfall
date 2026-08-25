@@ -9,7 +9,6 @@
     sprite: Clothing/Head/Hoods/Bio/general.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/general.rsi
-  - type: BreathMask
   - type: IngestionBlocker
   - type: GroupExamine
   - type: ZombificationResistance
@@ -196,7 +195,6 @@
         Radiation: 0.01
   - type: IdentityBlocker
   - type: IngestionBlocker
-  - type: BreathMask
   - type: HideLayerClothing
     slots:
     - Hair
@@ -264,13 +262,6 @@
   id: ClothingHeadHelmetHardsuitCarp
   categories: [ HideSpawnMenu ]
   components:
-  - type: PressureProtection
-    highPressureMultiplier: 0.6
-    lowPressureMultiplier: 1000
-  - type: TemperatureProtection
-    heatingCoefficient: 0.2
-    coolingCoefficient: 0.2
-  - type: BreathMask
   # this is on the hood so you only fool the fish if you wear the whole set
   # wear carp suit and security helmet, they'll know you are fake
   - type: FactionClothing

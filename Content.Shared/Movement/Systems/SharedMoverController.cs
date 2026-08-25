@@ -61,7 +61,6 @@ public abstract partial class SharedMoverController : VirtualController
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private TagSystem _tags = default!;
 
-    [Dependency] protected EntityQuery<CanMoveInAirComponent> CanMoveInAirQuery = default!;
     [Dependency] protected EntityQuery<FootstepModifierComponent> FootstepModifierQuery = default!;
     [Dependency] protected EntityQuery<FTLComponent> FTLQuery = default!;
     [Dependency] protected EntityQuery<InputMoverComponent> MoverQuery = default!;
@@ -226,19 +225,8 @@ public abstract partial class SharedMoverController : VirtualController
         DebugTools.Assert(physicsComponent.BodyType == BodyType.KinematicController || physicsComponent.BodyType == BodyType.Kinematic,
             $"Input mover: {ToPrettyString(uid)} in HandleMobMovement is not the correct BodyType, BodyType found: {physicsComponent.BodyType}, expected: KinematicController.");
 
-        // If the body is in air but isn't weightless then it can't move
+        // Apotheosis uses regular ground movement everywhere, including off-grid space.
         var weightless = _gravity.IsWeightless(uid);
-        var inAirHelpless = false;
-
-        if (physicsComponent.BodyStatus != BodyStatus.OnGround && !CanMoveInAirQuery.HasComponent(uid))
-        {
-            if (!weightless)
-            {
-                UsedMobMovement[uid] = false;
-                return;
-            }
-            inAirHelpless = true;
-        }
 
         UsedMobMovement[uid] = true;
 
@@ -270,7 +258,7 @@ public abstract partial class SharedMoverController : VirtualController
         // Try doing tile movement.
         if (TileMovementQuery.TryComp(uid, out var tileMovement))
         {
-            if (!weightless && !inAirHelpless)
+            if (!weightless)
             {
                 var didTileMovement = HandleTileMovement(uid,
                     uid,
@@ -297,7 +285,7 @@ public abstract partial class SharedMoverController : VirtualController
 
         var touching = false;
         // Should we use tile friction or not?
-        if (weightless || inAirHelpless)
+        if (weightless)
         {
             // Find the speed we should be moving at and make sure we're not trying to move faster than that
             var walkSpeed = moveSpeedComponent?.WeightlessWalkSpeed ?? MovementSpeedModifierComponent.DefaultBaseWalkSpeed;
@@ -710,10 +698,10 @@ public abstract partial class SharedMoverController : VirtualController
 
     private void OnTileFriction(Entity<MovementSpeedModifierComponent> ent, ref TileFrictionEvent args)
     {
-        if (!PhysicsQuery.TryComp(ent, out var physicsComponent))
+        if (!PhysicsQuery.HasComp(ent))
             return;
 
-        if (physicsComponent.BodyStatus != BodyStatus.OnGround || _gravity.IsWeightless(ent.Owner))
+        if (_gravity.IsWeightless(ent.Owner))
             args.Modifier *= ent.Comp.BaseWeightlessFriction;
         else
             args.Modifier *= ent.Comp.BaseFriction;

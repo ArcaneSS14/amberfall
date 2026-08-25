@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 03/22/2025 16:54:04
-  entityCount: 138
+  entityCount: 127
 maps: []
 grids:
 - 1
@@ -56,46 +56,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 14
-          0,-1:
-            0: 61166
-          1,-1:
-            0: 65262
-          1,0:
-            0: 14
-          2,0:
-            0: 27
-          2,-1:
-            0: 65531
-          3,0:
-            0: 1
-          3,-1:
-            0: 13105
-          2,-2:
-            0: 4096
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: DeviceNetwork
       deviceNetId: Wireless
@@ -444,53 +404,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 2.5,-4.5
       parent: 1
-- proto: MedkitBruteFilled
-  entities:
-  - uid: 6
-    components:
-    - type: Transform
-      pos: 1.5,-2.5
-      parent: 1
-- proto: MedkitBurnFilled
-  entities:
-  - uid: 93
-    components:
-    - type: Transform
-      pos: 1.5,-2.5
-      parent: 1
-- proto: MedkitFilled
-  entities:
-  - uid: 80
-    components:
-    - type: Transform
-      pos: 11.5,0.5
-      parent: 1
-  - uid: 94
-    components:
-    - type: Transform
-      pos: 1.5,-2.5
-      parent: 1
-- proto: MedkitOxygenFilled
-  entities:
-  - uid: 95
-    components:
-    - type: Transform
-      pos: 1.5,-2.5
-      parent: 1
-- proto: MedkitRadiationFilled
-  entities:
-  - uid: 96
-    components:
-    - type: Transform
-      pos: 1.5,-2.5
-      parent: 1
-- proto: MedkitToxinFilled
-  entities:
-  - uid: 97
-    components:
-    - type: Transform
-      pos: 1.5,-2.5
-      parent: 1
 - proto: ParchisBoard
   entities:
   - uid: 79
@@ -794,28 +707,6 @@ entities:
     components:
     - type: Transform
       pos: 0.5,-3.5
-      parent: 1
-- proto: WallShuttleInterior
-  entities:
-  - uid: 11
-    components:
-    - type: Transform
-      pos: 4.5,1.5
-      parent: 1
-  - uid: 12
-    components:
-    - type: Transform
-      pos: 4.5,0.5
-      parent: 1
-  - uid: 46
-    components:
-    - type: Transform
-      pos: 10.5,-3.5
-      parent: 1
-  - uid: 47
-    components:
-    - type: Transform
-      pos: 10.5,0.5
       parent: 1
 - proto: Windoor
   entities:

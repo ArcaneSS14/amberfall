@@ -58,7 +58,6 @@
     pocket2: PinpointerStation
     belt: ClothingBeltSheathKatanaNinjaFilled # Trauma - was EnergyKatana
   inhand:
-    - JetpackBlackFilled
     - NinjutsuScroll # Goobstation
   storage:
     back: # belt holds katana so satchel has the tools for sabotaging things

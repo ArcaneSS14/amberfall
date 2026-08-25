@@ -80,13 +80,6 @@
   id: MobArachnid
   name: Urist McWebs
   components:
-  - type: Respirator
-    damage:
-      types:
-        Asphyxiation: 1.5 # This makes space and crit more lethal to arachnids.
-    damageRecovery:
-      types:
-        Asphyxiation: -0.5
   - type: Sericulture
     productionLength: 2
     entityProduced: MaterialWebSilk1

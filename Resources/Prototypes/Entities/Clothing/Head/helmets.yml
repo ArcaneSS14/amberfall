@@ -352,11 +352,6 @@
     sprite: Clothing/Head/Helmets/firehelmet.rsi
     quickEquip: true
   - type: IngestionBlocker
-  - type: TemperatureProtection
-    heatingCoefficient: 0.5
-    coolingCoefficient: 0.8
-  - type: FireProtection
-    reduction: 0.15 # not fully sealed so less protection
   - type: FaceHuggerBlocker # Trauma
   - type: IdentityBlocker
   - type: Tag
@@ -392,15 +387,7 @@
     sprite: Clothing/Head/Helmets/atmos_firehelmet.rsi
     quickEquip: true
   - type: IngestionBlocker
-  - type: TemperatureProtection
-    heatingCoefficient: 0.3
-    coolingCoefficient: 0.8
   - type: FaceHuggerBlocker # Trauma
-  - type: FireProtection
-    reduction: 0.2
-  - type: PressureProtection
-    highPressureMultiplier: 0.25
-    lowPressureMultiplier: 1000
   - type: IdentityBlocker
   - type: Tag
     tags:
@@ -411,7 +398,6 @@
     layers:
       Hair: HEAD
       Snout: HEAD
-  - type: BreathMask
   - type: Armor
     traumaDeductions:
       Dismemberment: 0.2

@@ -8,8 +8,6 @@
   components:
   - type: Sprite
     sprite: _Trauma/Objects/Specific/Hydroponics/coca_plant.rsi
-  - type: Produce
-    seedId: CocaPlant
   - type: Solution
     solution:
       reagents:

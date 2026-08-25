@@ -42,8 +42,6 @@
     max: 6
     title: objective-condition-absorb-title
     description: objective-condition-absorb-description
-  - type: AbsorbCondition
-
 - type: entity
   parent: BaseChangelingObjective
   id: ChangelingAbsorbOtherObjective
@@ -58,8 +56,6 @@
     max: 2 # good luck
     title: objective-condition-absorb-other-title
     description: objective-condition-absorb-other-description
-  - type: AbsorbChangelingCondition
-
 - type: entity
   parent: BaseChangelingObjective
   id: ChangelingStealDNAObjective
@@ -73,8 +69,6 @@
     max: 9
     title: objective-condition-stealdna-title
     description: objective-condition-stealdna-description
-  - type: StealDNACondition
-
 - type: entity
   parent: BaseChangelingObjective
   id: EscapeIdentityObjective
@@ -84,7 +78,6 @@
     icon:
       sprite: Objects/Magic/magicactions.rsi
       state: blink
-  - type: ImpersonateCondition
   - type: TargetObjective
     title: objective-condition-escape-identity-title
   - type: PickRandomPerson

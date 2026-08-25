@@ -157,8 +157,8 @@
     itemIconStyle: BigAction
     useDelay: 3
     icon:
-      sprite: Structures/Piping/Atmospherics/vent.rsi
-      state: vent_off
+      sprite: Objects/Tools/crowbar.rsi
+      state: icon
   - type: InstantAction
     event: !type:ToggleFloorCrawlingEvent
 

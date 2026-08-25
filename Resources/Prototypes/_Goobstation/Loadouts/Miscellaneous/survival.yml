@@ -56,14 +56,6 @@
 
 # Full tank for plasmamen as part of any Survival loadout
 - type: loadout
-  id: LoadoutSpeciesPlasma
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PlasmaBreather
-  equipment:
-    suitstorage: DoubleEmergencyPlasmaTankFilled
-
-- type: loadout
   id: EmergencySilicon
   effects:
   - !type:GroupLoadoutEffect

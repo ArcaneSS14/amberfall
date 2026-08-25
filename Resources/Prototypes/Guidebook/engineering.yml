@@ -1,39 +1,7 @@
 - type: guideEntry
-  id: Engineering
-  name: guide-entry-engineering
-  text: "/ServerInfo/Guidebook/Engineering/Engineering.xml"
-  children:
-  # <Trauma>
-  - Automation
-  - Circuits
-  # </Trauma>
-  - Atmospherics
-  - Construction
-  - Power
-  - ShuttleCraft
-  - Networking
-
-- type: guideEntry
-  id: Construction
-  name: guide-entry-construction
-  text: "/ServerInfo/Guidebook/Engineering/Construction.xml"
-  children:
-  - Airlocks
-  - ExpandingRepairingStation
-  - WirePanels
-  - HolographicGenerator #FH
-
-- type: guideEntry
   id: ExpandingRepairingStation
   name: guide-entry-expandingrepairingstation
   text: "/ServerInfo/Guidebook/Engineering/ExpandingRepairingStation.xml"
-
-- type: guideEntry
-  id: Airlocks
-  name: guide-entry-airlocks
-  text: "/ServerInfo/Guidebook/Engineering/Airlocks.xml"
-  children:
-  - AirlockSecurity
 
 - type: guideEntry
   id: WirePanels
@@ -46,32 +14,6 @@
   text: "/ServerInfo/Guidebook/Engineering/AirlockSecurity.xml"
 
 - type: guideEntry
-  id: Atmospherics
-  name: guide-entry-atmospherics
-  text: "/ServerInfo/Guidebook/Engineering/Atmospherics.xml"
-  children:
-  - GasManipulation
-  - AtmosphericsSystems
-  - AtmosphericUpsets
-  - AtmosTools
-  - Gasses
-
-- type: guideEntry
-  id: GasManipulation
-  name: guide-entry-gasmanipulation
-  text: "/ServerInfo/Guidebook/Engineering/GasManipulation.xml"
-  children:
-  - AtmosphereInOut
-  - Pipes
-  - Pumps
-  - Valves
-  - MixingAndFiltering
-  - GasCanisters
-  - Thermomachines
-  - GasCondensing
-  - GasRecycling
-
-- type: guideEntry
   id: Pipes
   name: guide-entry-pipes
   text: "/ServerInfo/Guidebook/Engineering/Pipes.xml"
@@ -80,17 +22,6 @@
   id: Pumps
   name: guide-entry-pumps
   text: "/ServerInfo/Guidebook/Engineering/Pumps.xml"
-
-- type: guideEntry
-  id: AtmosphereInOut
-  name: guide-entry-atmosphereinout
-  text: "/ServerInfo/Guidebook/Engineering/AtmosphereInOut.xml"
-  children:
-  - AirVent
-  - PassiveVent
-  - AirInjector
-  - AirScrubber
-  - PortableScrubber
 
 - type: guideEntry
   id: AirVent
@@ -116,17 +47,6 @@
   id: PortableScrubber
   name: guide-entry-portablescrubber
   text: "/ServerInfo/Guidebook/Engineering/PortableScrubber.xml"
-
-- type: guideEntry
-  id: Valves
-  name: guide-entry-valves
-  text: "/ServerInfo/Guidebook/Engineering/Valves.xml"
-  children:
-  - ManualValve
-  - SignalValve
-  - PneumaticValve
-  - PassiveGate
-  - PressureRegulator
 
 - type: guideEntry
   id: ManualValve
@@ -164,13 +84,6 @@
   text: "/ServerInfo/Guidebook/Engineering/GasCanisters.xml"
 
 - type: guideEntry
-  id: Thermomachines
-  name: guide-entry-thermomachines
-  text: "/ServerInfo/Guidebook/Engineering/Thermomachines.xml"
-  children:
-  - Radiators
-
-- type: guideEntry
   id: GasCondensing
   name: guide-entry-gascondensing
   text: "/ServerInfo/Guidebook/Engineering/GasCondensing.xml"
@@ -186,28 +99,9 @@
   text: "/ServerInfo/Guidebook/Engineering/Radiators.xml"
 
 - type: guideEntry
-  id: AtmosphericsSystems
-  name: guide-entry-atmosphericssystems
-  text: "/ServerInfo/Guidebook/Engineering/AtmosphericsSystems.xml"
-  children:
-  - PipeNetworks
-  - DeviceMonitoringAndControl
-  - FireAndGasControl
-  - GasMiningAndStorage
-
-- type: guideEntry
   id: PipeNetworks
   name: guide-entry-pipenetworks
   text: "/ServerInfo/Guidebook/Engineering/PipeNetworks.xml"
-
-- type: guideEntry
-  id: DeviceMonitoringAndControl
-  name: guide-entry-devicemonitoringandcontrol
-  text: "/ServerInfo/Guidebook/Engineering/DeviceMonitoringAndControl.xml"
-  children:
-  - AirAlarms
-  - AtmosphericAlertsComputer
-  - AtmosphericNetworkMonitor
 
 - type: guideEntry
   id: AirAlarms
@@ -233,15 +127,6 @@
   id: GasMiningAndStorage
   name: guide-entry-gasminingandstorage
   text: "/ServerInfo/Guidebook/Engineering/GasMiningAndStorage.xml"
-
-- type: guideEntry
-  id: AtmosphericUpsets
-  name: guide-entry-atmosphericupsets
-  text: "/ServerInfo/Guidebook/Engineering/AtmosphericUpsets.xml"
-  children:
-  - Fires
-  - Spacing
-  - DeltaPressure
 
 - type: guideEntry
   id: Fires
@@ -272,13 +157,6 @@
   id: ShuttleCraft
   name: guide-entry-shuttle-craft
   text: "/ServerInfo/Guidebook/Engineering/Shuttlecraft.xml"
-
-- type: guideEntry
-  id: Networking
-  name: guide-entry-networking
-  text: "/ServerInfo/Guidebook/Engineering/Networking.xml"
-  children:
-  - AccessConfigurator
 
 - type: guideEntry
   id: AccessConfigurator
@@ -317,31 +195,9 @@
   text: "/ServerInfo/Guidebook/Engineering/VoltageNetworks.xml"
 
 - type: guideEntry
-  id: Generators
-  name: guide-entry-generators
-  text: "/ServerInfo/Guidebook/Engineering/Generators.xml"
-  children:
-  - PortableGenerator
-  - AME
-  - SingularityTeslaEngine
-  - NuclearReactor # FH edit
-  - TEG
-  - RTG
-  - SolarPanels
-  - Supermatter # Goobstation
-
-- type: guideEntry
   id: AME
   name: guide-entry-ame
   text: "/ServerInfo/Guidebook/Engineering/AME.xml"
-
-- type: guideEntry
-  id: SingularityTeslaEngine
-  name: guide-entry-singularityteslaengine
-  text: "/ServerInfo/Guidebook/Engineering/SingularityTeslaEngine.xml"
-  children:
-  - SingularityEngine
-  - TeslaEngine
 
 - type: guideEntry
   id: SingularityEngine

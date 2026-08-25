@@ -2,6 +2,7 @@
 
 ## Common
 
+
 - type: entityTable
   id: LetterVagueThreat
   table: !type:AllSelector
@@ -134,20 +135,6 @@
     - id: SurvivalKnife
 
 - type: entityTable
-  id: LuxuryPenRandom
-  table: !type:GroupSelector
-    children:
-    - id: LuxuryPen
-    - id: PenHop
-      weight: 0.25
-    - id: PenCap
-      weight: 0.25
-    - id: CyberPen
-      weight: 0.05
-    - id: PenCentcom
-      weight: 0.05
-
-- type: entityTable
   id: LetterLuxuryPen
   table: !type:AllSelector
     children:
@@ -219,3 +206,16 @@
     - id: JointRainbow
     - id: BluntCigar
     - id: BluntRainbow
+- type: entityTable
+  id: LuxuryPenRandom
+  table: !type:GroupSelector
+    children:
+    - id: LuxuryPen
+    - id: PenHop
+      weight: 0.25
+    - id: PenCap
+      weight: 0.25
+    - id: CyberPen
+      weight: 0.05
+    - id: PenCentcom
+      weight: 0.05

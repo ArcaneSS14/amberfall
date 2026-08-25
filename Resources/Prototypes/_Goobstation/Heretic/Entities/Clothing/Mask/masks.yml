@@ -20,7 +20,6 @@
     sprite: _Goobstation/Heretic/mad_mask.rsi
   - type: Clothing
     sprite: _Goobstation/Heretic/mad_mask.rsi
-  - type: BreathMask
   - type: IdentityBlocker
   - type: Tag
     tags:

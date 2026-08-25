@@ -1,6 +1,5 @@
 using System.Linq;
 using Content.Shared.Chemistry.EntitySystems;
-using Content.Shared.Atmos.Prototypes;
 using Content.Shared.Body;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
@@ -70,16 +69,6 @@ public sealed partial class ChemistryGuideDataSystem : SharedChemistryGuideDataS
             }
         }
 
-        foreach (var gas in ProtoMan.EnumeratePrototypes<GasPrototype>())
-        {
-            if (gas.Reagent == null)
-                continue;
-
-            var data = new ReagentGasSourceData(
-                new () { DefaultCondenseCategory },
-                gas);
-            _reagentSources[gas.Reagent].Add(data);
-        }
 
         // store the names of the entities used so we don't get repeats in the guide.
         var usedNames = new List<string>();
@@ -209,17 +198,3 @@ public sealed class ReagentReactionSourceData : ReagentSourceData
 /// <summary>
 /// Used to store a reagent source that comes from gas condensation.
 /// </summary>
-public sealed class ReagentGasSourceData : ReagentSourceData
-{
-    public readonly GasPrototype GasPrototype;
-
-    public override int OutputCount => 1;
-
-    public override string IdentifierString => Loc.GetString(GasPrototype.Name);
-
-    public ReagentGasSourceData(List<ProtoId<MixingCategoryPrototype>> mixingType, GasPrototype gasPrototype)
-        : base(mixingType)
-    {
-        GasPrototype = gasPrototype;
-    }
-}

@@ -64,7 +64,6 @@
   - type: IconSmooth
     key: windows
     base: ptwindow
-  - type: Airtight
   - type: Fixtures
     fixtures:
       fix1:
@@ -158,12 +157,6 @@
         layer:
         - GlassLayer
         density: 4000
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
-    airBlockedDirection:
-    - South
-    - East
-
 - type: entity
   id: PlastitaniumWindowDiagonalIndestructible
   name: plastitanium window

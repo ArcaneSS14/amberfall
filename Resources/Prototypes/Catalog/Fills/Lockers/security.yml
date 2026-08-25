@@ -1,18 +1,4 @@
 - type: entity
-  id: LockerWardenFilledHardsuit
-  suffix: Filled, Hardsuit
-  parent: LockerWarden
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: FillLockerWarden
-        - !type:NestedSelector
-          tableId: FillLockerWardenHarduit
-
-- type: entity
   id: LockerWardenFilled
   suffix: Filled
   parent: LockerWarden
@@ -21,6 +7,132 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: FillLockerWarden
+
+- type: entity
+  id: LockerSecurityFilled
+  suffix: Filled
+  parent: LockerSecurity
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillLockerSecurity
+
+- type: entity
+  id: LockerBrigmedicFilled
+  suffix: Brigmedic, Filled
+  parent: LockerBrigmedic
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillLockerBrigmedic
+
+- type: entity
+  id: LockerDetectiveFilled
+  suffix: Filled
+  parent: LockerDetective
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillLockerDetective
+
+- type: entity
+  id: ClosetBombFilled
+  parent: ClosetBomb
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillClosetBomb
+
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband]
+  id: GunSafeDisabler
+  name: disabler safe
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafeDisabler
+
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband]
+  id: GunSafePistolMk58
+  name: mk58 safe
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafePistolMk58
+
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
+  id: GunSafeRifleLecter
+  name: lecter safe
+  suffix: Alert Level Lock # WWDP
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafeRifleLecter
+
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
+  id: GunSafeSubMachineGunDrozd
+  name: drozd safe
+  suffix: Alert Level Lock # WWDP
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafeSubMachineGunDrozd
+
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
+  id: GunSafeShotgunEnforcer
+  name: enforcer safe
+  suffix: Alert Level Lock # WWDP
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafeShotgunEnforcer
+
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
+  id: GunSafeShotgunKammerer
+  name: kammerer safe
+  suffix: Alert Level Lock # WWDP
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafeShotgunKammerer
+
+- type: entity
+  id: GunSafeSubMachineGunWt550
+  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
+  name: wt550 safe
+  suffix: Alert Level Lock # WWDP
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafeSubMachineGunWt550
+
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
+  id: GunSafeLaserCarbineOutdated # Trauma
+  name: laser safe
+  suffix: Alert Level Lock # WWDP
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafeLaserCarbine
 
 - type: entityTable
   id: FillLockerWarden
@@ -50,23 +162,14 @@
     - id: PlushieLizardJobWarden
       prob: 0.02
 
+
 - type: entityTable
   id: FillLockerWardenHarduit
   table: !type:AllSelector
     children:
     - id: ClothingOuterHardsuitWarden
-    - id: OxygenTankFilled
     - id: ClothingMaskBreath
 
-- type: entity
-  id: LockerSecurityFilled
-  suffix: Filled
-  parent: LockerSecurity
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillLockerSecurity
 
 - type: entityTable
   id: FillLockerSecurity
@@ -99,15 +202,6 @@
     - id: PlushieLizardJobSecurityofficer
       prob: 0.02
 
-- type: entity
-  id: LockerBrigmedicFilled
-  suffix: Brigmedic, Filled
-  parent: LockerBrigmedic
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillLockerBrigmedic
 
 - type: entityTable
   id: FillLockerBrigmedic # heavily goob edited
@@ -120,19 +214,6 @@
     # </Trauma>
     - id: ClothingUniformJumpskirtOfLife
       prob: 0.1
-    - id: MedkitOxygenFilled
-    - id: MedkitAdvancedFilled
-
-- type: entity
-  id: LockerDetectiveFilled
-  suffix: Filled
-  parent: LockerDetective
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillLockerDetective
-
 - type: entityTable
   id: FillLockerDetective
   table: !type:AllSelector
@@ -140,13 +221,10 @@
     # <Trauma>
     - id: BloodTrak
     - id: Betty
-    - id: BoxTapeRecorder
-    # </Trauma>
     - id: ClothingEyesGlassesNoir
     - id: ClothingHeadHatDetGadget
     - id: ClothingNeckTieDet
     - id: ClothingOuterVestDetective
-    - id: ClothingOuterCoatDetectiveLoadout
     - id: FlippoEngravedLighter
     - id: FlashlightSeclite
     - id: ForensicScanner
@@ -156,20 +234,10 @@
     - id: ClothingHandsGlovesForensic
     - id: RubberStampDetective
     - id: HoloprojectorSecurity
-    - id: BoxEvidenceMarkers
     - id: HandLabeler
     - id: PlushieLizardJobDetective
       prob: 0.02
 
-- type: entity
-  id: ClosetBombFilled
-  parent: ClosetBomb
-  suffix: Filled
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillClosetBomb
 
 - type: entityTable
   id: FillClosetBomb
@@ -182,15 +250,6 @@
     - id: Multitool
       #prob: 0.5 # Goobstation
 
-- type: entity
-  parent: [GunSafeBaseSecure, BaseSecurityContraband]
-  id: GunSafeDisabler
-  name: disabler safe
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillGunSafeDisabler
 
 - type: entityTable
   id: FillGunSafeDisabler
@@ -199,15 +258,6 @@
     - id: WeaponDisabler
       amount: 5
 
-- type: entity
-  parent: [GunSafeBaseSecure, BaseSecurityContraband]
-  id: GunSafePistolMk58
-  name: mk58 safe
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillGunSafePistolMk58
 
 - type: entityTable
   id: FillGunSafePistolMk58
@@ -218,16 +268,6 @@
     - id: MagazinePistol
       amount: 8
 
-- type: entity
-  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
-  id: GunSafeRifleLecter
-  name: lecter safe
-  suffix: Alert Level Lock # WWDP
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillGunSafeRifleLecter
 
 - type: entityTable
   id: FillGunSafeRifleLecter
@@ -238,16 +278,6 @@
     - id: MagazineRifle
       amount: 4
 
-- type: entity
-  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
-  id: GunSafeSubMachineGunDrozd
-  name: drozd safe
-  suffix: Alert Level Lock # WWDP
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillGunSafeSubMachineGunDrozd
 
 - type: entityTable
   id: FillGunSafeSubMachineGunDrozd
@@ -258,16 +288,6 @@
     - id: MagazinePistolSubMachineGun
       amount: 4
 
-- type: entity
-  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
-  id: GunSafeShotgunEnforcer
-  name: enforcer safe
-  suffix: Alert Level Lock # WWDP
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillGunSafeShotgunEnforcer
 
 - type: entityTable
   id: FillGunSafeShotgunEnforcer
@@ -278,16 +298,6 @@
     - id: BoxLethalshot
       amount: 4
 
-- type: entity
-  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
-  id: GunSafeShotgunKammerer
-  name: kammerer safe
-  suffix: Alert Level Lock # WWDP
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillGunSafeShotgunKammerer
 
 - type: entityTable
   id: FillGunSafeShotgunKammerer
@@ -298,16 +308,6 @@
     - id: BoxLethalshot
       amount: 4
 
-- type: entity
-  id: GunSafeSubMachineGunWt550
-  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
-  name: wt550 safe
-  suffix: Alert Level Lock # WWDP
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillGunSafeSubMachineGunWt550
 
 - type: entityTable
   id: FillGunSafeSubMachineGunWt550
@@ -318,16 +318,6 @@
     - id: MagazinePistolSubMachineGunTopMounted
       amount: 4
 
-- type: entity
-  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLock] # WWDP
-  id: GunSafeLaserCarbineOutdated # Trauma
-  name: laser safe
-  suffix: Alert Level Lock # WWDP
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillGunSafeLaserCarbine
 
 - type: entityTable
   id: FillGunSafeLaserCarbine

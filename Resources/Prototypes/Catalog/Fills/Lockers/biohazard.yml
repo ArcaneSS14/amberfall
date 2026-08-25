@@ -8,13 +8,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillBiohazardGearGeneric
 
-- type: entityTable
-  id: FillBiohazardGearGeneric
-  table: !type:AllSelector
-    children:
-    - id: ClothingOuterBioGeneral
-    - id: ClothingHeadHatHoodBioGeneral
-
 - type: entity
   id: ClosetL3VirologyFilled
   suffix: Filled, Virology
@@ -24,13 +17,6 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: FillBiohazardGearVirology
-
-- type: entityTable
-  id: FillBiohazardGearVirology
-  table: !type:AllSelector
-    children:
-    - id: ClothingOuterBioVirology
-    - id: ClothingHeadHatHoodBioVirology
 
 - type: entity
   id: ClosetL3SecurityFilled
@@ -42,13 +28,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillBiohazardGearSecurity
 
-- type: entityTable
-  id: FillBiohazardGearSecurity
-  table: !type:AllSelector
-    children:
-    - id: ClothingOuterBioSecurity
-    - id: ClothingHeadHatHoodBioSecurity
-
 - type: entity
   id: ClosetL3JanitorFilled
   suffix: Filled, Janitor
@@ -59,13 +38,6 @@
       entity_storage: !type:NestedSelector
         tableId: FillBiohazardGearJanitor
 
-- type: entityTable
-  id: FillBiohazardGearJanitor
-  table: !type:AllSelector
-    children:
-    - id: ClothingOuterBioJanitor
-    - id: ClothingHeadHatHoodBioJanitor
-
 - type: entity
   id: ClosetL3ScienceFilled
   suffix: Filled, Science
@@ -75,6 +47,38 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: FillBiohazardGearScience
+
+- type: entityTable
+  id: FillBiohazardGearGeneric
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterBioGeneral
+    - id: ClothingHeadHatHoodBioGeneral
+
+
+- type: entityTable
+  id: FillBiohazardGearVirology
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterBioVirology
+    - id: ClothingHeadHatHoodBioVirology
+
+
+- type: entityTable
+  id: FillBiohazardGearSecurity
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterBioSecurity
+    - id: ClothingHeadHatHoodBioSecurity
+
+
+- type: entityTable
+  id: FillBiohazardGearJanitor
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterBioJanitor
+    - id: ClothingHeadHatHoodBioJanitor
+
 
 - type: entityTable
   id: FillBiohazardGearScience

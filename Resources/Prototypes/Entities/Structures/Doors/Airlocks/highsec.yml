@@ -116,7 +116,6 @@
         type: StationAiBoundUserInterface
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
-  - type: Airtight
   - type: Occluder
   - type: Damageable
     damageModifierSet: StrongMetallic

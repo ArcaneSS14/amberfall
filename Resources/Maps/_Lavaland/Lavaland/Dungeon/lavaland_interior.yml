@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 08/14/2025 08:02:51
-  entityCount: 544
+  entityCount: 539
 maps:
 - 1
 grids:
@@ -237,13 +237,6 @@ entities:
     components:
     - type: Transform
       pos: 14.5,21.5
-      parent: 1
-- proto: BedsheetSpawner
-  entities:
-  - uid: 12
-    components:
-    - type: Transform
-      pos: 21.5,9.5
       parent: 1
 - proto: BookshelfFilled
   entities:
@@ -615,18 +608,6 @@ entities:
     - type: Transform
       pos: 14.5,12.5
       parent: 1
-- proto: GrilleSpawner
-  entities:
-  - uid: 78
-    components:
-    - type: Transform
-      pos: 16.5,13.5
-      parent: 1
-  - uid: 79
-    components:
-    - type: Transform
-      pos: 15.5,12.5
-      parent: 1
 - proto: LockerFreezerBase
   entities:
   - uid: 37
@@ -719,18 +700,6 @@ entities:
     components:
     - type: Transform
       pos: 20.5,18.5
-      parent: 1
-- proto: SalvageCanisterSpawner
-  entities:
-  - uid: 91
-    components:
-    - type: Transform
-      pos: 20.5,9.5
-      parent: 1
-  - uid: 92
-    components:
-    - type: Transform
-      pos: 15.5,3.5
       parent: 1
 - proto: SalvageSpawnerEquipment
   entities:

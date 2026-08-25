@@ -1,28 +1,8 @@
 - type: guideEntry
-  id: Science
-  name: guide-entry-science
-  text: "/ServerInfo/Guidebook/Science/Science.xml"
-  children:
-  - Technologies
-  - AnomalousResearch
-  - Xenoarchaeology
-  - Xenobiology # Goobstation
-  - Robotics
-  - Genetics # Trauma
-
-- type: guideEntry
   id: Technologies
   name: guide-entry-technologies
   text: "/ServerInfo/Guidebook/Science/Technologies.xml"
   filterEnabled: True
-
-- type: guideEntry
-  id: AnomalousResearch
-  name: guide-entry-anomalous-research
-  text: "/ServerInfo/Guidebook/Science/AnomalousResearch.xml"
-  children:
-  - APE
-  - ScannersAndVessels
 
 - type: guideEntry
   id: ScannersAndVessels
@@ -51,13 +31,6 @@
   id: AnalysisConsole
   name: guide-entry-analysisconsole
   text: "/ServerInfo/Guidebook/Science/AnalysisConsole.xml"
-
-- type: guideEntry
-  id: Robotics
-  name: guide-entry-robotics
-  text: "/ServerInfo/Guidebook/Science/Robotics.xml"
-  children:
-  - Cyborgs
 
 - type: guideEntry
   id: Cyborgs

@@ -297,14 +297,6 @@ public sealed partial class GuideReagentEmbed : BoxContainer, IDocumentTag, ISea
                     _prototype,
                     _systemManager));
             }
-            else if (source is ReagentGasSourceData gasSourceData)
-            {
-                SourcesDescriptionContainer.AddChild(new GuideReagentReaction(
-                    gasSourceData.GasPrototype,
-                    gasSourceData.MixingType,
-                    _prototype,
-                    _systemManager));
-            }
         }
     }
 }

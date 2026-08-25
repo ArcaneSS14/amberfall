@@ -95,10 +95,6 @@
   - type: GunUpgrade
     name: gun-upgrade-pressure-name
     uniqueGroup: pressure
-  - type: GunUpgradePressure # Works almost everywhere now, yupie!
-    newLowerBound: 0
-    newUpperBound: 200
-
 - type: entity
   id: PKAUpgradeSpace
   parent: BasePKAUpgrade
@@ -116,10 +112,6 @@
   - type: GunUpgrade
     name: gun-upgrade-space-name
     uniqueGroup: pressure
-  - type: GunUpgradePressure
-    newLowerBound: 0
-    newUpperBound: 10
-    newAppliedModifier: 1.5 # Basically 2 damage upgrades in 1
   - type: Tag
     tags:
     - PKAUpgrade

@@ -45,9 +45,6 @@
         types:
           Blunt: 6
           Heat: 6
-    - type: IgnitionSource
-      ignited: true
-
 - type: entity
   id: HighCaliberPelletShotgunIncendiarySpread
   categories: [ HideSpawnMenu ]

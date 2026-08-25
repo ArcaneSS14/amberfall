@@ -10,58 +10,6 @@
     sprite: Clothing/OuterClothing/Coats/bomber.rsi
 
 - type: entity
-  parent: [ ClothingOuterArmorBase, ClothingOuterStorageBase, AllowSuitStorageClothing, BaseSecurityContraband ]
-  id: ClothingOuterCoatDetective
-  name: detective's armored trenchcoat
-  description: An 20th-century trenchcoat with an armored underlay. Someone who wears this means serious business.
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/detective.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/detective.rsi
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: SmokingPipeFilledTobacco
-        - id: FlippoEngravedLighter
-  - type: Armor # Woundmed
-    coverage:
-    - Torso
-    - Tail
-    - Arm
-    - Leg
-    modifiers:
-      coefficients:
-        Blunt: 0.7
-        Slash: 0.7
-        Piercing: 0.7
-        Ballistic: 0.7 # Trauma
-        Heat: 0.8
-
-- type: entity
-  parent: [ClothingOuterCoatDetectiveLoadout]
-  id: ClothingOuterCoatDetectiveLoadoutGrey
-  name: noir armored trenchcoat
-  description: Ah, your trusty coat. There's a few tears here and there, giving it a more timely look. Or at least, that's what you told yourself when you found out gettin' it repaired would set you back 200 spesos.
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/detective_grey.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/detective_grey.rsi
-
-- type: entity
-  parent: ClothingOuterCoatDetective
-  id: ClothingOuterCoatDetectiveLoadout
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: SmokingPipeFilledTobacco
-        - id: FlippoLighter #Not the steal objective, only difference from normal detective trenchcoat
-
-- type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatGentle
   name: gentle coat
@@ -173,9 +121,6 @@
     sprite: Clothing/OuterClothing/Coats/trenchcoat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/trenchcoat.rsi
-  - type: TemperatureProtection
-    heatingCoefficient: 0.1
-    coolingCoefficient: 0.1
   - type: Armor
     coverage: # Shitmed
     - Torso

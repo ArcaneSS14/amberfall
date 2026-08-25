@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/20/2025 03:25:40
-  entityCount: 88
+  entityCount: 83
 maps: []
 grids:
 - 1
@@ -113,58 +113,6 @@ entities:
             id: Remains
           decals:
             1: -2,3
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 65535
-          0,-1:
-            0: 65343
-          -1,0:
-            0: 65535
-          0,1:
-            0: 63
-          -1,1:
-            0: 207
-          1,0:
-            0: 30583
-          1,1:
-            0: 69
-          1,-1:
-            0: 30019
-          -2,0:
-            0: 52428
-          -2,-1:
-            0: 61132
-          -2,1:
-            0: 12
-          -1,-1:
-            0: 65439
-          0,-2:
-            0: 61440
-          -1,-2:
-            0: 61440
-          1,-2:
-            0: 12288
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: APCBasic
   entities:
@@ -180,13 +128,6 @@ entities:
     components:
     - type: Transform
       pos: -5.5,4.5
-      parent: 1
-- proto: BoxDarts
-  entities:
-  - uid: 88
-    components:
-    - type: Transform
-      pos: -3.5,4.5
       parent: 1
 - proto: CableApcExtension
   entities:
@@ -369,28 +310,6 @@ entities:
       name: birthday crown
     - type: Transform
       pos: -0.5,2.5
-      parent: 1
-- proto: FoodBoxPizzaFilled
-  entities:
-  - uid: 52
-    components:
-    - type: Transform
-      pos: 4.5,4.5
-      parent: 1
-  - uid: 53
-    components:
-    - type: Transform
-      pos: 3.5,4.5
-      parent: 1
-  - uid: 54
-    components:
-    - type: Transform
-      pos: 2.5,4.5
-      parent: 1
-  - uid: 77
-    components:
-    - type: Transform
-      pos: -1.5,1.5
       parent: 1
 - proto: FoodCakeBirthday
   entities:

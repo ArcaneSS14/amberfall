@@ -125,27 +125,6 @@
     Plastic: 50
 
 - type: latheRecipe
-  id: AirTank
-  result: AirTank
-  completetime: 4
-  materials:
-    Steel: 400
-
-- type: latheRecipe
-  id: DoubleEmergencyOxygenTank
-  result: DoubleEmergencyOxygenTank
-  completetime: 4
-  materials:
-    Steel: 250
-
-- type: latheRecipe
-  id: DoubleEmergencyNitrogenTank
-  result: DoubleEmergencyNitrogenTank
-  completetime: 4
-  materials:
-    Steel: 250
-
-- type: latheRecipe
   id: ClothingShoesBootsMagSci
   result: ClothingShoesBootsMagSci
   completetime: 10

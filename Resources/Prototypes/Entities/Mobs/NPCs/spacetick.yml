@@ -106,5 +106,3 @@
   id: MobTickSalvage
   parent: MobTick
   suffix: "Salvage Ruleset"
-  components:
-  - type: SalvageMobRestrictions

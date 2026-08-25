@@ -5,7 +5,6 @@ using Content.Shared.FixedPoint;
 using Content.Goobstation.Shared.Changeling.Components;
 using Content.Medical.Common.Damage;
 using Content.Medical.Common.Targeting;
-using Content.Shared.Atmos.Components;
 using Content.Shared.Body.Systems;
 using Content.Shared.Damage.Systems;
 using Content.Shared.StatusEffectNew;
@@ -82,32 +81,7 @@ public sealed partial class FleshmendSystem : EntitySystem
 
     private void Cycle(Entity<FleshmendComponent> ent, EntityUid target)
     {
-        if (TryFlammableChecks(ent, target))
-            DoFleshmend(ent, target);
-    }
-
-    private bool TryFlammableChecks(Entity<FleshmendComponent> ent, EntityUid target)
-    {
-        if (!ent.Comp.IgnoreFire &&
-            TryComp<FlammableComponent>(target, out var flam)
-            && flam.OnFire)
-        {
-            if (ent.Comp.DoVisualEffect)
-                RemComp<FleshmendEffectComponent>(target);
-
-            if (ent.Comp.PassiveSound != null)
-                StopFleshmendSound(ent);
-
-            return false;
-        }
-
-        if (ent.Comp.DoVisualEffect)
-            EnsureComp<FleshmendEffectComponent>(target);
-
-        if (ent.Comp.PassiveSound != null
-            && ent.Comp.SoundSource == null)
-            DoFleshmendSound(ent);
-        return true;
+        DoFleshmend(ent, target);
     }
 
     private void DoFleshmend(Entity<FleshmendComponent> ent, EntityUid target)

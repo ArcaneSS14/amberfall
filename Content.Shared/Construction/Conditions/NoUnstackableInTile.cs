@@ -5,7 +5,7 @@ using Robust.Shared.Map;
 namespace Content.Shared.Construction.Conditions;
 
 /// <summary>
-///   Check for "Unstackable" condition commonly used by atmos devices and others which otherwise don't check on
+///   Check for "Unstackable" condition used by devices which otherwise don't check on
 ///   collisions with other items.
 /// </summary>
 [UsedImplicitly]

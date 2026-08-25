@@ -1,4 +1,3 @@
-using Content.Shared.Atmos.Rotting;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Overlays;
@@ -80,10 +79,7 @@ public sealed partial class ShowHealthIconsSystem : EquipmentHudSystem<ShowHealt
         {
             if (TryComp<MobStateComponent>(entity, out var state))
             {
-                // Since there is no MobState for a rotting mob, we have to deal with this case first.
-                if (HasComp<RottingComponent>(entity) && ProtoMan.Resolve(injurableComp.RottingIcon, out var rottingIcon))
-                    result.Add(rottingIcon);
-                else if (injurableComp.HealthIcons.TryGetValue(state.CurrentState, out var value) && ProtoMan.Resolve(value, out var icon))
+                if (injurableComp.HealthIcons.TryGetValue(state.CurrentState, out var value) && ProtoMan.Resolve(value, out var icon))
                     result.Add(icon);
             }
         }

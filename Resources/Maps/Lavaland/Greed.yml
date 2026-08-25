@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/20/2025 04:11:34
-  entityCount: 87
+  entityCount: 86
 maps: []
 grids:
 - 1
@@ -63,42 +63,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 14335
-          0,-1:
-            0: 62259
-          -1,0:
-            0: 36078
-          0,1:
-            0: 3
-          -1,1:
-            0: 8
-          -1,-1:
-            0: 59528
-          0,-2:
-            0: 4096
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: BlockGameArcade
   entities:
@@ -123,13 +87,6 @@ entities:
     components:
     - type: Transform
       pos: -0.34775037,4.114311
-      parent: 1
-- proto: CrateCargoGambling
-  entities:
-  - uid: 51
-    components:
-    - type: Transform
-      pos: 0.5,4.5
       parent: 1
 - proto: DartBlue
   entities:

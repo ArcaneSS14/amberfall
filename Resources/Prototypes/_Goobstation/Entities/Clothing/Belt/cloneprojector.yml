@@ -23,7 +23,6 @@
     - type: GhostTakeoverAvailable
     - type: AntagImmune
     - type: MovementIgnoreGravity
-    - type: SpecialPressureImmunity
     - type: RequireProjectileTarget
     - type: NoSlip
     - type: ZombieImmune
@@ -84,25 +83,10 @@
     - type: HealthExaminable
       examinableTypes:
       - Shock
-    - type: Temperature
-    - type: AtmosExposed
-    - type: MovedByPressure
     - type: ThermalRegulator
     - type: SSDIndicator
     - type: Condemned # Disgusting silicon.
       soulOwnedNotDevil: true
-    - type: Flammable
-      damage:
-        types: {}
-    - type: FireVisuals
-    - type: Respirator
-      damage:
-        types:
-          Asphyxiation: 0 # required for whatever reason, go fuck yourself
-      damageRecovery:
-        types:
-          Asphyxiation: 0 # required for whatever reason, go fuck yourself
-    - type: Internals
     - type: Bloodstream
       bloodlossDamage:
         types:
@@ -119,7 +103,6 @@
     - type: Absorbable
     - type: Mutatable
     - type: Fingerprint
-    - type: Perishable
     - type: Hunger
     - type: Thirst
     - type: FootprintOwner

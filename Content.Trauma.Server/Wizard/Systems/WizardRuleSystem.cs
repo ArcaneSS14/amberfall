@@ -3,14 +3,12 @@
 using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Antag;
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
 using Content.Server.Mind;
 using Content.Server.Roles;
 using Content.Server.Station.Systems;
-using Content.Shared.Atmos;
 using Content.Shared.Chat;
 using Content.Shared.Cloning.Events;
 using Content.Shared.Database;
@@ -44,7 +42,6 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
     [Dependency] private RoleSystem _role = default!;
     [Dependency] private GameTicker _gameTicker = default!;
     [Dependency] private IRobustRandom _random = default!;
-    [Dependency] private AtmosphereSystem _atmos = default!;
     [Dependency] private AudioSystem _audio = default!;
     [Dependency] private NpcFactionSystem _faction = default!;
     [Dependency] private IAdminLogManager _log = default!;
@@ -128,15 +125,6 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
             Dirty(map.Value, parallax);
         }
 
-        // TODO: JUST FUCKING STORE THE GAXMIXTURE IN THE EVENT
-        var moles = new float[Atmospherics.AdjustedNumberOfGases];
-        moles[(int) Gas.Oxygen] = ev.OxygenMoles;
-        moles[(int) Gas.Nitrogen] = ev.NitrogenMoles;
-        moles[(int) Gas.CarbonDioxide] = ev.CarbonDioxideMoles;
-
-        var mixture = new GasMixture(moles, ev.Temperature);
-
-        _atmos.SetMapAtmosphere(map.Value, false, mixture);
 
         var message = Loc.GetString("dimension-shift-message");
         var wrappedMessage = Loc.GetString("chat-manager-server-wrap-message", ("message", message));
@@ -283,3 +271,4 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
         return true;
     }
 }
+

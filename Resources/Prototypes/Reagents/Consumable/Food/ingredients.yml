@@ -101,17 +101,6 @@
         showInGuidebook: true
         probability: 0.05
   reactiveEffects:
-    Acidic:
-      methods: [ Touch ]
-      effects:
-      - !type:Emote
-        emote: Cough
-        showInGuidebook: true
-        conditions:
-        - !type:BreathingCondition
-        - !type:InternalsCondition
-          inverted: true
-
 - type: reagent
   id: Vinegar
   name: reagent-name-vinegar
@@ -176,9 +165,6 @@
   color: "#b67823"
   boilingPoint: 300.0
   meltingPoint: -16.0
-  tileReactions:
-  - !type:FlammableTileReaction {}
-
 - type: reagent
   id: CapsaicinOil
   name: reagent-name-capsaicin-oil
@@ -196,8 +182,6 @@
       metabolites:
         Nutriment: 1.5
       effects:
-      - !type:AdjustTemperature
-        amount: 250 # thermal energy, not temp
       - !type:HealthChange
         conditions:
           - !type:ReagentCondition
@@ -282,8 +266,6 @@
       metabolites:
         Nutriment: 1.5
       effects:
-      - !type:AdjustTemperature
-        amount: -250 # thermal energy, not temp
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition

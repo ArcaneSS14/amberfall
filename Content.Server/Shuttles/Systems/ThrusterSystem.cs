@@ -8,7 +8,6 @@ using Content.Shared.Interaction;
 using Content.Shared.Maps;
 using Content.Shared.Physics;
 using Content.Shared.Shuttles.Components;
-using Content.Shared.Temperature;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;
@@ -50,7 +49,6 @@ public sealed partial class ThrusterSystem : EntitySystem
         SubscribeLocalEvent<ThrusterComponent, PowerChangedEvent>(OnPowerChange);
         SubscribeLocalEvent<ThrusterComponent, AnchorStateChangedEvent>(OnAnchorChange);
         SubscribeLocalEvent<ThrusterComponent, MoveEvent>(OnRotate);
-        SubscribeLocalEvent<ThrusterComponent, IsHotEvent>(OnIsHotEvent);
         SubscribeLocalEvent<ThrusterComponent, StartCollideEvent>(OnStartCollide);
         SubscribeLocalEvent<ThrusterComponent, EndCollideEvent>(OnEndCollide);
 
@@ -86,11 +84,6 @@ public sealed partial class ThrusterSystem : EntitySystem
                 args.PushMarkup(nozzleText);
             }
         }
-    }
-
-    private void OnIsHotEvent(EntityUid uid, ThrusterComponent component, IsHotEvent args)
-    {
-        args.IsHot = component.Type != ThrusterType.Angular && component.IsOn;
     }
 
     private void OnShuttleTileChange(EntityUid uid, ShuttleComponent component, ref TileChangedEvent args)

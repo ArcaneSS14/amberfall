@@ -10,7 +10,6 @@
       params:
         maxDistance: 1
   - type: Pullable
-  - type: MovedByPressure
   - type: Physics
     bodyType: Static
     fixedRotation: true

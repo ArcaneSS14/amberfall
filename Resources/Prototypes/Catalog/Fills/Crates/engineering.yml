@@ -229,22 +229,10 @@
         id: WeaponParticleDecelerator
         amount: 3
 
-- type: entity
-  parent: CrateEngineering
-  id: CrateEngineeringSpaceHeater
-  name: space heater crate
-  description: Contains a space heater for climate control.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: SpaceHeaterFlatpack
-
 - type: entityTable
   id: RandomTechBoardTable
   table: !type:GroupSelector
     children:
-    - id: AirAlarmElectronics
     - id: FireAlarmElectronics
     - id: DoorElectronics
     - id: FirelockElectronics
@@ -270,36 +258,3 @@
         rolls: !type:RangeNumberSelector
           range: 6, 8
 
-# RPD
-- type: entity
-  id: CrateRPD
-  parent: CrateEngineeringSecure
-  name: RPD crate
-  description: A crate containing a single rapid piping device.
-  components:
-  - type: StorageFill
-    contents:
-    - id: RPD
-
-# Assmos - Extinguisher Nozzle
-- type: entity
-  id: CrateEngineeringFirefighterBackpackTank
-  parent: CrateEngineering
-  name: firefighter crate
-  description: Contains a firefighter backpack water tank.
-  components:
-  - type: StorageFill
-    contents:
-      - id: ClothingBackpackFirefighterTank
-
-- type: entity
-  parent: CrateEngineering
-  id: CrateAirGrenade
-  name: air grenade crate
-  description: A crate containing 3 air grenades.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: AirGrenade
-        amount: 3

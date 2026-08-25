@@ -1,8 +1,7 @@
 namespace Content.Apotheosis;
 
 /// <summary>
-/// Stores solid fuel and exposes a fire only while that fuel is burning.
-/// Fuel values are defined by FireFuelComponent on the consumed entities.
+/// Stores and burns solid fuel without relying on atmosphere simulation.
 /// </summary>
 [RegisterComponent]
 public sealed partial class FuelableFireComponent : Component
@@ -18,4 +17,16 @@ public sealed partial class FuelableFireComponent : Component
 
     [DataField]
     public bool Burning;
+
+    /// <summary>
+    /// Keeps the fire burning without consuming or requiring stored fuel.
+    /// </summary>
+    [DataField]
+    public bool InfiniteFuel;
+
+    /// <summary>
+    /// Whether players can extinguish the fire by activating it in-world.
+    /// </summary>
+    [DataField]
+    public bool CanExtinguish = true;
 }

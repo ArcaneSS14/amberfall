@@ -21,7 +21,6 @@
     - state: rollerbed_buckled
       map: ["buckledLayer"]
       visible: false
-  - type: MovedByPressure
   - type: DamageOnHighSpeedImpact
     soundHit:
       collection: MetalThud

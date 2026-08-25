@@ -85,7 +85,7 @@ namespace Content.Server.Chemistry.EntitySystems
 
         public bool TryAddSolution(Entity<SolutionComponent?> vapor, Entity<SolutionComponent> solution, FixedPoint2 split) // Trauma - made public
         {
-            if (solution.Comp.Solution.Volume <= 0 || split <= 0 || !Resolve(vapor, ref vapor.Comp, false)) // Trauma - dont log missing, atmos resin isnt vapor but uses this shitcode
+            if (solution.Comp.Solution.Volume <= 0 || split <= 0 || !Resolve(vapor, ref vapor.Comp, false))
                 return false;
 
             var newSolution = _solutionContainer.SplitSolution(solution, split);

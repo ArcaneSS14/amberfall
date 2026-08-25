@@ -170,11 +170,6 @@ entities:
             108: 8,2
             109: 8,1
             110: -1,-8
-    - type: GridAtmosphere
-      version: 2
-      data:
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
 - proto: CosmicChair

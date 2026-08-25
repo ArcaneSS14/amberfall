@@ -32,12 +32,10 @@ using Microsoft.Extensions.ObjectPool;
 using Robust.Server.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using Content.Shared.Atmos.Components;
 using System.Linq;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Mobs.Components;
-using Content.Shared.Temperature.Components;
 using Content.Shared.Stealth;
 using Content.Shared.Stealth.Components;
 
@@ -384,12 +382,6 @@ public sealed partial class NPCUtilitySystem : EntitySystem
 
                 return 0f;
             }
-            case TargetOnFireCon:
-                {
-                    if (TryComp(targetUid, out FlammableComponent? fire) && fire.OnFire)
-                        return 1f;
-                    return 0f;
-                }
             case TargetIsStunnedCon:
                 {
                     return HasComp<StunnedComponent>(targetUid) ? 1f : 0f;
@@ -401,13 +393,6 @@ public sealed partial class NPCUtilitySystem : EntitySystem
                         return 1f;
 
                     return 0f;
-                }
-            case TargetLowTempCon con:
-                {
-                    if (!TryComp<TemperatureComponent>(targetUid, out var temperature))
-                        return 0f;
-
-                    return temperature.CurrentTemperature <= con.MinTemp ? 1f : 0f;
                 }
             default:
                 throw new NotImplementedException();

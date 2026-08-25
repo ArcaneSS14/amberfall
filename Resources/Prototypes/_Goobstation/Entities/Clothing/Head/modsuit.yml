@@ -46,9 +46,6 @@
     tags:
     - WhitelistChameleon
     - PlasmamanSafe
-  - type: IgniteFromGasImmunity
-    parts:
-    - Head
   - type: Armor
     coverage:
     - Head
@@ -104,13 +101,6 @@
         Radiation: 0.2
   - type: ComponentToggler
     components:
-    - type: BreathMask
-    - type: PressureProtection
-      highPressureMultiplier: 0.3
-      lowPressureMultiplier: 1000
-    - type: TemperatureProtection
-      heatingCoefficient: 0.01
-      coolingCoefficient: 0.01
     - type: IdentityBlocker
     - type: IngestionBlocker
     - type: HideLayerClothing
@@ -157,10 +147,6 @@
     tags:
     - PlasmamanSafe
     - Envirohelm
-  - type: IgniteFromGasImmunity
-    parts:
-    - Head
-
 - type: entity
   parent: [ BaseClothingModsuitHelmet, BaseModsuitPieceSecurity ]
   id: ClothingModsuitHelmetSecurity
@@ -189,13 +175,6 @@
         Radiation: 0.6
   - type: ComponentToggler
     components:
-    - type: BreathMask
-    - type: PressureProtection
-      highPressureMultiplier: 0.3
-      lowPressureMultiplier: 1000
-    - type: TemperatureProtection
-      heatingCoefficient: 0.01
-      coolingCoefficient: 0.01
     - type: IdentityBlocker
     - type: IngestionBlocker
     - type: HideLayerClothing
@@ -263,16 +242,6 @@
         Heat: 0.55
         Caustic: 0.5
         Radiation: 0.5
-  - type: ComponentToggler
-    components:
-    - type: BreathMask
-    - type: PressureProtection
-      highPressureMultiplier: 0.3
-      lowPressureMultiplier: 1000
-    - type: TemperatureProtection
-      heatingCoefficient: 0.01
-      coolingCoefficient: 0.01
-  #THIS WILL BE REPLACED WITH MODULE ↓↓
   - type: PointLight
     enabled: false
     radius: 5
@@ -325,16 +294,6 @@
         Heat: 0.8
         Caustic: 0.6
         Radiation: 0.3
-  - type: ComponentToggler
-    components:
-    - type: BreathMask
-    - type: PressureProtection
-      highPressureMultiplier: 0.3
-      lowPressureMultiplier: 1000
-    - type: TemperatureProtection
-      heatingCoefficient: 0.01
-      coolingCoefficient: 0.01
-  #THIS WILL BE REPLACED WITH MODULE ↓↓
   - type: PointLight
     enabled: false
     radius: 5
@@ -391,16 +350,6 @@
         Caustic: 0.5
         Radiation: 0.01
   - type: EyeProtection
-  - type: ComponentToggler
-    components:
-    - type: BreathMask
-    - type: PressureProtection
-      highPressureMultiplier: 0.3
-      lowPressureMultiplier: 1000
-    - type: TemperatureProtection
-      heatingCoefficient: 0.01
-      coolingCoefficient: 0.01
-  #THIS WILL BE REPLACED WITH MODULE ↓↓
   - type: PointLight
     enabled: false
     radius: 5
@@ -459,13 +408,6 @@
   - type: EyeProtection
   - type: ComponentToggler
     components:
-    - type: BreathMask
-    - type: PressureProtection
-      highPressureMultiplier: 0.3
-      lowPressureMultiplier: 1000
-    - type: TemperatureProtection
-      heatingCoefficient: 0.005
-      coolingCoefficient: 0.005
     - type: IdentityBlocker
     - type: HideLayerClothing
       slots:
@@ -507,9 +449,6 @@
     startingCharge: 600
   - type: BatterySelfRecharger
     autoRechargeRate: 2
-  - type: FireProtection
-    reduction: 0.25
-
 - type: entity
   parent: [ BaseClothingModsuitHelmetHideIdentity, BaseModsuitPieceRD ]
   id: ClothingModsuitHelmetResearchDirector
@@ -540,16 +479,6 @@
         Radiation: 0.01
   - type: EyeProtection
   - type: FlashImmunity
-  - type: ComponentToggler
-    components:
-    - type: BreathMask
-    - type: PressureProtection
-      highPressureMultiplier: 0.3
-      lowPressureMultiplier: 1000
-    - type: TemperatureProtection
-      heatingCoefficient: 0.01
-      coolingCoefficient: 0.01
-  #THIS WILL BE REPLACED WITH MODULE ↓↓
   - type: PointLight
     enabled: false
     radius: 5
@@ -612,13 +541,6 @@
         Caustic: 0.55
   - type: ComponentToggler
     components:
-    - type: BreathMask
-    - type: PressureProtection
-      highPressureMultiplier: 0.3
-      lowPressureMultiplier: 1000
-    - type: TemperatureProtection
-      heatingCoefficient: 0.01
-      coolingCoefficient: 0.01
     - type: IdentityBlocker
     - type: IngestionBlocker
     - type: HideLayerClothing

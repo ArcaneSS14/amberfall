@@ -1,4 +1,3 @@
-using Content.Shared.Atmos;
 using Content.Shared.Pinpointer;
 using System.Linq;
 
@@ -6,12 +5,20 @@ namespace Content.Client.Pinpointer;
 
 public sealed partial class NavMapSystem
 {
-    private (AtmosDirection, Vector2i, AtmosDirection)[] _regionPropagationTable =
+    private enum NavDirection
     {
-        (AtmosDirection.East, new Vector2i(1, 0), AtmosDirection.West),
-        (AtmosDirection.West, new Vector2i(-1, 0), AtmosDirection.East),
-        (AtmosDirection.North, new Vector2i(0, 1), AtmosDirection.South),
-        (AtmosDirection.South, new Vector2i(0, -1), AtmosDirection.North),
+        North = 1,
+        South = 2,
+        East = 4,
+        West = 8,
+    }
+
+    private (NavDirection, Vector2i, NavDirection)[] _regionPropagationTable =
+    {
+        (NavDirection.East, new Vector2i(1, 0), NavDirection.West),
+        (NavDirection.West, new Vector2i(-1, 0), NavDirection.East),
+        (NavDirection.North, new Vector2i(0, 1), NavDirection.South),
+        (NavDirection.South, new Vector2i(0, -1), NavDirection.North),
     };
 
     public override void Update(float frameTime)
@@ -163,7 +170,7 @@ public sealed partial class NavMapSystem
         return (visitedTiles, visitedChunks);
     }
 
-    private bool RegionCanPropagateInDirection(NavMapChunk chunk, Vector2i tile, AtmosDirection direction)
+    private bool RegionCanPropagateInDirection(NavMapChunk chunk, Vector2i tile, NavDirection direction)
     {
         var relative = SharedMapSystem.GetChunkRelative(tile, ChunkSize);
         var idx = GetTileIndex(relative);

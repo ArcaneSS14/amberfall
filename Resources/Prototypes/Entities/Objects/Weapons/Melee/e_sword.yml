@@ -108,9 +108,6 @@
     - Energy
     reflectExhaustionCost: 0.125
     reflectSpread: 60
-  - type: IgnitionSource
-    temperature: 700
-
 - type: entity
   name: energy sword
   parent: [BaseMeleeWeaponEnergy, BaseSyndicateContraband]

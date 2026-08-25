@@ -90,9 +90,6 @@
   - type: EventHorizon
     radius: 5
     canBreachContainment: true
-  - type: GravityWell
-    baseRadialAcceleration: 6
-    maxRange: 8
   - type: WarpPoint
     follow: true
     location: Ratvar

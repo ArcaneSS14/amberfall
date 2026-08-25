@@ -91,7 +91,6 @@
       damageModifierSet: StructuralMetallicStrong
     - type: Injurable
       damageContainer: StructuralInorganic
-    - type: BatterySensor
     - type: DeviceNetwork
       deviceNetId: AtmosDevices
       receiveFrequencyId: AtmosMonitor

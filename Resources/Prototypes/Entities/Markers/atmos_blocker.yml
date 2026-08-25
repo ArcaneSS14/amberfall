@@ -12,9 +12,6 @@
         - sprite: Markers/atmos.rsi
           shader: unshaded # }
           state: vacuum
-    - type: AtmosFixMarker
-      mode: 1
-
 - type: entity
   name: Atmos Fix Oxygen Marker
   id: AtmosFixOxygenMarker
@@ -29,9 +26,6 @@
         - sprite: Markers/atmos.rsi
           shader: unshaded # }
           state: oxygen
-    - type: AtmosFixMarker
-      mode: 2
-
 - type: entity
   name: Atmos Fix Nitrogen Marker
   id: AtmosFixNitrogenMarker
@@ -46,9 +40,6 @@
         - sprite: Markers/atmos.rsi
           shader: unshaded # }
           state: nitrogen
-    - type: AtmosFixMarker
-      mode: 3
-
 - type: entity
   name: Atmos Fix Plasma Marker
   id: AtmosFixPlasmaMarker
@@ -63,9 +54,6 @@
         - sprite: Markers/atmos.rsi
           shader: unshaded # }
           state: plasma
-    - type: AtmosFixMarker
-      mode: 4
-
 - type: entity
   name: Atmos Fix Instant Plasmafire Marker
   id: AtmosFixInstantPlasmaFireMarker
@@ -80,9 +68,6 @@
         - sprite: Markers/atmos.rsi
           shader: unshaded # }
           state: fire
-    - type: AtmosFixMarker
-      mode: 5
-
 - type: entity
   name: Atmos Fix Freezer Marker
   id: AtmosFixFreezerMarker
@@ -97,18 +82,11 @@
         - sprite: Markers/atmos.rsi
           shader: unshaded # }
           state: freeze
-    - type: AtmosFixMarker
-      mode: 6
-
 - type: entity
   parent: AtmosFixNitrogenMarker
   id: AtmosFixVoxMarker
   suffix: Vox Atmosphere
   description: "Nitrogen @ 101 kPa, 20C"
-  components:
-  - type: AtmosFixMarker
-    mode: 7
-
 - type: entity
   parent: MarkerBase
   id: AtmosFixAirMarker
@@ -123,5 +101,3 @@
     - sprite: Markers/atmos.rsi
       shader: unshaded # }
       state: air
-  - type: AtmosFixMarker
-    mode: 8

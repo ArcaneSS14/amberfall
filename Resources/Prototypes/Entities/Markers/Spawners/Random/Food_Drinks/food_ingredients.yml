@@ -20,6 +20,7 @@
       prob: 0.80
 
 #Tables
+
 - type: entityTable
   id: IngredientTable
   table: !type:GroupSelector

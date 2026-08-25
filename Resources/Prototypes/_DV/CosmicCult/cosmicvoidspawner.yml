@@ -11,4 +11,3 @@
         - state: red
         - sprite: Mobs/Species/Human/parts.rsi
           state: full
-    - type: CosmicVoidSpawn

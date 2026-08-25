@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 05/29/2026 10:22:44
-  entityCount: 294
+  entityCount: 271
 maps: []
 grids:
 - 325
@@ -156,57 +156,14 @@ entities:
             20: -2,-6
             21: -1,-6
             22: 0,-6
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          -1,-1:
-            0: 65535
-          0,-1:
-            0: 65535
-          -2,-1:
-            0: 52424
-          -1,-3:
-            0: 65280
-          -1,-2:
-            0: 65535
-          0,-3:
-            0: 30464
-          0,-2:
-            0: 30583
-          -2,0:
-            0: 8
-          -1,0:
-            0: 3839
-          0,0:
-            0: 895
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-            Oxygen: 21.824879
-            Nitrogen: 82.10312
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: GravityShake
       shakeTimes: 10
     - type: SpreaderGrid
     - type: GridPathfinding
     - type: ImplicitRoof
-    - type: ExplosionAirtightGrid
     - type: TileHistory
       chunkHistory: {}
-- proto: AirCanister
-  entities:
-  - uid: 91
-    components:
-    - type: Transform
-      anchored: True
-      pos: -0.5,-8.5
-      parent: 325
-    - type: Physics
-      bodyType: Static
 - proto: AirlockExternalShuttleSyndicateLocked
   entities:
   - uid: 142
@@ -241,14 +198,6 @@ entities:
       supplyRampPosition: 0.064453125
     - type: Fixtures
       fixtures: {}
-- proto: AtmosDeviceFanDirectional
-  entities:
-  - uid: 6
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -3.5,-1.5
-      parent: 325
 - proto: Bed
   entities:
   - uid: 76
@@ -385,13 +334,6 @@ entities:
           occludes: True
           ents:
           - 343
-- proto: BoxMRE
-  entities:
-  - uid: 320
-    components:
-    - type: Transform
-      pos: 0.70504504,-7.29326
-      parent: 325
 - proto: CableApcExtension
   entities:
   - uid: 120
@@ -786,13 +728,6 @@ entities:
       parent: 202
     - type: Physics
       canCollide: False
-- proto: DresserFilled
-  entities:
-  - uid: 85
-    components:
-    - type: Transform
-      pos: 0.5,-4.5
-      parent: 325
 - proto: DrinkNukieCan
   entities:
   - uid: 144
@@ -862,150 +797,6 @@ entities:
       parent: 225
     - type: Physics
       canCollide: False
-- proto: FoodBoxDonut
-  entities:
-  - uid: 87
-    components:
-    - type: Transform
-      pos: -2.470145,-2.3953476
-      parent: 325
-- proto: GasPipeFourway
-  entities:
-  - uid: 216
-    components:
-    - type: Transform
-      pos: -0.5,-1.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-- proto: GasPipeStraight
-  entities:
-  - uid: 211
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,-6.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-  - uid: 213
-    components:
-    - type: Transform
-      pos: -0.5,-4.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-  - uid: 214
-    components:
-    - type: Transform
-      pos: -0.5,-3.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-  - uid: 215
-    components:
-    - type: Transform
-      pos: -0.5,-2.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-  - uid: 217
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,-0.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-- proto: GasPipeTJunction
-  entities:
-  - uid: 210
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -0.5,-7.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-  - uid: 212
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.5,-5.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-- proto: GasPort
-  entities:
-  - uid: 59
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,-8.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-- proto: GasVentPump
-  entities:
-  - uid: 218
-    components:
-    - type: Transform
-      pos: -0.5,0.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-    - type: DeviceNetwork
-      address: Vnt-5f41a0ae
-      transmitFrequency: 1621
-      receiveFrequency: 1621
-  - uid: 219
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -1.5,-1.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-    - type: DeviceNetwork
-      address: Vnt-129c27d2
-      transmitFrequency: 1621
-      receiveFrequency: 1621
-  - uid: 220
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,-1.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-    - type: DeviceNetwork
-      address: Vnt-11c4609d
-      transmitFrequency: 1621
-      receiveFrequency: 1621
-  - uid: 221
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,-5.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-    - type: DeviceNetwork
-      address: Vnt-6859729f
-      transmitFrequency: 1621
-      receiveFrequency: 1621
-  - uid: 222
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -1.5,-7.5
-      parent: 325
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
-    - type: DeviceNetwork
-      address: Vnt-19d24c7f
-      transmitFrequency: 1621
-      receiveFrequency: 1621
 - proto: GeneratorBasic15kW
   entities:
   - uid: 41
@@ -1138,13 +929,6 @@ entities:
     components:
     - type: Transform
       pos: 1.493886,-2.2168128
-      parent: 325
-- proto: MedkitCombatFilled
-  entities:
-  - uid: 19
-    components:
-    - type: Transform
-      pos: 1.48298,-0.3211529
       parent: 325
 - proto: MicroManipulatorStockPart
   entities:
@@ -1440,26 +1224,12 @@ entities:
       parent: 325
     - type: Fixtures
       fixtures: {}
-- proto: NitrogenTankFilled
-  entities:
-  - uid: 105
-    components:
-    - type: Transform
-      pos: 1.373605,-0.2749618
-      parent: 325
 - proto: NukeCodePaper
   entities:
   - uid: 323
     components:
     - type: Transform
       pos: 1.561105,-2.5567772
-      parent: 325
-- proto: OxygenTankFilled
-  entities:
-  - uid: 167
-    components:
-    - type: Transform
-      pos: 1.60798,-0.3062118
       parent: 325
 - proto: PinpointerNuclear
   entities:
@@ -2118,15 +1888,6 @@ entities:
     components:
     - type: Transform
       parent: 102
-    - type: Physics
-      canCollide: False
-- proto: ToolboxSyndicateFilled
-  entities:
-  - uid: 177
-    components:
-    - type: Transform
-      pos: 1.5699697,-0.44908836
-      parent: 325
     - type: Physics
       canCollide: False
 - proto: ToyFigurineNukie

@@ -1,4 +1,16 @@
 - type: entity
+  parent: CrateGenericSteel
+  id: CratePlantBGone
+  name: bulk Plant-B-Gone crate
+  description: From Monstano. "Unwanted Weeds, Meet Your Celestial Roundup!"
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: JugPlantBGone
+        amount: 5
+
+- type: entity
   parent: CrateChemistrySecure
   id: CrateChemistryP
   name: chemicals crate (P)
@@ -50,15 +62,3 @@
         - id: JugGold
         - id: JugMercury
         - id: JugSilver
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CratePlantBGone
-  name: bulk Plant-B-Gone crate
-  description: From Monstano. "Unwanted Weeds, Meet Your Celestial Roundup!"
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: JugPlantBGone
-        amount: 5

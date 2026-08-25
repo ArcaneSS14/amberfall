@@ -29,7 +29,6 @@
       visible: false
       sprite: Structures/Storage/closet_labels.rsi
       map: ["enum.PaperLabelVisuals.Layer"]
-  - type: MovedByPressure
   - type: DamageOnHighSpeedImpact
     damage:
       types:
@@ -244,7 +243,6 @@
     - state: locked
       map: ["enum.LockVisualLayers.Lock"]
       shader: unshaded
-  - type: MovedByPressure
   - type: DamageOnHighSpeedImpact
     damage:
       types:

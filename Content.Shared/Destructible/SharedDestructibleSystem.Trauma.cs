@@ -2,7 +2,6 @@
 
 using Content.Shared.FixedPoint;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Atmos.EntitySystems;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Construction;
 using Content.Shared.Destructible.Thresholds.Behaviors;
@@ -29,7 +28,6 @@ public abstract partial class SharedDestructibleSystem
     public new IEntityManager EntityManager => base.EntityManager;
     public IPrototypeManager PrototypeManager => ProtoMan;
 
-    [Dependency] public SharedAtmosphereSystem AtmosphereSystem = default!;
     [Dependency] public SharedAudioSystem AudioSystem = default!;
     [Dependency] public GibbingSystem Gibbing = default!;
     [Dependency] public SharedConstructionSystem ConstructionSystem = default!;

@@ -11,9 +11,6 @@
     sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/standard.rsi
   - type: Clothing
     sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/standard.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.50
-    lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.50
   - type: Armor # Good armour resistance across the board, comparable to the standard security hardsuit.
@@ -71,9 +68,6 @@
     sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/medical.rsi
   - type: Clothing
     sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/medical.rsi
-  - type: PressureProtection # Less protective from high pressure than a standard hardsuit due to less plating.
-    highPressureMultiplier: 0.60
-    lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.60
   - type: Armor # Slightly less armour than the standard hardsuit, but far higher mobility.
@@ -116,9 +110,6 @@
     sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/riot.rsi
   - type: Clothing
     sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/riot.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.45
-    lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.40
   - type: Armor # More protective than a standard security hardsuit, but far slower.

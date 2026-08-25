@@ -25,7 +25,6 @@
         - LargeMobMask
         layer:
         - MidImpassable, LowImpassable, BulletImpassable
-  - type: Airtight
   - type: AmbientSound
     volume: -6
     range: 4

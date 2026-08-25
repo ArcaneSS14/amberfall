@@ -1,13 +1,10 @@
 using System.Linq;
 using System.Numerics;
 using Content.Server.Administration.Logs;
-using Content.Server.Atmos.Components;
-using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Destructible; // Trauma - Destructible moved to shared
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NPC.Pathfinding;
 using Content.Shared.Armor;
-using Content.Shared.Atmos.Components;
 using Content.Shared.Camera;
 using Content.Shared.CCVar;
 using Content.Shared.Damage.Components;
@@ -52,17 +49,13 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private SharedTransformSystem _transformSystem = default!;
     [Dependency] private SharedMapSystem _map = default!;
-    [Dependency] private FlammableSystem _flammableSystem = default!;
     [Dependency] private SharedDestructibleSystem _destructibleSystem = default!; // Trauma - use shared version
-    [Dependency] private AtmosphereSystem _atmosphere = default!;
 
-    [Dependency] private EntityQuery<FlammableComponent> _flammableQuery = default!;
     [Dependency] private EntityQuery<PhysicsComponent> _physicsQuery = default!;
     [Dependency] private EntityQuery<ActorComponent> _actorQuery = default!;
     [Dependency] private EntityQuery<DestructibleComponent> _destructibleQuery = default!;
     [Dependency] private EntityQuery<DamageableComponent> _damageableQuery = default!;
     [Dependency] private EntityQuery<InjurableComponent> _injurableQuery = default!;
-    [Dependency] private EntityQuery<AirtightComponent> _airtightQuery = default!;
     [Dependency] private EntityQuery<TileHistoryComponent> _tileHistoryQuery = default!;
 
     /// <summary>
@@ -75,6 +68,7 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
     public override void Initialize()
     {
         base.Initialize();
+        InitBlockerMap();
 
         DebugTools.Assert(ProtoMan.HasIndex(DefaultExplosionPrototypeId));
 
@@ -93,10 +87,7 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
         // Handled by ExplosionSystem.Processing.cs
         SubscribeLocalEvent<MapRemovedEvent>(OnMapRemoved);
 
-        // handled in ExplosionSystemAirtight.cs
-        SubscribeLocalEvent<AirtightComponent, DamageChangedEvent>(OnAirtightDamaged);
         SubscribeCvars();
-        InitAirtightMap();
         InitVisuals();
 
         ProtoMan.PrototypesReloaded += ReloadExplosionPrototypes;

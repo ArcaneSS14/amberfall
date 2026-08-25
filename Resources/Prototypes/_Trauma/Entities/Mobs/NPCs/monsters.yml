@@ -215,12 +215,6 @@
         messages: [ "breadling-hurt-by-water-popup" ]
         probability: 0.25
         visualType: Large
-  - type: Perishable
-    rotAfter: 900
-    molsPerSecondPerUnitMass: 0
-  - type: RotInto
-    entity: FoodRot
-    stage: 1
   - type: Damageable
   - type: Bloodstream
     bloodReferenceSolution:
@@ -600,15 +594,8 @@
   id: MobCrabTiny
   name: red crab
   components:
-  - type: Temperature
-  - type: TemperatureDamage
-    heatDamageThreshold: 423
-    coldDamageThreshold: 0
   - type: MovementAlwaysTouching
-  - type: PressureImmunity
   - type: ProtectedFromStepTriggers
-  - type: Respirator
-    minSaturation: 5.0
   - type: MeleeWeapon
     altDisarm: false
     angle: 0

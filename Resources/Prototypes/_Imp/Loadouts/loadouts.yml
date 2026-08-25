@@ -15,7 +15,6 @@
     proto: Aquatic
   equipment:
     mask: ClothingNeckDecapoidVaporizer
-    suitstorage: DecapoidVaporTank
     outerClothing: ClothingOuterVestTank
 
 # Breath tool in inventory

@@ -1,4 +1,3 @@
-using Content.Shared.Atmos;
 using Content.Shared.Camera;
 using Content.Shared.Cuffs;
 using Content.Shared.Hands.Components;
@@ -18,7 +17,6 @@ public abstract partial class SharedHandsSystem
         SubscribeLocalEvent<HandsComponent, RefreshMovementSpeedModifiersEvent>(RelayEvent);
 
         // By-ref events.
-        SubscribeLocalEvent<HandsComponent, ExtinguishEvent>(RefRelayEvent);
         SubscribeLocalEvent<HandsComponent, ProjectileReflectAttemptEvent>(RefRelayEvent);
         SubscribeLocalEvent<HandsComponent, HitScanReflectAttemptEvent>(RefRelayEvent);
         SubscribeLocalEvent<HandsComponent, WieldAttemptEvent>(RefRelayEvent);

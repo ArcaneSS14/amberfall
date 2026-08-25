@@ -34,7 +34,6 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: Airtight
   - type: AmbientSound
     volume: -10
     range: 2

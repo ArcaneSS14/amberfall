@@ -999,22 +999,6 @@
   - SpellbookCluwneCurse
 
 - type: listing
-  id: SpellOblivionEnforcerBundle
-  name: spellbook-oblivion-enforcer-name
-  description: spellbook-oblivion-enforcer-desc
-  productEntity: ClothingBackpackOblivionEnforcerBundle
-  cost:
-    WizCoin: 0
-  categories:
-  - SpellbookBundles
-  conditions:
-  - !type:ListingRelativeLimitedStockCondition
-    relativeListing: SpellbookSmHalberd
-  disableRefund: true
-  blockRefundListings:
-  - SpellbookSmHalberd
-
-- type: listing
   id: SpellTiderBundle
   name: spellbook-tider-bundle-name
   description: spellbook-tider-bundle-desc

@@ -27,12 +27,6 @@
     triggerGroups: # Goobstation
       types:
       - Lava
-  - type: TileEntityEffect
-    effects:
-    - !type:Flammable
-      multiplier: 3.75
-      multiplierOnExisting: 0.75
-    - !type:Ignite
   - type: Transform
     anchored: true
   - type: SyncSprite

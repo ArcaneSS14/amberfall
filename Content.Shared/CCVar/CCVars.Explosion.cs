@@ -101,8 +101,7 @@ public sealed partial class CCVars
         CVarDef.Create("explosion.single_tick_area_limit", 400, CVar.SERVERONLY);
 
     /// <summary>
-    ///     Whether or not explosions are allowed to create tiles that have
-    ///     <see cref="ContentTileDefinition.MapAtmosphere"/> set to true.
+    ///     Whether explosions are allowed to create space tiles.
     /// </summary>
     public static readonly CVarDef<bool> ExplosionCanCreateVacuum =
         CVarDef.Create("explosion.can_create_vacuum", true, CVar.SERVERONLY);

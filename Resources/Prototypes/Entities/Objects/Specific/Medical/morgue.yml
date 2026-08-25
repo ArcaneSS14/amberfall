@@ -44,7 +44,6 @@
     - BodyBag
   - type: Clickable
   - type: InteractionOutline
-  - type: MovedByPressure
   - type: Physics
     bodyType: Dynamic
   - type: Transform
@@ -96,7 +95,6 @@
           True: {visible: false}
           False: {visible: true}
   - type: Pullable
-  - type: AntiRottingContainer
   - type: ContainerContainer
     containers:
       entity_storage: !type:Container
@@ -146,8 +144,6 @@
     solution: food
   - type: Extractable
     grindableSolutionName: food
-  - type: SupermatterImmune # Goobstation
-
 - type: entity
   parent: Ash
   id: Ectoplasm

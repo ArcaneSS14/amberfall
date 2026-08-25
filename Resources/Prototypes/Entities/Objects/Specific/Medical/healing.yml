@@ -806,45 +806,6 @@
         Quantity: 5
 
 - type: entity
-  parent: PillCanister
-  id: PillCanisterRandom
-  suffix: Random
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:GroupSelector
-        children:
-        - id: PillDexalin
-          amount: 1, 6
-        - id: PillDylovene
-          amount: 1, 6
-        - id: PillHyronalin
-          amount: 1, 6
-        - id: PillPotassiumIodide
-          amount: 1, 6
-        - id: PillIron
-          amount: 1, 6
-        - id: PillCopper
-          amount: 1, 6
-        - id: PillKelotane
-          amount: 1, 6
-        - id: PillDermaline
-          amount: 1, 6
-        - id: PillTricordrazine
-          amount: 1, 6
-        - id: PillBicaridine
-          amount: 1, 6
-        - id: PillCharcoal
-          amount: 1, 6
-        - id: PillSpaceDrugs
-          weight: 0.75
-          amount: 1, 6
-        - id: StrangePill
-          weight: 0.75
-          amount: 1, 6
-
-# Syringes
-- type: entity
   suffix: ephedrine
   parent: PrefilledSyringe
   id: SyringeEphedrine
@@ -1029,6 +990,7 @@
         Quantity: 5 # Trauma - was 15
 
 # Entity Tables
+
 - type: entityTable
   id: RandomSafePillTable
   table: !type:GroupSelector

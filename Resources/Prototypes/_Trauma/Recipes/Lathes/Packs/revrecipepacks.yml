@@ -59,15 +59,6 @@
   - RevGunpowder
 
 - type: latheRecipePack
-  parent: SmilingPals
-  id: RevPrinterStatic
-  recipes:
-  - RevGunParts
-  - RevTurretMagazine
-  - RevTurretMagazineHeavy
-  - RevSMGMagazine
-
-- type: latheRecipePack
   id: RevBulletPressStatic
   recipes:
   - RevTurretBullet

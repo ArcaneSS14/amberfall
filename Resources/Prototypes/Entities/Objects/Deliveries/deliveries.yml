@@ -155,17 +155,6 @@
 
 
 # Modifier Tables
-- type: entityTable
-  id: DeliveryModifierTable
-  table: !type:AllSelector
-    children:
-    - id: DeliveryModifierPriority
-      prob: 0.25
-    - id: DeliveryModifierFragile
-      prob: 0.25
-    - id: DeliveryModifierBomb
-      prob: 0.02 # Should happen maybe once or twice per game.
-
 - type: entity
   id: DeliveryModifierPriority
   description: Components to add when a delivery is rolled as priority.
@@ -222,3 +211,15 @@
     intensitySlope: 5
     maxIntensity: 15
     canCreateVacuum: false
+
+- type: entityTable
+  id: DeliveryModifierTable
+  table: !type:AllSelector
+    children:
+    - id: DeliveryModifierPriority
+      prob: 0.25
+    - id: DeliveryModifierFragile
+      prob: 0.25
+    - id: DeliveryModifierBomb
+      prob: 0.02 # Should happen maybe once or twice per game.
+

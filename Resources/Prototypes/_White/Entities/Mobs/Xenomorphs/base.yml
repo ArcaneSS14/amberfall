@@ -118,26 +118,11 @@
         Piercing: 10
   - type: TypingIndicator
     proto: alien
-  - type: AtmosExposed
-  - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 42
-  - type: TemperatureDamage
-    heatDamageThreshold: 600
-    coldDamageThreshold: 100 # Trauma, was -150
-    coldDamage: #per second, scales with temperature & other constants
-      types:
-        Cold: 0.25 # Trauma, was 0.1
-    heatDamage: #per second, scales with temperature & other constants
-      types:
-        Heat: 1.5
   - type: ZombieImmune
   - type: StatusEffects
     allowed:
     - Stun
   - type: NoSlip
-  - type: Perishable
-    molsPerSecondPerUnitMass: 0.0005
   - type: LizardAccent
   - type: Speech
     speechSounds: Xenomorph

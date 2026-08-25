@@ -109,36 +109,6 @@
   - type: StaticPrice
     price: 120
 
-- type: entityTable
-  id: TreasureCoinPile
-  table: !type:GroupSelector
-    children:
-    - id: TreasureCoinIron
-      weight: 24
-    - id: TreasureCoinSilver
-      weight: 40
-    - id: TreasureCoinGold
-      weight: 24
-    - id: TreasureCoinAdamantine
-      weight: 11
-    - id: TreasureCoinDiamond
-      weight: 1
-
-- type: entityTable
-  id: TreasureCoinPileRare
-  table: !type:GroupSelector
-    children:
-    - id: TreasureCoinIron
-      weight: 10
-    - id: TreasureCoinSilver
-      weight: 25
-    - id: TreasureCoinGold
-      weight: 40
-    - id: TreasureCoinAdamantine
-      weight: 20
-    - id: TreasureCoinDiamond
-      weight: 5
-
 - type: entity
   parent: BaseItem
   id: TreasureCoinIron
@@ -188,3 +158,33 @@
     state: coin_diamond
   - type: StaticPrice
     price: 500
+
+- type: entityTable
+  id: TreasureCoinPileRare
+  table: !type:GroupSelector
+    children:
+    - id: TreasureCoinIron
+      weight: 10
+    - id: TreasureCoinSilver
+      weight: 25
+    - id: TreasureCoinGold
+      weight: 40
+    - id: TreasureCoinAdamantine
+      weight: 20
+    - id: TreasureCoinDiamond
+      weight: 5
+
+- type: entityTable
+  id: TreasureCoinPile
+  table: !type:GroupSelector
+    children:
+    - id: TreasureCoinIron
+      weight: 24
+    - id: TreasureCoinSilver
+      weight: 40
+    - id: TreasureCoinGold
+      weight: 24
+    - id: TreasureCoinAdamantine
+      weight: 11
+    - id: TreasureCoinDiamond
+      weight: 1

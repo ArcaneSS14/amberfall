@@ -6,7 +6,6 @@ using Content.Shared.Gibbing;
 using Content.Shared.Popups;
 using Content.Shared.Storage.Components;
 using Content.Shared.Storage.EntitySystems;
-using Content.Shared.Atmos.Rotting;
 using Content.Shared.Mobs.Systems;
 
 namespace Content.Goobstation.Shared.Wraith.Systems;
@@ -15,7 +14,6 @@ public sealed partial class RaiseSkeletonSystem : EntitySystem
 {
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private MobStateSystem _mobState = default!;
-    [Dependency] private SharedRottingSystem _rotting = default!;
     [Dependency] private GibbingSystem _gibbing = default!;
     [Dependency] private SharedEntityStorageSystem _entityStorage = default!;
 
@@ -51,14 +49,7 @@ public sealed partial class RaiseSkeletonSystem : EntitySystem
             return;
         }
 
-        // or rotting
-        if (!_rotting.IsRotten(args.Target))
-        {
-            _popup.PopupEntity(Loc.GetString("wraith-raise-body-refuse"), ent.Owner, ent.Owner);
-            return;
-        }
-
-        // since both conditions passed, deploy the skeleton and gib them
+        // Deploy the skeleton and gib the corpse.
         PredictedSpawnAtPosition(ent.Comp.SkeletonProto, coords);
         _gibbing.Gib(args.Target);
 

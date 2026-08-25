@@ -1,13 +1,3 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 ## Static
-- type: latheRecipePack
-  id: HumanoidCubesStatic
-  recipes:
-  - HumanCube
-  - DionaCube
-  - MothCube
-  - DwarfCube
-  - ReptilianCube
-  - SlimePersonCube
-  - VoxCube

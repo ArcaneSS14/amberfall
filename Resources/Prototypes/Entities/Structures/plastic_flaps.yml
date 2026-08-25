@@ -93,7 +93,6 @@
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
-  - type: Airtight
   - type: StaticPrice
     price: 100
 
@@ -112,6 +111,5 @@
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
-  - type: Airtight
   - type: StaticPrice
     price: 100

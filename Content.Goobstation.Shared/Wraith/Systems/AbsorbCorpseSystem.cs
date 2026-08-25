@@ -5,7 +5,6 @@ using Content.Goobstation.Shared.Wraith.Components;
 using Content.Goobstation.Shared.Wraith.Events;
 using Content.Goobstation.Shared.Wraith.WraithPoints;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Atmos.Rotting;
 using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -26,7 +25,6 @@ public sealed partial class AbsorbCorpseSystem : EntitySystem
     [Dependency] private MobStateSystem _mobState = default!;
     [Dependency] private WraithPointsSystem _wraithPoints = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
-    [Dependency] private SharedRottingSystem _rotting = default!;
     [Dependency] private DamageableSystem _damageable = default!;
     [Dependency] private SharedSolutionContainerSystem _solution = default!;
     [Dependency] private TagSystem _tag = default!;
@@ -40,7 +38,6 @@ public sealed partial class AbsorbCorpseSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<AbsorbCorpseComponent, AbsorbCorpseEvent>(OnAbsorb);
-        SubscribeLocalEvent<PlaguebringerComponent, AbsorbCorpseAttemptEvent>(OnPlaguebringerAttempt);
 
         SubscribeLocalEvent<AbsorbCorpseComponent, AbsorbCorpseDoAfterEvent>(OnAbsorbFinished);
 
@@ -105,12 +102,6 @@ public sealed partial class AbsorbCorpseSystem : EntitySystem
             return;
         }
 
-        if (_rotting.IsRotten(target))
-        {
-            _popup.PopupEntity(Loc.GetString("wraith-absorb-too-decomposed"), user, user);
-            return;
-        }
-
         // do reagent checking logic, if true activate cooldown
         if (RemoveReagent(target, ent))
         {
@@ -139,36 +130,6 @@ public sealed partial class AbsorbCorpseSystem : EntitySystem
             $"{ToPrettyString(ent.Owner)} absorbed the corpse of {ToPrettyString(args.Target)} as a Wraith");
         args.Handled = true;
     }
-
-    #region Special
-
-    private void OnPlaguebringerAttempt(Entity<PlaguebringerComponent> ent, ref AbsorbCorpseAttemptEvent args)
-    {
-        if (!TryComp<PerishableComponent>(args.Target, out var perish)
-            || !TryComp<DamageableComponent>(args.Target, out var damageable))
-            return;
-
-        var dict = _damageable.GetAllDamage((args.Target, damageable)).DamageDict;
-        var toxinDamage = dict.GetValueOrDefault("Poison") + dict.GetValueOrDefault("Radiation");
-
-        if (toxinDamage >= 60 || perish.Stage > 2)
-        {
-            _wraithPoints.AdjustWraithPoints(150, ent.Owner);
-            _wraithPoints.AdjustWpGenerationRate(0.2, ent.Owner);
-
-            _popup.PopupEntity(Loc.GetString("wraith-absorb-rotbonus"), ent.Owner, ent.Owner, PopupType.Medium);
-
-        }
-        else if (toxinDamage < 30 && perish.Stage <= 2)
-        {
-            _popup.PopupEntity(Loc.GetString("wraith-absorb-fresh"), ent.Owner, ent.Owner, PopupType.MediumCaution);
-            args.Cancelled = true;
-        }
-
-        args.Handled = true;
-    }
-
-    #endregion
 
     #region Helper
     private bool RemoveReagent(EntityUid target, Entity<AbsorbCorpseComponent> ent)

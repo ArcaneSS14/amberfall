@@ -57,7 +57,6 @@
         layer:
         - WallLayer
         density: 1000
-  - type: Airtight
   - type: StaticPrice
     price: 75
   - type: BlockWeather
@@ -89,11 +88,6 @@
     mode: Diagonal
     key: walls
     base: state
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
-    airBlockedDirection:
-    - South
-    - East
   - type: Fixtures
     fixtures:
       fix1:
@@ -903,11 +897,6 @@
   #- type: Reflect # Trauma - annoying, serves no purpose
   #  reflectProb: 1
   - type: Pullable
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
-    airBlockedDirection:
-    - South
-    - East
   - type: Fixtures
     fixtures:
       fix1:
@@ -1436,7 +1425,6 @@
         - FullTileMask
         layer:
         - GlassLayer
-  - type: Airtight
   - type: RustRequiresPathStage # Goobstation
     pathStage: 11 # Can't rust
 
@@ -1496,7 +1484,6 @@
         - SpecialWallLayer
         layer:
         - SpecialWallLayer
-  - type: Airtight
   - type: Sprite
     sprite: Structures/Magic/forcewall.rsi
     # <Trauma> - replace single state with a mapped layer, for animation to work

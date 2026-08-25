@@ -59,9 +59,3 @@
 
 # Specific effects
 
-- type: entityEffect
-  id: Ignite5
-  effects:
-  - !type:Flammable
-    multiplier: 5
-  - !type:Ignite

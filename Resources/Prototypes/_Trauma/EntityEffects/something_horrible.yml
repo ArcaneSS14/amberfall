@@ -3,61 +3,6 @@
 # What happens to you if you mutate and stay at 100 instability for too long
 
 - type: entityEffect
-  id: SomethingHorrible
-  effects:
-  # not parity but i cbf to make the scaling thing and not sure it would apply anyway
-  - !type:WeightedRandomEffect
-    children:
-    - weight: 3
-      effect: !type:NestedEffect
-        proto: SomethingHorribleNonLethal
-    - weight: 7
-      effect: !type:NestedEffect
-        proto: SomethingHorribleLethal
-
-- type: entityEffect
-  id: SomethingHorribleNonLethal
-  effects:
-  - !type:WeightedRandomEffect
-    children:
-    - effect: !type:Polymorph
-        prototype: Monkey
-    - effect: !type:Polymorph
-        prototype: Corgi
-    - weight: 2
-      effect: !type:Polymorph
-        prototype: Snail
-    - effect: !type:NestedEffect
-        proto: Cripple
-    - effect: !type:Polymorph
-        prototype: Corgi
-    - weight: 4 # number of "alright" effects
-      effect: !type:NestedEffect
-        proto: Alright
-    - weight: 2 # parity...
-      effect: !type:Polymorph
-        prototype: Snail
-    - effect: !type:NestedEffect
-        proto: UltimateLifeform
-
-- type: entityEffect
-  id: SomethingHorribleLethal
-  effects:
-  - !type:WeightedRandomEffect
-    children:
-    - effect: !type:Gib
-    - effect: !type:NestedEffect
-        proto: Dust
-    # TODO: petrify permanently if someone ever makes that
-    - effect: !type:NestedEffect
-        proto: Skeletonize
-    - effect: !type:NestedEffect
-        proto: LookUp
-    # TODO: psykerize if someone ever makes that
-
-# Non-lethal
-
-- type: entityEffect
   id: Cripple
   effects:
   - !type:SpawnEntity
@@ -71,23 +16,6 @@
     type: Pvs
     messages:
     - entity-effect-popup-crippled
-
-- type: entityEffect
-  id: Alright
-  effects:
-  - !type:PopupMessage
-    messages:
-    - entity-effect-popup-alright
-  - !type:WeightedRandomEffect
-    children:
-    - effect: !type:NoEffect # small chance of it being a dud
-    - effect: !type:NestedEffect
-        proto: MakeFragile
-    - effect: !type:Polymorph
-        prototype: Slime # CBF to make the reagent stuff, reuse it if xenobio ever makes it
-    - effect: !type:ModifyStatusEffect
-        effectProto: DecloningStatusEffect # not using a disease because it doesnt exist :(
-        time: 5m
 
 - type: entityEffect
   id: MakeFragile

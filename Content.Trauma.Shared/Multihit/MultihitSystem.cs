@@ -6,7 +6,6 @@ using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.Whitelist;
-using Content.Trauma.Shared.Heretic.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
@@ -22,7 +21,6 @@ public sealed partial class MultihitSystem : EntitySystem
     [Dependency] private INetManager _net = default!;
     [Dependency] private ISharedPlayerManager _player = default!;
     [Dependency] private IGameTiming _timing = default!;
-    [Dependency] private SharedHereticSystem _heretic = default!;
 
     public override void Initialize()
     {
@@ -30,7 +28,6 @@ public sealed partial class MultihitSystem : EntitySystem
 
         SubscribeLocalEvent<MultihitComponent, MeleeHitEvent>(OnHit);
 
-        SubscribeLocalEvent<MultihitUserHereticEvent>(HereticCheck);
         SubscribeLocalEvent<MultihitUserWhitelistEvent>(WhitelistCheck);
 
         SubscribeNetworkEvent<ResetMultihitLastAttackEvent>(OnReset);
@@ -162,15 +159,6 @@ public sealed partial class MultihitSystem : EntitySystem
         ev.Handled = ev.Blacklist
             ? _whitelist.IsWhitelistFail(ev.Whitelist, ev.User)
             : _whitelist.IsWhitelistPass(ev.Whitelist, ev.User);
-    }
-
-    private void HereticCheck(MultihitUserHereticEvent args)
-    {
-        if (!_heretic.TryGetHereticComponent(args.User, out var heretic, out _))
-            return;
-
-        args.Handled = (args.RequiredPath == null || heretic.CurrentPath == args.RequiredPath) &&
-                       heretic.PathStage >= args.MinPathStage;
     }
 
     private void OnHit(EntityUid uid, MultihitComponent component, MeleeHitEvent args)

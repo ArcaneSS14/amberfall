@@ -25,9 +25,6 @@
       effects:
       - !type:NestedEffect
         proto: XenobioExtractEvil
-      - !type:CreateGas
-        gas: Frezon
-        moles: 35
     - reagents: [ Blood ]
       methods: [ Touch, Injection ]
       effects:

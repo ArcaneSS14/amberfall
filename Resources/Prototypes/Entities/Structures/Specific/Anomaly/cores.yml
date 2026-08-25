@@ -33,9 +33,6 @@
     timeToDecay: 600
     startPrice: 10000
     endPrice: 200
-  - type: MovedByPressure #Goob - space wind moment
-    enabled: false
-
 - type: entity
   parent: BaseAnomalyCore
   id: AnomalyCorePyroclastic
@@ -49,9 +46,6 @@
     energy: 1.5
     color: "#E25822"
     castShadows: false
-  - type: IgnitionSource
-    temperature: 400
-    ignited: true
   - type: Enchanter # Goobstation
     enchants:
     - EnchantFireAspect
@@ -183,8 +177,6 @@
   name: flora anomaly core # Goobstation - anomaly core names
   suffix: Flora
   components:
-  - type: Seed
-    seedId: anomalyBerry
   - type: Sprite
     sprite: Structures/Specific/Anomalies/Cores/flora_core.rsi
   - type: PointLight
@@ -402,8 +394,6 @@
   name: flora anomaly core # Goobstation - anomaly core names
   suffix: Flora, Inert
   components:
-  - type: Seed
-    seedId: anomalyBerry
   - type: Sprite
     sprite: Structures/Specific/Anomalies/Cores/flora_core.rsi
   - type: PointLight

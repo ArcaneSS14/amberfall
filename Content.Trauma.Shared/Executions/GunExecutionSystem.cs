@@ -6,7 +6,6 @@ using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.Execution;
-using Content.Shared.PneumaticCannon;
 using Content.Shared.Popups;
 using Content.Shared.Projectiles;
 using Content.Shared.Throwing;
@@ -64,7 +63,6 @@ public sealed partial class GunExecutionSystem : EntitySystem
 
         /* Damage modifying */
         SubscribeLocalEvent<BeingExecutedComponent, DamageModifyEvent>(OnDamageModify);
-        SubscribeLocalEvent<PneumaticCannonComponent, ModifyExecutionDamageEvent>(OnCannonModifyExecutionDamage);
     }
 
     #region Event handlers
@@ -176,13 +174,6 @@ public sealed partial class GunExecutionSystem : EntitySystem
     private void OnDamageModify(Entity<BeingExecutedComponent> ent, ref DamageModifyEvent args)
     {
         args.Damage *= ent.Comp.Modifier;
-    }
-
-    private void OnCannonModifyExecutionDamage(Entity<PneumaticCannonComponent> ent, ref ModifyExecutionDamageEvent args)
-    {
-        // fast knife go brr, slow knife bounces off you
-        if (ent.Comp.ProjectileSpeed is {} speed)
-            args.Modifier *= speed / ent.Comp.BaseProjectileSpeed;
     }
 
     #endregion

@@ -70,3 +70,4 @@ public sealed partial class AnomalyGeneratorComponent : Component
     [DataField("generatingFinishedSound")]
     public SoundSpecifier? GeneratingFinishedSound;
 }
+

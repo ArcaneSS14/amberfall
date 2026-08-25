@@ -3,8 +3,6 @@ using Content.Client.Items.UI;
 using Content.Client.Message;
 using Content.Client.Power.Visualizers;
 using Content.Client.Stylesheets;
-using Content.Shared.Atmos.Components;
-using Content.Shared.Disposal.Tube;
 using Content.Shared.Input;
 using Content.Shared.Inventory;
 using Content.Shared.SubFloor;
@@ -185,7 +183,7 @@ public sealed partial class TrayScannerSystem : SharedTrayScannerSystem
         {
             TrayScannerMode.All => true,
             TrayScannerMode.Wiring => HasComp<CableVisualizerComponent>(uid),
-            TrayScannerMode.Piping => HasComp<AtmosPipeLayersComponent>(uid) || HasComp<DisposalTubeComponent>(uid),
+            TrayScannerMode.Piping => false,
             _ => false,
         };
     }

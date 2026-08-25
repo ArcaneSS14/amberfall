@@ -14,7 +14,6 @@ public sealed partial class DiseaseSystem : SharedDiseaseSystem
         base.Initialize();
 
         SubscribeLocalEvent<GrantDiseaseComponent, MapInitEvent>(OnGrantDiseaseInit);
-        // SubscribeLocalEvent<InternalsComponent, DiseaseIncomingSpreadAttemptEvent>(OnInternalsIncomingSpread); // TODO: fix
     }
 
     private void OnGrantDiseaseInit(Entity<GrantDiseaseComponent> ent, ref MapInitEvent args)
@@ -34,15 +33,6 @@ public sealed partial class DiseaseSystem : SharedDiseaseSystem
             Del(disease);
     }
 
-    /* TODO: fix
-    private void OnInternalsIncomingSpread(EntityUid uid, InternalsComponent internals, DiseaseIncomingSpreadAttemptEvent args)
-    {
-        if (_proto.TryIndex(args.Type, out var spreadProto) && _internals.AreInternalsWorking(uid, internals))
-        {
-            args.ApplyModifier(internals.IncomingInfectionModifier);
-        }
-    }
-    */
 
     #region public API
 

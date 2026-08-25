@@ -758,12 +758,6 @@
           tags:
           - ConstructionMaterial
     - hand:
-        emptyRepresentative: SpaceHeaterFlatpack
-        emptyLabel: borg-slot-flatpacks-empty
-        whitelist:
-          components:
-          - Flatpack
-    - hand:
         emptyRepresentative: FloorTileItemSteel
         emptyLabel: borg-slot-tiles-empty
         whitelist:
@@ -800,7 +794,6 @@
     - item: RPDRecharging # Goobstation
     - item: BorgFireExtinguisher
     - item: BorgHandheldGPSBasic
-    - item: GasAnalyzer
     - item: HolofanProjector # Trauma - regular one doesn't use battery, dont need borg version
     - item: GeigerCounter
   - type: BorgModuleIcon
@@ -1070,7 +1063,6 @@
     hands:
     - item: NodeScanner
     - item: SprayBottle
-    - item: GasAnalyzer
     - item: BorgDropper
     - item: ChemistryEmptyVial
       hand:
@@ -1220,7 +1212,6 @@
     - item: HydroponicsToolMiniHoe
     - item: HydroponicsToolSpade
     - item: HydroponicsToolClippers
-    - item: PlantAnalyzer # Trauma
     - item: Syringe # Trauma
     - item: Bucket
     - hand: # Trauma - make service borgs 1% useful
@@ -1684,7 +1675,6 @@
     - item: PinpointerMothership
     - item: HandheldStationMapUnpowered
     - item: WeaponGrapplingGun
-    - item: JetpackXenoborg
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-space-movement-module }
 
@@ -1718,7 +1708,6 @@
   - type: ItemBorgModule
     hands:
     - item: KukriKnife
-    - item: JetpackXenoborg
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-sword-module }
 
@@ -1735,7 +1724,6 @@
   - type: ItemBorgModule
     hands:
     - item: EnergyDaggerLoudBlue
-    - item: JetpackXenoborg
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-sword2-module }
 

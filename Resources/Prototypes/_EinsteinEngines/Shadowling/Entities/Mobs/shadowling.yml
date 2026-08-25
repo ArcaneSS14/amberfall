@@ -50,7 +50,6 @@
     radius: 2
     softness: 1
     energy: 50
-  - type: PressureImmunity
   - type: BreathingImmunity
   - type: SpecialLowTempImmunity
   - type: ThermalVision

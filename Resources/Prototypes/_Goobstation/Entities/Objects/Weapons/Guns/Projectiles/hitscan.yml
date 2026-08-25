@@ -70,11 +70,6 @@
     damage:
       types:
         Heat: 10
-  - type: HitscanEntityEffects
-    effects:
-    - !type:Flammable
-      multiplier: 0.4
-    - !type:Ignite
   - type: HitscanBasicVisuals
     muzzleFlash:
       sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/small_laser.rsi
@@ -181,11 +176,6 @@
     damage:
       types:
         Heat: 14
-  - type: HitscanEntityEffects
-    effects:
-    - !type:Flammable
-      multiplier: 0.7
-    - !type:Ignite
   - type: HitscanBasicVisuals
     muzzleFlash:
       sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/small_laser.rsi

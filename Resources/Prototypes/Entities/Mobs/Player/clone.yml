@@ -116,5 +116,3 @@
   - type: Sprite
     sprite: Mobs/Aliens/paradox_clone.rsi
     state: preview
-  - type: RandomCloneSpawner
-    settings: BaseClone

@@ -71,44 +71,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          -1,-1:
-            0: 32768
-          1,0:
-            0: 65535
-          1,-1:
-            0: 61440
-          0,0:
-            0: 65535
-          2,0:
-            0: 13107
-          0,-1:
-            0: 61440
-          2,-1:
-            0: 12288
-          -1,0:
-            0: 34952
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: SpreaderGrid
     - type: GridPathfinding
 ...

@@ -1,7 +1,6 @@
 using System.Linq;
 using Content.Client.Message;
 using Content.Client.UserInterface.ControlExtensions;
-using Content.Shared.Atmos.Prototypes;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reaction;
 using Content.Shared.Chemistry.Reagent;
@@ -86,30 +85,6 @@ public sealed partial class GuideReagentReaction : BoxContainer, ISearchableCont
 
         Container productContainer = ProductsContainer;
         SetReagents(solution.Contents, ref productContainer, protoMan, false);
-        SetMixingCategory(categories, null, sysMan);
-    }
-
-    public GuideReagentReaction(GasPrototype prototype,
-        IReadOnlyList<ProtoId<MixingCategoryPrototype>> categories,
-        IPrototypeManager protoMan,
-        IEntitySystemManager sysMan) : this(protoMan)
-    {
-        var label = new RichTextLabel();
-        label.SetMarkup(Loc.GetString("guidebook-reagent-sources-gas-wrapper",
-            ("name", Loc.GetString(prototype.Name).ToLower())));
-
-        ReactantsContainer.Visible = true;
-        ReactantsContainer.AddChild(label);
-
-        if (prototype.Reagent != null)
-        {
-            var quantity = new Dictionary<string, FixedPoint2>
-            {
-                { prototype.Reagent, FixedPoint2.New(0.21f) }
-            };
-            Container productContainer = ProductsContainer;
-            SetReagents(quantity, ref productContainer, protoMan, false);
-        }
         SetMixingCategory(categories, null, sysMan);
     }
 

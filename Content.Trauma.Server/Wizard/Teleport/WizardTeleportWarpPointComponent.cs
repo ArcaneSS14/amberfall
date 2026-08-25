@@ -4,3 +4,4 @@ namespace Content.Trauma.Server.Wizard.Teleport;
 
 [RegisterComponent]
 public sealed partial class WizardTeleportWarpPointComponent : Component;
+

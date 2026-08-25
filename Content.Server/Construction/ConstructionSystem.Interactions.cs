@@ -4,7 +4,6 @@ using Content.Trauma.Common.Knowledge;
 using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Construction.Components;
-using Content.Server.Temperature.Components;
 using Content.Shared.Construction;
 using Content.Shared.Construction.Components;
 using Content.Shared.Construction.EntitySystems;
@@ -15,8 +14,6 @@ using Content.Shared.Interaction.Components;
 using Content.Shared.Prying.Systems;
 using Content.Shared.Radio.EntitySystems;
 using Content.Shared.Stacks;
-using Content.Shared.Temperature;
-using Content.Shared.Temperature.Components;
 using Content.Shared.Tools.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Utility;
@@ -45,7 +42,6 @@ namespace Content.Server.Construction
             SubscribeLocalEvent<ConstructionComponent, InteractUsingEvent>(EnqueueEvent,
                 new []{typeof(AnchorableSystem), typeof(PryingSystem), typeof(WeldableSystem)},
                 new []{typeof(EncryptionKeySystem)});
-            SubscribeLocalEvent<ConstructionComponent, OnTemperatureChangeEvent>(EnqueueEvent);
             SubscribeLocalEvent<ConstructionComponent, PartAssemblyPartInsertedEvent>(EnqueueEvent);
         }
 
@@ -390,41 +386,6 @@ namespace Content.Server.Construction
                     return result && doAfter != null ? HandleResult.DoAfter : HandleResult.False;
                 }
 
-                case TemperatureConstructionGraphStep temperatureChangeStep:
-                {
-                    if (ev is not OnTemperatureChangeEvent)
-                        break;
-
-                    // Some things, like microwaves, might need to block the temperature construction step from kicking in, or override it entirely.
-                    var tempEvent = new OnConstructionTemperatureEvent();
-                    RaiseLocalEvent(uid, tempEvent, true);
-
-                    if (tempEvent.Result is not null)
-                        return tempEvent.Result.Value;
-
-                    // prefer using InternalTemperature since that's more accurate for cooking.
-                    float temp;
-                    if (TryComp<InternalTemperatureComponent>(uid, out var internalTemp))
-                    {
-                        temp = internalTemp.Temperature;
-                    }
-                    else if (TryComp<TemperatureComponent>(uid, out var tempComp))
-                    {
-                        temp = tempComp.CurrentTemperature;
-                    }
-                    else
-                    {
-                        return HandleResult.False;
-                    }
-
-                    if ((!temperatureChangeStep.MinTemperature.HasValue || temp >= temperatureChangeStep.MinTemperature.Value) &&
-                        (!temperatureChangeStep.MaxTemperature.HasValue || temp <= temperatureChangeStep.MaxTemperature.Value))
-                    {
-                        return validation ? HandleResult.Validated : HandleResult.True;
-                    }
-
-                    return HandleResult.False;
-                }
 
                 case PartAssemblyConstructionGraphStep partAssemblyStep:
                 {
@@ -645,8 +606,4 @@ namespace Content.Server.Construction
 
     #endregion
 
-    public sealed class OnConstructionTemperatureEvent : HandledEntityEventArgs
-    {
-        public HandleResult? Result;
-    }
 }

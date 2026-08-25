@@ -249,9 +249,6 @@
     sprite: Clothing/OuterClothing/Vests/elitevest.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/elitevest.rsi
-  - type: TemperatureProtection
-    heatingCoefficient: 0.1
-    coolingCoefficient: 0.1
   - type: Armor
     traumaDeductions:
       Dismemberment: 0.25
@@ -270,9 +267,6 @@
         Caustic: 0.3
   - type: ExplosionResistance
     damageCoefficient: 0.3 # Trauma - was 0.5
-  - type: FireProtection
-    reduction: 0.85
-
 #Mercenary web vest
 - type: entity
   parent: [ BaseMajorContraband, ClothingOuterVestWeb] #web vest so it should have some pockets for ammo

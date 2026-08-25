@@ -2,6 +2,111 @@
 
 - type: entity
   parent: CrateGenericSteel
+  id: CratePlants
+  name: plant crate
+  description: A variety pack of potted plants to spruce up your station!
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: AllPottedPlantsTable
+        rolls: !type:ConstantNumberSelector
+          value: 5
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateFunPlushie
+  name: plushie crate
+  description: A buncha soft plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: AllPlushiesTable
+        rolls: !type:ConstantNumberSelector
+          value: 10
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateFunLizardPlushieBulk
+  name: bulk lizard plushie crate
+  description: A buncha soft lizard plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: AllLizardPlushieTable
+        rolls: !type:ConstantNumberSelector
+          value: 6
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateFunArtSupplies
+  name: art supplies
+  description: Make some happy little accidents with lots of crayons!
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: CrayonBox
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateFunSadTromboneImplants
+  name: sad trombone implants
+  description: Death's never been so fun before! Implant these to make dying a bit more happy.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: SadTromboneImplanter
+        amount: 3
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateFunLightImplants
+  name: light implants
+  description: Light up your skin with these implants!
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: LightImplanter
+        amount: 3
+
+- type: entityTable
+  id: AllPottedPlantsTable
+  table: !type:GroupSelector
+    children:
+    - id: PottedPlant0
+    - id: PottedPlant1
+    - id: PottedPlant2
+    - id: PottedPlant3
+    - id: PottedPlant4
+    - id: PottedPlant5
+    - id: PottedPlant6
+    - id: PottedPlant7
+    - id: PottedPlant8
+    - id: PottedPlant10
+    - id: PottedPlant11
+    - id: PottedPlant12
+    - id: PottedPlant13
+    - id: PottedPlant14
+    - id: PottedPlant15
+    - id: PottedPlant16
+    - id: PottedPlant17
+    - id: PottedPlant18
+    - id: PottedPlant19
+    - id: PottedPlant20
+    - id: PottedPlant21
+    - id: PottedPlant22
+    - id: PottedPlant23
+    - id: PottedPlant24
+    - id: PottedPlant26
+
+
+- type: entity
+  parent: CrateGenericSteel
   id: CrateFunInstrumentsVariety
   name: variety instrument collection
   description: Get your sad station movin' and groovin' with this catch-all variety pack! Contains seven different instruments.
@@ -111,101 +216,6 @@
 
 - type: entity
   parent: CrateGenericSteel
-  id: CrateFunInstrumentsRandom
-  name: random instrument collection
-  description: A box containing several randomly curated instruments, hand picked by Centcomm's top musicians!
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: VarietyInstrumentTable # 200 speso max
-        - !type:NestedSelector
-          tableId: BrassInstrumentTable # 300 speso max
-        - !type:NestedSelector
-          tableId: StringInstrumentTable # 300 speso max
-        - !type:NestedSelector
-          tableId: WoodwindInstrumentTable # 200 speso max
-        - !type:NestedSelector
-          tableId: KeyedPercussionInstrumentTable # 300 speso max
-        - !type:NestedSelector
-          tableId: SpecialInstrumentTable # x2 200 speso max
-          rolls: 2
-
-# Rest of the fun
-
-- type: entityTable
-  id: AllPottedPlantsTable
-  table: !type:GroupSelector
-    children:
-    - id: PottedPlant0
-    - id: PottedPlant1
-    - id: PottedPlant2
-    - id: PottedPlant3
-    - id: PottedPlant4
-    - id: PottedPlant5
-    - id: PottedPlant6
-    - id: PottedPlant7
-    - id: PottedPlant8
-    - id: PottedPlant10
-    - id: PottedPlant11
-    - id: PottedPlant12
-    - id: PottedPlant13
-    - id: PottedPlant14
-    - id: PottedPlant15
-    - id: PottedPlant16
-    - id: PottedPlant17
-    - id: PottedPlant18
-    - id: PottedPlant19
-    - id: PottedPlant20
-    - id: PottedPlant21
-    - id: PottedPlant22
-    - id: PottedPlant23
-    - id: PottedPlant24
-    - id: PottedPlant26
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CratePlants
-  name: plant crate
-  description: A variety pack of potted plants to spruce up your station!
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: AllPottedPlantsTable
-        rolls: !type:ConstantNumberSelector
-          value: 5
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateFunPlushie
-  name: plushie crate
-  description: A buncha soft plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: AllPlushiesTable
-        rolls: !type:ConstantNumberSelector
-          value: 10
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateFunLizardPlushieBulk
-  name: bulk lizard plushie crate
-  description: A buncha soft lizard plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: AllLizardPlushieTable
-        rolls: !type:ConstantNumberSelector
-          value: 6
-
-- type: entity
-  parent: CrateGenericSteel
   id: CrateFunSharkPlushieBulk
   name: bulk soft toy shark crate
   description: A crate filled with a variety of everyone's favorite finned friend. Rawr!
@@ -225,113 +235,6 @@
             value: 2
 
 - type: entity
-  parent: CrateGenericSteel
-  id: CrateFunArtSupplies
-  name: art supplies
-  description: Make some happy little accidents with lots of crayons!
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: CrayonBox
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateFunBoardGames
-  name: board game crate
-  description: Game nights have been proven to either decrease boredom or increase murderous rage depending on the game.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: ChessBoard
-        - id: BackgammonBoard
-        - id: ParchisBoard
-        - id: CheckerBoard
-        - id: ShipBattlemap
-        - id: SnowBattlemap
-        - id: SandBattlemap
-        - id: MoonBattlemap
-        - id: GrassBattlemap
-        - id: DiceBag
-          amount: 6
-        - id: PaperCNCSheet
-          amount: 6
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateFunSadTromboneImplants
-  name: sad trombone implants
-  description: Death's never been so fun before! Implant these to make dying a bit more happy.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: SadTromboneImplanter
-        amount: 3
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateFunLightImplants
-  name: light implants
-  description: Light up your skin with these implants!
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: LightImplanter
-        amount: 3
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateFunParty
-  name: party crate
-  description: An entire party just waiting for you to open it. Includes party favors, party beverages, and even a cake.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: GlowstickGreen
-          amount: 2
-        - id: GlowstickBlue
-          amount: 2
-        - id: GlowstickPurple
-          amount: 2
-        - id: GlowstickRed
-          amount: 2
-        - id: GlowstickYellow
-          amount: 2
-        - id: FoodCakeBirthday
-        - id: DrinkLean
-          amount: 4
-        - id: KnifePlastic
-        - id: ClothingHeadHatPartyRed
-          amount: 2
-        - id: ClothingHeadHatPartyYellow
-          amount: 2
-        - id: ClothingHeadHatPartyGreen
-          amount: 2
-        - id: ClothingHeadHatPartyBlue
-          amount: 2
-
-- type: entity
-  parent: CratePlastic
-  id: CrateFunWaterGuns
-  name: water gun crate
-  description: A summer special with a variety of brightly colored water guns. Water not included.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: WeaponWaterBlaster
-          amount: 2
-        - id: WeaponWaterPistol
-          amount: 4
-
-- type: entity
   parent: CratePlastic
   id: CrateFunFoamGuns
   name: Foam Force crate
@@ -346,135 +249,3 @@
           rolls: 4
         - id: GrenadeFoamDart
           amount: 4
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateFunBoxing
-  name: boxing crate
-  description: Want to set up an underground fight club or host a tournament amongst station crew? This crate is for you!
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: ClothingHandsGlovesBoxingRed
-        - id: ClothingHandsGlovesBoxingBlue
-        - id: ClothingHandsGlovesBoxingYellow
-        - id: ClothingHandsGlovesBoxingGreen
-        - id: UniformShortsRed
-          amount: 3
-        - id: UniformShortsRedWithTop
-          amount: 3
-
-- type: entity
-  parent: CratePirate
-  id: CrateFunPirate
-  suffix: Filled
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: ClothingUniformJumpsuitPirate
-          amount: 2
-        - id: ClothingHeadHatPirate
-        - id: ClothingOuterCoatPirate
-        - id: ClothingShoesBootsLaceup
-          amount: 2
-        - id: ClothingHeadBandRed
-        - id: FoamCutlass
-          amount: 2
-
-- type: entity
-  parent: CrateToyBox
-  id: CrateFunToyBox
-  suffix: Filled
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: CrazyGlue
-        - id: CrazyLube
-        - !type:NestedSelector
-          tableId: AllToyWeaponsTable
-          rolls: 2
-        - !type:NestedSelector
-          tableId: AllToySoundMakerTable
-          rolls: 2
-        - !type:NestedSelector
-          tableId: AllMiscToysTable
-          rolls: 2
-        - !type:NestedSelector # Extras rolls for extra variety
-          tableId: AllToysTable
-          rolls: 2
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateFunBikeHornImplants
-  name: bike horn implants
-  description: A thousand honks a day keeps security officers away! Now with bike horns!
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      # <Goob> - AllSelector, add bike horns
-      entity_storage: !type:AllSelector
-        children:
-        - id: BikeHornImplanter
-          amount: 3
-        - id: BikeHorn
-          amount: 3
-      # </Goob>
-
-- type: entity
-  parent: CratePlastic
-  id: CrateFunMysteryFigurines
-  name: mystery figure crate
-  description: A collection of 10 Mystery Figurine boxes. Duplicates non refundable.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: MysteryFigureBox
-          amount: 10
-        - id: MysteryFigureBox
-          amount: 15
-          prob: 0.05
-
-- type: entity
-  parent: CratePlastic
-  id: CrateFunDartsSet
-  name: dartboard box set
-  description: A box with everything you need for a fun game of darts.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: TargetDarts
-        - id: BoxDarts
-          amount: 2
-        - id: BoxDarts
-          prob: 0.05
-
-- type: entity
-  parent: CrateLivestock
-  id: CrateFunScurret
-  name: hydrated scurret
-  description: Wait, what?
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: MobEmotionalSupportScurret # How? Why?
-        - id: DrinkVodkaBottleFull
-        - id: DrinkWhiskeyBottleFull
-        - id: DrinkTequilaBottleFull # ...that explains it.
-        - id: DrinkShotGlass
-          amount: 2
-        - id: Spear # self defence
-        - id: ClothingHeadHatHardhatYellow
-        - id: ClothingNeckMantleQM
-        - id: ClothingHeadsetCargo

@@ -98,4 +98,3 @@
       Destroyed: 0
   - type: OrganComponents
     onAdd:
-    - type: PressureImmunity

@@ -15,5 +15,3 @@
       components:
       - MobState # No fire mice
   - type: FireAspectEnchant
-  - type: IgniteOnMeleeHit
-    fireStacks: 0

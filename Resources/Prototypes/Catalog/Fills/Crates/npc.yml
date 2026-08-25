@@ -24,25 +24,6 @@
 
 - type: entity
   parent: CrateLivestock
-  id: CrateNPCCat
-  name: cat crate
-  description: A crate containing a single cat.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:GroupSelector
-        children:
-        - id: MobCat
-        - id: MobCatCalico
-        - id: MobCatCaracal
-          weight: 0.5
-        - id: MobCatKitten
-          weight: 0.25
-        - id: MobBingus
-          weight: 0.005
-
-- type: entity
-  parent: CrateLivestock
   id: CrateNPCChicken
   name: chicken crate
   description: A crate containing four fully grown chickens.
@@ -64,21 +45,6 @@
       entity_storage:
         id: MobCrab
         amount: 3
-
-- type: entity
-  parent: CrateLivestock
-  id: CrateNPCDuck
-  name: duck crate
-  description: A crate containing six fully grown ducks.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: MobDuckMallard
-        - id: MobDuckBrown
-        - id: MobDuckWhite
-          amount: 2
 
 - type: entity
   parent: CrateLivestock
@@ -285,22 +251,3 @@
         id: MobMothroach
         amount: 4
 
-- type: entity
-  parent: CrateLivestock
-  id: CrateNPCSheep
-  name: sheep crate
-  description: A crate containing a single sheep.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:GroupSelector
-        children:
-        - id: MobSheep
-        - id: MobSheepRainbow
-          weight: 0.1
-        - id: MobSheepSpace
-          weight: 0.1
-        - id: PlushieSheep # teehee get plushied
-          weight: 0.001
-        - id: PlushieSpaceSheep
-          weight: 0.001

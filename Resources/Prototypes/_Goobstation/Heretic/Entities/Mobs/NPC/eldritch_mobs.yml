@@ -387,8 +387,6 @@
   - type: Sprite
     sprite: _Goobstation/Heretic/eldritch_mobs.rsi
     state: fire_shark
-  - type: IgniteOnMeleeHit
-    fireStacks: 2
   - type: MovementSpeedModifier
     baseWalkSpeed: 7
     baseSprintSpeed: 7
@@ -403,15 +401,6 @@
         Heat: 6
         Slash: 6
         Piercing: 6
-  - type: Flammable
-    canResistFire: false
-    damage:
-      types:
-        Heat: 0
-  - type: TemperatureDamage
-    heatDamage:
-      types:
-        Heat: 0
   - type: PointLight
     radius: 3
     energy: 3
@@ -457,8 +446,6 @@
       0: Alive
       80: Critical
       90: Dead
-  - type: IgniteOnMeleeHit
-    fireStacks: 4
   - type: MeleeWeapon
     damage:
       types:
@@ -561,7 +548,6 @@
     - Heat
     - Shock
     locPrefix: silicon
-  - type: MovedByPressure
   - type: StatusEffects
     allowed:
     - Stun

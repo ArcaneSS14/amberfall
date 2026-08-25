@@ -369,6 +369,3 @@
     shape:
     - 0,0,19,1
     storedRotation: 90
-  - type: Perishable
-    rotAfter: 9999
-    molsPerSecondPerUnitMass: 0

@@ -41,15 +41,6 @@
     damage:
       types:
         Slash: 5
-  - type: Flammable
-    fireSpread: true
-    canResistFire: true
-    damage:
-      types:
-        Heat: 9
-  - type: FireVisuals
-    sprite: Mobs/Effects/onfire.rsi
-    normalState: Generic_mob_burning
   - type: Climbing
   - type: NameIdentifier
     group: GenericNumber

@@ -29,7 +29,6 @@
         - id: CrateMaterialGlass
         - id: CrateServiceJanitorialSupplies
         - id: CrateHydroponicsSeedsMedicinal
-        - id: CrateEmergencyInternals
         - id: CrateFoodMRE
         - id: CrateMaterialTextiles
         - id: CrateMedicalSupplies

@@ -9,6 +9,7 @@
         tableId: BookshelfEntityTable
 
 # Entity tables
+
 - type: entityTable
   id: BookshelfEntityTable
   table: !type:AllSelector
@@ -37,6 +38,7 @@
       rolls: !type:RangeNumberSelector
         range: 0, 3
       tableId: RandomHandwrittenBookTable
+
 
 - type: entityTable
   id: RandomHandwrittenBookTable

@@ -138,16 +138,6 @@
   category: cargoproduct-category-name-engineering
   group: market
 
-- type: cargoProduct
-  id: EngineeringSpaceHeater
-  icon:
-    sprite: Structures/Piping/Atmospherics/Portable/portable_sheater.rsi
-    state: sheaterOff
-  product: CrateEngineeringSpaceHeater
-  cost: 350
-  category: cargoproduct-category-name-engineering
-  group: market
-
 # RPD
 - type: cargoProduct
   id: EngineeringRPD

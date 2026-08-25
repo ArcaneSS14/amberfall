@@ -1,25 +1,26 @@
 using Content.Server.Stack;
-using Content.Shared.Atmos;
 using Content.Shared.Audio;
 using Content.Shared.Examine;
-using Content.Shared.IgnitionSource;
 using Content.Shared.Interaction;
+using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Popups;
+using Content.Shared.Smoking;
 using Content.Shared.Stacks;
-using Content.Shared.Temperature;
+using Content.Shared.Tools.Systems;
 using Content.Shared.Toggleable;
-using Robust.Shared.Audio.Systems;
 
 namespace Content.Apotheosis;
 
 public sealed partial class FuelableFireSystem : EntitySystem
 {
+    private const string IgnitionQuality = "Ignition";
+
     [Dependency] private SharedAmbientSoundSystem _ambient = default!;
     [Dependency] private SharedAppearanceSystem _appearance = default!;
-    [Dependency] private SharedIgnitionSourceSystem _ignition = default!;
     [Dependency] private SharedPointLightSystem _light = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private StackSystem _stack = default!;
+    [Dependency] private SharedToolSystem _tool = default!;
 
     public override void Initialize()
     {
@@ -28,7 +29,6 @@ public sealed partial class FuelableFireSystem : EntitySystem
         SubscribeLocalEvent<FuelableFireComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<FuelableFireComponent, InteractUsingEvent>(OnInteractUsing);
         SubscribeLocalEvent<FuelableFireComponent, ActivateInWorldEvent>(OnActivate);
-        SubscribeLocalEvent<FuelableFireComponent, IsHotEvent>(OnIsHot);
         SubscribeLocalEvent<FuelableFireComponent, ExaminedEvent>(OnExamined);
     }
 
@@ -38,6 +38,9 @@ public sealed partial class FuelableFireSystem : EntitySystem
         while (query.MoveNext(out var uid, out var fire))
         {
             if (!fire.Burning)
+                continue;
+
+            if (fire.InfiniteFuel)
                 continue;
 
             fire.Fuel = MathF.Max(0f, fire.Fuel - fire.BurnRate * frameTime);
@@ -51,7 +54,7 @@ public sealed partial class FuelableFireSystem : EntitySystem
         ent.Comp.Capacity = MathF.Max(0f, ent.Comp.Capacity);
         ent.Comp.BurnRate = MathF.Max(0f, ent.Comp.BurnRate);
         ent.Comp.Fuel = Math.Clamp(ent.Comp.Fuel, 0f, ent.Comp.Capacity);
-        SetBurning(ent, ent.Comp.Burning && ent.Comp.Fuel > 0f);
+        SetBurning(ent, ent.Comp.Burning && (ent.Comp.InfiniteFuel || ent.Comp.Fuel > 0f));
     }
 
     private void OnInteractUsing(Entity<FuelableFireComponent> ent, ref InteractUsingEvent args)
@@ -59,12 +62,13 @@ public sealed partial class FuelableFireSystem : EntitySystem
         if (args.Handled)
             return;
 
-        var hot = new IsHotEvent();
-        RaiseLocalEvent(args.Used, hot);
-
-        if (hot.IsHot)
+        if (CanIgnite(args.Used))
         {
-            if (ent.Comp.Fuel <= 0f)
+            if (!IsBurning(args.Used))
+            {
+                _popup.PopupEntity(Loc.GetString("fuelable-fire-ignition-source-inactive"), ent, args.User);
+            }
+            else if (!ent.Comp.InfiniteFuel && ent.Comp.Fuel <= 0f)
             {
                 _popup.PopupEntity(Loc.GetString("fuelable-fire-no-fuel"), ent, args.User);
             }
@@ -80,6 +84,13 @@ public sealed partial class FuelableFireSystem : EntitySystem
 
         if (!TryComp<FireFuelComponent>(args.Used, out var fuel))
             return;
+
+        if (ent.Comp.InfiniteFuel)
+        {
+            _popup.PopupEntity(Loc.GetString("fuelable-fire-infinite"), ent, args.User);
+            args.Handled = true;
+            return;
+        }
 
         var amount = MathF.Max(0f, fuel.Amount);
         if (amount <= 0f)
@@ -107,20 +118,54 @@ public sealed partial class FuelableFireSystem : EntitySystem
         if (args.Handled || !args.Complex || !ent.Comp.Burning)
             return;
 
+        if (!ent.Comp.CanExtinguish)
+        {
+            _popup.PopupEntity(Loc.GetString("fuelable-fire-cannot-extinguish"), ent, args.User);
+            args.Handled = true;
+            return;
+        }
+
         SetBurning(ent, false);
         _popup.PopupEntity(Loc.GetString("fuelable-fire-extinguished"), ent, args.User);
         args.Handled = true;
     }
 
-    private void OnIsHot(Entity<FuelableFireComponent> ent, ref IsHotEvent args)
-    {
-        args.IsHot |= ent.Comp.Burning;
-    }
-
     private void OnExamined(Entity<FuelableFireComponent> ent, ref ExaminedEvent args)
     {
+        if (ent.Comp.InfiniteFuel)
+        {
+            args.PushMarkup(Loc.GetString("fuelable-fire-examine-infinite"));
+            return;
+        }
+
         var percent = ent.Comp.Capacity <= 0f ? 0 : (int) MathF.Round(ent.Comp.Fuel / ent.Comp.Capacity * 100f);
         args.PushMarkup(Loc.GetString("fuelable-fire-examine", ("percent", percent)));
+    }
+
+    /// <summary>
+    /// Returns whether an entity is currently producing enough heat to ignite fuel.
+    /// Merely having the Ignition tool quality is not sufficient: toggleable sources
+    /// must be switched on and fuelable fires must actually be burning.
+    /// </summary>
+    public bool IsBurning(EntityUid uid)
+    {
+        if (HasComp<BurningComponent>(uid))
+            return true;
+
+        if (TryComp<FuelableFireComponent>(uid, out var fire))
+            return fire.Burning;
+
+        return HasComp<ItemToggleHotComponent>(uid) &&
+               TryComp<ItemToggleComponent>(uid, out var toggle) &&
+               toggle.Activated;
+    }
+
+    private bool CanIgnite(EntityUid uid)
+    {
+        return _tool.HasQuality(uid, IgnitionQuality) ||
+               HasComp<BurningComponent>(uid) ||
+               HasComp<FuelableFireComponent>(uid) ||
+               HasComp<ItemToggleHotComponent>(uid);
     }
 
     private void ConsumeFuelEntity(EntityUid fuel)
@@ -136,28 +181,12 @@ public sealed partial class FuelableFireSystem : EntitySystem
 
     private void SetBurning(Entity<FuelableFireComponent> ent, bool burning)
     {
-        if (burning && ent.Comp.Fuel <= 0f)
+        if (burning && !ent.Comp.InfiniteFuel && ent.Comp.Fuel <= 0f)
             burning = false;
 
-        var changed = ent.Comp.Burning != burning;
         ent.Comp.Burning = burning;
         _light.SetEnabled(ent, burning);
-        _ignition.SetIgnited(ent.Owner, burning);
         _ambient.SetAmbience(ent, burning);
         _appearance.SetData(ent, ToggleableVisuals.Enabled, burning);
-
-        if (!changed)
-            return;
-
-        if (burning)
-        {
-            var ignited = new IgnitedEvent();
-            RaiseLocalEvent(ent, ref ignited);
-        }
-        else
-        {
-            var extinguished = new ExtinguishedEvent();
-            RaiseLocalEvent(ent, ref extinguished);
-        }
     }
 }

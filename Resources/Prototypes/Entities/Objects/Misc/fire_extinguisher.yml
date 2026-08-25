@@ -120,8 +120,6 @@
   - type: VaporVisuals
     animationTime: 0.8
     animationState: extinguish
-  - type: SupermatterImmune # GoobStation
-
 - type: entity
   name: pocket fire extinguisher
   parent: [SolutionFireExtinguisherMini, BaseFireExtinguisher]

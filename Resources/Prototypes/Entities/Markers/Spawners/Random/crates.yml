@@ -70,8 +70,6 @@
   id: LowValueEmergencyCrateTable
   table: !type:GroupSelector
     children:
-    - id: CrateEmergencyFire
-    - id: CrateEmergencyInternals
     - id: CrateEmergencyInflatablewall
       weight: 0.5
 
@@ -102,8 +100,6 @@
     - id: CrateEngineeringCableHV
     - id: CrateEngineeringCableBulk
     - id: CrateTechBoardRandom
-    - id: CrateEngineeringSpaceHeater
-    - id: StorageCanister
       weight: 0.5
 
 - type: entityTable

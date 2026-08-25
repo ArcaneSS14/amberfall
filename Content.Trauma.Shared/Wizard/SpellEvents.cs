@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.Actions;
-using Content.Shared.Atmos;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Destructible.Thresholds;
@@ -513,7 +512,7 @@ public sealed partial class DimensionShiftEvent : EntityEventArgs
     public float CarbonDioxideMoles = 10f;
 
     [DataField]
-    public float Temperature = Atmospherics.T0C - 5f;
+    public float Temperature = 268.15f;
 
     [DataField]
     public string? Parallax = "Wizard";

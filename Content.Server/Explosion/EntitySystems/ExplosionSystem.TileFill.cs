@@ -100,11 +100,11 @@ public sealed partial class ExplosionSystem
             // set up the initial `gridData` instance
             encounteredGrids.Add(epicentreGrid.Value);
 
-            var airtightMap = CompOrNull<ExplosionAirtightGridComponent>(epicentreGrid)?.Tiles ?? new();
+            var blockerMap = CompOrNull<ExplosionGridMapComponent>(epicentreGrid)?.Tiles ?? new();
 
             var initialGridData = new ExplosionGridTileFlood(
                 (epicentreGrid.Value, Comp<MapGridComponent>(epicentreGrid.Value)),
-                airtightMap,
+                blockerMap,
                 maxIntensity,
                 stepSize,
                 typeIndex,
@@ -189,11 +189,11 @@ public sealed partial class ExplosionSystem
                 // is this a new grid, for which we must create a new explosion data set
                 if (!gridData.TryGetValue(grid, out var data))
                 {
-                    var airtightMap = CompOrNull<ExplosionAirtightGridComponent>(grid)?.Tiles ?? new();
+                    var blockerMap = CompOrNull<ExplosionGridMapComponent>(grid)?.Tiles ?? new();
 
                     data = new ExplosionGridTileFlood(
                         (grid, Comp<MapGridComponent>(grid)),
-                        airtightMap,
+                        blockerMap,
                         maxIntensity,
                         stepSize,
                         typeIndex,

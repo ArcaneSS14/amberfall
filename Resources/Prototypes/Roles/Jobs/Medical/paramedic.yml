@@ -27,13 +27,6 @@
   - !type:OrganChipsSpecial
     chips:
     - SkillChipParamedic
-  - !type:AddComponentSpecial
-    components:
-    - type: CPRTraining
-      reviveChance: 0.6 # better at chest compressions
-      inhaleChance: 0.9 # very good at mouth to mouth res.
-  # </Trauma>
-
 - type: startingGear
   id: ParamedicGear
   equipment:

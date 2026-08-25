@@ -74,29 +74,3 @@
   - type: Sprite
     state: nine
 
-- type: entity
-  name: evidence marker box
-  parent: BoxCardboard
-  id: BoxEvidenceMarkers
-  description: A pack of numbered yellow markers, useful for labeling evidence on a crime scene.
-  components:
-  - type: Item
-    shape:
-    - 0,0,1,1
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: EvidenceMarkerOne
-        - id: EvidenceMarkerTwo
-        - id: EvidenceMarkerThree
-        - id: EvidenceMarkerFour
-        - id: EvidenceMarkerFive
-        - id: EvidenceMarkerSix
-        - id: EvidenceMarkerSeven
-        - id: EvidenceMarkerEight
-        - id: EvidenceMarkerNine
-  - type: Sprite
-    layers:
-      - state: box_security
-      - state: evidence_markers

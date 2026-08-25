@@ -68,7 +68,7 @@ public abstract class SharedLightCycleSystem : EntitySystem
 
     /// <summary>
     /// It is important to note that each color must have a different exponent, to modify how early or late one color should stand out in relation to another.
-    /// This "simulates" what the atmosphere does and is what generates the effect of dawn and dusk.
+    /// This simulates color scattering and generates the effect of dawn and dusk.
     /// The blue component must be a cosine function with half period, so that its minimum is at dawn and dusk, generating the "warm" color corresponding to these periods.
     /// As you can see in the values, the maximums of the function serve more to define the curve behavior,
     /// they must be "clipped" so as not to distort the original color of the lighting. In practice, the maximum values, in fact, are the clip thresholds.

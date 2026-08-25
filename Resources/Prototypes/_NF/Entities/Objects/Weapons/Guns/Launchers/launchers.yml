@@ -17,8 +17,6 @@
     - Back
     - Belt
     - suitStorage
-  - type: PneumaticCannon #Goob Edit Start
-    gasUsage: 0
   - type: Item
     size: Large
     shape:

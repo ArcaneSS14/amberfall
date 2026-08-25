@@ -22,14 +22,10 @@
         Ballistic: 0.35
         Heat: 0.35
         Caustic: 0.35
-  - type: BreathMask
   - type: Sprite
     sprite: _Goobstation/Clothing/Head/Helmets/helldiver.rsi
   - type: Clothing
     sprite: _Goobstation/Clothing/Head/Helmets/helldiver.rsi
-  - type: TemperatureProtection
-    heatingCoefficient: 0.1
-    coolingCoefficient: 0.1
   - type: HideLayerClothing
     slots:
     - Hair
@@ -115,9 +111,6 @@
         Slash: 0.55
         Piercing: 0.55
         Heat: 0.75
-  - type: PressureProtection
-    lowPressureMultiplier: 1000
-
 - type: entity  # Helmets hide / show hair verb
   parent: [ClothingHeadHelmetBase, BaseFoldable]
   id: ClothingHeadHelmetBaseFoldable
@@ -168,8 +161,6 @@
     tags:
     - HidesHair
     - WhitelistChameleon
-  - type: FireProtection
-    reduction: 0.1
   - type: HideLayerClothing
     layers:
       Hair: HEAD

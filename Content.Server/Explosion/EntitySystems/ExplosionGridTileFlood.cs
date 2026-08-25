@@ -1,8 +1,7 @@
 using System.Numerics;
-using Content.Shared.Atmos;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Map.Components;
-using static Content.Server.Explosion.Components.ExplosionAirtightGridComponent;
+using static Content.Server.Explosion.Components.ExplosionGridMapComponent;
 using static Content.Server.Explosion.EntitySystems.ExplosionSystem;
 
 namespace Content.Server.Explosion.EntitySystems;
@@ -21,12 +20,12 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
     private Vector2 _offset;
 
     // Tiles which neighbor an exploding tile, but have not yet had the explosion spread to them due to an
-    // airtight entity on the exploding tile that prevents the explosion from spreading in that direction. These
+    // explosion blocker on the exploding tile that prevents the explosion from spreading in that direction. These
     // will be added as a neighbor after some delay, once the explosion on that tile is sufficiently strong to
-    // destroy the airtight entity.
-    private Dictionary<int, List<(Vector2i, AtmosDirection)>> _delayedNeighbors = new();
+    // destroy the explosion blocker.
+    private Dictionary<int, List<(Vector2i, ExplosionDirection)>> _delayedNeighbors = new();
 
-    private Dictionary<Vector2i, TileData> _airtightMap;
+    private Dictionary<Vector2i, TileData> _blockerMap;
 
     private float _maxIntensity;
     private float _intensityStepSize;
@@ -41,7 +40,7 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
 
     public ExplosionGridTileFlood(
         Entity<MapGridComponent> grid,
-        Dictionary<Vector2i, TileData> airtightMap,
+        Dictionary<Vector2i, TileData> blockerMap,
         float maxIntensity,
         float intensityStepSize,
         int typeIndex,
@@ -52,7 +51,7 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
         ExplosionSystem explosionSystem)
     {
         Grid = grid;
-        _airtightMap = airtightMap;
+        _blockerMap = blockerMap;
         _maxIntensity = maxIntensity;
         _intensityStepSize = intensityStepSize;
         _typeIndex = typeIndex;
@@ -93,7 +92,7 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
     {
         TileLists[0] = new() { initialTile };
 
-        if (_airtightMap.ContainsKey(initialTile))
+        if (_blockerMap.ContainsKey(initialTile))
             EnteredBlockedTiles.Add(initialTile);
         else
             ProcessedTiles.Add(initialTile);
@@ -105,7 +104,7 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
         NewTiles = new();
         NewBlockedTiles = new();
 
-        // Mark tiles as entered if any were just freed due to airtight/explosion blockers being destroyed.
+        // Mark tiles as entered if any were just freed due to blocking/explosion blockers being destroyed.
         if (FreedTileLists.TryGetValue(iteration, out var freed))
         {
             HashSet<Vector2i> toRemove = new();
@@ -144,7 +143,7 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
         {
             foreach (var tile in gridJump)
             {
-                ProcessNewTile(iteration, tile, AtmosDirection.Invalid);
+                ProcessNewTile(iteration, tile, ExplosionDirection.Invalid);
             }
         }
 
@@ -157,10 +156,10 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
         return NewTiles.Count + NewBlockedTiles.Count;
     }
 
-    protected override void ProcessNewTile(int iteration, Vector2i tile, AtmosDirection entryDirections)
+    protected override void ProcessNewTile(int iteration, Vector2i tile, ExplosionDirection entryDirections)
     {
-        // Is there an airtight blocker on this tile?
-        if (!_airtightMap.TryGetValue(tile, out var tileData))
+        // Is there an blocking blocker on this tile?
+        if (!_blockerMap.TryGetValue(tile, out var tileData))
         {
             // No blocker. Ezy. Though maybe this a space tile?
 
@@ -178,7 +177,7 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
 
         bool blocked;
         var blockedDirections = tileData.BlockedDirections;
-        if (entryDirections == AtmosDirection.Invalid) // is coming from space?
+        if (entryDirections == ExplosionDirection.Invalid) // is coming from space?
         {
             blocked = AnyNeighborBlocked(_edgeTiles[tile], blockedDirections); // at least one space direction is blocked.
         }
@@ -258,27 +257,27 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
         _delayedNeighbors.Remove(iteration);
     }
 
-    // Gets the tiles that are directly adjacent to other tiles. If a currently exploding tile has an airtight entity
+    // Gets the tiles that are directly adjacent to other tiles. If a currently exploding tile has an explosion blocker
     // that blocks the explosion from propagating in some direction, those tiles are added to a list of delayed tiles
     // that will be added to the explosion in some future iteration.
     private void AddNewAdjacentTiles(int iteration, IEnumerable<Vector2i> tiles, bool ignoreTileBlockers = false)
     {
         foreach (var tile in tiles)
         {
-            var blockedDirections = AtmosDirection.Invalid;
+            var blockedDirections = ExplosionDirection.Invalid;
             FixedPoint2 sealIntegrity = 0;
 
-            // Note that if (grid, tile) is not a valid key, then airtight.BlockedDirections will default to 0 (no blocked directions)
-            if (_airtightMap.TryGetValue(tile, out var tileData))
+            // Note that if (grid, tile) is not a valid key, then blocking.BlockedDirections will default to 0 (no blocked directions)
+            if (_blockerMap.TryGetValue(tile, out var tileData))
             {
                 blockedDirections = tileData.BlockedDirections;
                 sealIntegrity = _explosionSystem.GetToleranceValues(tileData.ToleranceCacheIndex).Values[_typeIndex];
             }
 
-            // First, yield any neighboring tiles that are not blocked by airtight entities on this tile
-            for (var i = 0; i < Atmospherics.Directions; i++)
+            // First, yield any neighboring tiles that are not blocked by explosion blockers on this tile
+            for (var i = 0; i < 4; i++)
             {
-                var direction = (AtmosDirection) (1 << i);
+                var direction = (ExplosionDirection) (1 << i);
                 if (ignoreTileBlockers || !blockedDirections.IsFlagSet(direction))
                 {
                     ProcessNewTile(iteration, tile.Offset(direction), i.ToOppositeDir());
@@ -286,10 +285,10 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
             }
 
             // If there are no blocked directions, we are done with this tile.
-            if (ignoreTileBlockers || blockedDirections == AtmosDirection.Invalid)
+            if (ignoreTileBlockers || blockedDirections == ExplosionDirection.Invalid)
                 continue;
 
-            // This tile has one or more airtight entities anchored to it blocking the explosion from traveling in
+            // This tile has one or more explosion blockers anchored to it blocking the explosion from traveling in
             // some directions. First, check whether this blocker can even be destroyed by this explosion?
             if (sealIntegrity > _maxIntensity)
                 continue;
@@ -305,9 +304,9 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
             }
 
             // Check which directions are blocked, and add them to the list.
-            for (var i = 0; i < Atmospherics.Directions; i++)
+            for (var i = 0; i < 4; i++)
             {
-                var direction = (AtmosDirection) (1 << i);
+                var direction = (ExplosionDirection) (1 << i);
                 if (blockedDirections.IsFlagSet(direction))
                 {
                     list.Add((tile.Offset(direction), i.ToOppositeDir()));
@@ -316,8 +315,9 @@ public sealed class ExplosionGridTileFlood : ExplosionTileFlood
         }
     }
 
-    protected override AtmosDirection GetUnblockedDirectionOrAll(Vector2i tile)
+    protected override ExplosionDirection GetUnblockedDirectionOrAll(Vector2i tile)
     {
-        return ~_airtightMap.GetValueOrDefault(tile).BlockedDirections;
+        return ~_blockerMap.GetValueOrDefault(tile).BlockedDirections;
     }
 }
+

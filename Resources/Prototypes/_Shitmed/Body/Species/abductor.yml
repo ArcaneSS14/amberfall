@@ -61,8 +61,6 @@
     - Xeeplian
   - type: Fingerprint
   - type: Blindable
-  - type: FireVisuals
-    alternateState: Standing
   - type: Damageable
   - type: Injurable
     damageContainer: Biological

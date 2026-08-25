@@ -49,10 +49,6 @@
     requireMagicItem: true
   - type: SpeakOnAction
     sentence: heretic-speech-ash-volcano
-  - type: ChangeUseDelayOnAscension
-    newUseDelay: 30
-    requiredPath: Ash
-
 - type: entity
   parent: BaseAction
   id: ActionHereticNightwatcherRebirth
@@ -73,9 +69,6 @@
     requireMagicItem: true
   - type: SpeakOnAction
     sentence: heretic-speech-ash-rebirth
-  - type: ChangeUseDelayOnAscension
-    newUseDelay: 10
-    requiredPath: Ash
   - type: NightwatcherRebirthAction
 
 - type: entity

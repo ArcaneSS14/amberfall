@@ -5,8 +5,6 @@
   name: packet of strange berry seeds
   id: StrangeBerrySeeds
   components:
-    - type: Seed
-      seedId: strangeBerries
     - type: Sprite
       sprite: _Goobstation/Objects/Specific/Hydroponics/strange_berries.rsi
 
@@ -15,7 +13,5 @@
   name: packet of blue tomato seeds
   id: BluespaceTomatoSeeds
   components:
-  - type: Seed
-    seedId: bluespaceTomato
   - type: Sprite
     sprite: _Goobstation/Objects/Specific/Hydroponics/bluespace_tomato.rsi

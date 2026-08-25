@@ -72,4 +72,3 @@
     - MutationThermalAdaptation
   - type: ComponentMutation
     added:
-    - type: PressureImmunity

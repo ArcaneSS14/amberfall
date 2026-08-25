@@ -19,21 +19,6 @@
     color: "#E25822"
   - type: PyroclasticAnomaly
     maximumIgnitionRadius: 3
-  - type: TempAffectingAnomaly
-    tempChangePerSecond: 10
-    hotspotExposeTemperature: 500
-  - type: GasProducerAnomaly
-    releasedGas: 3
-    releaseOnMaxSeverity: true
-    spawnRadius: 4
-    tileCount: 5
-    tempChange: 420
-  - type: ProjectileAnomaly
-    projectilePrototype: ProjectileAnomalyFireball
-    projectileSpeed: 0.5
-    minProjectiles: 1
-    maxProjectiles: 3
-
 - type: entity
   parent: AnomalyInjectionBase
   id: AnomalyInjectionElectric
@@ -80,15 +65,6 @@
   components:
   - type: PointLight
     color: "#befaff"
-  - type: ExplosionAnomaly
-    supercriticalExplosion: Cryo
-    explosionTotalIntensity: 150
-    explosionDropoff: 2
-    explosionMaxTileIntensity: 20
-  - type: ProjectileAnomaly
-    projectilePrototype: ProjectileIcicle
-    minProjectiles: 1
-    maxProjectiles: 4
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -98,14 +74,6 @@
         maxRange: 2
       spawns:
       - IceCrust
-  - type: TempAffectingAnomaly
-    tempChangePerSecond: -10
-    hotspotExposeTemperature: -500
-  - type: GasProducerAnomaly
-    releasedGas: 8 # Frezon. Please replace if there is a better way to specify this
-    releaseOnMaxSeverity: true
-    spawnRadius: 0
-
 - type: entity
   parent: AnomalyInjectionBase
   id: AnomalyInjectionFlora
@@ -151,8 +119,6 @@
   components:
   - type: PointLight
     color: "#00ccff"
-  - type: BluespaceAnomaly
-
 - type: entity
   parent: AnomalyInjectionBase
   id: AnomalyInjectionFlesh
@@ -243,8 +209,6 @@
     maxThrowRange: 3
     maxThrowStrength: 5
     spaceRange: 1
-  - type: GravityWell
-    maxRange: 0.7
   - type: SingularityDistortion
     intensity: 100
     falloffPower: 2.7
@@ -256,14 +220,6 @@
   components:
   - type: PointLight
     color: "#56c1e8"
-  - type: TechAnomaly
-    linkRadius:
-      min: 2
-      max: 5
-    linkCountPerPulse:
-      min: 1
-      max: 4
-    linkCountSupercritical: 15
   - type: DeviceLinkSource
     ports:
       - Pulse

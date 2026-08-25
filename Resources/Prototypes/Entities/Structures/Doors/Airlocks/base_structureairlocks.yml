@@ -136,8 +136,6 @@
         type: StationAiBoundUserInterface
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
   - type: RadiationBlocker
     resistance: 3
   - type: Occluder

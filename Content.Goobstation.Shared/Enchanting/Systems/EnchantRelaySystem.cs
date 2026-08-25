@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Shared.Enchanting.Components;
-using Content.Shared.Atmos;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Electrocution;
 using Content.Shared.Hands;
@@ -9,7 +8,6 @@ using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Content.Shared.StepTrigger.Systems;
-using Content.Shared.Temperature;
 using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Containers;
 
@@ -30,8 +28,6 @@ public sealed partial class EnchantRelaySystem : EntitySystem
         SubscribeLocalEvent<EnchantedComponent, MeleeHitEvent>(RelayEvent);
         SubInventory<AttackedEvent>(true);
         SubInventory<StepTriggerAttemptEvent>(true);
-        SubInventory<GetFireProtectionEvent>();
-        SubInventory<ModifyChangedTemperatureEvent>();
         SubInventory<ElectrocutionAttemptEvent>();
 
         // unremoveable stuff

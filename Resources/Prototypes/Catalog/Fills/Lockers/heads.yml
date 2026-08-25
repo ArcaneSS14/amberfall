@@ -1,22 +1,3 @@
-- type: entityTable
-  id: LockerFillQuarterMaster
-  table: !type:AllSelector
-    children:
-    - !type:NestedSelector # Trauma
-      tableId: LockerFillQuarterMasterTrauma
-    - id: BoxEncryptionKeyCargo
-    - id: BoxFolderQmClipboard
-    - id: BoxQMCircuitboards
-    - id: BoxQMStamps
-    - id: CigPackGreen
-      prob: 0.75 # Goob - was 0.5
-    - id: ClothingHeadsetAltCargo
-    - id: DoorRemoteCargo
-    - id: AstroNavCartridge
-    - id: ClothingHandsKnuckleDustersQM
-    - id: PlushieLizardJobQuartermaster
-      prob: 0.02
-
 - type: entity
   id: LockerQuarterMasterFilled
   suffix: Filled
@@ -28,57 +9,6 @@
         tableId: LockerFillQuarterMaster
 
 # No laser table
-- type: entityTable
-  id: LockerFillCaptainNoLaser
-  table: !type:AllSelector
-    children:
-    - !type:NestedSelector # Trauma
-      tableId: LockerFillCaptainTrauma
-    - id: CaptainIDCard
-    - id: CigarGoldCase
-      prob: 0.25
-    - id: ClothingBeltSheathFilled
-    - id: ClothingHeadsetAltCommand
-    - id: ClothingOuterArmorCaptainCarapace
-    - id: BoxCaptainCircuitboards
-    - id: DoorRemoteCustom
-    - id: MedalCase
-    - id: NukeDisk
-    - id: PinpointerNuclear
-    - id: PlushieNuke
-      prob: 0.1
-    - id: RubberStampCaptain
-    - id: SpaceCash1000
-    # - id: WeaponDisabler # Trauma no disabler when you have telebatong
-    - id: ClothingEyesGlassesCommand
-    - id: OrganSkeletonPersonHead # A skull to accompany your skeleton crew
-      conditions:
-      - !type:PlayerCountCondition
-        max: 15
-    - id: PlushieLizardJobCaptain
-      prob: 0.02
-
-# No laser table + Laser table
-- type: entityTable
-  id: LockerFillCaptainLaser
-  table: !type:AllSelector
-    children:
-    - !type:NestedSelector
-      tableId: LockerFillCaptainNoLaser
-    - id: WeaponAntiqueLaser
-
-# Hardsuit table, used for suit storage as well
-- type: entityTable
-  id: FillCaptainHardsuit
-  table: !type:AllSelector
-    children:
-    - id: UndeterminedVoidsuitCaptain # Goobstation - Modsuit Update
-    - id: ClothingMaskGasCaptain
-    - id: JetpackCaptainFilled
-    - id: OxygenTankFilled
-    - id: NitrogenTankFilled # Goob
-
-# No laser locker, used when the antique laser is placed in the special display crate
 - type: entity
   id: LockerCaptainFilledNoLaser
   suffix: Filled
@@ -102,19 +32,136 @@
 
 # No Laser + Laser + Hardsuit locker
 - type: entity
-  id: LockerCaptainFilledHardsuit
-  suffix: Filled, Hardsuit
-  parent: LockerCaptain
+  id: LockerHeadOfPersonnelFilled
+  suffix: Filled
+  parent: LockerHeadOfPersonnel
   components:
   - type: EntityTableContainerFill
     containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: LockerFillCaptainLaser
-        - !type:NestedSelector
-          tableId: FillCaptainHardsuit
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillHeadOfPersonnel
 
+# No hardsuit table
+- type: entity
+  id: LockerChiefEngineerFilled
+  suffix: Filled
+  parent: LockerChiefEngineer
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillChiefEngineerNoHardsuit
+
+# No hardsuit + hardsuit locker
+- type: entity
+  id: LockerChiefMedicalOfficerFilled
+  suffix: Filled
+  parent: LockerChiefMedicalOfficer
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillChiefMedicalOfficerNoHardsuit
+
+# No hardsuit + Hardsuit locker
+- type: entity
+  id: LockerResearchDirectorFilled
+  suffix: Filled
+  parent: LockerResearchDirector
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillResearchDirectorNoHardsuit
+
+# No hardsuit + Hardsuit locker
+- type: entity
+  id: LockerHeadOfSecurityFilled
+  suffix: Filled
+  parent: LockerHeadOfSecurity
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillHeadOfSecurityNoHardsuit
+
+# No hardsuit + Hardsuit locker
+- type: entity
+  id: LockerFreezerVaultFilled
+  suffix: Vault, Filled
+  parent: LockerFreezerBase
+  components:
+  - type: AccessReader
+    access: [ [ "Command" ] ]
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillVault
+
+- type: entityTable
+  id: LockerFillQuarterMaster
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector # Trauma
+      tableId: LockerFillQuarterMasterTrauma
+    - id: BoxEncryptionKeyCargo
+    - id: BoxFolderQmClipboard
+    - id: CigPackGreen
+      prob: 0.75 # Goob - was 0.5
+    - id: ClothingHeadsetAltCargo
+    - id: DoorRemoteCargo
+    - id: AstroNavCartridge
+    - id: ClothingHandsKnuckleDustersQM
+    - id: PlushieLizardJobQuartermaster
+      prob: 0.02
+
+
+- type: entityTable
+  id: LockerFillCaptainNoLaser
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector # Trauma
+      tableId: LockerFillCaptainTrauma
+    - id: CaptainIDCard
+    - id: CigarGoldCase
+      prob: 0.25
+    - id: ClothingBeltSheathFilled
+    - id: ClothingHeadsetAltCommand
+    - id: ClothingOuterArmorCaptainCarapace
+    - id: DoorRemoteCustom
+    - id: NukeDisk
+    - id: PinpointerNuclear
+    - id: PlushieNuke
+      prob: 0.1
+    - id: RubberStampCaptain
+    - id: SpaceCash1000
+    # - id: WeaponDisabler # Trauma no disabler when you have telebatong
+    - id: ClothingEyesGlassesCommand
+    - id: OrganSkeletonPersonHead # A skull to accompany your skeleton crew
+      conditions:
+      - !type:PlayerCountCondition
+        max: 15
+    - id: PlushieLizardJobCaptain
+      prob: 0.02
+
+# No laser table + Laser table
+
+- type: entityTable
+  id: LockerFillCaptainLaser
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: LockerFillCaptainNoLaser
+    - id: WeaponAntiqueLaser
+
+# Hardsuit table, used for suit storage as well
+
+- type: entityTable
+  id: FillCaptainHardsuit
+  table: !type:AllSelector
+    children:
+    - id: UndeterminedVoidsuitCaptain # Goobstation - Modsuit Update
+    - id: ClothingMaskGasCaptain
 - type: entityTable
   id: LockerFillHeadOfPersonnel
   table: !type:AllSelector
@@ -125,8 +172,6 @@
     - id: BoxEncryptionKeyPassenger
     - id: BoxEncryptionKeyService
     - id: BoxHeadset
-    - id: BoxHoPCircuitboards
-    - id: BoxHoPStamps
     - id: BoxID
     - id: BoxPDA
     - id: CigarGoldCase
@@ -142,17 +187,7 @@
     - id: PlushieLizardJobHeadofpersonnel
       prob: 0.02
 
-- type: entity
-  id: LockerHeadOfPersonnelFilled
-  suffix: Filled
-  parent: LockerHeadOfPersonnel
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: LockerFillHeadOfPersonnel
 
-# No hardsuit table
 - type: entityTable
   id: LockerFillChiefEngineerNoHardsuit
   table: !type:AllSelector
@@ -163,13 +198,10 @@
     - id: BoxEncryptionKeyEngineering
     - id: CigarCase
       prob: 0.15
-    - id: ClothingBeltChiefEngineerFilled
     - id: ClothingEyesGlassesMeson
     - id: ClothingHandsGlovesColorYellow
     - id: ClothingHeadsetAltEngineering
     - id: DoorRemoteEngineering
-    - id: BoxCECircuitboards
-    # - id: RCD # Goobstation
     - id: RCDAmmo
     - id: RubberStampCE
     - id: MetalFoamGrenade
@@ -177,6 +209,7 @@
       prob: 0.02
 
 # Hardsuit table, used for suit storage as well
+
 - type: entityTable
   id: FillChiefEngineerHardsuit
   table: !type:AllSelector
@@ -184,37 +217,6 @@
     - id: ClothingMaskGasAtmos
     - id: ClothingOuterHardsuitEngineeringWhite
     - id: ClothingShoesBootsMagAdv
-    - id: JetpackVoidFilled
-    - id: OxygenTankFilled
-    - id: NitrogenTankFilled # Goob
-
-# No hardsuit locker
-- type: entity
-  id: LockerChiefEngineerFilled
-  suffix: Filled
-  parent: LockerChiefEngineer
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: LockerFillChiefEngineerNoHardsuit
-
-# No hardsuit + hardsuit locker
-- type: entity
-  id: LockerChiefEngineerFilledHardsuit
-  suffix: Filled, Hardsuit
-  parent: LockerChiefEngineer
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: LockerFillChiefEngineerNoHardsuit
-        - !type:NestedSelector
-          tableId: FillChiefEngineerHardsuit
-
-# No hardsuit table
 - type: entityTable
   id: LockerFillChiefMedicalOfficerNoHardsuit
   table: !type:AllSelector
@@ -222,8 +224,6 @@
     - !type:NestedSelector # Trauma
       tableId: LockerFillChiefMedicalOfficerTrauma
     - id: ClothingEyesHudMedical
-    - id: ClothingBeltMedicalFilled
-    # - id: HandheldCrewMonitor # Goobstation - in webbing
     - id: Hypospray
     - id: MedTekCartridge
     # Standard command gear
@@ -231,47 +231,17 @@
     - id: ClothingHeadsetAltMedical
     - id: DoorRemoteMedical
     - id: BoxEncryptionKeyMedical
-    - id: BoxCMOCircuitboards
     - id: PlushieLizardJobChiefmedicalofficer
       prob: 0.02
 
 # Hardsuit table, used for suit storage as well
+
 - type: entityTable
   id: FillChiefMedicalOfficerHardsuit
   table: !type:AllSelector
     children:
     - id: ClothingMaskBreathMedical
     - id: ClothingOuterHardsuitMedical
-    - id: OxygenTankFilled
-    - id: NitrogenTankFilled # Goob
-
-# No hardsuit locker
-- type: entity
-  id: LockerChiefMedicalOfficerFilled
-  suffix: Filled
-  parent: LockerChiefMedicalOfficer
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: LockerFillChiefMedicalOfficerNoHardsuit
-
-# No hardsuit + Hardsuit locker
-- type: entity
-  id: LockerChiefMedicalOfficerFilledHardsuit
-  suffix: Filled, Hardsuit
-  parent: LockerChiefMedicalOfficer
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: LockerFillChiefMedicalOfficerNoHardsuit
-        - !type:NestedSelector
-          tableId: FillChiefMedicalOfficerHardsuit
-
-# No hardsuit table
 - type: entityTable
   id: LockerFillResearchDirectorNoHardsuit
   table: !type:AllSelector
@@ -280,8 +250,6 @@
       tableId: LockerFillResearchDirectorTrauma
     - id: Intellicard
     - id: BoxEncryptionKeyScience
-    - id: BoxRDCircuitboards
-    - id: ClothingBeltUtilityFilled
     - id: ClothingHeadsetAltScience
     - id: DoorRemoteResearch
     - id: HandTeleporter
@@ -290,42 +258,13 @@
       prob: 0.02
 
 # Hardsuit table, used for suit storage as well
+
 - type: entityTable
   id: FillResearchDirectorHardsuit
   table: !type:AllSelector
     children:
     - id: ClothingMaskBreath
     - id: UndeterminedVoidsuitRD # Goob - Modsuit Update
-    - id: OxygenTankFilled
-    - id: NitrogenTankFilled # Goob
-
-# No hardsuit locker
-- type: entity
-  id: LockerResearchDirectorFilled
-  suffix: Filled
-  parent: LockerResearchDirector
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: LockerFillResearchDirectorNoHardsuit
-
-# No hardsuit + Hardsuit locker
-- type: entity
-  id: LockerResearchDirectorFilledHardsuit
-  suffix: Filled, Hardsuit
-  parent: LockerResearchDirector
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: LockerFillResearchDirectorNoHardsuit
-        - !type:NestedSelector
-          tableId: FillResearchDirectorHardsuit
-
-# No hardsuit table
 - type: entityTable
   id: LockerFillHeadOfSecurityNoHardsuit
   table: !type:AllSelector
@@ -346,68 +285,25 @@
     - id: DoorRemoteSecurity
     - id: HoloprojectorSecurity
     - id: RubberStampHos
-    - id: BoxHoSCircuitboards
-    #- id: WeaponDisabler # Trauma - disablers are in belts
     - id: WantedListCartridge
     - id: DrinkHosFlask
     - id: PlushieLizardJobHeadofsecurity
       prob: 0.02
 
 # Hardsuit table, used for suit storage as well
+
 - type: entityTable
   id: FillHeadOfSecurityHardsuit
   table: !type:AllSelector
     children:
     - id: ClothingMaskGasSwat
     - id: UndeterminedVoidsuitHeadOfSecurity # Goob edit
-    - id: JetpackSecurityFilled
-    - id: OxygenTankFilled
-    - id: NitrogenTankFilled # Goob
-
-# No hardsuit locker
-- type: entity
-  id: LockerHeadOfSecurityFilled
-  suffix: Filled
-  parent: LockerHeadOfSecurity
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: LockerFillHeadOfSecurityNoHardsuit
-
-# No hardsuit + Hardsuit locker
-- type: entity
-  id: LockerHeadOfSecurityFilledHardsuit
-  suffix: Filled, Hardsuit
-  parent: LockerHeadOfSecurity
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: LockerFillHeadOfSecurityNoHardsuit
-        - !type:NestedSelector
-          tableId: FillHeadOfSecurityHardsuit
-
 - type: entityTable
   id: LockerFillVault
   table: !type:AllSelector
     children:
     - id: WeaponRevolverDeckard
-    - id: JetpackBlue
     - id: SpaceCash1000
     - id: BeachBall
     - id: BikeHorn
 
-- type: entity
-  id: LockerFreezerVaultFilled
-  suffix: Vault, Filled
-  parent: LockerFreezerBase
-  components:
-  - type: AccessReader
-    access: [ [ "Command" ] ]
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: LockerFillVault

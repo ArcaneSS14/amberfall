@@ -28,9 +28,6 @@
     wideAnimationRotation: -135
     soundHit:
       collection: MetalThud
-  - type: PressureDamageChange
-    appliedModifier: 4
-  - type: PressureEfficiency
   - type: Wieldable
   - type: GunRequiresWield
   - type: UseDelayBlockMelee
@@ -293,6 +290,7 @@
   id: WeaponCrusherHalberdFilledRandom
 
 # Entity Tables
+
 - type: entityTable
   id: CrusherWeapons
   table: !type:GroupSelector

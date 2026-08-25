@@ -1409,28 +1409,6 @@
       - ContravendUplink
 
 - type: listing
-  id: UplinkMicroBombImplanter
-  name: uplink-micro-bomb-implanter-name
-  description: uplink-micro-bomb-implanter-desc
-  icon: { sprite: /Textures/Actions/Implants/implants.rsi, state: explosive }
-  productEntity: MicroBombImplanter
-  cost:
-    Telecrystal: 15 # Trauma - was 6, 5x and less expensive to promote use
-  categories:
-  - UplinkImplants
-  conditions:
-  # goob - traitor suicide implants
-  #- !type:StoreWhitelistCondition
-  #  whitelist:
-  #    tags:
-  #    - NukeOpsUplink
-  #- !type:BuyerWhitelistCondition
-  #  blacklist:
-  #    components:
-  #    - SurplusBundle
-
-
-- type: listing
   id: UplinkMacroBombImplanter
   name: uplink-macro-bomb-implanter-name
   description: uplink-macro-bomb-implanter-desc
@@ -1544,16 +1522,6 @@
 # Wearables
 
 - type: listing
-  id: UplinkJetpack
-  name: uplink-black-jetpack-name
-  description: uplink-black-jetpack-desc
-  productEntity: JetpackBlackFilled
-  cost:
-    Telecrystal: 5 # Trauma - was 1, 5x
-  categories:
-  - UplinkWearables
-
-- type: listing
   id: UplinkChestRig
   name: uplink-chest-rig-name
   description: uplink-chest-rig-desc
@@ -1617,29 +1585,6 @@
     Telecrystal: 25 # Trauma - was 5, 5x
   categories:
   - UplinkWearables
-
-- type: listing
-  id: UplinkClothingShoesBootsMagSyndie
-  name: uplink-clothing-shoes-boots-mag-syndie-name-trauma # Trauma - Added -trauma
-  description: uplink-clothing-shoes-boots-mag-syndie-desc
-  productEntity: ClothingShoesBootsMagSyndie
-  cost:
-    Telecrystal: 10 # Trauma - was 2, 5x
-  categories:
-  - UplinkWearables
-
-
-- type: listing
-  id: UplinkEVASyndie
-  name: uplink-eva-syndie-name
-  description: uplink-eva-syndie-desc
-  icon: { sprite: /Textures/Clothing/OuterClothing/Suits/eva_syndicate.rsi, state: icon }
-  productEntity: ClothingBackpackDuffelSyndicateEVABundle
-  cost:
-    Telecrystal: 5 # Trauma - was 1, 5x
-  categories:
-  - UplinkWearables
-
 
 - type: listing
   id: UplinkHardsuitCarp
@@ -1884,21 +1829,6 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-
-- type: listing
-  id: UplinkBalloon
-  name: uplink-balloon-name
-  description: uplink-balloon-desc
-  productEntity: BalloonSyn
-  cost:
-    Telecrystal: 100 # Trauma - was 20, 5x
-  categories:
-  - UplinkPointless
-  conditions:
-  # - !type:BuyerWhitelistCondition # Trauma
-  #   blacklist:
-  #     components:
-  #     - SurplusBundle
 
 - type: listing
   id: UplinkScarfSyndieRed

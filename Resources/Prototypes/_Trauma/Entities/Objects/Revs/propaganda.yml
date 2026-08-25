@@ -18,9 +18,6 @@
         enum.ChargesVisualLayers.ChargesLeft:
           True: {state: icon}
           False: {state: burnt}
-  - type: FireVisuals
-    sprite: _Trauma/Effects/fire.rsi
-    normalState: revfire
   - type: RevPropaganda
     conversionDuration: 2
     consumesCharges: 1

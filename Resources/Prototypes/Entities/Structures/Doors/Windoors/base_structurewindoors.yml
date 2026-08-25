@@ -164,10 +164,6 @@
           False: { visible: False }
   - type: WiresVisuals
   - type: ElectrocutionHUDVisuals
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
-    airBlockedDirection:
-      - South
   - type: Construction
     graph: Windoor
     node: windoor

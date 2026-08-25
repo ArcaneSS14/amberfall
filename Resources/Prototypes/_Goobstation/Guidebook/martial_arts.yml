@@ -1,20 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: guideEntry
-  id: MartialArts
-  name: guide-entry-martial-arts
-  text: "/ServerInfo/_Goobstation/Guidebook/MartialArts/MartialArts.xml"
-  children:
-  - CQC
-  - SleepingCarp
-  - KravMaga
-  - CorporateJudo
-  - Capoeira
-  - Ninjutsu
-  - HellRip
-  - ArmstrongKarate
-
-- type: guideEntry
   id: CQC
   name: guide-entry-cqc
   text: "/ServerInfo/_Goobstation/Guidebook/MartialArts/CQC.xml"

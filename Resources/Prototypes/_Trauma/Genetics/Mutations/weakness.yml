@@ -23,8 +23,6 @@
   - type: ThermalRegulatorMutation
     shivering: 0.05
     metabolism: 0.3 # lower metabolism idk
-  - type: TemperatureDamageMutation
-    coldOffset: 35 # -13C -> 28C
   - type: ArmorMutation
     modifiers:
       coefficients:
@@ -39,8 +37,6 @@
   - type: ThermalRegulatorMutation
     sweating: 0.05
     metabolism: 1.5 # more heat too
-  - type: TemperatureDamageMutation
-    heatOffset: -10 # 51C -> 41C (fever hits hard ye)
   - type: ArmorMutation
     modifiers:
       coefficients:
@@ -65,9 +61,6 @@
     sweating: 0.001
     metabolism: 0.001 # no more metabolism :)
     regulation: 0.001
-  - type: TemperatureDamageMutation
-    coldOffset: 40
-    heatOffset: -12
   - type: ArmorMutation
     modifiers:
       coefficients:

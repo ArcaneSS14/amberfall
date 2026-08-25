@@ -65,13 +65,6 @@
         harvest_alert:
           True: { visible: true }
           False: { visible: false }
-  - type: PlantHolder
-    drawWarnings: true
-    wateringSound:
-      path: /Audio/Effects/Fluids/slosh.ogg
-      params:
-        volume: -6
-        variation: 0.20
   - type: Destructible
     thresholds:
     - trigger:
@@ -102,9 +95,3 @@
   parent: hydroponicsTray
   id: HydroponicsTrayEmpty
   suffix: Empty
-  components:
-  - type: PlantHolder
-    waterLevel: 0
-    nutritionLevel: 0
-    # for the lights to update immediately
-    updateSpriteAfterUpdate: true

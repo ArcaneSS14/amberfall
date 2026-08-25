@@ -3,18 +3,12 @@
 - type: componentRegistry
   id: ComponentsToRemoveOnGhoulify
   components:
-  - type: Respirator
-    damage: !type:DamageSpecifier
-    damageRecovery: !type:DamageSpecifier
-  - type: Barotrauma
-    damage: !type:DamageSpecifier
   - type: Hunger
   - type: Thirst
   - type: Reproductive
     offspring: []
     partnerWhitelist: !type:EntityWhitelist
   - type: ReproductivePartner
-  - type: Temperature
   - type: Pacified
   - type: Xenomorph
     caste: Drone
@@ -34,4 +28,3 @@
   - type: GhostTakeoverAvailable
   - type: HereticBladeUserBonusDamage
   - type: HolyIgniteOnCollide
-  - type: HolyFlammable

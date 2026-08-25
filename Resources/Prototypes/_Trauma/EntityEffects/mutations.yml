@@ -32,13 +32,6 @@
   # TODO: 25% chance to start hallucinating for 40s
 
 - type: entityEffect
-  id: MutationFierySweat
-  effects:
-  - !type:Flammable
-    multiplier: 2
-  - !type:Ignite
-
-- type: entityEffect
   id: MutationAcidicFleshBubble
   effects:
   - !type:RelayMutated
@@ -67,26 +60,6 @@
     positional: false
 
 # Spastic
-
-- type: entityEffect
-  id: MutationSpasms
-  effects:
-  - !type:WeightedRandomEffect
-    children:
-    - effect: !type:NestedEffect
-        proto: SpasmMove
-    - effect: !type:NestedEffect
-        conditions:
-        - !type:HoldingItemCondition
-        proto: SpasmAttackSelf
-    - effect: !type:NestedEffect
-        proto: SpasmPunchSelf
-    - effect: !type:NestedEffect
-        proto: SpasmAttackOthers
-    - effect: !type:NestedEffect
-        conditions:
-        - !type:HoldingItemCondition
-        proto: SpasmThrow
 
 - type: entityEffect
   id: SpasmMove

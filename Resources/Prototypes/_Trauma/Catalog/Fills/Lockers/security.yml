@@ -44,30 +44,6 @@
     - blue
     - yellow
 
-- type: entityTable
-  id: FillLockerWardenTrauma
-  table: !type:AllSelector
-    children:
-    - id: ClothingHandsGlovesKravMaga
-    - id: BoxLethalInjection
-    - id: ClothingHeadsetAltWarden
-    - id: Multitool
-    - id: Wrench
-    - id: ContrabandDetectorFlatpack
-    - id: SecurityMegaphone
-    - id: WeaponEnergyShotgun
-    - id: GunpowderBottlePartFull
-    - id: ReinforcementCallerHos
-
-- type: entityTable
-  id: FillLockerSecurityTrauma
-  table: !type:AllSelector
-    children:
-    - id: ClothingHeadsetAltSecurityRegular
-    - id: PepperSpray
-    - id: WeaponLaserSidearm
-    - id: ClothingHandsGlovesSecurity
-
 - type: entity
   parent: BaseTraumaGunSafe
   id: GunSafeLaserCarbine
@@ -201,6 +177,7 @@
     - id: BoxGrenadesFlash
     - id: BoxGrenadesTeargas
 
+
 - type: entityTable
   id: FillGunSafeLaserT1
   table: !type:AllSelector
@@ -215,6 +192,7 @@
       amount: 1
     - id: WeaponEnergyIonRifle
       amount: 1
+
 
 - type: entityTable
   id: FillGunSafeShotgunsT1
@@ -232,6 +210,7 @@
       amount: 2
     - id: MagazineBoxGaussgunBullet
       amount: 2
+
 
 - type: entityTable
   id: FillGunSafeRandomBallistic
@@ -276,6 +255,7 @@
     - id: WeaponShotgunAntelope
       prob: 0.01
 
+
 - type: entityTable
   id: FillGunSafeMeleeT1
   table: !type:AllSelector
@@ -289,6 +269,7 @@
     - id: WeaponBillyClub
       amount: 3
 
+
 - type: entityTable
   id: FillGunSafeJudoT1
   table: !type:AllSelector
@@ -296,12 +277,14 @@
     - id: ClothingBeltCorporateJudo
       amount: 2
 
+
 - type: entityTable
   id: FillGunSafePhaser
   table: !type:AllSelector
     children:
     - id: WeaponLaserSidearm
       amount: 5
+
 
 - type: entityTable
   id: FillGunHunter
@@ -315,3 +298,27 @@
       amount: 2
     - id: RiotLaserShield
     - id: SecBreachingHammer
+
+- type: entityTable
+  id: FillLockerWardenTrauma
+  table: !type:AllSelector
+    children:
+    - id: ClothingHandsGlovesKravMaga
+    - id: BoxLethalInjection
+    - id: ClothingHeadsetAltWarden
+    - id: Multitool
+    - id: Wrench
+    - id: ContrabandDetectorFlatpack
+    - id: SecurityMegaphone
+    - id: WeaponEnergyShotgun
+    - id: GunpowderBottlePartFull
+    - id: ReinforcementCallerHos
+
+- type: entityTable
+  id: FillLockerSecurityTrauma
+  table: !type:AllSelector
+    children:
+    - id: ClothingHeadsetAltSecurityRegular
+    - id: PepperSpray
+    - id: WeaponLaserSidearm
+    - id: ClothingHandsGlovesSecurity

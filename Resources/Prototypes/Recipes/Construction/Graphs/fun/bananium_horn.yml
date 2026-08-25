@@ -6,11 +6,8 @@
       edges:
         - to: bananiumHorn
           steps:
-            - tag: Pipe
-              name: construction-graph-tag-pipe
-              icon:
-                sprite: Structures/Piping/Atmospherics/pipe.rsi
-                state: pipeStraight
+            - material: Steel
+              amount: 1
               doAfter: 2
             - material: Bananium
               amount: 4

@@ -1,14 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: guideEntry
-  id: Xenomorphs
-  name: guide-entry-xenomorph
-  text: "/ServerInfo/_Goobstation/Guidebook/Antagonist/Xenomorphs.xml"
-  children:
-  - XenomorphClasses
-  - XenomorphPlayGuide
-
-- type: guideEntry
   id: XenomorphClasses
   name: guide-entry-xenomorph-classes
   text: "/ServerInfo/_Goobstation/Guidebook/Antagonist/XenomorphClasses.xml"

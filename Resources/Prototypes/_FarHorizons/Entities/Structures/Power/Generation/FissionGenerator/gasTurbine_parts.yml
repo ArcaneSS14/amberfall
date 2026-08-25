@@ -21,9 +21,6 @@
   id: BaseGasTurbineBlade
   name: gas turbine blade
   description: A replacement blade for the gas turbine.
-  components:
-  - type: GasTurbineBlade
-
 - type: entity
   parent: [ BaseGasTurbineBlade, BaseNuclearPropertiesSteel ]
   id: SteelGasTurbineBlade
@@ -80,8 +77,6 @@
   components:
   - type: Sprite
     state: turbine_stator
-  - type: GasTurbineStator
-
 - type: entity
   parent: [ BaseGasTurbineStator, BaseNuclearPropertiesSteel ]
   id: SteelGasTurbineStator

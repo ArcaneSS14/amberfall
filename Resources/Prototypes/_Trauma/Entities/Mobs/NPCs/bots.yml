@@ -36,7 +36,6 @@
   - type: Construction
     graph: ButtBot
     node: bot
-  - type: Fart
   - type: EmoteOnDamage
     emotes:
     - Fart

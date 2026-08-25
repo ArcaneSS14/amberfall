@@ -1068,25 +1068,6 @@
 
 - type: entity
   parent: BasePDA
-  id: AtmosPDA
-  name: atmos PDA
-  description: Still smells like plasma.
-  components:
-  - type: Pda
-    id: AtmosIDCard
-  - type: Appearance
-    appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-atmos
-  - type: PdaBorderColor
-    borderColor: "#949137"
-    accentVColor: "#447987"
-  - type: Icon
-    state: pda-atmos
-
-- type: entity
-  parent: BasePDA
   id: ClearPDA
   name: clear PDA
   description: 99 and 44/100ths percent pure plastic.

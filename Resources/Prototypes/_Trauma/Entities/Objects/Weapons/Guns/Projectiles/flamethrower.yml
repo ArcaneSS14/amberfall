@@ -19,8 +19,6 @@
     energy: 1.0
   - type: Appearance
   - type: AnimationPlayer
-  - type: IgniteOnCollide
-    fireStacks: 3
   - type: Damageable
   - type: Injurable
     damageContainer: Inorganic
@@ -56,9 +54,6 @@
     damage:
       types:
         Heat: 5
-  - type: IgnitionSource
-    temperature: 400
-    ignited: true
   - type: Fixtures
     fixtures:
       fix1:

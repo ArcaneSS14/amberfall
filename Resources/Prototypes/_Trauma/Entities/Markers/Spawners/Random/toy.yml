@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 # keep the weight synced with AllPlushiesTable
+
 - type: entityTable
   id: AllPlushiesTrauma
   table: !type:GroupSelector
@@ -10,6 +11,7 @@
     - id: FaceHuggerToys
 
 # keep the weight synced with AllFigurinesTable
+
 - type: entityTable
   id: AllFigurinesTrauma
   table: !type:GroupSelector

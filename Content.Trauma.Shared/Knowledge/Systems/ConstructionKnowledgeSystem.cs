@@ -6,7 +6,6 @@ using Content.Shared.Popups;
 using Content.Trauma.Common.Construction;
 using Content.Trauma.Common.Knowledge.Components;
 using Content.Trauma.Common.Quality;
-using Content.Trauma.Shared.Forging;
 using Content.Trauma.Shared.Knowledge.Quality;
 
 namespace Content.Trauma.Shared.Knowledge.Systems;
@@ -28,7 +27,6 @@ public sealed partial class ConstructionKnowledgeSystem : EntitySystem
 
         SubscribeLocalEvent<KnowledgeHolderComponent, ConstructAttemptEvent>(OnConstructAttempt);
         SubscribeLocalEvent<KnowledgeHolderComponent, ConstructedEvent>(OnConstructed);
-        SubscribeLocalEvent<KnowledgeHolderComponent, ForgingCompletedEvent>(OnForgingCompleted);
     }
 
     private void OnConstructAttempt(Entity<KnowledgeHolderComponent> ent, ref ConstructAttemptEvent args)
@@ -103,22 +101,4 @@ public sealed partial class ConstructionKnowledgeSystem : EntitySystem
         _quality.RollQuality((item, quality), ent);
     }
 
-    private void OnForgingCompleted(Entity<KnowledgeHolderComponent> ent, ref ForgingCompletedEvent args)
-    {
-        // TODO: grant xp from forging
-        var item = args.Target;
-        if (EnsureComp<QualityComponent>(item, out var quality))
-            return;
-
-        // roll quality for fresh items
-        var offset = args.Metal.MasteryOffset;
-        foreach (var (id, mastery) in args.Item.Skills)
-        {
-            quality.LevelDeltas[id] = mastery + offset;
-        }
-        quality.QualityFactors = args.Item.QualityPrototype ?? BaseQuality;
-        Dirty(item, quality);
-
-        _quality.RollQuality((item, quality), ent);
-    }
 }

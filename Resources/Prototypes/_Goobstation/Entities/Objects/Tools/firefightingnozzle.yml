@@ -12,12 +12,6 @@
   - type: Item
     sprite: Objects/Weapons/Guns/Basic/extinguishernozzle.rsi
     size: Normal
-  - type: FirefighterTankRefillable
-    externalContainer: true
-    targetSlot: BACK
-    providerWhitelist:
-      tags:
-      - AtmosBackTank
   - type: Tag
     tags:
     - Nozzle

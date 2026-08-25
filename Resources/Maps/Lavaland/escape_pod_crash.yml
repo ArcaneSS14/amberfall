@@ -176,40 +176,6 @@ entities:
             id: thinline
           decals:
             39: 0.9597533,-3.731388
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 159
-          0,-1:
-            0: 57343
-          -1,0:
-            0: 2
-          -1,-1:
-            0: 61164
-          0,-2:
-            0: 63280
-          -1,-2:
-            0: 52352
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: BasaltFive
   entities:

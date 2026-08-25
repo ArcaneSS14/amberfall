@@ -189,3 +189,4 @@ public sealed partial class WizardTeleportSystem : SharedWizardTeleportSystem
         return true;
     }
 }
+

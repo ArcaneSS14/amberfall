@@ -15,14 +15,6 @@
     - state: chestplate-sealed
       visible: false
       map: [ "sealed" ]
-  - type: ComponentToggler
-    components:
-    - type: PressureProtection
-      highPressureMultiplier: 0.3
-      lowPressureMultiplier: 1000
-    - type: TemperatureProtection
-      coolingCoefficient: 0.01
-      heatingCoefficient: 0.01
   - type: Clothing
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Mecha/mechmove03.ogg
@@ -33,8 +25,6 @@
   - type: SealableClothing
     sealUpPopup: sealable-clothing-seal-up-chestplate
     sealDownPopup: sealable-clothing-seal-down-chestplate
-  - type: FireProtection
-    reduction: 0.5
   - type: StaminaResistance
     damageCoefficient: 0.9
   - type: SealableClothingVisuals
@@ -59,12 +49,6 @@
   - type: Tag
     tags:
     - PlasmamanSafe
-  - type: IgniteFromGasImmunity
-    parts:
-    - Torso
-    - LegLeft
-    - LegRight
-
 - type: entity
   parent: ClothingOuterModsuitBase
   id: ClothingModsuitChestplateStandard
@@ -194,9 +178,6 @@
   - type: ModifyDelayedKnockdown
     delayDelta: 1
     knockdownTimeDelta: -1
-  - type: FireProtection
-    reduction: 0.7 # 0.2 stronger than other modsuits
-
 - type: entity
   parent: [ ClothingOuterModsuitBase, BaseModsuitPieceAtmos ]
   id: ClothingModsuitChestplateAtmostech
@@ -217,20 +198,9 @@
         Piercing: 0.85
         Heat: 0.2
         Radiation: 0.05
-  - type: ComponentToggler
-    components:
-    - type: PressureProtection
-      highPressureMultiplier: 0.3
-      lowPressureMultiplier: 1000
-    - type: TemperatureProtection
-      coolingCoefficient: 0.001 # 10x better
-      heatingCoefficient: 0.001 # 10x better
   - type: ModifyDelayedKnockdown
     delayDelta: 1
     knockdownTimeDelta: -1
-  - type: FireProtection
-    reduction: 0.75 # 0.25 better than other modsuits
-
 - type: entity
   parent: [ ClothingOuterModsuitBase, BaseModsuitPieceRD ]
   id: ClothingModsuitChestplateResearchDirector

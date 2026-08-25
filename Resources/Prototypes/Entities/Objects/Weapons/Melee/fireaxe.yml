@@ -70,9 +70,6 @@
     delay: 1
   - type: StealTarget
     stealGroup: FireAxe
-  - type: IgniteOnMeleeHit
-    fireStacks: -4
-
 - type: entity
   id: FireAxeFlaming
   name: fire axe
@@ -98,8 +95,6 @@
         Slash: 10
         Structural: 40 # Trauma, was 80
   # <Trauma>
-  - type: IgniteOnMeleeHit
-    fireStacks: 2 # Trauma - was 1
   - type: Sprite
     sprite: Objects/Weapons/Melee/fireaxeflaming.rsi
     state: icon

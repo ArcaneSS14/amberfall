@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 05/03/2025 23:17:42
-  entityCount: 213
+  entityCount: 211
 maps: []
 grids:
 - 1
@@ -258,68 +258,6 @@ entities:
             27: 6,-4
             28: 6,-3
             29: 6,-2
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          2,0:
-            0: 8
-          2,-1:
-            0: 36349
-          3,0:
-            0: 15
-          3,-1:
-            0: 16375
-          -1,-3:
-            0: 61152
-          0,-3:
-            0: 65024
-          0,-2:
-            0: 61166
-          -1,-2:
-            0: 61166
-          0,-1:
-            0: 3839
-          -1,-1:
-            0: 61166
-          1,-3:
-            0: 65280
-          1,-2:
-            0: 65535
-          1,-1:
-            0: 4095
-          2,-3:
-            0: 64768
-          2,-2:
-            0: 8189
-          3,-3:
-            0: 48000
-          3,-2:
-            0: 3003
-          4,-3:
-            0: 4096
-          4,-2:
-            0: 4369
-          4,-1:
-            0: 4369
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: Airlock
   entities:
@@ -998,13 +936,6 @@ entities:
     - type: Transform
       pos: 12.5,-2.5
       parent: 1
-- proto: OreProcessor
-  entities:
-  - uid: 115
-    components:
-    - type: Transform
-      pos: 4.5,-8.5
-      parent: 1
 - proto: PlasticFlapsOpaque
   entities:
   - uid: 105
@@ -1394,14 +1325,6 @@ entities:
     components:
     - type: Transform
       pos: 2.5,-5.5
-      parent: 1
-- proto: ToolboxMechanicalFilled
-  entities:
-  - uid: 195
-    components:
-    - type: Transform
-      rot: -69.11503837897548 rad
-      pos: 7.7078304,-8.930841
       parent: 1
 - proto: WallSolid
   entities:

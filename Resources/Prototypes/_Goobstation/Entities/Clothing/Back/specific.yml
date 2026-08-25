@@ -199,7 +199,6 @@
         whitelist:
           tags:
           - Nozzle
-  - type: FirefighterTankRefillable
   - type: ContainerContainer
     containers:
       nozzle_slot: !type:ContainerSlot

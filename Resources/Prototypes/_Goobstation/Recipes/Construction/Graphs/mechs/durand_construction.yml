@@ -175,7 +175,3 @@
       - tool: Welding
         doAfter: 1
 
-  - node: durand
-    actions:
-    - !type:BuildMech
-      mechPrototype: MechDurand

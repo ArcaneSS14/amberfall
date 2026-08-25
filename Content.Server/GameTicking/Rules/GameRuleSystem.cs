@@ -1,4 +1,3 @@
-using Content.Server.Atmos.EntitySystems;
 using Content.Shared.GameTicking.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Random;
@@ -12,8 +11,6 @@ public abstract partial class GameRuleSystem<T> : EntitySystem where T : ICompon
     [Dependency] protected IRobustRandom RobustRandom = default!;
     [Dependency] protected GameTicker GameTicker = default!;
 
-    // Not protected, just to be used in utility methods
-    [Dependency] private AtmosphereSystem _atmosphere = default!;
     [Dependency] private MapSystem _map = default!;
 
     [Dependency] protected EntityQuery<GameRuleComponent> GameRuleQuery = default!;

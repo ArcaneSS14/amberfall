@@ -530,7 +530,6 @@
   - type: GibbableOrgan
   - type: Organ
     category: Lungs
-  - type: Lung
   - type: Metabolizer
     stages: [ Respiration ]
   - type: SolutionManager

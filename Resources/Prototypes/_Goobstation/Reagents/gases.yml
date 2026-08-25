@@ -401,14 +401,6 @@
         - !type:MetabolizerTypeCondition
           type: [ Human, Animal, Rat, Plant, Cybernetic ]
       # Convert Pluox into CO2.
-      - !type:ModifyLungGas
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox ]
-          inverted: true
-        ratios:
-          CarbonDioxide: 1.0
-          Oxygen: -1.0
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
@@ -436,14 +428,6 @@
         - !type:MetabolizerTypeCondition
           type: [ Human, Animal, Rat, Plant, Cybernetic ]
       # Convert Pluox into CO2.
-      - !type:ModifyLungGas
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox ]
-          inverted: true
-        ratios:
-          CarbonDioxide: 1.0
-          Oxygen: -1.0
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition

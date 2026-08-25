@@ -13,8 +13,6 @@
         - id: ClothingOuterHardsuitSyndieMedic
         - id: ClothingMaskGasSyndicate
         - id: ClothingHandsGlovesCombat
-        - id: DoubleEmergencyOxygenTankFilled
-        - id: DoubleEmergencyNitrogenTankFilled
 
 
 - type: entity
@@ -30,8 +28,6 @@
         - id: ClothingOuterHardsuitCybersunStealth
         - id: ClothingMaskGasSyndicate
         - id: ClothingHandsGlovesCombat
-        - id: DoubleEmergencyOxygenTankFilled
-        - id: DoubleEmergencyNitrogenTankFilled
 
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle

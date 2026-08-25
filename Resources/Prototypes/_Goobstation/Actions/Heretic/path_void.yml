@@ -24,10 +24,6 @@
     requireMagicItem: true
   - type: SpeakOnAction
     sentence: heretic-speech-void-phase
-  - type: ChangeUseDelayOnAscension
-    newUseDelay: 10
-    requiredPath: Void
-
 - type: entity
   parent: BaseAction
   id: ActionHereticVoidPrison
@@ -54,10 +50,6 @@
     requireMagicItem: true
   - type: SpeakOnAction
     sentence: heretic-speech-void-prison
-  - type: ChangeUseDelayOnAscension
-    newUseDelay: 15
-    requiredPath: Void
-
 - type: entity
   parent: BaseAction
   id: ActionHereticVoidPull
@@ -79,10 +71,6 @@
     requireMagicItem: true
   - type: SpeakOnAction
     sentence: heretic-speech-void-pull
-  - type: ChangeUseDelayOnAscension
-    newUseDelay: 15
-    requiredPath: Void
-
 - type: entity
   parent: BaseAction
   id: ActionHereticVoidConduitAscension

@@ -6,8 +6,6 @@
   name: packet of lemonade seeds
   description: Not to be confused with the drink.
   components:
-  - type: Seed
-    seedId: Lemonade
   - type: Sprite
     sprite: _Trauma/Objects/Specific/Hydroponics/lemonade.rsi
 
@@ -16,8 +14,6 @@
   id: CocaSeeds
   name: packet of coca seeds
   components:
-  - type: Seed
-    seedId: CocaPlant
   - type: Sprite
     sprite: _Trauma/Objects/Specific/Hydroponics/coca_plant.rsi
 
@@ -26,8 +22,6 @@
   id: CoconutSeeds
   name: packet of coconut seeds
   components:
-  - type: Seed
-    seedId: CoconutPlant
   - type: Sprite
     sprite: _Trauma/Objects/Specific/Hydroponics/coconut.rsi
 
@@ -38,7 +32,5 @@
   suffix: bomb
   id: CherryBombSeeds
   components:
-    - type: Seed
-      seedId: CherryBomb
     - type: Sprite
       sprite: _Goobstation/Objects/Specific/Hydroponics/cherry.rsi # doesnt need to look special

@@ -44,11 +44,6 @@
         key: IdleTime
 
     - !type:HTNPrimitiveTask
-      operator: !type:DisposalInsertOperator
-        targetKey: FlushableTarget
-        disposalTargetKey: DisposalBinTarget
-
-    - !type:HTNPrimitiveTask
       operator: !type:SetFloatOperator
         targetKey: IdleTime
         amount: 1

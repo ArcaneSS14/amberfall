@@ -179,3 +179,4 @@ public sealed partial class SanguineStrikeSystem : SharedSanguineStrikeSystem
         RemCompDeferred(uid, component);
     }
 }
+

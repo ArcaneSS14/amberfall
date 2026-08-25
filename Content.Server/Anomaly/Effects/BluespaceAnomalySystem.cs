@@ -84,3 +84,4 @@ public sealed partial class BluespaceAnomalySystem : EntitySystem
         portal.MaxRandomRadius = (component.MaxPortalRadius - component.MinPortalRadius) * args.Severity + component.MinPortalRadius;
     }
 }
+

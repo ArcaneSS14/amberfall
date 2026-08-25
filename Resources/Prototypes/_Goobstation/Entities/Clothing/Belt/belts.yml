@@ -257,13 +257,6 @@
     - 0,0,19,9
 
 - type: entity
-  parent: ClothingBeltUtilityFilled
-  id: ClothingBeltUtilityFilledUnremoveable
-  suffix: Unremoveable
-  components:
-  - type: Unremoveable
-
-- type: entity
   parent: [ ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseSyndicateContraband ]
   id: ClothingBeltSecurityWebbingContractorFilled
   name: contractor's chest rig

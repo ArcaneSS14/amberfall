@@ -367,9 +367,6 @@
     count: 5
   - type: Machine
     board: ShuttleGunKineticCircuitboard
-  - type: PressureDamageChange
-  - type: PressureEfficiency
-    lowerBound: 0 # work in space
   - type: UpgradeableWeapon
   - type: ItemSlots # for upgrades
     slots:

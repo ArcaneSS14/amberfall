@@ -50,8 +50,6 @@
   #  lifetime: 180
   - type: Transform # DeltaV
     noRot: true
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
   - type: Holofan # DeltaV - for whitelisting
 
 - type: entity

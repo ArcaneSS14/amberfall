@@ -165,11 +165,6 @@
     damage:
       types:
         Heat: 20
-  - type: IgniteOnCollide
-    fireStacks: 1
-
-# Revolver
-
 - type: entity
   id: MagFedLaserBase
   name: laser
@@ -266,11 +261,6 @@
     layers:
     - state: lightbolt
       color: "#ff6122"
-  - type: IgniteOnCollide
-    fireStacks: 0.5
-
-# SMG
-
 - type: entity
   id: SMGLaser
   parent: MagFedLaserBase
@@ -333,11 +323,6 @@
     layers:
     - state: lightbolt
       color: "#fc5d52"
-  - type: IgniteOnCollide
-    fireStacks: 0.25
-
-# Sniper
-
 - type: entity
   id: SniperLaser
   parent: MagFedLaserBase
@@ -403,11 +388,6 @@
     layers:
     - state: heavybolt
       color: "#fc5d52"
-  - type: IgniteOnCollide
-    fireStacks: 7
-
-# LMG
-
 - type: entity
   id: LMGLaser
   parent: MagFedLaserBase

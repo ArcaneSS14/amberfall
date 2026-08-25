@@ -66,13 +66,6 @@
     visualType: MediumCaution
 
 - type: entityEffect
-  id: VampireFlameBurst
-  effects:
-  - !type:Flammable
-    multiplier: 5
-  - !type:Ignite
-
-- type: entityEffect
   id: VampireHolyWater
   effects:
   - !type:Vomit

@@ -8,7 +8,6 @@
   components:
   - type: Sprite
     state: produce
-  - type: Produce
   - type: PotencyVisuals
   - type: Appearance
   - type: Solution
@@ -48,7 +47,6 @@
   # </Trauma>
   - type: Sprite
     state: produce
-  - type: Produce
   - type: PotencyVisuals
   - type: Appearance
   - type: Extractable
@@ -71,8 +69,6 @@
       reagents:
       - ReagentId: Flour
         Quantity: 15
-  - type: Produce
-    seedId: wheat
   - type: Tag
     tags:
     - Wheat
@@ -98,9 +94,6 @@
       - id: FoodMeatWheat
     sound:
       path: /Audio/Voice/Slime/slime_squish.ogg
-  - type: Produce
-    seedId: meatwheat
-
 - type: entity
   parent: ProduceBaseRuminant
   id: OatBushel
@@ -116,8 +109,6 @@
       reagents:
       - ReagentId: Oats
         Quantity: 15
-  - type: Produce
-    seedId: oat
   - type: Extractable
     juiceSolution:
       reagents:
@@ -139,9 +130,6 @@
       reagents:
       - ReagentId: Sugar
         Quantity: 15
-  - type: Produce
-    seedId: sugarcane
-
 - type: entity
   parent: [ProduceBase, BaseSlicingRefinable]
   id: Papercane
@@ -152,8 +140,6 @@
     sprite: Objects/Specific/Hydroponics/papercane.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: papercane
   - type: ToolRefinable
     refineResult:
     - id: SheetPaper1
@@ -186,8 +172,6 @@
     sprite: Objects/Specific/Hydroponics/laughin_pea.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: laughinPea
   - type: Tag
     tags:
     - Vegetable
@@ -201,7 +185,6 @@
   components:
   - type: FireFuel
     amount: 300
-  # <Trauma>
   - type: PhysicalComposition
     materialComposition:
       Wood: 500
@@ -216,8 +199,6 @@
     damage:
       types:
         Blunt: 10
-  - type: Produce
-    seedId: towercap
   - type: ToolRefinable
     qualityNeeded: Sawing
     refineResult:
@@ -245,8 +226,6 @@
     damage:
       types:
         Blunt: 12
-  - type: Produce
-    seedId: steelcap
   - type: ToolRefinable
     qualityNeeded: Sawing
     refineResult:
@@ -275,8 +254,6 @@
       reagents:
       - ReagentId: Histamine
         Quantity: 3
-  - type: Produce
-    seedId: nettle
   - type: MeleeChemicalInjector
     transferAmount: 3 #TODO someone you would need 2 nettles and about 6-7 hits, the DOT is likely to crit them if they are running away with almost no health
     solution: food
@@ -308,8 +285,6 @@
         Quantity: 7.5
       - ReagentId: FluorosulfuricAcid
         Quantity: 7.5
-  - type: Produce
-    seedId: deathNettle
   - type: MeleeChemicalInjector
     transferAmount: 5
     solution: food
@@ -395,8 +370,6 @@
     sprite: Objects/Specific/Hydroponics/banana.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: banana
   - type: Extractable
     juiceSolution:
       reagents:
@@ -440,8 +413,6 @@
     sprite: Objects/Specific/Hydroponics/mimana.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: mimana
   - type: Extractable
     juiceSolution:
       reagents:
@@ -607,8 +578,6 @@
     sprite: Objects/Specific/Hydroponics/carrot.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: carrots
   - type: Extractable
     juiceSolution:
       reagents:
@@ -649,8 +618,6 @@
     sprite: Objects/Specific/Hydroponics/cabbage.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: cabbage
   - type: Tag
     tags:
     - Vegetable
@@ -679,8 +646,6 @@
         Quantity: 4
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/garlic.rsi
-  - type: Produce
-    seedId: garlic
   - type: Tag
     tags:
     - Vegetable
@@ -711,8 +676,6 @@
     sprite: Objects/Specific/Hydroponics/lemon.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: lemon
   - type: Extractable
     juiceSolution:
       reagents:
@@ -747,8 +710,6 @@
     sprite: Objects/Specific/Hydroponics/lemoon.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: lemoon
   - type: Extractable
     juiceSolution:
       reagents:
@@ -784,8 +745,6 @@
     sprite: Objects/Specific/Hydroponics/lime.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: lime
   - type: Extractable
     juiceSolution:
       reagents:
@@ -822,8 +781,6 @@
     sprite: Objects/Specific/Hydroponics/orange.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: orange
   - type: Extractable
     juiceSolution:
       reagents:
@@ -860,8 +817,6 @@
     scale: 0.5,0.5
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: extradimensionalOrange
   - type: PotencyVisuals
     minimumScale: 0.5 # reduce this in size because the sprite is way too big
     maximumScale: 1
@@ -907,8 +862,6 @@
     sprite: Objects/Specific/Hydroponics/pineapple.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: pineapple
   - type: Extractable
     juiceSolution:
       reagents:
@@ -935,8 +888,6 @@
     sprite: Objects/Specific/Hydroponics/potato.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: potato
   - type: Tag
     tags:
     - Potato
@@ -968,8 +919,6 @@
     sprite: Objects/Specific/Hydroponics/tomato.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: tomato
   - type: Extractable
     grindableSolutionName: food
     juiceSolution:
@@ -1026,8 +975,6 @@
     sprite: Objects/Specific/Hydroponics/blue_tomato.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: blueTomato
   - type: Extractable
     grindableSolutionName: food
     juiceSolution:
@@ -1073,8 +1020,6 @@
     sprite: Objects/Specific/Hydroponics/blood_tomato.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: bloodTomato
   - type: Extractable
     grindableSolutionName: food
     juiceSolution:
@@ -1117,8 +1062,6 @@
     sprite: Objects/Specific/Hydroponics/eggplant.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: eggplant
   - type: Tag
     tags:
     - Fruit
@@ -1152,8 +1095,6 @@
     sprite: Objects/Specific/Hydroponics/apple.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: apple
   - type: Extractable
     juiceSolution:
       reagents:
@@ -1197,8 +1138,6 @@
     sprite: Objects/Specific/Hydroponics/golden_apple.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: goldenApple
   - type: Extractable
     juiceSolution:
       reagents:
@@ -1234,8 +1173,6 @@
         Quantity: 6
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/cocoa.rsi
-  - type: Produce
-    seedId: cocoa
   - type: SpawnItemsOnUse
     items:
       - id: FoodCocoaBeans
@@ -1273,8 +1210,6 @@
     - Vegetable
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/corn.rsi
-  - type: Produce
-    seedId: corn
   - type: Extractable
     grindableSolutionName: food
     juiceSolution:
@@ -1331,8 +1266,6 @@
     sprite: Objects/Specific/Hydroponics/onion.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: onion
   - type: ToolRefinable
     refineResult:
     - id: FoodOnionSlice
@@ -1363,8 +1296,6 @@
     sprite: Objects/Specific/Hydroponics/onion_red.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: onionred
   - type: ToolRefinable
     refineResult:
     - id: FoodOnionRedSlice
@@ -1390,8 +1321,6 @@
     sprite: Objects/Specific/Hydroponics/chanterelle.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: chanterelle
   - type: Tag
     tags:
     - Vegetable
@@ -1525,8 +1454,6 @@
     sprite: Objects/Specific/Hydroponics/chili.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: chili
   - type: Tag
     tags:
     - Vegetable
@@ -1559,8 +1486,6 @@
     sprite: Objects/Specific/Hydroponics/chilly.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: chilly
   - type: FoodSequenceElement
     entries:
       Taco: ChillyPepper
@@ -1587,8 +1512,6 @@
     sprite: Objects/Specific/Hydroponics/aloe.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: aloe
   - type: Extractable
     grindableSolutionName: food
   - type: Tag
@@ -1623,8 +1546,6 @@
         Quantity: 2
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/poppy.rsi
-  - type: Produce
-    seedId: poppy
   - type: Extractable
     grindableSolutionName: food
   - type: Tag
@@ -1654,8 +1575,6 @@
         Quantity: 10
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/lily.rsi
-  - type: Produce
-    seedId: lily
   - type: Extractable
     grindableSolutionName: food
   - type: Tag
@@ -1687,8 +1606,6 @@
     sprite: Objects/Specific/Hydroponics/lingzhi.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: lingzhi
   - type: Extractable
     grindableSolutionName: food
   - type: FoodSequenceElement
@@ -1724,8 +1641,6 @@
     sprite: Objects/Specific/Hydroponics/ambrosia_vulgaris.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: ambrosiaVulgaris
   - type: Extractable
     grindableSolutionName: food
   - type: Clothing
@@ -1763,8 +1678,6 @@
     sprite: Objects/Specific/Hydroponics/ambrosia_deus.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: ambrosiaDeus
   - type: Extractable
     grindableSolutionName: food
   - type: Clothing
@@ -1797,8 +1710,6 @@
     sprite: Objects/Specific/Hydroponics/galaxythistle.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: galaxythistle
   - type: Extractable
     grindableSolutionName: food
   - type: Tag
@@ -1837,8 +1748,6 @@
         Quantity: 10
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/glasstle.rsi
-  - type: Produce
-    seedId: glasstle
   - type: Extractable
     grindableSolutionName: food
   - type: Damageable
@@ -1904,8 +1813,6 @@
     sprite: Objects/Specific/Hydroponics/fly_amanita.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: flyAmanita
   - type: Extractable
     grindableSolutionName: food
   - type: BadFood
@@ -1937,8 +1844,6 @@
         Quantity: 5
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/gatfruit.rsi
-  - type: Produce
-    seedId: gatfruit
   - type: Edible
     trash:
     - WeaponRevolverPython
@@ -1975,8 +1880,6 @@
     sprite: Objects/Specific/Hydroponics/capfruit.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: realCapfruit
   - type: Edible
     trash:
     - RevolverCapGun
@@ -1997,8 +1900,6 @@
   id: FoodFakeCapfruit
   suffix: Fake
   components:
-  - type: Produce
-    seedId: fakeCapfruit
   - type: Edible
     trash:
     - RevolverCapGunFake
@@ -2021,9 +1922,6 @@
       reagents:
       - ReagentId: Rice
         Quantity: 15
-  - type: Produce
-    seedId: rice
-
 - type: entity
   name: soybeans
   description: For those who can't stand seeing good old meat.
@@ -2039,8 +1937,6 @@
         Quantity: 12
       - ReagentId: Nutriment
         Quantity: 8
-  - type: Produce
-    seedId: soybeans
   - type: Extractable
     juiceSolution:
       reagents:
@@ -2076,8 +1972,6 @@
         Quantity: 10
       - ReagentId: PolypyryliumOligomers
         Quantity: 3
-  - type: Produce
-    seedId: spacemansTrumpet
   - type: Tag
     tags:
     - Flower
@@ -2105,8 +1999,6 @@
         Quantity: 4
       - ReagentId: CarpoToxin
         Quantity: 4
-  - type: Produce
-    seedId: koibean
   - type: Extractable
     juiceSolution:
       reagents:
@@ -2153,8 +2045,6 @@
         Quantity: 40
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/watermelon.rsi
-  - type: Produce
-    seedId: watermelon
   - type: Extractable
     juiceSolution:
       reagents:
@@ -2265,8 +2155,6 @@
         Quantity: 48
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/holymelon.rsi
-  - type: Produce
-    seedId: watermelon
   - type: Extractable
     juiceSolution:
       reagents:
@@ -2365,8 +2253,6 @@
     sprite: Objects/Specific/Hydroponics/grape.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: grape
   - type: Extractable
     juiceSolution:
       reagents:
@@ -2398,8 +2284,6 @@
     sprite: Objects/Specific/Hydroponics/berries.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: berries
   - type: Extractable
     juiceSolution:
       reagents:
@@ -2437,8 +2321,6 @@
         Quantity: 10
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/bungo.rsi
-  - type: Produce
-    seedId: bungo
   - type: Extractable
     juiceSolution:
       reagents:
@@ -2474,8 +2356,6 @@
         Quantity: 5
   - type: Extractable
     grindableSolutionName: food
-  - type: Seed
-    seedId: bungo
   - type: SpaceGarbage
   - type: BadFood
 
@@ -2499,8 +2379,6 @@
     sprite: Objects/Specific/Hydroponics/pea.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: pea
   - type: Tag
     tags:
     - Vegetable
@@ -2531,8 +2409,6 @@
     sprite: Objects/Specific/Hydroponics/world_pea.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: worldPea
   - type: Tag
     tags:
     - Vegetable
@@ -2564,8 +2440,6 @@
         Quantity: 5
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/pumpkin.rsi
-  - type: Produce
-    seedId: pumpkin
   - type: Damageable
   - type: Injurable
     damageContainer: Biological
@@ -2623,8 +2497,6 @@
         Quantity: 10
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/blue_pumpkin.rsi
-  - type: Produce
-    seedId: bluePumpkin
   - type: Damageable
   - type: Injurable
     damageContainer: Biological
@@ -2669,8 +2541,6 @@
     refineResult:
     - id: MaterialCotton1
       amount: 2
-  - type: Produce
-    seedId: cotton
   - type: Tag
     tags:
     - ClothMade
@@ -2705,8 +2575,6 @@
     refineResult:
     - id: MaterialPyrotton1
       amount: 2
-  - type: Produce
-    seedId: pyrotton
   - type: Tag
     tags:
     - ClothMade
@@ -2742,8 +2610,6 @@
         Quantity: 3.5
   - type: Sprite
     sprite: _Goobstation/Objects/Specific/Hydroponics/cherry.rsi
-  - type: Produce
-    seedId: cherry
   - type: Extractable
     juiceSolution:
       reagents:
@@ -2781,8 +2647,6 @@
         Quantity: 1
   - type: Extractable
     grindableSolutionName: food
-  - type: Seed
-    seedId: cherry
   - type: SpaceGarbage
   - type: BadFood
 
@@ -2800,8 +2664,6 @@
     state: produce
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: anomalyBerry
   - type: Edible
     trash:
     - EffectAnomalyFloraBulb # Random loot
@@ -2844,8 +2706,6 @@
   - type: Item
     sprite: Objects/Specific/Hydroponics/bloonion.rsi
     heldPrefix: produce
-  - type: Produce
-    seedId: bloonion
   - type: Tag
     tags:
     - Vegetable

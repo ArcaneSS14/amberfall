@@ -204,8 +204,6 @@
     whitelist:
       components:
       - ProduceMaterialExtractor
-  - type: AntiRottingContainer
-  # </Trauma>
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/Equipment/plant_bag.rsi
     state: icon

@@ -23,13 +23,6 @@
     layers:
       - state: 1
         shader: unshaded
-  - type: TileEntityEffect
-    effects:
-    - !type:Flammable
-      fireProtectionPenetration: 0.35
-      multiplier: 3.75
-      multiplierOnExisting: 0.75
-    - !type:Ignite
   - type: Transform
     anchored: true
   - type: Physics
@@ -230,7 +223,6 @@
   components:
   - type: Transform
     anchored: true
-  - type: RustSpreader
   - type: Tag
     tags:
     - HideContextMenu
@@ -304,9 +296,6 @@
         - BulletImpassable
         - Opaque
         hard: false
-  - type: Airtight
-    airBlocked: false
-    blockExplosions: false
   - type: Sprite
     sprite: _Goobstation/Heretic/Effects/effects.rsi
     layers:
@@ -359,7 +348,6 @@
         - SpecialWallLayer
         layer:
         - SpecialWallLayer
-  - type: Airtight
   - type: Sprite
     sprite: _Goobstation/Heretic/Entities/paper_wall.rsi
     layers:

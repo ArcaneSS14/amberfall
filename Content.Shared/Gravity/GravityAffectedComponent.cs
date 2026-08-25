@@ -13,7 +13,7 @@ public sealed partial class GravityAffectedComponent : Component
     /// If true, this entity will be considered "weightless"
     /// </summary>
     [ViewVariables, AutoNetworkedField]
-    public bool Weightless = true;
+    public bool Weightless;
 
     /// <summary>
     /// If true, the <see cref="Weightless"/> value is currently being provided via the grid through <see cref="SharedGravitySystem.EntityGridOrMapHaveGravity"/>.

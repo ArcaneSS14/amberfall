@@ -62,6 +62,8 @@
   name: cloth
   suffix: Full
   components:
+  - type: FireFuel
+    amount: 15
   - type: Healing
     damageContainers:
       - Biological
@@ -88,8 +90,6 @@
     - cloth
     - cloth_2
     - cloth_3
-  - type: FireFuel
-    amount: 15
   - type: Material
   - type: PhysicalComposition
     materialComposition:

@@ -79,7 +79,6 @@
     clothingVisuals:
       mask:
       - state: EQUIPPED-neck
-  - type: BreathMask
   - type: HideLayerClothing
     slots:
     - Snout
@@ -87,88 +86,6 @@
     speechSounds: Decapoid
     emoteSounds: null # Someone tell me why did I make this a required field
 
-
-- type: entity
-  parent: GasTankRoundBase
-  id: DecapoidVaporTank
-  name: vapor tank
-  suffix: Filled
-  description: An alien contraption consisting of two tanks. The smaller tank takes in water and converts it into vapor, which is stored in the larger tank. It can hold 5 L of gas, and 30u of fluid.
-  components:
-  - type: Sprite
-    sprite: _Impstation/Objects/Tanks/vapor.rsi
-    layers:
-      - state: icon
-  - type: Item
-    size: Normal
-    sprite: _Impstation/Objects/Tanks/vapor.rsi
-  - type: Clothing
-    quickEquip: false
-    sprite: _Impstation/Objects/Tanks/vapor.rsi
-    slots:
-    - Back
-    - suitStorage
-  - type: ActivatableUI
-    key: enum.SharedGasTankUiKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.SharedGasTankUiKey.Key:
-        type: GasTankBoundUserInterface
-      enum.TransferAmountUiKey.Key:
-        type: TransferAmountBoundUserInterface
-  - type: GasTank
-    releasePressure: 21.3
-    air:
-      volume: 5
-      moles:
-        WaterVapor: 2.051379050
-      temperature: 293.15
-  - type: Solution
-    id: waterTank
-    solution:
-      maxVol: 30
-  - type: RefillableSolution
-    solution: waterTank
-  - type: ExaminableSolution
-    solution: waterTank
-  - type: Spillable
-    solution: waterTank
-  - type: SolutionTransfer
-    canChangeTransferAmount: true
-  - type: SolutionItemStatus
-    solution: waterTank
-  - type: MixableSolution
-    solution: waterTank
-  - type: DrainableSolution
-    solution: waterTank
-  - type: DrawableSolution
-    solution: waterTank
-  - type: Vaporizer
-
-- type: entity
-  parent: EmergencyOxygenTank
-  id: EmergencyVaporTank
-  name: emergency water vapor tank
-  description: An easily portable tank for emergencies. Contains very little water vapor, rated for survival use only. It can hold 0.66 L of gas.
-  components:
-  - type: Sprite
-    sprite: _Trauma/Objects/Misc/emergency_vapor.rsi
-  - type: Item
-    sprite: _Trauma/Objects/Misc/emergency_vapor.rsi
-    storedSprite:
-      state: storage
-      sprite: _Trauma/Objects/Misc/emergency_vapor.rsi
-  - type: Clothing
-    sprite: _Trauma/Objects/Misc/emergency_vapor.rsi
-  - type: GasTank
-    air:
-      volume: 0.66
-      temperature: 293.15
-      moles:
-        WaterVapor: 0.27 # Idc close enough
-  - type: Tag
-    tags:
-    - EmergencyOxygenTank # Why are those even different, goob? They all go in the gas tank hole
 
 - type: entity
   parent: BoxSurvivalSlots
@@ -181,8 +98,6 @@
       - DrinkWaterBottleFull
       flare:
       - Flare
-      tank:
-      - EmergencyVaporTank # In case you ever lose your vaporizer, somehow
       mask:
       - ClothingMaskBreath
       emergencypen:

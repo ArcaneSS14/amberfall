@@ -74,14 +74,6 @@ public sealed partial class AutomationFilterSystem : EntitySystem
         SubscribeLocalEvent<CombinedFilterComponent, AutomationFilterEvent>(OnCombinedFilter);
         SubscribeLocalEvent<CombinedFilterComponent, AutomationFilterSplitEvent>(OnCombinedSplit);
 
-        Subs.BuiEvents<PressureFilterComponent>(PressureFilterUiKey.Key, subs =>
-        {
-            subs.Event<PressureFilterSetMinMessage>(OnPressureSetMin);
-            subs.Event<PressureFilterSetMaxMessage>(OnPressureSetMax);
-        });
-        SubscribeLocalEvent<PressureFilterComponent, ExaminedEvent>(OnPressureExamined);
-        // OnPressureFilter is in server because atmos is serverside
-
         SubscribeLocalEvent<AnchorFilterComponent, AutomationFilterEvent>(OnAnchorFilter);
 
         Subs.BuiEvents<MobFilterComponent>(MobFilterUiKey.Key, subs =>
@@ -287,36 +279,6 @@ public sealed partial class AutomationFilterSystem : EntitySystem
         var a = GetSplitSize(ent.Comp.FilterA.Item);
         var b = GetSplitSize(ent.Comp.FilterB.Item);
         args.Size = Math.Max(a, b);
-    }
-
-    /* Pressure filter */
-
-    private void OnPressureSetMin(Entity<PressureFilterComponent> ent, ref PressureFilterSetMinMessage args)
-    {
-        var min = args.Min;
-        if (min == ent.Comp.Min || min > ent.Comp.Max || min < 0f)
-            return;
-
-        ent.Comp.Min = min;
-        Dirty(ent);
-    }
-
-    private void OnPressureSetMax(Entity<PressureFilterComponent> ent, ref PressureFilterSetMaxMessage args)
-    {
-        var max = args.Max;
-        if (max == ent.Comp.Max || max < ent.Comp.Min)
-            return;
-
-        ent.Comp.Max = max;
-        Dirty(ent);
-    }
-
-    private void OnPressureExamined(Entity<PressureFilterComponent> ent, ref ExaminedEvent args)
-    {
-        if (!args.IsInDetailsRange)
-            return;
-
-        args.PushMarkup(Loc.GetString("pressure-filter-examine", ("min", ent.Comp.Min), ("max", ent.Comp.Max)));
     }
 
     /* Anchor filter */

@@ -14,35 +14,6 @@
       state: vampire_cloak
   - type: InstantAction
     event: !type:EffectToggleActionEvent
-  - type: ToggleEffectAction
-    onToggleConditions:
-    - !type:OnFireCondition # We must not be on fire for this ability to activate
-      inverted: true
-    onToggle:
-    - !type:PopupPredicted
-      message: You start getting consumed!
-    - !type:ModifyStatusEffect
-      effectProto: CloakOfDarknessStatusEffect
-      time: null
-      type: Add
-    - !type:PlaySoundEffect
-      sound:
-        path: /Audio/_Trauma/Vampires/Actions/vampire_cloak.ogg
-        params:
-          volume: -5
-    offToggle:
-    - !type:PopupPredicted
-      message: You stop getting consumed!
-    - !type:ModifyStatusEffect
-      effectProto: CloakOfDarknessStatusEffect
-      time: null
-      type: Remove
-    - !type:PlaySoundEffect
-      sound:
-        path: /Audio/_Trauma/Vampires/Actions/vampire_cloak.ogg
-        params:
-          volume: -5
-          pitch: 0.85
   - type: Tag
     tags:
     - CloakOfDarkness

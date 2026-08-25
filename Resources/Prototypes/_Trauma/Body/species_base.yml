@@ -5,5 +5,3 @@
   abstract: true
   parent: BaseSpeciesMobOrganicUnperishable
   id: BaseSpeciesMobOrganic
-  components:
-  - type: Perishable

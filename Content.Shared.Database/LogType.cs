@@ -195,25 +195,6 @@ public enum LogType
     Explosion = 44,
     Radiation = 45,
 
-    /// <summary>
-    /// Entity started or stopped taking pressure damage.
-    /// </summary>
-    Barotrauma = 46,
-
-    /// <summary>
-    /// Fire started or stopped.
-    /// </summary>
-    Flammable = 47,
-
-    /// <summary>
-    /// Entity started or stopped suffocating.
-    /// </summary>
-    Asphyxiation = 48,
-
-    /// <summary>
-    /// Entity started or stopped taking temperature damage.
-    /// </summary>
-    Temperature = 49,
     Hunger = 50,
     Thirst = 51,
 
@@ -226,31 +207,6 @@ public enum LogType
     /// A player drew using a crayon.
     /// </summary>
     CrayonDraw = 39,
-
-    /// <summary>
-    /// A player changed pressure on atmos device.
-    /// </summary>
-    AtmosPressureChanged = 54,
-
-    /// <summary>
-    /// A player changed power on atmos device.
-    /// </summary>
-    AtmosPowerChanged = 55,
-
-    /// <summary>
-    /// A player changed transfer rate on atmos device.
-    /// </summary>
-    AtmosVolumeChanged = 56,
-
-    /// <summary>
-    /// A player changed filter on atmos device.
-    /// </summary>
-    AtmosFilterChanged = 57,
-
-    /// <summary>
-    /// A player changed ratio on atmos device.
-    /// </summary>
-    AtmosRatioChanged = 58,
 
     /// <summary>
     /// Field generator was toggled or lost field connections.
@@ -398,11 +354,6 @@ public enum LogType
     ChatRateLimited = 87,
 
     /// <summary>
-    /// A player changed temperature on atmos device.
-    /// </summary>
-    AtmosTemperatureChanged = 88,
-
-    /// <summary>
     /// Something was sent over device network. Like broadcast.
     /// </summary>
     DeviceNetwork = 89,
@@ -444,11 +395,6 @@ public enum LogType
     /// A player interacted with a PDA or its cartridge component
     /// </summary>
     PdaInteract = 96,
-
-    /// <summary>
-    /// An atmos networked device (such as a vent or pump) has had its settings changed, usually through an air alarm
-    /// </summary>
-    AtmosDeviceSetting = 97,
 
     /// <summary>
     /// Commands related to admemes. Stuff like config changes, etc.

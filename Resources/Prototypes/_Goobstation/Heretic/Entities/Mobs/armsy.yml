@@ -172,9 +172,6 @@
   - type: GhostOnMove
     mustBeDead: true
   - type: HideHereticAura
-  - type: Perishable
-    molsPerSecondPerUnitMass: 0
-    rotAfter: 99999
   - type: MeleeDash
     emoteOnDash: null
     length: 8

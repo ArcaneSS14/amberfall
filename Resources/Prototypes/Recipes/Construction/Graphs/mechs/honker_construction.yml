@@ -113,7 +113,3 @@
       - tool: Honking
         doAfter: 1
 
-  - node: honker
-    actions:
-    - !type:BuildMech
-      mechPrototype: MechHonker

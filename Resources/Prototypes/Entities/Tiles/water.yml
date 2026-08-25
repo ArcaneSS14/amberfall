@@ -71,10 +71,6 @@
     blacklist:
       tags:
         - Catwalk
-  - type: TileEntityEffect
-    effects:
-    - !type:Extinguish
-  # Goobstation - fishing
   - type: FishingSpot
     fishList: !type:NestedSelector
       tableId: WaterFishingLootTable

@@ -2,6 +2,7 @@
 
 ## Common
 
+
 - type: entityTable
   id: PackageArtsCrafts
   table: !type:AllSelector

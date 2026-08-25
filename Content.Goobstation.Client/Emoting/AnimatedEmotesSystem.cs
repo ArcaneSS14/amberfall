@@ -31,30 +31,6 @@ public sealed partial class AnimatedEmotesSystem : SharedAnimatedEmotesSystem
         {HumanoidVisualEmoteLayers.Cry, "Eyes"},
     };
 
-    [SubscribeNetworkEvent]
-    public void OnBibleSmite(BibleFartSmiteEvent args)
-    {
-        EntityUid uid = GetEntity(args.Bible);
-        if (!_timing.IsFirstTimePredicted || uid == EntityUid.Invalid)
-            return;
-
-        var rays = _rays.DoRays(_transform.GetMapCoordinates(uid),
-            Color.LightGoldenrodYellow,
-            Color.AntiqueWhite,
-            10,
-            15,
-            minMaxRadius: new Vector2(3f, 6f),
-            minMaxEnergy: new Vector2(2f, 4f),
-            proto: "EffectRayCharge",
-            server: false);
-
-        if (rays == null)
-            return;
-
-        var track = EnsureComp<TrackUserComponent>(rays.Value);
-        track.User = uid;
-    }
-
     public void PlayEmote(EntityUid uid, Animation anim, string animationKey = "emoteAnimKeyId")
     {
         if (_anim.HasRunningAnimation(uid, animationKey))

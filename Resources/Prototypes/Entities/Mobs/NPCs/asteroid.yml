@@ -322,13 +322,6 @@
     state: boiled
   - type: Item
     size: Normal
-  - type: Perishable
-    rotAfter: 360 # rot after 6 minutes
-    molsPerSecondPerUnitMass: 0
-    forceRotProgression: true
-  - type: RotInto
-    entity: FoodHivelordRemainsInert
-    stage: 1
   - type: StaticPrice
     price: 5000
   - type: Tag

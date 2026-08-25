@@ -22,8 +22,6 @@
     sprite: _RMC14/Objects/Kitchen/Plants/mango.rsi
   - type: Item
     heldPrefix: produce
-  - type: Produce
-    seedId: mango
   - type: Extractable
     juiceSolution:
       reagents:

@@ -1,5 +1,4 @@
 using System.Numerics;
-using Content.Shared.Atmos;
 using Content.Shared.Physics;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
@@ -15,7 +14,7 @@ namespace Content.Shared.Storage.Components;
 /// </summary>
 [RegisterComponent, NetworkedComponent]
 [AutoGenerateComponentState, AutoGenerateComponentPause] // TODO: Field deltas
-public sealed partial class EntityStorageComponent : Component, IGasMixtureHolder
+public sealed partial class EntityStorageComponent : Component
 {
     /// <summary>
     /// Maximum width or height of an entity allowed inside the storage.
@@ -153,12 +152,6 @@ public sealed partial class EntityStorageComponent : Component, IGasMixtureHolde
     [ViewVariables]
     public Container Contents = default!;
 
-    /// <summary>
-    /// Gas currently contained in this entity storage.
-    /// None while open. Grabs gas from the atmosphere when closed, and exposes any entities inside to it.
-    /// </summary>
-    [DataField]
-    public GasMixture Air { get; set; } = new(200);
 }
 
 /// <summary>

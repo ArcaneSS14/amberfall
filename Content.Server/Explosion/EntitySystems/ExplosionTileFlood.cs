@@ -1,4 +1,3 @@
-using Content.Shared.Atmos;
 using System.Runtime.CompilerServices;
 
 namespace Content.Server.Explosion.EntitySystems;
@@ -37,73 +36,73 @@ public abstract class ExplosionTileFlood
     /// <param name="initialTile">The absolute position from which the explosion originated.</param>
     public abstract void InitTile(Vector2i initialTile);
 
-    protected abstract void ProcessNewTile(int iteration, Vector2i tile, AtmosDirection entryDirections);
+    protected abstract void ProcessNewTile(int iteration, Vector2i tile, ExplosionDirection entryDirections);
 
-    protected abstract AtmosDirection GetUnblockedDirectionOrAll(Vector2i tile);
+    protected abstract ExplosionDirection GetUnblockedDirectionOrAll(Vector2i tile);
 
     protected void AddNewDiagonalTiles(int iteration, IEnumerable<Vector2i> tiles, bool ignoreLocalBlocker = false)
     {
-        AtmosDirection entryDirection = AtmosDirection.Invalid;
+        ExplosionDirection entryDirection = ExplosionDirection.Invalid;
         foreach (var tile in tiles)
         {
-            var freeDirections = ignoreLocalBlocker ? AtmosDirection.All : GetUnblockedDirectionOrAll(tile);
+            var freeDirections = ignoreLocalBlocker ? ExplosionDirection.All : GetUnblockedDirectionOrAll(tile);
 
             // Get the free directions of the directly adjacent tiles
-            var freeDirectionsN = GetUnblockedDirectionOrAll(tile.Offset(AtmosDirection.North));
-            var freeDirectionsE = GetUnblockedDirectionOrAll(tile.Offset(AtmosDirection.East));
-            var freeDirectionsS = GetUnblockedDirectionOrAll(tile.Offset(AtmosDirection.South));
-            var freeDirectionsW = GetUnblockedDirectionOrAll(tile.Offset(AtmosDirection.West));
+            var freeDirectionsN = GetUnblockedDirectionOrAll(tile.Offset(ExplosionDirection.North));
+            var freeDirectionsE = GetUnblockedDirectionOrAll(tile.Offset(ExplosionDirection.East));
+            var freeDirectionsS = GetUnblockedDirectionOrAll(tile.Offset(ExplosionDirection.South));
+            var freeDirectionsW = GetUnblockedDirectionOrAll(tile.Offset(ExplosionDirection.West));
 
             // North East
-            if (freeDirections.IsFlagSet(AtmosDirection.North) && freeDirectionsN.IsFlagSet(AtmosDirection.SouthEast))
-                entryDirection |= AtmosDirection.West;
+            if (freeDirections.IsFlagSet(ExplosionDirection.North) && freeDirectionsN.IsFlagSet(ExplosionDirection.SouthEast))
+                entryDirection |= ExplosionDirection.West;
 
-            if (freeDirections.IsFlagSet(AtmosDirection.East) && freeDirectionsE.IsFlagSet(AtmosDirection.NorthWest))
-                entryDirection |= AtmosDirection.South;
+            if (freeDirections.IsFlagSet(ExplosionDirection.East) && freeDirectionsE.IsFlagSet(ExplosionDirection.NorthWest))
+                entryDirection |= ExplosionDirection.South;
 
-            if (entryDirection != AtmosDirection.Invalid)
+            if (entryDirection != ExplosionDirection.Invalid)
             {
                 ProcessNewTile(iteration, tile + (1, 1), entryDirection);
-                entryDirection = AtmosDirection.Invalid;
+                entryDirection = ExplosionDirection.Invalid;
             }
 
             // North West
-            if (freeDirections.IsFlagSet(AtmosDirection.North) && freeDirectionsN.IsFlagSet(AtmosDirection.SouthWest))
-                entryDirection |= AtmosDirection.East;
+            if (freeDirections.IsFlagSet(ExplosionDirection.North) && freeDirectionsN.IsFlagSet(ExplosionDirection.SouthWest))
+                entryDirection |= ExplosionDirection.East;
 
-            if (freeDirections.IsFlagSet(AtmosDirection.West) && freeDirectionsW.IsFlagSet(AtmosDirection.NorthEast))
-                entryDirection |= AtmosDirection.West;
+            if (freeDirections.IsFlagSet(ExplosionDirection.West) && freeDirectionsW.IsFlagSet(ExplosionDirection.NorthEast))
+                entryDirection |= ExplosionDirection.West;
 
-            if (entryDirection != AtmosDirection.Invalid)
+            if (entryDirection != ExplosionDirection.Invalid)
             {
                 ProcessNewTile(iteration, tile + (-1, 1), entryDirection);
-                entryDirection = AtmosDirection.Invalid;
+                entryDirection = ExplosionDirection.Invalid;
             }
 
             // South East
-            if (freeDirections.IsFlagSet(AtmosDirection.South) && freeDirectionsS.IsFlagSet(AtmosDirection.NorthEast))
-                entryDirection |= AtmosDirection.West;
+            if (freeDirections.IsFlagSet(ExplosionDirection.South) && freeDirectionsS.IsFlagSet(ExplosionDirection.NorthEast))
+                entryDirection |= ExplosionDirection.West;
 
-            if (freeDirections.IsFlagSet(AtmosDirection.East) && freeDirectionsE.IsFlagSet(AtmosDirection.SouthWest))
-                entryDirection |= AtmosDirection.North;
+            if (freeDirections.IsFlagSet(ExplosionDirection.East) && freeDirectionsE.IsFlagSet(ExplosionDirection.SouthWest))
+                entryDirection |= ExplosionDirection.North;
 
-            if (entryDirection != AtmosDirection.Invalid)
+            if (entryDirection != ExplosionDirection.Invalid)
             {
                 ProcessNewTile(iteration, tile + (1, -1), entryDirection);
-                entryDirection = AtmosDirection.Invalid;
+                entryDirection = ExplosionDirection.Invalid;
             }
 
             // South West
-            if (freeDirections.IsFlagSet(AtmosDirection.South) && freeDirectionsS.IsFlagSet(AtmosDirection.NorthWest))
-                entryDirection |= AtmosDirection.West;
+            if (freeDirections.IsFlagSet(ExplosionDirection.South) && freeDirectionsS.IsFlagSet(ExplosionDirection.NorthWest))
+                entryDirection |= ExplosionDirection.West;
 
-            if (freeDirections.IsFlagSet(AtmosDirection.West) && freeDirectionsW.IsFlagSet(AtmosDirection.SouthEast))
-                entryDirection |= AtmosDirection.North;
+            if (freeDirections.IsFlagSet(ExplosionDirection.West) && freeDirectionsW.IsFlagSet(ExplosionDirection.SouthEast))
+                entryDirection |= ExplosionDirection.North;
 
-            if (entryDirection != AtmosDirection.Invalid)
+            if (entryDirection != ExplosionDirection.Invalid)
             {
                 ProcessNewTile(iteration, tile + (-1, -1), entryDirection);
-                entryDirection = AtmosDirection.Invalid;
+                entryDirection = ExplosionDirection.Invalid;
             }
         }
     }
@@ -225,3 +224,4 @@ public sealed class UniqueVector2iSet
         }
     }
 }
+

@@ -110,5 +110,3 @@
     deconstructionTarget: null
     graph: RevGuns
     node: Proletariat
-  - type: ContainerFill
-    containers: {}

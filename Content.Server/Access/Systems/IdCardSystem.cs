@@ -1,20 +1,16 @@
 // <Trauma>
-using Content.Shared.Kitchen.Components; // moved microwaved event to shared
 // </Trauma>
 using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
-using Content.Server.Kitchen.Components;
 using Content.Server.Popups;
 using Content.Shared.Access;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Chat;
 using Content.Shared.Database;
-using Content.Shared.Kitchen;
 using Content.Shared.Popups;
 using Robust.Shared.Random;
-using Content.Server.Kitchen.EntitySystems;
 
 namespace Content.Server.Access.Systems;
 
@@ -24,87 +20,11 @@ public sealed partial class IdCardSystem : SharedIdCardSystem
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private IAdminLogManager _adminLogger = default!;
     [Dependency] private ChatSystem _chat = default!;
-    [Dependency] private MicrowaveSystem _microwave = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<IdCardComponent, BeingMicrowavedEvent>(OnMicrowaved);
-    }
-
-    private void OnMicrowaved(EntityUid uid, IdCardComponent component, BeingMicrowavedEvent args)
-    {
-        if (!component.CanMicrowave || !TryComp<MicrowaveComponent>(args.Microwave, out var micro) || micro.Broken)
-            return;
-
-        if (TryComp<AccessComponent>(uid, out var access))
-        {
-            float randomPick = _random.NextFloat();
-
-            // <Trauma> - gambling id can explode
-            if (!micro.CanMicrowaveIdsSafely)
-            {
-                float explodeCheck = _random.NextFloat();
-
-                if (explodeCheck <= micro.ExplosionChance)
-                {
-                    _microwave.Explode((args.Microwave, micro));
-                    return;
-                }
-
-            }
-            // <Trauma>
-
-            // if really unlucky, burn card
-            if (randomPick <= 0.10f) // Trauma - was 0.15
-            {
-                TryComp(uid, out TransformComponent? transformComponent);
-                if (transformComponent != null)
-                {
-                    _popupSystem.PopupCoordinates(Loc.GetString("id-card-component-microwave-burnt", ("id", uid)),
-                     transformComponent.Coordinates, PopupType.Medium);
-                    Spawn("FoodBadRecipe",
-                        transformComponent.Coordinates);
-                }
-                _adminLogger.Add(LogType.Action, LogImpact.Medium,
-                    $"{ToPrettyString(args.Microwave)} burnt {ToPrettyString(uid):entity}");
-                QueueDel(uid);
-                return;
-            }
-
-
-            // If they're unlucky, brick their ID
-            if (randomPick <= 0.4f) // Trauma - was 0.25
-            {
-                _popupSystem.PopupEntity(Loc.GetString("id-card-component-microwave-bricked", ("id", uid)), uid);
-
-                access.Tags.Clear();
-                Dirty(uid, access);
-
-                _adminLogger.Add(LogType.Action, LogImpact.Medium,
-                    $"{ToPrettyString(args.Microwave)} cleared access on {ToPrettyString(uid):entity}");
-            }
-            else
-            {
-                _popupSystem.PopupEntity(Loc.GetString("id-card-component-microwave-safe", ("id", uid)), uid, PopupType.Medium);
-            }
-
-            // Give them a wonderful new access to compensate for everything
-            var ids = ProtoMan.EnumeratePrototypes<AccessLevelPrototype>().Where(x => x.CanAddToIdCard).ToArray();
-
-            if (ids.Length == 0)
-                return;
-
-            var random = _random.Pick(ids);
-
-            access.Tags.Add(random.ID);
-            Dirty(uid, access);
-
-            _adminLogger.Add(LogType.Action, LogImpact.High,
-                    $"{ToPrettyString(args.Microwave)} added {random.ID} access to {ToPrettyString(uid):entity}");
-
-        }
     }
 
     public override void ExpireId(Entity<ExpireIdCardComponent> ent)

@@ -86,40 +86,6 @@ entities:
             15: 6,-1
             16: 4,-1
             17: 6,1
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 61576
-          0,1:
-            0: 3839
-          0,-1:
-            0: 32768
-          1,0:
-            0: 62071
-          1,1:
-            0: 2047
-          1,-1:
-            0: 28928
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: AirlockMaintTheatreLocked
   entities:

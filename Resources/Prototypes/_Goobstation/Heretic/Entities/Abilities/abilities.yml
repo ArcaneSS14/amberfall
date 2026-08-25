@@ -98,11 +98,6 @@
   components:
   - type: TimedDespawn
     lifetime: 5.1
-  - type: HereticFlames
-    range: 0
-    rangeIncrease: 1
-    updateDuration: 0.5
-    lifetimeDuration: 6
   - type: Tag
     tags:
     - HideContextMenu

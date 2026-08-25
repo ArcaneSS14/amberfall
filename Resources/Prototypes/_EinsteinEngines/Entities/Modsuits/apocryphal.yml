@@ -61,9 +61,6 @@
   description: A state-of-the-art helmet designed by NanoTrasen for the Apocryphal modsuit. It includes a built-in HUD.
   categories: [HideSpawnMenu]
   components:
-  - type: PressureProtection
-    highPressureMultiplier: 0.08
-    lowPressureMultiplier: 1000
   - type: ThermalVision
     isEquipment: true
     color: "#98EEFB"
@@ -89,12 +86,6 @@
     sprintModifier: 1
   - type: StaminaResistance
     damageCoefficient: 0 # 100%
-  - type: PressureProtection
-    highPressureMultiplier: 0.02
-    lowPressureMultiplier: 1000
-  - type: FireProtection
-    reduction: 1
-
 - type: entity
   parent: [ ClothingModsuitBootsStandard, BaseModsuitPieceDeathsquad ]
   id: ClothingModsuitBootsApocryphal
@@ -114,15 +105,3 @@
     walkModifier: 1.1
     sprintModifier: 1.1
 
-- type: entity
-  id: SuitStorageApocryphal
-  parent: SuitStorageBase
-  suffix: Apocryphal Modsuit
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: OxygenTankFilled
-        - id: ClothingModsuitApocryphal
-        - id: ClothingMaskBreath

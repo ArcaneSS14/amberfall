@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 01/09/2026 15:27:48
-  entityCount: 280
+  entityCount: 270
 maps: []
 grids:
 - 1
@@ -96,53 +96,9 @@ entities:
           decals:
             0: -2,-7
             1: -3,-7
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 7
-            1: 128
-          0,-1:
-            0: 29303
-          -1,0:
-            1: 129
-          -1,-1:
-            0: 28686
-            1: 272
-          -1,-2:
-            1: 28
-            0: 65024
-          -1,-3:
-            1: 49152
-          0,-3:
-            1: 61440
-          0,-2:
-            0: 32624
-            1: 8
-          1,-3:
-            1: 4096
-          1,-2:
-            1: 65
-            0: 13056
-          1,-1:
-            0: 3
-            1: 320
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-            Oxygen: 21.824879
-            Nitrogen: 82.10312
-        - volume: 2500
-          immutable: True
-          moles: {}
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: NavMap
     - type: ImplicitRoof
-    - type: ExplosionAirtightGrid
 - proto: AirlockShuttle
   entities:
   - uid: 2
@@ -377,20 +333,6 @@ entities:
     components:
     - type: Transform
       pos: 0.5,-1.5
-      parent: 1
-- proto: AtmosDeviceFanDirectional
-  entities:
-  - uid: 5
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,-4.5
-      parent: 1
-  - uid: 6
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,-0.5
       parent: 1
 - proto: BarSignMaidCafe
   entities:
@@ -652,8 +594,6 @@ entities:
           - 76
           - 73
           - 74
-          - 78
-          - 81
           - 77
           - 72
           - 75
@@ -833,22 +773,6 @@ entities:
     components:
     - type: Transform
       pos: 4.8663497,-4.2508607
-      parent: 1
-- proto: ExtendedEmergencyOxygenTankFilled
-  entities:
-  - uid: 78
-    components:
-    - type: Transform
-      parent: 71
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: FolderSpawner
-  entities:
-  - uid: 90
-    components:
-    - type: Transform
-      pos: 2.6497245,-0.5822141
       parent: 1
 - proto: FoodBowlBig
   entities:
@@ -1317,13 +1241,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.0306153,-4.877862
       parent: 1
-- proto: KitchenElectricGrill
-  entities:
-  - uid: 129
-    components:
-    - type: Transform
-      pos: 0.5,-6.5
-      parent: 1
 - proto: KitchenKnife
   entities:
   - uid: 80
@@ -1404,15 +1321,6 @@ entities:
     - type: Transform
       pos: 4.5,-4.5
       parent: 1
-- proto: NitrogenTankFilled
-  entities:
-  - uid: 81
-    components:
-    - type: Transform
-      parent: 71
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: NoticeBoard
   entities:
   - uid: 133
@@ -1441,18 +1349,6 @@ entities:
     components:
     - type: Transform
       pos: -2.5,-2.5
-      parent: 1
-- proto: PottedPlantRandom
-  entities:
-  - uid: 136
-    components:
-    - type: Transform
-      pos: -2.5,-3.5
-      parent: 1
-  - uid: 137
-    components:
-    - type: Transform
-      pos: -2.5,-5.5
       parent: 1
 - proto: Poweredlight
   entities:
@@ -1649,14 +1545,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,-6.5
       parent: 1
-- proto: SodaDispenser
-  entities:
-  - uid: 164
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.5,-6.5
-      parent: 1
 - proto: StoolBar
   entities:
   - uid: 165
@@ -1787,13 +1675,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,-7.5
-      parent: 1
-- proto: ToolboxMechanicalFilled
-  entities:
-  - uid: 185
-    components:
-    - type: Transform
-      pos: 0.5731925,-0.16962886
       parent: 1
 - proto: VendingMachineChang
   entities:

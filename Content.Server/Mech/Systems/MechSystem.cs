@@ -1,9 +1,7 @@
 // <Trauma>
 using Content.Shared.Emp;
 // </Trauma>
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Body.Systems;
-using Content.Server.Mech.Components;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Damage.Systems;
 using Content.Shared.DoAfter;
@@ -29,7 +27,6 @@ using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using System.Linq;
-using Content.Shared.Atmos;
 
 namespace Content.Server.Mech.Systems;
 
@@ -37,7 +34,6 @@ namespace Content.Server.Mech.Systems;
 public sealed partial class MechSystem : SharedMechSystem
 {
     [Dependency] private ActionBlockerSystem _actionBlocker = default!;
-    [Dependency] private AtmosphereSystem _atmosphere = default!;
     [Dependency] private SharedBatterySystem _battery = default!;
     [Dependency] private ContainerSystem _container = default!;
     [Dependency] private DamageableSystem _damageable = default!;
@@ -72,11 +68,6 @@ public sealed partial class MechSystem : SharedMechSystem
 
 
         SubscribeLocalEvent<MechPilotComponent, ToolUserAttemptUseEvent>(OnToolUseAttempt);
-        SubscribeLocalEvent<MechPilotComponent, InhaleLocationEvent>(OnInhale);
-        SubscribeLocalEvent<MechPilotComponent, ExhaleLocationEvent>(OnExhale);
-        SubscribeLocalEvent<MechPilotComponent, AtmosExposedGetAirEvent>(OnExpose);
-
-        SubscribeLocalEvent<MechAirComponent, GetFilterAirEvent>(OnGetFilterAir);
 
         #region Equipment UI message relays
         SubscribeLocalEvent<MechComponent, MechGrabberEjectMessage>(ReceiveEquipmentUiMesssages);
@@ -405,60 +396,4 @@ public sealed partial class MechSystem : SharedMechSystem
         UpdateUserInterface(uid, component);
     }
 
-    #region Atmos Handling
-    private void OnInhale(EntityUid uid, MechPilotComponent component, InhaleLocationEvent args)
-    {
-        if (!TryComp<MechComponent>(component.Mech, out var mech) ||
-            !TryComp<MechAirComponent>(component.Mech, out var mechAir))
-        {
-            return;
-        }
-
-        if (mech.Airtight)
-            args.Gas = mechAir.Air;
-    }
-
-    private void OnExhale(EntityUid uid, MechPilotComponent component, ExhaleLocationEvent args)
-    {
-        if (!TryComp<MechComponent>(component.Mech, out var mech) ||
-            !TryComp<MechAirComponent>(component.Mech, out var mechAir))
-        {
-            return;
-        }
-
-        if (mech.Airtight)
-            args.Gas = mechAir.Air;
-    }
-
-    private void OnExpose(EntityUid uid, MechPilotComponent component, ref AtmosExposedGetAirEvent args)
-    {
-        if (args.Handled)
-            return;
-
-        if (!TryComp(component.Mech, out MechComponent? mech))
-            return;
-
-        if (mech.Airtight && TryComp(component.Mech, out MechAirComponent? air))
-        {
-            args.Handled = true;
-            args.Gas = air.Air;
-            return;
-        }
-
-        args.Gas =  _atmosphere.GetContainingMixture(component.Mech, excite: args.Excite);
-        args.Handled = true;
-    }
-
-    private void OnGetFilterAir(EntityUid uid, MechAirComponent comp, ref GetFilterAirEvent args)
-    {
-        if (args.Air != null)
-            return;
-
-        // only airtight mechs get internal air
-        if (!TryComp<MechComponent>(uid, out var mech) || !mech.Airtight)
-            return;
-
-        args.Air = comp.Air;
-    }
-    #endregion
 }

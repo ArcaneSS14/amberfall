@@ -18,9 +18,6 @@
       effects:
       - !type:NestedEffect
         proto: XenobioExtractEvil # chud forgot to give this one a popup idc
-      - !type:CreateGas
-        gas: Healium
-        moles: 55
     - reagents: [ Plasma ]
       methods: [ Touch, Injection ]
       effects:

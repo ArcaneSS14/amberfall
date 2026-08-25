@@ -1,57 +1,9 @@
 - type: entity
   name: spaceshroom
-  parent: BaseStructure
-  id: Spaceshroom
-  suffix: Structure
-  description: A cluster of wild mushrooms that likes to grow in dark, moist environments.
-  components:
-    # <Trauma>
-    - type: Tag
-      tags:
-      - Fungus # used for plague rat to be able to eat maints shrooms in structure form.
-    # </Trauma>
-    - type: Sprite
-      sprite: Objects/Misc/spaceshroom.rsi
-      state: structure
-    - type: Transform
-      anchored: true
-    - type: Physics
-      bodyType: Static
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeCircle
-            radius: 0.2
-    - type: InteractionOutline
-    - type: Gatherable
-      toolWhitelist:
-        components:
-          - Hands
-      loot:
-        All: !type:GroupSelector
-          children:
-          - id: FoodSpaceshroom
-    - type: Damageable
-      damageModifierSet: Wood
-    - type: Injurable
-      damageContainer: StructuralInorganic
-    - type: Destructible
-      thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 150
-        behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-
-- type: entity
-  name: spaceshroom
   parent: [SolutionSmall, FoodProduceBase]
   id: FoodSpaceshroom
   description: A wild mushroom. There's no telling what effect it could have...
   components:
-  - type: Produce
   - type: Sprite
     sprite: Objects/Misc/spaceshroom.rsi
     state: object
@@ -90,14 +42,6 @@
     graph: CookedSpaceshroom
     node: start
     defaultTarget: cooked spaceshroom
-  - type: AtmosExposed
-  - type: Temperature
-    currentTemperature: 290
-  - type: TemperatureDamage
-  - type: InternalTemperature
-    thickness: 0.02
-    area: 0.02
-    conductivity: 0.43
   - type: Tag
     tags:
     - Mushroom
@@ -146,9 +90,51 @@
   - type: Sprite
     sprite: Objects/Misc/spaceshroom.rsi
     state: spaceshroom_cooked
-  - type: Produce
   - type: StaticPrice
     price: 40
   - type: Construction
     graph: CookedSpaceshroom
     node: cooked spaceshroom
+- type: entity
+  name: spaceshroom
+  parent: BaseStructure
+  id: Spaceshroom
+  suffix: Structure
+  description: A cluster of wild mushrooms that likes to grow in dark, moist environments.
+  components:
+  - type: Tag
+    tags:
+    - Fungus
+  - type: Sprite
+    sprite: Objects/Misc/spaceshroom.rsi
+    state: structure
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+            radius: 0.2
+  - type: InteractionOutline
+  - type: Gatherable
+    toolWhitelist:
+      components:
+      - Hands
+    loot:
+      All: !type:GroupSelector
+        children:
+        - id: FoodSpaceshroom
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Injurable
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

@@ -16,6 +16,7 @@
 # Entity tables
 
 # keep weight in CoreMedicineReagentBottleTable synced with number of items here
+
 - type: entityTable
   id: CoreMedicineReagentBottleTrauma
   table: !type:GroupSelector

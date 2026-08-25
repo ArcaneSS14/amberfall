@@ -27,7 +27,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 05/08/2025 02:58:33
-  entityCount: 320
+  entityCount: 299
 maps: []
 grids:
 - 1
@@ -160,179 +160,7 @@ entities:
             id: WarnLineW
           decals:
             34: 0,-14
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 51
-            1: 832
-          0,-1:
-            0: 12309
-            1: 2048
-          -1,0:
-            0: 136
-            1: 2112
-          -1,-1:
-            0: 32772
-            1: 528
-          -2,-3:
-            1: 57344
-          -1,-2:
-            2: 16
-            0: 17504
-            3: 8704
-          -1,-4:
-            1: 16
-            4: 8192
-            0: 2184
-          -1,-3:
-            0: 52838
-            4: 8192
-          -1,-5:
-            0: 34816
-            1: 1024
-          0,-4:
-            0: 33586
-          0,-3:
-            0: 65484
-          0,-2:
-            0: 56785
-          0,-5:
-            0: 8704
-            1: 1024
-          1,-4:
-            1: 16
-          1,-2:
-            0: 16
-          1,-1:
-            1: 16
-          1,-3:
-            1: 57344
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          immutable: True
-          moles:
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.6852
-          - 81.57766
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          temperature: 293.14975
-          moles:
-          - 20.078888
-          - 75.53487
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          temperature: 293.1495
-          moles:
-          - 20.078888
-          - 75.53487
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
-- proto: AirAlarm
-  entities:
-  - uid: 27
-    components:
-    - type: Transform
-      pos: 3.5,-7.5
-      parent: 1
-  - uid: 28
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -0.5,-6.5
-      parent: 1
-  - uid: 29
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 1.5,-6.5
-      parent: 1
-  - uid: 30
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,-1.5
-      parent: 1
 - proto: AirlockExternalCommandLocked
   entities:
   - uid: 31
@@ -428,38 +256,6 @@ entities:
     - type: Transform
       pos: 1.5,-12.5
       parent: 1
-- proto: AtmosDeviceFanTiny
-  entities:
-  - uid: 41
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,-9.5
-      parent: 1
-  - uid: 42
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,-10.5
-      parent: 1
-  - uid: 43
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,-11.5
-      parent: 1
-  - uid: 44
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -0.5,-17.5
-      parent: 1
-  - uid: 45
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,-17.5
-      parent: 1
 - proto: BedsheetMedical
   entities:
   - uid: 47
@@ -524,16 +320,6 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-- proto: BSOManual
-  entities:
-  - uid: 64
-    components:
-    - type: Transform
-      pos: -0.7748628,-0.4398523
-      parent: 1
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
 - proto: ButtonFrameCaution
   entities:
   - uid: 65
@@ -1017,16 +803,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 1.5,-9.5
       parent: 1
-- proto: ClothingBackpackDuffelSurgeryFilled
-  entities:
-  - uid: 157
-    components:
-    - type: Transform
-      pos: 2.7041411,-6.5662813
-      parent: 1
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
 - proto: ClothingBackpackERTSecurity
   entities:
   - uid: 6
@@ -1125,18 +901,6 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingShoesBootsMagEmergencyResponseTeam
-  entities:
-  - uid: 3
-    components:
-    - type: Transform
-      parent: 2
-    - type: InsideEntityStorage
-  - uid: 14
-    components:
-    - type: Transform
-      parent: 2
-    - type: InsideEntityStorage
 - proto: ClothingUniformJumpsuitERTSecurity
   entities:
   - uid: 13
@@ -1201,13 +965,6 @@ entities:
     components:
     - type: Transform
       pos: 3.5,-8.5
-      parent: 1
-- proto: DebugSubstation
-  entities:
-  - uid: 163
-    components:
-    - type: Transform
-      pos: 3.5,-9.5
       parent: 1
 - proto: DefibrillatorCabinetFilled
   entities:
@@ -1395,8 +1152,6 @@ entities:
           - 11
           - 8
           - 6
-          - 3
-          - 14
           - 13
           - 26
           - 25
@@ -1618,32 +1373,6 @@ entities:
     - type: Transform
       pos: 3.5,-5.5
       parent: 1
-- proto: MedkitCombatFilled
-  entities:
-  - uid: 183
-    components:
-    - type: Transform
-      pos: 2.2666411,-6.368365
-      parent: 1
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-  - uid: 184
-    components:
-    - type: Transform
-      pos: 2.4541411,-6.337115
-      parent: 1
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-  - uid: 185
-    components:
-    - type: Transform
-      pos: 2.2666411,-6.6287813
-      parent: 1
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
 - proto: Paper
   entities:
   - uid: 186

@@ -34,7 +34,7 @@ namespace Content.Shared.DrawDepth
         FloorTiles = DrawDepthTag.Default - 14,
 
         /// <summary>
-        ///     Things that are actually right on the floor, like ice crust or atmos devices. This does not mean objects like
+        ///     Things that are actually right on the floor, like ice crust or machinery. This does not mean objects like
         ///     tables, even though they are technically "on the floor".
         /// </summary>
         FloorObjects = DrawDepthTag.Default - 13,
@@ -120,14 +120,9 @@ namespace Content.Shared.DrawDepth
         // NOTE: There's a gap here for subfloor layers in mapping mode (need 6 layers in between)
 
         /// <summary>
-        ///     Visible atmos gas.
-        /// </summary>
-        Gasses = DrawDepthTag.Default + 17,
-
-        /// <summary>
         ///     Explosions, fire, melee swings. Whatever.
         /// </summary>
-        Effects = DrawDepthTag.Default + 18,
+        Effects = DrawDepthTag.Default + 17,
 
         Ghosts = DrawDepthTag.Default + 19,
 

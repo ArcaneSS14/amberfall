@@ -70,7 +70,6 @@
           HasSoul: {visible: true, state: morgue_soul_light}
   - type: Transform
     anchored: true
-  - type: AntiRottingContainer
   - type: StaticPrice
     price: 200
   - type: RequireProjectileTarget

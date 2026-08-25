@@ -14,8 +14,6 @@
     equippedPrefix: transform
   - type: ChangePrefixAfterDelay
     delay: 1
-  - type: FireProtection
-    reduction: 0.15
   - type: Armor
     traumaDeductions:
       Dismemberment: 1

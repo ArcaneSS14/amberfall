@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/21/2025 04:07:39
-  entityCount: 25
+  entityCount: 24
 maps: []
 grids:
 - 1
@@ -64,36 +64,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 51
-          0,-1:
-            0: 12288
-          -1,0:
-            0: 136
-          -1,-1:
-            0: 32768
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: BaseComputerAiAccess
   entities:
@@ -116,13 +86,6 @@ entities:
     components:
     - type: Transform
       pos: 1.5,1.5
-      parent: 1
-- proto: RandomArcade
-  entities:
-  - uid: 22
-    components:
-    - type: Transform
-      pos: -0.5,0.5
       parent: 1
 - proto: RandomSpawner100
   entities:

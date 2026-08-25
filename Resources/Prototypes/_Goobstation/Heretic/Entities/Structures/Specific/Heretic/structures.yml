@@ -96,7 +96,6 @@
   - type: Icon
     sprite: _Goobstation/Heretic/Structures/stone_window_pane.rsi
     state: stone_window_pane
-  - type: Airtight
   - type: ExaminableDamage
     messages: null
   - type: Fixtures

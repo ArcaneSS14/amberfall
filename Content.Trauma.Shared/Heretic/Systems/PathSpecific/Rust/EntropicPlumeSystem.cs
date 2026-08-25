@@ -123,7 +123,7 @@ public sealed partial class EntropicPlumeSystem : EntitySystem
                     return;
 
                 if (HasComp<StunnedComponent>(uid) || HasComp<FrozenComponent>(uid) ||
-                    HasComp<AdminFrozenComponent>(uid) || HasComp<Wizard.Traps.IceCubeComponent>(uid))
+                    HasComp<AdminFrozenComponent>(uid))
                     return;
 
                 var hasGun = _gun.TryGetGun(uid, out var gun);

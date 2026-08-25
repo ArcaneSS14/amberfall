@@ -115,11 +115,3 @@
           components:
           - Ghoul
           - Heretic
-  - type: EntityEffectOnTrigger
-    targetUser: true
-    effects:
-    - !type:AddComponents
-      components:
-      - type: IceCube
-  - type: IgniteOnMeleeHit
-    fireStacks: -5

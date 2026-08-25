@@ -1,3 +1,4 @@
+
 - type: entityTable
   id: AllPartyHatsTable
   table: !type:GroupSelector

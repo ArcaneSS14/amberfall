@@ -2,36 +2,3 @@
 
 # Static
 
-- type: latheRecipePack
-  id: NailsStatic
-  recipes:
-  - MagazineBoxNail
-
-- type: latheRecipePack
-  id: NailgunStatic
-  recipes:
-  - WeaponNailgun
-  - MagazineNailgun
-  - MagazineNailgunEmpty
-  - ConstructionBag #putting it here for less pack clutter
-
-- type: latheRecipePack
-  id: NailgunEvilStatic # Emag-locked
-  recipes:
-  - MagazineNailgunArmorPiercing
-  - MagazineBoxNailArmorPiercing
-
-# Dynamic
-
-- type: latheRecipePack
-  id: UpgradeKits
-  recipes:
-  - LatheUpgradeKitHyper
-  - LatheUpgradeKitCryo
-  - AutodocUpgradeKitBluespace
-  - UpgradeKitTubeSpeed
-
-- type: latheRecipePack
-  id: ConstructionBagOfHolding
-  recipes:
-  - ConstructionBagOfHolding

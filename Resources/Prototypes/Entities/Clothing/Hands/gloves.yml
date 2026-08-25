@@ -24,11 +24,6 @@
     tags:
     - Kangaroo
     - WhitelistChameleon
-  - type: IgniteFromGasImmunity # Goob - Logical? No. Funny as shit? You bet.
-    parts:
-    - HandLeft
-    - HandRight
-
 - type: entity
   parent: ClothingHandsGlovesBoxingBase
   id: ClothingHandsGlovesBoxingRed
@@ -127,19 +122,6 @@
   id: ClothingHandsGlovesBoxingRiggedYellow
   name: yellow boxing gloves
   description: Yellow gloves for competitive boxing.
-
-- type: entity
-  id: GlovesBoxingRiggedRandomSpawner
-  categories: [ HideSpawnMenu ]
-  name: random rigged boxing glove spawner
-  components:
-  - type: EntityTableSpawner
-    table: !type:GroupSelector
-      children:
-      - id: ClothingHandsGlovesBoxingRiggedRed
-      - id: ClothingHandsGlovesBoxingRiggedBlue
-      - id: ClothingHandsGlovesBoxingRiggedGreen
-      - id: ClothingHandsGlovesBoxingRiggedYellow
 
 - type: entity
   parent: [ClothingHandsBase, BaseCommandContraband]

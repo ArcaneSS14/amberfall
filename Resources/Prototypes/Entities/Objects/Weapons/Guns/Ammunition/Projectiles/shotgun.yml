@@ -64,9 +64,6 @@
       types:
         Ballistic: 2 # Trauma, was 7
         # Heat: 3 # Trauma
-  - type: IgnitionSource
-    ignited: true
-
 - type: entity
   parent: PelletShotgunIncendiary
   id: PelletShotgunIncendiarySpread
@@ -160,9 +157,6 @@
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: buckshot-flare
-  - type: IgnitionSource
-    ignited: true
-    temperature: 1000
   - type: TimedDespawn
     lifetime: 240
   - type: AmbientSound
@@ -173,8 +167,6 @@
       path: /Audio/Items/Flare/flare_burn.ogg
       params:
         loop: true
-  - type: IgniteOnCollide
-    fireStacks: 1
   - type: PointLight
     enabled: true
     color: "#FF8080"

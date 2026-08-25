@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/24/2025 06:02:06
-  entityCount: 74
+  entityCount: 73
 maps: []
 grids:
 - 1
@@ -87,46 +87,6 @@ entities:
             id: splatter
           decals:
             1: 0.393404,2.95625
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 13183
-          0,-1:
-            0: 65485
-          -1,0:
-            0: 35971
-          0,1:
-            0: 2
-          1,0:
-            0: 51
-          1,-1:
-            0: 13073
-          0,-2:
-            0: 65024
-          -1,-2:
-            0: 32768
-          -1,-1:
-            0: 65516
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: Barricade
   entities:
@@ -217,13 +177,6 @@ entities:
     components:
     - type: Transform
       pos: 3.5,-3.5
-      parent: 1
-- proto: ClothingBeltUtilityFilled
-  entities:
-  - uid: 58
-    components:
-    - type: Transform
-      pos: -0.59183145,2.6332762
       parent: 1
 - proto: CrateGenericSteel
   entities:

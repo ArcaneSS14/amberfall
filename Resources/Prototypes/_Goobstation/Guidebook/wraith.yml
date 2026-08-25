@@ -1,17 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: guideEntry
-  id: Wraith
-  name: guide-entry-wraith
-  text: "/ServerInfo/_Goobstation/Guidebook/Antagonist/Wraith.xml"
-  children:
-  - Plaguebringer
-  - Harbinger
-  - Trickster
-  - RevenantWraith
-  - VoidSummons
-
-- type: guideEntry
   id: Plaguebringer
   name: guide-entry-plaguebringer
   text: "/ServerInfo/_Goobstation/Guidebook/Antagonist/Plaguebringer.xml"

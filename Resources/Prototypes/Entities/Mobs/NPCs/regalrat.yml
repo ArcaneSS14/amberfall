@@ -278,11 +278,6 @@
         deleteGibs: true # Trauma - no lag pls
         recursive: false
       # <Trauma>
-      - !type:SpawnGasBehavior
-        gasMixture:
-          moles:
-            Ammonia: 25
-      # </Trauma>
   - type: Stamina
     baseCritThreshold: 60
   - type: MeleeWeapon
@@ -342,21 +337,6 @@
   - type: GuideHelp
     guides:
     - MinorAntagonists
-  - type: FireVisuals
-    sprite: Mobs/Effects/onfire.rsi
-    normalState: Mouse_burning
-
-- type: entityTable
-  id: RatKingLoot
-  table: !type:GroupSelector
-    children:
-    - id: RandomSpawner100
-      weight: 66
-    - id: FoodCheese
-      weight: 28
-    - id: IngotGold1
-      weight: 5
-
 - type: entity
   parent: BaseAction
   id: ActionRatKingRaiseArmy

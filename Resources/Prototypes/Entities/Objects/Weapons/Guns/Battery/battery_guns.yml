@@ -18,7 +18,6 @@
   - type: SurgeryTool
     endSound:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: AlwaysHot
   - type: MeleeWeapon
     damage:
       types:
@@ -133,7 +132,6 @@
   - type: SurgeryTool # Shitmed
     endSound:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: AlwaysHot # Goobstation V
   - type: MeleeWeapon
     damage:
       types:

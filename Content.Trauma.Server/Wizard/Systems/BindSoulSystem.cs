@@ -118,3 +118,4 @@ public sealed partial class BindSoulSystem : SharedBindSoulSystem
         destructible.Thresholds.Add(threshold);
     }
 }
+

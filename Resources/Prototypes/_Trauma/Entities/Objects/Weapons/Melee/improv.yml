@@ -393,36 +393,6 @@
 
 - type: entity
   parent: [ BaseItem, BaseMinorContraband ]
-  id: PipeSpearUnfinished
-  name: unfinished pipe shank
-  description: Needs to be sharpened.
-  components:
-  - type: WeaponClass
-    class: Knife
-  - type: Sprite
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - type: MeleeWeapon
-    animationRotation: -90
-    wideAnimationRotation: -135
-    attackRate: 1
-    damage:
-      types:
-        Blunt: 3
-    heavyStaminaCost: 6
-    soundHit:
-      path: /Audio/Weapons/bladeslice.ogg
-  - type: Construction
-    graph: PipeShank
-    node: unfinished
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,2,0
-    storedRotation: 90
-
-- type: entity
-  parent: [ BaseItem, BaseMinorContraband ]
   id: IncompleteWoodenSword
   name: incomplete wooden sword
   description: An uncarved wooden sword.

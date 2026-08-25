@@ -114,17 +114,6 @@
     - Trash
     - Hamster
     - Meat
-  - type: Respirator
-    damage:
-      types:
-        Asphyxiation: 0.25
-    damageRecovery:
-      types:
-        Asphyxiation: -0.25
-  - type: Barotrauma
-    damage:
-      types:
-        Blunt: 0.1
   - type: CombatMode
   - type: MeleeWeapon
     soundHit:
@@ -157,9 +146,6 @@
   - type: MobPrice
     price: 60
   - type: NonSpreaderZombie
-  - type: FireVisuals
-    sprite: Mobs/Effects/onfire.rsi
-    normalState: Mouse_burning
   - type: Destructible
     thresholds:
     - trigger:

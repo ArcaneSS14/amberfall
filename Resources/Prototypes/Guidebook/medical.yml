@@ -1,20 +1,4 @@
 - type: guideEntry
-  id: Medical
-  name: guide-entry-medical
-  text: "/ServerInfo/Guidebook/Medical/Medical.xml"
-  children:
-  - MedicalDoctor
-  - Chemist
-  - Cloning
-  - Cryogenics
-  # <Trauma>
-  - Surgery
-  - MedicalPatches
-  - Virology
-  - Hypoports
-  # </Trauma>
-
-- type: guideEntry
   id: MedicalDoctor
   name: guide-entry-medicaldoctor
   text: "/ServerInfo/Guidebook/Medical/MedicalDoctor.xml"
@@ -28,18 +12,6 @@
   id: Cryogenics
   name: guide-entry-cryogenics
   text: "/ServerInfo/Guidebook/Medical/Cryogenics.xml"
-
-- type: guideEntry
-  id: Chemist
-  name: guide-entry-chemist
-  text: "/ServerInfo/Guidebook/Medical/Chemist.xml"
-  children:
-  # - Medicine
-  # Duplicate guide entries are currently not supported
-  # TODO GUIDEBOOK Maybe allow duplicate entries?
-  - Botanicals
-  - AdvancedBrute
-  - PlasticProduction
 
 - type: guideEntry
   id: Medicine

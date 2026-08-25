@@ -49,11 +49,6 @@
     range: 10
     sound:
       path: /Audio/_DV/CosmicCult/ability_nova_ambient.ogg
-  - type: CosmicCorrupting
-    corruptionSpeed: 0.4
-    useVFX: false
-    mobile: true
-
 - type: entity
   id: ProjectileCosmic
   name: Malign Bolt

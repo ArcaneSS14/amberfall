@@ -42,7 +42,6 @@
   - type: SurgeryTool
     endSound:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: AlwaysHot
   - type: MeleeWeapon
     damage:
       types:

@@ -55,8 +55,6 @@
     - state: energy_ball
       shader: unshaded
     scale: 0.5, 0.5
-  - type: ScaleData
-    scale: 0.5, 0.5
   - type: Physics
     bodyType: KinematicController
     bodyStatus: InAir
@@ -70,19 +68,9 @@
         layer:
         - BulletImpassable
   - type: Clickable
-  - type: GravityWell
-    maxRange: 4
-    baseRadialAcceleration: 20
-    baseTangentialAcceleration: 20
-    gravPulsePeriod: 0.1
   - type: SingularityDistortion
     intensity: 2
     falloffPower: 1
-  - type: LightningArcShooter
-    maxLightningArc: 2
-    arcDepth: 2
-    shootMaxInterval: 2
-    shootRange: 4
   - type: Electrified
     shockDamage: 1
     requirePower: false

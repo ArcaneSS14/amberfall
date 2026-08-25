@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 08/14/2025 10:57:23
-  entityCount: 79
+  entityCount: 75
 maps: []
 grids:
 - 1
@@ -68,56 +68,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 65275
-          0,-1:
-            0: 12799
-          -1,0:
-            0: 32905
-          0,1:
-            0: 1279
-          1,0:
-            0: 17
-          -1,-1:
-            0: 46078
-          0,-2:
-            0: 49152
-          1,-2:
-            0: 12288
-          1,-1:
-            0: 47
-          2,-2:
-            0: 4096
-          2,-1:
-            0: 16
-          -2,-1:
-            0: 34816
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
 - proto: AirlockGlassShuttle
@@ -142,13 +92,6 @@ entities:
     components:
     - type: Transform
       pos: 7.5,-2.5
-      parent: 1
-- proto: AtmosDeviceFanTiny
-  entities:
-  - uid: 5
-    components:
-    - type: Transform
-      pos: 0.5,-1.5
       parent: 1
 - proto: Bed
   entities:
@@ -243,13 +186,6 @@ entities:
     - type: Transform
       pos: 5.5,-2.5
       parent: 1
-- proto: MedkitFilled
-  entities:
-  - uid: 18
-    components:
-    - type: Transform
-      pos: -0.5,3.5
-      parent: 1
 - proto: MiningWindow
   entities:
   - uid: 19
@@ -257,13 +193,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,-0.5
-      parent: 1
-- proto: OxygenCanister
-  entities:
-  - uid: 20
-    components:
-    - type: Transform
-      pos: 0.5,5.5
       parent: 1
 - proto: Pickaxe
   entities:
@@ -312,13 +241,6 @@ entities:
       parent: 1
     - type: Thruster
       enabled: False
-- proto: ToolboxEmergencyFilled
-  entities:
-  - uid: 27
-    components:
-    - type: Transform
-      pos: 3.5,3.5
-      parent: 1
 - proto: WallMining
   entities:
   - uid: 28

@@ -154,8 +154,6 @@
     displacement: Dwarfism
   - type: Damageable
     displacement: Dwarfism
-  - type: Flammable
-    displacement: Dwarfism
   - type: InnerBodyAnomalyVisuals
     displacement: Dwarfism
 

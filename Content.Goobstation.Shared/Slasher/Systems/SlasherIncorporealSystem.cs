@@ -1,12 +1,9 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Goobstation.Common.Atmos;
 using Content.Goobstation.Common.Body.Components;
-using Content.Goobstation.Common.Temperature.Components;
 using Content.Goobstation.Shared.PhaseShift;
 using Content.Goobstation.Shared.Slasher.Components;
 using Content.Goobstation.Shared.Slasher.Events;
-using Content.Goobstation.Shared.Supermatter.Components;
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
 using Content.Shared.Actions.Events;
@@ -271,15 +268,9 @@ public sealed partial class SlasherIncorporealSystem : EntitySystem
         // Disable FOV for full vision while incorporeal.
         _eye.SetDrawFov(uid, false);
 
-        // Space immunity
+        // Ignore gravity while incorporeal.
         _ = EnsureComp<MovementIgnoreGravityComponent>(uid);
-        _ = EnsureComp<SpecialPressureImmunityComponent>(uid);
         _ = EnsureComp<SpecialBreathingImmunityComponent>(uid);
-        _ = EnsureComp<SpecialLowTempImmunityComponent>(uid);
-        _ = EnsureComp<SpecialHighTempImmunityComponent>(uid);
-
-        // Supermatter immunity
-        _ = EnsureComp<SupermatterImmuneComponent>(uid);
 
         // Raise event for server systems to handle additional logic (like disabling lights)
         var enteredEv = new SlasherIncorporealEnteredEvent();
@@ -314,15 +305,9 @@ public sealed partial class SlasherIncorporealSystem : EntitySystem
         // Restore FOV
         _eye.SetDrawFov(uid, true);
 
-        // Remove space immunity
+        // Restore gravity interaction.
         _ = RemComp<MovementIgnoreGravityComponent>(uid);
-        _ = RemComp<SpecialPressureImmunityComponent>(uid);
         _ = RemComp<SpecialBreathingImmunityComponent>(uid);
-        _ = RemComp<SpecialLowTempImmunityComponent>(uid);
-        _ = RemComp<SpecialHighTempImmunityComponent>(uid);
-
-        // Remove supermatter immunity
-        _ = RemComp<SupermatterImmuneComponent>(uid);
     }
 
     // Goida as shit.. I couldn't find a better way stop cooldowns

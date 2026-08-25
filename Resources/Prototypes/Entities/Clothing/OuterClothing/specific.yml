@@ -14,9 +14,6 @@
     - type: ChameleonClothing
       slot: [outerClothing]
       default: ClothingOuterVest
-    - type: TemperatureProtection # Same as a basic winter coat.
-      heatingCoefficient: 1.1
-      coolingCoefficient: 0.1
     - type: Armor
       coverage: # Shitmed
       - Torso

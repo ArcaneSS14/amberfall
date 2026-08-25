@@ -140,58 +140,6 @@ entities:
             3: 6,0
             25: 9,-4
             26: 9,0
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 239
-          0,-1:
-            0: 65535
-          1,0:
-            0: 255
-          2,0:
-            0: 255
-          3,0:
-            0: 255
-          0,-2:
-            0: 57344
-          1,-2:
-            0: 61440
-          1,-1:
-            0: 65535
-          2,-2:
-            0: 61440
-          2,-1:
-            0: 65535
-          3,-2:
-            0: 61440
-          3,-1:
-            0: 65535
-          4,0:
-            0: 17
-          4,-2:
-            0: 4096
-          4,-1:
-            0: 4369
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
 - proto: AirlockHatchSyndicate
   entities:
@@ -229,18 +177,6 @@ entities:
     components:
     - type: Transform
       pos: 4.5,-3.5
-      parent: 1
-- proto: AtmosDeviceFanTiny
-  entities:
-  - uid: 164
-    components:
-    - type: Transform
-      pos: 8.5,1.5
-      parent: 1
-  - uid: 165
-    components:
-    - type: Transform
-      pos: 8.5,-4.5
       parent: 1
 - proto: BlastDoor
   entities:
@@ -695,13 +631,6 @@ entities:
     - type: Transform
       pos: 6.5,-2.5
       parent: 1
-- proto: MedkitFilled
-  entities:
-  - uid: 115
-    components:
-    - type: Transform
-      pos: 12.5,-3.5
-      parent: 1
 - proto: PlastitaniumWindow
   entities:
   - uid: 124
@@ -1002,13 +931,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 1.5,-1.5
-      parent: 1
-- proto: ToolboxEmergencyFilled
-  entities:
-  - uid: 113
-    components:
-    - type: Transform
-      pos: 11.5,-3.5
       parent: 1
 - proto: WallPlastitanium
   entities:

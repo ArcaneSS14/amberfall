@@ -117,12 +117,6 @@
           MachineFrameDestroyed:
             min: 1
             max: 1
-      - !type:SpawnGasBehavior
-        gasMixture:
-          volume: 1000
-          moles:
-            CarbonDioxide: 340.5701689 # carbon dioxide
-          temperature: 373.15
   - type: Explosive
     explosionType: Default
     maxIntensity: 100

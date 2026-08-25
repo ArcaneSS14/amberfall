@@ -66,3 +66,4 @@ public sealed partial class MechEquipmentSystem : EntitySystem
         args.Handled = true;
     }
 }
+

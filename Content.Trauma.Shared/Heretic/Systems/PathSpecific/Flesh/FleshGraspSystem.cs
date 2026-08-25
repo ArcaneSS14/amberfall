@@ -14,7 +14,7 @@ using Robust.Shared.Network;
 
 namespace Content.Trauma.Shared.Heretic.Systems.PathSpecific.Flesh;
 
-public sealed partial class FleshGraspSystem : EntitySystem
+public abstract partial class FleshGraspSystem : EntitySystem
 {
     [Dependency] private INetManager _net = default!;
     [Dependency] private SharedUserInterfaceSystem _ui = default!;
@@ -123,3 +123,4 @@ public sealed partial class FleshGraspSystem : EntitySystem
         }
     }
 }
+

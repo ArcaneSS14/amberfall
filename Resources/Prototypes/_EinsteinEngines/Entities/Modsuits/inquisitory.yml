@@ -48,9 +48,6 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.75
-  - type: FireProtection
-    reduction: 0.9
-
 - type: entity
   parent: [ BaseModsuitBootsERT, BaseModsuitPieceERTChaplain ]
   id: ClothingModsuitBootsInquisitory
@@ -62,15 +59,3 @@
     walkModifier: 0.95
     sprintModifier: 0.95
 
-- type: entity
-  id: SuitStorageInquisitory
-  parent: SuitStorageBase
-  suffix: Inquisitory Modsuit
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: OxygenTankFilled
-        - id: ClothingModsuitInquisitory
-        - id: ClothingMaskBreath

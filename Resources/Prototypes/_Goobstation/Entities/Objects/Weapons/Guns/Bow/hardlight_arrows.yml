@@ -96,9 +96,6 @@
     damage:
       types:
         Heat: 15
-  - type: IgniteOnCollide
-    fireStacks: 4
-
 - type: entity
   parent: [BaseHardlightArrow, BaseHardlightEmbeddableArrow]
   id: ArrowFreeze
@@ -113,9 +110,6 @@
     damage:
       types:
         Cold: 10
-  - type: ChangeTemperatureOnCollide
-    heat: -600000
-
 - type: entity
   parent: [BaseHardlightArrow, BaseHardlightEmbeddableArrow]
   id: ArrowExplosive

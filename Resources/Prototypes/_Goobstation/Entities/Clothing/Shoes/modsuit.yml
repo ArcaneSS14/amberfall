@@ -36,11 +36,6 @@
     tags:
     - PlasmamanSafe
     - WhitelistChameleon
-  - type: IgniteFromGasImmunity
-    parts:
-    - FootLeft
-    - FootRight
-
 - type: entity
   parent: ClothingShoesModsuitBase
   id: ClothingModsuitBootsStandard
@@ -133,9 +128,6 @@
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/Shoes/Modsuits/atmostech.rsi
-  - type: FireProtection # lmao
-    reduction: 0.25
-
 - type: entity
   parent: [ ClothingShoesModsuitBase, BaseModsuitPieceRD ]
   id: ClothingModsuitBootsResearchDirector

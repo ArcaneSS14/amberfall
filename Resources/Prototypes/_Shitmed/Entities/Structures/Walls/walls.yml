@@ -38,11 +38,6 @@
   - type: Reflect
     reflectProb: 1
   - type: Pullable
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
-    airBlockedDirection:
-    - South
-    - East
   - type: Fixtures
     fixtures:
       fix1:

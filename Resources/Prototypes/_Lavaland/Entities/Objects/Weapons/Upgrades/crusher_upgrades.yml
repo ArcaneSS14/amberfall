@@ -137,14 +137,6 @@
     bonusDamage:
       types:
         Heat: 3
-  - type: WeaponUpgradeEffects
-    effects:
-    - !type:Flammable
-      multiplier: 2
-      multiplierOnExisting: 0.5
-    - !type:Ignite
-    - !type:AdjustTemperature
-      amount: 7500 # thermal energy, not temperature!
   - type: Construction
     graph: CrusherUpgradeLavaCrystalConstructionGraph
     node: crystal
@@ -167,10 +159,6 @@
     bonusDamage:
       types:
         Cold: 2
-  - type: WeaponUpgradeEffects
-    effects:
-    - !type:AdjustTemperature
-      amount: -7500 # thermal energy, not temperature! That's not that great actually, but it slows down the target after enough hits
   - type: Construction
     graph: CrusherUpgradeIceCrystalConstructionGraph
     node: crystal
@@ -282,6 +270,7 @@
     - id: CrusherUpgradeMainMarker
     - id: CrusherUpgradeMainRudeBuster
 
+
 - type: entityTable
   id: CrusherUpgradesBlade
   table: !type:GroupSelector
@@ -290,6 +279,7 @@
     - id: CrusherUpgradeBladeIceFrost
     - id: CrusherUpgradeBladeSharpness
 
+
 - type: entityTable
   id: CrusherUpgradesHandle
   table: !type:GroupSelector
@@ -297,6 +287,7 @@
     - id: CrusherUpgradeHandleWeights
     - id: CrusherUpgradeHandleLight
     - id: CrusherUpgradeHandleRange
+
 
 - type: entityTable
   id: CrusherUpgrades

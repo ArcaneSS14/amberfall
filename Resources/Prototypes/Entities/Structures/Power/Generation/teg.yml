@@ -42,15 +42,6 @@
 
     - type: Anchorable
     - type: Pullable
-    - type: NodeContainer
-      examinable: true
-      nodes:
-        output:
-          !type:CableDeviceNode
-          nodeGroupID: HVPower
-        teg:
-          !type:TegNodeGenerator
-          nodeGroupID: Teg
     - type: PowerMonitoringDevice
       group: Generator
       loadNode: output
@@ -60,11 +51,6 @@
 
     # Note that only the TEG center is an AtmosDevice.
     # It fires processing on behalf of its connected circulators.
-    - type: AtmosDevice
-    - type: TegGenerator
-      thermalEfficiency: 0.1
-      powerFactor: 2
-
     - type: DeviceNetwork
       deviceNetId: AtmosDevices
       receiveFrequencyId: AtmosMonitor
@@ -164,25 +150,6 @@
       - Power
 
     # functionality
-    - type: NodeContainer
-      nodes:
-        inlet:
-          !type:PipeNode
-          nodeGroupID: Pipe
-          pipeDirection: North
-          volume: 100
-        outlet:
-          !type:PipeNode
-          nodeGroupID: Pipe
-          pipeDirection: South
-          volume: 100
-        circulator:
-          !type:TegNodeCirculator
-          nodeGroupID: Teg
-
-    - type: AtmosUnsafeUnanchor
-    - type: PipeRestrictOverlap
-    - type: TegCirculator
     - type: StealTarget
       stealGroup: Teg
     - type: DirectionalArrowIndicator

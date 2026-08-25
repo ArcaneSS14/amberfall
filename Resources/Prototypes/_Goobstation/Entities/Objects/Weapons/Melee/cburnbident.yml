@@ -37,8 +37,6 @@
         Heat: 15
         Piercing: 5
     animation: WeaponArcThrust
-  - type: IgniteOnMeleeHit
-    fireStacks: 2
   - type: LandAtCursor
   - type: DamageOtherOnHit # Let the spears SOAR!!
     damage:

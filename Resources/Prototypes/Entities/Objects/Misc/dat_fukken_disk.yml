@@ -39,7 +39,6 @@
     - HighRiskItem
   - type: StealTarget
     stealGroup: NukeDisk
-  - type: SupermatterImmune # Goobstation
   - type: DeepFryerImmune # Trauma
 
 - type: entity

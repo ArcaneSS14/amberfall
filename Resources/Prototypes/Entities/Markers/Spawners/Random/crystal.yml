@@ -1,16 +1,3 @@
-- type: entityTable
-  id: RandomCrystalTable
-  table: !type:GroupSelector
-    children:
-    - id: CrystalGreen
-    - id: CrystalPink
-    - id: CrystalOrange
-    - id: CrystalBlue
-    - id: CrystalCyan
-    - id: CrystalYellow
-    - id: CrystalBlack
-    - id: CrystalGrey
-
 - type: entity
   name: Crystal Spawner
   suffix: 70%
@@ -26,3 +13,17 @@
     table: !type:NestedSelector
       tableId: RandomCrystalTable
       prob: 0.7
+
+- type: entityTable
+  id: RandomCrystalTable
+  table: !type:GroupSelector
+    children:
+    - id: CrystalGreen
+    - id: CrystalPink
+    - id: CrystalOrange
+    - id: CrystalBlue
+    - id: CrystalCyan
+    - id: CrystalYellow
+    - id: CrystalBlack
+    - id: CrystalGrey
+

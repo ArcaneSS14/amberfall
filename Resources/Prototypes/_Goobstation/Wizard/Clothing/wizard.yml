@@ -87,11 +87,6 @@
   - type: ExplosionResistance
     damageCoefficient: 0.25
   - type: GroupExamine
-  - type: FireProtection
-    reduction: 1
-  - type: TemperatureProtection
-    heatingCoefficient: 0.1
-    coolingCoefficient: 0.1
   - type: ModifyDelayedKnockdown
     delayDelta: 3
     knockdownTimeDelta: -3
@@ -308,10 +303,6 @@
     sprite: _Goobstation/Wizard/Clothing/OuterClothing/oblivionenforcer.rsi
   - type: Clothing
     sprite: _Goobstation/Wizard/Clothing/OuterClothing/oblivionenforcer.rsi
-  - type: ClothingGrantComponent
-    component:
-    - type: SupermatterImmune
-  - type: SupermatterImmune
   - type: Armor
     coverage:
     - Torso
@@ -354,9 +345,6 @@
   - type: Tag
     tags:
     - IPCMaskWearable # EE - IPCs
-  - type: SupermatterImmune
-
-# Blue
 - type: entity
   parent: [ClothingHeadHatWizardBaseArmor, ClothingHeadHatWizard, ClothingHeadHatWizardBase]
   id: ClothingHeadHatWizardReal

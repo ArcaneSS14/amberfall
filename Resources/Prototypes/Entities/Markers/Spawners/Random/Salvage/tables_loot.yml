@@ -1,5 +1,6 @@
 # Scrap: Worthless items that can be recycled into materials
 
+
 - type: entityTable
   id: SalvageScrapLowValue
   table: !type:GroupSelector
@@ -215,7 +216,6 @@
     - id: ClothingBeltUtility
     - id: WeaponProtoKineticAccelerator
       weight: 0.5
-    - id: OxygenTankFilled
     - id: WelderIndustrial
     - id: FoodSnackLollypopWrappedMystery # Goobstation
     - id: WeaponGrapplingGun
@@ -233,7 +233,6 @@
   id: SalvageEquipmentRare
   table: !type:GroupSelector
     children:
-    - id: BlueprintDoubleEmergencyTank
     - id: FultonBeacon
     - id: Fulton
       amount: !type:RangeNumberSelector
@@ -250,11 +249,6 @@
       weight: 0.5
     - id: WeaponCrusher
       weight: 0.5
-    - !type:GroupSelector
-      children:
-      - id: JetpackBlue
-      - id: JetpackBlack
-
 - type: entityTable
   id: SalvageEquipmentLegendary
   table: !type:GroupSelector
@@ -266,11 +260,6 @@
     - id: ClothingOuterHardsuitSalvage
     - id: ChemistryBottleOmnizine
     - id: FoodSnackLollypopWrappedCarpEvil # Goobstation
-    - !type:GroupSelector
-      children:
-      - id: JetpackBlueFilled
-      - id: JetpackBlackFilled
-
 - type: entityTable
   id: RandomGeneratorTable
   table: !type:GroupSelector

@@ -35,6 +35,7 @@
       tableId: RandomSoakedSmokeTable
 
 #Tables
+
 - type: entityTable
   id: SmokablesTable
   table: !type:GroupSelector
@@ -53,8 +54,6 @@
       - id: CigPackRed
       - id: CigPackBlue
       - id: CigPackBlack
-      - id: PackPaperRollingFilters
-    #Butts
     - !type:GroupSelector
       weight: 3
       children:

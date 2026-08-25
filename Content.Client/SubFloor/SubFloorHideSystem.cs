@@ -1,6 +1,3 @@
-// <Trauma>
-using Content.Shared.Atmos.Components;
-// </Trauma>
 using Content.Shared.DrawDepth;
 using Content.Client.UserInterface.Systems.Sandbox;
 using Content.Shared.SubFloor;
@@ -82,8 +79,7 @@ public sealed partial class SubFloorHideSystem : SharedSubFloorHideSystem
 
         scannerRevealed &= !ShowAll; // no transparency for show-subfloor mode.
 
-        var showVentPipe = HasComp<PipeAppearanceComponent>(uid) && ShowVentPipe;    //Goobstation - Ventcrawler
-        var revealed = !covered || ShowAll || scannerRevealed || showVentPipe;   //Goobstation - Ventcrawler
+        var revealed = !covered || ShowAll || scannerRevealed;
 
         // set visibility & color of each layer
         foreach (var layer in args.Sprite.AllLayers)

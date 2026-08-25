@@ -6,11 +6,8 @@
     edges:
     - to: shotgun
       steps:
-      - tag: Pipe
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
-        name: construction-graph-tag-pipe
+      - material: Steel
+        amount: 1
       - tag: ModularReceiver
         icon:
           sprite: Objects/Misc/modular_receiver.rsi

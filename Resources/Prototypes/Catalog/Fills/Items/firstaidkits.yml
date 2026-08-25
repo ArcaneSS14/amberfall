@@ -13,7 +13,6 @@
         - id: Gauze
         - id: PillCanisterTricordrazine
         - id: PillCanisterIron # Goobstation
-      # see https://github.com/tgstation/blob/master/code/game/objects/items/storage/firstaid.dm for example contents
 
 - type: entity
   id: MedkitBurnFilled
@@ -26,7 +25,7 @@
         children:
         - id: Ointment
           amount: 2
-        - id: BurnAutoInjector # Goobstation - replaces PillCanisterKelotane
+        - id: BurnAutoInjector
         - id: PillCanisterDermaline
 
 - type: entity
@@ -41,7 +40,7 @@
         - id: Brutepack
         - id: Gauze
         - id: PillCanisterIron
-        - id: BruteAutoInjector # Goobstation - replaces PillCanisterCopper
+        - id: BruteAutoInjector
 
 - type: entity
   id: MedkitToxinFilled
@@ -57,21 +56,6 @@
         - id: AntiPoisonMedipen
         - id: PillCanisterDylovene
         - id: PillCanisterCharcoal
-
-- type: entity
-  id: MedkitOxygenFilled
-  suffix: Filled
-  parent: MedkitO2
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreathMedical
-        - id: EmergencyOxygenTankFilled
-        - id: EmergencyMedipen
-        - id: SyringeInaprovaline
-        - id: PillCanisterDexalin
 
 - type: entity
   id: MedkitRadiationFilled
@@ -100,7 +84,7 @@
         - id: RegenerativeMesh
         - id: Bloodpack
           amount: 2
-        - id: Tourniquet # Goob
+        - id: Tourniquet
 
 - type: entity
   id: MedkitCombatFilled

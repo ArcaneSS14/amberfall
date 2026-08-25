@@ -166,7 +166,6 @@
     eyes: ClothingEyesGlassesCentComm
     ears: ClothingHeadsetAltFreelancer
     gloves: ClothingHandsMercGlovesCombat
-    outerClothing: ClothingOuterVestWebMerc
     shoes: ClothingShoesBootsJackAdvancedFilled
     id: CentcomPDA
     neck: ClothingNeckScarfStripedGreen

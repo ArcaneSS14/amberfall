@@ -10,7 +10,6 @@
   components:
   - type: ExplosionResistance
     damageCoefficient: 0.50
-  - type: AntiRottingContainer
   - type: Sprite
     sprite: _NF/Structures/Shelfs/Departments/Service/wall_fridge.rsi
     layers:

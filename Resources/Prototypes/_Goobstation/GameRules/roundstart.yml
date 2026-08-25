@@ -145,7 +145,6 @@
   parent: [ BaseGameRule, BaseRoundstartAntagRule ]
   id: Devil
   components:
-  - type: DevilRule
   - type: GameRule
     minPlayers: 15
   - type: AntagObjectives

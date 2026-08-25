@@ -3,7 +3,6 @@
 using Content.Goobstation.Shared.Changeling.Components;
 using Content.Shared.Actions.Components;
 using Content.Shared.Actions.Events;
-using Content.Shared.Atmos.Components;
 using Content.Shared.Popups;
 
 namespace Content.Goobstation.Shared.Changeling.Systems;
@@ -33,13 +32,6 @@ public sealed partial class SharedChanglingActionSystem : EntitySystem
         if (!_lingQuery.TryComp(user, out var ling))
         {
             DoPopup(user, ent.Comp.NotChangelingPopup);
-            args.Cancelled = true;
-            return;
-        }
-
-        if (!ent.Comp.UseOnFire && OnFire(user))
-        {
-            DoPopup(user, ent.Comp.OnFirePopup, PopupType.LargeCaution);
             args.Cancelled = true;
             return;
         }
@@ -96,11 +88,6 @@ public sealed partial class SharedChanglingActionSystem : EntitySystem
     private void DoPopup(EntityUid user, string popup, PopupType popupType = PopupType.Small)
     {
         _popup.PopupEntity(popup, user, user, popupType);
-    }
-
-    private bool OnFire(EntityUid user)
-    {
-        return HasComp<OnFireComponent>(user);
     }
 
     #endregion

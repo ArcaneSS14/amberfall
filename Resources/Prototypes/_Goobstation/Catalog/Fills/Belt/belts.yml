@@ -38,7 +38,6 @@
         - id: AdvancedCombatMedipen
         - id: PyraAutoInjector
           amount: 2
-        - id: AirlossAutoInjector
         - id: CentcommStimpack
           amount: 2
 
@@ -242,7 +241,5 @@
         - id: GrenadeShrapnel
         - id: GrenadeIncendiary
         - id: ExGrenade
-        - id: SarinGasGrenade
-        - id: SupermatterGrenade
         - id: SyndieMiniBomb
           amount: 2

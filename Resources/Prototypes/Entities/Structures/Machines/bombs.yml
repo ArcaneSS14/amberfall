@@ -15,7 +15,6 @@
     - type: Wires
       layoutId: Defusable
       alwaysRandomize: true
-    - type: Defusable
     - type: Rotatable
     - type: Explosive
       explosionType: Default
@@ -90,9 +89,6 @@
       intensitySlope: 5
       maxIntensity: 4
       canCreateVacuum: false
-    - type: Defusable
-      disposable: false
-
 - type: entity
   parent: [BaseHardBomb, BaseSyndicateContrabandUnscannable] # Trauma - unscannable
   id: SyndicateBomb
@@ -150,8 +146,6 @@
   suffix: DEBUG
   description: Holy shit this is gonna explode.
   components:
-    - type: Defusable
-      disposable: true
     - type: TimerTrigger
       delay: 10
       delayOptions: [10, 20, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300]

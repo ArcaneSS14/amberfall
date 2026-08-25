@@ -1,11 +1,19 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+- type: entity
+  id: LockerNanorepFilled
+  suffix: Filled
+  parent: LockerNanorep
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillNanorep
+
 - type: entityTable
   id: LockerFillNanorep
   table: !type:AllSelector
     children:
-    - id: BoxFolderCentCom
-    # - id: BriefcaseBrownFilled
     - id: WeaponDisablerAdvanced
     - id: BedsheetCentcom
     - id: CaneSheathFilledNanotrasen
@@ -18,12 +26,3 @@
         value: 5
     - id: NanoRepStationReport # Goobstation
 
-- type: entity
-  id: LockerNanorepFilled
-  suffix: Filled
-  parent: LockerNanorep
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: LockerFillNanorep

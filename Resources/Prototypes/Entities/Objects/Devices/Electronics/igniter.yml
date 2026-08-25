@@ -9,9 +9,6 @@
     state: icon
   - type: Item
     storedRotation: -90
-  - type: IgnitionSource
-    temperature: 800
-  - type: IgniteOnTrigger
   - type: EmitSoundOnTrigger
     sound:
       collection: WelderOn

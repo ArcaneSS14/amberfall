@@ -193,14 +193,6 @@
     speedModifierThresholds:
       30: 0.7
       50: 0.5
-  - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 42
-  - type: TemperatureDamage
-    heatDamageThreshold: 5000
-    heatDamage:
-      types:
-        Heat: 1 #per second, scales with temperature & other constants
   - type: Sprite
     drawdepth: SmallMobs
     layers:

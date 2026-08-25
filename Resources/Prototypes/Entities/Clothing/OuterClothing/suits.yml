@@ -61,13 +61,6 @@
     sprite: Clothing/OuterClothing/Suits/fire.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/fire.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.04
-  - type: TemperatureProtection
-    heatingCoefficient: 0.005
-    coolingCoefficient: 0.05
-  - type: FireProtection
-    reduction: 0.65 # doesnt have a full seal so not as good
   - type: Armor
     coverage:
     - Torso
@@ -108,14 +101,6 @@
     sprite: Clothing/OuterClothing/Suits/atmos_firesuit.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/atmos_firesuit.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.02
-    lowPressureMultiplier: 1000
-  - type: TemperatureProtection
-    heatingCoefficient: 0.001
-    coolingCoefficient: 0.05
-  - type: FireProtection
-    reduction: 0.8 # atmos firesuit offers best protection, hardsuits are a little vulnerable
   - type: Armor
     coverage:
     - Torso
@@ -196,12 +181,6 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/spaceninja.rsi
   # hardsuit stuff
-  - type: PressureProtection
-    highPressureMultiplier: 0.6
-    lowPressureMultiplier: 1000
-  - type: TemperatureProtection
-    heatingCoefficient: 0.01
-    coolingCoefficient: 0.01
   - type: Armor
     coverage:
     - Torso
@@ -389,12 +368,6 @@
   suffix: Hardsuit, DO NOT MAP
   categories: [ DoNotMap ]
   components:
-  - type: PressureProtection
-    highPressureMultiplier: 0.6
-    lowPressureMultiplier: 1000
-  - type: TemperatureProtection
-    heatingCoefficient: 0.01
-    coolingCoefficient: 0.01
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitCarp

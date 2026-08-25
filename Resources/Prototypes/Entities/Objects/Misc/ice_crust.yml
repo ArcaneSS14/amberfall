@@ -45,13 +45,6 @@
         behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
-    - type: Temperature
-    - type: TemperatureDamage
-      heatDamage:
-        types:
-          Heat: 5
-      coldDamage: {}
-      coldDamageThreshold: 0
     - type: FrictionContacts
     - type: TileFrictionModifier
       modifier: 0.05

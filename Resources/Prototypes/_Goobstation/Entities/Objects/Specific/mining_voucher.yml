@@ -11,7 +11,3 @@
     state: icon
   - type: Item
     size: Tiny
-  - type: MiningVoucher
-    vendorWhitelist: # it's the only mining points vendor :)
-     components:
-     - PointsVendor

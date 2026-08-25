@@ -191,25 +191,6 @@
     damage:
       types:
         Slash: 5
-  - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 42
-  - type: TemperatureDamage
-    heatDamageThreshold: 400
-    coldDamageThreshold: 285
-    coldDamage:
-      types:
-        Cold : 0.1 #per second, scales with temperature & other constants
-    heatDamage:
-      types:
-        Heat : 1.5 #per second, scales with temperature & other constants
-  - type: TemperatureSpeed
-    thresholds:
-      301: 0.9
-      295: 0.8
-      285: 0.7
-  #- type: Wagging # Trauma - moved to tail onAdd
-
 - type: entity
   parent: OrganBaseOrganic
   id: OrganReptilian

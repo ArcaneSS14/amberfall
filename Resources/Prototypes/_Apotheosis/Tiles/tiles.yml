@@ -1,5 +1,10 @@
-# Apotheosis
-# BYOND directions are represented as tile variants.
+- type: tile
+  id: FloorApotheosisTransparentPit
+  name: tiles-apotheosis-transparent-pit
+  sprite: /Textures/_Trauma/empty.rsi/empty.png
+  sturdy: false
+  renderZLevelBelow: true
+  fallThroughZLevel: true
 
 - type: tile
   id: FloorApotheosisAsh
@@ -121,10 +126,10 @@
   sprite: /Textures/_Apotheosis/Tiles/cobblestone1.png
   edgeSpritePriority: 1
   edgeSprites:
-    South: /Textures/_Apotheosis/Tiles/Edges/cobblestone-south.png
-    East: /Textures/_Apotheosis/Tiles/Edges/cobblestone-east.png
-    North: /Textures/_Apotheosis/Tiles/Edges/cobblestone-north.png
-    West: /Textures/_Apotheosis/Tiles/Edges/cobblestone-west.png
+    South: /Textures/_Apotheosis/Tiles/Edges/cobblestone1-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/cobblestone1-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/cobblestone1-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/cobblestone1-west.png
 
 - type: tile
   id: FloorApotheosisCobblestone2
@@ -132,10 +137,10 @@
   sprite: /Textures/_Apotheosis/Tiles/cobblestone2.png
   edgeSpritePriority: 1
   edgeSprites:
-    South: /Textures/_Apotheosis/Tiles/Edges/cobblestone-south.png
-    East: /Textures/_Apotheosis/Tiles/Edges/cobblestone-east.png
-    North: /Textures/_Apotheosis/Tiles/Edges/cobblestone-north.png
-    West: /Textures/_Apotheosis/Tiles/Edges/cobblestone-west.png
+    South: /Textures/_Apotheosis/Tiles/Edges/cobblestone2-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/cobblestone2-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/cobblestone2-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/cobblestone2-west.png
 
 - type: tile
   id: FloorApotheosisCobblestone3
@@ -143,10 +148,10 @@
   sprite: /Textures/_Apotheosis/Tiles/cobblestone3.png
   edgeSpritePriority: 1
   edgeSprites:
-    South: /Textures/_Apotheosis/Tiles/Edges/cobblestone-south.png
-    East: /Textures/_Apotheosis/Tiles/Edges/cobblestone-east.png
-    North: /Textures/_Apotheosis/Tiles/Edges/cobblestone-north.png
-    West: /Textures/_Apotheosis/Tiles/Edges/cobblestone-west.png
+    South: /Textures/_Apotheosis/Tiles/Edges/cobblestone3-south.png
+    East: /Textures/_Apotheosis/Tiles/Edges/cobblestone3-east.png
+    North: /Textures/_Apotheosis/Tiles/Edges/cobblestone3-north.png
+    West: /Textures/_Apotheosis/Tiles/Edges/cobblestone3-west.png
 
 - type: tile
   id: FloorApotheosisConcretefloor1
@@ -208,7 +213,7 @@
   sprite: /Textures/_Apotheosis/Tiles/grass.png
   variants: 4
   placementVariants: [1.0, 1.0, 1.0, 1.0]
-  edgeSpritePriority: 1
+  edgeSpritePriority: 3
   edgeSprites:
     South: /Textures/_Apotheosis/Tiles/Edges/grass-south.png
     East: /Textures/_Apotheosis/Tiles/Edges/grass-east.png
@@ -221,7 +226,7 @@
   sprite: /Textures/_Apotheosis/Tiles/grass_cold.png
   variants: 4
   placementVariants: [1.0, 1.0, 1.0, 1.0]
-  edgeSpritePriority: 1
+  edgeSpritePriority: 3
   edgeSprites:
     South: /Textures/_Apotheosis/Tiles/Edges/grass_cold-south.png
     East: /Textures/_Apotheosis/Tiles/Edges/grass_cold-east.png
@@ -234,7 +239,7 @@
   sprite: /Textures/_Apotheosis/Tiles/grass_red.png
   variants: 4
   placementVariants: [1.0, 1.0, 1.0, 1.0]
-  edgeSpritePriority: 1
+  edgeSpritePriority: 3
   edgeSprites:
     South: /Textures/_Apotheosis/Tiles/Edges/grass_red-south.png
     East: /Textures/_Apotheosis/Tiles/Edges/grass_red-east.png
@@ -247,7 +252,7 @@
   sprite: /Textures/_Apotheosis/Tiles/grass_yel.png
   variants: 4
   placementVariants: [1.0, 1.0, 1.0, 1.0]
-  edgeSpritePriority: 1
+  edgeSpritePriority: 3
   edgeSprites:
     South: /Textures/_Apotheosis/Tiles/Edges/grass_yel-south.png
     East: /Textures/_Apotheosis/Tiles/Edges/grass_yel-east.png

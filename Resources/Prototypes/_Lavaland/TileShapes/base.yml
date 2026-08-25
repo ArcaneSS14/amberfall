@@ -17,9 +17,3 @@
   id: BishopCross
   shape: !type:BishopEntityShape
 
-- type: entityShape
-  id: QueenCross
-  shape: !type:AllEntityShape
-    children:
-    - id: RookCross
-    - id: BishopCross

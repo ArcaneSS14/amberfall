@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 01/07/2026 18:00:27
-  entityCount: 649
+  entityCount: 622
 maps: []
 grids:
 - 1
@@ -448,134 +448,6 @@ entities:
             276: 5,24
             293: 10,20
             294: 10,21
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 65504
-          -1,0:
-            0: 51200
-          0,1:
-            0: 65535
-          -1,1:
-            0: 65518
-          0,2:
-            0: 65535
-          -1,2:
-            0: 56783
-          0,3:
-            0: 65535
-          -1,3:
-            0: 57311
-          0,4:
-            0: 65535
-          1,0:
-            0: 65520
-          1,1:
-            0: 65535
-          1,2:
-            0: 65535
-          1,3:
-            0: 65535
-          1,4:
-            0: 65535
-          2,0:
-            0: 65520
-          2,1:
-            0: 65535
-          2,2:
-            0: 65535
-          2,3:
-            0: 65535
-          2,4:
-            0: 61951
-          3,0:
-            0: 65520
-          3,1:
-            0: 65535
-          3,2:
-            0: 65535
-          3,3:
-            0: 65535
-          3,4:
-            0: 61183
-          4,0:
-            0: 63248
-          4,1:
-            0: 65535
-          4,2:
-            0: 65535
-          4,3:
-            0: 65535
-          4,4:
-            0: 65535
-          5,1:
-            0: 45841
-          5,2:
-            0: 26123
-          5,3:
-            0: 28527
-          5,4:
-            0: 47878
-          4,5:
-            0: 65535
-          3,5:
-            0: 61166
-          4,6:
-            0: 383
-          5,5:
-            0: 4403
-          -2,1:
-            0: 16384
-          -2,2:
-            0: 34820
-          -2,3:
-            0: 35980
-          -2,4:
-            0: 17416
-          -1,4:
-            0: 65485
-          0,5:
-            0: 65535
-          -1,5:
-            0: 61183
-          0,6:
-            0: 2739
-          -1,6:
-            0: 140
-          1,5:
-            0: 61167
-          1,6:
-            0: 4082
-          2,5:
-            0: 65501
-          2,6:
-            0: 2784
-          3,6:
-            0: 1908
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
 - proto: AirlockCargo
@@ -667,28 +539,6 @@ entities:
     - type: Transform
       pos: 8.5,24.5
       parent: 1
-- proto: AtmosDeviceFanTiny
-  entities:
-  - uid: 17
-    components:
-    - type: Transform
-      pos: -5.5,12.5
-      parent: 1
-  - uid: 18
-    components:
-    - type: Transform
-      pos: 23.5,12.5
-      parent: 1
-  - uid: 19
-    components:
-    - type: Transform
-      pos: 23.5,14.5
-      parent: 1
-  - uid: 20
-    components:
-    - type: Transform
-      pos: -5.5,14.5
-      parent: 1
 - proto: BarSign
   entities:
   - uid: 21
@@ -702,13 +552,6 @@ entities:
     components:
     - type: Transform
       pos: 9.514624,12.046489
-      parent: 1
-- proto: BoozeDispenser
-  entities:
-  - uid: 23
-    components:
-    - type: Transform
-      pos: 7.5,23.5
       parent: 1
 - proto: CableApcExtensionUncuttable
   entities:
@@ -1703,13 +1546,6 @@ entities:
     - type: Transform
       pos: 16.5,26.5
       parent: 1
-- proto: CrateTrashCartFilled
-  entities:
-  - uid: 220
-    components:
-    - type: Transform
-      pos: 13.5,23.5
-      parent: 1
 - proto: CryogenicSleepUnit
   entities:
   - uid: 221
@@ -1724,20 +1560,6 @@ entities:
     components:
     - type: Transform
       pos: 9.5,17.5
-      parent: 1
-- proto: DoubleEmergencyNitrogenTankFilled
-  entities:
-  - uid: 222
-    components:
-    - type: Transform
-      pos: 22.586529,10.603156
-      parent: 1
-- proto: DoubleEmergencyOxygenTankFilled
-  entities:
-  - uid: 223
-    components:
-    - type: Transform
-      pos: 22.423769,10.775031
       parent: 1
 - proto: Dresser
   entities:
@@ -2759,40 +2581,12 @@ entities:
     - type: Transform
       pos: 13.5,26.5
       parent: 1
-- proto: MedkitBruteFilled
-  entities:
-  - uid: 390
-    components:
-    - type: Transform
-      pos: 13.5,11.5
-      parent: 1
 - proto: Mirror
   entities:
   - uid: 391
     components:
     - type: Transform
       pos: 12.5,24.5
-      parent: 1
-- proto: NitrogenTankFilled
-  entities:
-  - uid: 392
-    components:
-    - type: Transform
-      pos: -4.420553,10.631646
-      parent: 1
-- proto: OxygenCanister
-  entities:
-  - uid: 393
-    components:
-    - type: Transform
-      pos: 7.5,26.5
-      parent: 1
-- proto: OxygenTankFilled
-  entities:
-  - uid: 394
-    components:
-    - type: Transform
-      pos: -4.4908657,10.59649
       parent: 1
 - proto: Pickaxe
   entities:
@@ -2981,74 +2775,6 @@ entities:
     - type: Transform
       pos: 21.5,16.5
       parent: 1
-- proto: RandomDrinkGlass
-  entities:
-  - uid: 425
-    components:
-    - type: Transform
-      pos: 7.5,21.5
-      parent: 1
-  - uid: 426
-    components:
-    - type: Transform
-      pos: 5.5,21.5
-      parent: 1
-- proto: RandomPosterAny
-  entities:
-  - uid: 427
-    components:
-    - type: Transform
-      pos: -2.5,17.5
-      parent: 1
-  - uid: 428
-    components:
-    - type: Transform
-      pos: 3.5,24.5
-      parent: 1
-  - uid: 429
-    components:
-    - type: Transform
-      pos: 20.5,9.5
-      parent: 1
-  - uid: 430
-    components:
-    - type: Transform
-      pos: 12.5,21.5
-      parent: 1
-  - uid: 431
-    components:
-    - type: Transform
-      pos: -2.5,9.5
-      parent: 1
-  - uid: 432
-    components:
-    - type: Transform
-      pos: 15.5,24.5
-      parent: 1
-  - uid: 433
-    components:
-    - type: Transform
-      pos: 20.5,17.5
-      parent: 1
-  - uid: 434
-    components:
-    - type: Transform
-      pos: 9.5,24.5
-      parent: 1
-- proto: RandomVendingDrinks
-  entities:
-  - uid: 435
-    components:
-    - type: Transform
-      pos: 13.5,20.5
-      parent: 1
-- proto: RandomVendingSnacks
-  entities:
-  - uid: 436
-    components:
-    - type: Transform
-      pos: 13.5,19.5
-      parent: 1
 - proto: ReinforcedWindow
   entities:
   - uid: 437
@@ -3116,13 +2842,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 12.5,25.5
-      parent: 1
-- proto: SodaDispenser
-  entities:
-  - uid: 448
-    components:
-    - type: Transform
-      pos: 6.5,23.5
       parent: 1
 - proto: SodiumLightTube
   entities:
@@ -3336,20 +3055,6 @@ entities:
     components:
     - type: Transform
       pos: 22.5,10.5
-      parent: 1
-- proto: ToiletDirtyWater
-  entities:
-  - uid: 484
-    components:
-    - type: Transform
-      pos: 9.5,26.5
-      parent: 1
-- proto: ToolboxMechanicalFilled
-  entities:
-  - uid: 485
-    components:
-    - type: Transform
-      pos: 7.4782305,25.278055
       parent: 1
 - proto: TowelColorBlack
   entities:

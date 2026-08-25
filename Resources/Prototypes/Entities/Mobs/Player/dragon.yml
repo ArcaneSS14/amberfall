@@ -128,17 +128,11 @@
       250: 0.7
       400: 0.5
   # disable taking damage from fire, since its a fire breathing dragon
-  - type: Flammable
-    damage:
-      types: {}
   - type: StatusEffects # Overwriting basesimplemob to remove flash, getting flashed as dragon just feelsbad
     allowed:
     - Electrocution
     - Pacified
     - Adrenaline
-  - type: Temperature
-  - type: TemperatureDamage
-    heatDamageThreshold: 2400
   - type: Metabolizer
     solutionOnBody: false
     updateInterval: 0.25

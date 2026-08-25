@@ -30,29 +30,6 @@ entities:
     - type: OccluderTree
     - type: MapLight
       ambientLightColor: '#D8B059FF'
-    - type: MapAtmosphere
-      space: False
-      mixture:
-        volume: 2500
-        immutable: True
-        temperature: 293.15
-        moles:
-        - 21.82478
-        - 82.10312
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
   - uid: 2
     components:
     - type: MetaData
@@ -100,11 +77,6 @@ entities:
       chunkCollection:
         version: 2
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: Shuttle
       dampingModifier: 0.25
     - type: ImplicitRoof

@@ -32,14 +32,6 @@
   components:
   - type: DiseaseEffect
     complexity: 20
-  - type: DiseaseEntityEffect
-    effects:
-    - !type:AdjustTemperature
-      conditions:
-      - !type:TemperatureCondition
-        max: 393.15 # stops at 100c
-      amount: 8000
-
 - type: entity
   id: DiseaseBehaviorCold
   parent: DiseaseBehaviorBase
@@ -48,11 +40,6 @@
   components:
   - type: DiseaseEffect
     complexity: 20
-  - type: DiseaseEntityEffect
-    effects:
-    - !type:AdjustTemperature
-      amount: -8000
-
 - type: entity
   id: DiseaseBehaviorRapidMutation
   parent: DiseaseBehaviorBase

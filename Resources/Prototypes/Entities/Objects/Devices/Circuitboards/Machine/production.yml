@@ -355,121 +355,6 @@
         Glass: 1
 
 - type: entity
-  id: ThermomachineFreezerMachineCircuitBoard
-  parent: BaseMachineCircuitboard
-  name: freezer thermomachine machine board
-  description: Looks like you could use a screwdriver to change the board type.
-  components:
-  - type: Sprite
-    state: engineering
-  - type: MachineBoard
-    prototype: GasThermoMachineFreezer
-    stackRequirements:
-      Manipulator: 4
-      Cable: 5
-  - type: Construction
-    deconstructionTarget: null
-    graph: ThermomachineBoard
-    node: freezer
-
-- type: entity
-  id: ThermomachineHeaterMachineCircuitBoard
-  parent: BaseMachineCircuitboard
-  name: heater thermomachine machine board
-  description: Looks like you could use a screwdriver to change the board type.
-  components:
-  - type: Sprite
-    state: engineering
-  - type: MachineBoard
-    prototype: GasThermoMachineHeater
-    stackRequirements:
-      Manipulator: 4
-      Cable: 5
-  - type: Construction
-    graph: ThermomachineBoard
-    deconstructionTarget: null
-    node: heater
-
-- type: entity
-  parent: BaseMachineCircuitboard
-  id: HellfireFreezerMachineCircuitBoard
-  name: hellfire freezer machine board
-  description: Looks like you could use a screwdriver to change the board type.
-  components:
-  - type: Sprite
-    state: engineering
-  - type: MachineBoard
-    prototype: GasThermoMachineHellfireFreezer
-    stackRequirements:
-      Manipulator: 4
-      Plasma: 1
-  - type: Construction
-    deconstructionTarget: null
-    graph: ThermomachineBoard
-    node: hellfirefreezer
-
-- type: entity
-  parent: BaseMachineCircuitboard
-  id: HellfireHeaterMachineCircuitBoard
-  name: hellfire heater machine board
-  description: Looks like you could use a screwdriver to change the board type.
-  components:
-  - type: Sprite
-    state: engineering
-  - type: MachineBoard
-    prototype: GasThermoMachineHellfireHeater
-    stackRequirements:
-      Manipulator: 4
-      Plasma: 1
-  - type: Construction
-    graph: ThermomachineBoard
-    deconstructionTarget: null
-    node: hellfireheater
-
-- type: entity
-  id: CondenserMachineCircuitBoard
-  parent: BaseMachineCircuitboard
-  name: condenser machine board
-  description: A machine printed circuit board for a condenser.
-  components:
-  - type: Sprite
-    state: engineering
-  - type: MachineBoard
-    prototype: BaseGasCondenser
-    stackRequirements:
-      Manipulator: 1
-      Glass: 1
-
-- type: entity
-  id: PortableScrubberMachineCircuitBoard
-  parent: BaseMachineCircuitboard
-  name: portable scrubber machine board
-  description: A machine printed circuit board for a portable scrubber.
-  components:
-  - type: Sprite
-    state: engineering
-  - type: MachineBoard
-    prototype: PortableScrubber
-    stackRequirements:
-      Manipulator: 3
-      Cable: 5
-      Glass: 2
-
-- type: entity
-  id: SpaceHeaterMachineCircuitBoard
-  parent: BaseMachineCircuitboard
-  name: space heater machine board
-  description: A machine printed circuit board for a space heater.
-  components:
-  - type: Sprite
-    state: engineering
-  - type: MachineBoard
-    prototype: SpaceHeater
-    stackRequirements:
-      Manipulator: 3
-      Cable: 5
-
-- type: entity
   id: CloningPodMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: cloning pod machine board
@@ -510,20 +395,6 @@
       stackRequirements:
         Steel: 1
         Cable: 2
-
-- type: entity
-  id: CryoPodMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: cryo pod machine board
-  description: A machine printed circuit board for a cryo pod.
-  components:
-    - type: Sprite
-      state: medical
-    - type: MachineBoard
-      prototype: CryoPod
-      stackRequirements:
-        Glass: 5
-        Cable: 1
 
 - type: entity
   id: ChemMasterMachineCircuitboard
@@ -958,21 +829,6 @@
       Glass: 1
 
 - type: entity
-  parent: BaseMachineCircuitboard
-  id: ElectricGrillMachineCircuitboard
-  name: electric grill machine board
-  description: A machine printed circuit board for an electric grill.
-  components:
-  - type: Sprite
-    state: service
-  - type: MachineBoard
-    prototype: KitchenElectricGrill
-    stackRequirements:
-      Manipulator: 4
-      Glass: 2
-      Cable: 5
-
-- type: entity
   id: StasisBedMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: stasis bed machine board
@@ -1207,21 +1063,6 @@
       Glass: 1
 
 - type: entity
-  id: GasRecyclerMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: gas recycler board
-  description: A printed circuit board for a gas recycler.
-  components:
-  - type: Sprite
-    state: engineering
-  - type: MachineBoard
-    prototype: GasRecycler
-    stackRequirements:
-      Manipulator: 2
-      Steel: 10
-      Plasma: 5
-
-- type: entity
   id: BoozeDispenserMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: booze dispenser machine board
@@ -1296,22 +1137,6 @@
     prototype: TelecomServer
     stackRequirements:
       Steel: 1
-      Cable: 2
-
-- type: entity
-  parent: BaseMachineCircuitboard
-  id: SalvageMagnetMachineCircuitboard
-  name: salvage magnet machine board
-  description: A machine printed circuit board for a salvage magnet.
-  components:
-  - type: Sprite
-    state: supply
-  - type: MachineBoard
-    prototype: SalvageMagnet
-    stackRequirements:
-      Manipulator: 4
-      Steel: 5
-      CableHV: 5
       Cable: 2
 
 - type: entity

@@ -208,22 +208,6 @@
       weight: 75
       children:
       - id: FlashlightLantern
-      - id: ToolboxEmergencyFilled
-      - !type:GroupSelector
-        children:
-        - id: OxygenTankFilled
-        - id: DoubleEmergencyOxygenTankFilled
-      - !type:GroupSelector
-        children:
-        - id: NitrogenTankFilled
-        - id: DoubleEmergencyNitrogenTankFilled
-      - id: EmergencyFunnyOxygenTankFilled
-      - !type:GroupSelector # EE Plasmeme Change
-        children:
-        - !type:EntSelector
-          id: PlasmaTankFilled
-        - !type:EntSelector
-          id: DoubleEmergencyPlasmaTankFilled
       - !type:GroupSelector
         weight: 3
         children:
@@ -251,7 +235,6 @@
       - id: Multitool
       - id: Shovel
       - id: Welder
-      - id: GasAnalyzer
       - id: SprayPainter
       - id: Flare
       - id: Beaker

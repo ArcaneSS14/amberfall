@@ -2,9 +2,3 @@
 
 ## Static
 
-- type: latheRecipePack
-  id: TraumaPartsStatic
-  recipes:
-  - PartCapacitor
-  - CircuitHousing
-  - CircuitHousingPortable

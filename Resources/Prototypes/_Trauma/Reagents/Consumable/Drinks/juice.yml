@@ -21,9 +21,6 @@
         damage:
           types:
             Heat: 0.5 # Yeah
-      - !type:Flammable
-        multiplier: 0.1
-      - !type:Ignite
       - !type:Explosion # Copy and pasted from genecide and nerfed because funny
         explosionType: Default
         maxIntensity: 0.1

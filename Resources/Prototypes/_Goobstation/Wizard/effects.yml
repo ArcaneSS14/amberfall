@@ -55,9 +55,6 @@
         state: time
   - type: AnimationPlayer
   - type: FreezeContacts
-  - type: GravPulseOnMapInit # This is required to trigger physics collision
-    maxRange: 2
-    baseRadialAcceleration: 0.01
   - type: Physics
     bodyType: Static
   - type: Fixtures

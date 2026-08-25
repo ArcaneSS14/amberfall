@@ -45,9 +45,6 @@
   - type: EmitSoundOnSpawn
     sound:
       path: /Audio/Effects/teleport_arrival.ogg
-  - type: SecretDataAnomaly
-    randomStartSecretMin: 0
-    randomStartSecretMax: 2
   - type: DamageOnInteract
     damage:
       types:
@@ -87,26 +84,6 @@
     color: "#E25822"
     castShadows: false
   - type: PyroclasticAnomaly
-  - type: TempAffectingAnomaly
-    tempChangePerSecond: 25
-    hotspotExposeTemperature: 1000
-  - type: GasProducerAnomaly
-    releasedGas: 3
-    releaseOnMaxSeverity: true
-    spawnRadius: 4
-    tileCount: 5
-    tempChange: 420
-  - type: ProjectileAnomaly
-    projectilePrototype: ProjectileAnomalyFireball
-    projectileSpeed: 0.5
-    minProjectiles: 3
-    maxProjectiles: 6
-  - type: IgnitionSource
-    temperature: 800
-    ignited: true
-  - type: IgniteOnCollide
-    fixtureId: fix1
-    fireStacks: 1
   - type: DamageOnInteract
     damage:
       types:
@@ -141,7 +118,6 @@
     color: "#1e070e"
     castShadows: false
   - type: GravityAnomaly
-  - type: GravityWell
   - type: RadiationSource
   - type: Physics
     bodyType: Dynamic
@@ -289,7 +265,6 @@
     energy: 7.5
     color: "#00ccff"
     castShadows: false
-  - type: BluespaceAnomaly
   - type: Portal
   - type: Fixtures
     fixtures:
@@ -344,13 +319,6 @@
     coreInertPrototype: AnomalyCoreIceInert
     supercriticalSoundAtAnimationStart:
       collection: AnomalyIceSupercritical
-  - type: ExplosionAnomaly
-    supercriticalExplosion: Cryo
-    explosionTotalIntensity: 300
-    explosionDropoff: 2
-    explosionMaxTileIntensity: 20
-  - type: ProjectileAnomaly
-    projectilePrototype: ProjectileIcicle
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -360,13 +328,6 @@
         maxRange: 4
       spawns:
       - IceCrust
-  - type: TempAffectingAnomaly
-    tempChangePerSecond: -25
-    hotspotExposeTemperature: -1000
-  - type: GasProducerAnomaly
-    releasedGas: 8 # Frezon. Please replace if there is a better way to specify this
-    releaseOnMaxSeverity: true
-    spawnRadius: 0
   - type: DamageOnInteract
     damage:
       types:
@@ -913,95 +874,6 @@
     id: anomaly
     solution:
       maxVol: 1550 # Doesn't really matter since it's an anom anyways
-  - type: PuddleCreateAnomaly
-    solution: anomaly
-  - type: InjectionAnomaly
-    solution: anomaly
-    superCriticalInjectRadius: 10
-  - type: ReagentProducerAnomaly
-    solution: anomaly
-    needRecolor: true
-    dangerousChemicals:
-    - UnstableMutagen
-    - Mold
-    - PolytrinicAcid
-    - FerrochromicAcid
-    - FluorosulfuricAcid
-    - SulfuricAcid
-    - HeartbreakerToxin
-    - VentCrud
-    - UncookedAnimalProteins
-    - Thermite
-    - Napalm
-    - Phlogiston
-    - ChlorineTrifluoride
-    - FoamingAgent
-    - BuzzochloricBees
-    - RobustHarvest
-    # Goobstation - Start
-    - Triclor
-    - Cyanide
-    - Genecide
-    - NitricAcid
-    - Heroin
-    - Microplastics
-    - Bungotoxin
-    - WeldingFuel
-    - ChloralHydrate
-    - Allicin
-    - Phenol
-    usefulChemicals:
-    - Cryptobiolin
-    - Dylovene
-    - Arithrazine
-    - Bicaridine
-    - Cryoxadone
-    - Dermaline
-    - Dexalin
-    - DexalinPlus
-    - Epinephrine
-    - Leporazine
-    - Ambuzol
-    - Tricordrazine
-    - Artifexium
-    - Ethylredoxrazine
-    # Goobstation - Start
-    - Probital
-    - Tirimol
-    - Multiver
-    - Immurin
-    - Devirate
-    - Probital
-    - Mitotrophin
-    - Monover
-    - Ibuprofen
-    - Formaldehyde
-    - Morphine
-    funChemicals:
-    - Desoxyephedrine
-    - Ephedrine
-    - THC
-    - SpaceDrugs
-    - Nocturine
-    - MuteToxin
-    - NorepinephricAcid
-    - Pax
-    - Ipecac
-    - Cognizine
-    - Beer
-    - SpaceGlue
-    - SpaceLube
-    - CogChamp
-    - Honk
-    - Carpetium
-    - JuiceThatMakesYouWeh
-    # Goobstation - Start
-    - CatDrugs
-    - MouseBites
-    - Copium
-    - Nostalgia
-    - CrapoToxin
-    - Profanol
   - type: Edible
     edible: Drink
     solution: anomaly
@@ -1113,7 +985,6 @@
     maxPulseLength: 120
     supercriticalSoundAtAnimationStart:
       collection: AnomalyTechSupercritical
-  - type: TechAnomaly
   - type: DeviceLinkSource
     ports:
       - Pulse
@@ -1194,7 +1065,3 @@
         maxRange: 6
       spawns:
       - PresentRandomInsane
-  - type: ProjectileAnomaly
-    projectilePrototype: DrinkLemonLimeCranberryCan
-    minProjectiles: 1
-    maxProjectiles: 3

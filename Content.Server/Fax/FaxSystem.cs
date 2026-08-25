@@ -722,3 +722,4 @@ public sealed partial class FaxSystem : EntitySystem
             RaiseNetworkEvent(new AdminNotificationEvent(new SoundPathSpecifier("/Audio/Machines/high_tech_confirm.ogg")), admin);
     }
 }
+

@@ -46,7 +46,6 @@
           True: { visible: false }
           False: { state: window-solid, visible: true }
   - type: Occluder
-  - type: Airtight
   - type: BlockWeather
   - type: SoundBlocker
   - type: Repairable

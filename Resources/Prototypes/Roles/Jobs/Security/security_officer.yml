@@ -24,10 +24,6 @@
   - !type:OrganChipsSpecial
     chips:
     - SkillChipSecurityOfficer
-  - !type:AddComponentSpecial
-    components:
-    - type: SecurityStaff
-  # </Trauma>
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
 

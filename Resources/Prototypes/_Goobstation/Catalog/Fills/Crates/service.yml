@@ -1,48 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  id: CrateFishingGoodies
-  parent: CratePlastic
-  name: fishing goodies crate
-  description: A couple of fishing rods, a bear, and a hat. Everything you need to catch all fish on the station!
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: FishingRod
-        - id: FishingRodGoon
-        - id: ClothingHeadFishCap
-        - id: DrinkBeerBottleFull
-
-- type: entity
-  id: CrateHolySupplies
-  parent: CratePlastic
-  name: holy supplies crate
-  description: Contains a Bible and 2 Jugs of holy water for religious needs
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: JugHolyWater
-          amount: 2
-        - id: Bible
-
-- type: entity
-  id: CrateCargoForklift
-  parent: CrateLivestock
-  name: Forklift crate
-  description: A perfect utility vehicle for cargo.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: VehicleForklift
-        - id: VehicleKeyForklift
-
-- type: entity
   id: CrateRadioStationAds
   parent: CrateGenericSteel
   name: ads crate
@@ -112,6 +70,7 @@
       weight: 0.1
     - id: CdDiskXgOnboarding4
       weight: 0.1
+
 
 - type: entityTable
   id: RandomVinylDisk
@@ -197,6 +156,7 @@
       weight: 1
     - id: VinylDiskWeAreNumberTwo
       weight: 1
+
 
 - type: entityTable
   id: RandomVinylSleeve

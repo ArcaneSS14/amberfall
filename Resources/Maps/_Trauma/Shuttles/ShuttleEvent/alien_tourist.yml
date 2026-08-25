@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 05/17/2026 14:22:10
-  entityCount: 275
+  entityCount: 257
 maps: []
 grids:
 - 1
@@ -81,69 +81,10 @@ entities:
       chunkCollection:
         version: 3
         nodes: []
-    - type: GridAtmosphere
-      version: 2
-      data:
-        tiles:
-          0,0:
-            0: 53239
-          0,-1:
-            0: 30479
-          -1,0:
-            0: 12748
-            1: 2048
-          0,1:
-            0: 1599
-          -1,1:
-            0: 3226
-          1,0:
-            0: 5444
-          1,1:
-            0: 18
-          1,-1:
-            0: 21778
-          -2,0:
-            0: 1092
-          -2,-1:
-            0: 17416
-          -2,1:
-            0: 8
-          -1,-1:
-            0: 56606
-          0,-2:
-            0: 1792
-          -1,-2:
-            0: 7168
-          1,-2:
-            0: 4096
-        uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-            Oxygen: 21.824879
-            Nitrogen: 82.10312
-        - volume: 2500
-          temperature: 293.14975
-          moles:
-            Oxygen: 20.078888
-            Nitrogen: 75.53487
-        chunkSize: 4
-    - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: TileHistory
       chunkHistory: {}
     - type: ImplicitRoof
-    - type: ExplosionAirtightGrid
-- proto: AirAlarm
-  entities:
-  - uid: 248
-    components:
-    - type: Transform
-      pos: -3.5,1.5
-      parent: 1
-    - type: DeviceList
-      devices:
-      - 240
 - proto: AirlockExternalGlass
   entities:
   - uid: 81
@@ -191,20 +132,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -3.5,0.5
-      parent: 1
-- proto: AtmosDeviceFanDirectional
-  entities:
-  - uid: 25
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 7.5,1.5
-      parent: 1
-  - uid: 30
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 7.5,0.5
       parent: 1
 - proto: AtmosFixNitrogenMarker
   entities:
@@ -818,113 +745,6 @@ entities:
     - type: Transform
       pos: 0.5,6.5
       parent: 1
-- proto: GasMinerNitrogen
-  entities:
-  - uid: 115
-    components:
-    - type: Transform
-      pos: -3.5,4.5
-      parent: 1
-- proto: GasMinerOxygen
-  entities:
-  - uid: 89
-    components:
-    - type: Transform
-      pos: -3.5,2.5
-      parent: 1
-- proto: GasMixer
-  entities:
-  - uid: 256
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -2.5,4.5
-      parent: 1
-    - type: GasMixer
-      inletTwoConcentration: 0.22000003
-      inletOneConcentration: 0.78
-      targetPressure: 4500
-- proto: GasPassiveVent
-  entities:
-  - uid: 58
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-5.5
-      parent: 1
-  - uid: 113
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -3.5,2.5
-      parent: 1
-  - uid: 254
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -3.5,4.5
-      parent: 1
-- proto: GasPipeBend
-  entities:
-  - uid: 255
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -3.5,3.5
-      parent: 1
-  - uid: 257
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -2.5,3.5
-      parent: 1
-- proto: GasPipeStraight
-  entities:
-  - uid: 246
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5,4.5
-      parent: 1
-  - uid: 247
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -0.5,4.5
-      parent: 1
-  - uid: 249
-    components:
-    - type: Transform
-      pos: 0.5,-2.5
-      parent: 1
-  - uid: 250
-    components:
-    - type: Transform
-      pos: 0.5,-3.5
-      parent: 1
-  - uid: 251
-    components:
-    - type: Transform
-      pos: 0.5,-4.5
-      parent: 1
-- proto: GasVentPump
-  entities:
-  - uid: 245
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,4.5
-      parent: 1
-- proto: GasVentScrubber
-  entities:
-  - uid: 240
-    components:
-    - type: Transform
-      pos: 0.5,-1.5
-      parent: 1
-    - type: DeviceNetwork
-      deviceLists:
-      - 248
 - proto: GeneratorBasic15kW
   entities:
   - uid: 41

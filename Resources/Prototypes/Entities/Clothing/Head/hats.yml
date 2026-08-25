@@ -1471,21 +1471,10 @@
     - PetWearable
     - CorgiWearable
     - HamsterWearable
-  - type: Flammable
-    fireSpread: true
-    canResistFire: false
-    alwaysCombustible: true
-    canExtinguish: true
-    damage:
-      types:
-        Heat: 1
   - type: Damageable
     damageModifierSet: Wood
   - type: Injurable
   - type: Appearance
-  - type: FireVisuals
-    sprite: Effects/fire.rsi
-    normalState: fire
   - type: Destructible
     thresholds:
     - trigger:

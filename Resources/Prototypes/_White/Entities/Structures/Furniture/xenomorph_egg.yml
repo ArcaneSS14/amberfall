@@ -52,11 +52,6 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: Flammable
-    fireSpread: false
-    damage:
-      types:
-        Heat: 3
   - type: XenomorphEgg
   - type: StepTrigger
     intersectRatio: 0.2

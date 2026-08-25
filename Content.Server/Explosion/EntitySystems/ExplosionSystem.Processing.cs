@@ -242,12 +242,6 @@ public sealed partial class ExplosionSystem
             ProcessEntity(entity, epicenter, damage, throwForce, id, null, fireStacks, cause);
         }
 
-        // heat the atmosphere
-        if (temperature != null)
-        {
-            _atmosphere.HotspotExpose(grid.Owner, tile, temperature.Value, currentIntensity, cause, true);
-        }
-
         // Walls and reinforced walls will break into girders. These girders will also be considered turf-blocking for
         // the purposes of destroying floors. Again, ideally the process of damaging an entity should somehow return
         // information about the entities that were spawned as a result, but without that information we just have to
@@ -478,16 +472,6 @@ public sealed partial class ExplosionSystem
             }
         }
 
-        // ignite entities with the flammable component
-        if (fireStacksOnIgnite != null)
-        {
-            if (_flammableQuery.TryGetComponent(uid, out var flammable))
-            {
-                flammable.FireStacks += fireStacksOnIgnite.Value;
-                _flammableSystem.Ignite(uid, uid, flammable);
-            }
-        }
-
         // throw
         if (xform != null // null implies anchored or in a container
             && !xform.Anchored
@@ -528,8 +512,6 @@ public sealed partial class ExplosionSystem
 
         if (!CanCreateVacuum)
             canCreateVacuum = false;
-        else if (tileDef.MapAtmosphere)
-            canCreateVacuum = true; // is already a vacuum.
 
         // break the tile into its underlying parts
         int tileBreakages = 0;
@@ -542,9 +524,6 @@ public sealed partial class ExplosionSystem
                 break;
 
             var newDef = (ContentTileDefinition) _tileDefinitionManager[newId];
-
-            if (newDef.MapAtmosphere && !canCreateVacuum)
-                break;
 
             tileDef = newDef;
 

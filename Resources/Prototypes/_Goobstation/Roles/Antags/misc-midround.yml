@@ -80,7 +80,6 @@
   storage:
     back:
     - MedkitCombatFilled
-    - OxygenTankFilled
     - Bible
 
 - type: antagSpecifier
@@ -225,12 +224,10 @@
     mask: ClothingMaskGasSyndicate
     gloves: ClothingHandsChameleonThief
     outerClothing: ClothingOuterHardsuitVoxRaiderStealth
-    suitstorage: ExtendedEmergencyNitrogenTankFilled
     back: ClothingBackpackSyndicate
   storage:
     back:
     - BoxSurvivalSlotsNitrogen
-    - ExtendedEmergencyNitrogenTankFilled
     - ChameleonProjector
     - DartGun
     - ChemistryBottleNocturine

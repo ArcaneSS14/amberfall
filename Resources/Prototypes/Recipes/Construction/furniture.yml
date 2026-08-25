@@ -694,26 +694,6 @@
     CarvingKnowledge: 1
   # </Trauma>
 
-#bathroom
-- type: construction
-  id: ToiletEmpty
-  graph: Toilet
-  startNode: start
-  targetNode: toilet
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-  # <Trauma>
-  theory:
-    FurnitureKnowledge: 0
-    InfrastructureKnowledge: 0
-  practical:
-    MechanicsKnowledge: 1
-  # </Trauma>
-
 #bedroom
 - type: construction
   id: Bed

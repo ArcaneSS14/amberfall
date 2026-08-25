@@ -24,34 +24,11 @@
     id: ClothingOuterCoatExpensive
 
 - type: scrollPrayer
-  id: FurOutfit
-  verb: GIVE
-  subjects: [ "FUR OUTFIT" ]
-  items: !type:AllSelector
-    children:
-    - id: ClothingOuterRedRacoon
-    - id: ClothingHeadHatRedRacoon
-
-- type: scrollPrayer
   id: GauntArmor
   verb: GIVE
   subjects: [ "GAUNT ARMOR", "PLATE MAIL" ]
   items:
     id: ClothingOuterArmorRev
-
-- type: scrollPrayer
-  id: GuardOutfit
-  verb: GIVE
-  subjects: [ "GUARD OUTFIT" ]
-  items: !type:AllSelector
-    children:
-    - id: ClothingEyesGlassesSecurity
-    - id: ClothingHeadsetAltSecurityRegular
-    - id: ClothingHeadHatBeretSecurity
-    - id: ClothingMaskGasSecurity
-    - id: ClothingHandsGlovesColorBlack
-    - id: ClothingShoesBootsJack
-    - id: ClothingUniformJumpsuitSec
 
 - type: scrollPrayer
   id: HighPriest

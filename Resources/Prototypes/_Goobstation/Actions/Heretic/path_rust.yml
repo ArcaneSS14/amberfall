@@ -43,10 +43,6 @@
     requireMagicItem: true
   - type: SpeakOnAction
     sentence: heretic-speech-rust-spread
-  - type: ChangeUseDelayOnAscension
-    newUseDelay: 15
-    requiredPath: Rust
-
 - type: entity
   parent: BaseAction
   id: ActionHereticEntropicPlume

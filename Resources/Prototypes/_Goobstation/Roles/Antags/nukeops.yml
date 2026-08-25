@@ -18,7 +18,6 @@
   parent: SyndicateOperativeGearFull
   equipment:
     outerClothing: ClothingOuterHardsuitSyndie
-    shoes: ClothingShoesBootsMagSyndie
 
 
 - type: startingGear
