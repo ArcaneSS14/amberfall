@@ -1,7 +1,6 @@
 using System.Numerics;
 using Content.Apotheosis.Shared.ZLevels;
 using Robust.Server.GameStates;
-using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Maths;
 using Robust.Shared.Player;
@@ -14,78 +13,51 @@ public sealed partial class ZLevelSystem
     [Dependency] private EntityLookupSystem _lookup = default!;
     [Dependency] private SharedMapSystem _map = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
-    [Dependency] private ITileDefinitionManager _tiles = default!;
+    [Dependency] private ZLevelVisibilitySystem _visibility = default!;
 
     private readonly Dictionary<ICommonSession, HashSet<EntityUid>> _sessionProjectionSources = new();
     private readonly Dictionary<ICommonSession, HashSet<EntityUid>> _sessionProjectedEntities = new();
     private readonly HashSet<ICommonSession> _seenSessions = new();
-    private readonly List<ICommonSession> _removedSessions = new();
+    private readonly HashSet<ICommonSession> _removedSessions = new();
     private readonly HashSet<EntityUid> _projectedCandidates = new();
     private readonly HashSet<EntityUid> _desiredProjectedEntities = new();
     private readonly HashSet<EntityUid> _desiredProjectionSources = new();
-    private readonly List<Entity<MapGridComponent>> _visibleProjectionGrids = new();
+    private readonly List<ZLevelView> _projectionViews = new();
+    private List<Entity<MapGridComponent>> _visibleProjectionGrids = new();
     private readonly List<EntityUid> _removedEntities = new();
 
     private float _pvsAccumulator;
-
     private const float PvsUpdateInterval = 0.5f;
     private const float ProjectedEntityRange = 14f;
+    private const float ProjectionSupportMargin = 2f;
+    // One shared budget for all depths: additional floors do not multiply this cap.
     private const int MaxProjectedEntitiesPerSession = 3000;
 
     private void InitializePvs()
     {
         SubscribeLocalEvent<ZLevelTransitionedEvent>(OnZLevelTransitioned);
+        SubscribeLocalEvent<ZLevelLinkChangedEvent>(OnProjectionLinkChanged);
     }
 
     private void OnZLevelTransitioned(ZLevelTransitionedEvent args)
     {
-        if (!TryComp(args.SourceMap, out MapProjectionComponent? projection) ||
-            projection.SourceMap != args.DestinationMap ||
-            !projection.RenderEntities)
-        {
-            return;
-        }
+        // Refresh all depths on the next update, including falls across several maps.
+        _pvsAccumulator = PvsUpdateInterval;
+    }
 
-        var actors = EntityQueryEnumerator<ActorComponent, TransformComponent>();
-        while (actors.MoveNext(out _, out var actor, out var transform))
-        {
-            if (transform.MapUid != args.SourceMap)
-                continue;
-
-            var actorPosition = _transform.GetMapCoordinates(transform).Position;
-            if ((actorPosition - args.MapPosition).LengthSquared() >
-                ProjectedEntityRange * ProjectedEntityRange ||
-                !CanSeeLowerEntity(args.SourceMap, args.MapPosition))
-            {
-                continue;
-            }
-
-            var session = actor.PlayerSession;
-            if (!_sessionProjectedEntities.TryGetValue(session, out var entities))
-            {
-                entities = new HashSet<EntityUid>();
-                _sessionProjectedEntities.Add(session, entities);
-            }
-
-            if (entities.Add(args.Entity))
-                _pvs.AddSessionDirectOverride(args.Entity, session);
-        }
+    private void OnProjectionLinkChanged(ref ZLevelLinkChangedEvent args)
+    {
+        _pvsAccumulator = PvsUpdateInterval;
     }
 
     private void ShutdownPvs()
     {
         foreach (var (session, sources) in _sessionProjectionSources)
-        {
-            foreach (var uid in sources)
-                _pvs.RemoveForceSend(uid, session);
-        }
-
+        foreach (var uid in sources)
+            _pvs.RemoveForceSend(uid, session);
         foreach (var (session, entities) in _sessionProjectedEntities)
-        {
-            foreach (var uid in entities)
-                _pvs.RemoveSessionDirectOverride(uid, session);
-        }
-
+        foreach (var uid in entities)
+            _pvs.RemoveSessionOverride(uid, session);
         _sessionProjectionSources.Clear();
         _sessionProjectedEntities.Clear();
     }
@@ -95,7 +67,6 @@ public sealed partial class ZLevelSystem
         _pvsAccumulator += frameTime;
         if (_pvsAccumulator < PvsUpdateInterval)
             return;
-
         _pvsAccumulator = 0f;
         UpdatePvsSubscriptions();
     }
@@ -103,37 +74,23 @@ public sealed partial class ZLevelSystem
     private void UpdatePvsSubscriptions()
     {
         _seenSessions.Clear();
-
         var actors = EntityQueryEnumerator<ActorComponent, TransformComponent>();
         while (actors.MoveNext(out _, out var actor, out var transform))
         {
             var session = actor.PlayerSession;
             _seenSessions.Add(session);
-
-            if (transform.MapUid is { } upperMap &&
-                TryComp(upperMap, out MapProjectionComponent? projection) &&
-                projection.SourceMap is { } lowerMap &&
-                TryComp(lowerMap, out MapComponent? lowerMapComponent))
+            _desiredProjectionSources.Clear();
+            _desiredProjectedEntities.Clear();
+            if (transform.MapUid is { } upper && HasComp<ZLevelProjectionComponent>(upper))
             {
-                var actorPosition = _transform.GetMapCoordinates(transform).Position;
-                var bounds = Box2.CenteredAround(
-                    actorPosition,
-                    new Vector2(ProjectedEntityRange * 2f));
-
-                UpdateProjectionSources(session, lowerMap, lowerMapComponent, bounds);
-                UpdateProjectedEntities(
-                    session,
-                    upperMap,
-                    lowerMap,
-                    lowerMapComponent,
-                    projection,
-                    bounds);
+                var position = _transform.GetMapCoordinates(transform).Position;
+                var bounds = Box2.CenteredAround(position, new Vector2(ProjectedEntityRange * 2f));
+                _visibility.BuildViews(upper, bounds, _projectionViews);
+                foreach (var view in _projectionViews)
+                    CollectProjection(view);
             }
-            else
-            {
-                ClearProjectionSources(session);
-                ClearProjectedEntities(session);
-            }
+            SyncOverrides(session, _sessionProjectionSources, _desiredProjectionSources, true);
+            SyncOverrides(session, _sessionProjectedEntities, _desiredProjectedEntities, false);
         }
 
         _removedSessions.Clear();
@@ -142,161 +99,81 @@ public sealed partial class ZLevelSystem
             if (!_seenSessions.Contains(session))
                 _removedSessions.Add(session);
         }
-
         foreach (var session in _sessionProjectedEntities.Keys)
         {
-            if (!_seenSessions.Contains(session) && !_removedSessions.Contains(session))
+            if (!_seenSessions.Contains(session))
                 _removedSessions.Add(session);
         }
-
+        _desiredProjectionSources.Clear();
+        _desiredProjectedEntities.Clear();
         foreach (var session in _removedSessions)
         {
-            ClearProjectionSources(session);
-            ClearProjectedEntities(session);
+            SyncOverrides(session, _sessionProjectionSources, _desiredProjectionSources, true);
+            SyncOverrides(session, _sessionProjectedEntities, _desiredProjectedEntities, false);
         }
     }
 
-    private void UpdateProjectionSources(
-        ICommonSession session,
-        EntityUid sourceMap,
-        MapComponent sourceMapComponent,
-        Box2 bounds)
+    private void CollectProjection(ZLevelView view)
     {
-        _desiredProjectionSources.Clear();
-        _desiredProjectionSources.Add(sourceMap);
+        var bounds = view.Bounds.Enlarged(ProjectionSupportMargin);
+        _desiredProjectionSources.Add(view.SourceMap);
         _visibleProjectionGrids.Clear();
-        var visibleGrids = _visibleProjectionGrids;
-        _map.FindGridsIntersecting(
-            sourceMapComponent.MapId,
-            bounds,
-            ref visibleGrids,
-            approx: true,
-            includeMap: false);
-
-        foreach (var grid in visibleGrids)
+        _map.FindGridsIntersecting(view.MapId, bounds, ref _visibleProjectionGrids, approx: true, includeMap: false);
+        foreach (var grid in _visibleProjectionGrids)
             _desiredProjectionSources.Add(grid.Owner);
 
-        if (!_sessionProjectionSources.TryGetValue(session, out var current))
-        {
-            current = new HashSet<EntityUid>();
-            _sessionProjectionSources.Add(session, current);
-        }
-
-        _removedEntities.Clear();
-        foreach (var uid in current)
-        {
-            if (!_desiredProjectionSources.Contains(uid))
-                _removedEntities.Add(uid);
-        }
-
-        foreach (var uid in _removedEntities)
-        {
-            _pvs.RemoveForceSend(uid, session);
-            current.Remove(uid);
-        }
-
-        foreach (var uid in _desiredProjectionSources)
-        {
-            if (current.Add(uid))
-                _pvs.AddForceSend(uid, session);
-        }
-    }
-
-    private void UpdateProjectedEntities(
-        ICommonSession session,
-        EntityUid upperMap,
-        EntityUid sourceMap,
-        MapComponent sourceMapComponent,
-        MapProjectionComponent projection,
-        Box2 bounds)
-    {
-        if (!projection.RenderEntities)
-        {
-            ClearProjectedEntities(session);
+        if (!view.RenderEntities || _desiredProjectedEntities.Count >= MaxProjectedEntitiesPerSession)
             return;
-        }
-
         _projectedCandidates.Clear();
-        _desiredProjectedEntities.Clear();
-        _lookup.GetEntitiesIntersecting(
-            sourceMapComponent.MapId,
-            bounds,
-            _projectedCandidates,
+        _lookup.GetEntitiesIntersecting(view.MapId, bounds, _projectedCandidates,
             LookupFlags.Uncontained | LookupFlags.Approximate);
-
         foreach (var uid in _projectedCandidates)
         {
             if (_desiredProjectedEntities.Count >= MaxProjectedEntitiesPerSession)
                 break;
-
-            if (uid == sourceMap ||
-                HasComp<MapGridComponent>(uid) ||
-                !TryComp(uid, out TransformComponent? transform) ||
-                transform.MapUid != sourceMap)
-            {
+            if (uid == view.SourceMap || HasComp<MapGridComponent>(uid) ||
+                !TryComp(uid, out TransformComponent? transform) || transform.MapUid != view.SourceMap)
                 continue;
-            }
-
-            var mapPosition = _transform.GetMapCoordinates(transform).Position;
-            if (CanSeeLowerEntity(upperMap, mapPosition))
+            var position = _transform.GetMapCoordinates(transform).Position;
+            if (ZLevelApertures.IsNear(view.Apertures, position, ProjectionSupportMargin, view.ApertureBounds))
                 _desiredProjectedEntities.Add(uid);
         }
+    }
 
-        if (!_sessionProjectedEntities.TryGetValue(session, out var current))
+    private void SyncOverrides(ICommonSession session,
+        Dictionary<ICommonSession, HashSet<EntityUid>> subscriptions, HashSet<EntityUid> desired, bool force)
+    {
+        if (!subscriptions.TryGetValue(session, out var current))
         {
+            if (desired.Count == 0)
+                return;
             current = new HashSet<EntityUid>();
-            _sessionProjectedEntities.Add(session, current);
+            subscriptions.Add(session, current);
         }
-
         _removedEntities.Clear();
         foreach (var uid in current)
         {
-            if (!_desiredProjectedEntities.Contains(uid))
+            if (!desired.Contains(uid))
                 _removedEntities.Add(uid);
         }
-
         foreach (var uid in _removedEntities)
         {
-            _pvs.RemoveSessionDirectOverride(uid, session);
+            if (force)
+                _pvs.RemoveForceSend(uid, session);
+            else
+                _pvs.RemoveSessionOverride(uid, session);
             current.Remove(uid);
         }
-
-        foreach (var uid in _desiredProjectedEntities)
+        foreach (var uid in desired)
         {
-            if (current.Add(uid))
-                _pvs.AddSessionDirectOverride(uid, session);
+            if (!current.Add(uid))
+                continue;
+            if (force)
+                _pvs.AddForceSend(uid, session);
+            else
+                _pvs.AddSessionOverride(uid, session);
         }
-    }
-
-    private bool CanSeeLowerEntity(EntityUid upperMap, Vector2 mapPosition)
-    {
-        if (!TryComp(upperMap, out MapComponent? mapComponent))
-            return false;
-
-        var mapCoordinates = new MapCoordinates(mapPosition, mapComponent.MapId);
-        if (!_map.TryFindGridAt(mapCoordinates, out var upperGrid, out var upperGridComponent))
-            return true;
-
-        var coordinates = _transform.ToCoordinates(upperGrid, mapCoordinates);
-        var tile = _map.GetTileRef(upperGrid, upperGridComponent, coordinates).Tile;
-        return tile.IsEmpty || _tiles[tile.TypeId].RenderZLevelBelow;
-    }
-
-    private void ClearProjectionSources(ICommonSession session)
-    {
-        if (!_sessionProjectionSources.Remove(session, out var sources))
-            return;
-
-        foreach (var uid in sources)
-            _pvs.RemoveForceSend(uid, session);
-    }
-
-    private void ClearProjectedEntities(ICommonSession session)
-    {
-        if (!_sessionProjectedEntities.Remove(session, out var entities))
-            return;
-
-        foreach (var uid in entities)
-            _pvs.RemoveSessionDirectOverride(uid, session);
+        if (current.Count == 0)
+            subscriptions.Remove(session);
     }
 }

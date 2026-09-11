@@ -144,6 +144,8 @@ namespace Content.Client.Viewport
 
             DebugTools.AssertNotNull(_viewport);
 
+            var beforeRender = new BeforeViewportRenderEvent(this, _viewport!, handle);
+            _entityManager.EventBus.RaiseEvent(EventSource.Local, ref beforeRender);
             _viewport!.Render();
 
             if (_queuedScreenshots.Count != 0)

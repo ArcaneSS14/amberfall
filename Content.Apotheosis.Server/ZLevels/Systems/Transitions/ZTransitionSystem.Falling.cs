@@ -106,6 +106,6 @@ public sealed partial class ZTransitionSystem
 
     private bool CanFallThrough(Tile tile)
     {
-        return tile.IsEmpty || _tiles[tile.TypeId].FallThroughZLevel;
+        return tile.IsEmpty || (_tiles[tile.TypeId] is Content.Shared.Maps.ContentTileDefinition { FallThroughZLevel: true });
     }
 }

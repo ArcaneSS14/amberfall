@@ -122,7 +122,7 @@ public sealed partial class ZLevelSystem
 
         if (projectBelow)
         {
-            var projection = EnsureComp<MapProjectionComponent>(upperMap);
+            var projection = EnsureComp<ZLevelProjectionComponent>(upperMap);
             blurRadius = Math.Clamp(blurRadius, 0f, 8f);
 
             if (projection.SourceMap != lowerMap ||
@@ -137,7 +137,7 @@ public sealed partial class ZLevelSystem
         }
         else
         {
-            RemComp<MapProjectionComponent>(upperMap);
+            RemComp<ZLevelProjectionComponent>(upperMap);
         }
 
         var linkChanged = new ZLevelLinkChangedEvent(lowerMap);
@@ -175,7 +175,7 @@ public sealed partial class ZLevelSystem
         if (!TryComp(upperMap, out ZLevelLinkComponent? upperLink) ||
             upperLink.LowerMap is not { } lowerMap)
         {
-            RemComp<MapProjectionComponent>(upperMap);
+            RemComp<ZLevelProjectionComponent>(upperMap);
             RemComp<ZLevelManagedComponent>(upperMap);
             return false;
         }
@@ -196,7 +196,7 @@ public sealed partial class ZLevelSystem
                 Dirty(lowerMap, lowerLink);
         }
 
-        RemComp<MapProjectionComponent>(upperMap);
+        RemComp<ZLevelProjectionComponent>(upperMap);
         RemComp<ZLevelManagedComponent>(upperMap);
 
         var linkChanged = new ZLevelLinkChangedEvent(lowerMap);

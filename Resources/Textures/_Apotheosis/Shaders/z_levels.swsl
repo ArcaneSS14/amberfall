@@ -1,0 +1,39 @@
+// The lower viewport already contains its own lighting. Upper-floor FOV is
+// applied by the engine after this overlay, upper tiles and sprites are drawn.
+light_mode unshaded;
+
+uniform sampler2D lowerTexture;
+uniform sampler2D openingMask;
+uniform highp vec2 blurStep;
+uniform highp vec2 sourceOrigin;
+uniform highp vec2 sourceSize;
+uniform highp vec2 maskOrigin;
+uniform highp vec2 maskSize;
+
+void fragment() {
+    highp vec2 uv = FRAGCOORD.xy * SCREEN_PIXEL_SIZE;
+    highp float mask = zTextureSpec(openingMask, maskOrigin + uv * maskSize).r;
+    uv = (uv - sourceOrigin) / sourceSize;
+    if (uv.x < 0.0 || uv.y < 0.0 || uv.x > 1.0 || uv.y > 1.0) {
+        discard;
+    }
+    if (mask < 0.5) {
+        discard;
+    }
+
+    highp vec4 color = zTextureSpec(lowerTexture, uv);
+    if (blurStep.x > 0.0 || blurStep.y > 0.0) {
+        // A bounded nine-tap blur; keep the aperture edge itself crisp.
+        color *= 4.0;
+        color += zTextureSpec(lowerTexture, uv + vec2(blurStep.x, 0.0)) * 2.0;
+        color += zTextureSpec(lowerTexture, uv - vec2(blurStep.x, 0.0)) * 2.0;
+        color += zTextureSpec(lowerTexture, uv + vec2(0.0, blurStep.y)) * 2.0;
+        color += zTextureSpec(lowerTexture, uv - vec2(0.0, blurStep.y)) * 2.0;
+        color += zTextureSpec(lowerTexture, uv + blurStep);
+        color += zTextureSpec(lowerTexture, uv - blurStep);
+        color += zTextureSpec(lowerTexture, uv + vec2(blurStep.x, -blurStep.y));
+        color += zTextureSpec(lowerTexture, uv + vec2(-blurStep.x, blurStep.y));
+        color /= 16.0;
+    }
+    COLOR = color;
+}

@@ -34,6 +34,78 @@ public sealed class ZLevelMapTransitionTest : GameTest
     };
 
     [Test]
+    public async Task LinksAndTransitionsDoNotRequireProjection()
+    {
+        await Server.WaitAssertion(() =>
+        {
+            var map = SEntMan.System<MapSystem>();
+            var levels = SEntMan.System<ZLevelSystem>();
+            var upper = map.CreateMap(out var upperId);
+            var lower = map.CreateMap(out var lowerId);
+            SEntMan.AddComponent(upper, new ZLevelComponent
+            {
+                Group = "no-projection", Level = 1, ProjectBelow = false,
+            });
+            SEntMan.AddComponent(lower, new ZLevelComponent
+            {
+                Group = "no-projection", Level = 0,
+            });
+            levels.Update(0f);
+            Assert.That(SEntMan.HasComponent<ZLevelProjectionComponent>(upper), Is.False);
+            Assert.That(SEntMan.GetComponent<ZLevelLinkComponent>(upper).LowerMap, Is.EqualTo(lower));
+
+            var upperGrid = map.CreateGridEntity(upperId);
+            var lowerGrid = map.CreateGridEntity(lowerId);
+            map.SetTile(upperGrid, Vector2i.Zero, new Tile(1));
+            map.SetTile(lowerGrid, new Vector2i(1, 0), new Tile(1));
+            var falling = SEntMan.SpawnEntity(PhysicsDummy, new EntityCoordinates(upperGrid.Owner, 0.5f, 0.5f));
+            SEntMan.System<TransformSystem>().SetCoordinates(falling, new EntityCoordinates(upperGrid.Owner, 1.5f, 0.5f));
+            Assert.That(SEntMan.GetComponent<TransformComponent>(falling).MapUid, Is.EqualTo(lower));
+
+            Assert.That(levels.LinkMaps(upper, lower, 3f, false), Is.True);
+            Assert.That(SEntMan.GetComponent<ZLevelProjectionComponent>(upper).BlurRadius, Is.EqualTo(3f));
+            Assert.That(SEntMan.GetComponent<ZLevelProjectionComponent>(upper).RenderEntities, Is.False);
+            Assert.That(levels.UnlinkLower(upper), Is.True);
+            Assert.That(SEntMan.HasComponent<ZLevelProjectionComponent>(upper), Is.False);
+            Assert.That(SEntMan.HasComponent<ZLevelLinkComponent>(lower), Is.False);
+            map.DeleteMap(upperId);
+            map.DeleteMap(lowerId);
+        });
+    }
+
+    [Test]
+    public async Task ProjectionSleepsUnderSolidFloorsAndWakesForHoles()
+    {
+        await Server.WaitAssertion(() =>
+        {
+            var map = SEntMan.System<MapSystem>();
+            var visibility = SEntMan.System<ZLevelVisibilitySystem>();
+            var transform = SEntMan.System<TransformSystem>();
+            map.CreateMap(out var mapId);
+            var grid = map.CreateGridEntity(mapId);
+            var bounds = Box2.FromDimensions(Vector2.Zero, new Vector2(2));
+            Assert.That(visibility.HasOpening(mapId, bounds), Is.True, "Empty space must expose the lower floor.");
+            for (var x = -3; x < 4; x++)
+            for (var y = -3; y < 4; y++)
+                map.SetTile(grid, new Vector2i(x, y), new Tile(1));
+
+            Assert.That(visibility.HasOpening(mapId, bounds), Is.False);
+            map.SetTile(grid, Vector2i.Zero, Tile.Empty);
+            Assert.That(visibility.HasOpening(mapId, bounds), Is.True);
+            var pit = Server.ResolveDependency<ITileDefinitionManager>()["FloorApotheosisTransparentPit"];
+            map.SetTile(grid, Vector2i.Zero, new Tile(pit.TileId));
+            Assert.That(visibility.HasOpening(mapId, bounds), Is.True, "A nonempty transparent pit is also an opening.");
+
+            map.SetTile(grid, Vector2i.Zero, new Tile(1));
+            transform.SetWorldRotation(grid.Owner, Angle.FromDegrees(45));
+            Assert.That(visibility.HasOpening(mapId, bounds), Is.False, "Solid rotated grids can still skip projection.");
+            map.SetTile(grid, Vector2i.Zero, Tile.Empty);
+            Assert.That(visibility.HasOpening(mapId, bounds), Is.True, "Rotated holes must not be culled.");
+            map.DeleteMap(mapId);
+        });
+    }
+
+    [Test]
     public async Task AutomaticallyLinksMapLevelComponents()
     {
         var server = Pair.Server;
@@ -67,7 +139,7 @@ public sealed class ZLevelMapTransitionTest : GameTest
         await server.WaitAssertion(() =>
         {
             Assert.That(
-                entityManager.GetComponent<MapProjectionComponent>(upperMap).SourceMap,
+                entityManager.GetComponent<ZLevelProjectionComponent>(upperMap).SourceMap,
                 Is.EqualTo(lowerMap));
         });
 
@@ -109,7 +181,7 @@ public sealed class ZLevelMapTransitionTest : GameTest
 
             Assert.That(zLevelSystem.LinkMaps(upperMap, lowerMap), Is.True);
             Assert.That(
-                entityManager.GetComponent<MapProjectionComponent>(upperMap).SourceMap,
+                entityManager.GetComponent<ZLevelProjectionComponent>(upperMap).SourceMap,
                 Is.EqualTo(lowerMap));
 
             fallingEntity = entityManager.SpawnEntity(
@@ -191,7 +263,7 @@ public sealed class ZLevelMapTransitionTest : GameTest
             var lowerMap = mapSystem.CreateMap(out lowerMapId);
             var upperGrid = mapSystem.CreateGridEntity(upperMapId);
             var lowerGrid = mapSystem.CreateGridEntity(lowerMapId);
-            var pitDefinition = tileDefinitions["FloorApotheosisTransparentPit"];
+            var pitDefinition = (Content.Shared.Maps.ContentTileDefinition) tileDefinitions["FloorApotheosisTransparentPit"];
 
             Assert.Multiple(() =>
             {
@@ -281,15 +353,15 @@ public sealed class ZLevelMapTransitionTest : GameTest
             canopyTile = mapSystem.GetTileRef(upperGrid, upperGridComponent, new Vector2i(1, 1)).Tile;
             Assert.Multiple(() =>
             {
-                Assert.That(firstCanopy.SpawnedBranches, Has.Count.EqualTo(8));
-                Assert.That(firstCanopy.CanopyTiles, Has.Count.EqualTo(9));
+                Assert.That(firstCanopy.SpawnedBranches, Has.Count.EqualTo(10));
+                Assert.That(firstCanopy.CanopyTiles, Has.Count.EqualTo(13));
                 Assert.That(canopyTile, Is.Not.EqualTo(originalTile));
             });
 
             secondTree = entityManager.SpawnEntity(
                 "AncientTree1",
                 new EntityCoordinates(lowerGrid, 1.5f, 1.5f));
-            Assert.That(entityManager.GetComponent<TreeCanopyComponent>(secondTree).SpawnedBranches, Has.Count.EqualTo(8));
+            Assert.That(entityManager.GetComponent<TreeCanopyComponent>(secondTree).SpawnedBranches, Has.Count.EqualTo(10));
 
             entityManager.DeleteEntity(firstTree);
             Assert.That(mapSystem.GetTileRef(upperGrid, upperGridComponent, new Vector2i(1, 1)).Tile, Is.EqualTo(canopyTile));

@@ -21,7 +21,7 @@ public sealed partial class ZLevelComponent : Component
     public bool ProjectBelow = true;
 
     /// <summary>
-    /// Gaussian blur radius applied to the floor immediately below this one, in screen pixels.
+    /// Blur sample offset applied to the floor immediately below this one, in screen pixels.
     /// </summary>
     [DataField]
     public float BlurRadius = 1.5f;
