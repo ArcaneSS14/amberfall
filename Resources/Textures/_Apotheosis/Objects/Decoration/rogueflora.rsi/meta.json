@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "license": null,
-  "copyright": null,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/Twilight-Fortress-SS13/Twilight-Axis/blob/main/icons/obj/flora/rogueflora.dmi and converted from BYOND format for Space Station 14",
   "size": {
     "x": 32,
     "y": 32
