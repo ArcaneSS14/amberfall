@@ -172,8 +172,8 @@ public sealed partial class BindSoulEvent : InstantActionEvent
     [DataField]
     public EntityWhitelist Blacklist;
 
-    [DataField]
-    public EntProtoId Entity = "MobSkeletonPerson";
+    [DataField(required: true)]
+    public EntProtoId Entity;
 
     [DataField]
     public SoundSpecifier? Sound;

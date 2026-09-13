@@ -8,29 +8,6 @@
       children:
       - id: MobTick # These need to be killable by one dude with a shovel.
         weight: 0.3
-      - !type:GroupSelector
-        weight: 0.7
-        children:
-        # Please alphabetize <3
-        - id: ClosetMaintenanceFilledRandom
-          weight: 3
-        - id: CrateEngineeringMiniJetpack
-        - id: CratePermaEscapeBureaucracy
-        - id: CratePermaEscapeComs
-          weight: 2
-        - id: CratePermaEscapeDigging
-          weight: 2
-        - id: CratePermaEscapeEVA
-        - id: CratePermaEscapeGiftsFromSyndicate
-        - id: CratePermaEscapeGun
-        - id: CratePermaEscapeLights
-        - id: CratePermaEscapeMats
-          weight: 2
-        - id: CratePermaEscapeMerc
-        - id: CratePermaEscapeTowercap
-          weight: 2
-        - id: CrateTrashCartFilled
-        - id: CrateServiceCustomSmokable
     offset: 0.0
 
 - type: entity
@@ -206,15 +183,6 @@
         - id: HappyHonkNukieSnacks
         - id: CyberPen
           prob: 0.10
-        - !type:GroupSelector
-          children:
-          - id: CockroachCube
-          - id: AbominationCube
-            weight: 0.20
-          - id: SpaceCarpCube
-            weight: 0.20
-          - id: SyndicateSponge
-            weight: 0.20
         - id: MindShieldImplanter
           prob: 0.20
         - id: ClothingHandsGlovesConducting # funny

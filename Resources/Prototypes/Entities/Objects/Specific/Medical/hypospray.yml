@@ -240,40 +240,6 @@
 
 - type: entity
   parent: ChemicalMedipen
-  id: EmergencyMedipen
-  name: emergency medipen
-  description: A rapid and safe way to heal minor damage, stop bleeding, and stabilize patients for personnel without advanced medical knowledge. # goobstation
-  components:
-  # <Trauma>
-  - type: Tag
-    tags:
-    - Medipen
-    - EmergencyMedipen
-  # </Trauma>
-  - type: Sprite
-    sprite: Objects/Specific/Medical/medipen.rsi
-    layers:
-    - state: medipen
-      map: ["enum.SolutionContainerLayers.Fill"]
-  - type: SolutionContainerVisuals
-    maxFillLevels: 1
-    changeColor: false
-    emptySpriteName: medipen_empty
-  - type: Solution
-    solution:
-      maxVol: 15 # Trauma - you gotta set the maxVol if you change the amount of chemicals
-      reagents:
-      - ReagentId: Epinephrine
-        Quantity: 5 # Trauma - was 15
-      # <Trauma>
-      - ReagentId: Atropine
-        Quantity: 5
-      # </Trauma>
-      - ReagentId: TranexamicAcid
-        Quantity: 5
-
-- type: entity
-  parent: ChemicalMedipen
   id: AntiPoisonMedipen
   name: poison auto-injector
   description: A rapid dose of anti-poison. Causes extreme stress when mixed with other medications. # Goob

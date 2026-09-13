@@ -18,8 +18,6 @@
         - id: MedicatedSuture
         - id: RegenerativeMesh
         - id: Bloodpack
-        - id: EmergencyMedipen
-
 - type: entity
   parent: [ ClothingBeltDeathsquadWebbing, BaseCentcommContraband ]
   suffix: Filled, DO NOT MAP
@@ -72,9 +70,6 @@
         - id: Bloodpack
         - id: BruteAutoInjector
         - id: BurnAutoInjector
-        - id: EmergencyMedipen
-          amount: 3
-
 - type: entity
   id: ClothingBeltSheathFilledNavyOfficer
   parent: ClothingBeltSheath

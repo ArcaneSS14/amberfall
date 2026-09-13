@@ -141,30 +141,6 @@
         amount: 5
 
 - type: entity
-  parent: CrateGenericSteel
-  id: CrateEngineeringJetpack
-  name: jetpack crate
-  description: Two jetpacks for those who don't know how to use fire extinguishers.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: JetpackBlue
-        amount: 2
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateEngineeringMiniJetpack
-  name: mini jetpack crate
-  description: Two mini jetpacks for those who want an extra challenge.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: JetpackMini
-        amount: 2
-
-- type: entity
   parent: CrateEngineering
   id: CrateAirlockKit
   name: airlock kit
@@ -257,4 +233,3 @@
         tableId: RandomTechBoardTable
         rolls: !type:RangeNumberSelector
           range: 6, 8
-

@@ -69,8 +69,6 @@
     id: GmanPDA
     ears: ClothingHeadsetChronolegioneer
     pocket1: SonicScrewdriver
-  inhand:
-  - BriefcaseCentcomm
   storage:
     back:
     - DeterrentCaseFilled

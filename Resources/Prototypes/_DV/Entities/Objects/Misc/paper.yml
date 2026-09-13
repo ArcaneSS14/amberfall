@@ -24,7 +24,7 @@
     backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
     backgroundModulate: "#e0bc99"
     backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
-    contentMargin: 32.0, 16.0, 32.0, 0.0
+    contentMargin: 32.0, 0.0, 32.0, 16.0
 
 # contents set by FugitiveRule or a creative admeme
 - type: entity

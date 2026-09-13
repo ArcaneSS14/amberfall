@@ -13,7 +13,6 @@
   blacklist:
     components:
     - CommandStaff
-    - SecurityStaff
   # </Trauma>
   components:
     - type: PermanentBlindness
@@ -40,7 +39,6 @@
   blacklist:
     components:
     - CommandStaff
-    - SecurityStaff
   # </Trauma>
   components:
     - type: Narcolepsy
@@ -75,7 +73,6 @@
     components:
       # <Trauma>
       - CommandStaff
-      - SecurityStaff
       # </Trauma>
       - BorgChassis
   components:
@@ -124,7 +121,6 @@
   blacklist:
     components:
     - CommandStaff
-    - SecurityStaff
   # </Trauma>
   components:
   - type: ImpairedMobility

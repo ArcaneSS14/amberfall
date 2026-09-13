@@ -31,10 +31,6 @@
     tags:
     - Justice
     - HighRiskItem
-  - type: GuideHelp
-    guides:
-    - Security
-    - Antagonists
   - type: Sharp
   - type: Tool
     qualities:

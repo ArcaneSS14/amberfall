@@ -118,10 +118,6 @@
     materialComposition:
       Steel: 100
       Plastic: 100
-  - type: GuideHelp
-    guides:
-    - Security
-
 - type: entity
   name: truncheon
   parent: [BaseItem, BaseSecurityContraband]
@@ -167,11 +163,6 @@
   - type: Appearance
   - type: StaticPrice
     price: 80
-  - type: GuideHelp
-    guides:
-    - Security
-    - Antagonists
-
 - type: entity
   name: flash
   parent: [BaseItem, BaseSecurityScienceCommandContraband]
@@ -226,10 +217,6 @@
           enum.FlashVisualLayers.LightLayer:
             True: {visible: true}
             False: {visible: false}
-    - type: GuideHelp
-      guides:
-      - Security
-      - Antagonists
     - type: Tag
       tags:
       - Flash
@@ -285,7 +272,3 @@
       radius: 0
       softness: 0
       enabled: true
-    - type: GuideHelp
-      guides:
-      - Security
-      - Antagonists

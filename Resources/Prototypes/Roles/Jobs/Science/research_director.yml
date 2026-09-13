@@ -16,7 +16,6 @@
   supervisors: job-supervisors-captain
   antagAdvantage: 75 # Trauma
   guides: # Trauma
-  - Science
   - Command
   access:
   # <Trauma>

@@ -31,10 +31,6 @@
         acts: ["Destruction"]
   - type: Machine
     board: ChemDispenserMachineCircuitboard
-  - type: GuideHelp
-    guides:
-    - Chemicals
-    - Chemist
   - type: StealTarget
     stealGroup: ChemDispenser
   - type: Fixtures
@@ -49,4 +45,3 @@
         layer:
         - MachineLayer
   - type: AmbientMusicMarkerMedical
-

@@ -54,16 +54,6 @@
     max: 5000
 
 - type: stationTrait
-  id: LuckyWinner
-  group: Positive
-  chance: 0.2
-  name: "Lucky winner"
-  report: "Your station has won the grand prize of the annual station charity event. Free snacks will be delivered to the bar every now and then."
-  effects:
-  - !type:StartGameRule
-    rule: LuckyWinnerRule
-
-- type: stationTrait
   id: StrongSupplyLines
   group: Positive
   name: "Strong supply lines"
@@ -74,21 +64,3 @@
     components:
     - type: CargoPriceModifier
       modifier: 0.8
-
-- type: stationTrait
-  id: EvilPunPun
-  group: Positive # crew is safer
-  name: "Perma prisoner"
-  report: "Pun Pun has been locked up in the brig for crimes against humanity. Do not let him escape, but try to keep him alive too."
-  startEffects: # want to move the spawner before it spawns and change the starting gear + ghost role easily
-  - !type:StationQueryEffects
-    compName: PunPunSpawner
-    includePaused: true
-    effects:
-    - !type:AddComponents
-      components:
-      - type: ConditionalSpawner
-        prototypes:
-        - MobMonkeyPunpunPrisoner
-    - !type:NestedEffect
-      proto: LockUp # banished

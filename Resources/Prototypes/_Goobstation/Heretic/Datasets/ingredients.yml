@@ -1,38 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: ritualIngredientDataset
-  id: KnowledgeRitualOrgans
-  ingredients:
-  - whitelist:
-      components:
-      - Eyes
-    name: heretic-ritual-ingredient-eyes
-  - whitelist:
-      components:
-      - Stomach
-    name: heretic-ritual-ingredient-stomach
-  - whitelist:
-      components:
-      - Lung
-    name: heretic-ritual-ingredient-lung
-  - whitelist:
-      components:
-      - Heart
-    name: heretic-ritual-ingredient-heart
-  - whitelist:
-      components:
-      - Liver
-    name: heretic-ritual-ingredient-liver
-  - whitelist:
-      components:
-      - Arm
-    name: heretic-ritual-ingredient-arm
-  - whitelist:
-      components:
-      - Leg
-    name: heretic-ritual-ingredient-leg
-
-- type: ritualIngredientDataset
   id: KnowledgeRitualEasy
   ingredients:
   - whitelist:
@@ -181,7 +149,6 @@
       - Clothing
     blacklist:
       components:
-      - BreathMask
       - IngestionBlocker
       - Blindfold
     name: heretic-ritual-ingredient-sunglasses

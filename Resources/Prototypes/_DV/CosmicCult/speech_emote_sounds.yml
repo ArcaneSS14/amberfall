@@ -16,8 +16,6 @@
       collection: TrenchWhistle
     Yawn:
       path: /Audio/_DV/CosmicCult/Emotes/cosmic_yawn.ogg
-    Gasp:
-      path: /Audio/_DV/CosmicCult/Emotes/cosmic_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_DV/CosmicCult/Emotes/cosmic_ded.ogg
 

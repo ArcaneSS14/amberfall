@@ -29,19 +29,6 @@
       playerRatio: 20
 
 - type: entity
-  parent: Vampire
-  id: SubVampire
-  components:
-  - type: AntagSelection
-    antags:
-    - !type:LinearAntagCount
-      proto: Vampire
-      range:
-        min: 1
-        max: 2
-      playerRatio: 20
-
-- type: entity
   parent: [BaseRoundstartAntagRule, DuoAbductorSpawn ]
   id: SubDuoAbductor
   components:

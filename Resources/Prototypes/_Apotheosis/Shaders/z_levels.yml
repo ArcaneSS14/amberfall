@@ -1,4 +1,0 @@
-- type: shader
-  id: ZLevelProjection
-  kind: source
-  path: /Textures/_Apotheosis/Shaders/z_levels.swsl

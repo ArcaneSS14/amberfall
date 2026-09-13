@@ -11,8 +11,6 @@
     - state: kobold
       sprite: Mobs/Animals/kobold.rsi
   - type: ConditionalSpawner
-    prototypes:
-    - MobKobold
 
 - type: entity
   parent: SpawnMobKobold
@@ -20,8 +18,6 @@
   name: Kobold Ghostrole Spawner
   components:
   - type: ConditionalSpawner
-    prototypes:
-    - MobKoboldGhostrole
 
 - type: entity
   parent: SpawnMobMonkey
@@ -29,5 +25,3 @@
   name: Monkey Ghostrole Spawner
   components:
   - type: ConditionalSpawner
-    prototypes:
-    - MobMonkeyGhostrole

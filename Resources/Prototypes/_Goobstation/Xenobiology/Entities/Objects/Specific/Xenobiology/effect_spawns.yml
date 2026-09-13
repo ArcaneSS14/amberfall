@@ -107,9 +107,6 @@
     - MobMantis
     - MobMantisShrimp
     - MobShrimp
-    - MobDartFrog2
-    - MobDartFrog4
-    - MobDartFrog5
     - MobGorillaAngry
     - MobBearSpace
     - MobKangarooSpace
@@ -123,7 +120,6 @@
     - MobCarpMagic
     - MobCarpHolo
     - MobCarpRainbow
-    - ReagentSlimeSpawner
     - MobAbomination
     - MobHivebot
     - MobHivebotRanged
@@ -161,16 +157,11 @@
   components:
   - type: RandomSpawner
     prototypes:
-    - MobDartFrog1
-    - MobDartFrog3
-    - MobDartFrog6
     - MobBunny
     - MobBunnySea
     - MobBee
     - MobGorilla
     - MobKangaroo
-    - MobMonkey
-    - MobKobold
     - MobMouse
     - MobMouseCancer
     - MobGiantSpider

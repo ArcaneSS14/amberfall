@@ -224,10 +224,6 @@
       Steel: 100
   - type: StaticPrice
     price: 22
-  - type: GuideHelp
-    guides:
-    - Construction
-
 - type: entity
   name: multitool
   parent: BaseItem
@@ -292,9 +288,7 @@
     price: 56
   - type: GuideHelp
     guides:
-    - Networking
     - WirePanels
-    - Airlocks
     - InspectingPower
 
 - type: entity
@@ -350,9 +344,6 @@
           type: NetworkConfiguratorBoundUserInterface
     - type: StaticPrice
       price: 56
-    - type: GuideHelp
-      guides:
-      - Networking
     - type: PhysicalComposition #Goobstation - Recycle update
       materialComposition:
         Steel: 25
@@ -396,7 +387,7 @@
   - type: MultipleTool
     statusShowBehavior: true
     entries:
-      - behavior: Screwing
+      - behavior: [Screwing]
         sprite:
           sprite: Objects/Tools/drill.rsi
           state: drill_screw
@@ -404,7 +395,7 @@
           path: /Audio/Items/drill_use.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
-      - behavior: Anchoring
+      - behavior: [Anchoring]
         sprite:
           sprite: Objects/Tools/drill.rsi
           state: drill_bolt
@@ -501,29 +492,7 @@
   - type: RCD
     isRpd: true
     availablePrototypes:
-    - PipeFourway
-    - PipeStraight
-    - PipeBend
-    - PipeTJunction
-    - OutletInjector
-    - ManualValve
-    - VolumetricPump
-    - PressurePump
-    - VentScrubber
-    - PressureValve
-    - DualPortVent
-    - VentGas
-    - VentPassive
-    - MixerGas
-    - Radiator
-    - RadiatorBend
-    - SignalValve
-    - CanisterPort
-    - FilterGas
     # <Goobstation>
-    - FilterInline
-    - RadiatorInline
-    - RadiatorInlineBend
     # </Goobstation>
     - Deconstruct
   - type: LimitedCharges
@@ -612,7 +581,7 @@
   - type: MultipleTool
     statusShowBehavior: true
     entries:
-      - behavior: Screwing
+      - behavior: [Screwing]
         sprite:
           sprite: Objects/Tools/omnitool.rsi
           state: omnitool-screwing
@@ -620,7 +589,7 @@
           path: /Audio/Items/drill_use.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
-      - behavior: Prying
+      - behavior: [Prying]
         sprite:
           sprite: Objects/Tools/omnitool.rsi
           state: omnitool-prying
@@ -628,7 +597,7 @@
           path: /Audio/Items/jaws_pry.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
-      - behavior: Anchoring
+      - behavior: [Anchoring]
         sprite:
           sprite: Objects/Tools/omnitool.rsi
           state: omnitool-wrenching
@@ -636,7 +605,7 @@
           path: /Audio/Items/ratchet.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
-      - behavior: Cutting
+      - behavior: [Cutting]
         sprite:
           sprite: Objects/Tools/omnitool.rsi
           state: omnitool-snipping
@@ -644,7 +613,7 @@
           path: /Audio/Items/jaws_cut.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
-      - behavior: Pulsing
+      - behavior: [Pulsing]
         sprite:
           sprite: Objects/Tools/omnitool.rsi
           state: omnitool-pulsing

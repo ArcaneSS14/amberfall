@@ -73,8 +73,5 @@
       enabled: true
       isLooped: true
       reverseWhenFinished: true
-  - type: GuideHelp
-    guides:
-    - CosmicCult
   - type: WarpPoint
   - type: CosmicEffigy

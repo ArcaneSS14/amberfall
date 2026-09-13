@@ -6,7 +6,6 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-devil-description
-  guides: [ Devil ]
   requirements:
   - !type:RoleTimeRequirement
     role: JobLawyer

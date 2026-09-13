@@ -8,11 +8,9 @@
   description: cosmiccult-description
   showInVote: false
   rules:
-  - BasicRoundstartVariation
   - BasicStationEventScheduler
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - SubGamemodesRule
   - CosmicCult

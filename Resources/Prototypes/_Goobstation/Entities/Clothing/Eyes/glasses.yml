@@ -222,10 +222,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-  - type: GuideHelp
-    guides:
-    - Security
-    - Antagonists
   - type: ThermalVision
     flashDurationMultiplier: 2
     pulseTime: 2

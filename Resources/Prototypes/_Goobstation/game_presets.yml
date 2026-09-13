@@ -10,13 +10,11 @@
   description: changeling-gamemode-description
   showInVote: false
   rules:
-  - BasicRoundstartVariation
   - BasicStationEventScheduler
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - SubGamemodesRule
   - Changeling
 
 # no subgamemodes for the mixed presets
@@ -30,7 +28,6 @@
   description: traitorling-description
   showInVote: false
   rules:
-  - BasicRoundstartVariation
   - BasicStationEventScheduler
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
@@ -49,7 +46,6 @@
   description: nukeops-description
   showInVote: false
   rules:
-  - BasicRoundstartVariation
   - BasicStationEventScheduler
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
@@ -67,7 +63,6 @@
   description: nukeops-description
   showInVote: false
   rules:
-  - BasicRoundstartVariation
   - BasicStationEventScheduler
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
@@ -86,7 +81,6 @@
   description: revtraitor-description
   showInVote: false
   rules:
-  - BasicRoundstartVariation
   - BasicStationEventScheduler
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
@@ -104,7 +98,6 @@
   description: revling-description
   showInVote: false
   rules:
-  - BasicRoundstartVariation
   - BasicStationEventScheduler
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
@@ -121,13 +114,11 @@
   description: blob-description
   showInVote: false
   rules:
-  - BasicRoundstartVariation
   - BasicStationEventScheduler
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - SubGamemodesRule
   - BlobGameMode
 
 - type: gamePreset
@@ -138,13 +129,11 @@
   description: honkops-description
   showInVote: false
   rules:
-  - BasicRoundstartVariation
   - BasicStationEventScheduler
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - SubGamemodesRule
   - Honkops
 
 - type: gamePreset
@@ -156,11 +145,9 @@
   showInVote: false
   minPlayers: 30
   rules:
-  - BasicRoundstartVariation
   - BasicStationEventScheduler
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - SubGamemodesRule
   - XenomorphsInfestationRoundstart

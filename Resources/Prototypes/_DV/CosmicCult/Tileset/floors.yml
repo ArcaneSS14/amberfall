@@ -9,7 +9,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepCosmic
-  heatCapacity: 10000
 
 - type: tile
   id: FloorCosmicSmooth
@@ -20,7 +19,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepCosmic
-  heatCapacity: 10000
 
 - type: tile
   id: FloorCosmicHalf
@@ -31,7 +29,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepCosmic
-  heatCapacity: 10000
 
 - type: tile
   id: FloorCosmicSplit
@@ -42,7 +39,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepCosmic
-  heatCapacity: 10000
 
 - type: tile
   id: FloorCosmicNotched
@@ -53,7 +49,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepCosmic
-  heatCapacity: 10000
 
 - type: tile
   id: FloorCosmicCorruption
@@ -70,7 +65,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepCosmic
-  heatCapacity: 10000
 
 - type: tile
   id: FloorCosmicVoid
@@ -81,7 +75,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepCosmic
-  heatCapacity: 10000
 
 - type: entity
   id: FloorCosmicDecay

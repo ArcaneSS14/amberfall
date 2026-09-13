@@ -186,10 +186,6 @@
     - HamsterWearable
     - PetWearable
     - WhitelistChameleon
-  - type: GuideHelp
-    guides:
-    - Security
-    - Antagonists
   - type: IdentityBlocker
     coverage: EYES
   - type: Armor # provide more coverage than default ones. you know, it's a sec one

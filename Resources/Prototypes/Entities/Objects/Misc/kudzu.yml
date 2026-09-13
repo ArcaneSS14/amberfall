@@ -174,10 +174,7 @@
       - ReagentId: Protein
         Quantity: 1
   - type: AutoEmote # Meat Kudzu used to have respirator, but couldn't breathe so all it would do is gasp.
-    emotes:
-    - MeatGasp
   - type: Tag
     tags:
     - Meat
     - Ruminant
-

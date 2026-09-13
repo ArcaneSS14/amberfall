@@ -133,13 +133,16 @@ public sealed partial class MultiShaderSpriteOverlay : Overlay
                         postHandle.DrawTextureRectRegion(target.Texture, quad, data.Color);
                     }
 
-                    if (sprite.PostShader == null)
-                        return;
-
-                    postHandle.UseShader(sprite.PostShader);
-                    if (sprite.RaiseShaderEvent)
-                        _entMan.EventBus.RaiseLocalEvent(uid, new BeforePostShaderRenderEvent(sprite, viewport));
-                    postHandle.DrawTextureRectRegion(target.Texture, quad);
+                    foreach (var postShader in _sprite.GetPostShaders(sprite))
+                    {
+                        postHandle.UseShader(postShader.Shader);
+                        if (postShader.RaiseShaderEvent)
+                        {
+                            var ev = new BeforePostShaderRenderEvent(postShader.Id, postShader.Shader, sprite, viewport);
+                            _entMan.EventBus.RaiseLocalEvent(uid, ref ev);
+                        }
+                        postHandle.DrawTextureRectRegion(target.Texture, quad);
+                    }
                 },
                 Color.Transparent);
 

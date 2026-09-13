@@ -41,44 +41,6 @@
 
 - type: entity
   parent: BaseFlatpack
-  id: SolarAssemblyFlatpack
-  name: solar assembly flatpack
-  description: A flatpack used for constructing a solar assembly.
-  components:
-  - type: Flatpack
-    entity: SolarAssembly
-  - type: Sprite
-    layers:
-    - state: solar-assembly-part
-  - type: StaticPrice
-    price: 75
-  - type: Tag # Goobstation - stupid chuds didnt add the tag
-    tags:
-    - DroneUsable
-    - SolarAssemblyFlatpack
-
-- type: entity
-  parent: BaseFlatpack
-  id: AmeControllerFlatpack
-  name: AME controller flatpack
-  description: A flatpack used for constructing the terminal that controls the antimatter engine.
-  components:
-  - type: Sprite
-    layers:
-    - state: ame-part
-    - state: overlay
-      color: "#EFB341"
-  - type: Flatpack
-    entity: AmeController
-  - type: StaticPrice
-    price: 1000
-  - type: GuideHelp
-    guides:
-    - AME
-    - Power
-
-- type: entity
-  parent: BaseFlatpack
   id: AmePartFlatpack
   name: AME flatpack
   description: A flatpack used for constructing an antimatter engine reactor.
@@ -108,22 +70,6 @@
   - type: Sprite
     layers:
     - state: singularity-generator
-  - type: GuideHelp
-    guides:
-    - SingularityEngine
-    - Power
-
-- type: entity
-  parent: BaseFlatpack
-  id: RadiationCollectorFlatpack
-  name: radiation collector flatpack
-  description: A flatpack used for constructing a radiation collector.
-  components:
-  - type: Flatpack
-    entity: RadiationCollectorNoTank
-  - type: Sprite
-    layers:
-    - state: radiation-collector
   - type: GuideHelp
     guides:
     - SingularityEngine
@@ -172,22 +118,6 @@
   - type: Sprite
     layers:
     - state: tesla-generator
-  - type: GuideHelp
-    guides:
-    - TeslaEngine
-    - Power
-
-- type: entity
-  parent: BaseFlatpack
-  id: TeslaCoilFlatpack
-  name: tesla coil flatpack
-  description: A flatpack used for constructing a tesla coil.
-  components:
-  - type: Flatpack
-    entity: TeslaCoil
-  - type: Sprite
-    layers:
-    - state: tesla-coil
   - type: GuideHelp
     guides:
     - TeslaEngine
@@ -283,18 +213,3 @@
   - type: GuideHelp
     guides:
     - Botany
-    - Chemicals
-
-- type: entity
-  parent: [ BaseFlatpack, BaseSyndicateContraband ]
-  id: SyndicateMicrowaveFlatpack
-  name: donk co. microwave flatpack
-  description: A flatpack used for constructing a microwave too hot for Nanotrasen to handle.
-  components:
-  - type: Item
-    size: Normal
-  - type: Flatpack
-    entity: SyndicateMicrowave
-  - type: GuideHelp
-    guides:
-    - FoodRecipes

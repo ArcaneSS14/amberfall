@@ -1,14 +1,4 @@
 - type: cargoProduct
-  id: MedicalSupplies
-  icon:
-    sprite: Objects/Specific/Medical/firstaidkits.rsi
-    state: firstaid
-  product: CrateMedicalSupplies
-  cost: 2400
-  category: cargoproduct-category-name-medical
-  group: market
-
-- type: cargoProduct
   id: MedicalChemistrySupplies
   icon:
     sprite: Objects/Specific/Chemistry/beaker.rsi
@@ -99,16 +89,6 @@
   group: market
 
 - type: cargoProduct
-  id: MedicalBiosuit
-  icon:
-    sprite: Clothing/Head/Hoods/Bio/bio.rsi
-    state: icon
-  product: CrateVirologyBiosuit
-  cost: 800
-  category: cargoproduct-category-name-medical
-  group: market
-
-- type: cargoProduct
   id: MedicalMindShieldImplants
   icon:
     sprite: Objects/Specific/Medical/implanter.rsi
@@ -145,15 +125,5 @@
     state: icon
   product: CrateChemistryD
   cost: 750
-  category: cargoproduct-category-name-medical
-  group: market
-
-- type: cargoProduct  # GoobStation Addition - Bounty
-  id: SurgicalSupplies
-  icon:
-    sprite: Structures/Storage/Crates/surgery.rsi
-    state: icon
-  product: CrateMedicalSurgery
-  cost: 2300
   category: cargoproduct-category-name-medical
   group: market

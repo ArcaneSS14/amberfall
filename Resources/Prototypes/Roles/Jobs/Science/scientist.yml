@@ -17,8 +17,6 @@
   extendedAccess:
   - Robotics
   - Genetics
-  guides:
-  - Science
   special:
   - !type:OrganChipsSpecial
     chips:

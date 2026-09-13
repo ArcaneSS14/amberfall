@@ -353,45 +353,6 @@
     node: finish
 
 - type: entity
-  parent: [ BaseItem, BaseMinorContraband, MetalToolDurability ]
-  id: PipeSpear
-  name: pipe shank
-  description: A pipe sharpened to a nasty point, could be a great throwing weapon.
-  components:
-  - type: WeaponClass
-    class: Knife
-  - type: Sprite
-    sprite: _Trauma/Objects/Weapons/Melee/spear_pipe.rsi
-    state: icon
-  - type: MeleeWeapon
-    animationRotation: -90
-    wideAnimationRotation: -135
-    attackRate: 1
-    damage:
-      types:
-        Piercing: 10
-    heavyStaminaCost: 6
-    soundHit:
-      path: /Audio/Weapons/bladeslice.ogg
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,2,0
-    storedRotation: 90
-  - type: Construction
-    graph: PipeShank
-    node: finish
-  - type: EmbeddableProjectile
-    offset: -0.15,0.0
-  - type: ThrowingAngle
-    angle: 180
-  - type: LandAtCursor
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Piercing: 15
-
-- type: entity
   parent: [ BaseItem, BaseMinorContraband ]
   id: IncompleteWoodenSword
   name: incomplete wooden sword

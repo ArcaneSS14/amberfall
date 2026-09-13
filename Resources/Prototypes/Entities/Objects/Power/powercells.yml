@@ -61,46 +61,6 @@
       maxVol: 5
 
 - type: entity
-  name: potato battery
-  description: Someone's stuck two nails and some wire in a large potato. Somehow it provides a little charge.
-  id: PowerCellPotato
-  parent: BasePowerCell
-  components:
-  - type: Sprite
-    layers:
-    - state: potato
-  - type: Battery
-    maxCharge: 70
-    startingCharge: 70
-  - type: Tag
-    tags:
-      - PotatoBattery
-      - DroneUsable # Goobstation
-  - type: Construction
-    graph: PowerCellPotato
-    node: potatobattery
-  # <Goob>
-  - type: PowerSupplier
-    supplyRate: 30
-    supplyRampRate: 500
-    supplyRampTolerance: 500
-    voltage: Apc
-    enabled: true
-  - type: NodeContainer
-    examinable: true
-    nodes:
-      output:
-        !type:CableDeviceNode
-        nodeGroupID: Apc
-  - type: PowerMonitoringDevice
-    group: Generator
-    loadNode: output
-    sprite: Structures/Power/power.rsi
-    state: generator
-  - type: Anchorable
-  # </Goob>
-
-- type: entity
   name: small-capacity power cell
   description: A rechargeable power cell. This is the cheapest kind you can find.
   id: PowerCellSmall

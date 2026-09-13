@@ -67,9 +67,6 @@
     enabled: false
     sound:
       collection: ServerFans
-  - type: GuideHelp
-    guides:
-    - Science
   - type: ResearchPointSource # Goobstation
     pointspersecond: 15
     active: true
@@ -125,6 +122,3 @@
           SheetSteel1:
             min: 1
             max: 1
-  - type: GuideHelp
-    guides:
-    - Science

@@ -50,18 +50,3 @@
   components:
   - type: Sprite
     state: needlefish
-
-- type: entity
-  parent: [ BaseFishTrauma, BaseSlicingRefinable, BaseMagicalContraband ]
-  id: FishSquid
-  name: squid
-  description: Full of ink!
-  components:
-  - type: Sprite
-    state: squid
-  - type: ToolRefinable
-    refineResult:
-    - id: FoodMeatFish
-      amount: 2
-    - id: MagicInkRandom
-      amount: 5

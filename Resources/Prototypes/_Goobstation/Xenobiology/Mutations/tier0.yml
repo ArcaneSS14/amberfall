@@ -12,7 +12,6 @@
     maxOffspring: 4
     mutationChance: 0.45
     potentialMutations:
-    - OrangeMutation
     - PurpleMutation
     - BlueMutation
     - MetalMutation

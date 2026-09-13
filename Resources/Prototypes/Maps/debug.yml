@@ -18,8 +18,8 @@
   id: Dev
   mapName: Dev
   mapLayers:
-    - /Maps/_Apotheosis/Test/dev.yml
-    - /Maps/_Apotheosis/Test/dev_2l.yml
+    - /Maps/_Amberfall/Test/dev.yml
+    - /Maps/_Amberfall/Test/dev_2l.yml
   minPlayers: 0
   stations:
     Empty:

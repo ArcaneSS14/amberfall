@@ -65,9 +65,6 @@
     damageModifierSet: Metallic
   - type: Injurable
     damageContainer: StructuralInorganic
-  - type: GuideHelp
-    guides:
-    - Networking
   - type: Destructible
     thresholds:
     - trigger:

@@ -168,8 +168,6 @@
     - state: dart_frog2
       sprite: _Trauma/Mobs/Animals/dart_frog.rsi
   - type: ConditionalSpawner
-    prototypes:
-    - MobDartFrog2
 
 - type: entity
   parent: MarkerBase
@@ -182,8 +180,6 @@
     - state: dart_frog4
       sprite: _Trauma/Mobs/Animals/dart_frog.rsi
   - type: ConditionalSpawner
-    prototypes:
-    - MobDartFrog4
 
 - type: entity
   parent: MarkerBase
@@ -196,8 +192,6 @@
     - state: dart_frog5
       sprite: _Trauma/Mobs/Animals/dart_frog.rsi
   - type: ConditionalSpawner
-    prototypes:
-    - MobDartFrog5
 
 - type: entity
   parent: MarkerBase

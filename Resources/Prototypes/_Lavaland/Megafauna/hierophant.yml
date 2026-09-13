@@ -28,17 +28,6 @@
       actionId: ActionHierophantBox
 
 - type: megafaunaSelector
-  id: ActionHierophantCrosses
-  selector: !type:PerformActionSelector
-    delay: !type:AngerNumberSelector
-      range: 1.0,3.0
-      inverse: true
-    actionId: ActionHierophantCrosses
-    conditions:
-    - !type:ActionAvailableCondition
-      actionId: ActionHierophantCrosses
-
-- type: megafaunaSelector
   id: ActionHierophantChasers
   selector: !type:PerformActionSelector
     delay: !type:AngerNumberSelector

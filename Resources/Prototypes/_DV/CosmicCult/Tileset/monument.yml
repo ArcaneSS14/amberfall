@@ -83,9 +83,6 @@
     stage: 2
     canActivate: true
   - type: MonumentTransforming
-  - type: GuideHelp
-    guides:
-    - CosmicCult
   - type: WarpPoint
     location: The Monument
   - type: CosmicCultExamine

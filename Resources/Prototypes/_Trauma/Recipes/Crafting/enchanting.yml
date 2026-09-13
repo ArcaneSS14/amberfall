@@ -22,10 +22,5 @@
 
 - type: construction
   parent: BaseDemonology
-  id: CraftInk
-  graph: RandomInk
-
-- type: construction
-  parent: BaseDemonology
   id: DefaceBible
   graph: DefaceBible

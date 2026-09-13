@@ -137,9 +137,6 @@
         - id: CartridgeSaline
         - id: CartridgeBicaridine
         - id: CartridgeDermaline
-        - id: CartridgeAtropine
-        # </Goob>
-
 - type: entity
   id: ClothingBeltPlantFilled
   parent: ClothingBeltPlant

@@ -249,27 +249,27 @@
     - type: MultipleTool
       statusShowBehavior: true
       entries:
-      - behavior: Screwing
+      - behavior: [Screwing]
         useSound:
           path: /Audio/Items/drill_use.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
-      - behavior: Prying
+      - behavior: [Prying]
         useSound:
           path: /Audio/Items/jaws_pry.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
-      - behavior: Anchoring
+      - behavior: [Anchoring]
         useSound:
           path: /Audio/Items/ratchet.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
-      - behavior: Cutting
+      - behavior: [Cutting]
         useSound:
           path: /Audio/Items/jaws_cut.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
-      - behavior: Pulsing
+      - behavior: [Pulsing]
         changeSound:
           path: /Audio/Items/change_drill.ogg
 
@@ -534,13 +534,6 @@
 
 - type: entity
   parent: BaseXenoArtifactEffect
-  id: XenoArtifactPolyMonkey
-  description: Temporarily reshape flesh to fur
-  components:
-  - type: XAEPolymorph
-
-- type: entity
-  parent: BaseXenoArtifactEffect
   id: XenoArtifactPolyLizard
   description: Temporarily reshape flesh to scale
   components:
@@ -720,8 +713,6 @@
       weight: 2.0
     - id: XenoArtifactEmp
       weight: 2.0
-    - id: XenoArtifactPolyMonkey
-      weight: 2.0
     - id: XenoArtifactPolyLuminous
       weight: 2.0
     - id: XenoArtifactPolyLizard
@@ -768,4 +759,3 @@
       weight: 10.0
     - id: XenoArtifactDrill
       weight: 10.0
-

@@ -414,9 +414,6 @@
   description: Capable of replacing tanks in a gas tank dispenser. Handle with care.
   components:
   - type: VendingMachineRestock
-    canRestock:
-    - TankDispenserEVAInventory
-    - TankDispenserEngineeringInventory
   - type: Sprite
     layers:
     - state: base

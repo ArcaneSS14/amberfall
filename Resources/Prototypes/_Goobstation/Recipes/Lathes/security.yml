@@ -34,14 +34,6 @@
     Plasma: 100
 
 - type: latheRecipe
-  id: CartridgeAtropine
-  result: CartridgeAtropine
-  completetime: 1
-  materials:
-    Glass: 100
-    Plasma: 200
-
-- type: latheRecipe
   id: CartridgeBicaridine
   result: CartridgeBicaridine
   completetime: 1

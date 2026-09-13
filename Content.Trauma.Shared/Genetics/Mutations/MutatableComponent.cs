@@ -56,10 +56,10 @@ public sealed partial class MutatableComponent : Component
     public int MaxInstability = 100;
 
     /// <summary>
-    /// Status effect added while DNA is melting.
+    /// Optional status effect added when instability reaches its limit.
     /// </summary>
     [DataField]
-    public EntProtoId<StatusEffectComponent> MeltingEffect = "DnaMeltingStatusEffect";
+    public EntProtoId<StatusEffectComponent>? MeltingEffect;
 
     /// <summary>
     /// How long <see cref="MeltingEffect"/> lasts for.

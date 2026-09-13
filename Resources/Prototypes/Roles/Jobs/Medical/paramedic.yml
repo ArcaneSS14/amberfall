@@ -21,7 +21,6 @@
   # <Trauma>
   guides:
   - MedicalDoctor
-  - Medical
   - Medicine
   special:
   - !type:OrganChipsSpecial

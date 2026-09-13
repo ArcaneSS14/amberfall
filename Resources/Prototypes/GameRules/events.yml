@@ -112,17 +112,6 @@
   - type: ClericalErrorRule
 
 - type: entity
-  parent: BaseGameRule
-  id: ClosetSkeleton
-  components:
-  - type: StationEvent
-    weight: 5
-    duration: 1
-    minimumPlayers: 10
-  - type: RandomEntityStorageSpawnRule
-    prototype: MobSkeletonCloset
-
-- type: entity
   parent: BaseAntagGhostRoleRule
   id: DragonSpawn
   components:
@@ -640,7 +629,6 @@
     - !type:NestedSelector
       tableId: BasicAntagEventsTrauma
     # </Trauma>
-    - id: ClosetSkeleton
     - id: KingRatMigration
     #- id: RevenantSpawn  # GoobStation - removed till rework
     - !type:NestedSelector

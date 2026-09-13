@@ -140,20 +140,6 @@
     CarvingKnowledge: 4
 
 - type: construction
-  id: PipeShank
-  graph: PipeShank
-  startNode: start
-  targetNode: finish
-  category: construction-category-weapons
-  objectType: Item
-  qualityPrototype: ShitCraft
-  theory:
-    FabricationKnowledge: 0
-  practical:
-    WeaponsKnowledge: 4
-    CarvingKnowledge: 4
-
-- type: construction
   id: WoodenSword
   graph: WoodenSword
   startNode: start

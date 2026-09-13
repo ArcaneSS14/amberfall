@@ -14,7 +14,6 @@
   requirements: # I hate time locked roles but this should be enough time for someone to be acclimated
   - !type:OverallPlaytimeRequirement
     time: 5h
-  guides: [ Wizard ]
   creditImage: /Textures/_Trauma/EndCredits/Antags/wizard.png # Trauma
 
 - type: antagSpecifier

@@ -83,7 +83,6 @@
   - type: GuideHelp
     guides:
     - Chef
-    - FoodRecipes
 
 - type: entity
   name: butcher's cleaver
@@ -123,7 +122,6 @@
   - type: GuideHelp
     guides:
     - Chef
-    - FoodRecipes
 
 - type: entity
   name: combat knife

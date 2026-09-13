@@ -52,11 +52,6 @@
       ownerOnly: true # Lesser minds cannot comprehend the arcane secrets within
       balance:
         WizCoin: 10 # prices are balanced around this 10 point maximum and how strong the spells are
-    - type: GuideHelp # Goobstation
-      guides:
-      - Wizard
-
-# Used for the Antag Planet
 - type: entity
   id: WizardsGrimoireGhost
   name: ghostly grimoire
@@ -88,9 +83,6 @@
       balance:
         WizCoin: 50 #Increased currency for more use per book
     - type: EnchantingTool # Goobstation
-    - type: GuideHelp # Goobstation
-      guides:
-      - Wizard
     - type: Tag
       tags:
       - GrimoireGhost

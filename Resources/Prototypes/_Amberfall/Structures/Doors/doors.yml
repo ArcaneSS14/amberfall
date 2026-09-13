@@ -1,0 +1,236 @@
+- type: entity
+  abstract: true
+  parent: BaseMaterialDoorNavMap
+  id: BaseMedievalDoor
+  name: old door
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/Doors/doors.rsi
+    layers:
+    - state: wood
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: Door
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    openingAnimationTime: 0.8
+    closingAnimationTime: 0.8
+    openSound:
+      path: /Audio/Effects/door_open.ogg
+    closeSound:
+      path: /Audio/Effects/door_close.ogg
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorWood
+  name: rough wooden door
+  components:
+  - type: Sprite
+    layers: [{ state: wood, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: wood
+    openingSpriteState: woodopening
+    closingSpriteState: woodclosing
+    openSpriteState: woodopen
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorWoodHandle
+  name: wooden handled door
+  components:
+  - type: Sprite
+    layers: [{ state: woodhandle, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: woodhandle
+    openingSpriteState: woodhandleopening
+    closingSpriteState: woodhandleclosing
+    openSpriteState: woodhandleopen
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorWoodGreen
+  name: green wooden door
+  components:
+  - type: Sprite
+    layers: [{ state: wcg, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: wcg
+    openingSpriteState: wcgopening
+    closingSpriteState: wcgclosing
+    openSpriteState: wcgopen
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorWoodViolet
+  name: violet wooden door
+  components:
+  - type: Sprite
+    layers: [{ state: wcv, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: wcv
+    openingSpriteState: wcvopening
+    closingSpriteState: wcvclosing
+    openSpriteState: wcvopen
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorWoodRed
+  name: red wooden door
+  components:
+  - type: Sprite
+    layers: [{ state: wcr, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: wcr
+    openingSpriteState: wcropening
+    closingSpriteState: wcrclosing
+    openSpriteState: wcropen
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorDungeon
+  name: dungeon door
+  components:
+  - type: Sprite
+    layers: [{ state: donjon, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: donjon
+    openingSpriteState: donjonopening
+    closingSpriteState: donjonclosing
+    openSpriteState: dunjonopen
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorWoodWindow
+  name: windowed wooden door
+  components:
+  - type: Sprite
+    layers: [{ state: woodwindow, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: woodwindow
+    openingSpriteState: woodwindowopening
+    closingSpriteState: woodwindowclosing
+    openSpriteState: woodwindowopen
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorFancyWood
+  name: ornate wooden door
+  components:
+  - type: Sprite
+    layers: [{ state: fancy_wood, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: fancy_wood
+    openingSpriteState: fancy_woodopening
+    closingSpriteState: fancy_woodclosing
+    openSpriteState: fancy_woodopen
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorStone
+  name: stone door
+  components:
+  - type: Sprite
+    layers: [{ state: stone, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: stone
+    openingSpriteState: stoneopening
+    closingSpriteState: stoneclosing
+    openSpriteState: stoneopen
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [Destruction]
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorBars
+  name: barred door
+  components:
+  - type: Sprite
+    layers: [{ state: bars, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: bars
+    openingSpriteState: barsopening
+    closingSpriteState: barsclosing
+    openSpriteState: barsopen
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 140
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [Destruction]
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorSwing
+  name: swinging door
+  components:
+  - type: Sprite
+    layers: [{ state: swing, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    bumpOpen: true
+    closedSpriteState: swing
+    openingSpriteState: swingopening
+    closingSpriteState: swingclosing
+    openSpriteState: swingopen
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorServing
+  name: serving hatch
+  components:
+  - type: Sprite
+    layers: [{ state: serving, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: serving
+    openingSpriteState: servingopening
+    closingSpriteState: servingclosing
+    openSpriteState: servingopen
+    openingAnimationTime: 2.4
+    closingAnimationTime: 1.6
+
+- type: entity
+  parent: BaseMedievalDoor
+  id: MedievalDoorArcyne
+  name: arcyne door
+  components:
+  - type: Sprite
+    layers: [{ state: arcyne, map: ["enum.DoorVisualLayers.Base"] }]
+  - type: Door
+    closedSpriteState: arcyne
+    openingSpriteState: arcyneopening
+    closingSpriteState: arcyneclosing
+    openSpriteState: arcyneopen
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+  - type: Damageable
+    damageModifierSet: Metallic

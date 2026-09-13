@@ -1,8 +1,0 @@
-- type: paintableGroup
-  cost: 2
-  id: Canisters
-  defaultStyle: storage
-  styles:
-    carbon-dioxide: CarbonDioxideCanister
-    nitrous-oxide: NitrousOxideCanister
-    water-vapor: WaterVaporCanister

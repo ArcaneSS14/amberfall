@@ -12,7 +12,6 @@
   startingGear: GeneticistGear
   icon: JobIconGeneticist
   supervisors: job-supervisors-rd
-  guides: [ Genetics ]
   access:
   - Research
   - Maintenance
@@ -25,7 +24,6 @@
 - type: startingGear
   id: GeneticistGear
   equipment:
-    id: GeneticistPDA
     ears: ClothingHeadsetScience
     pocket1: HandLabeler
 

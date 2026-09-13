@@ -20,7 +20,6 @@
   - EnergyCautery
   - AdvancedBoneGel
   - BorgModuleAdvancedSurgery
-  - MedicalBiofabMachineBoard
   technologyPrerequisites:
   - AdvancedEntertainment
   position: -1,4

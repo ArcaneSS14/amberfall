@@ -5,7 +5,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  heatCapacity: 10000
   tileRipResistance: 4500 # Goob
   baseTurf: Plating
   baseWhitelist:
@@ -1343,7 +1342,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepTile
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1355,7 +1353,6 @@
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemGrass
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1367,7 +1364,6 @@
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemGrassJungle
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1384,7 +1380,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1401,7 +1396,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1418,7 +1412,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
   weather: true
 
 # Asteroid
@@ -1446,7 +1439,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1472,7 +1464,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1513,7 +1504,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1540,7 +1530,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1568,7 +1557,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1594,7 +1582,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1620,7 +1607,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
   weather: true
 
 - type: tile
@@ -1656,7 +1642,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
 
 - type: tile
   id: FloorCaveDrought
@@ -1676,7 +1661,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
 
 - type: tile
   id: FloorFlesh
@@ -1789,7 +1773,6 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
-  heatCapacity: 10000
 
 #Hull tiles
 - type: tile
@@ -1955,7 +1938,6 @@
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemXenoborg
-  heatCapacity: 10000
 
 - type: tile
   id: FloorXeno

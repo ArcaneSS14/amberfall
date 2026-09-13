@@ -1,16 +1,16 @@
+using Robust.Shared.Prototypes;
 // <Trauma>
 using Content.Goobstation.Common.Construction;
 // </Trauma>
 using Content.Shared.Construction.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Server.Construction.Components
 {
     [RegisterComponent] // Trauma - removed Access
     public sealed partial class ConstructionComponent : SharedConstructionComponent // Goobstation - extend shared component
     {
-        [DataField("graph", required:true, customTypeSerializer:typeof(PrototypeIdSerializer<ConstructionGraphPrototype>))]
-        public string Graph { get; set; } = string.Empty;
+        [DataField("graph", required:true)]
+        public ProtoId<ConstructionGraphPrototype> Graph { get; set; } = string.Empty;
 
         [DataField("node", required:true)]
         public string Node { get; set; } = default!;

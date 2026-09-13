@@ -446,7 +446,7 @@ public abstract partial class SharedSpellsSystem : CommonSpellsSystem
             return;
         }
 
-        _bindSoul.Resurrect(ent.Owner, soulBound.Item.Value, ent.Comp, soulBound);
+        _bindSoul.Resurrect(ent.Owner, soulBound.Item.Value, ent.Comp, soulBound, ev.Entity);
         ev.Handled = true;
     }
 

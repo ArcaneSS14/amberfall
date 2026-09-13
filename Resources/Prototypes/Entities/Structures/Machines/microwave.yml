@@ -128,7 +128,6 @@
   - type: GuideHelp
     guides:
     - Chef
-    - FoodRecipes
   - type: Item
     sprite: Structures/Machines/microwave.rsi
     size: Ginormous
@@ -161,4 +160,3 @@
     walkModifier: 0.7
     sprintModifier: 0.7
   - type: DamageExaminable
-

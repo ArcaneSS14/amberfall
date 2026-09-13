@@ -40,7 +40,6 @@
   - type: AllowSuitStorage
     whitelist:
       components:
-      - GasTank
       - XenoVacuumTank # Goob
 
 # for clothing that has a single item slot to insert and alt click out.

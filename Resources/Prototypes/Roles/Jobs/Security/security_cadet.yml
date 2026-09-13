@@ -13,8 +13,6 @@
   startingGear: SecurityCadetGear
   icon: "JobIconSecurityCadet"
   supervisors: job-supervisors-security
-  guides: # Trauma
-  - Security
   access:
   - Security
   - Brig

@@ -225,7 +225,7 @@ public abstract partial class SharedMoverController : VirtualController
         DebugTools.Assert(physicsComponent.BodyType == BodyType.KinematicController || physicsComponent.BodyType == BodyType.Kinematic,
             $"Input mover: {ToPrettyString(uid)} in HandleMobMovement is not the correct BodyType, BodyType found: {physicsComponent.BodyType}, expected: KinematicController.");
 
-        // Apotheosis uses regular ground movement everywhere, including off-grid space.
+        // Amberfall uses regular ground movement everywhere, including off-grid space.
         var weightless = _gravity.IsWeightless(uid);
 
         UsedMobMovement[uid] = true;

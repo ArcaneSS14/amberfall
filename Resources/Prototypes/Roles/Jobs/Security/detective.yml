@@ -12,7 +12,6 @@
   supervisors: job-supervisors-hos
   guides: # Trauma
   - Forensics
-  - Security
   access:
   - Security
   - Brig

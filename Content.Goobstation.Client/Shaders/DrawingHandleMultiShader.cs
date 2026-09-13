@@ -104,4 +104,15 @@ public sealed class DrawingHandleMultiShader(
     {
         handle.DrawTextureRectsUnmodulated(texture, rects);
     }
+
+    public override void RenderSpritePostShaders(
+        Entity<SpriteComponent> sprite,
+        IReadOnlyList<SpriteComponent.PostShaderEntry> postShaders,
+        Angle eyeRotation,
+        Angle worldRotation,
+        Vector2 worldPosition,
+        Direction? overrideDirection)
+    {
+        handle.RenderSpritePostShaders(sprite, postShaders, eyeRotation, worldRotation, worldPosition, overrideDirection);
+    }
 }

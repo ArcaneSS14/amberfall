@@ -1,7 +1,6 @@
 - type: vendingMachineInventory
   id: GoodCleanFunInventory
   startingInventory:
-    DiceBag: 6
     Paper: 8
     d6Dice: 8
     ChessBoard: 1

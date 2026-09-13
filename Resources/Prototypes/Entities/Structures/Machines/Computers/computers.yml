@@ -439,10 +439,6 @@
     radius: 1.5
     energy: 1.6
     color: "#b53ca1"
-  - type: GuideHelp
-    guides:
-    - Science
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerAnalysisConsole
@@ -808,11 +804,6 @@
     range: 200
     ports:
       - OrderSender
-  - type: GuideHelp
-    guides:
-    - Cargo
-
-# Request console variants.
 - type: entity
   id: ComputerCargoOrdersEngineering
   parent: ComputerCargoOrders
@@ -1018,7 +1009,6 @@
   - type: GuideHelp
     guides:
     - CargoBounties
-    - Cargo
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -1239,10 +1229,6 @@
     radius: 1.5
     energy: 1.6
     color: "#b89f25"
-  - type: GuideHelp
-    guides:
-    - Cargo
-
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerMassMedia

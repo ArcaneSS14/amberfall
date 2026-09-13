@@ -1,0 +1,247 @@
+- type: entity
+  abstract: true
+  parent: Stairs
+  id: BaseLevelStairs
+  name: level stairs
+  description: A stairway connecting adjacent levels.
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/stairs.rsi
+    state: stairs
+    drawdepth: FloorTiles
+  - type: Icon
+    sprite: _Amberfall/Structures/stairs.rsi
+    state: stairs
+  - type: Rotatable
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      transition:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.48,-0.48,0.48,0.48"
+        layer:
+        - WallLayer
+        mask:
+        - ItemMask
+        density: 1000
+        hard: false
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.2
+    ignoreWeightless: true
+
+- type: entity
+  abstract: true
+  parent: BaseLevelStairs
+  id: BaseLevelStairsUp
+  components:
+  - type: ZTransition
+    direction: Up
+
+- type: entity
+  abstract: true
+  parent: BaseLevelStairs
+  id: BaseLevelStairsDown
+  components:
+  - type: ZTransition
+    direction: Down
+
+- type: entity
+  parent: BaseLevelStairsUp
+  id: LevelStairsDeepUp
+  name: deep stone stairs
+  suffix: Up
+  components:
+  - type: Sprite
+    state: deep_descend
+  - type: Icon
+    state: deep_descend
+
+- type: entity
+  parent: BaseLevelStairsDown
+  id: LevelStairsDeepDown
+  name: deep stone stairs
+  suffix: Down
+  components:
+  - type: Sprite
+    state: deep_descend
+  - type: Icon
+    state: deep_descend
+
+- type: entity
+  parent: BaseLevelStairsUp
+  id: LevelStairsFancyUp
+  name: fancy stairs
+  suffix: Up
+  components:
+  - type: Sprite
+    state: fancy_stairs
+  - type: Icon
+    state: fancy_stairs
+
+- type: entity
+  parent: BaseLevelStairsDown
+  id: LevelStairsFancyDown
+  name: fancy stairs
+  suffix: Down
+  components:
+  - type: Sprite
+    state: fancy_stairs
+  - type: Icon
+    state: fancy_stairs
+
+- type: entity
+  parent: BaseLevelStairsUp
+  id: LevelStairsFancyCornerUp
+  name: fancy corner stairs
+  suffix: Up
+  components:
+  - type: Sprite
+    state: fancy_stairs_c
+  - type: Icon
+    state: fancy_stairs_c
+
+- type: entity
+  parent: BaseLevelStairsDown
+  id: LevelStairsFancyCornerDown
+  name: fancy corner stairs
+  suffix: Down
+  components:
+  - type: Sprite
+    state: fancy_stairs_c
+  - type: Icon
+    state: fancy_stairs_c
+
+- type: entity
+  parent: BaseLevelStairsUp
+  id: LevelStairsFancyLeftUp
+  name: fancy left stairs
+  suffix: Up
+  components:
+  - type: Sprite
+    state: fancy_stairs_l
+  - type: Icon
+    state: fancy_stairs_l
+
+- type: entity
+  parent: BaseLevelStairsDown
+  id: LevelStairsFancyLeftDown
+  name: fancy left stairs
+  suffix: Down
+  components:
+  - type: Sprite
+    state: fancy_stairs_l
+  - type: Icon
+    state: fancy_stairs_l
+
+- type: entity
+  parent: BaseLevelStairsUp
+  id: LevelStairsFancyRightUp
+  name: fancy right stairs
+  suffix: Up
+  components:
+  - type: Sprite
+    state: fancy_stairs_r
+  - type: Icon
+    state: fancy_stairs_r
+
+- type: entity
+  parent: BaseLevelStairsDown
+  id: LevelStairsFancyRightDown
+  name: fancy right stairs
+  suffix: Down
+  components:
+  - type: Sprite
+    state: fancy_stairs_r
+  - type: Icon
+    state: fancy_stairs_r
+
+- type: entity
+  parent: BaseLevelStairsUp
+  id: LevelStairsSoloUp
+  name: solo stairs
+  suffix: Up
+  components:
+  - type: Sprite
+    state: solo-descend
+  - type: Icon
+    state: solo-descend
+
+- type: entity
+  parent: BaseLevelStairsDown
+  id: LevelStairsSoloDown
+  name: solo stairs
+  suffix: Down
+  components:
+  - type: Sprite
+    state: solo-descend
+  - type: Icon
+    state: solo-descend
+
+- type: entity
+  parent: BaseLevelStairsUp
+  id: LevelStairsBasicUp
+  name: stone stairs
+  suffix: Basic, Up
+  components:
+  - type: Sprite
+    state: stairs
+  - type: Icon
+    state: stairs
+
+- type: entity
+  parent: BaseLevelStairsDown
+  id: LevelStairsBasicDown
+  name: stone stairs
+  suffix: Basic, Down
+  components:
+  - type: Sprite
+    state: stairs
+  - type: Icon
+    state: stairs
+
+- type: entity
+  parent: BaseLevelStairsUp
+  id: LevelStairsOldStoneUp
+  name: old stone stairs
+  suffix: Up
+  components:
+  - type: Sprite
+    state: stonestairs_old
+  - type: Icon
+    state: stonestairs_old
+
+- type: entity
+  parent: BaseLevelStairsDown
+  id: LevelStairsOldStoneDown
+  name: old stone stairs
+  suffix: Down
+  components:
+  - type: Sprite
+    state: stonestairs_old
+  - type: Icon
+    state: stonestairs_old
+
+- type: entity
+  parent: BaseLevelStairsUp
+  id: LevelStairsStoneUp
+  name: broad stone stairs
+  suffix: Up
+  components:
+  - type: Sprite
+    state: stonestairs
+  - type: Icon
+    state: stonestairs
+
+- type: entity
+  parent: BaseLevelStairsDown
+  id: LevelStairsStoneDown
+  name: broad stone stairs
+  suffix: Down
+  components:
+  - type: Sprite
+    state: stonestairs
+  - type: Icon
+    state: stonestairs

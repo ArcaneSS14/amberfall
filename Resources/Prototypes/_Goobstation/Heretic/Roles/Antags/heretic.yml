@@ -13,7 +13,6 @@
     inverted: true
     species:
     - Decapoid # You need 2 hands to draw the rune...
-  guides: [ Heretics ]
   creditImage: /Textures/_Trauma/EndCredits/Antags/heretic.png
 
 - type: antag
@@ -22,7 +21,6 @@
   antagonist: true
   setPreference: false
   objective: roles-antag-ghoul-description
-  guides: [ Heretics ]
   dontShowInCredits: True
 
 - type: antag
@@ -31,7 +29,6 @@
   antagonist: true
   setPreference: false
   objective: roles-antag-arena-participant-description
-  guides: [ Heretics ]
   dontShowInCredits: True
 
 - type: startingGear

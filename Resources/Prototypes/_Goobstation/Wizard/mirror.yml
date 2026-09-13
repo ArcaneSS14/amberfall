@@ -27,8 +27,6 @@
     - Dwarf
     - IPC
     - BananaMen
-    - Kobold
-    - Monkey
   - type: ActivatableUI
     key: enum.WizardMirrorUiKey.Key
     singleUser: true

@@ -17,7 +17,6 @@
     collection: FootstepBlood
   itemDrop: FloorTileItemBingle
   friction: 1 #No longer slippy
-  heatCapacity: 10000
   tileRipResistance: 80
 
 - type: entity

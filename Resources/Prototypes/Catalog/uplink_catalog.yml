@@ -1239,44 +1239,6 @@
 
 
 - type: listing
-  id: UplinkReinforcementRadioSyndicateAncestor
-  name: uplink-reinforcement-radio-ancestor-name-trauma # Trauma - added -trauma
-  description: uplink-reinforcement-radio-ancestor-desc
-  productEntity: ReinforcementRadioSyndicateAncestor
-  icon: { sprite: Objects/Devices/communication.rsi, state: old-radio-ancestor }
-  cost:
-    Telecrystal: 25 # Trauma - was 6, 5x and less expensive to promote creating ghostroles
-  categories:
-  - UplinkAllies
-  conditions:
-    - !type:StoreWhitelistCondition
-      blacklist:
-        tags:
-          - NukeOpsUplink
-          - ContravendUplink
-
-
-- type: listing
-  id: UplinkReinforcementRadioSyndicateAncestorNukeops # Version for Nukeops that spawns a syndicate monkey with the NukeOperative component.
-  name: uplink-reinforcement-radio-ancestor-name-trauma # Trauma - added -trauma
-  description: uplink-reinforcement-radio-ancestor-desc
-  productEntity: ReinforcementRadioSyndicateAncestorNukeops
-  icon: { sprite: Objects/Devices/communication.rsi, state: old-radio-ancestor }
-  cost:
-    Telecrystal: 40 # Trauma - was 6, 5x and more expensive due to alot of free gear that nuke ops get to arm these monkeys
-  categories:
-  - UplinkAllies
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - NukeOpsUplink
-      blacklist:
-        tags:
-        - ContravendUplink
-
-
-- type: listing
   id: UplinkCarpDehydrated
   name: uplink-carp-dehydrated-name
   description: uplink-carp-dehydrated-desc
@@ -1996,24 +1958,6 @@
     blacklist:
       components:
       - SurplusBundle
-
-- type: listing
-  id: UplinkSyndicateSpongeBox
-  name: uplink-syndicate-sponge-box-name
-  description: uplink-syndicate-sponge-box-desc
-  icon: { sprite:  Objects/Misc/monkeycube.rsi, state: box}
-  productEntity: SyndicateSpongeBox
-  cost:
-    Telecrystal: 20 # Trauma - was 4, 5x
-  categories:
-  - UplinkJob
-  conditions:
-  - !type:BuyerJobCondition # We can't use BuyerDepartmentCondition here since Chef can also get this
-    whitelist:
-    - Scientist
-    - ResearchDirector
-    - Chef
-
 
 - type: listing
   id: UplinkCaneBlade

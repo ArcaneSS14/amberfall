@@ -28,17 +28,6 @@
     count: 5
 
 - type: entity
-  name: wand of monkey polymorph
-  parent: WeaponWandPolymorphBase
-  id: WeaponWandPolymorphMonkey
-  description: For when you need a monkey friend.
-  components:
-  - type: BasicEntityAmmoProvider
-    proto: ProjectilePolyboltMonkey
-    capacity: 5
-    count: 5
-
-- type: entity
   name: wand of fireball
   parent: WeaponWandBase
   id: WeaponWandFireball

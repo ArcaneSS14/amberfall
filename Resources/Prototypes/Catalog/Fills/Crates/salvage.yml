@@ -143,17 +143,6 @@
 
 - type: entity
   parent: CrateGenericSteel
-  id: CrateVoidJetpack
-  name: void jetpack crate
-  description: Contains a single void jetpack.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: JetpackVoidFilled
-
-- type: entity
-  parent: CrateGenericSteel
   id: CrateSalvageHardsuit
   name: mining hardsuit crate
   description: Contains a mining hardsuit, breath mask, and one tank of both oxygen and nitrogen.

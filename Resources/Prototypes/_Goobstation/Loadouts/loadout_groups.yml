@@ -1301,15 +1301,6 @@
 # Plasmamen
 
 - type: loadoutGroup
-  id: GroupEVATankPlasma
-  name: loadout-group-plasma-tank
-  hidden: true
-  loadouts:
-  - LoadoutSpeciesPlasma
-
-# Virologist
-
-- type: loadoutGroup
   id: VirologistJumpsuit
   name: loadout-group-virologist-jumpsuit
   loadouts:

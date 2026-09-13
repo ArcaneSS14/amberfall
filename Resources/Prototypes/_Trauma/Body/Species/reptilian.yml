@@ -14,8 +14,6 @@
     speciesWhitelist:
     # need to have a body adapted to controlling a tail properly
     - Reptilian
-    - Kobold
-    - Monkey
   - type: OrganComponents
     onAdd:
     - type: Wagging

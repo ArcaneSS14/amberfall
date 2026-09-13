@@ -336,49 +336,6 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionBindSoul
-  name: Bind Soul
-  description: Bind your soul to an item to resurrect after death. If your soul is already bound to an item and you are dead, attempt resurrecion.
-  components:
-  - type: Action
-    raiseOnUser: true
-    checkCanInteract: false
-    checkConsciousness: false
-    allowGhostAction: true
-    useDelay: 1
-    itemIconStyle: BigAction
-    icon:
-      sprite: _Goobstation/Wizard/actions.rsi
-      state: skeleton
-  - type: InstantAction
-    event: !type:BindSoulEvent
-      sound: !type:SoundPathSpecifier
-        path: /Audio/_Goobstation/Wizard/pope_entry.ogg
-      blacklist:
-        components:
-        - MobState
-        - NukeDisk
-        - VirtualItem
-        - Body
-        - BodyPart
-        - Organ
-        - TimedDespawn
-        - FadingTimedDespawn
-        - Godmode
-        - DeleteOnDropAttempt
-        - EnchantedBoltActionRifle
-        - Phylactery
-  - type: SpeakOnAction
-    sentence: action-speech-spell-bind-soul
-  - type: Magic
-    requiresSpeech: true
-    school: Necromancy
-  - type: Tag
-    tags:
-      - BindSoulAction
-
-- type: entity
-  parent: BaseAction
   id: ActionMutateSpell
   name: Mutate
   description: Causes you to turn into a hulk and gain laser vision for a short while.

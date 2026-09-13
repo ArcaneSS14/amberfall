@@ -219,17 +219,6 @@
       - Lime
 
 - type: cargoBounty
-  id: BountyLung
-  reward: 2000
-  description: bounty-description-lung
-  entries:
-  - name: bounty-item-lung
-    amount: 3
-    whitelist:
-      components:
-      - Lung
-
-- type: cargoBounty
   id: BountyMonkeyCube
   reward: 2000
   description: bounty-description-monkey-cube
@@ -472,23 +461,6 @@
     whitelist:
       components:
       - HandLabeler
-
-- type: cargoBounty
-  id: BountyWarmCloth
-  reward: 2000
-  description: bounty-description-warm-cloth
-  idPrefix: UNTH
-  entries:
-  - name: bounty-item-warm-cloth
-    amount: 8
-    whitelist:
-      components:
-      - TemperatureProtection
-      tags:
-      - Scarf
-    blacklist:
-      components:
-      - ToggleableClothing
 
 - type: cargoBounty
   id: BountyBattery

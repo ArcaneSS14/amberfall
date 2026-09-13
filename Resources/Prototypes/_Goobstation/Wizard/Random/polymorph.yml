@@ -25,7 +25,6 @@
     PlayerBorgJanitor: 30
     PlayerBorgMedical: 30
     PlayerBorgService: 30
-    MobFireBot: 20
     MobHonkBot: 20
     MobJonkBot: 20
     MobCleanBot: 20
@@ -64,7 +63,6 @@
     MobHumanRandom: 1
     MobArachnidRandom: 1
     MobSlimePersonRandom: 1
-    MobSkeletonPerson: 1
     MobDionaRandom: 1
     MobReptilianRandom: 1
     MobMothRandom: 1
@@ -91,12 +89,6 @@
     MobMantis: 1
     MobMantisShrimp: 1
     MobShrimp: 1
-    MobDartFrog1: 1
-    MobDartFrog2: 1
-    MobDartFrog3: 1
-    MobDartFrog4: 1
-    MobDartFrog5: 1
-    MobDartFrog6: 1
     MobBunny: 1
     MobBunnySea: 1
     MobBunnyEvil: 1
@@ -189,8 +181,6 @@
     MobGhoulStalker: 0.33
     MobGhoulProphet: 0.33
     MobGhoulRustWalker: 0.33
-    MobMonkeyAngry: 1
-    MobKoboldAngry: 1
     MobLavalandGoliath: 0.5
     MobLavalandGoliathAncient: 0.5
     LavalandEliteLegionnaire: 1

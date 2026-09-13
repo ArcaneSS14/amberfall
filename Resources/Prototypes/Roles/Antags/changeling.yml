@@ -5,7 +5,6 @@
   # <Trauma>
   setPreference: true
   objective: roles-antag-changeling-description # this string exists, -objective one doesnt
-  guides: [ Changelings ]
   creditImage: /Textures/_Trauma/EndCredits/Antags/changeling.png
   # </Trauma>
 

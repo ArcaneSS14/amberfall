@@ -28,20 +28,6 @@
 
 - type: entity
   parent: MarkerBase
-  id: SpawnMobFireBot
-  name: firebot spawner
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-    - sprite: Mobs/Silicon/Bots/firebot.rsi
-      state: firebot
-  - type: ConditionalSpawner
-    prototypes:
-    - MobFireBot
-
-- type: entity
-  parent: MarkerBase
   id: SpawnMobSupplyBot
   name: supplybot spawner
   components:

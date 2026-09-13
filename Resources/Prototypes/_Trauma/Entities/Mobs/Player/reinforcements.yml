@@ -251,7 +251,6 @@
     outerClothing: ClothingOuterCoatLabGeneOpened
     back: ClothingBackpackGenetics
     shoes: ClothingShoesColorWhite
-    id: GeneticistPDA
     pocket1: HandheldGeneticsScanner
     ears: ClothingHeadsetScience
 
@@ -322,7 +321,6 @@
     back: ClothingModsuitAtmostechPowerCell
     shoes: ClothingShoesColorWhite
     belt: ClothingBeltUtilityEngineering
-    id: AtmosPDA
     ears: ClothingHeadsetEngineering
     gloves: ClothingHandsGlovesAtmosInsulated
 

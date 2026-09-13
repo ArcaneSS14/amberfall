@@ -120,6 +120,3 @@
   - type: PowerSwitch
   - type: SignalPowerSwitch
   # Guide
-  - type: GuideHelp
-    guides:
-    - Automation

@@ -20,14 +20,6 @@
 
 - type: entity
   parent: MobSlimeXenobioBabyPending
-  id: MobSlimeXenobioBabyOrange
-  name: orange slime
-  components:
-  - type: PendingSlimeSpawn
-    breed: OrangeMutation
-
-- type: entity
-  parent: MobSlimeXenobioBabyPending
   id: MobSlimeXenobioBabyPurple
   name: purple slime
   components:

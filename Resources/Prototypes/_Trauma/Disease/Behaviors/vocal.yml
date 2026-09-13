@@ -47,25 +47,4 @@
   - type: DiseaseSpreadEffect # final spread AOE
     arc: 360
     range: 4
-  - type: DiseaseEntityEffect
-    effects:
-    - !type:RelayOrgans
-      whitelist:
-        components:
-        - Lung
-      effects:
-      - !type:Gib
-      guidebookText: entity-effect-guidebook-rupture-lungs
-    - !type:HealthChange # kill the host immediately
-      targetPart: Chest
-      damage:
-        types:
-          Blunt: 100
-          Asphyxiation: 100
-    - !type:HealthChange
-      targetPart: Head
-      damage:
-        types:
-          Blunt: 100
-          Asphyxiation: 100
   - type: DiseaseRemoveEffect # it has spread, lungs are gone: time to go. prevents immediately killing the host upon revival

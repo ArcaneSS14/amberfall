@@ -98,7 +98,6 @@
   - type: GuideHelp # For the curious among the brave.
     guides:
     - TeslaEngine
-    - SingularityTeslaEngine
     - Power
 
 - type: entity

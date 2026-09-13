@@ -168,7 +168,6 @@
   name: guide-entry-power
   text: "/ServerInfo/Guidebook/Engineering/Power.xml"
   children:
-    - Generators
     - InspectingPower
     - PowerStorage
     - Ramping

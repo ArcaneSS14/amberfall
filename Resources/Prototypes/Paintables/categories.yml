@@ -5,11 +5,6 @@
   - AirlockGlass
 
 - type: paintableGroupCategory
-  id: Canisters
-  groups:
-  - Canisters
-
-- type: paintableGroupCategory
   id: Crates
   groups:
   - CrateSteel

@@ -6,7 +6,7 @@ namespace Content.Shared.Random;
 /// Generic random weighting dataset to use.
 /// </summary>
 [Prototype]
-public sealed partial class WeightedRandomPrototype : IWeightedRandomPrototype
+public sealed partial class WeightedRandomPrototype : IWeightedRandomPrototype<string>
 {
     [IdDataField]
     public string ID { get; private set; } = default!;

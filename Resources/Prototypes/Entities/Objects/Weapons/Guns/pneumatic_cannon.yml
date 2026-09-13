@@ -39,27 +39,9 @@
     grid:
     - 0,0,1,1
   - type: Appearance
-  - type: ItemMapper
-    containerWhitelist: [gas_tank]
-    mapLayers:
-      tank:
-        whitelist:
-          components:
-          - GasTank
   - type: Construction
     graph: PneumaticCannon
     node: cannon
-  - type: ItemSlots
-    slots:
-      gas_tank:
-        name: pneumatic-cannon-component-itemslot-name
-        whitelist:
-          components:
-          - GasTank
-        insertSound:
-          path: /Audio/Weapons/click.ogg
-          params:
-            volume: -3
   - type: ContainerContainer
     containers:
       storagebase: !type:Container

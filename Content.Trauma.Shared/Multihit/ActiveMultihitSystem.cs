@@ -49,8 +49,7 @@ public abstract partial class SharedActiveMultihitSystem : EntitySystem
         var modifierSet = new DamageModifierSet
         {
             Coefficients = args.BaseDamage.DamageDict
-                .Select(x => new KeyValuePair<string, float>(x.Key, ent.Comp.NextDamageMultiplier))
-                .ToDictionary(),
+                .ToDictionary(x => new Robust.Shared.Prototypes.ProtoId<Content.Shared.Damage.Prototypes.DamageTypePrototype>(x.Key), _ => ent.Comp.NextDamageMultiplier),
         };
 
         args.ModifiersList.Add(modifierSet);

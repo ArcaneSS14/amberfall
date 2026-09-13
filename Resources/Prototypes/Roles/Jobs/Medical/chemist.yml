@@ -15,9 +15,6 @@
   - Chemistry
   - Maintenance
   # <Trauma>
-  guides:
-  - Chemist
-  - Chemicals
   special:
   - !type:OrganChipsSpecial
     chips:

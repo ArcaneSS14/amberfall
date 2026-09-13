@@ -69,10 +69,6 @@
   - type: StaticPrice
     price: 1000
   - type: WiresPanel
-  - type: GuideHelp
-    guides:
-    - Chemicals
-    - Chemist
   - type: StealTarget
     stealGroup: ChemDispenser
   - type: Machine

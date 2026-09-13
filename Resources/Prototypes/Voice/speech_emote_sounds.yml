@@ -38,8 +38,6 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
 
@@ -82,8 +80,6 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
 
@@ -108,8 +104,6 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: MaleGasp
     DefaultDeathgasp:
       collection: DeathGasp
 
@@ -134,8 +128,6 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
 
@@ -178,8 +170,6 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
   params:
@@ -224,8 +214,6 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
   params:
@@ -258,8 +246,6 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      path: /Audio/_Goobstation/Voice/Vox/vox_gasp.ogg # Trauma - return to Goob sounds
     DefaultDeathgasp:
       path: /Audio/Effects/Gasp/vox_DeathGasp.ogg
   params:
@@ -285,8 +271,6 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: MaleGasp
     DefaultDeathgasp:
       collection: DeathGasp
   params:
@@ -313,8 +297,6 @@
       collection: Hew
     Honk:
       collection: BikeHorn
-    Gasp:
-      collection: MaleGasp
     DefaultDeathgasp:
       collection: DeathGasp
 
@@ -355,8 +337,6 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
   params:
@@ -400,8 +380,6 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
   params:
@@ -431,8 +409,6 @@
       collection: Hew
     Honk:
       collection: BikeHorn
-    Gasp:
-      collection: MaleGasp
     DefaultDeathgasp:
       collection: MothDeathGasp
 
@@ -543,8 +519,6 @@
       collection: Hew
     Honk:
       collection: BikeHorn
-    Gasp:
-      collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
 
@@ -587,8 +561,6 @@
       collection: Hew
     Honk:
       collection: BikeHorn
-    Gasp:
-      collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
 
@@ -794,7 +766,5 @@
       collection: Hew
     Honk:
       collection: BikeHorn
-    Gasp:
-      collection: MaleGasp
     DefaultDeathgasp:
       collection: WawaDeath

@@ -1,0 +1,637 @@
+- type: tile
+  id: FloorAmberfallTransparentPit
+  name: tiles-amberfall-transparent-pit
+  sprite: /Textures/_Trauma/empty.rsi/empty.png
+  sturdy: false
+  renderZLevelBelow: true
+  fallThroughZLevel: true
+
+- type: tile
+  id: FloorAmberfallAsh
+  name: tiles-amberfall-ash
+  sprite: /Textures/_Amberfall/Tiles/ash.png
+  variants: 8
+  placementVariants: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallBarograte
+  name: tiles-amberfall-barograte
+  sprite: /Textures/_Amberfall/Tiles/barograte.png
+
+- type: tile
+  id: FloorAmberfallBarograteopen
+  name: tiles-amberfall-barograteopen
+  sprite: /Textures/_Amberfall/Tiles/barograteopen.png
+
+- type: tile
+  id: FloorAmberfallBathtile
+  name: tiles-amberfall-bathtile
+  sprite: /Textures/_Amberfall/Tiles/bathtile.png
+
+- type: tile
+  id: FloorAmberfallBfloorz
+  name: tiles-amberfall-bfloorz
+  sprite: /Textures/_Amberfall/Tiles/bfloorz.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallBlackice
+  name: tiles-amberfall-blackice
+  sprite: /Textures/_Amberfall/Tiles/blackice.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/blackice-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/blackice-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/blackice-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/blackice-west.png
+
+- type: tile
+  id: FloorAmberfallBlocks
+  name: tiles-amberfall-blocks
+  sprite: /Textures/_Amberfall/Tiles/blocks.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallBluestone
+  name: tiles-amberfall-bluestone
+  sprite: /Textures/_Amberfall/Tiles/bluestone.png
+
+- type: tile
+  id: FloorAmberfallBluestone2
+  name: tiles-amberfall-bluestone2
+  sprite: /Textures/_Amberfall/Tiles/bluestone2.png
+
+- type: tile
+  id: FloorAmberfallBricktile
+  name: tiles-amberfall-bricktile
+  sprite: /Textures/_Amberfall/Tiles/bricktile.png
+
+- type: tile
+  id: FloorAmberfallBrown
+  name: tiles-amberfall-brown
+  sprite: /Textures/_Amberfall/Tiles/brown.png
+
+- type: tile
+  id: FloorAmberfallCarvedstone
+  name: tiles-amberfall-carvedstone
+  sprite: /Textures/_Amberfall/Tiles/carvedstone.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallChess
+  name: tiles-amberfall-chess
+  sprite: /Textures/_Amberfall/Tiles/chess.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallChurch
+  name: tiles-amberfall-church
+  sprite: /Textures/_Amberfall/Tiles/church.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallChurchBrick
+  name: tiles-amberfall-church-brick
+  sprite: /Textures/_Amberfall/Tiles/church_brick.png
+
+- type: tile
+  id: FloorAmberfallChurchMarble
+  name: tiles-amberfall-church-marble
+  sprite: /Textures/_Amberfall/Tiles/church_marble.png
+
+- type: tile
+  id: FloorAmberfallChurchRough
+  name: tiles-amberfall-church-rough
+  sprite: /Textures/_Amberfall/Tiles/church_rough.png
+
+- type: tile
+  id: FloorAmberfallCobblerock
+  name: tiles-amberfall-cobblerock
+  sprite: /Textures/_Amberfall/Tiles/cobblerock.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/cobblerock-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/cobblerock-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/cobblerock-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/cobblerock-west.png
+
+- type: tile
+  id: FloorAmberfallCobblestone1
+  name: tiles-amberfall-cobblestone1
+  sprite: /Textures/_Amberfall/Tiles/cobblestone1.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/cobblestone1-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/cobblestone1-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/cobblestone1-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/cobblestone1-west.png
+
+- type: tile
+  id: FloorAmberfallCobblestone2
+  name: tiles-amberfall-cobblestone2
+  sprite: /Textures/_Amberfall/Tiles/cobblestone2.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/cobblestone2-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/cobblestone2-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/cobblestone2-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/cobblestone2-west.png
+
+- type: tile
+  id: FloorAmberfallCobblestone3
+  name: tiles-amberfall-cobblestone3
+  sprite: /Textures/_Amberfall/Tiles/cobblestone3.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/cobblestone3-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/cobblestone3-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/cobblestone3-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/cobblestone3-west.png
+
+- type: tile
+  id: FloorAmberfallConcretefloor1
+  name: tiles-amberfall-concretefloor1
+  sprite: /Textures/_Amberfall/Tiles/concretefloor1.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallConcretefloor2
+  name: tiles-amberfall-concretefloor2
+  sprite: /Textures/_Amberfall/Tiles/concretefloor2.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallCrawlspace1
+  name: tiles-amberfall-crawlspace-1
+  sprite: /Textures/_Amberfall/Tiles/crawlspace_1.png
+
+- type: tile
+  id: FloorAmberfallCrawlspace2
+  name: tiles-amberfall-crawlspace-2
+  sprite: /Textures/_Amberfall/Tiles/crawlspace_2.png
+
+- type: tile
+  id: FloorAmberfallCrawlspace3
+  name: tiles-amberfall-crawlspace-3
+  sprite: /Textures/_Amberfall/Tiles/crawlspace_3.png
+
+- type: tile
+  id: FloorAmberfallCrawlspace4
+  name: tiles-amberfall-crawlspace-4
+  sprite: /Textures/_Amberfall/Tiles/crawlspace_4.png
+
+- type: tile
+  id: FloorAmberfallDigstone
+  name: tiles-amberfall-digstone
+  sprite: /Textures/_Amberfall/Tiles/digstone.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallDirt
+  name: tiles-amberfall-dirt
+  sprite: /Textures/_Amberfall/Tiles/dirt.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/dirt-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/dirt-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/dirt-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/dirt-west.png
+
+- type: tile
+  id: FloorAmberfallGrass
+  name: tiles-amberfall-grass
+  sprite: /Textures/_Amberfall/Tiles/grass.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 3
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/grass-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/grass-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/grass-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/grass-west.png
+
+- type: tile
+  id: FloorAmberfallGrassCold
+  name: tiles-amberfall-grass-cold
+  sprite: /Textures/_Amberfall/Tiles/grass_cold.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 3
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/grass_cold-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/grass_cold-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/grass_cold-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/grass_cold-west.png
+
+- type: tile
+  id: FloorAmberfallGrassRed
+  name: tiles-amberfall-grass-red
+  sprite: /Textures/_Amberfall/Tiles/grass_red.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 3
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/grass_red-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/grass_red-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/grass_red-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/grass_red-west.png
+
+- type: tile
+  id: FloorAmberfallGrassYel
+  name: tiles-amberfall-grass-yel
+  sprite: /Textures/_Amberfall/Tiles/grass_yel.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 3
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/grass_yel-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/grass_yel-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/grass_yel-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/grass_yel-west.png
+
+- type: tile
+  id: FloorAmberfallGreenblocks
+  name: tiles-amberfall-greenblocks
+  sprite: /Textures/_Amberfall/Tiles/greenblocks.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallGreenstone
+  name: tiles-amberfall-greenstone
+  sprite: /Textures/_Amberfall/Tiles/greenstone.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallGrimshart
+  name: tiles-amberfall-grimshart
+  sprite: /Textures/_Amberfall/Tiles/grimshart.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/grimshart-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/grimshart-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/grimshart-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/grimshart-west.png
+
+- type: tile
+  id: FloorAmberfallHarem
+  name: tiles-amberfall-harem
+  sprite: /Textures/_Amberfall/Tiles/harem.png
+
+- type: tile
+  id: FloorAmberfallHarem1
+  name: tiles-amberfall-harem1
+  sprite: /Textures/_Amberfall/Tiles/harem1.png
+
+- type: tile
+  id: FloorAmberfallHarem2
+  name: tiles-amberfall-harem2
+  sprite: /Textures/_Amberfall/Tiles/harem2.png
+
+- type: tile
+  id: FloorAmberfallHay
+  name: tiles-amberfall-hay
+  sprite: /Textures/_Amberfall/Tiles/hay.png
+
+- type: tile
+  id: FloorAmberfallHellgrass
+  name: tiles-amberfall-hellgrass
+  sprite: /Textures/_Amberfall/Tiles/hellgrass.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/hellgrass-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/hellgrass-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/hellgrass-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/hellgrass-west.png
+
+- type: tile
+  id: FloorAmberfallHerringbone
+  name: tiles-amberfall-herringbone
+  sprite: /Textures/_Amberfall/Tiles/herringbone.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Amberfall/Tiles/Edges/herringbone-southeast.png
+    NorthEast: /Textures/_Amberfall/Tiles/Edges/herringbone-northeast.png
+    NorthWest: /Textures/_Amberfall/Tiles/Edges/herringbone-northwest.png
+    SouthWest: /Textures/_Amberfall/Tiles/Edges/herringbone-southwest.png
+    South: /Textures/_Amberfall/Tiles/Edges/herringbone-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/herringbone-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/herringbone-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/herringbone-west.png
+
+- type: tile
+  id: FloorAmberfallHerringbonewood
+  name: tiles-amberfall-herringbonewood
+  sprite: /Textures/_Amberfall/Tiles/herringbonewood.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Amberfall/Tiles/Edges/herringbonewood-southeast.png
+    NorthEast: /Textures/_Amberfall/Tiles/Edges/herringbonewood-northeast.png
+    NorthWest: /Textures/_Amberfall/Tiles/Edges/herringbonewood-northwest.png
+    SouthWest: /Textures/_Amberfall/Tiles/Edges/herringbonewood-southwest.png
+    South: /Textures/_Amberfall/Tiles/Edges/herringbonewood-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/herringbonewood-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/herringbonewood-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/herringbonewood-west.png
+
+- type: tile
+  id: FloorAmberfallHerringbonewood2
+  name: tiles-amberfall-herringbonewood2
+  sprite: /Textures/_Amberfall/Tiles/herringbonewood2.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Amberfall/Tiles/Edges/herringbonewood2-southeast.png
+    NorthEast: /Textures/_Amberfall/Tiles/Edges/herringbonewood2-northeast.png
+    NorthWest: /Textures/_Amberfall/Tiles/Edges/herringbonewood2-northwest.png
+    SouthWest: /Textures/_Amberfall/Tiles/Edges/herringbonewood2-southwest.png
+    South: /Textures/_Amberfall/Tiles/Edges/herringbonewood2-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/herringbonewood2-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/herringbonewood2-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/herringbonewood2-west.png
+
+- type: tile
+  id: FloorAmberfallHexstone
+  name: tiles-amberfall-hexstone
+  sprite: /Textures/_Amberfall/Tiles/hexstone.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallHorzw
+  name: tiles-amberfall-horzw
+  sprite: /Textures/_Amberfall/Tiles/horzw.png
+
+- type: tile
+  id: FloorAmberfallLinoleum
+  name: tiles-amberfall-linoleum
+  sprite: /Textures/_Amberfall/Tiles/linoleum.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallMossystone1
+  name: tiles-amberfall-mossystone1
+  sprite: /Textures/_Amberfall/Tiles/mossystone1.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Amberfall/Tiles/Edges/mossystone-southeast.png
+    NorthEast: /Textures/_Amberfall/Tiles/Edges/mossystone-northeast.png
+    NorthWest: /Textures/_Amberfall/Tiles/Edges/mossystone-northwest.png
+    SouthWest: /Textures/_Amberfall/Tiles/Edges/mossystone-southwest.png
+    South: /Textures/_Amberfall/Tiles/Edges/mossystone-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/mossystone-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/mossystone-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/mossystone-west.png
+
+- type: tile
+  id: FloorAmberfallMossystone2
+  name: tiles-amberfall-mossystone2
+  sprite: /Textures/_Amberfall/Tiles/mossystone2.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Amberfall/Tiles/Edges/mossystone-southeast.png
+    NorthEast: /Textures/_Amberfall/Tiles/Edges/mossystone-northeast.png
+    NorthWest: /Textures/_Amberfall/Tiles/Edges/mossystone-northwest.png
+    SouthWest: /Textures/_Amberfall/Tiles/Edges/mossystone-southwest.png
+    South: /Textures/_Amberfall/Tiles/Edges/mossystone-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/mossystone-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/mossystone-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/mossystone-west.png
+
+- type: tile
+  id: FloorAmberfallMossystone3
+  name: tiles-amberfall-mossystone3
+  sprite: /Textures/_Amberfall/Tiles/mossystone3.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Amberfall/Tiles/Edges/mossystone-southeast.png
+    NorthEast: /Textures/_Amberfall/Tiles/Edges/mossystone-northeast.png
+    NorthWest: /Textures/_Amberfall/Tiles/Edges/mossystone-northwest.png
+    SouthWest: /Textures/_Amberfall/Tiles/Edges/mossystone-southwest.png
+    South: /Textures/_Amberfall/Tiles/Edges/mossystone-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/mossystone-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/mossystone-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/mossystone-west.png
+
+- type: tile
+  id: FloorAmberfallMud1
+  name: tiles-amberfall-mud1
+  sprite: /Textures/_Amberfall/Tiles/mud1.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallNewstone2
+  name: tiles-amberfall-newstone2
+  sprite: /Textures/_Amberfall/Tiles/newstone2.png
+
+- type: tile
+  id: FloorAmberfallOldcobblerock
+  name: tiles-amberfall-oldcobblerock
+  sprite: /Textures/_Amberfall/Tiles/oldcobblerock.png
+
+- type: tile
+  id: FloorAmberfallPaving
+  name: tiles-amberfall-paving
+  sprite: /Textures/_Amberfall/Tiles/paving.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallPavingT
+  name: tiles-amberfall-paving-t
+  sprite: /Textures/_Amberfall/Tiles/paving-t.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallPlating1
+  name: tiles-amberfall-plating1
+  sprite: /Textures/_Amberfall/Tiles/plating1.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallPlating2
+  name: tiles-amberfall-plating2
+  sprite: /Textures/_Amberfall/Tiles/plating2.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallRoad
+  name: tiles-amberfall-road
+  sprite: /Textures/_Amberfall/Tiles/road.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/road-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/road-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/road-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/road-west.png
+
+- type: tile
+  id: FloorAmberfallRock
+  name: tiles-amberfall-rock
+  sprite: /Textures/_Amberfall/Tiles/rock.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallRocky
+  name: tiles-amberfall-rocky
+  sprite: /Textures/_Amberfall/Tiles/rocky.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallSnow
+  name: tiles-amberfall-snow
+  sprite: /Textures/_Amberfall/Tiles/snow.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/snow-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/snow-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/snow-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/snow-west.png
+
+- type: tile
+  id: FloorAmberfallSnowpatchyGrass
+  name: tiles-amberfall-snowpatchy-grass
+  sprite: /Textures/_Amberfall/Tiles/snowpatchy_grass.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/snowpatchy_grass-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/snowpatchy_grass-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/snowpatchy_grass-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/snowpatchy_grass-west.png
+
+- type: tile
+  id: FloorAmberfallSnowrough
+  name: tiles-amberfall-snowrough
+  sprite: /Textures/_Amberfall/Tiles/snowrough.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+  edgeSpritePriority: 1
+  edgeSprites:
+    South: /Textures/_Amberfall/Tiles/Edges/snowrough-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/snowrough-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/snowrough-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/snowrough-west.png
+
+- type: tile
+  id: FloorAmberfallStoneredlarge
+  name: tiles-amberfall-stoneredlarge
+  sprite: /Textures/_Amberfall/Tiles/stoneredlarge.png
+
+- type: tile
+  id: FloorAmberfallStoneredtiny
+  name: tiles-amberfall-stoneredtiny
+  sprite: /Textures/_Amberfall/Tiles/stoneredtiny.png
+
+- type: tile
+  id: FloorAmberfallTile
+  name: tiles-amberfall-tile
+  sprite: /Textures/_Amberfall/Tiles/tile.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallTilerg
+  name: tiles-amberfall-tilerg
+  sprite: /Textures/_Amberfall/Tiles/tilerg.png
+
+- type: tile
+  id: FloorTreeCanopy1
+  name: tiles-amberfall-treetop1
+  sprite: /Textures/_Amberfall/Tiles/treetop1.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorTreeCanopy2
+  name: tiles-amberfall-treetop2
+  sprite: /Textures/_Amberfall/Tiles/treetop2.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallTwig
+  name: tiles-amberfall-twig
+  sprite: /Textures/_Amberfall/Tiles/twig.png
+  variants: 4
+  placementVariants: [1.0, 1.0, 1.0, 1.0]
+
+- type: tile
+  id: FloorAmberfallUndervoid
+  name: tiles-amberfall-undervoid
+  sprite: /Textures/_Amberfall/Tiles/undervoid.png
+
+- type: tile
+  id: FloorAmberfallUndervoid2
+  name: tiles-amberfall-undervoid2
+  sprite: /Textures/_Amberfall/Tiles/undervoid2.png
+
+- type: tile
+  id: FloorAmberfallUndervoid3
+  name: tiles-amberfall-undervoid3
+  sprite: /Textures/_Amberfall/Tiles/undervoid3.png
+
+- type: tile
+  id: FloorAmberfallVertw
+  name: tiles-amberfall-vertw
+  sprite: /Textures/_Amberfall/Tiles/vertw.png
+
+- type: tile
+  id: FloorAmberfallWoodenFloor
+  name: tiles-amberfall-wooden-floor
+  sprite: /Textures/_Amberfall/Tiles/wooden_floor.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Amberfall/Tiles/Edges/wooden_floor-southeast.png
+    NorthEast: /Textures/_Amberfall/Tiles/Edges/wooden_floor-northeast.png
+    NorthWest: /Textures/_Amberfall/Tiles/Edges/wooden_floor-northwest.png
+    SouthWest: /Textures/_Amberfall/Tiles/Edges/wooden_floor-southwest.png
+    South: /Textures/_Amberfall/Tiles/Edges/wooden_floor-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/wooden_floor-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/wooden_floor-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/wooden_floor-west.png
+
+- type: tile
+  id: FloorAmberfallWoodenFloor2
+  name: tiles-amberfall-wooden-floor2
+  sprite: /Textures/_Amberfall/Tiles/wooden_floor2.png
+
+- type: tile
+  id: FloorAmberfallWoodenFloor2t
+  name: tiles-amberfall-wooden-floor2t
+  sprite: /Textures/_Amberfall/Tiles/wooden_floor2t.png
+
+- type: tile
+  id: FloorAmberfallWoodenFloort
+  name: tiles-amberfall-wooden-floort
+  sprite: /Textures/_Amberfall/Tiles/wooden_floort.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Amberfall/Tiles/Edges/wooden_floort-southeast.png
+    NorthEast: /Textures/_Amberfall/Tiles/Edges/wooden_floort-northeast.png
+    NorthWest: /Textures/_Amberfall/Tiles/Edges/wooden_floort-northwest.png
+    SouthWest: /Textures/_Amberfall/Tiles/Edges/wooden_floort-southwest.png
+    South: /Textures/_Amberfall/Tiles/Edges/wooden_floort-south.png
+    East: /Textures/_Amberfall/Tiles/Edges/wooden_floort-east.png
+    North: /Textures/_Amberfall/Tiles/Edges/wooden_floort-north.png
+    West: /Textures/_Amberfall/Tiles/Edges/wooden_floort-west.png

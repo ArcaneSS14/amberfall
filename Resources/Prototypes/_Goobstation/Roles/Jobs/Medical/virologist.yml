@@ -14,7 +14,6 @@
   supervisors: job-supervisors-cmo
   guides:
   - MedicalDoctor
-  - Medical
   - Medicine
   - Virology
   access:

@@ -17,14 +17,6 @@
     ignoreAllowRepeatedMorphs: true
 
 - type: polymorph
-  id: AdminMonkeySmite
-  configuration:
-    entity: MobMonkey
-    forced: true
-    inventory: Drop
-    ignoreAllowRepeatedMorphs: true
-
-- type: polymorph
   id: AdminBreadSmite
   configuration:
     entity: FoodBreadPlain
@@ -47,4 +39,3 @@
     forced: true
     inventory: Drop
     ignoreAllowRepeatedMorphs: true
-

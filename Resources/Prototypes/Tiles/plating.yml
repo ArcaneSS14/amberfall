@@ -2,7 +2,6 @@
   id: BasePlating
   abstract: true
   friction: 1.5
-  heatCapacity: 10000
   isSubfloor: true
   # Goobstation - Fireaxe plating prying
   deconstructTools: [ Axing ]
@@ -51,7 +50,6 @@
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemSteel
-  heatCapacity: 100000 #/tg/ has this set as "INFINITY." I don't know if that exists here so I've just added an extra 0
   indestructible: true
   reinforced: true # Goob
 
@@ -97,9 +95,7 @@
   footstepSounds:
     collection: FootstepCatwalk
   friction: 1.5
-  isSpace: true
   itemDrop: PartRodMetal1
-  heatCapacity: 10000
   mass: 200
 
 - type: tile

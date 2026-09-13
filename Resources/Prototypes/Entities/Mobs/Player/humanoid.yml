@@ -108,7 +108,7 @@
       job: ERTLeader
     - type: Loadout
       prototypes: [ ERTLeaderGear ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
     - type: AutoImplant # Goob
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant, DeathRattleImplantCentcomm ]
     - type: RandomMetadata
@@ -134,7 +134,7 @@
   components:
     - type: Loadout
       prototypes: [ ERTLeaderGearEVA ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
 
 - type: entity
   id: RandomHumanoidSpawnerERTLeaderArmed
@@ -150,7 +150,7 @@
   components:
     - type: Loadout
       prototypes: [ ERTLeaderGearArmed ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
 
 ## ERT Chaplain
 
@@ -184,7 +184,7 @@
       nameFormat: name-format-ert-specialist
     - type: Loadout
       prototypes: [ ERTChaplainGear, ERTChaplainGearTank ] # Trauma - added ERTChaplainGearTank
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
 
 - type: entity
   id: RandomHumanoidSpawnerERTChaplainEVA
@@ -204,7 +204,7 @@
   components:
     - type: Loadout
       prototypes: [ ERTChaplainGearEVA ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
 
 ## ERT Janitor
 
@@ -237,7 +237,7 @@
       nameFormat: name-format-ert-specialist
     - type: Loadout
       prototypes: [ ERTJanitorGear ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
 
 - type: entity
   id: RandomHumanoidSpawnerERTJanitorEVA
@@ -256,7 +256,7 @@
   components:
     - type: Loadout
       prototypes: [ ERTJanitorGearEVA ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
 
 ## ERT Engineer
 
@@ -289,7 +289,7 @@
       nameFormat: name-format-ert-specialist
     - type: Loadout
       prototypes: [ ERTEngineerGear ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
 
 - type: entity
   id: RandomHumanoidSpawnerERTEngineerEVA
@@ -308,7 +308,7 @@
   components:
     - type: Loadout
       prototypes: [ ERTEngineerGearEVA ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
 
 - type: entity
   parent: RandomHumanoidSpawnerERTEngineerEVA
@@ -328,7 +328,7 @@
     nameFormat: name-format-ert-pointman
   - type: Loadout
     prototypes: [ ERTEngineerGearArmed ]
-    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+    roleLoadout: [  ]
 
 ## ERT Security
 
@@ -361,7 +361,7 @@
       nameFormat: name-format-ert-officer
     - type: Loadout
       prototypes: [ ERTSecurityGear ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
     - type: AutoImplant # Goob
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
@@ -390,7 +390,7 @@
       job: ERTSecurity
     - type: Loadout
       prototypes: [ ERTSecurityGearEVA ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
     - type: AutoImplant # Goob
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
@@ -413,7 +413,7 @@
     nameFormat: name-format-ert-rifle
   - type: Loadout
     prototypes: [ ERTSecurityGearArmedRifle ]
-    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+    roleLoadout: [  ]
 
 - type: entity
   parent: RandomHumanoidSpawnerERTSecurityEVA
@@ -434,7 +434,7 @@
     nameFormat: name-format-ert-grenade
   - type: Loadout
     prototypes: [ ERTSecurityGearArmedGrenade ]
-    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+    roleLoadout: [  ]
 
 - type: entity
   parent: RandomHumanoidSpawnerERTSecurityEVA
@@ -455,7 +455,7 @@
     nameFormat: name-format-ert-vanguard
   - type: Loadout
     prototypes: [ ERTSecurityGearArmedVanguard ]
-    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+    roleLoadout: [  ]
 
 - type: entity
   parent: RandomHumanoidSpawnerERTSecurityEVA
@@ -476,7 +476,7 @@
     nameFormat: name-format-ert-pointman
   - type: Loadout
     prototypes: [ ERTSecurityGearArmedShotgun ]
-    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+    roleLoadout: [  ]
 
 ## ERT Medic
 
@@ -509,7 +509,7 @@
       nameFormat: name-format-ert-doctor
     - type: Loadout
       prototypes: [ ERTMedicalGear ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
     - type: AutoImplant # Goob
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
@@ -530,7 +530,7 @@
   components:
     - type: Loadout
       prototypes: [ ERTMedicalGearEVA ]
-      roleLoadout: [ RoleSurvivalMilitaryDouble ]
+      roleLoadout: [  ]
     - type: AutoImplant # Goob
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
@@ -552,7 +552,7 @@
     nameFormat: name-format-ert-corpsman
   - type: Loadout
     prototypes: [ ERTMedicalGearArmed ]
-    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+    roleLoadout: [  ]
 
 ## CBURN
 

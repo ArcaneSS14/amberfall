@@ -87,19 +87,6 @@
 # Skeleton Spawn
 - type: entity
   parent: BaseGameRule
-  id: SkeletonMidround
-  components:
-  - type: StationEvent
-    weight: 5
-    duration: 1
-    minimumPlayers: 15
-    maxOccurrences: 2
-  - type: RandomEntityStorageSpawnRule
-    prototype: MobSkeletonCloset
-
-# Blob Midround
-- type: entity
-  parent: BaseGameRule
   id: BlobMidround
   components:
   - type: GhostroleAlert

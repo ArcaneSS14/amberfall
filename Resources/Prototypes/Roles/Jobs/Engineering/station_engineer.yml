@@ -17,8 +17,6 @@
   extendedAccess:
   - Atmospherics
   # <Trauma>
-  guides:
-  - Engineering
   special:
   - !type:OrganChipsSpecial
     chips:

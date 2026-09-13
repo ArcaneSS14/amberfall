@@ -16,8 +16,6 @@
       ClothingAbductorBelt: 0.25
       ClothingOuterCoatAbductor: 0.10
       ClothingHeadHelmetAbductor: 0.10
-      ClothingAbductorBeltFilled: 0.05
-      ClothingBackpackDuffelAbductorFilled: 0.05
       AbductorHandcuffs: 0.05
       WeaponAlien: 0.01
       ClothingHeadsetAltAbductor: 0.01
@@ -42,7 +40,6 @@
       MobBingleHunk: 0.10
       MobBingleSlavering: 0.10
       MobBingleBoney: 0.10
-      BinglePit: 0.01
       MobTurkle: 0.01
 
 - type: entity

@@ -15,7 +15,6 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: EmergencyMedipen
         - id: SpaceMedipen
         - id: FoodSnackNutribrick
         - id: DrinkWaterBottleFull

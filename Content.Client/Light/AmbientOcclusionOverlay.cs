@@ -102,8 +102,8 @@ public sealed partial class AmbientOcclusionOverlay : Overlay
 
                     worldHandle.SetTransform(localMatrix);
                     // 4 pixels
-                    // <Trauma> - use the occluder's BoundingBox instead of hardcoded 1x1 box
-                    var box = entry.Component.BoundingBox; // separate line because access is stupid
+                    // <Trauma> - use the occluder's local bounds instead of a hardcoded 1x1 box
+                    var box = entry.Component.LocalBounds;
                     worldHandle.DrawRect(box.Enlarged(distance / EyeManager.PixelsPerMeter), Color.White);
                     // </Trauma>
                 }

@@ -135,9 +135,6 @@
     context: "human"
   - type: InputMover
   - type: MobMover
-  - type: GuideHelp
-    guides:
-    - Robotics
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -147,46 +144,6 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Pai #couldn't decide if this should be borg or pai sounds so I flipped a coin.
-
-- type: entity
-  parent: [MobSiliconBase, SolutionFireExtinguisherBot] # Trauma - was SolutionFireExtinguisherMini
-  id: MobFireBot
-  name: firebot
-  description: A little fire extinguishing bot. He looks rather anxious.
-  components:
-  - type: Sprite
-    sprite: Mobs/Silicon/Bots/firebot.rsi
-    state: firebot
-  - type: Construction
-    graph: FireBot
-    node: bot
-  - type: HTN
-    rootTask:
-      task: FirebotCompound
-#  - type: SolutionRegeneration Trauma
-#    generated:
-#      reagents:
-#        - ReagentId: Water
-#          Quantity: 10
-  - type: Spray
-    transferAmount: 10
-    pushbackAmount: 60
-    spraySound:
-      path: /Audio/Effects/extinguish.ogg
-    sprayedPrototype: ExtinguisherSpray
-    vaporAmount: 1
-    vaporSpread: 90
-    sprayVelocity: 3.0
-  - type: UseDelay
-    delay: 2
-  - type: InteractionPopup
-    interactSuccessString: petting-success-firebot
-    interactFailureString: petting-failure-firebot
-    interactSuccessSound:
-      path: /Audio/Ambience/Objects/periodic_beep.ogg
-  - type: Vocalizer
-  - type: DatasetVocalizer
-    dataset: FirebotAd
 
 - type: entity
   parent: MobSiliconBase

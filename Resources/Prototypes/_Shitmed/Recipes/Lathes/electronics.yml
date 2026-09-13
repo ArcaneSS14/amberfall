@@ -9,8 +9,3 @@
   parent: BaseGoldCircuitboardRecipe
   id: OperatingTableCircuitboard
   result: OperatingTableCircuitboard
-
-- type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
-  id: MedicalBiofabMachineBoard
-  result: MedicalBiofabMachineBoard

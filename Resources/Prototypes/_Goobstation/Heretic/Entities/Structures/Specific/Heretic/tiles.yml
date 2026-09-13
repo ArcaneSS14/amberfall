@@ -237,7 +237,6 @@
   footstepSounds:
     collection: FootstepPlating
   friction: 1.5
-  heatCapacity: 100000
   variants: 8
   placementVariants:
   - 1.0
@@ -260,7 +259,6 @@
   footstepSounds:
     collection: FootstepPlating
   friction: 1.5
-  heatCapacity: 10000
 
 - type: entity
   id: WallFieldCosmic

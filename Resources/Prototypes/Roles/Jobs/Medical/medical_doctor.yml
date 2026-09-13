@@ -12,7 +12,6 @@
   supervisors: job-supervisors-cmo
   guides: # goobstation
   - MedicalDoctor
-  - Medical
   - Medicine
   access:
   - Medical

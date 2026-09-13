@@ -58,10 +58,6 @@
       canReact: false # added becuse there where instances that the chemicals can mix on transfer
   - type: DumpableSolution
     solution: buffer
-  - type: GuideHelp
-    guides:
-    - Chemicals
-    - Chemist
   - type: StaticPrice
     price: 20
   - type: SolutionItemStatus  # lets you see how full it is when holding it

@@ -21,8 +21,6 @@
       - NukeDisk
       - GravityGenerator
       - AnomalyGenerator
-      - TegGenerator
-      - TegCirculator
       - XenoArtifact
       - MaterialReclaimer
       - StationAlertLevelLock # Trauma

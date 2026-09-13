@@ -45,11 +45,6 @@
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
-  id: SyndicateMicrowaveMachineCircuitboard
-  result: SyndicateMicrowaveMachineCircuitboard
-
-- type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
   id: RoboticArmCircuitboard
   icon:
     sprite: _Goobstation/Structures/Machines/robotic_arm.rsi
@@ -89,26 +84,10 @@
     state: icon
 
 - type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
-  id: TeslaCoilCircuitboard
-  result: TeslaCoilCircuitboard
-  icon:
-    sprite:  Structures/Power/Generation/Tesla/coil.rsi
-    state: coil
-
-- type: latheRecipe
   parent: [ BaseGoldCircuitboardRecipe, BaseResearchMachineRecipeCategory ]
   icon: { sprite: Structures/Machines/Medical/biomass_reclaimer.rsi, state: icon } # Todo - Change this sprite.
   id: SlimeGrinderMachineCircuitboard
   result: SlimeGrinderMachineCircuitboard
-
-- type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
-  id: RadiationCollectorCircuitboard
-  result: RadiationCollectorCircuitboard
-  icon:
-    sprite:  Structures/Power/Generation/Singularity/collector.rsi
-    state: ca_on
 
 - type: latheRecipe
   parent: [ BaseEngineeringMachineRecipeCategory ]

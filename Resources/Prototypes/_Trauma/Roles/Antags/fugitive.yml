@@ -14,7 +14,6 @@
     back: ClothingBackpackSatchelLeather
     shoes: ClothingShoesBootsJackFilled
     belt: ClothingBeltSecurityFilled
-    id: HunterPDA
     pocket1: WeaponPistolMk58
     pocket2: WeaponLaserSidearm
     ears: ClothingHeadsetAltHunter

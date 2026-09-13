@@ -73,8 +73,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: ItemMapper
@@ -147,8 +145,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -169,8 +165,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Sprite
@@ -189,8 +183,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -213,8 +205,6 @@
       - Flare
       mask:
       - ClothingMaskGasSecurity
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Sprite
@@ -233,8 +223,6 @@
       - Flare
       mask:
       - ClothingMaskGasSecurity
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -257,8 +245,6 @@
       - Flare
       mask:
       - ClothingMaskBreathMedical
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Sprite
@@ -277,8 +263,6 @@
       - Flare
       mask:
       - ClothingMaskBreathMedical
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -301,8 +285,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Sprite
@@ -326,8 +308,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -348,8 +328,6 @@
       - Flare
       mask:
       - ClothingMaskGasSyndicate
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Sprite
@@ -368,8 +346,6 @@
       - Flare
       mask:
       - ClothingMaskGasSyndicate
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -390,8 +366,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
 
@@ -408,8 +382,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
 
@@ -426,8 +398,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -449,8 +419,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -469,8 +437,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -491,8 +457,6 @@
       - Flare
       mask:
       - ClothingMaskGasSecurity
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -513,8 +477,6 @@
       - Flare
       mask:
       - ClothingMaskBreathMedical
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -535,8 +497,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -555,8 +515,6 @@
       - Flare
       mask:
       - ClothingMaskGasSyndicate
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label
@@ -577,8 +535,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label

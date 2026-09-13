@@ -31,7 +31,6 @@
   - type: GuideHelp
     guides:
     - Cyborgs
-    - Robotics
 
 - type: entity
   id: LeftArmBorg

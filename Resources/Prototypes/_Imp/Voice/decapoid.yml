@@ -28,8 +28,6 @@
       path: /Audio/_Impstation/Voice/Decapoid/decapoid_cry.ogg
     Sigh:
       path: /Audio/_Impstation/Voice/Decapoid/decapoid_sigh.ogg
-    Gasp:
-      path: /Audio/_Impstation/Voice/Decapoid/decapoid_gasp.ogg
     Cough:
       path: /Audio/_Impstation/Voice/Decapoid/decapoid_cough.ogg
     DefaultDeathgasp:

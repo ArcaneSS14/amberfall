@@ -1,7 +1,7 @@
+using Robust.Shared.Prototypes;
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.DeviceLinking;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Trauma.Server.SpaceArtillery.Components;
 
@@ -36,7 +36,7 @@ public sealed partial class SpaceArtilleryComponent : Component
     /// <summary>
     /// Signal port that makes space artillery fire.
     /// </summary>
-    [DataField("spaceArtilleryFirePort", customTypeSerializer: typeof(PrototypeIdSerializer<SinkPortPrototype>))]
-    public string SpaceArtilleryFirePort = "SpaceArtilleryFire";
+    [DataField("spaceArtilleryFirePort")]
+    public ProtoId<SinkPortPrototype> SpaceArtilleryFirePort = "SpaceArtilleryFire";
 
 }

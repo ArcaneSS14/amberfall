@@ -30,20 +30,6 @@
     - Mime
 
 - type: listing
-  id: UplinkEmergencyMedipenMute
-  name: uplink-medipen-mute-name
-  description: uplink-medipen-mute-desc
-  productEntity: EmergencyMedipenMute
-  cost:
-    Telecrystal: 10
-  categories:
-  - UplinkJob
-  conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Mime
-
-- type: listing
   id: UplinkClothingShoesColorWhiteSilent
   name: uplink-silent-shoes-name
   description: uplink-silent-shoes-desc

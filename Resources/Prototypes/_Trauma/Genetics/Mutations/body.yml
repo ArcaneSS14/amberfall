@@ -159,26 +159,6 @@
     # TODO: prevent it being removed by anything, use events or something
 
 - type: entity
-  parent: BaseMutation
-  id: MutationMonkified
-  name: Monkified
-  description: A strange genome, believed to be what differentiates monkeys from humans.
-  components:
-  - type: Mutation
-    instability: -40 # mmmonky
-    locked: true # specific to monkeys/kobolds (active) and humans/reptilians (dormant)
-  - type: PolymorphMutation
-    prototypes:
-      Human: MutationMonkey
-      Reptilian: MutationKobold
-    reverts:
-      Monkey: MutationHuman
-      Kobold: MutationReptilian
-    fallback: MutationHuman
-
-# Powergaming
-
-- type: entity
   abstract: true
   parent: BaseMutation
   id: BaseLightMutation
@@ -256,33 +236,6 @@
 # Dangerous though potentially useful
 
 - type: entity
-  parent: [ BaseFreeMutation, BaseTriggerMutation ]
-  id: MutationFierySweat
-  name: Fiery Sweat
-  description: The user's skin will randomly combust, but is generally a lot more resilient to burning.
-  components:
-  - type: Mutation
-    difficulty: 14
-    conflicts:
-    - MutationHeatAdaptation
-    # TG does not have it incompatible with thermal adaptation :) have fun
-  - type: RandomTrigger
-    prob: 0.0005 # 0.05%
-  - type: EntityEffectOnTrigger
-    effects:
-    - !type:RelayMutated
-      effect: !type:NestedEffect
-        proto: MutationFierySweat
-  - type: ArmorMutation
-    modifiers:
-      coefficients: # in tg it seems to apply for all burn damage, not just heat
-        Heat: 0.5
-        Cold: 0.5
-        Shock: 0.5
-        Caustic: 0.5
-
-# if some yml warrior adds endermen give them this trust
-- type: entity
   parent: BaseMutation
   id: MutationSpatialInstability
   name: Spatial Instability
@@ -323,23 +276,6 @@
       effect: !type:NestedEffect
         probability: 0.15
         proto: MutationAcidicFleshPop
-
-- type: entity
-  parent: BaseTriggerMutation
-  id: MutationSpastic
-  name: Spastic
-  description: Subject suffers from muscle spasms.
-  components:
-  - type: Mutation
-    instability: -30
-    difficulty: 16
-  - type: RandomTrigger
-    prob: 0.15 # 15%
-  - type: EntityEffectOnTrigger
-    effects:
-    - !type:RelayMutated
-      effect: !type:NestedEffect
-        proto: MutationSpasms
 
 - type: entity
   parent: BaseTriggerMutation

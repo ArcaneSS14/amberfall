@@ -42,26 +42,6 @@
 
 
 - type: cargoProduct
-  id: FunBalloonPack
-  icon:
-    sprite: _Goobstation/Objects/Fun/balloons.rsi
-    state: red
-  product: CrateBalloonPackage
-  cost: 1500
-  category: cargoproduct-category-name-fun
-  group: market
-
-- type: cargoProduct
-  id: FunPremiumBalloonPack
-  icon:
-    sprite: _Goobstation/Objects/Fun/balloons.rsi
-    state: carp
-  product: PremiumCrateBalloonPackage
-  cost: 7500
-  category: cargoproduct-category-name-fun
-  group: market
-
-- type: cargoProduct
   id: FunDiscoBeachBall
   icon:
     sprite: Objects/Fun/Balls/beach_ball.rsi

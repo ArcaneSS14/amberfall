@@ -31,9 +31,7 @@
   loadouts:
   - EmergencyNitrogenMedical
   - EmergencyOxygenMedical
-  - LoadoutSpeciesVoxNitrogen
   # <Goob>
-  - LoadoutSpeciesPlasma
   - EmergencySilicon
   # </Goob>
 

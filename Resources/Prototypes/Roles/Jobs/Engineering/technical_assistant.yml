@@ -19,9 +19,7 @@
   - External
   # <Trauma>
   guides:
-  - Construction
   - Power
-  - Networking
   special:
   - !type:OrganChipsSpecial
     chips:

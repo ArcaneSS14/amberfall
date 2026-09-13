@@ -24,24 +24,6 @@
     - Enchanting
 
 - type: entity
-  parent: BaseItem
-  id: MagicInkRandom
-  name: random magic ink
-  components:
-  - type: Sprite
-    sprite: _Trauma/Objects/Enchanting/inks.rsi
-    state: nocimat
-  - type: TimedDespawn
-    lifetime: 0.01
-  - type: SpawnOnDespawn
-    prototype: RandomInkSpawner
-  - type: Construction
-    graph: RandomInk
-    node: finish
-
-## Enchants
-
-- type: entity
   parent: BaseInk
   id: MagicInkAshartine
   name: ashartine

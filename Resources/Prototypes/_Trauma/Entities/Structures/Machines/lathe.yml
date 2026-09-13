@@ -124,7 +124,6 @@
     runningState: printingpress
     staticPacks:
     - RevPrintingPress
-    - PrintingPressAdvanced
   - type: MaterialStorage
     whitelist:
       tags:
@@ -143,10 +142,6 @@
     producingSound:
       path: /Audio/_Trauma/Revs/printingpresslong.ogg
     runningState: printingpress
-    staticPacks:
-    - PrintingPressSimple
-    - PrintingPressAdvanced
-    - PrintingPressBlueprints
     idleState: icon
   - type: MaterialStorage
     whitelist:
@@ -243,8 +238,6 @@
     producingSound:
       path: /Audio/_Trauma/Revs/printer.ogg
     runningState: printer
-    staticPacks:
-    - RevPrinterStatic
   - type: MaterialStorage
     whitelist:
       tags:
@@ -433,9 +426,6 @@
     runningState: icon
     staticPacks:
     - RevMedicalStatic
-    - ChemistryStatic
-    - SurgeryStatic
-    - MedicalStatic
   - type: MaterialStorage
     whitelist:
       tags:

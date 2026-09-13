@@ -21,7 +21,6 @@
   icon: "JobIconHeadOfSecurity"
   supervisors: job-supervisors-captain
   guides: # Trauma
-  - Security
   - SpaceLaw
   - Command
   access:

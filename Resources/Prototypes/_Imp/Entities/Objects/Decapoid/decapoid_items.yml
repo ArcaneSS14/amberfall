@@ -36,13 +36,13 @@
   - type: MultipleTool
     statusShowBehavior: true
     entries:
-      - behavior: Prying
+      - behavior: [Prying]
         sprite:
           sprite: _Impstation/Objects/Decapoid/claw.rsi
           state: icon-closed
         useSound: /Audio/_Impstation/Items/Decapoid/claw_prying.ogg
         changeSound: /Audio/_Impstation/Items/Decapoid/switch.ogg
-      - behavior: Cutting
+      - behavior: [Cutting]
         sprite:
           sprite: _Impstation/Objects/Decapoid/claw.rsi
           state: icon
@@ -100,8 +100,6 @@
       - Flare
       mask:
       - ClothingMaskBreath
-      emergencypen:
-      - EmergencyMedipen
       spacepen:
       - SpaceMedipen
   - type: Label

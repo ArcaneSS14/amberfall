@@ -206,26 +206,6 @@
 
 - type: entity
   parent: [ BasePayload, BaseSyndicateContraband ]
-  id: SarinGasPayload
-  name: sarin gas payload
-  description: Releases a large amount of deadly gas.
-  components:
-  - type: Sprite
-    sprite: _Trauma/Objects/Devices/bombcomponents.rsi
-    state: payload-saringas
-  - type: DeleteOnTrigger
-  - type: SmokeOnTrigger
-    duration: 20
-    spreadAmount: 30
-    solution:
-      reagents:
-      - ReagentId: Sarin
-        Quantity: 50
-  - type: EmitSoundOnTrigger
-    sound: /Audio/Items/smoke_grenade_smoke.ogg
-
-- type: entity
-  parent: [ BasePayload, BaseSyndicateContraband ]
   id: IncendiaryPayload
   name: incendiary payload
   description: Launches many fiery fragments.

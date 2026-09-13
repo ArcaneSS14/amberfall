@@ -16,10 +16,6 @@
     - type: Tag
       tags:
       - ClarkeCentralControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
 - type: entity
   id: ClarkePeripheralsElectronics
   parent: BaseElectronics
@@ -32,12 +28,6 @@
     - type: Tag
       tags:
       - ClarkePeripheralsControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
-# Gygax
-
 - type: entity
   id: GygaxCentralElectronics
   parent: BaseElectronics
@@ -52,10 +42,6 @@
     - type: Tag
       tags:
       - GygaxCentralControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
 - type: entity
   id: GygaxPeripheralsElectronics
   parent: BaseElectronics
@@ -68,10 +54,6 @@
     - type: Tag
       tags:
       - GygaxPeripheralsControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
 - type: entity
   id: GygaxTargetingElectronics
   parent: BaseElectronics
@@ -84,12 +66,6 @@
     - type: Tag
       tags:
       - GygaxTargetingControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
-# Durand
-
 - type: entity
   id: DurandCentralElectronics
   parent: BaseElectronics
@@ -104,10 +80,6 @@
     - type: Tag
       tags:
       - DurandCentralControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
 - type: entity
   id: DurandPeripheralsElectronics
   parent: BaseElectronics
@@ -120,10 +92,6 @@
     - type: Tag
       tags:
       - DurandPeripheralsControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
 - type: entity
   id: DurandTargetingElectronics
   parent: BaseElectronics
@@ -136,6 +104,3 @@
     - type: Tag
       tags:
       - DurandTargetingControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics

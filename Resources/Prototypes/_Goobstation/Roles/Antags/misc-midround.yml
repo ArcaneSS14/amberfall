@@ -8,7 +8,6 @@
     shoes: ClothingShoesColorBlackUnremoveable
     id: PassengerPDA
     ears: ClothingHeadsetGrey
-    belt: ClothingBeltUtilityFilledUnremoveable
     gloves: ClothingHandsGlovesColorYellowUnremovable
     back: ClothingBackpackUnremoveable
   inhand:

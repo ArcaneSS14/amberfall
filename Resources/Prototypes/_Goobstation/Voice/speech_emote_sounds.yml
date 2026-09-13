@@ -35,8 +35,6 @@
       path: /Audio/_Goobstation/Heretic/hiss/hiss5.ogg
     Whistle:
       path: /Audio/_Goobstation/Heretic/hiss/hiss5.ogg
-    Gasp:
-      collection: HissGasp
     DefaultDeathgasp:
       path: /Audio/_Goobstation/Heretic/hiss/lowHiss1.ogg
 
@@ -85,8 +83,6 @@
   parent: UnisexMoth
   id: MaleMoth
   sounds:
-    Gasp:
-      collection: MaleGasp
     DefaultDeathgasp:
       collection: MothDeathGasp
     Yawn:
@@ -104,8 +100,6 @@
   parent: UnisexMoth
   id: FemaleMoth
   sounds:
-    Gasp:
-      collection: FemaleGasp
     Yawn:
       collection: FemaleYawn
     Sigh:

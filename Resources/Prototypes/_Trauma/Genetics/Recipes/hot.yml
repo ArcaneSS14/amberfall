@@ -5,11 +5,9 @@
   result: MutationCindikinesis
   required:
   - MutationGeladikinesis
-  - MutationFierySweat
 
 - type: mutationRecipe
   id: Pyrokinesis
   result: MutationPyrokinesis
   required:
   - MutationCryokinesis
-  - MutationFierySweat

@@ -69,7 +69,6 @@
     - id: ClothingBeltSheathHeadOfSecurityFilled
     - id: TelescopicShield
     - id: ArmoryOverrideKeyComponents
-    - id: SecAntagSummoner
     - id: ClothingHandsGlovesGorilla
 
 - type: entityTable

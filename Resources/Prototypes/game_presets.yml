@@ -9,7 +9,6 @@
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
 
 - type: gamePreset
   id: KesslerSyndrome
@@ -24,7 +23,6 @@
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
 
 - type: gamePreset
   id: AllAtOnce
@@ -40,7 +38,6 @@
     - BlobGameMode
     - LoneAbductorSpawn
     - Changeling
-    - Insurgency
     - CosmicCult
     - XenomorphsInfestationRoundstart
     # </Trauma>
@@ -49,11 +46,9 @@
     - Revolutionary
     - Zombie
     - Wizard
-    - Xenoborgs
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
 
 - type: gamePreset
   id: AllerAtOnce
@@ -75,7 +70,6 @@
     - LoneAbductorSpawn
     - Changeling
     - ShadowlingRoundstart
-    - Insurgency
     - CosmicCult
     - XenomorphsInfestationRoundstart
     # </Trauma>
@@ -84,14 +78,12 @@
     - Revolutionary
     - Zombie
     - Wizard
-    - Xenoborgs
     - BasicStationEventScheduler
     - KesslerSyndromeScheduler
     - MeteorSwarmMildScheduler
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
 
 - type: gamePreset
   id: Extended
@@ -105,18 +97,6 @@
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
-
-- type: gamePreset
-  id: Greenshift
-  alias:
-  - greenshift
-  - shittersafarideluxeedition
-  name: greenshift-title
-  showInVote: false #4boring4vote
-  description: greenshift-description
-  rules:
-  - BasicRoundstartVariation
 
 - type: gamePreset
   id: Dynamic
@@ -128,12 +108,10 @@
   showInVote: false # admin-only for now until we fix some bugs
   description: dynamic-description
   rules:
-  - DynamicRule
   - DummyNonAntag
   - DynamicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
 
 - type: gamePreset
   id: Secret
@@ -144,7 +122,6 @@
   showInVote: true
   description: secret-description
   rules:
-    - Insurgency # Trauma
     - Secret
 
 - type: gamePreset
@@ -173,24 +150,9 @@
   # </Trauma>
   - DummyNonAntagChance
   - Traitor
-  - SubGamemodesRule
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
-
-- type: gamePreset
-  id: Deathmatch
-  alias:
-    - deathmatch
-    - dm
-  name: death-match-title
-  description: death-match-description
-  maxPlayers: 15
-  showInVote: true
-  supportedMaps: DeathMatchMapPool
-  rules:
-    - DeathMatch31
 
 - type: gamePreset
   id: Nukeops
@@ -210,7 +172,6 @@
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
 
 - type: gamePreset
   id: Revolutionary
@@ -228,11 +189,9 @@
   # </Trauma>
   - DummyNonAntagChance
   - Revolutionary
-  - SubGamemodesRule
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
 
 - type: gamePreset
   id: Xenoborgs
@@ -246,13 +205,10 @@
   - BasicAntagEventScheduler
   - ModerateAntagEventScheduler
   # </Trauma>
-  - Xenoborgs
   - DummyNonAntagChance
-  - SubGamemodesRule
   - BasicStationEventScheduler
   # - MeteorSwarmScheduler - Trauma
   - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
 
 - type: gamePreset
   id: Zombie
@@ -274,7 +230,6 @@
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
 
 - type: gamePreset
   id: Zombieteors
@@ -294,4 +249,3 @@
   - BasicStationEventScheduler
   - KesslerSyndromeScheduler
   - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation

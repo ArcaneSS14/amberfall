@@ -79,16 +79,6 @@
   group: market
 
 - type: cargoProduct
-  id: EngineTeslaCoil
-  icon:
-    sprite: Structures/Power/Generation/Tesla/coil.rsi
-    state: coil
-  product: CrateEngineeringTeslaCoil
-  cost: 1200
-  category: cargoproduct-category-name-engineering
-  group: market
-
-- type: cargoProduct
   id: EngineTeslaGroundingRod
   icon:
     sprite: Structures/Power/Generation/Tesla/coil.rsi

@@ -34,21 +34,6 @@
       spawn: HierophantShapeBoxExpanding
 
 - type: entity
-  id: ActionHierophantCrosses
-  parent: ActionBaseHierophant
-  name: Sequence Crosses
-  description: Spawns a sequence of crosses on the target position.
-  components:
-  - type: AngerDelayAction
-    minDelay: 1.5
-    maxDelay: 4.0
-    inverse: true
-  - type: WorldTargetAction
-    event: !type:SpawnEntityActionEvent
-      spawn: HierophantShapeCrossSequence
-      attachToTarget: true
-
-- type: entity
   id: ActionHierophantChasers
   parent: ActionBaseHierophant
   name: Spawn Chasers

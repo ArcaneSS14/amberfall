@@ -70,8 +70,6 @@
         children:
         - id: LollyChop
         - id: ClothingHeadHatPropeller
-        - id: FoodSnackLollypopWrappedMysteryEvil
-          amount: 5
         - id: FoodSnackLollypopWrappedOmnizine
           amount: 3
         - id: FoodSnackLollypopWrapped
@@ -93,8 +91,6 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: FoodSnackLollypopWrappedMysteryEvil
-          amount: 35
         - id: FoodSnackLollypopWrappedOmnizine
           amount: 5
         - id: FoodSnackChocolate

@@ -95,8 +95,6 @@
   components:
   # <Trauma>
   - type: Mutatable
-    dormant:
-    - MutationMonkified # return to monke
   - type: Skinnable # skinwalkers
     skinningDoAfterDuation: 8
     whitelist:

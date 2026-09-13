@@ -1,7 +1,6 @@
 - type: tile
   id: BaseFloorPlanet
   abstract: true
-  heatCapacity: 10000
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
@@ -118,7 +117,6 @@
   sprite: /Textures/Tiles/Planet/Snow/ice.png
   isSubfloor: true
   friction: 0.05
-  heatCapacity: 10000
   weather: true
   mobAcceleration: 0.1
   indestructible: true

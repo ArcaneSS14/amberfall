@@ -185,36 +185,6 @@
     Ibuprofen: 3
 
 - type: reaction
-  id: MeatSynth
-  quantized: true
-  reactants:
-    SodiumPolyacrylate:
-      amount: 10
-    Phenol:
-      amount: 5
-    Blood:
-      amount: 5
-    Carbon:
-      amount: 10
-  products:
-    Hydroxide: 2.5 # frankly it's there so that this recipe appears in the guidebook at all
-  effects:
-    - !type:SpawnEntity
-      entity: FoodMeatSynth
-
-- type: reaction
-  id: Synthcells
-  requiredMixerCategories:
-  - Centrifuge
-  reactants:
-    Synthflesh:
-      amount: 6
-  products:
-    Synthcells: 4
-    Sodium: 1
-    Carbon: 1
-
-- type: reaction
   id: SalicylicAcid
   minTemp: 370
   reactants:
@@ -242,34 +212,6 @@
       amount: 1
   products:
     Oxandrolone: 4
-
-- type: reaction
-  id: PentenicAcid
-  reactants:
-    PolytrinicAcid:
-      amount: 1
-    PotassiumIodide:
-      amount: 1
-    Haloperidol:
-      amount: 1
-    Cyanide:
-      amount: 1
-  products:
-    PentenicAcid: 4
-
-- type: reaction
-  id: Atropine
-  reactants:
-    Acetone:
-      amount: 1
-    Diethylamine:
-      amount: 1
-    Phenol:
-      amount: 1
-    Ethanol:
-      amount: 1
-  products:
-    Atropine: 4
 
 - type: reaction
   id: Genecide

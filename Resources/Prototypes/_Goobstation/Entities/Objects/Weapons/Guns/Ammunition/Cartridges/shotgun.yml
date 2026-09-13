@@ -175,28 +175,6 @@
     state: "beanbag"
 
 - type: entity
-  id: ShellShotgunHighCaliberSarin
-  name: shell (8 Gauge sarin gas)
-  parent: ShellShotgunSlugHighCaliber
-  components:
-    - type: Tag
-      tags:
-        - Cartridge
-        - ShellShotgunHeavy
-    - type: Sprite
-      layers:
-        - state: practice
-          map: [ "enum.AmmoVisualLayers.Base" ]
-    - type: CartridgeAmmo
-      proto: BulletShotgunHeavySlugSarin
-    - type: SpentAmmoVisuals
-      state: "practice"
-
-
-# Heavy shotgun
-
-# Pellet
-- type: entity
   id: ShellShotgunHeavyHighExplosive
   name: shell (2 Gauge pellet)
   parent: BaseShellShotgun

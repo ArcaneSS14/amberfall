@@ -15,18 +15,6 @@
     MetalworkingKnowledge: 1
 
 - type: construction
-  id: SolarPanel
-  graph: SolarPanel
-  targetNode: solarassembly
-  category: construction-category-structures
-  objectType: Structure
-  placementMode: SnapgridCenter
-  theory:
-    ElectronicsKnowledge: 0
-
-# Barricades
-
-- type: construction
   id: BarricadeSteel
   graph: BarricadeSteel
   targetNode: base

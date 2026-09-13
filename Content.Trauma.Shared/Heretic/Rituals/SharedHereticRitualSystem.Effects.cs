@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.Linq;
+
 using Content.Shared.FixedPoint;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
@@ -148,7 +150,7 @@ public abstract partial class SharedHereticRitualSystem
             !TryComp(ent, out StoreComponent? store))
             return;
 
-        _heretic.UpdateMindKnowledge((ent, ent, store, mind), null, args.Effect.Knowledge);
+        _heretic.UpdateMindKnowledge((ent, ent, store, mind), null, args.Effect.Knowledge.ToDictionary(entry => entry.Key.Id, entry => entry.Value));
     }
 
     private void OnGhoulify(Entity<TransformComponent> ent, ref HereticRitualEffectEvent<GhoulifyEffect> args)

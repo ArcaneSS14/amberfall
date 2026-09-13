@@ -26,19 +26,6 @@
 
 - type: entity
   parent: CrateEngineeringSecure
-  id: CrateEngineeringAMEControl
-  name: antimatter control unit crate
-  description: The control unit of an antimatter reactor.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: AmeControllerFlatpack
-
-# Singularity
-
-- type: entity
-  parent: CrateEngineeringSecure
   id: CrateEngineeringSingularityEmitter
   name: emitter crate
   description: An emitter, best used for singularity engines.
@@ -55,12 +42,6 @@
   description: A radiation collector, best used for singularity engines. Plasma is included.
   components:
   - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: RadiationCollectorFlatpack
-        - id: PlasmaTankFilled
-
 - type: entity
   parent: CrateEngineeringSecure
   id: CrateEngineeringSingularityContainment
@@ -126,8 +107,6 @@
     containers:
       entity_storage: !type:AllSelector
         children:
-        - id: SolarAssemblyFlatpack
-          amount: 10
         - id: SheetGlass10
           amount: 2
 
@@ -156,17 +135,6 @@
     containers:
       entity_storage:
         id: TeslaGeneratorFlatpack
-
-- type: entity
-  parent: CrateEngineeringSecure
-  id: CrateEngineeringTeslaCoil
-  name: tesla coil crate
-  description: Tesla coil. Attracts lightning and generates energy from it.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: TeslaCoilFlatpack
 
 - type: entity
   parent: CrateEngineeringSecure

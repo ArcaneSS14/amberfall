@@ -221,22 +221,6 @@
       - MobState
 
 - type: entity
-  id: ProjectilePolyboltMonkey
-  parent: ProjectilePolyboltBase
-  name: monkey polybolt
-  description: Nooo, I don't wanna be monkey!
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Reflective
-    reflective: Magic
-  - type: PolymorphOnTrigger
-    polymorph: WizardForcedMonkey
-  - type: WhitelistTriggerCondition
-    userWhitelist:
-      components:
-      - MobState
-
-- type: entity
   id: ProjectilePolyboltDoor
   parent: ProjectilePolyboltBase
   name: door polybolt

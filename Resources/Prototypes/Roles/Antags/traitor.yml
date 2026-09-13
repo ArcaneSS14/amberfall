@@ -98,7 +98,6 @@
   equipment:
     # <Trauma>
     eyes: ClothingEyesHudSyndicateAgent
-    id: SyndiMedicPDA
     gloves: ClothingHandsGlovesNitrile
     pocket1: WeaponPistolViper
   inhand:

@@ -15,7 +15,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="../Content.Apotheosis.Server/Content.Apotheosis.Server.csproj" />
+		<ProjectReference Include="../Content.Amberfall.Server/Content.Amberfall.Server.csproj" />
 		<ProjectReference Include="../Content.Trauma.Shared/Content.Trauma.Shared.csproj" />
 		<ProjectReference Include="../Content.Goobstation.Server/Content.Goobstation.Server.csproj" />
 		<ProjectReference Include="../Content.Lavaland.Server/Content.Lavaland.Server.csproj" />

@@ -17,7 +17,6 @@
   # </Trauma>
   - MiningDrill
   - MineralScannerEmpty
-  - OreProcessorIndustrialMachineCircuitboard
   - ClothingMaskWeldingGas
   - ClothingShoesBootsJump
   # Goobstation R&D Console rework start
@@ -99,7 +98,6 @@
   - LatheUpgradeKitCryo
   - UpgradeKitTubeSpeed
   # </Trauma>
-  - SheetifierMachineCircuitboard
   # Goobstation R&D Console rework start
   position: 1,-2
   technologyPrerequisites:
@@ -116,9 +114,6 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - PortableGeneratorPacmanMachineCircuitboard
-  - PortableGeneratorSuperPacmanMachineCircuitboard
-  - PortableGeneratorJrPacmanMachineCircuitboard
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
   - EmitterCircuitboard

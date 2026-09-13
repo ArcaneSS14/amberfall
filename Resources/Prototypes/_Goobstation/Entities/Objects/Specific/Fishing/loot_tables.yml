@@ -88,9 +88,6 @@
     - id: FishToxic
     - id: FishIan
     - id: FishAbductor
-    - id: FishSquid
-
-
 - type: entityTable
   id: HostileFishTableWater
   table: !type:GroupSelector

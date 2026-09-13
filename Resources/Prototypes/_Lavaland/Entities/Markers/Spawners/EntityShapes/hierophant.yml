@@ -38,18 +38,6 @@
 
 - type: entity
   parent: BaseHierophantShape
-  id: HierophantShapeCrossQueen
-  name: hierophant attack cross queen spawner
-  categories: [ HideSpawnMenu, Spawner ]
-  components:
-  - type: ShapeSpawner
-    shape: !type:NestedEntityShape
-      id: QueenCross
-      size: 11
-
-# Blink
-- type: entity
-  parent: BaseHierophantShape
   id: HierophantShapeBlink
   name: hierophant attack blink spawner
   categories: [ HideSpawnMenu, Spawner ]

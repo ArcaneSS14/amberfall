@@ -108,7 +108,6 @@
     - ActionCurseBlindness
     - ActionCurseWeakness
     - ActionCurseBlood
-    - ActionCurseRot
     - ActionCurseDeath
     - ActionDefile
     - ActionSummonPlagueRat

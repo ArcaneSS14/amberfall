@@ -71,10 +71,6 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Pai
-  - type: GuideHelp
-    guides:
-    - Genetics
-
 - type: entity
   parent: ComputerGeneticsConsoleEmpty
   id: ComputerGeneticsConsole

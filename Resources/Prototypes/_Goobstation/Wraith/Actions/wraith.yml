@@ -214,8 +214,6 @@
       - NukeDisk
       - GravityGenerator
       - AnomalyGenerator
-      - TegGenerator
-      - TegCirculator
       - XenoArtifact
       - Ghost
       - Spectral
@@ -463,25 +461,6 @@
     event: !type:ApplyCurseActionEvent
       curse: CurseBlood
       popup: curse-popup-blood
-
-- type: entity
-  id: ActionCurseRot
-  name: Curse of rot
-  parent: BaseCurseAction
-  description: Curse the living with a netherworldly plague.
-  components:
-  - type: Action
-    sound: !type:SoundPathSpecifier
-      path: /Audio/_Goobstation/Wraith/wraithstaminadrain.ogg
-    useDelay: 45
-    itemIconStyle: BigAction
-    icon:
-      sprite: _Goobstation/Wraith/actions.rsi
-      state: rot_curse
-  - type: EntityTargetAction
-    event: !type:ApplyCurseActionEvent
-      curse: CurseRot
-      popup: curse-popup-rot
 
 - type: entity
   id: ActionCurseDeath

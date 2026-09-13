@@ -396,15 +396,15 @@ public sealed partial class DurabilitySystem : EntitySystem
         if (ent.Comp.Damage <= -ent.Comp.MaxRepairBonus)
             return;
 
-        if (TryComp<ToolComponent>(args.Used, out var tool) && ent.Comp.RepairTool is not null)
+        if (TryComp<ToolComponent>(args.Used, out var tool) && ent.Comp.RepairTool is {} repairTool)
         {
-            if (_tool.HasQuality(args.Used, ent.Comp.RepairTool, tool))
+            if (_tool.HasQuality(args.Used, repairTool, tool))
             {
                 _tool.UseTool(args.Used,
                     args.User,
                     args.Target,
                     ent.Comp.RepairDoAfter,
-                    [ent.Comp.RepairTool],
+                    [repairTool],
                     new RepairToolDoAfterEvent(),
                     out _,
                     ent.Comp.FuelCost,

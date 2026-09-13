@@ -131,26 +131,6 @@
   result: SMESAdvancedMachineCircuitboard
 
 - type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
-  id: PortableGeneratorPacmanMachineCircuitboard
-  icon: { sprite:  Structures/Power/Generation/portable_generator.rsi, state: portgen0 } # Goobstation
-  result: PortableGeneratorPacmanMachineCircuitboard
-
-- type: latheRecipe
-  parent: PortableGeneratorPacmanMachineCircuitboard
-  id: PortableGeneratorSuperPacmanMachineCircuitboard
-  icon: { sprite:  Structures/Power/Generation/portable_generator.rsi, state: portgen1 } # Goobstation
-  result: PortableGeneratorSuperPacmanMachineCircuitboard
-
-- type: latheRecipe
-  parent: PortableGeneratorPacmanMachineCircuitboard
-  id: PortableGeneratorJrPacmanMachineCircuitboard
-  icon: { sprite:  Structures/Power/Generation/portable_generator.rsi, state: portgen3 } # Goobstation
-  result: PortableGeneratorJrPacmanMachineCircuitboard
-
-## Medical
-
-- type: latheRecipe
   parent: [ BaseGoldCircuitboardRecipe, BaseMedicalMachineRecipeCategory ]
   id: BiomassReclaimerMachineCircuitboard
   icon: { sprite: Structures/Machines/Medical/biomass_reclaimer.rsi, state: icon } # Goobstation
@@ -352,91 +332,6 @@
   result: FlatpackerMachineCircuitboard
 
 # Lathes
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseResearchMachineRecipeCategory ]
-  id: ProtolatheMachineCircuitboard
-  icon: { sprite: Structures/Machines/protolathe.rsi, state: icon } # Goobstation
-  result: ProtolatheMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseResearchMachineRecipeCategory ]
-  id: ProtolatheHyperConvectionMachineCircuitboard
-  icon: { sprite: Structures/Machines/protolathe_hypercon.rsi, state: icon } # Goobstation
-  result: ProtolatheHyperConvectionMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseResearchMachineRecipeCategory ]
-  id: CircuitImprinterMachineCircuitboard
-  icon: { sprite: Structures/Machines/circuit_imprinter.rsi, state: icon } # Goobstation
-  result: CircuitImprinterMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseResearchMachineRecipeCategory ]
-  id: CircuitImprinterHyperConvectionMachineCircuitboard
-  icon: { sprite: Structures/Machines/circuit_imprinter_hypercon.rsi, state: icon } # Goobstation
-  result: CircuitImprinterHyperConvectionMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseResearchMachineRecipeCategory ]
-  id: ExosuitFabricatorMachineCircuitboard
-  icon: { sprite: Structures/Machines/exosuit_fabricator.rsi, state: fab-idle } # Goobstation
-  result: ExosuitFabricatorMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
-  id: BiogeneratorMachineCircuitboard
-  icon: { sprite: Structures/Machines/biofabricator.rsi, state: icon } # Goobstation
-  result: BiogeneratorMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
-  id: BiofabricatorMachineCircuitboard
-  icon: { sprite: Structures/Machines/biofabricator.rsi, state: icon } # Goobstation
-  result: BiofabricatorMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseSupplyMachineRecipeCategory ]
-  id: OreProcessorMachineCircuitboard
-  icon: { sprite: Structures/Machines/ore_processor.rsi, state: icon } # Goobstation
-  result: OreProcessorMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseSupplyMachineRecipeCategory ]
-  id: OreProcessorIndustrialMachineCircuitboard
-  icon: { sprite: Structures/Machines/ore_processor_industrial.rsi, state: icon } # Goobstation
-  result: OreProcessorIndustrialMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
-  id: AutolatheMachineCircuitboard
-  icon: { sprite: Structures/Machines/autolathe.rsi, state: icon } # Goobstation
-  result: AutolatheMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
-  id: AutolatheHyperConvectionMachineCircuitboard
-  icon: { sprite: Structures/Machines/autolathe_hypercon.rsi, state: icon } # Goobstation
-  result: AutolatheHyperConvectionMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
-  id: UniformPrinterMachineCircuitboard
-  icon: { sprite: Structures/Machines/uniform_printer.rsi, state: icon } # Goobstation
-  result: UniformPrinterMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
-  id: SheetifierMachineCircuitboard
-  icon: { sprite:  Structures/Machines/sheetifier.rsi, state: base_machine } # Goobstation
-  result: SheetifierMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
-  id: CutterMachineCircuitboard
-  icon: { sprite:  Structures/Machines/cuttermachine.rsi, state: icon } # Goobstation
-  result: CutterMachineCircuitboard
-
-# Cell chargers
 - type: latheRecipe
   parent: [ BaseCheapElectronicsRecipe, BaseGeneralMachineRecipeCategory ]
   id: BorgChargerCircuitboard

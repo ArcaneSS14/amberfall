@@ -32,7 +32,6 @@
   - TelecomServerCircuitboard # eventually replace this with a homeade looking one
   - RevIFF
   - TrackingImplanterRev
-  - SheetifierMachineCircuitboard
 
 - type: latheRecipePack
   id: RevTelesphereStatic
@@ -95,10 +94,6 @@
 - type: latheRecipePack
   id: RevTechStatic
   recipes:
-  - DataChipAIBoard
-  - DataChipReflectivePlate
-  - DataChipFakeMindshield
-  - DataChipShieldRipper
   - MoldMeleeUpgrades
 
 - type: latheRecipePack

@@ -19,7 +19,6 @@
   pickPlayer: false
   startingGear: SpaceNinjaGear
   roleLoadout:
-  - RoleSurvivalSpaceNinja
   briefing:
     text: ninja-role-greeting
     color: Green
@@ -67,7 +66,6 @@
     - Wirecutter
     - Welder
     - Multitool
-    - EmergencyMedipen
     - Flare
     #- FoodSnackNutribrick # Trauma - rob chef instead chud
     - DrinkWaterBottleFull

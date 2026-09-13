@@ -1,36 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: cargoProduct
-  id: FishingGoodies
-  icon:
-    sprite: _Goobstation/Objects/Specific/Fishing/fishing_rod.rsi
-    state: icon
-  product: CrateFishingGoodies
-  cost: 1000
-  category: cargoproduct-category-name-service
-  group: market
-
-- type: cargoProduct
-  id: ServiceHolySupplies
-  icon:
-    sprite: Objects/Specific/Chapel/bible.rsi
-    state: icon
-  product: CrateHolySupplies
-  cost: 15000
-  category: cargoproduct-category-name-service
-  group: market
-
-- type: cargoProduct
-  id: ForkliftCrateCargo
-  icon:
-    sprite: _Goobstation/Objects/Vehicles/forklift.rsi
-    state: forklift
-  product: CrateCargoForklift
-  cost: 6000
-  category: cargoproduct-category-name-service
-  group: market
-
-- type: cargoProduct
   id: RadioAdsCrateCargo
   icon:
     sprite: Objects/Misc/cd.rsi

@@ -152,41 +152,6 @@
 
 # Eternal Darkness
 - type: entity
-  parent: BaseVampireAction
-  id: ActionEternalDarkness
-  name: Eternal Darkness
-  description: Summons a wave of shadow over a massive area around the vampire, which slows/reduces the damage of lasers as they pass through it. Anyone caught in these shadows will have their body temperature slowly reduced, except for the caster.
-  components:
-  - type: Action
-    useDelay: 10
-    icon:
-      sprite: _Trauma/Vampires/actions.rsi
-      state: eternal_darkness
-  - type: InstantAction
-    event: !type:EffectToggleActionEvent
-  - type: ToggleEffectAction
-    onToggleConditions: # we must have at least 10 usable blood, ensures we don't attach the effect 4noraisin
-    - !type:HasVampireBlood
-      amount: 10
-    onToggle:
-    - !type:PopupPredicted
-      message: The darkness begins!
-    - !type:ModifyStatusEffect
-      effectProto: EternalDarknessStatusEffect
-      time: null
-      type: Add
-    offToggle:
-    - !type:ModifyStatusEffect
-      effectProto: EternalDarknessStatusEffect
-      time: null
-      type: Remove
-    - !type:PopupPredicted
-      message: The darkness stops!
-  - type: Tag
-    tags:
-    - EternalDarkness
-
-- type: entity
   parent: ActionToggleFov
   id: ActionUmbralSight
   name: Umbral Sight

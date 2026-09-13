@@ -192,8 +192,6 @@
         orGroup: Magics
       - id: WeaponWandPolymorphCarp
         orGroup: Magics
-      - id: WeaponWandPolymorphMonkey
-        orGroup: Magics
       - id: WeaponWandFireball
         orGroup: Magics
       - id: WeaponWandCluwne

@@ -105,7 +105,6 @@
       components:
       - Anchorable
       - Item
-      - Supermatter # needs to be here.
       tags:
       - VimPilot # used to morph into animals
     blacklist:

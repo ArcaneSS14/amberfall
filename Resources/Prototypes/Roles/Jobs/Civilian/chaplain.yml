@@ -9,7 +9,6 @@
   startingGear: ChaplainGear
   icon: "JobIconChaplain"
   supervisors: job-supervisors-hop
-  guides: [ Chaplain ] # goobstation
   access:
   - Chapel
   - Maintenance

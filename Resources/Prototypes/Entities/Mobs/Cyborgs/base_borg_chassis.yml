@@ -289,7 +289,6 @@
   - type: GuideHelp
     guides:
     - Cyborgs
-    - Robotics
   - type: ProtectedFromStepTriggers
   - type: DamageOnInteractProtection
     damageProtection:
@@ -618,7 +617,6 @@
   - type: GuideHelp
     guides:
     - Cyborgs
-    - Robotics
     - Xenoborgs
   - type: Access
     tags:

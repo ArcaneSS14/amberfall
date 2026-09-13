@@ -14,10 +14,6 @@
     - type: Tag
       tags:
       - RipleyCentralControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
 - type: entity
   id: RipleyPeripheralsElectronics
   parent: BaseElectronics
@@ -30,12 +26,6 @@
     - type: Tag
       tags:
       - RipleyPeripheralsControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
-# H.O.N.K.
-
 - type: entity
   id: HonkerCentralElectronics
   parent: BaseElectronics
@@ -50,10 +40,6 @@
     - type: Tag
       tags:
       - HonkerCentralControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
 - type: entity
   id: HonkerPeripheralsElectronics
   parent: BaseElectronics
@@ -66,10 +52,6 @@
     - type: Tag
       tags:
       - HonkerPeripheralsControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
 - type: entity
   id: HonkerTargetingElectronics
   parent: BaseElectronics
@@ -82,12 +64,6 @@
     - type: Tag
       tags:
       - HonkerTargetingControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
-# HAMTR
-
 - type: entity
   id: HamtrCentralElectronics
   parent: BaseElectronics
@@ -102,10 +78,6 @@
     - type: Tag
       tags:
       - HamtrCentralControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics
-
 - type: entity
   id: HamtrPeripheralsElectronics
   parent: BaseElectronics
@@ -118,6 +90,3 @@
     - type: Tag
       tags:
       - HamtrPeripheralsControlModule
-    - type: GuideHelp
-      guides:
-      - Robotics

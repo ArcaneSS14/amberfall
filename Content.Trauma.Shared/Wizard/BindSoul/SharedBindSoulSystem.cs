@@ -44,8 +44,6 @@ public abstract partial class SharedBindSoulSystem : EntitySystem
 
     private static readonly EntProtoId ParticlePrototype = "BindSoulParticle";
 
-    protected static readonly EntProtoId LichPrototype = "MobSkeletonPerson";
-
     protected static readonly ProtoId<StartingGearPrototype> LichGear = "LichGear";
 
     public override void Initialize()
@@ -176,7 +174,8 @@ public abstract partial class SharedBindSoulSystem : EntitySystem
     public virtual void Resurrect(EntityUid mind,
         EntityUid phylactery,
         MindComponent mindComp,
-        SoulBoundComponent soulBound)
+        SoulBoundComponent soulBound,
+        EntProtoId prototype)
     {
     }
 

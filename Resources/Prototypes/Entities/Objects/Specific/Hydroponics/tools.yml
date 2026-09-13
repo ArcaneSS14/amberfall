@@ -200,10 +200,6 @@
   description: A bag for botanists to easily move their huge harvests.
   components:
   # <Trauma>
-  - type: RelayInteractionStorage
-    whitelist:
-      components:
-      - ProduceMaterialExtractor
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/Equipment/plant_bag.rsi
     state: icon

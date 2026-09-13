@@ -217,23 +217,6 @@
 #what were they cooking here before, 114 total possible dmg heal was crazyyy
 #~21 dmg healed/dmg type (unless its cold, then its a lil more), doesnt heal caustic all that well
 - type: entity
-  name: emergency autoinjector cartridge
-  parent: [ BaseSecurityMedicalContraband , BaseAutoinjectorCartridge ]
-  description: Contains 10u of atropine, used in a cartridge autoinjector.
-  id: CartridgeAtropine
-  components:
-  - type: Sprite
-    layers:
-    - state: base
-    - state: filling
-      color: "#572757"
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Atropine
-        Quantity: 10
-
-- type: entity
   name: piercing autoinjector cartridge
   parent: [ BaseSyndicateContraband , BaseAutoinjectorCartridge ]
   description: Contains 10u of puncturase, used in a cartridge autoinjector.

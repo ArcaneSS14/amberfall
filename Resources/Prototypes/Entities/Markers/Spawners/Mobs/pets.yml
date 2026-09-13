@@ -201,8 +201,6 @@
     - state: monkey
       sprite: Mobs/Animals/monkey.rsi
   - type: ConditionalSpawner
-    prototypes:
-    - MobMonkeyPunpun
 
 - type: entity
   parent: MarkerBase

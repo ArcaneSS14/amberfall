@@ -20,7 +20,6 @@
   # <Trauma>
   guides:
   - Chef
-  - FoodRecipes
   - CQC
   special:
   - !type:OrganChipsSpecial

@@ -37,10 +37,10 @@
   <Project Path="Content.Server/Content.Server.csproj" />
   <Project Path="Content.Shared.Database/Content.Shared.Database.csproj" />
   <Project Path="Content.Shared/Content.Shared.csproj" />
-  <Project Path="Content.Apotheosis.Common/Content.Apotheosis.Common.csproj" />
-  <Project Path="Content.Apotheosis.Shared/Content.Apotheosis.Shared.csproj" />
-  <Project Path="Content.Apotheosis.Server/Content.Apotheosis.Server.csproj" />
-  <Project Path="Content.Apotheosis.Client/Content.Apotheosis.Client.csproj" />
+  <Project Path="Content.Amberfall.Common/Content.Amberfall.Common.csproj" />
+  <Project Path="Content.Amberfall.Shared/Content.Amberfall.Shared.csproj" />
+  <Project Path="Content.Amberfall.Server/Content.Amberfall.Server.csproj" />
+  <Project Path="Content.Amberfall.Client/Content.Amberfall.Client.csproj" />
   <!-- <Trauma> -->
   <Project Path="Content.Trauma.Server/Content.Trauma.Server.csproj" />
   <Project Path="Content.Trauma.Shared/Content.Trauma.Shared.csproj" />

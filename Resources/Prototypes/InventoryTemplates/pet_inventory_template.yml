@@ -10,17 +10,6 @@
     whitelist:
       tags:
       - PetWearable
-  - name: suitstorage
-    slotTexture: suit_storage
-    slotFlags: SUITSTORAGE
-    stripTime: 3
-    uiWindowPos: 0,1
-    strippingWindowPos: 2,5
-    displayName: Suit Storage
-    whitelist:
-      components:
-      - GasTank
-
 - type: inventoryTemplate
   id: petAdvanced
   slots:
@@ -33,16 +22,6 @@
     whitelist:
       tags:
       - PetWearable
-  - name: suitstorage
-    slotTexture: suit_storage
-    slotFlags: SUITSTORAGE
-    stripTime: 3
-    uiWindowPos: 0,1
-    strippingWindowPos: 2,5
-    displayName: Suit Storage
-    whitelist:
-      components:
-      - GasTank
   - name: head
     slotTexture: head
     slotFlags: HEAD

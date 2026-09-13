@@ -449,8 +449,6 @@
           amount: 2
         - id: MedkitCombatFilled
         - id: EmpImplanter
-        - id: ClothingShoesBootsMagSyndie
-
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledHushpup

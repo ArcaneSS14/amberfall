@@ -55,11 +55,6 @@
   - type: ActivatableUI
     inHandsOnly: true
     key: enum.AmmoSelectorUiKey.Key
-  - type: GuideHelp
-    guides:
-    - Security
-    - Antagonists
-
 - type: entity
   parent: WeaponLaserCarbine
   id: WeaponLaserGunCarbine

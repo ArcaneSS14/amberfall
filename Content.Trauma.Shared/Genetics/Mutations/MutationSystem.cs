@@ -711,10 +711,13 @@ public sealed partial class MutationSystem : CommonMutationSystem
                 _popup.PopupEntity(msg, ent, ent);
         }
 
+        if (ent.Comp.MeltingEffect is not {} meltingEffect)
+            return;
+
         if (ent.Comp.TotalInstability >= ent.Comp.MaxInstability)
-            _status.TrySetStatusEffectDuration(ent.Owner, ent.Comp.MeltingEffect, ent.Comp.MeltDuration);
+            _status.TrySetStatusEffectDuration(ent.Owner, meltingEffect, ent.Comp.MeltDuration);
         else
-            _status.TryRemoveStatusEffect(ent.Owner, ent.Comp.MeltingEffect);
+            _status.TryRemoveStatusEffect(ent.Owner, meltingEffect);
     }
 
     /// <summary>

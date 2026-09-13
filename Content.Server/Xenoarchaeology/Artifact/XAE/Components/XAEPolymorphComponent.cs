@@ -13,8 +13,8 @@ public sealed partial class XAEPolymorphComponent : Component
     /// <summary>
     /// The polymorph effect to trigger.
     /// </summary>
-    [DataField]
-    public ProtoId<PolymorphPrototype> PolymorphPrototypeName = "ArtifactMonkey";
+    [DataField(required: true)]
+    public ProtoId<PolymorphPrototype> PolymorphPrototypeName;
 
     /// <summary>
     /// Range of the effect.

@@ -9,8 +9,6 @@
   access:
   - Maintenance
   # <Trauma>
-  guides:
-  - Civilian
   special:
   - !type:OrganChipsSpecial
     chips:

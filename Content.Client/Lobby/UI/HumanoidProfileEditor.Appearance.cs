@@ -19,7 +19,7 @@ public sealed partial class HumanoidProfileEditor
     private ColorSelectorSliders _rgbSkinColorSelector;
     private List<SpeciesPrototype> _species = new();
     private List<EmoteSoundsPrototype> _voices = new();
-    private static readonly ProtoId<GuideEntryPrototype> DefaultSpeciesGuidebook = "Species";
+    private static readonly ProtoId<GuideEntryPrototype> DefaultSpeciesGuidebook = "Human";
 
     public void UpdateSpeciesGuidebookIcon()
     {
@@ -301,10 +301,10 @@ public sealed partial class HumanoidProfileEditor
         if (_prototypeManager.HasIndex<GuideEntryPrototype>(species))
             page = new ProtoId<GuideEntryPrototype>(species.Id); // Gross. See above todo comment.
 
-        if (_prototypeManager.Resolve(DefaultSpeciesGuidebook, out var guideRoot))
+        if (_prototypeManager.Resolve(page, out var guideRoot))
         {
             var dict = new Dictionary<ProtoId<GuideEntryPrototype>, GuideEntry>();
-            dict.Add(DefaultSpeciesGuidebook, guideRoot);
+            dict.Add(page, guideRoot);
             //TODO: Don't close the guidebook if its already open, just go to the correct page
             guidebookController.OpenGuidebook(dict, includeChildren: true, selected: page);
         }

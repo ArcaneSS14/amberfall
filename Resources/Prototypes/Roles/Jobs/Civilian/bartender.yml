@@ -20,7 +20,6 @@
   # <Trauma>
   guides:
   - Bartender
-  - Drinks
   special:
   - !type:OrganChipsSpecial
     chips:

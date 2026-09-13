@@ -17,7 +17,6 @@
     guides:
   # - Virology (when it's back)
     - Botany
-    - Chemicals
   - type: DiseaseSwab # Goobstation
 
 - type: entity
@@ -40,7 +39,6 @@
     guides:
   # - Virology (when it's back)
     - Botany
-    - Chemicals
 
 - type: entity
   parent: BaseItem

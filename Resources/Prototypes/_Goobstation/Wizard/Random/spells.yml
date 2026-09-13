@@ -81,7 +81,6 @@
     ActionTeleportWizard: 2
     ActionSwapSpell: 1
     ActionKnock: 1
-    ActionBindSoul: 2
     ActionSoulTap: 1
 
 - type: weightedRandomEntity

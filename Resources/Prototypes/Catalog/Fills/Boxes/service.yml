@@ -40,7 +40,6 @@
   - type: GuideHelp
     guides:
     - Botanical
-    - Chemicals
 
 - type: entity
   parent: BoxLightbulb

@@ -46,9 +46,7 @@
     description: cargo-gift-pizza-large
     dest: cargo-gift-dest-bar
     gifts:
-      FoodPizzaLarge: 1              # 16 pizzas
       FoodBarSupply: 1
-      FoodSoftdrinksLarge: 1
 
 - type: entity
   id: GiftsEngineering
@@ -120,11 +118,9 @@
     description: cargo-gift-medical-supply
     dest: cargo-gift-dest-med
     gifts:
-      MedicalSupplies: 1
       MedicalChemistrySupplies: 1
       EmergencyBruteKit: 1
       EmergencyAdvancedKit: 1
-      MedicalBiosuit: 1
 
 - type: entity
   id: GiftsSpacingSupplies
@@ -139,10 +135,8 @@
     description: cargo-gift-space-protection
     dest: cargo-gift-dest-supp
     gifts:
-      EmergencyInternalsLarge: 2
       EmergencyInflatablewall: 1
       EmergencyAdvancedKit: 1
-      MedicalBiosuit: 1
       EmergencyO2Kit: 1
 
 - type: entity
@@ -158,7 +152,6 @@
     description: cargo-gift-fire-protection
     dest: cargo-gift-dest-supp
     gifts:
-      EmergencyFire: 2
       EmergencyBurnKit: 1
       EmergencyBruteKit: 1
 
@@ -215,4 +208,3 @@
     - id: GiftsVendingRestock
 
 # Game Rules
-

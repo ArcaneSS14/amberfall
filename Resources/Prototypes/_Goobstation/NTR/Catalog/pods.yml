@@ -28,33 +28,6 @@
     prototype: NTRCratePointDisks
 
 - type: entity
-  id: SpawnPodEmergencyMed
-  categories: [ HideSpawnMenu ]
-  name: SpawnSupplyEmergencyMed
-  parent: SpawnSupplyEmpty
-  components:
-  - type: SpawnOnDespawn
-    prototype: NTRCrateEmergencyMed
-
-- type: entity
-  id: SpawnPodDisablers
-  categories: [ HideSpawnMenu ]
-  name: SpawnSupplyDisablers
-  parent: SpawnSupplyEmpty
-  components:
-  - type: SpawnOnDespawn
-    prototype: NTRCrateDisablers
-
-- type: entity
-  id: SpawnPodTools
-  categories: [ HideSpawnMenu ]
-  name: SpawnSupplyTools
-  parent: SpawnSupplyEmpty
-  components:
-  - type: SpawnOnDespawn
-    prototype: NTRCrateToolsSmall
-
-- type: entity
   id: SpawnPodInterns
   categories: [ HideSpawnMenu ]
   name: SpawnSupplyInterns
@@ -224,15 +197,6 @@
   components:
   - type: SpawnOnDespawn
     prototype: CargoShuttleConsoleCircuitboard
-
-- type: entity
-  id: SpawnPodShuttle
-  categories: [ HideSpawnMenu ]
-  name: SpawnSupplyShuttle
-  parent: SpawnSupplyEmpty
-  components:
-  - type: SpawnOnDespawn
-    prototype: NTRBoardShuttle
 
 - type: entity
   id: SpawnPodMedkit

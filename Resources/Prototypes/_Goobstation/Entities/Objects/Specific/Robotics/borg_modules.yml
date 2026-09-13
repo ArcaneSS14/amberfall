@@ -44,14 +44,5 @@
     - state: cargo
     - state: icon-pka
       sprite: _Goobstation/Objects/Specific/Robotics/borgmodule.rsi
-  - type: ItemBorgModule
-    hands:
-    - item: WeaponProtoKineticAccelerator # Goob
-      hand:
-        emptyRepresentative: BorgModulePKAPlaceholder
-        emptyLabel: borg-slot-pka-empty
-        whitelist:
-          components:
-          - PressureDamageChange
   - type: BorgModuleIcon
     icon: { sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi, state: icon }

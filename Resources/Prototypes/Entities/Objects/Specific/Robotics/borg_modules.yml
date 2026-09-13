@@ -39,7 +39,6 @@
   - type: GuideHelp
     guides:
     - Cyborgs
-    - Robotics
 
 - type: entity
   id: BaseProviderBorgModule
@@ -645,19 +644,6 @@
     layers:
     - state: cargo
     - state: icon-mining-adv
-  - type: ItemBorgModule
-    hands:
-    - item: MiningDrillDiamond
-    - item: Shovel
-    - item: AdvancedMineralScannerUnpowered
-    - item: BorgOreBagOfHolding
-    - item: WeaponProtoKineticAccelerator # Goob
-      hand:
-        emptyRepresentative: BorgModulePKAPlaceholder
-        emptyLabel: borg-slot-pka-empty
-        whitelist:
-          components:
-          - PressureDamageChange
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-mining-module }
 

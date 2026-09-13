@@ -304,7 +304,6 @@
     ears: ClothingHeadsetAltSecurityRegular # Goobstation
     mask: ClothingMaskGasSecurity # Goobstation
     eyes: ClothingEyesGlassesSecurity
-    outerClothing: ClothingOuterCoatDetectiveLoadout
     pocket1: ForensicScanner
     pocket2: ForensicPad
   inhand:
@@ -553,11 +552,6 @@
     ears: ClothingHeadsetMedical
     eyes: ClothingEyesGlassesChemical
     outerClothing: ClothingOuterCoatLabChem
-    pocket1: PillCanisterRandom
-    pocket2: PillCanisterRandom
-  inhand:
-  - PillCanisterRandom
-  - PillCanisterRandom
 
 - type: startingGear
   id: VisitorChemistAlt
@@ -571,11 +565,6 @@
     ears: ClothingHeadsetMedical
     eyes: ClothingEyesGlassesChemical
     outerClothing: ClothingOuterWinterChem
-    pocket1: PillCanisterRandom
-    pocket2: PillCanisterRandom
-  inhand:
-  - PillCanisterRandom
-  - PillCanisterRandom
 
 - type: startingGear
   id: VisitorGeneticist
@@ -591,7 +580,6 @@
     eyes: ClothingEyesHudMedical
     outerClothing: ClothingOuterCoatLabGene
     pocket1: PillCanisterCharcoal
-    pocket2: PillCanisterRandom
   inhand:
   - SyringePhalanximine
 
@@ -609,7 +597,6 @@
     eyes: ClothingEyesHudMedical
     outerClothing: ClothingOuterWinterGen
     pocket1: PillCanisterHyronalin
-    pocket2: PillCanisterRandom
   inhand:
   - SyringeBicaridine
 
@@ -627,7 +614,6 @@
     eyes: ClothingEyesHudMedical
     outerClothing: ClothingOuterCoatLabViro
     pocket1: PillCanisterTricordrazine
-    pocket2: PillCanisterRandom
   inhand:
   - SyringeSigynate
 
@@ -646,7 +632,6 @@
     eyes: ClothingEyesHudMedical
     outerClothing: ClothingOuterWinterViro
     pocket1: PillCanisterTricordrazine
-    pocket2: PillCanisterRandom
   inhand:
   - SyringeEphedrine
 

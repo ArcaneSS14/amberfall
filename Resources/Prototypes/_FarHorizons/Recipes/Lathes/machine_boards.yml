@@ -11,9 +11,3 @@
   result: HolographicBarrierGeneratorCircuitboard
 
 # Nuclear Reactor
-
-- type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
-  id: NuclearFabricatorMachineCircuitboard
-  result: NuclearFabricatorMachineCircuitboard
-

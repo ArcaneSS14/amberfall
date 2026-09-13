@@ -143,7 +143,7 @@ public abstract partial class SharedArmorSystem : EntitySystem
             foreach (var coefficientArmor in armorModifiers.Coefficients)
             {
                 msg.PushNewline();
-                var armorType = Loc.GetString("armor-damage-type-" + coefficientArmor.Key.ToLower());
+                var armorType = Loc.GetString("armor-damage-type-" + coefficientArmor.Key.Id.ToLowerInvariant());
                 msg.AddMarkupOrThrow(Loc.GetString("armor-coefficient-value-trauma", // Trauma - better locale string
                     ("type", armorType),
                     ("value", MathF.Abs(1f - coefficientArmor.Value) * 100), ("protect", coefficientArmor.Value < 1f) // Trauma - better values
@@ -154,7 +154,7 @@ public abstract partial class SharedArmorSystem : EntitySystem
             {
                 msg.PushNewline();
 
-                var armorType = Loc.GetString("armor-damage-type-" + flatArmor.Key.ToLower());
+                var armorType = Loc.GetString("armor-damage-type-" + flatArmor.Key.Id.ToLowerInvariant());
                 msg.AddMarkupOrThrow(Loc.GetString("armor-reduction-value",
                     ("type", armorType),
                     ("value", flatArmor.Value)

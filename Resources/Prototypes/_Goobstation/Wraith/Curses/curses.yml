@@ -67,26 +67,6 @@
       messages: [ "curse-blindness-1", "curse-blindness-2", "curse-blindness-3" ]
 
 - type: curse
-  id: CurseRot
-  name: Curse of Rot
-  components:
-  - type: UnableToEat
-  statusIcon: CurseRotIcon
-  update: 60 #1 minute
-  effects:
-    0.6:
-    - !type:Vomit
-      hungerAmount: -5
-    0.5:
-    - !type:Emote
-      emote: Cough
-      showInChat: true
-    0.2:
-    - !type:Emote
-      emote: Gasp
-      showInChat: true
-
-- type: curse
   id: CurseDeath
   name: Curse of Death
   update: 10 #seconds

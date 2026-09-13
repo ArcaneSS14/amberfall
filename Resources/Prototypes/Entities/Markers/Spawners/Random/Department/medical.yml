@@ -19,7 +19,6 @@
         - Brutepack
         - Ointment
         - Gauze
-        - EmergencyMedipen
         - PillCanisterIron
       chance: 0.9
       offset: 0.0
@@ -53,7 +52,6 @@
         - Brutepack
         - Ointment
         - Gauze
-        - EmergencyMedipen
         - ChemistryBottleEpinephrine
         - PillCanisterTricordrazine
         - PillCanisterCharcoal

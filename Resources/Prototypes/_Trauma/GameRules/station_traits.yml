@@ -52,23 +52,6 @@
 
 - type: entity
   parent: BaseGameRule
-  id: LuckyWinnerRule
-  components:
-  - type: RandomEffectsRule
-    minTime: 6m
-    maxTime: 12m
-    effects:
-    - !type:StationAreaEffects
-      areaComp: LuckyWinnerTarget
-      effects:
-      - !type:SpawnEntity
-        entity: SpawnSupplyLuckyWinner
-
-# Negative
-
-# cant really modify weights etc so just have a dedicated scheduler for thse
-- type: entity
-  parent: BaseGameRule
   id: AnomalyStormRule
   components:
   - type: RuleSchedulerLimit

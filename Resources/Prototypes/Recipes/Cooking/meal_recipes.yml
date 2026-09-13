@@ -1077,7 +1077,6 @@
   solids:
     FoodBowlBig: 1
     FoodBanana: 1
-    MonkeyCube: 1
 
 - type: microwaveMealRecipe
   id: RecipeBungoSoup

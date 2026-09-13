@@ -1,20 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: polymorph
-  id: MutationMonkey
-  configuration:
-    entity: MobMonkey
-    transferName: true
-    stripNameModifier: false # keep it when going monkey -> human -> monkey
-    componentsToTransfer: [] # no language chud
-    forced: true
-    revertOnCrit: false
-    revertOnDeath: false
-    revertOnDelete: false
-    inventory: Transfer
-    polymorphSound: /Audio/Animals/monkey_scream.ogg
-
-- type: polymorph
   id: MutationHuman
   configuration:
     entity: MobHuman
@@ -27,20 +13,6 @@
     revertOnDelete: false
     inventory: Transfer
     polymorphSound: /Audio/Voice/Human/malescream_1.ogg
-
-- type: polymorph
-  id: MutationKobold
-  configuration:
-    entity: MobKobold
-    transferName: true
-    stripNameModifier: false # keep it when going monkey -> human -> monkey
-    componentsToTransfer: [] # no language chud
-    forced: true
-    revertOnCrit: false
-    revertOnDeath: false
-    revertOnDelete: false
-    inventory: Transfer
-    polymorphSound: /Audio/Animals/monkey_scream.ogg
 
 - type: polymorph
   id: MutationReptilian
@@ -138,17 +110,6 @@
     revertOnDeath: false
     revertOnDelete: false
     allowRepeatedMorphs: false
-
-- type: polymorph
-  id: Skeleton
-  configuration:
-    entity: MobSkeletonPerson
-    forced: false
-    inventory: Drop # your skin melts off so your clothes drop
-    transferName: false # fibula time
-    revertOnCrit: false
-    revertOnDeath: false
-    revertOnDelete: false
 
 - type: polymorph
   id: VoidMagnet

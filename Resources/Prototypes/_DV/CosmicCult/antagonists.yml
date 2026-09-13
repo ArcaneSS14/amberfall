@@ -9,7 +9,6 @@
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 2h
-  guides: [ CosmicCult ]
   creditImage: /Textures/_Trauma/EndCredits/Antags/cosmiccult.png
 
 - type: antag

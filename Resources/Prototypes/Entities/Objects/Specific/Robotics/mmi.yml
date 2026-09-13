@@ -60,7 +60,6 @@
   - type: GuideHelp
     guides:
     - Cyborgs
-    - Robotics
   - type: ChangeVoiceInContainer
     whitelist:
       components:
@@ -170,7 +169,6 @@
     - type: GuideHelp
       guides:
       - Cyborgs
-      - Robotics
     - type: ChangeVoiceInContainer
       whitelist:
         components:

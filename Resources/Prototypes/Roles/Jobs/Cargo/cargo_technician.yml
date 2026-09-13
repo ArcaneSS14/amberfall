@@ -6,8 +6,6 @@
   startingGear: CargoTechGear
   icon: "JobIconCargoTechnician"
   supervisors: job-supervisors-qm
-  guides: # goobstation
-  - Cargo
   access:
   - Cargo
   - Maintenance

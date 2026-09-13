@@ -24,35 +24,6 @@
 
 - type: entity
   parent: BaseGameRule
-  id: SubGamemodesRule
-  components:
-  - type: SubGamemodes
-    rules:
-    - id: Thief
-      prob: 0.5
-    # <Trauma>
-    #- id: SubWizard # not real
-    #  prob: 0.05
-    #- id: SubXenoborgs # no
-    #  prob: 0.05
-    - id: SubHeretic
-      prob: 0.2
-    - id: Devil
-      prob: 0.05
-    - id: ShadowlingRoundstart
-      prob: 0.05
-    - id: SubDuoAbductor
-      prob: 0.05
-    - id: WraithRoundstart
-      prob: 0.02
-    - id: SubVampire
-      prob: 0.2
-    - id: SubChangeling
-      prob: 0.1 # extinct predator species...
-    # </Trauma>
-
-- type: entity
-  parent: BaseGameRule
   id: SubGamemodesRuleNoWizard
   components:
   - type: SubGamemodes
@@ -72,33 +43,6 @@
       prob: 0.05
     - id: WraithRoundstart
       prob: 0.02
-    - id: SubChangeling
-      prob: 0.1
-    # </Trauma>
-
-- type: entity
-  parent: BaseGameRule
-  id: SubGamemodesRuleNoXenoborg
-  components:
-  - type: SubGamemodes
-    rules:
-    - id: Thief
-      prob: 0.5
-    # <Trauma>
-    #- id: SubWizard # not real
-    #  prob: 0.05
-    - id: SubHeretic
-      prob: 0.2
-    - id: Devil
-      prob: 0.02
-    - id: ShadowlingRoundstart
-      prob: 0.02
-    - id: SubDuoAbductor
-      prob: 0.05
-    - id: WraithRoundstart
-      prob: 0.02
-    - id: SubVampire
-      prob: 0.2
     - id: SubChangeling
       prob: 0.1
     # </Trauma>
@@ -379,40 +323,6 @@
     cost: 200
 
 - type: entity
-  abstract: true
-  parent: BaseGameRule
-  id: BaseXenoborgsRule
-  components:
-  - type: XenoborgsRule
-  - type: RuleGrids
-  - type: LoadMapRule
-    gridPath: /Maps/Shuttles/mothership.yml
-  - type: AntagMultipleRoleSpawner
-    antagRoleToPrototypes:
-      MothershipCore: [ MothershipCore ]
-      Xenoborg: [ XenoborgEngi, XenoborgHeavy, XenoborgScout, XenoborgStealth ]
-    pickAndTake: true
-  - type: AntagSelection
-    selectionTime: PrePlayerSpawn
-    antags:
-    - !type:FixedAntagCount
-      proto: MothershipCore
-    - !type:FixedAntagCount
-      proto: Xenoborg
-      count: 4
-  - type: DynamicRuleCost
-    cost: 200
-
-- type: entity
-  parent: [ BaseXenoborgsRule, BaseRoundstartAntagRule]
-  id: Xenoborgs
-  components:
-  - type: GameRule
-    minPlayers: 30
-
-# This rule makes the chosen players unable to get other antag rules, as a way to prevent metagaming job rolls.
-# Put this before antags assigned to station jobs, but after non-job antags (NukeOps/Wiz).
-- type: entity
   id: DummyNonAntag
   parent: BaseGameRule
   components:
@@ -509,36 +419,6 @@
       tableId: SpaceTrafficControlTable
 
 # variation passes
-- type: entity
-  id: BasicRoundstartVariation
-  parent: BaseGameRule
-  components:
-  - type: RoundstartStationVariationRule
-    rules:
-    - id: BasicPoweredLightVariationPass
-    - id: BasicTrashVariationPass
-    - id: SolidWallRustingVariationPass
-    - id: ReinforcedWallRustingVariationPass
-    - id: CutWireVariationPass
-    - id: BasicPuddleMessVariationPass
-      prob: 0.99
-      orGroup: puddleMess
-    - id: BloodbathPuddleMessVariationPass
-      prob: 0.01
-      orGroup: puddleMess
-    - id: SmugglerStashVariationPass
-      prob: 0.90
-    - id: SolarPanelDamageVariationPass
-    - id: SolarPanelEmptyVariationPass
-    - id: BasicDecalDirtVariationPass
-    #- id: BasicDecalGraffitiVariationPass # Trauma - looks shit
-    - id: BasicDecalBurnsVariationPass
-      prob: 0.50
-      orGroup: monospaceDecals
-    - id: BasicDecalDirtMonospaceVariationPass
-      prob: 0.50
-      orGroup: monospaceDecals
-
 - type: entityTable
   id: DynamicGameRulesTable
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
@@ -553,4 +433,3 @@
       tableId: CalmPestEventsTable
     - !type:NestedSelector
       tableId: SpicyPestEventsTable
-

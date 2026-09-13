@@ -1,8 +1,0 @@
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
-- type: lavalandLayout
-  id: LavalandOutpost
-  layouts:
-  - gridPath: /Maps/_Lavaland/Lavaland/outpost_lavaland.yml
-    position: 0,0
-    name: lavaland-planet-outpost

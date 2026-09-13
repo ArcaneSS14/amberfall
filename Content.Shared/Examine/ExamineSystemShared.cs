@@ -284,10 +284,9 @@ namespace Content.Shared.Examine
                     continue;
                 }
 
-                var bBox = o.BoundingBox;
-                bBox = bBox.Translated(_transform.GetWorldPosition(result.HitEntity));
-
-                if (bBox.Contains(origin.Position) || bBox.Contains(other.Position))
+                var xform = Transform(result.HitEntity);
+                if (_occluder.ContainsPoint(o, xform, origin.Position) ||
+                    _occluder.ContainsPoint(o, xform, other.Position))
                 {
                     continue;
                 }

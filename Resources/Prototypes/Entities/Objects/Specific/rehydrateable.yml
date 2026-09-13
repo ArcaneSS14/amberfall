@@ -80,28 +80,6 @@
 
 - type: entity
   parent: RehydratableAnimalCube
-  id: MonkeyCube
-  name: monkey cube
-  components:
-  - type: Rehydratable
-    possibleSpawns:
-    - MobMonkey
-  - type: Tag
-    tags:
-    - Meat
-    - MonkeyCube
-
-- type: entity
-  parent: RehydratableAnimalCube
-  id: KoboldCube
-  name: kobold cube
-  components:
-  - type: Rehydratable
-    possibleSpawns:
-    - MobKobold
-
-- type: entity
-  parent: RehydratableAnimalCube
   id: CowCube
   name: cow cube
   components:
@@ -246,41 +224,6 @@
     - Audrey White
     ocNames:
     - Rosef
-
-- type: entity
-  parent: MonkeyCube
-  id: SyndicateSponge
-  suffix: Syndicate
-  components:
-  - type: Rehydratable
-    possibleSpawns:
-    # <Trauma>
-    - MobBearSea
-    - MobSquidSea
-    - MobSpiderCrabSea
-    - MobKraitSea
-    - MobArcherSea
-    - MobBunnyEvil
-    - MobEelSea
-    - MobCobra
-    - MobYellowBellySnake
-    - MobMantis
-    - MobMantisShrimp
-    - MobShrimp
-    - MobDartFrog2
-    - MobDartFrog4
-    - MobDartFrog5
-    - MobCobraSpace
-    - MobGorillaAngry
-    # </Trauma>
-    - MobCarpHolo
-    - MobAngryBee
-    - MobAdultSlimesYellowAngry
-    - MobSpiderSpace
-    - MobBearSpace
-    - MobPurpleSnake
-    - MobKangarooSpace
-    - MobTick
 
 - type: entity
   parent: RehydratableItem

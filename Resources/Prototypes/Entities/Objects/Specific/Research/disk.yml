@@ -25,10 +25,6 @@
     sprite: Objects/Specific/Research/researchdisk.rsi
     state: icon
   - type: ResearchDisk
-  - type: GuideHelp
-    guides:
-    - Science
-
 - type: entity
   parent: ResearchDisk
   id: ResearchDisk5000

@@ -3,11 +3,10 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared.Random;
 
 /// <summary>
-/// IWeightedRandomPrototype implements a dictionary of strings to float weights
-/// to be used with <see cref="Helpers.SharedRandomExtensions.Pick(IWeightedRandomPrototype, Robust.Shared.Random.IRobustRandom)" />.
+/// Associates entries with weights for random selection.
 /// </summary>
-public interface IWeightedRandomPrototype : IPrototype
+public interface IWeightedRandomPrototype<T> : IPrototype where T : notnull
 {
     [ViewVariables]
-    public Dictionary<string, float> Weights { get; }
+    public Dictionary<T, float> Weights { get; }
 }

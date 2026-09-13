@@ -18,7 +18,6 @@ public sealed partial class ChemistryGuideDataSystem : SharedChemistryGuideDataS
     private static readonly ProtoId<MixingCategoryPrototype> DefaultMixingCategory = "DummyMix";
     private static readonly ProtoId<MixingCategoryPrototype> DefaultGrindCategory = "DummyGrind";
     private static readonly ProtoId<MixingCategoryPrototype> DefaultJuiceCategory = "DummyJuice";
-    private static readonly ProtoId<MixingCategoryPrototype> DefaultCondenseCategory = "DummyCondense";
 
     private readonly Dictionary<string, List<ReagentSourceData>> _reagentSources = new();
 

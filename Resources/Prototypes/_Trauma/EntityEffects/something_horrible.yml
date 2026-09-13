@@ -50,18 +50,6 @@
   - !type:Delete # bye bye
 
 - type: entityEffect
-  id: Skeletonize
-  effects:
-  - !type:PopupMessage
-    type: Pvs
-    method: PopupCoordinates # mob is deleted
-    messages:
-    - entity-effect-popup-skeletonized
-  - !type:Polymorph
-    prototype: Skeleton
-  # TODO: 90% chance of the skeleton dying in 3 seconds
-
-- type: entityEffect
   id: LookUp # I understand now
   effects:
   - !type:PopupMessage

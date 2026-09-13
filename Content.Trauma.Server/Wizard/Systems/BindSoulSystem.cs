@@ -27,11 +27,12 @@ public sealed partial class BindSoulSystem : SharedBindSoulSystem
     public override void Resurrect(EntityUid mind,
         EntityUid phylactery,
         MindComponent mindComp,
-        SoulBoundComponent soulBound)
+        SoulBoundComponent soulBound,
+        EntProtoId prototype)
     {
-        base.Resurrect(mind, phylactery, mindComp, soulBound);
+        base.Resurrect(mind, phylactery, mindComp, soulBound, prototype);
 
-        var ent = Spawn(LichPrototype, TransformSystem.GetMapCoordinates(phylactery));
+        var ent = Spawn(prototype, TransformSystem.GetMapCoordinates(phylactery));
         Mind.TransferTo(mind, ent, mind: mindComp);
 
         Faction.ClearFactions(ent, false);

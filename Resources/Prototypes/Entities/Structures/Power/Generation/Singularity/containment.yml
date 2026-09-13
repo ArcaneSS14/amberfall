@@ -66,7 +66,6 @@
           False: { visible: false }
   - type: GuideHelp
     guides:
-    - SingularityTeslaEngine
     - SingularityEngine
     - Power
 
@@ -104,6 +103,5 @@
   - type: SyncSprite
   - type: GuideHelp
     guides:
-    - SingularityTeslaEngine
     - SingularityEngine
     - Power

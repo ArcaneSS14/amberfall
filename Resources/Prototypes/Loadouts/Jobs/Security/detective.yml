@@ -47,13 +47,3 @@
   id: DetectiveArmorVest
   equipment:
     outerClothing: ClothingOuterVestDetective
-
-- type: loadout
-  id: DetectiveCoat
-  equipment:
-    outerClothing: ClothingOuterCoatDetectiveLoadout
-
-- type: loadout
-  id: DetectiveCoatGrey
-  equipment:
-    outerClothing: ClothingOuterCoatDetectiveLoadoutGrey

@@ -16,9 +16,9 @@
   description: flavor-complex-blood
 
 - type: flavor
-  id: apotheosis
+  id: amberfall
   flavorType: Complex
-  description: flavor-complex-apotheosis
+  description: flavor-complex-amberfall
 
 - type: flavor
   id: rich

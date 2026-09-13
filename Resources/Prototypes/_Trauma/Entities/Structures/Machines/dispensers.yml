@@ -16,7 +16,6 @@
   - type: GuideHelp
     guides:
     - Chef
-    - FoodRecipes
   - type: EnergyReagentDispenser
     reagents:
       # Common cooking ingredients
@@ -65,7 +64,6 @@
   - type: GuideHelp
     guides:
     - Bartender
-    - Drinks
   - type: Fixtures
     fixtures:
       fix1:

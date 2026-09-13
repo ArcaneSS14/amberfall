@@ -35,10 +35,6 @@
     damage:
       types:
         Blunt: 0
-  - type: GuideHelp
-    guides:
-    - Security
-    - Antagonists
   - type: UseDelay
     delay: 3
 

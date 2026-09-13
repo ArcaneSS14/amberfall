@@ -1,14 +1,4 @@
 - type: entity
-  id: DebugGenerator
-  parent: BaseGenerator
-  suffix: DEBUG
-  components:
-  - type: PowerSupplier
-    supplyRate: 300000
-    supplyRampRate: 50000
-    supplyRampTolerance: 500
-
-- type: entity
   id: DebugConsumer
   name: consumer
   suffix: DEBUG

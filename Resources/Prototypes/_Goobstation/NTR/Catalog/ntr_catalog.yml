@@ -100,56 +100,6 @@
   restockAfterPurchase: 900 # 15min
 
 - type: listing
-  id: NTRExecutiveEmergencyMed
-  name: ntr-executive-emergency-meds-name
-  description: ntr-executive-emergency-meds-desc
-  productEntity: SpawnPodEmergencyMed
-  icon:
-    sprite: Objects/Specific/Medical/firstaidkits.rsi
-    state: firstaid
-  cost:
-    NTLoyaltyPoint: 10 # woundmd ahhhh
-  categories:
-  - NTRstation
-  restockTime: 300 # 5 min
-  resetRestockOnPurchase: true
-  restockAfterPurchase: 900 #15min
-
-- type: listing
-  id: NTRExecutiveDisablers
-  name: ntr-executive-disablers-name
-  description: ntr-executive-disablers-desc
-  productEntity: SpawnPodDisablers
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/disabler_smg.rsi
-    state: base
-  cost:
-    NTLoyaltyPoint: 10
-  categories:
-  - NTRstation
-  restockTime: 300 # 5 min
-  resetRestockOnPurchase: true
-  restockAfterPurchase: 600 # 10 min
-
-- type: listing
-  id: NTRExecutiveToolsSmall
-  name: ntr-executive-tools-small-name
-  description: ntr-executive-tools-small-desc
-  productEntity: SpawnPodTools
-  icon:
-    sprite: Objects/Tools/crowbar.rsi
-    state: icon
-  cost:
-    NTLoyaltyPoint: 3
-  categories:
-  - NTRstation
-  restockTime: 300 # 5 min
-  resetRestockOnPurchase: true
-  restockAfterPurchase: 300
-
-# personal
-
-- type: listing
   id: NTRExecutiveWaterCoolerGold
   name: premium water (?) cooler
   description: Made from the finest 24-karat hardened whiskey in the sector. Its shiny and golden, just like its insides. Comes with 500u of whiskey. Every fine executive has one of these in their room.
@@ -575,26 +525,6 @@
     stock: 1
 
 
-- type: listing
-  id: NTRExecutiveShuttle
-  name: ntr-executive-shuttle-name
-  description: ntr-executive-shuttle-desc
-  productEntity: SpawnPodShuttle
-  icon:
-    sprite: Structures/Storage/Crates/engicrate_secure.rsi
-    state: icon
-  cost:
-    NTLoyaltyPoint: 30
-  categories:
-  - NTRBoards
-  restockTime: 1200 # 20min
-  resetRestockOnPurchase: false
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-# evil (debug)
-# todo: add more debug stuff / and possibly make this open if emagged or something, but it was never intended for it tho.
 - type: listing
   id: NTRExecutiveDebugCodes
   name: Nuclear codes

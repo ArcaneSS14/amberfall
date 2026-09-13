@@ -23,7 +23,7 @@ namespace Content.Shared.Random.Helpers
             return Loc.GetString(prototype.Values[index]);
         }
 
-        public static string Pick(this IWeightedRandomPrototype prototype, IRobustRandom? random = null)
+        public static T Pick<T>(this IWeightedRandomPrototype<T> prototype, IRobustRandom? random = null) where T : notnull
         {
             IoCManager.Resolve(ref random);
             var picks = prototype.Weights;

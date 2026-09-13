@@ -1,19 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: latheRecipe
-  id: SarinGasPayload
-  result: SarinGasPayload
-  categories:
-  - Parts
-  completetime: 3
-  materials:
-    Steel: 200
-    Plastic: 200
-    Glass: 100
-    Gold: 50
-    Plasma: 100
-
-- type: latheRecipe
   id: SmokePayload
   result: SmokePayload
   categories:

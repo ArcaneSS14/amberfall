@@ -8,7 +8,6 @@
     components:
     - CosmicCult
     - CosmicColossus
-    - CosmicAstralBody
     - ShowAntagIcons
     - CosmicLesserCultist
   icon:
@@ -23,7 +22,6 @@
     components:
     - CosmicCult
     - CosmicColossus
-    - CosmicAstralBody
     - ShowAntagIcons
     - CosmicLesserCultist
   icon:

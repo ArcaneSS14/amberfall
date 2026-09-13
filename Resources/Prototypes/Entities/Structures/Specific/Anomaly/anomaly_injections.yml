@@ -40,24 +40,6 @@
   components:
   - type: PointLight
     color: "#793a80"
-  - type: EntitySpawnAnomaly
-    entries:
-    - settings:
-        spawnOnPulse: true
-        spawnOnSuperCritical: true
-        minAmount: 5
-        maxAmount: 10
-        maxRange: 2
-      spawns:
-      - ShadowKudzuWeak
-    - settings:
-        spawnOnSuperCritical: true
-        minAmount: 15
-        maxAmount: 20
-        maxRange: 25
-      spawns:
-      - ShadowKudzu
-
 - type: entity
   parent: AnomalyInjectionBase
   id: AnomalyInjectionIce
@@ -95,23 +77,6 @@
         maxAmount: 15
         maxRange: 7
       floor: FloorAstroGrass
-  - type: EntitySpawnAnomaly
-    entries:
-    - settings:
-        spawnOnPulse: true
-        minAmount: 1
-        maxAmount: 3
-        maxRange: 1
-      spawns:
-      - KudzuFlowerFriendly
-    - settings:
-        spawnOnSuperCritical: true
-        minAmount: 2
-        maxAmount: 6
-        maxRange: 3
-      spawns:
-      - KudzuFlowerAngry
-
 - type: entity
   parent: AnomalyInjectionBase
   id: AnomalyInjectionBluespace
@@ -324,7 +289,6 @@
         maxRange: 5
       spawns:
       - PresentRandomUnsafe
-      - PresentRandom
       - PresentRandomCoal
       - PresentRandomCash
       - ClothingHeadHatSantahat

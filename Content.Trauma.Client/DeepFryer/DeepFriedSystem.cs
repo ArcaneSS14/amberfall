@@ -51,9 +51,18 @@ public sealed partial class DeepFriedSystem : EntitySystem
         if (!TryComp<SpriteComponent>(ent.Owner, out var sprite))
             return;
 
-        sprite.PostShader = enabled ? _shader : null;
-        sprite.GetScreenTexture = enabled;
-        sprite.RaiseShaderEvent = enabled;
+        if (enabled)
+        {
+            _sprite.SetPostShader(sprite, new SpriteComponent.PostShaderArgs(ShaderName.Id, _shader)
+            {
+                GetScreenTexture = true,
+                RaiseShaderEvent = true,
+            });
+        }
+        else
+        {
+            _sprite.RemovePostShader(sprite, ShaderName.Id);
+        }
     }
 
     private void OnHeldVisualsUpdated(Entity<DeepFriedComponent> ent, ref HeldVisualsUpdatedEvent args)

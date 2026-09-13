@@ -1,22 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: breed
-  breedName: orange slime
-  id: OrangeMutation
-  producedExtract: OrangeSlimeExtract
-  components:
-  - type: Slime
-    slimeColor: "#ff9f1a"
-    breed: OrangeMutation
-    maxOffspring: 4
-    mutationChance: 0.45
-    potentialMutations:
-    - GreyMutation
-    - YellowMutation
-    - DarkPurpleMutation
-    - RedMutation
-
-- type: breed
   breedName: purple slime
   id: PurpleMutation
   producedExtract: PurpleSlimeExtract

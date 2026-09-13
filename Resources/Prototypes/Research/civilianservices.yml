@@ -14,7 +14,6 @@
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
-  - PlantAnalyzer # Frontier
   # Goobstation R&D Console rework start
   position: -2,4
   technologyPrerequisites:
@@ -101,7 +100,6 @@
   cost: 7500
   recipeUnlocks:
   - FatExtractorMachineCircuitboard
-  - BiofabricatorMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
   # Goobstation R&D Console rework start
   position: -2,5
@@ -149,7 +147,6 @@
   recipeUnlocks:
   - StasisBedMachineCircuitboard
   - StasisOperatingTableCircuitboard # Corvax-Goob-StasisOperatingTable
-  - CryoPodMachineCircuitboard
   - CryostasisBeaker
   - SyringeCryostasis
   # Goobstation R&D Console rework start

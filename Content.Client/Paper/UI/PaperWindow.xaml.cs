@@ -139,8 +139,7 @@ namespace Content.Client.Paper.UI
             }
 
             HeaderImage.ModulateSelfOverride = visuals.HeaderImageModulate;
-            HeaderImage.Margin = new Thickness(visuals.HeaderMargin.Left, visuals.HeaderMargin.Top,
-                    visuals.HeaderMargin.Right, visuals.HeaderMargin.Bottom);
+            HeaderImage.Margin = visuals.HeaderMargin;
 
             // Then the footer
             if (visuals.FooterImagePath is {} path)
@@ -150,8 +149,7 @@ namespace Content.Client.Paper.UI
             }
 
             FooterImage.ModulateSelfOverride = visuals.FooterImageModulate;
-            FooterImage.Margin = new Thickness(visuals.FooterMargin.Left, visuals.FooterMargin.Top,
-                    visuals.FooterMargin.Right, visuals.FooterMargin.Bottom);
+            FooterImage.Margin = visuals.FooterMargin;
 
             PaperContent.ModulateSelfOverride = visuals.ContentImageModulate;
             _writtenTextColor = visuals.DefaultTextColor ?? DefaultTextColor;
@@ -170,9 +168,7 @@ namespace Content.Client.Paper.UI
                 _paperContentLineScale = visuals.ContentImageNumLines;
             }
 
-            PaperContent.Margin = new Thickness(
-                    visuals.ContentMargin.Left, visuals.ContentMargin.Top,
-                    visuals.ContentMargin.Right, visuals.ContentMargin.Bottom);
+            PaperContent.Margin = visuals.ContentMargin;
 
             if (visuals.MaxWritableArea != null)
             {

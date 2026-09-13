@@ -418,24 +418,6 @@
     - SpellbookSemiRandom
 
 - type: listing
-  id: SpellbookBindSoul
-  name: spellbook-bind-soul-name
-  description: spellbook-bind-soul-desc
-  productAction: ActionBindSoul
-  cost:
-    WizCoin: 2
-  categories:
-  - SpellbookDefensive
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-  - !type:BuyBeforeCondition
-    blacklist:
-    - SpellbookFullRandom
-    - SpellbookSemiRandom
-  disableRefund: true
-
-- type: listing
   id: SpellbookTraps
   productUpgradeId: SpellbookTrapsUpgrade
   name: spellbook-the-traps-name

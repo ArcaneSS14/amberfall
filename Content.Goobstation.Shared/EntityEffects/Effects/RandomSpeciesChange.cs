@@ -25,7 +25,6 @@ public sealed partial class RandomSpeciesChangeEffectSystem : EntityEffectSystem
     {
         "IPC",
         "Shadowling", // no ontag
-        "Skeleton",
         "Shattered"
     };
 

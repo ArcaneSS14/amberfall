@@ -17,7 +17,6 @@
   id: PhoneMerchantGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitLawyerBlack
-    id: PhoneMerchantPDA
     ears: ClothingHeadsetService
     eyes: ClothingEyesGlassesSunglasses
     shoes: ClothingShoesColorBlack

@@ -277,16 +277,12 @@
     - id: SpaceCash100
       weight: 15
     - id: ChemDispenserMachineCircuitboard
-    - id: SyndicateMicrowaveMachineCircuitboard
     - id: HydroponicsTrayMachineCircuitboard
     - id: DawInstrumentMachineCircuitboard
-    - id: PortableGeneratorPacmanMachineCircuitboard
-    - id: PortableGeneratorSuperPacmanMachineCircuitboard
     - id: ReagentGrinderMachineCircuitboard
     - id: ReagentGrinderIndustrialMachineCircuitboard
     - id: BoozeDispenserMachineCircuitboard
     - id: MiniGravityGeneratorCircuitboard
-    - id: AmmoTechFabCircuitboard
     - id: PowerCageRechargerCircuitboard
     - id: ShuttleConsoleCircuitboard
     - id: TurboItemRechargerCircuitboard
@@ -297,9 +293,6 @@
     children:
     - id: SpaceCash100
       weight: 5
-    - id: PresentRandom
-      amount: !type:RangeNumberSelector
-        range: 1, 3
     - id: ToyFigurineHamlet
     - id: ToyFigurineSpaceDragon
     - id: ToyFigurineQueen
@@ -544,9 +537,6 @@
     - id: Bloodpack
     - id: RegenerativeMesh
     - id: MedicatedSuture
-    - id: EmergencyMedipen
-      amount: !type:RangeNumberSelector
-        range: 1, 5
     - id: AntiPoisonMedipen
       amount: !type:RangeNumberSelector
         range: 1, 5
@@ -637,12 +627,6 @@
     children:
     - id: SpaceCash100
       weight: 8
-    - id: MonkeyCube
-      amount: !type:RangeNumberSelector
-        range: 1, 10
-    - id: KoboldCube
-      amount: !type:RangeNumberSelector
-        range: 1, 10
     - id: CowCube
       amount: !type:RangeNumberSelector
         range: 1, 10

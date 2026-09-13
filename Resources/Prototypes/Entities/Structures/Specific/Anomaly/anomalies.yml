@@ -39,9 +39,6 @@
   - type: Clickable
   - type: Appearance
   - type: AnimationPlayer
-  - type: GuideHelp
-    guides:
-    - AnomalousResearch
   - type: EmitSoundOnSpawn
     sound:
       path: /Audio/Effects/teleport_arrival.ogg
@@ -769,23 +766,6 @@
         maxAmount: 30
         maxRange: 15
       floor: FloorAstroGrass
-  - type: EntitySpawnAnomaly
-    entries:
-    - settings:
-        spawnOnPulse: true
-        minAmount: 2
-        maxAmount: 5
-        maxRange: 2
-      spawns:
-      - KudzuFlowerFriendly
-    - settings:
-        spawnOnSuperCritical: true
-        minAmount: 5
-        maxAmount: 10
-        maxRange: 6
-      spawns:
-      - KudzuFlowerAngry
-
 - type: entity
   id: AnomalyFloraBulb
   name: strange glowing berry
@@ -861,15 +841,6 @@
     maxPulseLength: 120
     supercriticalSoundAtAnimationStart:
       collection: AnomalyFluidSupercritical
-  - type: EntitySpawnAnomaly
-    entries:
-    - settings:
-        spawnOnSuperCritical: true
-        minAmount: 3
-        maxAmount: 8
-        maxRange: 2
-      spawns:
-      - ReagentSlimeSpawner
   - type: Solution
     id: anomaly
     solution:
@@ -923,23 +894,6 @@
     offset: "-0.1,0.1"
     supercriticalSoundAtAnimationStart:
       collection: AnomalyShadowSupercritical
-  - type: EntitySpawnAnomaly
-    entries:
-    - settings:
-        spawnOnPulse: true
-        spawnOnSuperCritical: true
-        minAmount: 10
-        maxAmount: 20
-        maxRange: 4
-      spawns:
-      - ShadowKudzuWeak
-    - settings:
-        spawnOnSuperCritical: true
-        minAmount: 30
-        maxAmount: 40
-        maxRange: 50
-      spawns:
-      - ShadowKudzu
   - type: Portal
     arrivalSound: /Audio/Items/hiss.ogg
     departureSound: /Audio/Items/hiss.ogg
@@ -1053,7 +1007,6 @@
         maxRange: 5
       spawns:
       - PresentRandomUnsafe
-      - PresentRandom
       - PresentRandomCoal
       - PresentRandomCash
       - ClothingHeadHatSantahat

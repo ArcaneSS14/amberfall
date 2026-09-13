@@ -47,7 +47,7 @@ public sealed partial class HolosignSystem
         // places the holographic sign at the click location, snapped to grid.
         var coords = args.ClickLocation.SnapToGrid(EntityManager);
         var mapCoords = _transform.ToMapCoordinates(coords);
-        var look = _map.TryFindGridAt(mapCoords, out var grid, out var gridComp)
+        IEnumerable<EntityUid> look = _map.TryFindGridAt(mapCoords, out var grid, out var gridComp)
             ? _map.GetAnchoredEntities((grid, gridComp), mapCoords)
             : _lookup.GetEntitiesInRange(mapCoords, 0.1f);
         foreach (var entity in look)

@@ -36,7 +36,6 @@
     components:
     - StationData
     - TradeStation
-    - EscapePod
   color: Orange
   maxRange: 50
   radialMenuIconPath: Markers/Waypointers/wreck_waypointer.rsi

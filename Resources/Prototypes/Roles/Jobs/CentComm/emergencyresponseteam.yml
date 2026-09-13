@@ -288,7 +288,6 @@
     - Multitool
     - WeaponPistolMk58
     - MagazinePistol
-    - EmergencyMedipen
 
 - type: startingGear
   parent: ERTEngineerGearEVA
@@ -307,7 +306,6 @@
     - RCDAmmo
     - RCDAmmo
     - CableDetStack
-    - BoxDetonator
 
 - type: chameleonOutfit
   id: ERTEngineerChameleonOutfit
@@ -484,7 +482,6 @@
     - SmokeGrenade
     - ExGrenade
     - CableDetStack
-    - BoxDetonator
 
 - type: chameleonOutfit
   id: ERTSecurityChameleonOutfit
@@ -544,8 +541,6 @@
     - JugOxandrolone
     - JugSalicylicAcid
     - ParamedHypo
-    - CartridgeAtropine
-    - CartridgeAtropine
     - MedicalBeamGunBattery
 
 - type: startingGear
@@ -570,8 +565,6 @@
     - JugOxandrolone
     - JugSalicylicAcid
     - ParamedHypo
-    - CartridgeAtropine
-    - CartridgeAtropine
     - MedicalBeamGunBattery
 
 - type: startingGear
@@ -681,7 +674,6 @@
     - CrowbarRed
     - WeaponPistolMk58
     - MagazinePistol
-    - EmergencyMedipen
 
 - type: chameleonOutfit
   id: ERTJanitorChameleonOutfit

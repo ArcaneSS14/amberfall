@@ -17,8 +17,6 @@
   - Research
   - Maintenance
   # <Trauma>
-  guides:
-  - Science
   special:
   - !type:OrganChipsSpecial
     chips:

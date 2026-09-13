@@ -17,28 +17,6 @@
       children:
       - id: CrateSalvageAssortedGoodies
         weight: 0.6
-      - !type:GroupSelector
-        weight: 0.4
-        children:
-        - id: SalvageHumanCorpse
-        - id: CrateMaterialPlasteel
-        - id: CrateMaterialWood
-        - id: CrateMaterialPlastic
-        - id: CrateSalvageEquipment
-        - id: CrateMaterialSteel
-        - id: CrateMaterialGlass
-        - id: CrateServiceJanitorialSupplies
-        - id: CrateHydroponicsSeedsMedicinal
-        - id: CrateFoodMRE
-        - id: CrateMaterialTextiles
-        - id: CrateMedicalSupplies
-        - id: CrateEngineeringCableBulk
-        - id: CrateMaterialCardboard
-        - id: CrateServiceBooks
-        - id: CrateServiceSmokeables
-        - id: CrateTrashCartFilled
-        - id: ClosetMaintenanceFilledRandom
-        - id: ClosetEmergencyFilledRandom
       offset: 0.0
 
 - type: entity

@@ -234,7 +234,6 @@
     - id: SlipocalypseClusterSoap
       amount: !type:RangeNumberSelector
         range: 1, 2
-    - id: ReinforcementRadioSyndicateAncestor
     - id: ClothingEyesHudSyndicate
       amount: !type:RangeNumberSelector
         range: 1, 2

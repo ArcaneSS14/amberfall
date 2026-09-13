@@ -16,7 +16,6 @@
   supervisors: job-supervisors-hos
   guides: # Trauma
   - SpaceLaw
-  - Security
   - KravMaga
   access:
   - Security

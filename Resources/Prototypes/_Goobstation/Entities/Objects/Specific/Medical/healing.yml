@@ -59,23 +59,6 @@
         Quantity: 15
 
 - type: entity
-  parent: PrefilledSyringe
-  name: syringe
-  description: A somewhat humane way to put down prisoners.
-  id: SyringePoisonLethalInjection
-  suffix: lethal injection
-  components:
-  - type: Label
-    currentLabel: Lethal Injection
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Cyanide
-        Quantity: 10
-      - ReagentId: Amatoxin
-        Quantity: 5
-
-- type: entity
   name: pill
   suffix: Tramadol 7.5u
   parent: Pill

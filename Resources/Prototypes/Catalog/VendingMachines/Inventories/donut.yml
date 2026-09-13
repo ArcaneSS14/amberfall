@@ -10,6 +10,4 @@
     FoodBagelPoppy: 2
     FoodDonutPoison: 2 # Trauma - was 1
   # <Trauma>
-  emaggedInventory:
-    SyndicateSponge: 1
   # </Trauma>

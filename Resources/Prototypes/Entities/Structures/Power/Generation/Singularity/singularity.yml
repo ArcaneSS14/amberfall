@@ -62,7 +62,6 @@
   - type: GuideHelp # Always strive to be helpful in trying times.
     guides:
     - SingularityEngine
-    - SingularityTeslaEngine
     - Power
   - type: WarpPoint
     follow: true

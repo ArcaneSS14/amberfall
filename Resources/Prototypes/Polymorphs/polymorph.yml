@@ -13,15 +13,6 @@
     inventory: Drop
 
 - type: polymorph
-  id: Monkey
-  configuration:
-    entity: MobMonkey
-    forced: true
-    inventory: Drop
-    revertOnCrit: true
-    revertOnDeath: true
-
-- type: polymorph
   id: WizardForcedCarp
   configuration:
     entity: MobCarpMagic
@@ -46,36 +37,6 @@
     transferDamage: true
     revertOnCrit: false
     revertOnDeath: true
-
-- type: polymorph
-  id: WizardForcedSkeleton
-  configuration:
-    entity: MobSkeletonPerson
-    forced: true
-    inventory: Drop
-    transferName: true
-    transferDamage: true
-    revertOnCrit: false
-    revertOnDeath: false
-    polymorphSound: !type:SoundPathSpecifier
-      path: /Audio/Magic/forcewall.ogg
-    exitPolymorphSound: !type:SoundPathSpecifier
-      path: /Audio/Magic/forcewall.ogg
-
-- type: polymorph
-  id: WizardForcedMonkey
-  configuration:
-    entity: MobMonkey
-    forced: true
-    inventory: None
-    transferName: true
-    transferDamage: true
-    revertOnCrit: false
-    revertOnDeath: true
-    polymorphSound: !type:SoundPathSpecifier
-      path: /Audio/Magic/forcewall.ogg
-    exitPolymorphSound: !type:SoundPathSpecifier
-      path: /Audio/Magic/forcewall.ogg
 
 - type: polymorph
   id: WizardWallDoor
@@ -117,16 +78,6 @@
     inventory: Transfer
 
 - type: polymorph
-  id: AMIVMorph
-  configuration:
-    entity: MobMonkey
-    forced: true
-    inventory: Transfer
-    transferName: true
-    revertOnCrit: false
-    revertOnDeath: false
-
-- type: polymorph
   id: BreadMorph
   configuration:
     entity: FoodBreadPlain
@@ -160,18 +111,6 @@
     allowRepeatedMorphs: false
 
 # this is the monkey polymorph for artifact.
-- type: polymorph
-  id: ArtifactMonkey
-  configuration:
-    entity: MobMonkey
-    forced: true
-    transferName: true
-    allowRepeatedMorphs: true
-    inventory: Transfer
-    revertOnCrit: true
-    revertOnDeath: true
-    duration: 20
-
 - type: polymorph
   id: ArtifactCluwne
   configuration:
