@@ -1,0 +1,62 @@
+- type: entity
+  id: BaseMindRole
+  abstract: true
+  components:
+  - type: MindRole
+
+- type: entity
+  parent: BaseMindRole
+  id: BaseMindRoleAntag
+  abstract: true
+  components:
+  - type: MindRole
+    antag: true
+
+- type: entity
+  parent: BaseMindRole
+  id: MindRoleGhostRoleNeutral
+  components:
+  - type: GhostRoleMarkerRole
+
+- type: entity
+  parent: MindRoleGhostRoleNeutral
+  id: MindRoleGhostRoleFamiliar
+  components:
+  - type: MindRole
+    roleType: Familiar
+
+- type: entity
+  parent: MindRoleGhostRoleNeutral
+  id: MindRoleGhostRoleFreeAgent
+  components:
+  - type: MindRole
+    roleType: FreeAgent
+
+- type: entity
+  parent: MindRoleGhostRoleNeutral
+  id: MindRoleGhostRoleSilicon
+  components:
+  - type: MindRole
+    roleType: Silicon
+
+- type: entity
+  parent: [BaseMindRoleAntag, MindRoleGhostRoleNeutral]
+  id: MindRoleGhostRoleSoloAntagonist
+  components:
+  - type: MindRole
+    roleType: SoloAntagonist
+
+- type: entity
+  parent: [BaseMindRoleAntag, MindRoleGhostRoleNeutral]
+  id: MindRoleGhostRoleTeamAntagonist
+  components:
+  - type: MindRole
+    roleType: TeamAntagonist
+
+- type: entity
+  parent: MindRoleGhostRoleTeamAntagonist
+  id: MindRoleGhostRoleTeamAntagonistFlock
+
+- type: entity
+  parent: MindRoleGhostRoleNeutral
+  id: MindRoleGhostRoleAnimal

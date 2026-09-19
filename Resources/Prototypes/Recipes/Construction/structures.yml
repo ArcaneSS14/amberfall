@@ -1982,25 +1982,6 @@
   # </Trauma>
 
 - type: construction
-  id: StationAiCore
-  graph: StationAiCore
-  startNode: start
-  targetNode: stationAiCore
-  category: construction-category-structures
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: false
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-  # <Trauma>
-  theory:
-    ElectronicsKnowledge: 3
-  practical:
-    ElectronicsKnowledge: 3
-  # </Trauma>
-
-- type: construction
   id: Bonfire
   graph: Bonfire
   startNode: start

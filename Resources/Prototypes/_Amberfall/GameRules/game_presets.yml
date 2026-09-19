@@ -1,0 +1,8 @@
+- type: gamePreset
+  id: Sandbox
+  alias:
+  - sandbox
+  name: sandbox-title
+  description: sandbox-description
+  showInVote: false
+  rules: []

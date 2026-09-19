@@ -36,6 +36,10 @@ public sealed partial class JobObjectiveSystem : EntitySystem
     private void OnRoundStarting(RoundStartingEvent ev)
     {
         _queuedObjectives.Clear();
+
+        if (!ProtoMan.HasIndex<EntityPrototype>(Rule))
+            return;
+
         _jobObjectiveRule = Spawn(Rule, MapCoordinates.Nullspace);
         _ticker.StartGameRule(_jobObjectiveRule.Value);
     }

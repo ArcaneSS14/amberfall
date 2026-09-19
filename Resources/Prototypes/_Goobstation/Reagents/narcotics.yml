@@ -206,12 +206,6 @@
         damage:
           types:
             Cellular: -0.2
-      - !type:Polymorph
-        prototype: MouseSentient
-        conditions:
-        - !type:ReagentCondition
-          reagent: MouseBites
-          min: 50 # raised because mouse retaliation is now a thing
       - !type:AdjustReagent
         reagent: MouseBites
         amount: -20

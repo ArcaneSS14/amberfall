@@ -1,17 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: polymorph
-  id: Gondola
-  configuration:
-    entity: MobGondola
-    forced: true
-    transferName: false
-    transferHumanoidAppearance: false
-    inventory: Drop
-    revertOnDeath: false
-    revertOnCrit: false
-
-- type: polymorph
   id: Bingle
   configuration:
     entity: MobBingle
@@ -45,16 +34,6 @@
     revertOnDeath: true
     revertOnCrit: true
     duration: 20
-
-- type: polymorph
-  id: MouseSentient
-  configuration:
-    entity: MobMouseSentient
-    forced: true
-    inventory: Transfer
-    revertOnDeath: true
-    transferName: true
-    revertOnCrit: true
 
 - type: polymorph
   id: MobFrogPolymorph

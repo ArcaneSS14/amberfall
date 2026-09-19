@@ -147,14 +147,6 @@
             Asphyxiation: 1
             Heat: 2
             Poison: 1
-      - !type:Polymorph
-        prototype: TreeMorph
-        conditions:
-          - !type:MetabolizerTypeCondition
-            type: [Plant]
-          - !type:ReagentCondition
-            reagent: RobustHarvest
-            min: 80
 
 - type: reagent
   id: Sedin

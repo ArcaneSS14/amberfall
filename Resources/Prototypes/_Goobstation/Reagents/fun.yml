@@ -37,13 +37,6 @@
         - !type:ReagentCondition
           reagent: Tranquility
           min: 20 # maybe ask medical for help
-      - !type:Polymorph
-        prototype: Gondola
-        conditions:
-        - !type:ReagentCondition
-          reagent: Tranquility
-          min: 25
-
 - type: reagent
   id: BingleJuice
   name: reagent-name-binglejuice
@@ -79,12 +72,6 @@
     Bloodstream:
       metabolismRate: 0.05
       effects:
-      - !type:Polymorph
-        prototype: ForcedCarpSentient
-        conditions:
-        - !type:ReagentCondition
-          reagent: Carpolin
-          min: 9
       - !type:AdjustReagent
         reagent: Carpolin
         amount: -10

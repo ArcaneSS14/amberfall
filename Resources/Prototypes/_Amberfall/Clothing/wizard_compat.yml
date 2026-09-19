@@ -1,0 +1,11 @@
+- type: entity
+  id: ClothingOuterWizardBaseArmor
+  abstract: true
+
+- type: entity
+  id: ClothingOuterWizardCentCommReal
+  abstract: true
+
+- type: entity
+  id: ClothingHeadHatWizardBaseArmor
+  abstract: true

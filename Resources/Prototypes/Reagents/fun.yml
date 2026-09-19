@@ -327,15 +327,6 @@
         showInGuidebook: true
         force: true
         probability: 0.5
-      - !type:Polymorph
-        prototype: ArtifactLizard # Does the same thing as the original YML I made for this reagent.
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Animal]
-          inverted: true
-        - !type:ReagentCondition
-          reagent: JuiceThatMakesYouWeh
-          min: 50
       - !type:AdjustReagent
         reagent: JuiceThatMakesYouWeh
         amount: -20
@@ -362,15 +353,6 @@
         showInGuidebook: true
         force: true
         probability: 0.5
-      - !type:Polymorph
-        prototype: ArtifactLizard
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Animal ]
-          inverted: true
-        - !type:ReagentCondition
-          reagent: JuiceThatMakesYouHew
-          min: 50
       - !type:AdjustReagent
         reagent: JuiceThatMakesYouHew
         amount: -20
@@ -399,12 +381,6 @@
         damage:
           types:
             Cellular: 0.5
-      - !type:Polymorph
-        prototype: SmartCorgiMorph
-        conditions:
-        - !type:ReagentCondition
-          reagent: CorgiJuice
-          min: 50
       - !type:AdjustReagent
         reagent: CorgiJuice
         amount: -20

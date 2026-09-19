@@ -1,0 +1,15 @@
+- type: vendingMachineInventory
+  id: PTechInventory
+  startingInventory: {}
+
+- type: vendingMachineInventory
+  id: DinnerwareInventory
+  startingInventory: {}
+
+- type: vendingMachineInventory
+  id: AutoDrobeInventory
+  startingInventory: {}
+
+- type: vendingMachineInventory
+  id: RoboticsInventory
+  startingInventory: {}
