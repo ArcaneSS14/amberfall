@@ -35,7 +35,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
     [Dependency] private PowerCellSystem _powerCell = default!;
     [Dependency] private DamageableSystem _damageable = default!;
 
-    public static readonly ProtoId<JobPrototype> BorgJobId = "Borg";
+    public const string BorgJobId = "Borg";
 
     /// <inheritdoc/>
     public override void Initialize()

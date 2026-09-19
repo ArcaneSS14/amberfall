@@ -44,7 +44,7 @@ public abstract partial class SharedBindSoulSystem : EntitySystem
 
     private static readonly EntProtoId ParticlePrototype = "BindSoulParticle";
 
-    protected static readonly ProtoId<StartingGearPrototype> LichGear = "LichGear";
+    protected const string LichGear = "LichGear";
 
     public override void Initialize()
     {

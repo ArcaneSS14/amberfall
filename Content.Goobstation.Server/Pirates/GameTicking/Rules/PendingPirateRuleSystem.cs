@@ -24,7 +24,7 @@ public sealed partial class PendingPirateRuleSystem : GameRuleSystem<PendingPira
     [Dependency] private StationSystem _station = default!;
     [Dependency] private CargoSystem _cargo = default!;
 
-    private static readonly EntProtoId PirateSpawnRule = "PiratesSpawn";
+    private const string PirateSpawnRule = "PiratesSpawn";
 
     public override void Update(float frameTime)
     {

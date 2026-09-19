@@ -8,7 +8,7 @@ namespace Content.Shared.Silicons.Borgs;
 
 public abstract partial class SharedBorgSystem
 {
-    private static readonly EntProtoId SiliconBrainRole = "MindRoleSiliconBrain";
+    private const string SiliconBrainRole = "MindRoleSiliconBrain";
 
     public void InitializeMMI()
     {

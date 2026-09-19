@@ -26,16 +26,16 @@ public sealed partial class AdminVerbSystem
     [Dependency] private GameTicker _gameTicker = default!;
     [Dependency] private OutfitSystem _outfit = default!;
 
-    private static readonly EntProtoId DefaultTraitorRule = "Traitor";
-    private static readonly EntProtoId DefaultInitialInfectedRule = "Zombie";
-    private static readonly EntProtoId DefaultNukeOpRule = "LoneOpsSpawn";
-    private static readonly EntProtoId DefaultRevsRule = "Revolutionary";
-    private static readonly EntProtoId DefaultThiefRule = "Thief";
+    private const string DefaultTraitorRule = "Traitor";
+    private const string DefaultInitialInfectedRule = "Zombie";
+    private const string DefaultNukeOpRule = "LoneOpsSpawn";
+    private const string DefaultRevsRule = "Revolutionary";
+    private const string DefaultThiefRule = "Thief";
     //private static readonly EntProtoId DefaultChangelingRule = "Changeling"; // Trauma - goob ling used instead
-    private static readonly EntProtoId ParadoxCloneRuleId = "ParadoxCloneSpawn";
-    private static readonly EntProtoId DefaultWizardRule = "Wizard";
-    private static readonly EntProtoId DefaultNinjaRule = "NinjaSpawn";
-    private static readonly ProtoId<StartingGearPrototype> PirateGearId = "PirateGear";
+    private const string ParadoxCloneRuleId = "ParadoxCloneSpawn";
+    private const string DefaultWizardRule = "Wizard";
+    private const string DefaultNinjaRule = "NinjaSpawn";
+    private const string PirateGearId = "PirateGear";
 
     // All antag verbs have names so invokeverb works.
     private void AddAntagVerbs(GetVerbsEvent<Verb> args)

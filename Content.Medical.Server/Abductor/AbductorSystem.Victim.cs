@@ -22,8 +22,8 @@ public sealed partial class AbductorSystem : SharedAbductorSystem
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private SharedRoleSystem _role = default!;
 
-    private static readonly EntProtoId DefaultAbductorVictimRule = "AbductorVictim";
-    private static readonly EntProtoId MindRole = "MindRoleAbductorVictim";
+    private const string DefaultAbductorVictimRule = "AbductorVictim";
+    private const string MindRole = "MindRoleAbductorVictim";
 
     private void InitializeVictim()
     {

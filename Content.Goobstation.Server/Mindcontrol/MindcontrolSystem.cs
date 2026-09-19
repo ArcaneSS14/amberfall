@@ -28,7 +28,7 @@ public sealed partial class MindcontrolSystem : EntitySystem
     [Dependency] private PopupSystem _popup = default!;
     [Dependency] private IPlayerManager _player = default!;
 
-    private static EntProtoId MindRole = "MindRoleBrainwashed";
+    private const string MindRole = "MindRoleBrainwashed";
 
     public override void Initialize()
     {

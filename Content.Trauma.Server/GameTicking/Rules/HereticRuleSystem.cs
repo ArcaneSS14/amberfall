@@ -36,7 +36,7 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
     public static readonly SoundSpecifier BriefingSoundIntense =
         new SoundPathSpecifier("/Audio/_Goobstation/Heretic/Ambience/Antag/Heretic/heretic_gain_intense.ogg");
 
-    public static EntProtoId MindRole = "MindRoleHeretic";
+    public const string MindRole = "MindRoleHeretic";
 
     public static EntProtoId RealityShift = "EldritchInfluence";
 

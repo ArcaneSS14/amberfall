@@ -100,17 +100,6 @@
   - !type:AddObjective
     objective: DieObjective
 
-- type: scrollPrayer
-  id: Mime
-  verb: TEACH
-  subjects: [ "SILENCE" ]
-  effects:
-  - !type:AddComponents
-    components:
-    - type: MimePowers
-      preventWriting: true
-    - type: FrenchAccent
-
 # I did infact choose to be quiet
 - type: scrollPrayer
   id: VocalParasites

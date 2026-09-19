@@ -43,7 +43,7 @@ public sealed partial class RevPropagandaSystem : EntitySystem
 
     private static readonly ProtoId<LocalizedDatasetPrototype> RevConvertSpeechProto = "RevolutionaryConverterSpeech";
     private static readonly ProtoId<NpcFactionPrototype> Faction = "Revolutionary";
-    private static readonly EntProtoId MindRole = "MindRoleRevolutionary";
+    private const string MindRole = "MindRoleRevolutionary";
     private LocalizedDatasetPrototype? _speechLocalization;
 
     public override void Initialize()
