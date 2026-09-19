@@ -184,10 +184,6 @@
   group: Narcotics
   desc: reagent-desc-cocaslurry
   physicalDesc: reagent-physical-desc-murky
-  allowedJobs:
-  - Chemist
-  - Botanist
-  - Bartender
   flavor: bitter
   color: "#728559"
   boilingPoint: 187.0

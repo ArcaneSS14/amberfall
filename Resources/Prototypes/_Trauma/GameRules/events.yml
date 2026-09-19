@@ -184,35 +184,6 @@
     - !type:NestedEffect
       proto: TraitorSkills
 
-- type: entity
-  parent: BaseAntagGhostRoleRule
-  id: FugitiveHunterRule
-  components:
-  - type: AntagGhostCharacterRule
-  - type: AntagObjectives
-    objectives:
-    - HunterKillFugitiveObjective
-    - HunterArrestFugitiveObjective
-    - HunterKillRandomPersonObjective
-  - type: AntagRandomObjectives
-    sets:
-    - groups: HunterObjectiveGroups
-      maxPicks: 3
-    maxDifficulty: 5
-  - type: RuleGrids
-  - type: LoadMapRule
-    gridPath: /Maps/_Trauma/Shuttles/SpacePolShuttle.yml
-  - type: AntagSelection
-    agentName: ghost-role-information-hunter-name
-    antags:
-    - !type:FixedAntagCount
-      proto: FugitiveHunter
-      count: 2
-  - type: AntagPlayerEffects
-    effects:
-    - !type:NestedEffect
-      proto: TraitorSkills
-
 - type: entityTable
   id: BasicCalmEventsTrauma
   table: !type:AllSelector

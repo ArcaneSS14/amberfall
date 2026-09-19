@@ -22,9 +22,9 @@ public sealed partial class ZLevelSystem
         var expectedManaged = new HashSet<EntityUid>();
         var query = EntityQueryEnumerator<ZLevelComponent, MapComponent>();
 
-        while (query.MoveNext(out var uid, out var level, out _))
+        while (query.MoveNext(out var uid, out var level, out var map))
         {
-            if (level.Group != group)
+            if (level.Group != group || !map.MapInitialized)
                 continue;
 
             if (!levels.TryAdd(level.Level, (uid, level)))

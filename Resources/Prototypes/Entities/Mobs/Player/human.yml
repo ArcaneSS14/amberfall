@@ -7,9 +7,6 @@
   components:
   - type: RandomHumanoidAppearance
     randomizeName: false
-  - type: Loadout
-    prototypes: [SyndicateOperativeGearExtremelyBasic]
-    roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
     nameSegments: [NamesDeathCommando]
   - type: NpcFactionMember
@@ -30,29 +27,17 @@
   parent: MobHumanSyndicateAgent
   id: MobHumanSyndicateAgentMedic
   name: syndicate medic
-  components:
-  - type: Loadout
-    prototypes: [SyndicateReinforcementMedic]
-    roleLoadout: [ RoleSurvivalSyndicate ]
-
+  components: []
 - type: entity
   parent: MobHumanSyndicateAgent
   id: MobHumanSyndicateAgentSpy
   name: syndicate spy
-  components:
-  - type: Loadout
-    prototypes: [SyndicateReinforcementSpy]
-    roleLoadout: [ RoleSurvivalSyndicate ]
-
+  components: []
 - type: entity
   parent: MobHumanSyndicateAgent
   id: MobHumanSyndicateAgentThief
   name: syndicate thief
-  components:
-  - type: Loadout
-    prototypes: [SyndicateReinforcementThief]
-    roleLoadout: [ RoleSurvivalSyndicate ]
-
+  components: []
 - type: entity
   parent: MobHumanSyndicateAgentBase
   id: MobHumanSyndicateAgentNukeops # Reinforcement exclusive to nukeops uplink
@@ -67,10 +52,6 @@
     nameSegments:
     - NamesSyndicateNormal
     nameFormat: name-format-nukie-operator
-  - type: Loadout
-    prototypes: [SyndicateOperativeReinforcementGear] # goobstation - duke nukies
-
-# Nuclear Operative
 - type: entity
   categories: [ HideSpawnMenu ]
   name: Nuclear Operative
@@ -98,9 +79,6 @@
   - type: RandomHumanoidAppearance
     randomizeName: false
   - type: NukeOperative
-  - type: Loadout
-    prototypes: [SyndicateLoneOperativeGearFull]
-    roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
     nameSegments:
     - NamesSyndicatePrefix

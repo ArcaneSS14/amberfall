@@ -275,8 +275,6 @@
       damage:
         types:
           Blunt: 5
-    - type: Loadout
-      prototypes: [ HoloClownGear ]
     - type: RandomMetadata
       nameSegments:
       - NamesClown

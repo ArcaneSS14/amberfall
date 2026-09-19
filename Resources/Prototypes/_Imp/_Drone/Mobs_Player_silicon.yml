@@ -131,9 +131,6 @@
     handheld: false
     bank: 1
     program: 2
-  - type: Loadout # imp special. this replaces the InnateTool component.
-    prototypes:
-    - StartingGearDroneTools
   - type: NameIdentifier
     group: Drone
   - type: Inventory

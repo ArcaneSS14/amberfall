@@ -775,7 +775,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: CargoOrderConsole
-    removeLimitAccess: [ "Quartermaster" ]
+
   - type: ActiveRadio
     channels:
     - Supply
@@ -825,7 +825,7 @@
   - type: CargoOrderConsole
     account: Engineering
     announcementChannel: Engineering
-    removeLimitAccess: [ "ChiefEngineer" ]
+
     #mode: SendToPrimary # Trauma - ungimp dept economy
   - type: ActiveRadio
     channels:
@@ -859,7 +859,7 @@
   - type: CargoOrderConsole
     account: Medical
     announcementChannel: Medical
-    removeLimitAccess: [ "ChiefMedicalOfficer" ]
+
     #mode: SendToPrimary # Trauma - ungimp dept economy
   - type: ActiveRadio
     channels:
@@ -893,7 +893,7 @@
   - type: CargoOrderConsole
     account: Science
     announcementChannel: Science
-    removeLimitAccess: [ "ResearchDirector" ]
+
     #mode: SendToPrimary # Trauma - ungimp dept economy
   - type: ActiveRadio
     channels:
@@ -926,7 +926,7 @@
   - type: CargoOrderConsole
     account: Security
     announcementChannel: Security
-    removeLimitAccess: [ "HeadOfSecurity" ]
+
     #mode: SendToPrimary # Trauma - ungimp dept economy
   - type: ActiveRadio
     channels:
@@ -959,7 +959,7 @@
   - type: CargoOrderConsole
     account: Service
     announcementChannel: Service
-    removeLimitAccess: [ "HeadOfPersonnel" ]
+
     #mode: SendToPrimary # Trauma - ungimp dept economy
   - type: ActiveRadio
     channels:

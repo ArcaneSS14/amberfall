@@ -51,15 +51,3 @@
 
 # StartingGear
 
-- type: startingGear
-  id: StartingGearDroneTools
-  equipment:
-    back: DroneSatchelUnremovable
-  inhand:
-  - OmnitoolUnremoveable
-  - WelderExperimentalUnremoveable
-  - RCDRechargingUnremoveable
-  - NetworkConfiguratorUnremoveable
-  storage:
-    back:
-    - trayScanner

@@ -1,0 +1,15 @@
+- type: job
+  id: Wanderer
+  name: job-name-wanderer
+  description: job-description-wanderer
+  playTimeTracker: Overall
+  supervisors: job-supervisors-nobody
+
+- type: department
+  id: Inhabitants
+  name: department-inhabitants
+  description: department-inhabitants-description
+  color: "#b99b70"
+  roles:
+  - Wanderer
+

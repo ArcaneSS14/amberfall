@@ -1,8 +1,0 @@
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
-- type: entity
-  parent: BaseUnknownShuttleAnnouncedRule
-  id: UnknownShuttleTravelingCuisine
-  components:
-  - type: LoadMapRule
-    gridPath: /Maps/_Trauma/Shuttles/ShuttleEvent/traveling_china_cuisine.yml

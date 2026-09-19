@@ -882,8 +882,6 @@
     description: ghost-role-information-willow-description
     rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
-  - type: Loadout
-    prototypes: [ BoxingKangarooGear ]
   - type: LanguageSpeaker # Einstein Engines - Language
     speaks:
     - Kangaroo
@@ -1022,5 +1020,3 @@
     attributes:
       proper: true
       gender: male
-  - type: Loadout
-    prototypes: [ MobPollyGear ]

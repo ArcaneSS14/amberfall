@@ -1,6 +1,6 @@
 [game]
 role_timers = true
-role_timer_override = "Trauma"
+role_timer_override = ""
 round_end_pvs_overrides = true
 lobbyduration = 180
 fallbackpreset = "Traitor"

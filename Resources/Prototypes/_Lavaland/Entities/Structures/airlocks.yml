@@ -13,16 +13,3 @@
       board: [ DoorElectronicsExternal ]
 
 # 1 per map, this spawns the mining shuttle
-- type: entity
-  parent: AirlockExternalGlassShuttleMining
-  id: AirlockExternalGlassShuttleMiningFilled
-  suffix: Mining, Filled, Locked
-  components:
-  - type: PriorityDock
-    tag: DockMining
-  - type: GridFill
-    path: /Maps/_Lavaland/mining.yml
-    addComponents:
-    - type: IFF
-      flags:
-      - HideLabel

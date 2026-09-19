@@ -27,8 +27,6 @@
   components:
   - type: RandomHumanoidAppearance
     randomizeName: true
-  - type: Loadout
-    prototypes: [LeadInternGear]
   - type: AntagImmune
 
 # Basic Intern Coin
@@ -74,8 +72,6 @@
   components:
   - type: RandomHumanoidAppearance
     randomizeName: true
-  - type: Loadout
-    prototypes: [NTInternGear]
   - type: AntagImmune
 
 # NT Nerd Intern
@@ -87,65 +83,6 @@
   components:
   - type: RandomHumanoidAppearance
     randomizeName: true
-  - type: Loadout
-    prototypes: [NTNerdInternGear]
   - type: AntagImmune
 
 # NT Nerd Intern Gear
-- type: startingGear
-  id: NTNerdInternGear
-  equipment:
-    eyes: ClothingEyesGlassesJamjar
-    jumpsuit: ClothingUniformJumpsuitCentcomOfficer
-    gloves: ClothingHandsGlovesColorYellowBudget
-    shoes: ClothingShoesBootsWork
-    back: ClothingBackpackCentcomm
-    ears: ClothingHeadsetGrey
-    id: PassengerIDCard # let NTR give them access on bridge lol, im too lazy to make a new ID just for interns
-  inhand:
-    - MedkitAdvancedFilled
-    - ToolboxElectricalFilled
-  storage:
-    back:
-    - ClothingShoesSlippers
-    - BoxSurvivalSlotsMedical
-
-# Lead Intern Gear
-- type: startingGear
-  id: LeadInternGear
-  equipment:
-    eyes: ClothingEyesGlassesSunglasses
-    head: ClothingHeadHatGreensoft
-    jumpsuit: ClothingUniformJumpsuitCentcomOfficer
-    outerClothing: ClothingOuterArmorBasic
-    gloves: ClothingHandsGlovesColorBlack
-    shoes: ClothingShoesLeather
-    back: ClothingBackpackCentcomm
-    ears: ClothingHeadsetGrey
-    id: PassengerIDCard
-    pocket1: DrinkEnergyDrinkCan
-    pocket2: TelescopicBaton
-  storage:
-    back:
-    - NerdInternCoin
-    - InternCoin
-    - InternCoin
-    - BoxSurvivalSlotsMedical
-
-# NT Intern Gear
-- type: startingGear
-  id: NTInternGear
-  equipment:
-    eyes: ClothingEyesGlassesSunglasses
-    jumpsuit: ClothingUniformJumpsuitCentcomOfficer
-    gloves: ClothingHandsGlovesColorBlack
-    shoes: ClothingShoesLeather
-    back: ClothingBackpackCentcomm
-    ears: ClothingHeadsetGrey
-    id: PassengerIDCard
-    pocket1: DrinkEnergyDrinkCan
-    pocket2: WeaponDisabler
-  storage:
-    back:
-    - Vape # interns ammiright?
-    - BoxSurvivalSlotsMedical

@@ -13,7 +13,7 @@ public sealed partial class ZLevelSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ZLevelComponent, ComponentStartup>(OnLevelStartup);
+        SubscribeLocalEvent<ZLevelComponent, MapInitEvent>(OnLevelMapInit);
         SubscribeLocalEvent<ZLevelComponent, ComponentShutdown>(OnLevelShutdown);
         InitializePvs();
     }
@@ -32,7 +32,7 @@ public sealed partial class ZLevelSystem : EntitySystem
         UpdatePvs(frameTime);
     }
 
-    private void OnLevelStartup(Entity<ZLevelComponent> entity, ref ComponentStartup args)
+    private void OnLevelMapInit(Entity<ZLevelComponent> entity, ref MapInitEvent args)
     {
         _dirtyGroups.Add(entity.Comp.Group);
     }

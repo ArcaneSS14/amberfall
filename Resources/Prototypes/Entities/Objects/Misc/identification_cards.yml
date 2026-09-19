@@ -56,16 +56,11 @@
     layers:
     - state: default
     - state: idpassenger
-  - type: PresetIdCard
-    job: Passenger
-
 - type: entity
   parent: PassengerIDCard
   id: TechnicalAssistantIDCard
   name: technical assistant ID card
   components:
-  - type: PresetIdCard
-    job: TechnicalAssistant
   - type: Sprite
     layers:
     - state: default
@@ -76,8 +71,6 @@
   id: MedicalInternIDCard
   name: medical intern ID card
   components:
-  - type: PresetIdCard
-    job: MedicalIntern
   - type: Sprite
     layers:
     - state: default
@@ -88,8 +81,6 @@
   id: ResearchAssistantIDCard
   name: research assistant ID card
   components:
-  - type: PresetIdCard
-    job: ResearchAssistant
   - type: Sprite
     layers:
     - state: default
@@ -100,8 +91,6 @@
   id: SecurityCadetIDCard
   name: security cadet ID card
   components:
-  - type: PresetIdCard
-    job: SecurityCadet
   - type: Sprite
     layers:
     - state: default
@@ -112,8 +101,6 @@
   id: ServiceWorkerIDCard
   name: service worker ID card
   components:
-  - type: PresetIdCard
-    job: ServiceWorker
   - type: Sprite
     layers:
     - state: default
@@ -130,8 +117,6 @@
     - state: idcaptain
   - type: Item
     heldPrefix: gold
-  - type: PresetIdCard
-    job: Captain
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -150,9 +135,6 @@
     layers:
     - state: default
     - state: idsecurityofficer
-  - type: PresetIdCard
-    job: SecurityOfficer
-
 - type: entity
   parent: IDCardStandard
   id: WardenIDCard
@@ -162,9 +144,6 @@
       layers:
         - state: default
         - state: idwarden
-    - type: PresetIdCard
-      job: Warden
-
 - type: entity
   parent: IDCardStandard
   id: EngineeringIDCard
@@ -174,9 +153,6 @@
     layers:
     - state: default
     - state: idstationengineer
-  - type: PresetIdCard
-    job: StationEngineer
-
 - type: entity
   parent: IDCardStandard
   id: MedicalIDCard
@@ -186,9 +162,6 @@
     layers:
     - state: default
     - state: idmedicaldoctor
-  - type: PresetIdCard
-    job: MedicalDoctor
-
 - type: entity
   parent: IDCardStandard
   id: ParamedicIDCard
@@ -198,9 +171,6 @@
     layers:
     - state: default
     - state: idparamedic
-  - type: PresetIdCard
-    job: Paramedic
-
 - type: entity
   parent: IDCardStandard
   id: ChemistIDCard
@@ -210,8 +180,6 @@
     layers:
     - state: chemist # Goobstation - Chemist card
     - state: idchemist
-  - type: PresetIdCard
-    job: Chemist
   - type: Item # Goobstation - Chemist card
     heldPrefix: chemist
     sprite: _Goobstation/Objects/Misc/id_cards.rsi
@@ -225,9 +193,6 @@
     layers:
     - state: default
     - state: idcargotechnician
-  - type: PresetIdCard
-    job: CargoTechnician
-
 - type: entity
   parent: IDCardStandard
   id: SalvageIDCard
@@ -237,9 +202,6 @@
     layers:
     - state: default
     - state: idshaftminer
-  - type: PresetIdCard
-    job: SalvageSpecialist
-
 - type: entity
   parent: IDCardStandard
   id: QuartermasterIDCard
@@ -251,9 +213,6 @@
         - state: idquartermaster
     - type: Item
       heldPrefix: silver
-    - type: PresetIdCard
-      job: Quartermaster
-
 - type: entity
   parent: IDCardStandard
   id: ResearchIDCard
@@ -263,9 +222,6 @@
     layers:
     - state: default
     - state: idscientist
-  - type: PresetIdCard
-    job: Scientist
-
 - type: entity
   parent: IDCardStandard
   id: ClownIDCard
@@ -275,9 +231,6 @@
     layers:
     - state: default
     - state: idclown
-  - type: PresetIdCard
-    job: Clown
-
 - type: entity
   parent: IDCardStandard
   id: MimeIDCard
@@ -287,9 +240,6 @@
     layers:
     - state: default
     - state: idmime
-  - type: PresetIdCard
-    job: Mime
-
 - type: entity
   parent: IDCardStandard
   id: ChaplainIDCard
@@ -299,9 +249,6 @@
       layers:
         - state: default
         - state: idchaplain
-    - type: PresetIdCard
-      job: Chaplain
-
 - type: entity
   parent: IDCardStandard
   id: JanitorIDCard
@@ -311,9 +258,6 @@
     layers:
     - state: default
     - state: idjanitor
-  - type: PresetIdCard
-    job: Janitor
-
 - type: entity
   parent: IDCardStandard
   id: BartenderIDCard
@@ -323,9 +267,6 @@
     layers:
     - state: default
     - state: idbartender
-  - type: PresetIdCard
-    job: Bartender
-
 - type: entity
   parent: IDCardStandard
   id: PunPunIDCard
@@ -335,9 +276,6 @@
       layers:
         - state: default
         - state: idbartender
-    - type: PresetIdCard
-      job: Bartender
-      name: Pun Pun
     - type: Tag #  Ignore Chameleon tags
       tags:
       - DoorBumpOpener
@@ -351,9 +289,6 @@
     layers:
     - state: default
     - state: idcook
-  - type: PresetIdCard
-    job: Chef
-
 - type: entity
   parent: IDCardStandard
   id: BotanistIDCard
@@ -363,9 +298,6 @@
       layers:
         - state: default
         - state: idbotanist
-    - type: PresetIdCard
-      job: Botanist
-
 - type: entity
   parent: IDCardStandard
   id: LibrarianIDCard
@@ -375,9 +307,6 @@
       layers:
         - state: default
         - state: idcurator
-    - type: PresetIdCard
-      job: Librarian
-
 - type: entity
   parent: IDCardStandard
   id: LawyerIDCard
@@ -387,9 +316,6 @@
       layers:
         - state: default
         - state: idlawyer
-    - type: PresetIdCard
-      job: Lawyer
-
 - type: entity
   parent: IDCardStandard
   id: HoPIDCard
@@ -401,9 +327,6 @@
     - state: idheadofpersonnel
   - type: Item
     heldPrefix: silver
-  - type: PresetIdCard
-    job: HeadOfPersonnel
-
 - type: entity
   parent: IDCardStandard
   id: CEIDCard
@@ -415,9 +338,6 @@
     - state: idchiefengineer
   - type: Item
     heldPrefix: silver
-  - type: PresetIdCard
-    job: ChiefEngineer
-
 - type: entity
   parent: IDCardStandard
   id: CMOIDCard
@@ -429,9 +349,6 @@
     - state: idchiefmedicalofficer
   - type: Item
     heldPrefix: silver
-  - type: PresetIdCard
-    job: ChiefMedicalOfficer
-
 - type: entity
   parent: IDCardStandard
   id: RDIDCard
@@ -443,9 +360,6 @@
     - state: idresearchdirector
   - type: Item
     heldPrefix: silver
-  - type: PresetIdCard
-    job: ResearchDirector
-
 - type: entity
   parent: IDCardStandard
   id: HoSIDCard
@@ -457,9 +371,6 @@
     - state: idheadofsecurity
   - type: Item
     heldPrefix: silver
-  - type: PresetIdCard
-    job: HeadOfSecurity
-
 - type: entity
   parent: IDCardStandard
   id: VisitorIDCard
@@ -472,9 +383,6 @@
   - type: IdCard
     jobTitle: job-title-visitor
     jobIcon: JobIconVisitor
-  - type: PresetIdCard
-    job: Visitor
-
 - type: entity
   parent: IDCardStandard
   id: BrigmedicIDCard
@@ -484,9 +392,6 @@
     layers:
     - state: default
     - state: idbrigmedic
-  - type: PresetIdCard
-    job: Brigmedic
-
 - type: entity
   parent: IDCardStandard
   id: CentcomIDCard
@@ -498,8 +403,6 @@
     - state: idcentcom
   - type: Item
     heldPrefix: blue
-  - type: PresetIdCard
-    job: CentralCommandOfficial
   - type: NanoChatCard # DeltaV
     listNumber: false
 
@@ -512,8 +415,6 @@
     layers:
     - state: gold
     - state: ert_commander
-  - type: PresetIdCard
-    job: ERTLeader
   - type: Item
     heldPrefix: gold
   - type: NanoChatCard # DeltaV
@@ -528,8 +429,6 @@
     layers:
     - state: gold
     - state: ert_chaplain # we have the sprite for the id but dont have chaplain ERT equipment for now.
-  - type: PresetIdCard
-    job: ERTChaplain
   - type: Item
     heldPrefix: blue
   - type: NanoChatCard # DeltaV
@@ -544,8 +443,6 @@
     layers:
     - state: gold
     - state: ert_engineer
-  - type: PresetIdCard
-    job: ERTEngineer
   - type: NanoChatCard # DeltaV
     listNumber: false
 
@@ -558,8 +455,6 @@
     layers:
     - state: gold
     - state: ert_janitor
-  - type: PresetIdCard
-    job: ERTJanitor
   - type: NanoChatCard # DeltaV
     listNumber: false
 
@@ -572,8 +467,6 @@
     layers:
     - state: gold
     - state: ert_medic
-  - type: PresetIdCard
-    job: ERTMedical
   - type: NanoChatCard # DeltaV
     listNumber: false
 
@@ -586,8 +479,6 @@
     layers:
     - state: gold
     - state: ert_security
-  - type: PresetIdCard
-    job: ERTSecurity
   - type: NanoChatCard # DeltaV
     listNumber: false
 
@@ -600,9 +491,6 @@
       layers:
         - state: default
         - state: idmusician
-    - type: PresetIdCard
-      job: Musician
-
 - type: entity
   parent: IDCardStandard
   id: CentcomIDCardDeathsquad
@@ -616,8 +504,6 @@
     - state: centcom
   - type: Item
     heldPrefix: blue
-  - type: PresetIdCard
-    job: DeathSquad
   - type: NanoChatCard # DeltaV
     listNumber: false
   - type: Tag
@@ -681,9 +567,6 @@
     layers:
     - state: orange
     - state: idatmospherictechnician
-  - type: PresetIdCard
-    job: AtmosphericTechnician
-
 - type: entity
   parent: [ IDCardStandard, BaseSyndicateContraband ]
   id: SyndicateIDCard
@@ -805,9 +688,6 @@
     layers:
     - state: default
     - state: idpsychologist
-  - type: PresetIdCard
-    job: Psychologist
-
 - type: entity
   parent: IDCardStandard
   id: XenoborgIDCard
@@ -829,9 +709,6 @@
     layers:
     - state: default
     - state: idreporter
-  - type: PresetIdCard
-    job: Reporter
-
 - type: entity
   parent: IDCardStandard
   id: DetectiveIDCard
@@ -841,9 +718,6 @@
     layers:
     - state: default
     - state: iddetective
-  - type: PresetIdCard
-    job: Detective
-
 - type: entity
   parent: IDCardStandard
   id: PrisonerIDCard
@@ -894,8 +768,6 @@
     - state: centcom
   - type: Item
     heldPrefix: blue
-  - type: PresetIdCard
-    job: CBURN
   - type: NanoChatCard # DeltaV
     listNumber: false
 

@@ -120,8 +120,6 @@
   - type: ShowContrabandDetails
   - type: Inventory
     templateId: aghost
-  - type: Loadout
-    prototypes: [ MobAghostGear ]
   - type: BypassInteractionChecks
   - type: ExplosionResistance
     damageCoefficient: 0

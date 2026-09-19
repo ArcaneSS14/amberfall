@@ -49,10 +49,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-    - type: Loadout
-      prototypes: [ LostFrontierProspectorSuit ]
-      roleLoadout: [ RoleSurvivalStandard ]
-
 - type: entity
   parent: MobHuman
   id: MobHumanRandom

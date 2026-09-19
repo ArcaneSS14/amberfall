@@ -16,14 +16,3 @@
 
 # Science
 
-- type: entity
-  parent: SpawnPointJobBase
-  id: SpawnPointGeneticist
-  name: geneticist spawn point
-  components:
-  - type: SpawnPoint
-    job_id: Geneticist
-  - type: Sprite
-    layers:
-    - state: green
-    - state: geneticist

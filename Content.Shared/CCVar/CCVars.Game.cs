@@ -33,7 +33,7 @@ public sealed partial class CCVars
     ///     Controls the default game preset.
     /// </summary>
     public static readonly CVarDef<string>
-        GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "secret", CVar.ARCHIVE);
+        GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "sandbox", CVar.ARCHIVE);
 
     /// <summary>
     ///     Controls if the game can force a different preset if the current preset's criteria are not met.
@@ -45,7 +45,7 @@ public sealed partial class CCVars
     ///     The preset for the game to fall back to if the selected preset could not be used, and fallback is enabled.
     /// </summary>
     public static readonly CVarDef<string>
-        GameLobbyFallbackPreset = CVarDef.Create("game.fallbackpreset", "Traitor,Extended", CVar.ARCHIVE);
+        GameLobbyFallbackPreset = CVarDef.Create("game.fallbackpreset", "Sandbox", CVar.ARCHIVE);
 
     /// <summary>
     ///     The preset for the game to fall back to if the selected preset could not be used, and fallback is enabled.
@@ -89,7 +89,7 @@ public sealed partial class CCVars
     ///     but everything else stays the same (station name and such).
     /// </summary>
     public static readonly CVarDef<string>
-        PersistenceMap = CVarDef.Create("game.persistencemap", "Empty", CVar.ARCHIVE);
+        PersistenceMap = CVarDef.Create("game.persistencemap", "Dev", CVar.ARCHIVE);
 
     /// <summary>
     ///     Prototype to use for map pool.
@@ -435,5 +435,5 @@ public sealed partial class CCVars
     /// Spaces between entries can be either used or omitted.
     /// </remarks>
     public static readonly CVarDef<string> NewCharacterJobs =
-        CVarDef.Create("game.new_character_jobs", "Passenger", CVar.REPLICATED);
+        CVarDef.Create("game.new_character_jobs", "Wanderer", CVar.REPLICATED);
 }

@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 284.0.0
+  engineVersion: 289.0.2
   forkId: ""
   forkVersion: ""
-  time: 08/24/2026 23:26:51
+  time: 09/19/2026 12:08:46
   entityCount: 15
 maps:
 - 1
@@ -78,6 +78,8 @@ entities:
     - type: ZLevel
       level: 2
       group: dev
+    - type: ChunkContainer
+      chunkEntities: []
   - uid: 2
     components:
     - type: MetaData
@@ -135,6 +137,8 @@ entities:
       chunkCollection:
         version: 3
         nodes: []
+    - type: ChunkContainer
+      chunkEntities: []
 - proto: LevelStairsFancyLeftDown
   entities:
   - uid: 3
@@ -165,13 +169,13 @@ entities:
       parent: 2
       rot: 1.5707963267948966 rad
       pos: -0.5,2.5
-- proto: RusticWallCandleBlueEternal
+- proto: RusticHoboStoveEternal
   entities:
   - uid: 7
     components:
     - type: Transform
       parent: 2
-      pos: 0.5,4.5
+      pos: 1.5,4.5
 - proto: WallCraftedStone
   entities:
   - uid: 5

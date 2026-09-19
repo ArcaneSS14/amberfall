@@ -72,9 +72,6 @@
       mindRoles:
       - MindRoleGhostRoleFamiliar
       job: DeathSquad
-    - type: Loadout
-      prototypes: [ DeathSquadGear ]
-      roleLoadout: [ RoleSurvivalEVA ]
     - type: RandomMetadata
       nameSegments:
         - NamesMilitaryFirstLeader
@@ -106,9 +103,6 @@
       raffle:
         settings: short
       job: ERTLeader
-    - type: Loadout
-      prototypes: [ ERTLeaderGear ]
-      roleLoadout: [  ]
     - type: AutoImplant # Goob
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant, DeathRattleImplantCentcomm ]
     - type: RandomMetadata
@@ -131,11 +125,7 @@
 - type: randomHumanoidSettings
   id: ERTLeaderEVA
   parent: ERTLeader
-  components:
-    - type: Loadout
-      prototypes: [ ERTLeaderGearEVA ]
-      roleLoadout: [  ]
-
+  components: []
 - type: entity
   id: RandomHumanoidSpawnerERTLeaderArmed
   parent: RandomHumanoidSpawnerERTLeaderEVA
@@ -147,13 +137,7 @@
 - type: randomHumanoidSettings
   id: ERTLeaderArmed
   parent: ERTLeaderEVA
-  components:
-    - type: Loadout
-      prototypes: [ ERTLeaderGearArmed ]
-      roleLoadout: [  ]
-
-## ERT Chaplain
-
+  components: []
 - type: entity
   id: RandomHumanoidSpawnerERTChaplain
   parent: RandomHumanoidSpawnerERTLeader
@@ -182,10 +166,6 @@
       nameSegments:
       - NamesMilitaryLast
       nameFormat: name-format-ert-specialist
-    - type: Loadout
-      prototypes: [ ERTChaplainGear, ERTChaplainGearTank ] # Trauma - added ERTChaplainGearTank
-      roleLoadout: [  ]
-
 - type: entity
   id: RandomHumanoidSpawnerERTChaplainEVA
   parent: RandomHumanoidSpawnerERTChaplain
@@ -201,13 +181,7 @@
 - type: randomHumanoidSettings
   id: ERTChaplainEVA
   parent: ERTChaplain
-  components:
-    - type: Loadout
-      prototypes: [ ERTChaplainGearEVA ]
-      roleLoadout: [  ]
-
-## ERT Janitor
-
+  components: []
 - type: entity
   id: RandomHumanoidSpawnerERTJanitor
   parent: RandomHumanoidSpawnerERTLeader
@@ -235,10 +209,6 @@
       nameSegments:
       - NamesMilitaryLast
       nameFormat: name-format-ert-specialist
-    - type: Loadout
-      prototypes: [ ERTJanitorGear ]
-      roleLoadout: [  ]
-
 - type: entity
   id: RandomHumanoidSpawnerERTJanitorEVA
   parent: RandomHumanoidSpawnerERTJanitor
@@ -253,13 +223,7 @@
 - type: randomHumanoidSettings
   id: ERTJanitorEVA
   parent: ERTJanitor
-  components:
-    - type: Loadout
-      prototypes: [ ERTJanitorGearEVA ]
-      roleLoadout: [  ]
-
-## ERT Engineer
-
+  components: []
 - type: entity
   id: RandomHumanoidSpawnerERTEngineer
   parent: RandomHumanoidSpawnerERTLeader
@@ -287,10 +251,6 @@
       nameSegments:
       - NamesMilitaryLast
       nameFormat: name-format-ert-specialist
-    - type: Loadout
-      prototypes: [ ERTEngineerGear ]
-      roleLoadout: [  ]
-
 - type: entity
   id: RandomHumanoidSpawnerERTEngineerEVA
   parent: RandomHumanoidSpawnerERTEngineer
@@ -305,11 +265,7 @@
 - type: randomHumanoidSettings
   id: ERTEngineerEVA
   parent: ERTEngineer
-  components:
-    - type: Loadout
-      prototypes: [ ERTEngineerGearEVA ]
-      roleLoadout: [  ]
-
+  components: []
 - type: entity
   parent: RandomHumanoidSpawnerERTEngineerEVA
   id: RandomHumanoidSpawnerERTEngineerArmed
@@ -326,12 +282,6 @@
     nameSegments:
     - NamesMilitaryLast
     nameFormat: name-format-ert-pointman
-  - type: Loadout
-    prototypes: [ ERTEngineerGearArmed ]
-    roleLoadout: [  ]
-
-## ERT Security
-
 - type: entity
   id: RandomHumanoidSpawnerERTSecurity
   parent: RandomHumanoidSpawnerERTLeader
@@ -359,9 +309,6 @@
       nameSegments:
       - NamesMilitaryLast
       nameFormat: name-format-ert-officer
-    - type: Loadout
-      prototypes: [ ERTSecurityGear ]
-      roleLoadout: [  ]
     - type: AutoImplant # Goob
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
@@ -388,9 +335,6 @@
       raffle:
         settings: short
       job: ERTSecurity
-    - type: Loadout
-      prototypes: [ ERTSecurityGearEVA ]
-      roleLoadout: [  ]
     - type: AutoImplant # Goob
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
@@ -411,10 +355,6 @@
     nameSegments:
     - NamesMilitaryLast
     nameFormat: name-format-ert-rifle
-  - type: Loadout
-    prototypes: [ ERTSecurityGearArmedRifle ]
-    roleLoadout: [  ]
-
 - type: entity
   parent: RandomHumanoidSpawnerERTSecurityEVA
   id: RandomHumanoidSpawnerERTSecurityArmedGrenade
@@ -432,10 +372,6 @@
     nameSegments:
     - NamesMilitaryLast
     nameFormat: name-format-ert-grenade
-  - type: Loadout
-    prototypes: [ ERTSecurityGearArmedGrenade ]
-    roleLoadout: [  ]
-
 - type: entity
   parent: RandomHumanoidSpawnerERTSecurityEVA
   id: RandomHumanoidSpawnerERTSecurityArmedVanguard
@@ -453,10 +389,6 @@
     nameSegments:
     - NamesMilitaryLast
     nameFormat: name-format-ert-vanguard
-  - type: Loadout
-    prototypes: [ ERTSecurityGearArmedVanguard ]
-    roleLoadout: [  ]
-
 - type: entity
   parent: RandomHumanoidSpawnerERTSecurityEVA
   id: RandomHumanoidSpawnerERTSecurityArmedShotgun
@@ -474,12 +406,6 @@
     nameSegments:
     - NamesMilitaryLast
     nameFormat: name-format-ert-pointman
-  - type: Loadout
-    prototypes: [ ERTSecurityGearArmedShotgun ]
-    roleLoadout: [  ]
-
-## ERT Medic
-
 - type: entity
   id: RandomHumanoidSpawnerERTMedical
   parent: RandomHumanoidSpawnerERTLeader
@@ -507,9 +433,6 @@
       nameSegments:
       - NamesMilitaryLast
       nameFormat: name-format-ert-doctor
-    - type: Loadout
-      prototypes: [ ERTMedicalGear ]
-      roleLoadout: [  ]
     - type: AutoImplant # Goob
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
@@ -528,9 +451,6 @@
   id: ERTMedicalEVA
   parent: ERTMedical
   components:
-    - type: Loadout
-      prototypes: [ ERTMedicalGearEVA ]
-      roleLoadout: [  ]
     - type: AutoImplant # Goob
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
@@ -550,12 +470,6 @@
     nameSegments:
     - NamesMilitaryLast
     nameFormat: name-format-ert-corpsman
-  - type: Loadout
-    prototypes: [ ERTMedicalGearArmed ]
-    roleLoadout: [  ]
-
-## CBURN
-
 - type: entity
   id: RandomHumanoidSpawnerCBURNUnit
   name: CBURN Agent
@@ -573,9 +487,6 @@
   components:
     - type: AutoImplant
       implants: [ FreedomImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ] # Goobstation
-    - type: Loadout
-      prototypes: [CBURNGear]
-      roleLoadout: [ RoleSurvivalEVA ]
     - type: GhostRole
       name: ghost-role-information-cburn-agent-name
       description: ghost-role-information-cburn-agent-description
@@ -614,12 +525,6 @@
       raffle:
         settings: default
       job: CentralCommandOfficial
-    - type: Loadout
-      prototypes: [ CentcommGear ]
-      roleLoadout: [ RoleSurvivalStandard ]
-
-## Syndicate
-
 - type: entity
   id: RandomHumanoidSpawnerSyndicateAgent
   name: syndicate agent
@@ -638,10 +543,6 @@
   components:
     - type: RandomHumanoidAppearance
       randomizeName: false
-    - type: Loadout
-      prototypes: [SyndicateOperativeGearExtremelyBasic]
-      roleLoadout: [ RoleSurvivalSyndicate ]
-
 - type: entity
   id: RandomHumanoidSpawnerNukeOp
   name: Nuclear Operative

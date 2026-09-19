@@ -6,9 +6,6 @@
   id: MobHumanSecurityOfficerSuit
   name: Security Officer Suit
   components:
-  - type: Loadout
-    prototypes: [ SecurityOfficerSuit ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -21,9 +18,6 @@
   id: MobHumanSecurityOfficerModSuit
   name: Security Officer ModSuit
   components:
-  - type: Loadout
-    prototypes: [ SecurityOfficerModSuit ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -36,9 +30,6 @@
   id: MobHumanHosModSuit
   name: Head Of Security ModSuit
   components:
-  - type: Loadout
-    prototypes: [ SecurityHoSModSuit ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -51,9 +42,6 @@
   id: MobHumanHoSSuit
   name: Head Of Security Suit
   components:
-  - type: Loadout
-    prototypes: [ SecurityHoSSuit ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -66,9 +54,6 @@
   id: MobHumanWardenSuit
   name: Warden Suit
   components:
-  - type: Loadout
-    prototypes: [ SecurityWardenSuit ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -81,9 +66,6 @@
   id: MobHumanBrigmedicSuit
   name: Brigmedic Suit
   components:
-  - type: Loadout
-    prototypes: [ SecurityBrigmedicSuit ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -96,9 +78,6 @@
   id: MobHumanSecurityOfficerBulletproofArmorHelmet
   name: Security Officer Bulletproof Armor
   components:
-  - type: Loadout
-    prototypes: [ SecurityOfficerBulletproofArmorHelmet ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -111,9 +90,6 @@
   id: MobHumanSecurityOfficerRiotArmorHelmet
   name: Security Officer Riot Armor
   components:
-  - type: Loadout
-    prototypes: [ SecurityOfficerRiotArmorHelmet ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -126,9 +102,6 @@
   id: MobHumanSecurityOfficerReflectiveArmorHelmet
   name: Security Officer Reflective Armor
   components:
-  - type: Loadout
-    prototypes: [ SecurityOfficerReflectiveArmorHelmet ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -141,9 +114,6 @@
   id: MobHumanSecurityOfficerBasicArmorHelmet
   name: Security Officer Basic Armor
   components:
-  - type: Loadout
-    prototypes: [ SecurityOfficerGearDebug ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -156,9 +126,6 @@
   id: MobHumanHos
   name: Head Of Security
   components:
-  - type: Loadout
-    prototypes: [ HoSGearDebug ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -171,9 +138,6 @@
   id: MobHumanBrigmedic
   name: Brigmedic
   components:
-  - type: Loadout
-    prototypes: [ BrigmedicGearDebug ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -186,9 +150,6 @@
   id: MobHumanWarden
   name: Warden
   components:
-  - type: Loadout
-    prototypes: [ WardenGearDebug ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -202,9 +163,6 @@
   name: Security Base
   suffix: DEBUG
   components:
-  - type: Loadout
-    prototypes: [ SecurityOfficerGearDebug ]
-    roleLoadout: [ RoleSurvivalSecurity ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst

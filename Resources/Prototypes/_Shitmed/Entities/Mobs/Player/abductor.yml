@@ -47,10 +47,6 @@
   - type: Sanitized
   - type: SurgerySpeedModifier
     speedModifier: 1.5
-  - type: Loadout
-    prototypes:
-      - LoneAbductorGear
-
 - type: entity
   parent: MobAbductorAntag
   id: MobAbductorScientist
@@ -66,10 +62,6 @@
   - type: Sanitized
   - type: SurgerySpeedModifier
     speedModifier: 1.5
-  - type: Loadout
-    prototypes:
-      - AbductorScientistGear
-
 - type: entity
   parent: MobAbductorAntag
   id: MobAbductorAgent
@@ -91,67 +83,6 @@
       - FootstepSound
       - DoorBumpOpener
   - type: AbductorScientist # Should be removed when we have proper teleportation system
-  - type: Loadout
-    prototypes:
-      - AbductorAgentGear
-
-# Gearsets
-
-- type: startingGear
-  id: LoneAbductorGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitAbductor
-    ears: ClothingHeadsetAltAbductor
-    shoes: ClothingShoesBootsCombat
-    gloves: ClothingHandsGlovesCombat
-    head: ClothingHeadHelmetAbductor
-    outerClothing: ClothingOuterCoatAbductor
-    back: ClothingBackpackAbductor
-    pocket1: AbductorGizmo
-    pocket2: AbductorTaskTablet
-    suitstorage: Wonderprod
-    id: AgentIDCard
-  storage:
-    back:
-    - WeaponAlien
-
-- type: startingGear
-  id: AbductorScientistGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitAbductor
-    ears: ClothingHeadsetAltAbductor
-    shoes: ClothingShoesBootsCombat
-    gloves: ClothingHandsGlovesCombat
-    head: ClothingHeadMirror
-    outerClothing: ClothingOuterCoatAbductor
-    back: ClothingBackpackDuffelAbductor
-    pocket1: Silencer
-    pocket2: AbductorTaskTablet
-    suitstorage: WeaponDecloner
-    id: AgentIDCard
-  storage:
-    back:
-    - RadioJammer
-
-- type: startingGear
-  id: AbductorAgentGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitAbductor
-    ears: ClothingHeadsetAltAbductor
-    shoes: ClothingShoesBootsCombat
-    gloves: ClothingHandsGlovesCombat
-    head: ClothingHeadHelmetAbductor
-    outerClothing: ClothingOuterArmorAbductor
-    back: ClothingBackpackAbductor
-    pocket1: AbductorGizmo
-    pocket2: WeaponAlien
-    suitstorage: Wonderprod
-    id: AgentIDCard
-  inhand:
-    - ClothingBackpackChameleonFillAgent
-
-# Spawners
-
 - type: entity
   parent: MarkerBase
   id: SpawnPointAbductor

@@ -5,9 +5,6 @@
   id: MobContractor
   name: Syndicate Contractor
   components:
-  - type: Loadout
-    prototypes: [ ContractorGear ]
-    roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
     nameSegments:
     - NamesContractorPrefix
@@ -50,17 +47,3 @@
       - sprite: _Goobstation/Objects/Weapons/Melee/contractor_baton.rsi
         state: icon
 
-- type: startingGear
-  id: ContractorGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitOperative
-    eyes: ClothingEyesHudSyndicate
-    mask: ClothingMaskNeckGaiter
-    shoes: ClothingShoesBootsCombatFilled
-    gloves: ClothingHandsGlovesCombat
-    id: SyndiPDANukie
-    belt: ClothingBeltSecurityWebbingContractorFilled
-    ears: ClothingHeadsetAltSyndicate
-    back: ClothingModsuitContractor
-    outerClothing: ClothingOuterArmorBasicSlim
-    pocket1: WeaponDisablerSyndicate

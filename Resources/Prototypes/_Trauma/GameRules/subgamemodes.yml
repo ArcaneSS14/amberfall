@@ -29,17 +29,6 @@
       playerRatio: 20
 
 - type: entity
-  parent: [BaseRoundstartAntagRule, DuoAbductorSpawn ]
-  id: SubDuoAbductor
-  components:
-  - type: AntagSelection
-    antags:
-    - !type:FixedAntagCount
-      proto: AbductorScientist
-    - !type:FixedAntagCount
-      proto: AbductorAgent
-
-- type: entity
   parent: Changeling
   id: SubChangeling
   components:

@@ -1577,8 +1577,6 @@
   parent: MobKangaroo
   id: MobBoxingKangaroo
   components:
-  - type: Loadout
-    prototypes: [ BoxingKangarooGear ]
   - type: NpcFactionMember
     factions:
     - SimpleHostile

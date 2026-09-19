@@ -73,8 +73,6 @@
     - state: idcentcom
   - type: Item
     heldPrefix:
-  - type: PresetIdCard
-    job: NanotrasenRepresentative
   - type: Access
     tags:
     - CentralCommand
@@ -148,11 +146,6 @@
     sprite: Objects/Misc/id_cards.rsi
     layers:
     - state: ert_security
-  - type: PresetIdCard
-    job: NavyCaptain
-
-# Navy Officer
-
 - type: entity
   parent: CentcomIDCardNavyCaptain
   id: CentcomIDCardNavyOfficer
@@ -162,11 +155,6 @@
     sprite: Objects/Misc/id_cards.rsi
     layers:
     - state: ert_security
-  - type: PresetIdCard
-    job: NavyOfficer
-
-# Inspector
-
 - type: entity
   parent: CentcomIDCardNavyCaptain
   id: CentcomIDCardInspector
@@ -176,11 +164,6 @@
     sprite: Objects/Misc/id_cards.rsi
     layers:
     - state: ert_security
-  - type: PresetIdCard
-    job: Inspector
-
-# Inspector
-
 - type: entity
   parent: CentcomIDCardNavyCaptain
   id: CentcomIDCardDiplomat
@@ -193,11 +176,6 @@
   - type: IdCard
     jobTitle: job-name-diplomat
     jobIcon: JobIconNanotrasen
-  - type: PresetIdCard
-    job: Diplomat
-
-# Halflife Stuff
-
 - type: entity
   parent: IDCardStandard
   id: GmanIDCard
@@ -211,11 +189,6 @@
     - state: idchrono
   - type: Item
     heldPrefix: blue
-  - type: PresetIdCard
-    job: GovernmentMan
-
-# Syndicate!
-
 - type: entity
   parent: SyndicateIDCard
   id: HighCommandIDCard
@@ -226,8 +199,6 @@
     sprite: _Goobstation/Objects/Misc/id_cards.rsi
     layers:
     - state: idhighcommand
-  - type: PresetIdCard
-    job: SyndicateHighCommander
   - type: Emag
     emagType: Access
   - type: AntagCard
@@ -243,9 +214,6 @@
     layers:
     - state: default
     - state: idsecurityclown
-  - type: PresetIdCard
-    job: SecurityClown
-
 - type: entity
   parent: IDCardStandard
   id: CommandMaidIDCard
@@ -255,9 +223,6 @@
     layers:
     - state: default
     - state: idcommandmaid
-  - type: PresetIdCard
-    job: CommandMaid
-
 - type: entity
   parent: IDCardStandard
   id: PartyMakerIDCard
@@ -267,11 +232,6 @@
     layers:
     - state: default
     - state: idpartymaker
-  - type: PresetIdCard
-    job: PartyMaker
-
-# Crew
-
 - type: entity
   parent: IDCardStandard
   id: RoboticistIDCard
@@ -281,9 +241,6 @@
     layers:
     - state: default
     - state: idroboticist
-  - type: PresetIdCard
-    job: Roboticist
-
 - type: entity
   parent: IDCardStandard
   id: RadioHostIDCard
@@ -293,9 +250,6 @@
     layers:
     - state: default
     - state: idradiohost
-  - type: PresetIdCard
-    job: RadioHost
-
 - type: entity
   parent: IDCardStandard
   id: VirologistIDCard
@@ -305,5 +259,3 @@
     layers:
     - state: default
     - state: idvirologist
-  - type: PresetIdCard
-    job: Virologist

@@ -60,28 +60,6 @@
       playerRatio: 15
 
 - type: entity
-  parent: BaseNukeopsRule
-  id: Calmops # For Dual Antag Gamemodes
-  components:
-  - type: GameRule
-    minPlayers: 30
-  - type: LoadMapRule
-    mapPath: /Maps/_Trauma/Nonstations/nukieplanet.yml
-  - type: AntagSelection
-    selectionTime: PrePlayerSpawn
-    antags:
-    - !type:FixedAntagCount
-      proto: NukeopsCommander
-    - !type:FixedAntagCount
-      proto: NukeopsMedic
-    - !type:LinearAntagCount
-      proto: NukeopsOperative
-      range:
-        min: 1
-        max: 8
-      playerRatio: 20
-
-- type: entity
   parent: Revolutionary
   id: CalmRevs # For Dual Antag Gamemodes
   components:
@@ -112,34 +90,6 @@
       proto: Blob
   - type: DynamicRuleCost
     cost: 80
-
-- type: entity
-  parent: [ BaseNukeopsRule, BaseRoundstartAntagRule ]
-  id: Honkops
-  components:
-  - type: GameRule
-    minPlayers: 40 # Trauma, was 20
-  - type: RandomMetadata # this generates the random operation name cuz it's cool.
-    nameSegments:
-    - OperationPrefixHonkops
-    - OperationSuffixHonkops
-    nameFormat: name-format-standard
-  - type: NukeopsRule
-    localePrefix: "honkops-"
-  - type: LoadMapRule
-    mapPath: /Maps/_Trauma/Nonstations/nukieplanet-honkops.yml
-  - type: AntagSelection
-    antags:
-    - !type:FixedAntagCount
-      proto: HonkopsCommander
-    - !type:FixedAntagCount
-      proto: HonkopsMedic
-    - !type:LinearAntagCount
-      proto: HonkopsOperative
-      range:
-        min: 1
-        max: 5
-      playerRatio: 16
 
 - type: entity
   parent: [ BaseGameRule, BaseRoundstartAntagRule ]

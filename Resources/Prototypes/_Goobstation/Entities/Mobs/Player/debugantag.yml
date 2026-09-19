@@ -6,9 +6,6 @@
   name: Wizard
   suffix: DEBUG
   components:
-  - type: Loadout
-    prototypes: [ WizardGear ]
-    roleLoadout: [ RoleSurvivalExtended ]
   - type: RandomMetadata
     nameSegments:
     - WizardFirst
@@ -20,19 +17,13 @@
   id: MobHumanWizardDebugSuit
   name: Wizard Suit
   suffix: DEBUG
-  components:
-  - type: Loadout
-    prototypes: [ WizardHardsuitGearDebug ]
-
+  components: []
 - type: entity
   parent: MobHuman
   id: MobHumanChangelingArmor
   name: Urist McChangeling
   suffix: DEBUG
   components:
-  - type: Loadout
-    prototypes: [ ChangelingArmor ]
-    roleLoadout: [ RoleSurvivalExtended ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -48,9 +39,6 @@
   name: Urist Ninja
   suffix: DEBUG
   components:
-  - type: Loadout
-    prototypes: [ SpaceNinjaGear ]
-    roleLoadout: [ RoleSurvivalExtended ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -66,9 +54,6 @@
   name: Urist Heretic
   suffix: DEBUG
   components:
-  - type: Loadout
-    prototypes: [ HereticArmor ]
-    roleLoadout: [ RoleSurvivalExtended ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -81,9 +66,6 @@
   name: Urist McCaptain
   suffix: DEBUG
   components:
-  - type: Loadout
-    prototypes: [ CaptainHardsuit ]
-    roleLoadout: [ RoleSurvivalExtended ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirst
@@ -95,17 +77,10 @@
   id: MobHumanCaptainModsuit
   name: Urist McCaptain Mogsuit
   suffix: DEBUG
-  components:
-  - type: Loadout
-    prototypes: [ CaptainModsuit ]
-    roleLoadout: [ RoleSurvivalExtended ]
-
+  components: []
 - type: entity
   parent: [ MobHuman, MobHumanCaptainHardsuit ]
   id: MobHumanCaptainDebug
   name: Urist McCaptain
   suffix: DEBUG
-  components:
-  - type: Loadout
-    prototypes: [ VisitorCaptain ]
-    roleLoadout: [ RoleSurvivalExtended ]
+  components: []

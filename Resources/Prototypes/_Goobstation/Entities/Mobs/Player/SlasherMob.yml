@@ -7,8 +7,6 @@
   description: A terrifying slasher with supernatural abilities.
   suffix: Debug
   components:
-  - type: Loadout
-    prototypes: [ SlasherGear ]
   - type: Slasher
   - type: SlasherSummonMachete
   - type: SlasherStaggerArea

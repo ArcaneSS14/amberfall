@@ -14,25 +14,6 @@
     ransomPrototype: BikeHornRansom
 
 - type: entity
-  parent: BaseAntagGhostRoleRule
-  id: PiratesSpawn
-  components:
-  - type: GameRule
-    minPlayers: 10
-  - type: ActivePirateRule
-  - type: RuleGrids
-  - type: LoadMapRule
-    mapPath: /Maps/_Goobstation/Shuttles/pirates_irs.yml
-  - type: AntagLoadProfileRule
-    speciesOverride: Human
-    alwaysUseSpeciesOverride: true
-  - type: AntagSelection
-    antags:
-    - !type:FixedAntagCount
-      proto: PirateCaptain
-      count: 5
-
-- type: entity
   parent: BikeHorn
   id: BikeHornRansom
   categories: [ HideSpawnMenu ]

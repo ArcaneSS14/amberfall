@@ -17,7 +17,7 @@ map = "Dev"
 role_timers = false
 admin_job_tracking = true
 role_loadout_timers = false
-new_character_jobs = "Passenger, Captain"
+new_character_jobs = "Wanderer"
 
 [events]
 enabled = false

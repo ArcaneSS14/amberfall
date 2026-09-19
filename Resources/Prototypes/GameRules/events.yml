@@ -93,13 +93,6 @@
     weight: 3
     duration: 1
   - type: BureaucraticErrorRule
-    ignoredJobs:
-    - StationAi
-    - ResearchAssistant
-    - MedicalIntern
-    - SecurityCadet
-    - TechnicalAssistant
-
 - type: entity
   id: ClericalError
   parent: BaseGameRule
@@ -219,27 +212,6 @@
 #    minimumPlayers: 20
 #  - type: RandomSpawnRule
 #    prototype: MobRevenant      goobstation end
-
-- type: entity
-  parent: [ BaseAntagGhostRoleRule, BaseWizardRule ]
-  id: WizardSpawn
-  components:
-  - type: StationEvent
-    weight: 5.5 # Trauma - was 1
-    duration: null
-    earliestStart: 30
-    reoccurrenceDelay: 60
-    minimumPlayers: 30
-
-# disabled until event is rewritten to be more interesting
-#- type: entity
-#  id: FalseAlarm
-#  parent: BaseGameRule
-#  components:
-#  - type: StationEvent
-#    weight: 15
-#    duration: 1
-#  - type: FalseAlarmRule
 
 - type: entity
   id: GasLeak
@@ -390,33 +362,6 @@
         max: 3
   - type: DynamicRuleCost
     cost: 200
-
-- type: entity
-  parent: [ BaseAntagGhostRoleRule, BaseNukeopsRule ]
-  id: LoneOpsSpawn
-  components:
-  # <Trauma>
-  - type: GhostroleAlert
-  - type: AntagLoadProfileRule
-    speciesOverride: Human
-    alwaysUseSpeciesOverride: true
-  # </Trauma>
-  - type: StationEvent
-    earliestStart: 50 # trauma, was 35
-    weight: 1 # Trauma - was 5.5
-    minimumPlayers: 50 # Goobstation - was 20
-    duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end screen (not always "Neutral outcome!") and... ending the game if the station is nuked.
-  - type: RuleGrids
-  - type: LoadMapRule
-    gridPath: /Maps/Shuttles/ShuttleEvent/striker.yml
-  - type: NukeopsRule
-    roundEndBehavior: Nothing
-  - type: AntagSelection
-    antags:
-    - !type:FixedAntagCount
-      proto: LoneOp
-  - type: DynamicRuleCost
-    cost: 75
 
 - type: entity
   parent: BaseTraitorRule

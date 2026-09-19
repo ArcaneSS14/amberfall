@@ -151,6 +151,62 @@ public sealed class ZLevelMapTransitionTest : GameTest
     }
 
     [Test]
+    public async Task AutomaticallyLinksLevelsAfterDeferredMapInitialization()
+    {
+        var server = Pair.Server;
+        var entityManager = server.EntMan;
+        var mapSystem = entityManager.System<MapSystem>();
+
+        MapId upperMapId = default;
+        MapId lowerMapId = default;
+        EntityUid upperMap = default;
+        EntityUid lowerMap = default;
+
+        await server.WaitAssertion(() =>
+        {
+            upperMap = mapSystem.CreateMap(out upperMapId, runMapInit: false);
+            lowerMap = mapSystem.CreateMap(out lowerMapId, runMapInit: false);
+
+            entityManager.AddComponent(upperMap, new ZLevelComponent
+            {
+                Group = "deferred-map-init",
+                Level = 1,
+            });
+            entityManager.AddComponent(lowerMap, new ZLevelComponent
+            {
+                Group = "deferred-map-init",
+                Level = 0,
+            });
+        });
+
+        await server.WaitRunTicks(1);
+
+        await server.WaitAssertion(() =>
+        {
+            Assert.That(entityManager.HasComponent<ZLevelLinkComponent>(upperMap), Is.False,
+                "Preloaded maps must not be linked before map initialization.");
+
+            mapSystem.InitializeMap(upperMapId);
+            mapSystem.InitializeMap(lowerMapId);
+        });
+
+        await server.WaitRunTicks(1);
+
+        await server.WaitAssertion(() =>
+        {
+            Assert.That(
+                entityManager.GetComponent<ZLevelProjectionComponent>(upperMap).SourceMap,
+                Is.EqualTo(lowerMap));
+        });
+
+        await server.WaitPost(() =>
+        {
+            mapSystem.DeleteMap(upperMapId);
+            mapSystem.DeleteMap(lowerMapId);
+        });
+    }
+
+    [Test]
     public async Task TransitionsPhysicalEntitiesByMapCoordinates()
     {
         var server = Pair.Server;

@@ -12,7 +12,7 @@ namespace Content.IntegrationTests;
 public static partial class PoolManager
 {
     public static readonly ContentPoolManager Instance = new();
-    public const string TestMap = "Empty";
+    public const string TestMap = "Dev";
 
     /// <summary>
     /// Designated load bearing station. Sometimes you need a station for a test.

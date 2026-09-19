@@ -34,8 +34,8 @@
   components:
   - type: Contraband
     severity: Syndicate
-    allowedDepartments: [  ]
-    allowedJobs: [  ]
+
+
   - type: ScannableForPoints # Goobstation - NTR update
     points: 5
 
@@ -62,8 +62,8 @@
   components:
   - type: Contraband
     severity: Restricted
-    allowedDepartments: [  ]
-    allowedJobs: [  ]
+
+
 
 # one department restricted contraband
 - type: entity
@@ -72,7 +72,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ CentralCommand ]
+
 
 - type: entity
   id: BaseCommandContraband
@@ -80,7 +80,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Command ]
+
 
 - type: entity
   id: BaseSecurityContraband
@@ -88,7 +88,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Security ]
+
 
 - type: entity
   id: BaseEngineeringContraband
@@ -96,7 +96,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Engineering ]
+
 
 - type: entity
   id: BaseScienceContraband
@@ -104,7 +104,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Science ]
+
 
 - type: entity
   id: BaseMedicalContraband
@@ -112,7 +112,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Medical ]
+
 
 - type: entity
   id: BaseCivilianContraband
@@ -120,7 +120,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Civilian ]
+
 
 - type: entity
   id: BaseCargoContraband
@@ -128,7 +128,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Cargo ]
+
 
 # multiple departments restricted contraband
 - type: entity
@@ -137,7 +137,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ CentralCommand, Command ]
+
 
 - type: entity
   id: BaseSecurityCommandContraband
@@ -145,7 +145,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Security, Command ]
+
 
 - type: entity
   id: BaseSecurityScienceCommandContraband
@@ -153,7 +153,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Security, Science, Command ]
+
 
 - type: entity
   id: BaseSecurityEngineeringContraband
@@ -161,7 +161,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Security, Engineering ]
+
 
 - type: entity
   id: BaseSiliconScienceContraband
@@ -169,7 +169,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Science, Silicon ]
+
 
 - type: entity
   id: BaseSecurityCargoContraband
@@ -177,7 +177,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Security, Cargo ]
+
 
 - type: entity
   id: BaseMedicalScienceContraband
@@ -185,7 +185,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Medical, Science ]
+
 
 # contraband restricted by job by some degree
 - type: entity
@@ -194,8 +194,8 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Security ]
-    allowedJobs: [ Bartender ]
+
+
 
 - type: entity
   id: BaseSecurityLawyerContraband
@@ -203,8 +203,8 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Security ]
-    allowedJobs: [ Lawyer ]
+
+
 
 - type: entity
   id: BaseJanitorContraband
@@ -212,7 +212,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedJobs: [ Janitor ]
+
 
 # for ~objective items
 - type: entity
@@ -221,8 +221,8 @@
   components:
   - type: Contraband
     severity: GrandTheft
-    allowedDepartments: [ Command ]
-    allowedJobs: [ Warden ] # Goob - energy shotgun
+
+ # Goob - energy shotgun
 
 - type: entity
   id: BaseHonkraband
@@ -230,4 +230,4 @@
   components:
   - type: Contraband
     severity: Honkraband
-    allowedJobs: [ Clown ]
+

@@ -48,9 +48,6 @@
     rules: ghost-role-information-navy-officer-rules
     raffle:
       settings: short
-  - type: Loadout
-    prototypes: [ NavyOfficerGear ]
-    roleLoadout: [ RoleSurvivalEVA ]
   - type: RandomMetadata
     nameSegments:
     - NamesMilitaryFirstLeader
@@ -88,9 +85,6 @@
     rules: ghost-role-information-navy-captain-rules
     raffle:
       settings: short
-  - type: Loadout
-    prototypes: [ NavyCaptainGear ]
-    roleLoadout: [ RoleSurvivalEVA ]
   - type: RandomMetadata
     nameSegments:
     - NamesMilitaryFirstHighRank
@@ -128,9 +122,6 @@
     rules: ghost-role-information-navy-officer-rules
     raffle:
       settings: short
-  - type: Loadout
-    prototypes: [  NavyOfficerUndercoverGear ]
-    roleLoadout: [ RoleSurvivalEVA ]
   - type: RandomMetadata
     nameSegments:
     - NamesMilitaryFirstLeader
@@ -168,9 +159,6 @@
     rules: ghost-role-information-navy-officer-rules
     raffle:
       settings: short
-  - type: Loadout
-    prototypes: [ DiplomatGear ]
-    roleLoadout: [ RoleSurvivalEVA ]
   - type: RandomMetadata
     nameSegments:
     - NamesMilitaryFirstPolitical
@@ -208,9 +196,6 @@
     rules: ghost-role-information-navy-officer-rules
     raffle:
       settings: short
-  - type: Loadout
-    prototypes: [ InspectorGear ]
-    roleLoadout: [ RoleSurvivalEVA ]
   - type: RandomMetadata
     nameSegments:
     - NamesFirstInspector
@@ -237,8 +222,6 @@
   parent: EventHumanoidMindShielded
   id: ChronoLegionnaire
   components:
-  - type: Loadout
-    prototypes: [ ChronoLegionnaireGear ]
   - type: RandomMetadata
     nameSegments:
     - NamesMilitaryFirstLeader
@@ -275,8 +258,6 @@
     rules: ghost-role-information-Hecu-rules
     raffle:
       settings: short
-  - type: Loadout
-    prototypes: [HECUOperativeGear]
   - type: RandomMetadata
     nameSegments:
     - NamesMilitaryFirstLeader
@@ -310,8 +291,6 @@
     rules: ghost-role-information-Gman-rules
     raffle:
       settings: short
-  - type: Loadout
-    prototypes: [GovernmentManGear]
   - type: RandomMetadata
     nameSegments: [ NamesGman ]
   - type: Tag
@@ -361,8 +340,6 @@
     rules: ghost-role-information-conquest-rules
     raffle:
       settings: short
-  - type: Loadout
-    prototypes: [ConquestGear]
   - type: RandomMetadata
     nameSegments: [ NamesConquest ]
   - type: Puller

@@ -9,9 +9,6 @@
     layers:
     - state: default
     - state: idgeneticist
-  - type: PresetIdCard
-    job: Geneticist
-
 - type: entity
   parent: IDCardStandard
   id: PhoneMerchantIDCard
@@ -22,9 +19,6 @@
     - state: default
     - state: idphonemerchant
       sprite: _Trauma/Objects/Misc/id_cards.rsi
-  - type: PresetIdCard
-    job: PhoneMerchant
-
 - type: entity
   parent: IDCardStandard
   id: DClassIDCard

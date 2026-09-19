@@ -275,44 +275,6 @@
       proto: HereticSkills
 
 - type: entity
-  parent: BaseAntagGhostRoleRule
-  id: VoxRaidersMidround
-  components:
-  - type: StationEvent
-    earliestStart: 35
-    weight: 0.3
-    minimumPlayers: 50
-    duration: 1
-  - type: AntagSpawner
-    prototype: MobVoxRaider
-  - type: RuleGrids
-  - type: LoadMapRule
-    gridPath: /Maps/_Trauma/Shuttles/VoxRaidersShuttleNew.yml
-  - type: AntagSelection
-    agentName: ghost-role-information-vox-raider-name
-    antags:
-    - !type:LinearAntagCount
-      proto: VoxRaider
-      range:
-        min: 2
-        max: 3
-  - type: AntagObjectives
-    objectives:
-    - EscapeThiefShuttleObjective
-  - type: AntagRandomObjectives
-    sets:
-    - groups: ThiefBigObjectiveGroups
-      prob: 0.7
-      maxPicks: 2
-    - groups: ThiefObjectiveGroups
-      maxPicks: 15
-    maxDifficulty: 4
-  - type: AntagPlayerEffects
-    effects:
-    - !type:NestedEffect
-      proto: TraitorSkills
-
-- type: entity
   id: ClownGoblinMigration
   parent: BaseGameRule
   components:

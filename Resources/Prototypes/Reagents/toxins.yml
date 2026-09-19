@@ -28,8 +28,6 @@
   flavor: bitter
   color: "#e2a38c"
   physicalDesc: reagent-physical-desc-exotic-smelling
-  allowedDepartments:
-  - Medical
   plantMetabolism:
   - !type:PlantAdjustToxins
     amount: 10
@@ -56,8 +54,6 @@
   flavor: bitter
   color: "#000067"
   physicalDesc: reagent-physical-desc-nondescript
-  allowedDepartments:
-  - Medical
   metabolisms:
     Bloodstream:
       effects:
@@ -248,8 +244,6 @@
   group: Toxins
   desc: reagent-desc-sulfuric-acid
   physicalDesc: reagent-physical-desc-oily
-  allowedJobs:
-  - Chemist
   flavor: acid
   color: "#BF8C00"
   recognizable: true
@@ -297,9 +291,6 @@
   group: Toxins
   desc: reagent-desc-unstable-mutagen
   physicalDesc: reagent-physical-desc-glowing
-  allowedJobs:
-  - Chemist
-  - Botanist
   flavor: bitter
   color: "#00ff5f"
   boilingPoint: 340282300 # Ethidium bromide, which doesn't boil.
@@ -601,9 +592,6 @@
   group: Narcotics
   desc: reagent-desc-pax
   physicalDesc: reagent-physical-desc-soothing
-  allowedDepartments:
-  - Security
-  - Medical
   color: "#AAAAAA"
   metabolisms:
     Bloodstream:
@@ -737,8 +725,6 @@
   group: Toxins
   desc: reagent-desc-lipolicide
   physicalDesc: reagent-physical-desc-strong-smelling
-  allowedDepartments:
-  - Medical
   flavor: mothballs #why does weightloss juice taste like mothballs
   color: "#F0FFF0"
   metabolisms:

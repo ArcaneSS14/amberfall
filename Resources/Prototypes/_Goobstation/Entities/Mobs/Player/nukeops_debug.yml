@@ -7,9 +7,6 @@
   name: Lone Operative Suit Debug
   components:
   - type: NukeOperative
-  - type: Loadout
-    prototypes: [ SyndicateOperativeGearBaseSuit ]
-    roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
     nameSegments:
     - NamesSyndicatePrefix
@@ -23,9 +20,6 @@
   name: Lone Operative Suit Elite Debug
   components:
   - type: NukeOperative
-  - type: Loadout
-    prototypes: [ SyndicateOperativeGearEliteSuit ]
-    roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
     nameSegments:
     - NamesSyndicatePrefix
@@ -39,9 +33,6 @@
   name: Lone Operative Suit Juggernaut Debug
   components:
   - type: NukeOperative
-  - type: Loadout
-    prototypes: [ SyndicateOperativeGearJuggSuit ]
-    roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
     nameSegments:
     - NamesSyndicatePrefix
@@ -55,9 +46,6 @@
   name: Lone Operative Suit Commander Debug
   components:
   - type: NukeOperative
-  - type: Loadout
-    prototypes: [ SyndicateOperativeGearCommanderSuit ]
-    roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
     nameSegments:
     - NamesSyndicatePrefix
@@ -71,9 +59,6 @@
   name: Lone Operative Suit Stealth Debug
   components:
   - type: NukeOperative
-  - type: Loadout
-    prototypes: [ SyndicateOperativeGearStealthSuit ]
-    roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
     nameSegments:
     - NamesSyndicatePrefix
@@ -87,9 +72,6 @@
   name: Lone Operative Suit Medic Debug
   components:
   - type: NukeOperative
-  - type: Loadout
-    prototypes: [ SyndicateOperativeGearMedicSuit ]
-    roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
     nameSegments:
     - NamesSyndicatePrefix
@@ -103,9 +85,6 @@
   name: Lone Operative Suit Dread Debug
   components:
   - type: NukeOperative
-  - type: Loadout
-    prototypes: [ SyndicateOperativeGearDreadSuit ]
-    roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
     nameSegments:
     - NamesSyndicatePrefix

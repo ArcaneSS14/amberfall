@@ -1,0 +1,29 @@
+- type: gameMap
+  id: Dev
+  mapName: Dev
+  mapLayers:
+  - /Maps/_Amberfall/Test/dev.yml
+  - /Maps/_Amberfall/Test/dev_2l.yml
+  minPlayers: 0
+  stations:
+    Empty:
+      stationProto: AmberfallSettlement
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: Dev
+      - type: StationJobs
+        availableJobs:
+          Wanderer: [ -1, -1 ]
+
+- type: gameMapPool
+  id: DefaultMapPool
+  maps:
+  - Dev
+
+- type: entity
+  id: AmberfallSettlement
+  parent: [ BaseStation, BaseStationJobsSpawning ]
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+

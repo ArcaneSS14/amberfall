@@ -51,8 +51,6 @@
   - type: GhostCharacterSpawner
     components:
     - type: IdBind
-    - type: Loadout
-      roleLoadout: [ RoleSurvivalStandard ]
   - type: Transform
     anchored: true
 
@@ -68,9 +66,6 @@
     name: ghost-role-information-reinforcement-detective-name
   - type: GhostCharacterSpawner
     components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconDetective ]
-      roleLoadout: [ RoleSurvivalSecurity ]
     - type: AutoImplant
       implants:
       - MindShieldImplant
@@ -86,9 +81,6 @@
     name: ghost-role-information-reinforcement-sec-name
   - type: GhostCharacterSpawner
     components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconOfficer ]
-      roleLoadout: [ RoleSurvivalSecurity ]
     - type: AutoImplant
       implants:
       - MindShieldImplant
@@ -111,10 +103,7 @@
   - type: DelayedGhostRole
     name: ghost-role-information-reinforcement-specialist-laser-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconOfficerSpecLaser ]
-
+    components: []
 - type: entity
   parent: ReinforcementBeaconSecurityOfficer
   id: ReinforcementBeaconSpecialistOfficerRiotMelee
@@ -123,10 +112,7 @@
   - type: DelayedGhostRole
     name: ghost-role-information-reinforcement-specialist-riot-melee-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconOfficerSpecRiotMelee ]
-
+    components: []
 - type: entity
   parent: ReinforcementBeaconSecurityOfficer
   id: ReinforcementBeaconSpecialistOfficerRiotRanged
@@ -135,10 +121,7 @@
   - type: DelayedGhostRole
     name: ghost-role-information-reinforcement-specialist-riot-ranged-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconOfficerSpecRiotRanged ]
-
+    components: []
 - type: entity
   parent: ReinforcementBeaconSecurityOfficer
   id: ReinforcementBeaconSpecialistOfficerHeavyLaser
@@ -147,10 +130,7 @@
   - type: DelayedGhostRole
     name: ghost-role-information-reinforcement-specialist-heavy-laser-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconOfficerSpecHeavyLaser ]
-
+    components: []
 - type: entity
   parent: ReinforcementBeaconSecurityOfficer
   id: ReinforcementBeaconSpecialistOfficerShield
@@ -159,10 +139,7 @@
   - type: DelayedGhostRole
     name: ghost-role-information-reinforcement-specialist-shield-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconOfficerSpecShield ]
-
+    components: []
 - type: entity
   parent: ReinforcementBeaconSecurityOfficer
   id: ReinforcementBeaconSpecialistOfficerBrigmedic
@@ -172,11 +149,7 @@
     job: Brigmedic
     name: ghost-role-information-reinforcement-specialist-brigmedic-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconOfficerSpecBrigmedic ]
-      roleLoadout: [ RoleSurvivalSecurity ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconCadet
@@ -187,9 +160,6 @@
     name: ghost-role-information-reinforcement-cadet-name
   - type: GhostCharacterSpawner
     components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconCadet ]
-      roleLoadout: [ RoleSurvivalSecurity ]
     - type: AutoImplant
       implants:
       - MindShieldImplant
@@ -206,11 +176,7 @@
     job: MedicalDoctor
     name: ghost-role-information-reinforcement-doctor-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconDoctor ]
-      roleLoadout: [ RoleSurvivalMedical ]
-
+    components: []
 - type: entity
   parent: ReinforcementBeaconDoctor
   id: ReinforcementBeaconChemist
@@ -220,10 +186,7 @@
     job: Chemist
     name: ghost-role-information-reinforcement-chemist-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconChemist ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconParamedic
@@ -233,11 +196,7 @@
     job: Paramedic
     name: ghost-role-information-reinforcement-paramedic-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconParamedic ]
-      roleLoadout: [ RoleSurvivalMedical ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconVirologist
@@ -247,11 +206,7 @@
     job: Virologist
     name: ghost-role-information-reinforcement-virologist-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconVirologist ]
-      roleLoadout: [ RoleSurvivalMedical ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconPsychologist
@@ -261,10 +216,7 @@
     job: Psychologist
     name: ghost-role-information-reinforcement-psychologist-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconPsychologist ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconMedicalIntern
@@ -274,13 +226,7 @@
     job: MedicalIntern
     name: ghost-role-information-reinforcement-medical-intern-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconMedicalIntern ]
-      roleLoadout: [ RoleSurvivalMedical ]
-
-# Science
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconSci
@@ -290,10 +236,7 @@
     job: Scientist
     name: ghost-role-information-reinforcement-sci-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconSci ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconRoboticist
@@ -303,10 +246,7 @@
     job: Roboticist
     name: ghost-role-information-reinforcement-roboticist-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconRoboticist ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconGeneticist
@@ -316,10 +256,7 @@
     job: Geneticist
     name: ghost-role-information-reinforcement-geneticist-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconGeneticist ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconResearchAssistant
@@ -329,10 +266,7 @@
     job: ResearchAssistant
     name: ghost-role-information-reinforcement-research-assistant-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconResearchAssistant ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconDClass
@@ -345,12 +279,7 @@
     mindRoles:
     - MindRoleGhostRoleFreeAgent
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconDClass ]
-
-# Cargo
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconCargo
@@ -360,10 +289,7 @@
     job: CargoTechnician
     name: ghost-role-information-reinforcement-cargo-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconCargo ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconSalv
@@ -373,13 +299,7 @@
     job: SalvageSpecialist
     name: ghost-role-information-reinforcement-salv-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconSalv ]
-      roleLoadout: [ RoleSurvivalExtended ]
-
-# Engineering
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconEngi
@@ -389,11 +309,7 @@
     job: StationEngineer
     name: ghost-role-information-reinforcement-engi-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconEngi ]
-      roleLoadout: [ RoleSurvivalExtended ]
-
+    components: []
 - type: entity
   parent: ReinforcementBeaconEngi
   id: ReinforcementBeaconAtmos
@@ -403,10 +319,7 @@
     job: AtmosphericTechnician
     name: ghost-role-information-reinforcement-atmos-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconAtmos ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconTechnician
@@ -416,12 +329,7 @@
     job: TechnicalAssistant
     name: ghost-role-information-reinforcement-technician-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconTechnician ]
-
-# Service
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconBartender
@@ -431,10 +339,7 @@
     job: Bartender
     name: ghost-role-information-reinforcement-bartender-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconBartender ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconChef
@@ -444,10 +349,7 @@
     job: Chef
     name: ghost-role-information-reinforcement-chef-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconChef ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconBotanist
@@ -457,10 +359,7 @@
     job: Botanist
     name: ghost-role-information-reinforcement-botanist-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconBotanist ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconJanitor
@@ -470,10 +369,7 @@
     job: Janitor
     name: ghost-role-information-reinforcement-janitor-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconJanitor ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconLawyer
@@ -484,8 +380,6 @@
     name: ghost-role-information-reinforcement-lawyer-name
   - type: GhostCharacterSpawner
     components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconLawyer ]
     - type: Lawyer
 
 - type: entity
@@ -498,8 +392,6 @@
     name: ghost-role-information-reinforcement-clown-name
   - type: GhostCharacterSpawner
     components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconClown ]
     - type: Clumsy
 
 - type: entity
@@ -512,8 +404,6 @@
     name: ghost-role-information-reinforcement-mime-name
   - type: GhostCharacterSpawner
     components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconMime ]
     - type: MimePowers
 
 - type: entity
@@ -526,8 +416,6 @@
     name: ghost-role-information-reinforcement-chaplain-name
   - type: GhostCharacterSpawner
     components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconChaplain ]
     - type: CurseImmune
     - type: BibleUser
 
@@ -540,10 +428,7 @@
     job: Librarian
     name: ghost-role-information-reinforcement-librarian-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconLibrarian ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconMusician
@@ -553,10 +438,7 @@
     job: Musician
     name: ghost-role-information-reinforcement-musician-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconMusician ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconReporter
@@ -566,10 +448,7 @@
     job: Reporter
     name: ghost-role-information-reinforcement-reporter-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconReporter ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconServiceWorker
@@ -579,10 +458,7 @@
     job: ServiceWorker
     name: ghost-role-information-reinforcement-service-worker-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconServiceWorker ]
-
+    components: []
 - type: entity
   parent: BaseReinforcementBeacon
   id: ReinforcementBeaconAssistant
@@ -592,6 +468,4 @@
     job: Passenger
     name: ghost-role-information-reinforcement-assistant-name
   - type: GhostCharacterSpawner
-    components:
-    - type: Loadout
-      prototypes: [ ReinforcementBeaconAssistant ]
+    components: []

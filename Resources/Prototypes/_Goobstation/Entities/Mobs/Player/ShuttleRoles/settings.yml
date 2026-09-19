@@ -15,6 +15,3 @@
       nameSegments:
         - AbductorNames
         - AbductorNames
-    - type: Loadout
-      prototypes: [ VisitorAlien ]
-      roleLoadout: [ RoleSurvivalStandard ]

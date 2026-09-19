@@ -171,7 +171,7 @@ public sealed partial class TraumaCVars
     /// Used to prevent tests failing for spawned gamerules.
     /// </summary>
     public static readonly CVarDef<bool> StationTraitsEnabled =
-        CVarDef.Create("trauma.station_traits_enabled", true, CVar.SERVER);
+        CVarDef.Create("trauma.station_traits_enabled", false, CVar.SERVER);
 
     /// <summary>
     /// The offset for in-game date (the date will be server date + this amount of years).

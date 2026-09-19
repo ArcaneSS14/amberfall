@@ -6,8 +6,6 @@
   components:
   - type: InputMover
   - type: MobMover
-  - type: Loadout
-    prototypes: [LimitedPassengerGear]
   - type: NpcFactionMember
     factions:
     - NanoTrasen
@@ -21,9 +19,6 @@
     - type: NpcFactionMember
       factions:
         - Syndicate
-    - type: Loadout
-      prototypes:
-        - SalvageSpecialistGear
     - type: InputMover
     - type: MobMover
     - type: HTN
@@ -40,9 +35,6 @@
   - type: NpcFactionMember
     factions:
       - Syndicate
-  - type: Loadout
-    prototypes:
-      - PirateGear
   - type: InputMover
   - type: MobMover
   - type: HTN
@@ -58,9 +50,6 @@
     - type: NpcFactionMember
       factions:
         - Syndicate
-    - type: Loadout
-      prototypes:
-        - SyndicateFootsoldierGearRuin
     - type: InputMover
     - type: MobMover
     - type: HTN

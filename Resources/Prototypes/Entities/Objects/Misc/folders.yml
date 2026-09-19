@@ -461,7 +461,7 @@
           - Write
   - type: CargoOrderConsole
     ignoreAccess: true # Trauma
-    removeLimitAccess: [ "Quartermaster" ]
+
   - type: ActivatableUI
     verbText: qm-clipboard-computer-verb-text
     key: enum.CargoConsoleUiKey.Orders
