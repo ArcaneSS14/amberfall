@@ -6,7 +6,6 @@ using Content.IntegrationTests.Fixtures;
 using Content.IntegrationTests.Fixtures.Attributes;
 using Content.IntegrationTests.Utility;
 using YamlDotNet.RepresentationModel;
-using Content.Server.Administration.Systems;
 using Content.Server.GameTicking;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
@@ -44,14 +43,7 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] NoSpawnMaps =
         {
-            "CentComm",
             "Dart"
-        };
-
-        private static readonly string[] Grids =
-        {
-            "/Maps/_Trauma/centcomm.yml", // Trauma
-            AdminTestArenaSystem.ArenaMapPath
         };
 
         /// <summary>
@@ -89,7 +81,6 @@ namespace Content.IntegrationTests.Tests
         {
             // <Trauma>
             "/Maps/_Goobstation/Shuttles/consul.yml",
-            "/Maps/_Trauma/centcomm.yml",
             // </Trauma>
             "/Maps/Shuttles/AdminSpawn/**" // admin gaming
         };
@@ -105,38 +96,6 @@ namespace Content.IntegrationTests.Tests
         private static readonly ResPath[] AllMapFiles = GameDataScrounger.FilesInDirectoryInVfs("/Maps", "*.yml");
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
-
-        /// <summary>
-        /// Asserts that specific files have been saved as grids and not maps.
-        /// </summary>
-        [Test, TestCaseSource(nameof(Grids))]
-        [EnsureCVar(Side.Server, typeof(CCVars), nameof(CCVars.GridFill), false)]
-        public async Task GridsLoadableTest(string mapFile)
-        {
-            var pair = Pair;
-            var server = pair.Server;
-
-            var entManager = server.ResolveDependency<IEntityManager>();
-            var mapLoader = entManager.System<MapLoaderSystem>();
-            var mapSystem = entManager.System<SharedMapSystem>();
-            var cfg = server.ResolveDependency<IConfigurationManager>();
-            var path = new ResPath(mapFile);
-
-            await server.WaitPost(() =>
-            {
-                mapSystem.CreateMap(out var mapId);
-                try
-                {
-                    Assert.That(mapLoader.TryLoadGrid(mapId, path, out var grid));
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception($"Failed to load map {mapFile}, was it saved as a map instead of a grid?", ex);
-                }
-
-                mapSystem.DeleteMap(mapId);
-            });
-        }
 
         [Test]
         [TestCaseSource(nameof(AllMapFiles))]

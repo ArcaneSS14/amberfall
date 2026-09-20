@@ -120,13 +120,6 @@
         #  - VGRoid
 
 - type: entity
-  id: BaseStationCentcomm
-  abstract: true
-  components:
-    - type: StationCentcomm
-      map: /Maps/_Trauma/centcomm.yml # Trauma
-
-- type: entity
   id: BaseStationEvacuation
   abstract: true
   components:
