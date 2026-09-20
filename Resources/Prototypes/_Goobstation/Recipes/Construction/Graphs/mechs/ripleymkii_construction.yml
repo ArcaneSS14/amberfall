@@ -136,3 +136,5 @@
       - tool: Welding
         doAfter: 1
 
+  - node: ripleymkii
+

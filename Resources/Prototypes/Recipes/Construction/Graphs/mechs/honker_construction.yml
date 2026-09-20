@@ -113,3 +113,5 @@
       - tool: Honking
         doAfter: 1
 
+  - node: honker
+

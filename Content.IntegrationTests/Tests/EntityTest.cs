@@ -577,6 +577,9 @@ namespace Content.IntegrationTests.Tests
                 "Actor", // We aren't testing actor components, those need their player session set.
                 "BiomeSelection", // Whaddya know, requires config.
                 "ActivatableUI", // Requires enum key
+                "XenoArtifact", // Requires a complete trigger prototype pool.
+                "Slime", // Requires xenobiology breed prototypes.
+                "PendingSlimeSpawn", // Requires xenobiology breed prototypes.
             };
 
             var pair = Pair;

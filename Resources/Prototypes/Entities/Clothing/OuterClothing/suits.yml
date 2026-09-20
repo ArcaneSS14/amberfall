@@ -358,10 +358,6 @@
     clothingPrototypes:
       head: ClothingHeadHatHoodCarp
     verbText: toggle-clothing-verb-hood
-  - type: HideLayerClothing
-    slots:
-    - Tail
-
 - type: entity
   parent: ClothingOuterSuitCarp
   id: ClothingOuterHardsuitCarp

@@ -91,9 +91,6 @@
     sprite: Clothing/OuterClothing/Bio/security.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Bio/security.rsi
-  - type: HideLayerClothing
-    slots:
-    - Tail
   - type: Armor
     coverage: # Shitmed
     - Torso

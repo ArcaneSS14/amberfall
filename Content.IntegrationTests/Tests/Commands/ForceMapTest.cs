@@ -9,7 +9,7 @@ namespace Content.IntegrationTests.Tests.Commands;
 [TestFixture]
 public sealed class ForceMapTest : GameTest
 {
-    private const string DefaultMapName = "Empty";
+    private const string DefaultMapName = "Dev";
     private const string BadMapName = "asdf_asd-fa__sdfAsd_f"; // Hopefully no one ever names a map this...
     private const string TestMapEligibleName = "ForceMapTestEligible";
     private const string TestMapIneligibleName = "ForceMapTestIneligible";
@@ -20,12 +20,12 @@ public sealed class ForceMapTest : GameTest
   id: {TestMapIneligibleName}
   mapName: {TestMapIneligibleName}
   mapLayers:
-    - /Maps/Test/empty.yml
+    - /Maps/_Amberfall/Test/dev.yml
   minPlayers: 20
   maxPlayers: 80
   stations:
     Empty:
-      stationProto: StandardNanotrasenStation
+      stationProto: AmberfallSettlement
       components:
         - type: StationNameSetup
           mapNameTemplate: ""Empty""
@@ -34,11 +34,11 @@ public sealed class ForceMapTest : GameTest
   id: {TestMapEligibleName}
   mapName: {TestMapEligibleName}
   mapLayers:
-    - /Maps/Test/empty.yml
+    - /Maps/_Amberfall/Test/dev.yml
   minPlayers: 0
   stations:
     Empty:
-      stationProto: StandardNanotrasenStation
+      stationProto: AmberfallSettlement
       components:
         - type: StationNameSetup
           mapNameTemplate: ""Empty""

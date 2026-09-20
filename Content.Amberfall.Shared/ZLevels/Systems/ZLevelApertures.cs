@@ -3,7 +3,7 @@ namespace Content.Amberfall.Shared.ZLevels;
 /// <summary>Convex aperture fragments in map coordinates, shared by rendering and PVS.</summary>
 public static class ZLevelApertures
 {
-    public const int MaxDepth = 5;
+    public const int MaxDepth = 3;
     public const int MaxFragments = 1024;
     public const int MaxClipOperations = 131072;
     private const float Epsilon = 0.00001f;

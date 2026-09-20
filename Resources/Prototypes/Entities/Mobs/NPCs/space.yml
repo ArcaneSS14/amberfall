@@ -663,8 +663,6 @@
     prob: 1 # Trauma
   - type: MobStateActions
     actions:
-      Alive:
-      - ActionSmite # Trauma - was ActionSmiteNoReq?
       Critical:
       - ActionCritSuccumb
       - ActionCritFakeDeath

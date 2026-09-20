@@ -21,14 +21,11 @@ public sealed class MapLayersTest : GameTest
   mapName: Amberfall Map Layers Test
   minPlayers: 0
   mapLayers:
-    - /Maps/Test/empty.yml
-    - /Maps/_Goobstation/Nonstations/dm01-entryway.yml
+    - /Maps/_Amberfall/Test/dev.yml
+    - /Maps/_Amberfall/Test/dev_2l.yml
   stations:
     Empty:
-      stationProto: StandardNanotrasenStation
-      components: []
-    dm01-entryway:
-      stationProto: StandardNanotrasenStation
+      stationProto: AmberfallSettlement
       components: []
 """;
 

@@ -40,9 +40,6 @@
 - entity: CableHV
   assignments:
   - 2: 2
-- entity: SubstationBasic
-  assignments:
-  - 2: 4
 - entity: Poweredlight
   assignments:
   - 2: 6
