@@ -10,7 +10,7 @@ namespace Content.IntegrationTests.Tests.Interaction;
 /// </summary>
 public sealed class InteractionTestTests : InteractionTest
 {
-    protected override ResPath? TestMapPath => new("Maps/Test/empty.yml");
+    protected override ResPath? TestMapPath => new("Maps/_Amberfall/Test/dev.yml");
 
     /// <summary>
     /// Tests that map loading is working correctly.
@@ -24,7 +24,6 @@ public sealed class InteractionTestTests : InteractionTest
         Assert.That(grids, Does.Contain(MapData.Grid), "MapData did not contain the loaded grid.");
 
         // Make sure we loaded the right map.
-        // This name is defined in empty.yml
-        Assert.That(SEntMan.GetComponent<MetaDataComponent>(MapData.MapUid).EntityName, Is.EqualTo("Empty Debug Map"));
+        Assert.That(SEntMan.GetComponent<MetaDataComponent>(MapData.MapUid).EntityName, Is.EqualTo("dev 1 layer"));
     }
 }

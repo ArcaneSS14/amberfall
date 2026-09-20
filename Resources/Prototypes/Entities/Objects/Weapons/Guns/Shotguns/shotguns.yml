@@ -312,7 +312,7 @@
   - type: PhysicalComposition
     materialComposition:
       Cloth: 150
-      Steel: 150
+      Steel: 100
       Plastic: 100
       Wood: 150
   # </Trauma>

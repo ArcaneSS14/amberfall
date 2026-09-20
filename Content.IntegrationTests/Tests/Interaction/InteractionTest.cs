@@ -251,11 +251,8 @@ public abstract partial class InteractionTest : GameTest
 
     public override async Task DoTeardown()
     {
-        // <Trauma> - mythical shitcode
-        if (Server == null || MapSystem == null)
-            throw new Exception("Tried to do teardown before setup for {GetType().Name}?!");
-        // </Trauma>
-        await Server.WaitPost(() => MapSystem.DeleteMap(MapId));
+        if (TestMap is { } map)
+            await Server.WaitPost(() => MapSystem.DeleteMap(map.MapId));
 
         await TearDown();
 

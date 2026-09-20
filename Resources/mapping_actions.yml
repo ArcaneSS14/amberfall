@@ -46,9 +46,6 @@
 - entity: EmergencyLight
   assignments:
   - 2: 7
-- entity: SMESBasic
-  assignments:
-  - 2: 5
 - entity: TableWood
   assignments:
   - 3: 0

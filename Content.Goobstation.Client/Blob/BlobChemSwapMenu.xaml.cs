@@ -19,9 +19,9 @@ public sealed partial class BlobChemSwapMenu : DefaultWindow
 
     private EntityUid _owner;
     private ProtoId<BlobChemPrototype> _selected;
-    private Dictionary<ProtoId<BlobChemPrototype>, Button> _buttons = new();
+    private readonly Dictionary<ProtoId<BlobChemPrototype>, Button> _buttons = new();
 
-    private readonly EntProtoId PreviewTile = "NormalBlobTile";
+    private static readonly EntProtoId PreviewTile = "NormalBlobTile";
 
     public BlobChemSwapMenu()
     {
@@ -58,7 +58,9 @@ public sealed partial class BlobChemSwapMenu : DefaultWindow
     {
         var group = new ButtonGroup();
 
-        var proto = _proto.Index(PreviewTile);
+        if (!_proto.TryIndex(PreviewTile, out var proto))
+            return;
+
         var texture = _sprite.GetPrototypeIcon(proto);
         foreach (var chem in _proto.EnumeratePrototypes<BlobChemPrototype>())
         {
