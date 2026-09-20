@@ -88,13 +88,13 @@ namespace Content.IntegrationTests.Tests
             testSystem.Enabled = false;
         }
 
-        private new const string TestMap = "Maps/_Trauma/bagel.yml"; // Trauma
+        private new const string TestMap = "Maps/_Amberfall/Test/dev.yml";
 
         /// <summary>
         ///     Loads the default map, runs it for 5 ticks, then assert that it did not change.
         /// </summary>
         [Test]
-        public async Task LoadSaveTicksSaveBagel()
+        public async Task LoadSaveTicksSaveDevMap()
         {
             var pair = Pair;
             var server = pair.Server;
@@ -110,7 +110,7 @@ namespace Content.IntegrationTests.Tests
             var cfg = server.ResolveDependency<IConfigurationManager>();
             Assert.That(cfg.GetCVar(CCVars.GridFill), Is.False);
 
-            // Load bagel.yml as uninitialized map, and save it to ensure it's up to date.
+            // Load the Amberfall development map as an uninitialized map and save it to ensure it's up to date.
             server.Post(() =>
             {
                 var path = new ResPath(TestMap);

@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 09/19/2026 12:08:12
-  entityCount: 49
+  entityCount: 51
 maps:
 - 1
 grids:
@@ -277,6 +277,20 @@ entities:
     - type: Transform
       parent: 2
       pos: -4.5,-1.5
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 50
+    components:
+    - type: Transform
+      parent: 2
+      pos: -3.5,-1.5
+- proto: SpawnPointWanderer
+  entities:
+  - uid: 51
+    components:
+    - type: Transform
+      parent: 2
+      pos: -2.5,-1.5
 - proto: WallCraftedStone
   entities:
   - uid: 3

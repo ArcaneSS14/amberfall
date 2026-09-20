@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointWanderer
+  parent: SpawnPointJobBase
+  name: wanderer
+  components:
+  - type: SpawnPoint
+    job_id: Wanderer
+  - type: Sprite
+    layers:
+    - state: green
+    - state: passenger
