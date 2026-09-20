@@ -77,7 +77,7 @@ public abstract partial class SharedStationAiSystem : EntitySystem
     [Dependency] private EntityQuery<BroadphaseComponent> _broadphaseQuery = default!;
     [Dependency] private EntityQuery<MapGridComponent> _gridQuery = default!;
 
-    private static readonly EntProtoId DefaultAi = "StationAiBrain";
+    private readonly EntProtoId DefaultAi = "StationAiBrain";
     private readonly ProtoId<ChatNotificationPrototype> _downloadChatNotificationPrototype = "IntellicardDownload";
 
     public override void Initialize()

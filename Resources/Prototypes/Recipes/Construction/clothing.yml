@@ -131,19 +131,6 @@
   # </Trauma>
 
 - type: construction
-  id: ClothingEyesHudMedSec
-  graph: HudMedSec
-  startNode: start
-  targetNode: medsecHud
-  category: construction-category-clothing
-  objectType: Item
-  # <Trauma>
-  theory:
-    FabricationKnowledge: 0
-    ElectronicsKnowledge: 1
-  # </Trauma>
-
-- type: construction
   id: ClothingShoeSlippersDuck
   graph: ClothingShoeSlippersDuck
   startNode: start

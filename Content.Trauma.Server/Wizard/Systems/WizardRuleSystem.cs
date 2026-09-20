@@ -49,7 +49,7 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
 
     public static readonly ProtoId<NpcFactionPrototype> Faction = "Wizard";
 
-    public static readonly EntProtoId Role = "MindRoleWizard";
+    public readonly EntProtoId Role = "MindRoleWizard";
 
     public override void Initialize()
     {

@@ -40,7 +40,7 @@ public sealed partial class BlobCoreActionSystem : EntitySystem
 
     private bool _canGrowInSpace = true;
 
-    public static readonly ProtoId<BlobTilePrototype> GrowthTile = "Normal";
+    public readonly ProtoId<BlobTilePrototype> GrowthTile = "Normal";
     public static readonly ProtoId<ContentTileDefinition> Plating = "Plating";
 
     public override void Initialize()

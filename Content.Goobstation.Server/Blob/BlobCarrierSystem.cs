@@ -27,7 +27,7 @@ public sealed partial class BlobCarrierSystem : SharedBlobCarrierSystem
     [Dependency] private ActionsSystem _action = default!;
     [Dependency] private CommonLanguageSystem _language = default!;
 
-    private static readonly EntProtoId ActionTransformToBlob = "ActionTransformToBlob";
+    private readonly EntProtoId ActionTransformToBlob = "ActionTransformToBlob";
 
     [SubscribeLocalEvent]
     private void OnRemove(Entity<BlobCarrierComponent> ent, ref ComponentShutdown args)

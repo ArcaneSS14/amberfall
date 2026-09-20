@@ -60,8 +60,8 @@ public sealed partial class PolymorphSystem : SharedPolymorphSystem // Trauma - 
     [Dependency] private SharedMindSystem _mindSystem = default!;
     [Dependency] private MetaDataSystem _metaData = default!;
 
-    private static readonly EntProtoId RevertPolymorphId = "ActionRevertPolymorph";
-    private static readonly EntProtoId RevertPolymorphConfirmId = "ActionRevertPolymorphConfirm";
+    private readonly EntProtoId RevertPolymorphId = "ActionRevertPolymorph";
+    private readonly EntProtoId RevertPolymorphConfirmId = "ActionRevertPolymorphConfirm";
 
     public override void Initialize()
     {

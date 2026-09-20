@@ -797,25 +797,6 @@
   - type: SmartLinkBlacklist  # Goobstation
 
 - type: entity
-  id: BulletGrenadeFlash
-  name: flash grenade
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    layers:
-    - state: grenade
-  - type: FlashOnTrigger
-    range: 7
-  - type: SpawnOnTrigger
-    proto: GrenadeFlashEffect
-  - type: DeleteOnTrigger
-  - type: Flashbang # Goobstation
-    minProtectionRange: 7 # Can't stun/knockdown people wearing any ear protection
-  - type: SmartLinkBlacklist  # Goobstation
-
-- type: entity
   id: BulletGrenadeFrag
   name: frag grenade
   parent: BaseBulletTrigger

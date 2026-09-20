@@ -14,8 +14,8 @@ namespace Content.Server.StationEvents.Events;
 
 public sealed partial class RandomSentienceRule : StationEventSystem<RandomSentienceRuleComponent>
 {
-    private static readonly ProtoId<LocalizedDatasetPrototype> DataSourceNames = "RandomSentienceEventData";
-    private static readonly ProtoId<LocalizedDatasetPrototype> IntelligenceLevelNames = "RandomSentienceEventStrength";
+    private readonly ProtoId<LocalizedDatasetPrototype> DataSourceNames = "RandomSentienceEventData";
+    private readonly ProtoId<LocalizedDatasetPrototype> IntelligenceLevelNames = "RandomSentienceEventStrength";
 
     [Dependency] private IPrototypeManager _prototype = default!;
     [Dependency] private IRobustRandom _random = default!;

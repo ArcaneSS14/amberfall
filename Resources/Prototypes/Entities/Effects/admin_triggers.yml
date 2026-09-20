@@ -29,16 +29,6 @@
     proto: EffectFlashBluespace
 
 - type: entity
-  id: AdminInstantEffectFlash
-  suffix: Flash
-  parent: AdminInstantEffectBase
-  components:
-  - type: FlashOnTrigger
-    range: 7
-  - type: SpawnOnTrigger
-    proto: GrenadeFlashEffect
-
-- type: entity
   id: AdminInstantEffectSmoke3
   suffix: Smoke (03 sec)
   parent: AdminInstantEffectBase

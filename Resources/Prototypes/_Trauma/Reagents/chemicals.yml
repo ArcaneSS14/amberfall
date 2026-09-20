@@ -96,12 +96,6 @@
     Bloodstream:
       metabolismRate: 0.1
       effects:
-      - !type:Polymorph
-        prototype: Cyborg
-        conditions:
-        - !type:ReagentCondition
-          reagent: NanoMachines
-          min: 40
       - !type:AdjustReagent
         reagent: NanoMachines
         amount: -40

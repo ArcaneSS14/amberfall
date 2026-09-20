@@ -21,7 +21,7 @@ public sealed partial class BlobChemSwapMenu : DefaultWindow
     private ProtoId<BlobChemPrototype> _selected;
     private Dictionary<ProtoId<BlobChemPrototype>, Button> _buttons = new();
 
-    private static readonly EntProtoId PreviewTile = "NormalBlobTile";
+    private readonly EntProtoId PreviewTile = "NormalBlobTile";
 
     public BlobChemSwapMenu()
     {

@@ -29,7 +29,7 @@ namespace Content.Trauma.Server.GameTicking.Rules;
 
 public sealed partial class XenomorphsRuleSystem : GameRuleSystem<XenomorphsRuleComponent>
 {
-    private static readonly EntProtoId XenomorphSpawnerProto = "SpawnPointGhostXenomorph";
+    private readonly EntProtoId XenomorphSpawnerProto = "SpawnPointGhostXenomorph";
 
     [Dependency] private GameTicker _gameTicker = default!;
     [Dependency] private IGameTiming _timing = default!;

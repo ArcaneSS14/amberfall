@@ -8,7 +8,7 @@ namespace Content.Trauma.Shared.Wizard.EventSpells;
 
 public abstract class SharedGhostVisibilitySystem : CommonGhostVisibilitySystem
 {
-    protected static readonly EntProtoId GameRule = "GhostsVisible";
+    protected readonly EntProtoId GameRule = "GhostsVisible";
 
     public override bool IsVisible(EntityUid uid)
     {

@@ -21,7 +21,7 @@ public sealed partial class RandomSpeciesChangeEffectSystem : EntityEffectSystem
     [Dependency] private IPrototypeManager _proto = default!;
     [Dependency] private SharedSpeciesChangeEffectSystem _speciesChange = default!;
 
-    public static readonly HashSet<ProtoId<SpeciesPrototype>> SpeciesBlacklist = new()
+    public readonly HashSet<ProtoId<SpeciesPrototype>> SpeciesBlacklist = new()
     {
         "IPC",
         "Shadowling", // no ontag

@@ -29,7 +29,7 @@ public abstract partial class FleshGraspSystem : EntitySystem
     [Dependency] private EntityQuery<DamageOverTimeComponent> _mimicQuery = default!;
     [Dependency] private EntityQuery<GhoulComponent> _ghoulQuery = default!;
 
-    private static readonly EntProtoId MansusGraspAction = "ActionHereticMansusGrasp";
+    private readonly EntProtoId MansusGraspAction = "ActionHereticMansusGrasp";
 
     private static readonly EntityWhitelist GraspWhitelist = new()
     {

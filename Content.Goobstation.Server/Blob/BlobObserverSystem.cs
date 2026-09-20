@@ -25,7 +25,7 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
     [Dependency] private EntityQuery<MapGridComponent> _gridQuery = default!;
 
     private static readonly EntProtoId BlobCaptureObjective = "BlobCaptureObjective";
-    private static readonly EntProtoId BlobRule = "BlobRule";
+    private readonly EntProtoId BlobRule = "BlobRule";
 
     private const double MoverJobTime = 0.005;
     private readonly JobQueue _moveJobQueue = new(MoverJobTime);

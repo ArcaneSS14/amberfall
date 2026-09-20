@@ -34,7 +34,7 @@ public abstract partial class SharedBlobObserverSystem : EntitySystem
 
     private static readonly EntProtoId MobObserverBlobController = "MobObserverBlobController";
     private static readonly ProtoId<AlertPrototype> BlobHealth = "BlobHealth";
-    private static readonly ProtoId<BlobTilePrototype> CoreTile = "Core";
+    private readonly ProtoId<BlobTilePrototype> CoreTile = "Core";
 
     private HashSet<Entity<BlobTileComponent>> _tiles = new();
 

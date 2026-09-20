@@ -28,7 +28,7 @@ public sealed partial class IntellicardExtrasSystem : EntitySystem
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
 
-    private static readonly EntProtoId DefaultAi = "StationAiBrain";
+    private readonly EntProtoId DefaultAi = "StationAiBrain";
 
     public override void Initialize()
     {

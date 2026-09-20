@@ -1,9 +1,0 @@
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
-- type: entity
-  id: ChevalTranslatorImplanter
-  parent: [ BaseTranslatorImplanter ]
-  suffix: Cheval
-  components:
-  - type: Implanter
-    implant: ChevalTranslatorImplant

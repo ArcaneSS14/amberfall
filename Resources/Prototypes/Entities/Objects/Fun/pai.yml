@@ -220,10 +220,6 @@
           Off: { state: potato-off-overlay }
           Searching: { state: potato-searching-overlay }
           On: { state: potato-on-overlay }
-  - type: Construction
-    graph: PotatoAI
-    node: potatoai
-
 # PAI Actions
 
 - type: entity

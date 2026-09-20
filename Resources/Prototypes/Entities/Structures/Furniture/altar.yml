@@ -34,11 +34,6 @@
   parent: AltarBase
   name: nanotrasen altar
   components:
-  # <Trauma>
-  - type: Construction
-    graph: AltarsGraph
-    node: NanotrasenAltarNode
-  # </Trauma>
   - type: Sprite
     sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi
     state: nanotrasen
@@ -86,9 +81,6 @@
     rodProto: GodHand
     effectProto: EffectSpark
     soundPath: /Audio/Effects/hallelujah.ogg
-  - type: Construction
-    graph: AltarsGraph
-    node: ChaosAltarNode
 
 - type: entity
   id: AltarDruid
@@ -105,9 +97,6 @@
     rodProto: MonkStaff
     effectProto: EffectSpark
     soundPath: /Audio/Effects/hallelujah.ogg
-  - type: Construction
-    graph: AltarsGraph
-    node: DruidAltarNode
 
 - type: entity
   id: AltarToolbox
@@ -124,9 +113,6 @@
     rodProto: HolyChainsaw # Shitchap
     effectProto: EffectSpark
     soundPath: /Audio/Effects/hallelujah.ogg
-  - type: Construction
-    graph: AltarsGraph
-    node: ToolAltarNode
 
 - type: entity
   id: AltarSpaceChristian
@@ -150,9 +136,6 @@
     rodProto: Rosary
     effectProto: EffectSpark
     soundPath: /Audio/Effects/hallelujah.ogg
-  - type: Construction
-    graph: AltarsGraph
-    node: SpaceChristianAltarNode
 
 - type: entity
   id: AltarSatana
@@ -191,14 +174,6 @@
     radius: 1.5
     energy: 1
     color: "#e0ffff"
-  - type: Construction
-    graph: AltarsGraph
-    node: TechnologyAltarNode
-  - type: AltarSource
-    rodProto: ClothingBeltHolsterFilledChaplain
-    effectProto: EffectSpark
-    soundPath: /Audio/Effects/hallelujah.ogg
-
 - type: entity
   id: AltarConvertFestival
   parent: AltarBase
@@ -256,9 +231,6 @@
     rodProto: UristHand # Shitchap
     effectProto: EffectSpark
     soundPath: /Audio/Effects/hallelujah.ogg
-  - type: Construction
-    graph: AltarsGraph
-    node: MaintsAltarNode
 
 - type: entity
   id: AltarConvertBlue
@@ -282,9 +254,6 @@
     rodProto: Bulwark # Shitchap
     effectProto: EffectSpark
     soundPath: /Audio/Effects/hallelujah.ogg
-  - type: Construction
-    graph: AltarsGraph
-    node: BlueAltarNode
 
 - type: entity
   id: AltarConvertBurden
@@ -323,18 +292,12 @@
     radius: 1.5
     energy: 1
     color: "#fbceb1"
-  - type: Construction
-    graph: AltarsGraph
-    node: AltarConvertNode
 
 - type: entity
   id: AltarConvertOrange
   parent: AltarConvertFestival
   name: orange altar
   components:
-  - type: Construction
-    graph: AltarsGraph
-    node: ConvertOrangeNode
   - type: AltarSource
     rodProto: WeaponPistolIradomini
     effectProto: EffectSpark
@@ -376,10 +339,6 @@
   parent: AltarConvertFestival
   name: white altar
   components:
-  # <Trauma>
-  - type: Construction
-    graph: AltarsGraph
-    node: ConvertWhiteNode
   - type: AltarSource
     rodProto: WeaponPistolFaith
     effectProto: EffectSpark
@@ -422,10 +381,6 @@
   parent: AltarBase
   name: heaven altar
   components:
-  # <Trauma>
-  - type: Construction
-    graph: AltarsGraph
-    node: HeavenAltarNode
   - type: AltarSource
     rodProto: HolyClaymore
     effectProto: EffectSpark
@@ -474,9 +429,6 @@
     rodProto: ArrythmicKnife # Shitchap
     effectProto: EffectSpark
     soundPath: /Audio/Effects/hallelujah.ogg
-  - type: Construction
-    graph: AltarsGraph
-    node: FangedAltarNode
 
 - type: entity
   id: AltarBananium
@@ -487,9 +439,6 @@
   - type: Sprite
     sprite: Structures/Furniture/Altars/Cults/bananium.rsi
     state: full
-  - type: Construction
-    graph: AltarsGraph
-    node: BananiumAltarNode
   - type: AltarSource
     rodProto: HonkmotherMaw # Shitchap
     effectProto: EffectSpark

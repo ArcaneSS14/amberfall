@@ -113,10 +113,6 @@
     damageModifierSet: ManifestedSpirit
   - type: Injurable
     damageContainer: ManifestedSpirit
-  - type: SpawnLootOnDeath
-    table:
-      id: DiamondOre1Unprocessed
-
 - type: entity
   parent: [ SimpleSpaceMobBase, BaseSlicingRefinable ]
   id: BaseMobGlutton

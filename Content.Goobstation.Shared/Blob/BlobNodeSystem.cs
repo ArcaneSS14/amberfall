@@ -21,7 +21,7 @@ public sealed partial class BlobNodeSystem : EntitySystem
     [Dependency] private EntityQuery<BlobTileComponent> _tileQuery = default!;
     [Dependency] private EntityQuery<MapGridComponent> _gridQuery = default!;
 
-    public static readonly ProtoId<BlobTilePrototype> NodeTile = "Node";
+    public readonly ProtoId<BlobTilePrototype> NodeTile = "Node";
 
     private HashSet<Entity<BlobMobComponent>> _mobs = new();
     private HashSet<Entity<BlobTileComponent>> _tiles = new();

@@ -22,7 +22,7 @@ public sealed partial class ActivePirateRuleSystem : GameRuleSystem<ActivePirate
     [Dependency] private NpcFactionSystem _npcFaction = default!;
 
     private static readonly SoundSpecifier BriefingSound = new SoundPathSpecifier("/Audio/Ambience/Antag/pirate_start.ogg");
-    private static readonly EntProtoId MindRole = "MindRolePirate";
+    private readonly EntProtoId MindRole = "MindRolePirate";
     private static readonly ProtoId<NpcFactionPrototype> PirateFaction = "PirateFaction";
 
     public override void Initialize()

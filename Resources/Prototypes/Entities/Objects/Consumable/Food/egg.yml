@@ -6,13 +6,6 @@
   description: An egg!
   abstract: true
   components:
-  # <Trauma>
-  - type: Rehydratable
-    catalyst: UnstableMutagen
-    catalystMinimum: 5
-    possibleSpawns:
-    - MobHomunculus
-  # </Trauma>
   - type: Tag
     tags:
       - Egg
@@ -124,4 +117,3 @@
       reagents:
       - ReagentId: EggCooked
         Quantity: 6
-

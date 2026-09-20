@@ -14,6 +14,18 @@
 
 - type: entity
   parent: BaseMindRole
+  id: MindRoleObserver
+  components:
+  - type: ObserverRole
+
+- type: entity
+  parent: BaseMindRole
+  id: MindRoleJob
+  components:
+  - type: JobRole
+
+- type: entity
+  parent: BaseMindRole
   id: MindRoleGhostRoleNeutral
   components:
   - type: GhostRoleMarkerRole

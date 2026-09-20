@@ -24,7 +24,7 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
         SubscribeLocalEvent<BlobbernautComponent, GetStatusIconsEvent>(OnShowBlobIcon);
     }
 
-    private static readonly ProtoId<FactionIconPrototype> BlobFaction = "BlobFaction";
+    private readonly ProtoId<FactionIconPrototype> BlobFaction = "BlobFaction";
 
     private void OnShowBlobIcon<T>(Entity<T> ent, ref GetStatusIconsEvent args) where T : Component
     {

@@ -28,7 +28,7 @@ public sealed partial class VampireThrallSystem : EntitySystem
     [Dependency] private EntityQuery<CollectiveMindComponent> _collectiveMindQuery = default!;
 
     private static readonly ProtoId<CollectiveMindPrototype> DantalionMind = "Dantalion";
-    private static readonly EntProtoId<MindRoleComponent> ThrallMindRole = "MindRoleVampireThrall";
+    private readonly EntProtoId<MindRoleComponent> ThrallMindRole = "MindRoleVampireThrall";
 
     public override void Initialize()
     {

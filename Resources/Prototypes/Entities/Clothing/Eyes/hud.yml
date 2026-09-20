@@ -180,9 +180,6 @@
     sprite: Clothing/Eyes/Hud/medsec.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/medsec.rsi
-  - type: Construction
-    graph: HudMedSec
-    node: medsecHud
   - type: Tag # Goobstation
     tags: # Goobstation
     - HudMedicalSecurity # Goobstation

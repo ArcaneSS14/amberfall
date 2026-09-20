@@ -2665,8 +2665,6 @@
   - type: Item
     heldPrefix: produce
   - type: Edible
-    trash:
-    - EffectAnomalyFloraBulb # Random loot
   - type: Solution
     solution:
       reagents:

@@ -9,15 +9,6 @@
   useQuality: false
 
 - type: construction
-  id: PowerArmorStand
-  graph: PowerArmorStand
-  targetNode: PowerArmorStand
-  category: construction-category-antagonist
-  objectType: Item
-  theory:
-    RevolutionaryKnowledge: 3
-
-- type: construction
   id: BarbWireStructure
   graph: BarbedWire
   placementMode: SnapgridCenter

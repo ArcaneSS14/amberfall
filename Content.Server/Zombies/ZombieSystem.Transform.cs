@@ -84,7 +84,7 @@ public sealed partial class ZombieSystem
     private static readonly ProtoId<TagPrototype> CannotSuicideTag = "CannotSuicide";
     private static readonly ProtoId<NpcFactionPrototype> ZombieFaction = "Zombie";
     private static readonly string MindRoleZombie = "MindRoleZombie";
-    private static readonly List<ProtoId<AntagPrototype>> BannableZombiePrototypes = [];
+    private readonly List<ProtoId<AntagPrototype>> BannableZombiePrototypes = [];
     internal static readonly HashSet<HumanoidVisualLayers> AdditionalZombieLayers = [HumanoidVisualLayers.Tail, HumanoidVisualLayers.HeadSide, HumanoidVisualLayers.HeadTop, HumanoidVisualLayers.Snout];
 
     /// <summary>
