@@ -9,19 +9,21 @@ namespace Content.Amberfall;
 
 public sealed partial class TreeCanopySystem : EntitySystem
 {
-    [Dependency] private SharedMapSystem _map = default!;
-    [Dependency] private SharedTransformSystem _transform = default!;
-    [Dependency] private ITileDefinitionManager _tiles = default!;
+    private const int FoliageRadius = 2;
 
-    private readonly Dictionary<(EntityUid Grid, Vector2i Indices), CanopyTileState> _canopyTiles = new();
-
-    private static readonly Direction[] Directions =
+    private static readonly Direction[] BranchDirections =
     [
         Direction.South,
         Direction.East,
         Direction.North,
         Direction.West,
     ];
+
+    [Dependency] private SharedMapSystem _map = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private ITileDefinitionManager _tiles = default!;
+
+    private readonly Dictionary<(EntityUid Grid, Vector2i Indices), CanopyTileState> _canopyTiles = new();
 
     public override void Initialize()
     {
@@ -67,7 +69,7 @@ public sealed partial class TreeCanopySystem : EntitySystem
         var origin = _transform.ToCoordinates(upperGrid, upperCoordinates);
         ReplaceFoliageTiles(tree, upperGrid, upperGridComponent, origin);
 
-        foreach (var direction in Directions)
+        foreach (var direction in BranchDirections)
         {
             SpawnBranch(tree, tree.Comp.ExtendPrototype, origin, direction, tree.Comp.ExtendDistance);
             SpawnBranch(tree, tree.Comp.EndPrototype, origin, direction, tree.Comp.EndDistance);
@@ -87,13 +89,11 @@ public sealed partial class TreeCanopySystem : EntitySystem
         var foliageTile = new Tile(foliage.TileId);
         var center = _map.GetTileRef(gridUid, grid, origin).GridIndices;
 
-        var radius = 2;
-
-        for (var x = -radius; x <= radius; x++)
+        for (var x = -FoliageRadius; x <= FoliageRadius; x++)
         {
-            for (var y = -radius; y <= radius; y++)
+            for (var y = -FoliageRadius; y <= FoliageRadius; y++)
             {
-                if (x * x + y * y > radius * radius)
+                if (x * x + y * y > FoliageRadius * FoliageRadius)
                     continue;
 
                 var indices = center + new Vector2i(x, y);

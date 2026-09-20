@@ -62,55 +62,74 @@ public sealed partial class FuelableFireSystem : EntitySystem
         if (args.Handled)
             return;
 
-        if (CanIgnite(args.Used))
-        {
-            if (!IsBurning(args.Used))
-            {
-                _popup.PopupEntity(Loc.GetString("fuelable-fire-ignition-source-inactive"), ent, args.User);
-            }
-            else if (!ent.Comp.InfiniteFuel && ent.Comp.Fuel <= 0f)
-            {
-                _popup.PopupEntity(Loc.GetString("fuelable-fire-no-fuel"), ent, args.User);
-            }
-            else if (!ent.Comp.Burning)
-            {
-                SetBurning(ent, true);
-                _popup.PopupEntity(Loc.GetString("fuelable-fire-ignited"), ent, args.User);
-            }
-
+        if (TryIgnite(ent, args.Used, args.User) || TryAddFuel(ent, args.Used, args.User))
             args.Handled = true;
-            return;
+    }
+
+    private bool TryIgnite(
+        Entity<FuelableFireComponent> fire,
+        EntityUid ignitionSource,
+        EntityUid user)
+    {
+        if (!CanIgnite(ignitionSource))
+            return false;
+
+        if (!IsBurning(ignitionSource))
+        {
+            _popup.PopupEntity(Loc.GetString("fuelable-fire-ignition-source-inactive"), fire, user);
+            return true;
         }
 
-        if (!TryComp<FireFuelComponent>(args.Used, out var fuel))
-            return;
-
-        if (ent.Comp.InfiniteFuel)
+        if (!fire.Comp.InfiniteFuel && fire.Comp.Fuel <= 0f)
         {
-            _popup.PopupEntity(Loc.GetString("fuelable-fire-infinite"), ent, args.User);
-            args.Handled = true;
-            return;
+            _popup.PopupEntity(Loc.GetString("fuelable-fire-no-fuel"), fire, user);
+            return true;
+        }
+
+        if (fire.Comp.Burning)
+            return true;
+
+        SetBurning(fire, true);
+        _popup.PopupEntity(Loc.GetString("fuelable-fire-ignited"), fire, user);
+        return true;
+    }
+
+    private bool TryAddFuel(
+        Entity<FuelableFireComponent> fire,
+        EntityUid fuelEntity,
+        EntityUid user)
+    {
+        if (!TryComp<FireFuelComponent>(fuelEntity, out var fuel))
+            return false;
+
+        if (fire.Comp.InfiniteFuel)
+        {
+            _popup.PopupEntity(Loc.GetString("fuelable-fire-infinite"), fire, user);
+            return true;
         }
 
         var amount = MathF.Max(0f, fuel.Amount);
         if (amount <= 0f)
-            return;
+            return false;
 
-        var availableCapacity = ent.Comp.Capacity - ent.Comp.Fuel;
+        var availableCapacity = fire.Comp.Capacity - fire.Comp.Fuel;
         if (amount > availableCapacity)
         {
             var message = availableCapacity <= 0f
                 ? "fuelable-fire-full"
                 : "fuelable-fire-not-enough-room";
-            _popup.PopupEntity(Loc.GetString(message), ent, args.User);
-            args.Handled = true;
-            return;
+
+            _popup.PopupEntity(Loc.GetString(message), fire, user);
+            return true;
         }
 
-        ent.Comp.Fuel += amount;
-        ConsumeFuelEntity(args.Used);
-        _popup.PopupEntity(Loc.GetString("fuelable-fire-fueled", ("amount", MathF.Ceiling(amount))), ent, args.User);
-        args.Handled = true;
+        fire.Comp.Fuel += amount;
+        ConsumeFuelEntity(fuelEntity);
+        _popup.PopupEntity(
+            Loc.GetString("fuelable-fire-fueled", ("amount", MathF.Ceiling(amount))),
+            fire,
+            user);
+        return true;
     }
 
     private void OnActivate(Entity<FuelableFireComponent> ent, ref ActivateInWorldEvent args)
@@ -142,11 +161,6 @@ public sealed partial class FuelableFireSystem : EntitySystem
         args.PushMarkup(Loc.GetString("fuelable-fire-examine", ("percent", percent)));
     }
 
-    /// <summary>
-    /// Returns whether an entity is currently producing enough heat to ignite fuel.
-    /// Merely having the Ignition tool quality is not sufficient: toggleable sources
-    /// must be switched on and fuelable fires must actually be burning.
-    /// </summary>
     public bool IsBurning(EntityUid uid)
     {
         if (HasComp<BurningComponent>(uid))

@@ -8,9 +8,6 @@
   parent: BaseMindRole
   id: BaseMindRoleAntag
   abstract: true
-  components:
-  - type: MindRole
-    antag: true
 
 - type: entity
   parent: BaseMindRole
@@ -21,8 +18,6 @@
 - type: entity
   parent: BaseMindRole
   id: MindRoleJob
-  components:
-  - type: JobRole
 
 - type: entity
   parent: BaseMindRole

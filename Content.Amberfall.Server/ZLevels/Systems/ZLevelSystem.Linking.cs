@@ -5,13 +5,17 @@ namespace Content.Amberfall.Server.ZLevels;
 
 public sealed partial class ZLevelSystem
 {
+    private const int MaxLinkTraversal = 64;
+
     private void RebuildDirtyGroups()
     {
         if (_dirtyGroups.Count == 0)
             return;
 
         foreach (var group in _dirtyGroups)
+        {
             RebuildGroup(group);
+        }
 
         _dirtyGroups.Clear();
     }
@@ -68,9 +72,6 @@ public sealed partial class ZLevelSystem
         }
     }
 
-    /// <summary>
-    /// Links two maps as adjacent levels. Existing conflicting links are replaced.
-    /// </summary>
     public bool LinkMaps(
         EntityUid upperMap,
         EntityUid lowerMap,
@@ -91,14 +92,36 @@ public sealed partial class ZLevelSystem
         bool renderEntities,
         bool projectBelow = true)
     {
-        if (upperMap == lowerMap ||
-            !HasComp<MapComponent>(upperMap) ||
-            !HasComp<MapComponent>(lowerMap) ||
-            WouldCreateCycle(upperMap, lowerMap))
-        {
+        if (!CanLinkMaps(upperMap, lowerMap))
             return false;
-        }
 
+        RemoveConflictingLinks(upperMap, lowerMap);
+
+        var upperLink = EnsureComp<ZLevelLinkComponent>(upperMap);
+        var lowerLink = EnsureComp<ZLevelLinkComponent>(lowerMap);
+
+        upperLink.LowerMap = lowerMap;
+        lowerLink.UpperMap = upperMap;
+        Dirty(upperMap, upperLink);
+        Dirty(lowerMap, lowerLink);
+
+        SetProjection(upperMap, lowerMap, blurRadius, renderEntities, projectBelow);
+
+        var linkChanged = new ZLevelLinkChangedEvent(lowerMap);
+        RaiseLocalEvent(ref linkChanged);
+        return true;
+    }
+
+    private bool CanLinkMaps(EntityUid upperMap, EntityUid lowerMap)
+    {
+        return upperMap != lowerMap &&
+               HasComp<MapComponent>(upperMap) &&
+               HasComp<MapComponent>(lowerMap) &&
+               !WouldCreateCycle(upperMap, lowerMap);
+    }
+
+    private void RemoveConflictingLinks(EntityUid upperMap, EntityUid lowerMap)
+    {
         if (TryComp(upperMap, out ZLevelLinkComponent? upperLink) &&
             upperLink.LowerMap is { } oldLower &&
             oldLower != lowerMap)
@@ -112,45 +135,42 @@ public sealed partial class ZLevelSystem
         {
             UnlinkLower(oldUpper);
         }
+    }
 
-        upperLink = EnsureComp<ZLevelLinkComponent>(upperMap);
-        lowerLink = EnsureComp<ZLevelLinkComponent>(lowerMap);
-        upperLink.LowerMap = lowerMap;
-        lowerLink.UpperMap = upperMap;
-        Dirty(upperMap, upperLink);
-        Dirty(lowerMap, lowerLink);
-
-        if (projectBelow)
-        {
-            var projection = EnsureComp<ZLevelProjectionComponent>(upperMap);
-            blurRadius = Math.Clamp(blurRadius, 0f, 8f);
-
-            if (projection.SourceMap != lowerMap ||
-                projection.BlurRadius != blurRadius ||
-                projection.RenderEntities != renderEntities)
-            {
-                projection.SourceMap = lowerMap;
-                projection.BlurRadius = blurRadius;
-                projection.RenderEntities = renderEntities;
-                Dirty(upperMap, projection);
-            }
-        }
-        else
+    private void SetProjection(
+        EntityUid upperMap,
+        EntityUid lowerMap,
+        float blurRadius,
+        bool renderEntities,
+        bool enabled)
+    {
+        if (!enabled)
         {
             RemComp<ZLevelProjectionComponent>(upperMap);
+            return;
         }
 
-        var linkChanged = new ZLevelLinkChangedEvent(lowerMap);
-        RaiseLocalEvent(ref linkChanged);
+        var projection = EnsureComp<ZLevelProjectionComponent>(upperMap);
+        blurRadius = Math.Clamp(blurRadius, 0f, 8f);
 
-        return true;
+        if (projection.SourceMap == lowerMap &&
+            projection.BlurRadius == blurRadius &&
+            projection.RenderEntities == renderEntities)
+        {
+            return;
+        }
+
+        projection.SourceMap = lowerMap;
+        projection.BlurRadius = blurRadius;
+        projection.RenderEntities = renderEntities;
+        Dirty(upperMap, projection);
     }
 
     private bool WouldCreateCycle(EntityUid upperMap, EntityUid lowerMap)
     {
         var current = lowerMap;
 
-        for (var depth = 0; depth < 64; depth++)
+        for (var depth = 0; depth < MaxLinkTraversal; depth++)
         {
             if (current == upperMap)
                 return true;
@@ -167,9 +187,6 @@ public sealed partial class ZLevelSystem
         return true;
     }
 
-    /// <summary>
-    /// Removes the lower link from a map while preserving its own upper link.
-    /// </summary>
     public bool UnlinkLower(EntityUid upperMap)
     {
         if (!TryComp(upperMap, out ZLevelLinkComponent? upperLink) ||

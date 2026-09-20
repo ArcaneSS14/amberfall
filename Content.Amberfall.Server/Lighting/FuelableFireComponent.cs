@@ -18,15 +18,9 @@ public sealed partial class FuelableFireComponent : Component
     [DataField]
     public bool Burning;
 
-    /// <summary>
-    /// Keeps the fire burning without consuming or requiring stored fuel.
-    /// </summary>
     [DataField]
     public bool InfiniteFuel;
 
-    /// <summary>
-    /// Whether players can extinguish the fire by activating it in-world.
-    /// </summary>
     [DataField]
     public bool CanExtinguish = true;
 }

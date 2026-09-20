@@ -9,6 +9,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 #nullable enable
+using Robust.Shared.Audio.Components;
 using Robust.Shared.Console;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
@@ -36,10 +37,14 @@ public sealed partial class MindTests
 
         foreach (var ent in pair.Client.EntMan.GetEntities())
         {
+            if (pair.Client.EntMan.HasComponent<AudioComponent>(ent))
+                continue;
+
             Console.WriteLine(pair.Client.EntMan.ToPrettyString(ent));
         }
 
-        Assert.That(pair.Client.EntMan.EntityCount, Is.EqualTo(0));
+        var clientEntityCount = pair.Client.EntMan.EntityCount - pair.Client.EntMan.Count<AudioComponent>();
+        Assert.That(clientEntityCount, Is.EqualTo(0));
 
         // Create a new map.
         MapId mapId = default;

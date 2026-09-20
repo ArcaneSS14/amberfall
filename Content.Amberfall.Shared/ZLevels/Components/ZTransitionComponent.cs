@@ -12,9 +12,6 @@ public sealed partial class ZTransitionComponent : Component
     [DataField]
     public ZLevelDirection Direction = ZLevelDirection.Down;
 
-    /// <summary>
-    /// Destination offset in map-space coordinates.
-    /// </summary>
     [DataField]
     public Vector2 DestinationOffset;
 

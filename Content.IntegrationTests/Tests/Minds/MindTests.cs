@@ -283,17 +283,17 @@ public sealed partial class MindTests : GameTest
 
             Assert.Multiple(() =>
             {
-                Assert.That(roleSystem.MindHasRole<TraitorRoleComponent>(mindId), Is.False);
+                Assert.That(roleSystem.MindHasRole<ObserverRoleComponent>(mindId), Is.False);
                 Assert.That(roleSystem.MindHasRole<JobRoleComponent>(mindId), Is.False);
             });
 
-            var traitorRole = "MindRoleTraitor";
+            var observerRole = "MindRoleObserver";
 
-            roleSystem.MindAddRole(mindId, traitorRole);
+            roleSystem.MindAddRole(mindId, observerRole);
 
             Assert.Multiple(() =>
             {
-                Assert.That(roleSystem.MindHasRole<TraitorRoleComponent>(mindId));
+                Assert.That(roleSystem.MindHasRole<ObserverRoleComponent>(mindId));
                 Assert.That(roleSystem.MindHasRole<JobRoleComponent>(mindId), Is.False);
             });
 
@@ -303,15 +303,15 @@ public sealed partial class MindTests : GameTest
 
             Assert.Multiple(() =>
             {
-                Assert.That(roleSystem.MindHasRole<TraitorRoleComponent>(mindId));
+                Assert.That(roleSystem.MindHasRole<ObserverRoleComponent>(mindId));
                 Assert.That(roleSystem.MindHasRole<JobRoleComponent>(mindId));
             });
 
-            roleSystem.MindRemoveRole<TraitorRoleComponent>(mindId);
+            roleSystem.MindRemoveRole<ObserverRoleComponent>(mindId);
 
             Assert.Multiple(() =>
             {
-                Assert.That(roleSystem.MindHasRole<TraitorRoleComponent>(mindId), Is.False);
+                Assert.That(roleSystem.MindHasRole<ObserverRoleComponent>(mindId), Is.False);
                 Assert.That(roleSystem.MindHasRole<JobRoleComponent>(mindId));
             });
 
@@ -319,7 +319,7 @@ public sealed partial class MindTests : GameTest
 
             Assert.Multiple(() =>
             {
-                Assert.That(roleSystem.MindHasRole<TraitorRoleComponent>(mindId), Is.False);
+                Assert.That(roleSystem.MindHasRole<ObserverRoleComponent>(mindId), Is.False);
                 Assert.That(roleSystem.MindHasRole<JobRoleComponent>(mindId), Is.False);
             });
         });

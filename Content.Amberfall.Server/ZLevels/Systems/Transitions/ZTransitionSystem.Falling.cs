@@ -1,19 +1,19 @@
 using System.Numerics;
+using Content.Amberfall.Shared.ZLevels;
+using Content.Shared.Maps;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 
-using Content.Amberfall.Shared.ZLevels;
-
 namespace Content.Amberfall.Server.ZLevels;
 
 public sealed partial class ZTransitionSystem
 {
-    [Dependency] private ITileDefinitionManager _tiles = default!;
-
     private static readonly TimeSpan FallCooldown = TimeSpan.FromSeconds(0.1);
     private const int MaxLevelTraversal = 64;
+
+    [Dependency] private ITileDefinitionManager _tiles = default!;
 
     private void OnMove(ref MoveEvent args)
     {
@@ -106,6 +106,7 @@ public sealed partial class ZTransitionSystem
 
     private bool CanFallThrough(Tile tile)
     {
-        return tile.IsEmpty || (_tiles[tile.TypeId] is Content.Shared.Maps.ContentTileDefinition { FallThroughZLevel: true });
+        return tile.IsEmpty ||
+               _tiles[tile.TypeId] is ContentTileDefinition { FallThroughZLevel: true };
     }
 }

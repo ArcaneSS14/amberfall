@@ -1,9 +1,9 @@
 using System.Numerics;
+using Content.Amberfall.Shared.ZLevels;
 using Content.Medical.Common.Targeting;
 using Content.Medical.Shared.Body;
 using Content.Medical.Shared.Traumas;
 using Content.Medical.Shared.Wounds;
-using Content.Amberfall.Shared.ZLevels;
 using Content.Shared.Body;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
@@ -16,6 +16,11 @@ namespace Content.Amberfall.Server.ZLevels;
 
 public sealed partial class ZTransitionSystem
 {
+    private static readonly DamageSpecifier FallDamage = new()
+    {
+        DamageDict = { ["Blunt"] = 40 },
+    };
+
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private DamageableSystem _damageable = default!;
     [Dependency] private TraumaSystem _trauma = default!;
@@ -23,11 +28,6 @@ public sealed partial class ZTransitionSystem
     [Dependency] private SharedStunSystem _stun = default!;
 
     private readonly HashSet<EntityUid> _transitioning = new();
-
-    private static readonly DamageSpecifier FallDamage = new()
-    {
-        DamageDict = { ["Blunt"] = 40, },
-    };
 
     private bool CanTransition(EntityUid uid)
     {

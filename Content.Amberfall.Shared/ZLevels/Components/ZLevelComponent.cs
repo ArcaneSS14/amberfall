@@ -13,22 +13,12 @@ public sealed partial class ZLevelComponent : Component
     [DataField]
     public int Level;
 
-    /// <summary>
-    /// Whether this level should visually project the floor below it.
-    /// Maps remain physically separate; this only controls rendering.
-    /// </summary>
     [DataField]
     public bool ProjectBelow = true;
 
-    /// <summary>
-    /// Blur sample offset applied to the floor immediately below this one, in screen pixels.
-    /// </summary>
     [DataField]
     public float BlurRadius = 1.5f;
 
-    /// <summary>
-    /// Whether nearby objects from the map below should be sent and rendered.
-    /// </summary>
     [DataField]
     public bool RenderEntities = true;
 }
