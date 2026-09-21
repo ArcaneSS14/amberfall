@@ -60,7 +60,8 @@ public sealed class FluidSpill : GameTest
         var puddleSystem = server.System<PuddleSystem>();
         var mapSystem = server.System<SharedMapSystem>();
         var gameTiming = server.ResolveDependency<IGameTiming>();
-        EntityUid gridId = default;
+        var testMap = await pair.CreateTestMap();
+        var gridId = testMap.Grid.Owner;
 
         /*
          In this test, if o is spillage puddle and # are walls, we want to ensure all tiles are empty (`.`)
@@ -70,9 +71,7 @@ public sealed class FluidSpill : GameTest
         */
         await server.WaitPost(() =>
         {
-            mapSystem.CreateMap(out var mapId);
-            var grid = mapSystem.CreateGridEntity(mapId);
-            gridId = grid.Owner;
+            var grid = testMap.Grid;
 
             for (var x = 0; x < 3; x++)
             {

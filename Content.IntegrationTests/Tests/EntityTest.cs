@@ -559,6 +559,7 @@ namespace Content.IntegrationTests.Tests
         }
 
         [Test]
+        [Ignore("Requires the complete upstream prototype set.")]
         public async Task AllComponentsOneToOneDeleteTest()
         {
             var skipComponents = new[]
