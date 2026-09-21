@@ -1,9 +1,9 @@
 using Content.Amberfall.Server.ZLevels;
 using Content.Amberfall.Shared.ZLevels;
-using Content.Shared.Maps;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Random;
 
 namespace Content.Amberfall;
 
@@ -22,6 +22,7 @@ public sealed partial class TreeCanopySystem : EntitySystem
     [Dependency] private SharedMapSystem _map = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private ITileDefinitionManager _tiles = default!;
+    [Dependency] private IRobustRandom _random = default!;
 
     private readonly Dictionary<(EntityUid Grid, Vector2i Indices), CanopyTileState> _canopyTiles = new();
 
@@ -40,23 +41,44 @@ public sealed partial class TreeCanopySystem : EntitySystem
 
     private void OnZLevelLinkChanged(ref ZLevelLinkChangedEvent args)
     {
+        var trees = new List<EntityUid>();
         var query = EntityQueryEnumerator<TreeCanopyComponent, TransformComponent>();
-        while (query.MoveNext(out var uid, out var canopy, out var transform))
+        while (query.MoveNext(out var uid, out _, out var transform))
         {
             if (transform.MapUid == args.LowerMap)
+                trees.Add(uid);
+        }
+
+        foreach (var uid in trees)
+        {
+            if (TryComp(uid, out TreeCanopyComponent? canopy))
                 RefreshCanopy((uid, canopy));
         }
     }
 
     private void RefreshCanopy(Entity<TreeCanopyComponent> tree)
     {
+        var treeTransform = Transform(tree);
+        var upperMap = treeTransform.MapUid is { } sourceMap &&
+                       TryComp(sourceMap, out ZLevelLinkComponent? currentLink)
+            ? currentLink.UpperMap
+            : null;
+
+        if (tree.Comp.TopTree is { } currentTop &&
+            !TerminatingOrDeleted(currentTop) &&
+            Transform(currentTop).MapUid == upperMap)
+            return;
+
+        if (upperMap == null &&
+            tree.Comp.TopTree == null &&
+            tree.Comp.SpawnedBranches.Count == 0 &&
+            tree.Comp.CanopyTiles.Count == 0)
+            return;
+
         ClearCanopy(tree);
 
-        var treeTransform = Transform(tree);
-        if (treeTransform.MapUid is not { } sourceMap ||
-            !TryComp(sourceMap, out ZLevelLinkComponent? link) ||
-            link.UpperMap is not { } upperMap ||
-            !TryComp(upperMap, out MapComponent? upperMapComponent))
+        if (upperMap is not { } targetMap ||
+            !TryComp(targetMap, out MapComponent? upperMapComponent))
         {
             return;
         }
@@ -69,14 +91,18 @@ public sealed partial class TreeCanopySystem : EntitySystem
         var origin = _transform.ToCoordinates(upperGrid, upperCoordinates);
         ReplaceFoliageTiles(tree, upperGrid, upperGridComponent, origin);
 
-        foreach (var direction in BranchDirections)
+        if (TryPrototype(tree.Owner, out var treePrototype))
         {
-            SpawnBranch(tree, tree.Comp.ExtendPrototype, origin, direction, tree.Comp.ExtendDistance);
-            SpawnBranch(tree, tree.Comp.EndPrototype, origin, direction, tree.Comp.EndDistance);
+            var topTree = EntityManager.CreateEntityUninitialized(treePrototype.ID, origin);
+            RemComp<TreeCanopyComponent>(topTree);
+            tree.Comp.TopTree = topTree;
+            EntityManager.InitializeAndStartEntity(topTree);
         }
 
-        SpawnBranch(tree, tree.Comp.ExtendPrototype, origin, Direction.North, 0);
-        SpawnBranch(tree, tree.Comp.ExtendPrototype, origin, Direction.East, 0);
+        foreach (var direction in BranchDirections)
+        {
+            SpawnCanopy(tree, origin, direction);
+        }
     }
 
     private void ReplaceFoliageTiles(
@@ -112,17 +138,32 @@ public sealed partial class TreeCanopySystem : EntitySystem
         }
     }
 
-    private void SpawnBranch(
+    private void SpawnCanopy(
         Entity<TreeCanopyComponent> tree,
-        EntProtoId prototype,
         EntityCoordinates origin,
-        Direction direction,
-        float distance)
+        Direction direction)
     {
-        var coordinates = origin.Offset(direction.ToAngle().ToWorldVec() * distance);
+        var canopy = tree.Comp;
+        var isDouble = _random.Prob(0.7f);
+        var coordinates = origin.Offset(direction.ToAngle().ToWorldVec());
+
+        SpawnBranch(isDouble ? canopy.ExtendPrototype : canopy.EndPrototype, coordinates, direction, canopy);
+        if (isDouble)
+            SpawnBranch(canopy.EndPrototype, origin.Offset(direction.ToAngle().ToWorldVec() * 2), direction, canopy);
+    }
+
+    private EntityUid SpawnBranch(
+        EntProtoId prototype,
+        EntityCoordinates coordinates,
+        Direction direction,
+        TreeCanopyComponent canopy)
+    {
         var branch = Spawn(prototype, coordinates);
         _transform.SetLocalRotation(branch, direction.ToAngle());
-        tree.Comp.SpawnedBranches.Add(branch);
+
+        canopy.SpawnedBranches.Add(branch);
+
+        return branch;
     }
 
     private void OnShutdown(Entity<TreeCanopyComponent> ent, ref ComponentShutdown args)
@@ -132,6 +173,11 @@ public sealed partial class TreeCanopySystem : EntitySystem
 
     private void ClearCanopy(Entity<TreeCanopyComponent> tree)
     {
+        if (tree.Comp.TopTree is { } topTree && !TerminatingOrDeleted(topTree))
+            QueueDel(topTree);
+
+        tree.Comp.TopTree = null;
+
         foreach (var branch in tree.Comp.SpawnedBranches)
         {
             if (!TerminatingOrDeleted(branch))

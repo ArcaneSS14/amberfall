@@ -20,11 +20,7 @@ public sealed partial class TreeCanopyComponent : Component
     [DataField(required: true)]
     public ProtoId<ContentTileDefinition> FoliageTile;
 
-    [DataField]
-    public float ExtendDistance = 1f;
-
-    [DataField]
-    public float EndDistance = 2f;
+    public EntityUid? TopTree;
 
     public readonly List<EntityUid> SpawnedBranches = new();
     public readonly List<(EntityUid Grid, Vector2i Indices)> CanopyTiles = new();
