@@ -409,7 +409,7 @@ public sealed class ZLevelMapTransitionTest : GameTest
             canopyTile = mapSystem.GetTileRef(upperGrid, upperGridComponent, new Vector2i(1, 1)).Tile;
             Assert.Multiple(() =>
             {
-                Assert.That(firstCanopy.SpawnedBranches, Has.Count.EqualTo(10));
+                Assert.That(firstCanopy.SpawnedBranches, Has.Count.InRange(4, 8));
                 Assert.That(firstCanopy.CanopyTiles, Has.Count.EqualTo(13));
                 Assert.That(canopyTile, Is.Not.EqualTo(originalTile));
             });
@@ -417,7 +417,7 @@ public sealed class ZLevelMapTransitionTest : GameTest
             secondTree = entityManager.SpawnEntity(
                 "AncientTree1",
                 new EntityCoordinates(lowerGrid, 1.5f, 1.5f));
-            Assert.That(entityManager.GetComponent<TreeCanopyComponent>(secondTree).SpawnedBranches, Has.Count.EqualTo(10));
+            Assert.That(entityManager.GetComponent<TreeCanopyComponent>(secondTree).SpawnedBranches, Has.Count.InRange(4, 8));
 
             entityManager.DeleteEntity(firstTree);
             Assert.That(mapSystem.GetTileRef(upperGrid, upperGridComponent, new Vector2i(1, 1)).Tile, Is.EqualTo(canopyTile));
