@@ -1,0 +1,48 @@
+- type: entity
+  abstract: true
+  parent: ChairBase
+  id: BaseRusticChair
+  name: wooden chair
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/Furniture/Chairs/wooden_chairs.rsi
+  - type: Icon
+    sprite: _Amberfall/Structures/Furniture/Chairs/wooden_chairs.rsi
+  - type: Damageable
+    damageModifierSet: Wood
+
+- type: entity
+  parent: BaseRusticChair
+  id: FineWoodenChair
+  name: fine wooden chair
+  components: [{ type: Sprite, state: chair1 }, { type: Icon, state: chair1 }]
+
+- type: entity
+  parent: BaseRusticChair
+  id: RusticWoodenChair
+  name: rustic wooden chair
+  components: [{ type: Sprite, state: chair2 }, { type: Icon, state: chair2 }]
+
+- type: entity
+  parent: BaseRusticChair
+  id: RusticWoodenChair3
+  name: rustic wooden chair
+  components: [{ type: Sprite, state: chair3 }, { type: Icon, state: chair3 }]
+
+- type: entity
+  parent: BaseRusticChair
+  id: RusticWoodenChair4
+  name: rustic wooden chair
+  components: [{ type: Sprite, state: chair4 }, { type: Icon, state: chair4 }]
+
+- type: entity
+  parent: BaseRusticChair
+  id: RusticWoodenChair5
+  name: rustic wooden chair
+  components: [{ type: Sprite, state: chair5 }, { type: Icon, state: chair5 }]
+
+- type: entity
+  parent: BaseRusticChair
+  id: WoodenThroneChair
+  name: wooden throne chair
+  components: [{ type: Sprite, state: thronechair }, { type: Icon, state: thronechair }]

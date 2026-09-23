@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/Twilight-Fortress-SS13/Twilight-Axis/blob/3e2ad04635639902d4b6b6aedc4d793e0bb6a974/icons/obj/flora/deadtrees.dmi and converted from BYOND format for Space Station 14",
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "tree_1"
+    },
+    {
+      "name": "tree_2"
+    },
+    {
+      "name": "tree_3"
+    },
+    {
+      "name": "tree_stump"
+    },
+    {
+      "name": "tree_4"
+    },
+    {
+      "name": "tree_5"
+    },
+    {
+      "name": "tree_6"
+    }
+  ]
+}

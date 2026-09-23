@@ -1,0 +1,82 @@
+- type: entity
+  abstract: true
+  parent: BaseWildFlora
+  id: BaseGravemarker
+  name: gravemarker
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/gravemarkers.rsi
+    offset: -0.3,0
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/gravemarkers.rsi
+
+- type: entity
+  abstract: true
+  parent: BaseGravemarker
+  id: BaseGravestone
+  name: gravestone
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/gravestones.rsi
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/gravestones.rsi
+
+- type: entity
+  parent: BaseGravemarker
+  id: Gravemarker1
+  name: grave marker
+  components: [{ type: Sprite, state: gravemarker1 }, { type: Icon, state: gravemarker1 }]
+
+- type: entity
+  parent: BaseGravemarker
+  id: Gravemarker2
+  name: grave marker
+  components: [{ type: Sprite, state: gravemarker2 }, { type: Icon, state: gravemarker2 }]
+
+- type: entity
+  parent: BaseGravemarker
+  id: Gravemarker3
+  name: grave marker
+  components: [{ type: Sprite, state: gravemarker3 }, { type: Icon, state: gravemarker3 }]
+
+- type: entity
+  parent: BaseGravemarker
+  id: PsyGravemarker1
+  name: Psy grave marker
+  components: [{ type: Sprite, state: psy_gravemarker1 }, { type: Icon, state: psy_gravemarker1 }]
+
+- type: entity
+  parent: BaseGravemarker
+  id: PsyGravemarker2
+  name: Psy grave marker
+  components: [{ type: Sprite, state: psy_gravemarker2 }, { type: Icon, state: psy_gravemarker2 }]
+
+- type: entity
+  parent: BaseGravemarker
+  id: PsyGravemarker3
+  name: Psy grave marker
+  components: [{ type: Sprite, state: psy_gravemarker3 }, { type: Icon, state: psy_gravemarker3 }]
+
+- type: entity
+  parent: BaseGravestone
+  id: Gravestone
+  name: gravestone
+  components: [{ type: Sprite, state: gravestone }, { type: Icon, state: gravestone }]
+
+- type: entity
+  parent: BaseGravestone
+  id: Gravestone1
+  name: gravestone
+  components: [{ type: Sprite, state: gravestone1 }, { type: Icon, state: gravestone1 }]
+
+- type: entity
+  parent: BaseGravestone
+  id: GravestoneUniversal
+  name: universal gravestone
+  components: [{ type: Sprite, state: gravestone1_uni }, { type: Icon, state: gravestone1_uni }]
+
+- type: entity
+  parent: BaseGravestone
+  id: GravestonePsy
+  name: Psy gravestone
+  components: [{ type: Sprite, state: gravestone1_psy }, { type: Icon, state: gravestone1_psy }]

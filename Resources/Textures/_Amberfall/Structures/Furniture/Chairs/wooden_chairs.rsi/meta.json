@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/Twilight-Fortress-SS13/Twilight-Axis/blob/3e2ad04635639902d4b6b6aedc4d793e0bb6a974/icons/roguetown/misc/structure.dmi and converted from BYOND format for Space Station 14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "chair1",
+      "directions": 4
+    },
+    {
+      "name": "chair2",
+      "directions": 4
+    },
+    {
+      "name": "chair3",
+      "directions": 4
+    },
+    {
+      "name": "thronechair",
+      "directions": 4
+    },
+    {
+      "name": "chair4",
+      "directions": 4
+    },
+    {
+      "name": "chair5",
+      "directions": 4
+    }
+  ]
+}

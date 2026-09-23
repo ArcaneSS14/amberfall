@@ -1,0 +1,48 @@
+- type: entity
+  abstract: true
+  parent: Bed
+  id: BaseRusticBed
+  name: bed
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/Furniture/Beds/beds.rsi
+  - type: Icon
+    sprite: _Amberfall/Structures/Furniture/Beds/beds.rsi
+  - type: Damageable
+    damageModifierSet: Wood
+
+- type: entity
+  parent: BaseRusticBed
+  id: RusticBed
+  name: rustic bed
+  components: [{ type: Sprite, state: bed }, { type: Icon, state: bed }]
+
+- type: entity
+  parent: BaseRusticBed
+  id: InnBed
+  name: inn bed
+  components: [{ type: Sprite, state: inn_bed }, { type: Icon, state: inn_bed }]
+
+- type: entity
+  parent: BaseRusticBed
+  id: HayBed
+  name: hay bed
+  components: [{ type: Sprite, state: haybed }, { type: Icon, state: haybed }]
+
+- type: entity
+  parent: BaseRusticBed
+  id: WoolBed
+  name: wool bed
+  components: [{ type: Sprite, state: woolbed }, { type: Icon, state: woolbed }]
+
+- type: entity
+  parent: BaseRusticBed
+  id: Bedroll
+  name: bedroll
+  components: [{ type: Sprite, state: bedroll }, { type: Icon, state: bedroll }]
+
+- type: entity
+  parent: BaseRusticBed
+  id: PoorBed
+  name: makeshift bed
+  components: [{ type: Sprite, state: shitbed }, { type: Icon, state: shitbed }]

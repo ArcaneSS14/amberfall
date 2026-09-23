@@ -1,0 +1,53 @@
+- type: entity
+  abstract: true
+  parent: BaseAncientTree
+  id: BaseDeadTree
+  name: dead tree
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/deadtrees.rsi
+    offset: 0,0.5
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/deadtrees.rsi
+
+- type: entity
+  parent: BaseDeadTree
+  id: DeadTree1
+  name: dead tree
+  components: [{ type: Sprite, state: tree_1 }, { type: Icon, state: tree_1 }]
+
+- type: entity
+  parent: BaseDeadTree
+  id: DeadTree2
+  name: dead tree
+  components: [{ type: Sprite, state: tree_2 }, { type: Icon, state: tree_2 }]
+
+- type: entity
+  parent: BaseDeadTree
+  id: DeadTree3
+  name: dead tree
+  components: [{ type: Sprite, state: tree_3 }, { type: Icon, state: tree_3 }]
+
+- type: entity
+  parent: BaseDeadTree
+  id: DeadTree4
+  name: dead tree
+  components: [{ type: Sprite, state: tree_4 }, { type: Icon, state: tree_4 }]
+
+- type: entity
+  parent: BaseDeadTree
+  id: DeadTree5
+  name: dead tree
+  components: [{ type: Sprite, state: tree_5 }, { type: Icon, state: tree_5 }]
+
+- type: entity
+  parent: BaseDeadTree
+  id: DeadTree6
+  name: dead tree
+  components: [{ type: Sprite, state: tree_6 }, { type: Icon, state: tree_6 }]
+
+- type: entity
+  parent: BaseDeadTree
+  id: DeadTreeStump
+  name: dead tree stump
+  components: [{ type: Sprite, state: tree_stump }, { type: Icon, state: tree_stump }]

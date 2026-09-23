@@ -1,0 +1,70 @@
+- type: entity
+  abstract: true
+  parent: ChairBase
+  id: BaseRusticCouch
+  name: couch
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/Furniture/Couches/couches.rsi
+  - type: Icon
+    sprite: _Amberfall/Structures/Furniture/Couches/couches.rsi
+
+- type: entity
+  parent: BaseRusticCouch
+  id: RedCouchLeft
+  name: red couch left end
+  components: [{ type: Sprite, state: redcouch }, { type: Icon, state: redcouch }]
+
+- type: entity
+  parent: BaseRusticCouch
+  id: RedCouchRight
+  name: red couch right end
+  components: [{ type: Sprite, state: redcouch2 }, { type: Icon, state: redcouch2 }]
+
+- type: entity
+  parent: BaseRusticCouch
+  id: GrandCouchLeft
+  name: grand couch left end
+  components: [{ type: Sprite, state: ultimacouchleft }, { type: Icon, state: ultimacouchleft }]
+
+- type: entity
+  parent: BaseRusticCouch
+  id: GrandCouchRight
+  name: grand couch right end
+  components: [{ type: Sprite, state: ultimacouchright }, { type: Icon, state: ultimacouchright }]
+
+- type: entity
+  parent: BaseRusticCouch
+  id: PatternedCouchLeft
+  name: patterned couch left end
+  components: [{ type: Sprite, state: couchaleft }, { type: Icon, state: couchaleft }]
+
+- type: entity
+  parent: BaseRusticCouch
+  id: PatternedCouchRight
+  name: patterned couch right end
+  components: [{ type: Sprite, state: coucharight }, { type: Icon, state: coucharight }]
+
+- type: entity
+  parent: BaseRusticCouch
+  id: BlackCouchLeft
+  name: black couch left end
+  components: [{ type: Sprite, state: couchablackaleft }, { type: Icon, state: couchablackaleft }]
+
+- type: entity
+  parent: BaseRusticCouch
+  id: BlackCouchRight
+  name: black couch right end
+  components: [{ type: Sprite, state: couchablackaright }, { type: Icon, state: couchablackaright }]
+
+- type: entity
+  parent: BaseRusticCouch
+  id: MagentaCouchLeft
+  name: magenta couch left end
+  components: [{ type: Sprite, state: couchamagentaleft }, { type: Icon, state: couchamagentaleft }]
+
+- type: entity
+  parent: BaseRusticCouch
+  id: MagentaCouchRight
+  name: magenta couch right end
+  components: [{ type: Sprite, state: couchamagentaright }, { type: Icon, state: couchamagentaright }]

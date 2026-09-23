@@ -635,3 +635,23 @@
     East: /Textures/_Amberfall/Tiles/Edges/wooden_floort-east.png
     North: /Textures/_Amberfall/Tiles/Edges/wooden_floort-north.png
     West: /Textures/_Amberfall/Tiles/Edges/wooden_floort-west.png
+
+- type: tile
+  id: FloorMasonicSingle
+  name: tiles-amberfall-masonic-single
+  sprite: /Textures/_Amberfall/Tiles/masonicsingle.png
+
+- type: tile
+  id: FloorMasonicSingleInverted
+  name: tiles-amberfall-masonic-single-inverted
+  sprite: /Textures/_Amberfall/Tiles/masonicsingleinvert.png
+
+- type: tile
+  id: FloorMasonicSpiral
+  name: tiles-amberfall-masonic-spiral
+  sprite: /Textures/_Amberfall/Tiles/masonicspiral.png
+
+- type: tile
+  id: FloorBrownPatternCarpet
+  name: tiles-amberfall-brown-pattern-carpet
+  sprite: /Textures/_Amberfall/Tiles/carpet.png
