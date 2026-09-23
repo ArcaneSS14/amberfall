@@ -137,7 +137,7 @@
 
 - type: entity
   parent: BaseHangingProp
-  id: WallClock
+  id: TallWallClock
   name: wall clock
   components: [{ type: Sprite, state: clock }, { type: Icon, state: clock }]
 
