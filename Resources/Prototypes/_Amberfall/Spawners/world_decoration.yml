@@ -1,0 +1,268 @@
+- type: entity
+  parent: MarkerBase
+  id: RandomBedraggledTreeSpawner
+  name: random bedraggled tree spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Objects/Decoration/forest_trees.rsi
+      state: t2
+      offset: 0,1
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: BedraggledTree2
+      - id: BedraggledTree3
+      - id: BedraggledTree4
+      - id: BedraggledTree5
+      - id: BedraggledTree6
+      - id: BedraggledTree7
+      - id: BedraggledTree8
+      - id: BedraggledTree9
+      - id: BedraggledTree10
+      - id: BedraggledTree11
+      - id: BedraggledTree12
+      - id: BedraggledTree13
+      - id: BedraggledTree14
+      - id: BedraggledTree15
+
+- type: entity
+  parent: MarkerBase
+  id: RandomTreeStumpSpawner
+  name: random tree stump spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+      state: t2stump
+      offset: 0,1.25
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: TallTreeStump1
+      - id: TallTreeStump2
+      - id: TallTreeStump3
+      - id: TallTreeStump4
+
+- type: entity
+  parent: MarkerBase
+  id: RandomGreatBushSpawner
+  name: random great bush spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+      state: tallbush1
+      offset: 0,1
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: TallBush1
+      - id: TallBush2
+
+- type: entity
+  parent: MarkerBase
+  id: RandomFallenLogSpawner
+  name: random fallen log spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+      state: log1
+      offset: 0,1
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: ForestLog1
+      - id: ForestLog2
+
+- type: entity
+  parent: MarkerBase
+  id: RandomGiantMushroomSpawner
+  name: random giant mushroom spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Objects/Decoration/forest_mushrooms.rsi
+      state: mush1
+      offset: 0,1
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: TallMushroom1
+      - id: TallMushroom2
+      - id: TallMushroom3
+      - id: TallMushroom4
+      - id: TallMushroom5
+
+- type: entity
+  parent: MarkerBase
+  id: RandomGravemarkerSpawner
+  name: random grave marker spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Objects/Decoration/gravemarkers.rsi
+      state: gravemarker1
+      offset: -0.3,0
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: Gravemarker1
+      - id: Gravemarker2
+      - id: Gravemarker3
+
+- type: entity
+  parent: MarkerBase
+  id: RandomPsyGravemarkerSpawner
+  name: random Psy grave marker spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Objects/Decoration/gravemarkers.rsi
+      state: psy_gravemarker1
+      offset: -0.3,0
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: PsyGravemarker1
+      - id: PsyGravemarker2
+      - id: PsyGravemarker3
+
+- type: entity
+  parent: MarkerBase
+  id: RandomGravestoneSpawner
+  name: random gravestone spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Objects/Decoration/gravestones.rsi
+      state: gravestone
+      offset: -0.3,0
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: Gravestone
+      - id: Gravestone1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomHangingChainSpawner
+  name: random hanging chain spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Structures/Decoration/hanging_chains.rsi
+      state: chains1
+      offset: 0,0.5
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: HangingChain1
+      - id: HangingChain2
+      - id: HangingChain3
+      - id: HangingChain4
+      - id: HangingChain5
+      - id: HangingChain6
+      - id: HangingChain7
+      - id: HangingChain8
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnimalRugSpawner
+  name: random animal rug spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Structures/Furniture/Rugs/animal_rugs.rsi
+      state: fox
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: FoxFurRug
+      - id: BobcatFurRug
+
+- type: entity
+  parent: MarkerBase
+  id: RandomWoodenTableSpawner
+  name: random wooden table spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Structures/Furniture/Tables/tables.rsi
+      state: tablewood
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: RusticTableWood
+      - id: RusticTableWoodAlt
+      - id: RusticTableWood1
+      - id: RusticTableWood2
+      - id: RusticTableWood3
+
+- type: entity
+  parent: MarkerBase
+  id: RandomWildHerbSpawner
+  name: random wild herb spawner
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Amberfall/Objects/Decoration/rogueflora.rsi
+      state: marigold
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:GroupSelector
+      children:
+      - id: WildFloraWormwood
+      - id: WildFloraMarigold
+      - id: WildFloraNettles
+      - id: WildFloraThistle
+      - id: WildFloraPoppy
+      - id: WildFloraZizoBane

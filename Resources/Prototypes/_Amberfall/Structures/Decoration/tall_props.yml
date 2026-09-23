@@ -1,0 +1,226 @@
+- type: entity
+  abstract: true
+  parent: BaseStructure
+  id: BaseTallProp
+  name: decoration
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/Decoration/statues.rsi
+    drawdepth: Overdoors
+  - type: Icon
+    sprite: _Amberfall/Structures/Decoration/statues.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-0.35,0.35,0.35"
+        density: 100
+        mask: [Impassable]
+        layer: [MidImpassable, LowImpassable]
+
+- type: entity
+  abstract: true
+  parent: BaseTallProp
+  id: BaseTallStatue
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-1,0.35,-0.25"
+        density: 100
+        mask: [Impassable]
+        layer: [MidImpassable, LowImpassable]
+
+- type: entity
+  abstract: true
+  parent: BaseTallStatue
+  id: BaseKnightStatue
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-1,0.35,0.55"
+        density: 100
+        mask: [Impassable]
+        layer: [MidImpassable, LowImpassable]
+
+- type: entity
+  abstract: true
+  parent: BaseWildFlora
+  id: BaseHangingProp
+  name: hanging decoration
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/Decoration/wall_decor.rsi
+    drawdepth: Overdoors
+  - type: Icon
+    sprite: _Amberfall/Structures/Decoration/wall_decor.rsi
+
+- type: entity
+  abstract: true
+  parent: BaseHangingProp
+  id: BaseHangingChain
+  name: hanging chain
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/Decoration/hanging_chains.rsi
+    offset: 0,0.5
+  - type: Icon
+    sprite: _Amberfall/Structures/Decoration/hanging_chains.rsi
+
+- type: entity
+  parent: BaseTallStatue
+  id: Gargoyle
+  name: gargoyle statue
+  components: [{ type: Sprite, state: gargoyle }, { type: Icon, state: gargoyle }]
+
+- type: entity
+  parent: BaseTallStatue
+  id: MossyGargoyle
+  name: mossy gargoyle statue
+  components: [{ type: Sprite, state: mgargoyle }, { type: Icon, state: mgargoyle }]
+
+- type: entity
+  parent: BaseTallStatue
+  id: BlackStatue
+  name: black statue
+  components: [{ type: Sprite, state: bstatue }, { type: Icon, state: bstatue }]
+
+- type: entity
+  parent: BaseTallStatue
+  id: MythStatue
+  name: strange statue
+  components: [{ type: Sprite, state: myth }, { type: Icon, state: myth }]
+
+- type: entity
+  parent: BaseTallStatue
+  id: Scarecrow
+  name: scarecrow
+  components: [{ type: Sprite, state: td }, { type: Icon, state: td }]
+
+- type: entity
+  parent: BaseKnightStatue
+  id: KnightStatueLeft
+  name: knight statue left
+  components: [{ type: Sprite, state: knightstatue_l }, { type: Icon, state: knightstatue_l }]
+
+- type: entity
+  parent: BaseKnightStatue
+  id: KnightStatueRight
+  name: knight statue right
+  components: [{ type: Sprite, state: knightstatue_r }, { type: Icon, state: knightstatue_r }]
+
+- type: entity
+  parent: BaseKnightStatue
+  id: KnightStatue2Left
+  name: knight statue left
+  components: [{ type: Sprite, state: knightstatue2_l }, { type: Icon, state: knightstatue2_l }]
+
+- type: entity
+  parent: BaseKnightStatue
+  id: KnightStatue2Right
+  name: knight statue right
+  components: [{ type: Sprite, state: knightstatue2_r }, { type: Icon, state: knightstatue2_r }]
+
+- type: entity
+  parent: BaseHangingProp
+  id: MonaPainting
+  name: Mona painting
+  components: [{ type: Sprite, state: mona }, { type: Icon, state: mona }]
+
+- type: entity
+  parent: BaseHangingProp
+  id: WallClock
+  name: wall clock
+  components: [{ type: Sprite, state: clock }, { type: Icon, state: clock }]
+
+- type: entity
+  parent: BaseHangingProp
+  id: BlackWallClock
+  name: black wall clock
+  components: [{ type: Sprite, state: bclock }, { type: Icon, state: bclock }]
+
+- type: entity
+  parent: BaseHangingProp
+  id: MeatHook
+  name: meat hook
+  components: [{ type: Sprite, state: meathook }, { type: Icon, state: meathook }]
+
+- type: entity
+  parent: BaseTallProp
+  id: FlowerStatue
+  name: flower statue
+  components: [{ type: Sprite, state: flower }, { type: Icon, state: flower }]
+
+- type: entity
+  parent: BaseTallProp
+  id: StandingBell
+  name: standing bell
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/Decoration/bells.rsi
+    state: standingbell
+  - type: Icon
+    sprite: _Amberfall/Structures/Decoration/bells.rsi
+    state: standingbell
+
+- type: entity
+  parent: BaseHangingProp
+  id: DockBell
+  name: dock bell
+  components: [{ type: Sprite, state: dock_bell }, { type: Icon, state: dock_bell }]
+
+- type: entity
+  parent: BaseHangingChain
+  id: HangingChain1
+  name: hanging chain
+  components: [{ type: Sprite, state: chains1 }, { type: Icon, state: chains1 }]
+
+- type: entity
+  parent: BaseHangingChain
+  id: HangingChain2
+  name: hanging chain
+  components: [{ type: Sprite, state: chains2 }, { type: Icon, state: chains2 }]
+
+- type: entity
+  parent: BaseHangingChain
+  id: HangingChain3
+  name: hanging chain
+  components: [{ type: Sprite, state: chains3 }, { type: Icon, state: chains3 }]
+
+- type: entity
+  parent: BaseHangingChain
+  id: HangingChain4
+  name: hanging chain
+  components: [{ type: Sprite, state: chains4 }, { type: Icon, state: chains4 }]
+
+- type: entity
+  parent: BaseHangingChain
+  id: HangingChain5
+  name: hanging chain
+  components: [{ type: Sprite, state: chains5 }, { type: Icon, state: chains5 }]
+
+- type: entity
+  parent: BaseHangingChain
+  id: HangingChain6
+  name: hanging chain
+  components: [{ type: Sprite, state: chains6 }, { type: Icon, state: chains6 }]
+
+- type: entity
+  parent: BaseHangingChain
+  id: HangingChain7
+  name: hanging chain
+  components: [{ type: Sprite, state: chains7 }, { type: Icon, state: chains7 }]
+
+- type: entity
+  parent: BaseHangingChain
+  id: HangingChain8
+  name: hanging chain
+  components: [{ type: Sprite, state: chains8 }, { type: Icon, state: chains8 }]

@@ -1,0 +1,42 @@
+- type: entity
+  abstract: true
+  parent: ChairBase
+  id: BaseRusticBench
+  name: wooden bench
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/Furniture/Benches/wooden_benches.rsi
+  - type: Icon
+    sprite: _Amberfall/Structures/Furniture/Benches/wooden_benches.rsi
+  - type: Damageable
+    damageModifierSet: Wood
+
+- type: entity
+  parent: BaseRusticBench
+  id: RusticWoodenBench
+  name: rustic wooden bench
+  components: [{ type: Sprite, state: bench }, { type: Icon, state: bench }]
+
+- type: entity
+  parent: BaseRusticBench
+  id: SmallWoodenBench
+  name: small wooden bench
+  components: [{ type: Sprite, state: benchsmall }, { type: Icon, state: benchsmall }]
+
+- type: entity
+  parent: BaseRusticBench
+  id: ChurchBenchLeft
+  name: church bench left end
+  components: [{ type: Sprite, state: church_benchleft }, { type: Icon, state: church_benchleft }]
+
+- type: entity
+  parent: BaseRusticBench
+  id: ChurchBenchMiddle
+  name: church bench middle
+  components: [{ type: Sprite, state: church_benchmid }, { type: Icon, state: church_benchmid }]
+
+- type: entity
+  parent: BaseRusticBench
+  id: ChurchBenchRight
+  name: church bench right end
+  components: [{ type: Sprite, state: church_benchright }, { type: Icon, state: church_benchright }]

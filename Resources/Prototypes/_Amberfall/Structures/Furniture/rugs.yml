@@ -1,0 +1,28 @@
+- type: entity
+  abstract: true
+  parent: BaseStructure
+  id: BaseAnimalRug
+  name: animal rug
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Structures/Furniture/Rugs/animal_rugs.rsi
+    drawdepth: FloorObjects
+  - type: Icon
+    sprite: _Amberfall/Structures/Furniture/Rugs/animal_rugs.rsi
+  - type: Physics
+    canCollide: false
+  - type: Fixtures
+
+- type: entity
+  parent: BaseAnimalRug
+  id: FoxFurRug
+  name: fox fur rug
+  components: [{ type: Sprite, state: fox }, { type: Icon, state: fox }]
+
+- type: entity
+  parent: BaseAnimalRug
+  id: BobcatFurRug
+  name: bobcat fur rug
+  components: [{ type: Sprite, state: bobcat }, { type: Icon, state: bobcat }]

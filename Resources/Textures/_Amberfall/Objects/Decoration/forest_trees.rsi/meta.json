@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/Twilight-Fortress-SS13/Twilight-Axis/blob/3e2ad04635639902d4b6b6aedc4d793e0bb6a974/modular_twilight_axis/icons/roguetown/misc/foliagetall.dmi and converted from BYOND format for Space Station 14",
+  "size": {
+    "x": 64,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "t2"
+    },
+    {
+      "name": "t3"
+    },
+    {
+      "name": "t4"
+    },
+    {
+      "name": "t5"
+    },
+    {
+      "name": "t6"
+    },
+    {
+      "name": "t7"
+    },
+    {
+      "name": "t8"
+    },
+    {
+      "name": "t9"
+    },
+    {
+      "name": "t10"
+    },
+    {
+      "name": "t11"
+    },
+    {
+      "name": "t12"
+    },
+    {
+      "name": "t13"
+    },
+    {
+      "name": "t14"
+    },
+    {
+      "name": "t15"
+    }
+  ]
+}

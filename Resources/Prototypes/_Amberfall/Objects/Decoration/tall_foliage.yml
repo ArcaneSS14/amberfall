@@ -1,0 +1,263 @@
+- type: entity
+  abstract: true
+  parent: BaseWildFlora
+  id: BaseTallFoliage
+  name: forest debris
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+    drawdepth: Overdoors
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+
+- type: entity
+  abstract: true
+  parent: BaseAncientTree
+  id: BaseTallTree
+  name: bedraggled tree
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/forest_trees.rsi
+    offset: 0,1
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/forest_trees.rsi
+
+- type: entity
+  abstract: true
+  parent: BaseAncientTree
+  id: BaseTallBush
+  name: great bush
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+    offset: 0,1
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+
+- type: entity
+  abstract: true
+  parent: BaseTallFoliage
+  id: BaseTallMushroom
+  name: tall mushroom
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/forest_mushrooms.rsi
+    offset: 0,1
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/forest_mushrooms.rsi
+  - type: Physics
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 300
+        mask: [Impassable]
+        layer: [MidImpassable, LowImpassable]
+
+- type: entity
+  parent: BaseTallBush
+  id: TallBush1
+  name: great bush
+  components: [{ type: Sprite, state: tallbush1 }, { type: Icon, state: tallbush1 }]
+
+- type: entity
+  parent: BaseTallBush
+  id: TallBush2
+  name: great bush
+  components: [{ type: Sprite, state: tallbush2 }, { type: Icon, state: tallbush2 }]
+
+- type: entity
+  abstract: true
+  parent: AncientTreeStump1
+  id: BaseTallTreeStump
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+    offset: 0,1.25
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+
+- type: entity
+  parent: BaseTallTreeStump
+  id: TallTreeStump1
+  name: tree stump
+  components: [{ type: Sprite, state: t1stump, offset: "0.2,1.25" }, { type: Icon, state: t1stump }]
+
+- type: entity
+  parent: BaseTallTreeStump
+  id: TallTreeStump2
+  name: tree stump
+  components: [{ type: Sprite, state: t2stump }, { type: Icon, state: t2stump }]
+
+- type: entity
+  parent: BaseTallTreeStump
+  id: TallTreeStump3
+  name: tree stump
+  components: [{ type: Sprite, state: t3stump }, { type: Icon, state: t3stump }]
+
+- type: entity
+  parent: BaseTallTreeStump
+  id: TallTreeStump4
+  name: tree stump
+  components: [{ type: Sprite, state: t4stump }, { type: Icon, state: t4stump }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree2
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t2 }, { type: Icon, state: t2 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree3
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t3 }, { type: Icon, state: t3 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree4
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t4 }, { type: Icon, state: t4 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree5
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t5 }, { type: Icon, state: t5 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree6
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t6 }, { type: Icon, state: t6 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree7
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t7 }, { type: Icon, state: t7 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree8
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t8 }, { type: Icon, state: t8 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree9
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t9 }, { type: Icon, state: t9 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree10
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t10 }, { type: Icon, state: t10 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree11
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t11 }, { type: Icon, state: t11 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree12
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t12 }, { type: Icon, state: t12 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree13
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t13 }, { type: Icon, state: t13 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree14
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t14 }, { type: Icon, state: t14 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: BedraggledTree15
+  name: bedraggled tree
+  components: [{ type: Sprite, state: t15 }, { type: Icon, state: t15 }]
+
+- type: entity
+  abstract: true
+  parent: AncientTreeStump1
+  id: BaseForestLog
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+    offset: 0,1
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/forest_debris.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.55,-0.25,0.55,0.25"
+        density: 300
+        mask: [TableMask]
+        layer: [TableLayer]
+
+- type: entity
+  parent: BaseForestLog
+  id: ForestLog1
+  name: fallen log
+  components: [{ type: Sprite, state: log1 }, { type: Icon, state: log1 }]
+
+- type: entity
+  parent: BaseForestLog
+  id: ForestLog2
+  name: fallen log
+  components: [{ type: Sprite, state: log2 }, { type: Icon, state: log2 }]
+
+- type: entity
+  parent: BaseTallMushroom
+  id: TallMushroom1
+  name: giant mushroom
+  components: [{ type: Sprite, state: mush1 }, { type: Icon, state: mush1 }]
+
+- type: entity
+  parent: BaseTallMushroom
+  id: TallMushroom2
+  name: giant mushroom
+  components: [{ type: Sprite, state: mush2 }, { type: Icon, state: mush2 }]
+
+- type: entity
+  parent: BaseTallMushroom
+  id: TallMushroom3
+  name: giant mushroom
+  components: [{ type: Sprite, state: mush3 }, { type: Icon, state: mush3 }]
+
+- type: entity
+  parent: BaseTallMushroom
+  id: TallMushroom4
+  name: giant mushroom
+  components: [{ type: Sprite, state: mush4 }, { type: Icon, state: mush4 }]
+
+- type: entity
+  parent: BaseTallMushroom
+  id: TallMushroom5
+  name: giant mushroom
+  components: [{ type: Sprite, state: mush5 }, { type: Icon, state: mush5 }]
+
+- type: entity
+  parent: BaseTallTree
+  id: SacredTree
+  name: sacred tree
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/sacred_tree.rsi
+    state: mystical
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/sacred_tree.rsi
+    state: mystical
