@@ -1,0 +1,50 @@
+- type: entity
+  abstract: true
+  parent: BaseWildFlora
+  id: BaseGrassTuft
+  name: grass
+  components:
+  - type: Sprite
+    sprite: _Amberfall/Objects/Decoration/grass.rsi
+  - type: Icon
+    sprite: _Amberfall/Objects/Decoration/grass.rsi
+
+- type: entity
+  parent: BaseGrassTuft
+  id: GrassTuft1
+  components: [{ type: Sprite, state: grass1 }, { type: Icon, state: grass1 }]
+
+- type: entity
+  parent: BaseGrassTuft
+  id: GrassTuft2
+  components: [{ type: Sprite, state: grass2 }, { type: Icon, state: grass2 }]
+
+- type: entity
+  parent: BaseGrassTuft
+  id: GrassTuft3
+  components: [{ type: Sprite, state: grass3 }, { type: Icon, state: grass3 }]
+
+- type: entity
+  parent: BaseGrassTuft
+  id: GrassTuft4
+  components: [{ type: Sprite, state: grass4 }, { type: Icon, state: grass4 }]
+
+- type: entity
+  parent: BaseGrassTuft
+  id: GrassTuft5
+  components: [{ type: Sprite, state: grass5 }, { type: Icon, state: grass5 }]
+
+- type: entity
+  parent: BaseGrassTuft
+  id: GrassTuft6
+  components: [{ type: Sprite, state: grass6 }, { type: Icon, state: grass6 }]
+
+- type: entity
+  parent: BaseGrassTuft
+  id: GrassTuft7
+  components: [{ type: Sprite, state: grass7 }, { type: Icon, state: grass7 }]
+
+- type: entity
+  parent: BaseGrassTuft
+  id: GrassTuft8
+  components: [{ type: Sprite, state: grass8 }, { type: Icon, state: grass8 }]

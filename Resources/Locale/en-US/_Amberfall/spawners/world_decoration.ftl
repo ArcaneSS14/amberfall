@@ -45,3 +45,6 @@ ent-RandomMapTableSpawner = random map table spawner
 
 ent-RandomWildHerbSpawner = random wild herb spawner
     .desc = Places a random wild herb variant when the map loads.
+
+ent-RandomGrassTuftSpawner = random grass spawner
+    .desc = Places a random patch of wild grass when the map loads.
