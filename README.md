@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Space Station 14" width="500" height="145" src="https://github.com/user-attachments/assets/082b7cc8-5930-40ff-8bfa-9c2d36f6d1fb" />
+  <img width="1000" height="333" alt="logo" src="https://github.com/user-attachments/assets/0623812a-3190-4970-ac71-f9bedafb8461" />
 </p>
 
 <p align="center">
