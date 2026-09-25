@@ -224,10 +224,10 @@
   category: construction-category-tools
   objectType: Item
   theory:
-    FirstAidKnowledge: 0
-    FabricationKnowledge: 1
+    SkillMedicine: 0
+    SkillCrafting: 1
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
 
 - type: constructionGraph
   id: SilkPatchMakeshift
@@ -250,7 +250,7 @@
   category: construction-category-tools
   objectType: Item
   theory:
-    SpiderCraftKnowledge: 0
+    SpiderWebAccessKnowledge: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   useQuality: false

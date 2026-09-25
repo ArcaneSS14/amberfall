@@ -23,8 +23,8 @@ public sealed partial class WeaponClassPrototype : IPrototype
     /// <summary>
     /// The training knowledge associated with this weapon class.
     /// </summary>
-    [DataField(required: true)]
-    public EntProtoId Knowledge;
+    [DataField]
+    public EntProtoId? Knowledge;
 
     /// <summary>
     /// Skill curve to scale melee weapon damage by.

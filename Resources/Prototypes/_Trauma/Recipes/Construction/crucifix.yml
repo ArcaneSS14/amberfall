@@ -11,7 +11,7 @@
   conditions:
   - !type:TileNotBlocked
   theory:
-    WeaponsKnowledge: 0
-    FurnitureKnowledge: 0
+    SkillWeaponsmithing: 0
+    SkillCarpentry: 0
   practical:
-    CarvingKnowledge: 2
+    SkillCarpentry: 2

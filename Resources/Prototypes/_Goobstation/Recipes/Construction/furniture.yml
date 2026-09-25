@@ -11,9 +11,9 @@
   conditions:
     - !type:TileNotBlocked
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    CarvingKnowledge: 1
+    SkillCarpentry: 1
 
 - type: construction
   id: CdRack
@@ -26,4 +26,4 @@
   conditions:
     - !type:TileNotBlocked
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0

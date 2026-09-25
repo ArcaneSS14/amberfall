@@ -35,10 +35,9 @@
   - type: KnowledgeGrantOnWear # gets added to the brain, modified when picking borg type
     skills:
       # robot basic stuff
-      FabricationKnowledge: 20
-      WallsKnowledge: 10
-      InfrastructureKnowledge: 10
-      ElectronicsKnowledge: 10
+      SkillCrafting: 20
+      SkillMasonry: 10
+      SkillEngineering: 10
   # </Trauma>
   - type: Reactive
     groups:

@@ -46,7 +46,7 @@ public sealed partial class ParrySystem : EntitySystem
     [Dependency] private EntityQuery<PhysicsComponent> _physicsQuery = default!;
     [Dependency] private EntityQuery<ReflectiveComponent> _reflectiveQuery = default!;
 
-    private static readonly EntProtoId AthleticsKnowledge = "AthleticsKnowledge";
+    private static readonly EntProtoId AthleticsSkill = "SkillAthletics";
     private static readonly TimeSpan ExhaustionRegenDelay = TimeSpan.FromSeconds(1);
     private TimeSpan _nextRegen = TimeSpan.Zero;
 
@@ -245,7 +245,7 @@ public sealed partial class ParrySystem : EntitySystem
 
     // TODO: make it also account for weapon class's skill
     private int GetSkillLevel(EntityUid user)
-        => ProtoMan.Resolve(AthleticsKnowledge, out var skillProto)
+        => ProtoMan.Resolve(AthleticsSkill, out var skillProto)
                && _knowledge.GetContainer(user) is { } brain
                && _knowledge.GetKnowledge(brain, skillProto) is { } skill
             ? skill.Comp.NetLevel

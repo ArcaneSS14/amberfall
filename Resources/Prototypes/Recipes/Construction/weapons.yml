@@ -7,10 +7,10 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    TailoringKnowledge: 2
-    WeaponsKnowledge: 1
+    SkillSewing: 2
+    SkillWeaponsmithing: 1
   # </Trauma>
 
 - type: construction
@@ -22,10 +22,10 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    TailoringKnowledge: 2
-    WeaponsKnowledge: 1
+    SkillSewing: 2
+    SkillWeaponsmithing: 1
   # </Trauma>
 
 - type: construction
@@ -38,7 +38,7 @@
   # <Trauma>
   theory: {} # wrapping cloth around glass come on. shittiest possible weapon
   practical:
-    WeaponsKnowledge: 1
+    SkillWeaponsmithing: 1
   # </Trauma>
 
 - type: construction
@@ -51,7 +51,7 @@
   # <Trauma>
   theory: {} # wrapping cloth around glass come on
   practical:
-    WeaponsKnowledge: 1
+    SkillWeaponsmithing: 1
   # </Trauma>
 
 - type: construction
@@ -63,10 +63,10 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 1 # need to be careful with plasma
-    WeaponsKnowledge: 0
+    SkillCrafting: 1 # need to be careful with plasma
+    SkillWeaponsmithing: 0
   practical:
-    WeaponsKnowledge: 1
+    SkillWeaponsmithing: 1
   # </Trauma>
 
 - type: construction
@@ -78,10 +78,10 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 1 # need to be careful with uranium
-    WeaponsKnowledge: 0
+    SkillCrafting: 1 # need to be careful with uranium
+    SkillWeaponsmithing: 0
   practical:
-    WeaponsKnowledge: 1
+    SkillWeaponsmithing: 1
   # </Trauma>
 
 - type: construction
@@ -94,9 +94,9 @@
   # <Trauma>
   qualityPrototype: ShitCraft
   theory:
-    FabricationKnowledge: 0 # caveman gaming
+    SkillCrafting: 0 # caveman gaming
   practical:
-    WeaponsKnowledge: 5 # Very difficult to make something good out of shit
+    SkillWeaponsmithing: 5 # Very difficult to make something good out of shit
   # </Trauma>
 
 - type: construction
@@ -109,9 +109,9 @@
   # <Trauma>
   qualityPrototype: ShitCraft
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    WeaponsKnowledge: 5 # Very difficult to make something good out of shit
+    SkillWeaponsmithing: 5 # Very difficult to make something good out of shit
   # </Trauma>
 
 - type: construction
@@ -124,9 +124,9 @@
   # <Trauma>
   qualityPrototype: ShitCraft
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    WeaponsKnowledge: 5 # Very difficult to make something good out of shit
+    SkillWeaponsmithing: 5 # Very difficult to make something good out of shit
   # </Trauma>
 
 - type: construction
@@ -139,9 +139,9 @@
   # <Trauma>
   qualityPrototype: ShitCraft
   theory:
-    FabricationKnowledge : 1
+    SkillCrafting : 1
   practical:
-    WeaponsKnowledge: 5 # Very difficult to make something good out of shit
+    SkillWeaponsmithing: 5 # Very difficult to make something good out of shit
   # </Trauma>
 
 - type: construction
@@ -154,10 +154,10 @@
   # <Trauma>
   qualityPrototype: ShitCraft
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    WeaponsKnowledge: 4
-    CarvingKnowledge: 4
+    SkillWeaponsmithing: 4
+    SkillCarpentry: 4
   # </Trauma>
 
 - type: construction
@@ -169,9 +169,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    WeaponsKnowledge: 2
+    SkillWeaponsmithing: 2
   # </Trauma>
 
 - type: construction
@@ -183,10 +183,10 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    CarvingKnowledge: 2
-    ArmorKnowledge: 1
+    SkillCarpentry: 2
+    SkillArmorsmithing: 1
   # </Trauma>
 
 - type: construction
@@ -199,9 +199,9 @@
   # <Trauma>
   qualityPrototype: ShitCraft
   theory:
-    FabricationKnowledge: 0 # it's cardboard
+    SkillCrafting: 0 # it's cardboard
   practical:
-    ArmorKnowledge: 1
+    SkillArmorsmithing: 1
   # </Trauma>
 
 - type: construction
@@ -213,10 +213,10 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    ArmorKnowledge: 1
-    MetalworkingKnowledge: 1
+    SkillArmorsmithing: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -229,9 +229,9 @@
   # <Trauma>
   qualityPrototype: ShitBullets
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    GunsmithingKnowledge: 2
+    SkillWeaponsmithing: 2
   # </Trauma>
 
 - type: construction
@@ -244,10 +244,10 @@
   # <Trauma>
   qualityPrototype: ShitBullets
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    GunsmithingKnowledge: 2
-    CarvingKnowledge: 3
+    SkillWeaponsmithing: 2
+    SkillCarpentry: 3
   # </Trauma>
 
 - type: construction
@@ -260,9 +260,9 @@
   # <Trauma>
   qualityPrototype: ShitBullets
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    GunsmithingKnowledge: 2
+    SkillWeaponsmithing: 2
   # </Trauma>
 
 - type: construction
@@ -275,9 +275,9 @@
   # <Trauma>
   qualityPrototype: ShitBullets
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    GunsmithingKnowledge: 2
+    SkillWeaponsmithing: 2
   # </Trauma>
 
 - type: construction
@@ -290,9 +290,9 @@
   # <Trauma>
   qualityPrototype: Cardboard
   theory:
-    FabricationKnowledge: 0 # it's card board but like origami
+    SkillCrafting: 0 # it's card board but like origami
   practical:
-    WeaponsKnowledge: 1
+    SkillWeaponsmithing: 1
   # </Trauma>
 
 - type: construction
@@ -304,11 +304,11 @@
   objectType: Item
   # <Trauma>
   theory:
-    WeaponsKnowledge: 1
-    FabricationKnowledge: 1
+    SkillWeaponsmithing: 1
+    SkillCrafting: 1
   practical:
-    WeaponsKnowledge: 1
-    CarvingKnowledge: 2
+    SkillWeaponsmithing: 1
+    SkillCarpentry: 2
   # </Trauma>
 
 - type: construction
@@ -321,10 +321,10 @@
   # <Trauma>
   qualityPrototype: ShitCraft
   theory:
-    WeaponsKnowledge: 0
+    SkillWeaponsmithing: 0
   practical:
-    WeaponsKnowledge: 4
-    CarvingKnowledge: 4
+    SkillWeaponsmithing: 4
+    SkillCarpentry: 4
   # </Trauma>
 
 # - type: construction # Trauma
@@ -345,7 +345,7 @@
   # <Trauma>
   qualityPrototype: ShitCraft
   theory:
-    FabricationKnowledge: 0 # it's cardboard
+    SkillCrafting: 0 # it's cardboard
   practical:
-    WeaponsKnowledge: 1
+    SkillWeaponsmithing: 1
   # </Trauma>

@@ -151,8 +151,7 @@
   - type: BloodSplatterer
   - type: KnowledgeGrant
     skills:
-      ThrowingKnowledge: 50
-      StrengthKnowledge: 50
+      SkillAthletics: 50
 
 - type: entity
   parent: [BaseMobXenomorph, StripableInventoryBase]

@@ -7,9 +7,7 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      FirstAidKnowledge: 50
-      SurgeryKnowledge: 50
-      KnowledgeWeaponsPistol: 15 # john syringe gun
+      SkillMedicine: 50
 
 - type: entity
   parent: BaseSkillChip
@@ -18,7 +16,7 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      ChemistryKnowledge: 50
+      SkillAlchemy: 50
 
 - type: entity
   parent: BaseSkillChip
@@ -27,9 +25,8 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      FirstAidKnowledge: 30
-      SurgeryKnowledge: 25
-      KnowledgeWeaponsKnife: -10 # do no harm
+      SkillMedicine: 30
+      SkillKnives: -10 # do no harm
 
 - type: entity
   parent: BaseSkillChip
@@ -38,9 +35,8 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      FirstAidKnowledge: 25
-      SurgeryKnowledge: 10
-      KnowledgeWeaponsKnife: 5 # no oath taken
+      SkillMedicine: 25
+      SkillKnives: 5 # no oath taken
     # TODO: xp boost?
 
 # TODO: make surgeon skillchip if someone makes chip loadouts
@@ -52,9 +48,8 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      FirstAidKnowledge: 40
-      SurgeryKnowledge: 10
-      KnowledgeWeaponsKnife: -10 # fuck you validhunting parameds
+      SkillMedicine: 40
+      SkillKnives: -10 # fuck you validhunting parameds
 
 - type: entity
   parent: BaseSkillChip
@@ -63,7 +58,7 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      ChemistryKnowledge: 25
+      SkillAlchemy: 25
   # TODO: supermatter hallucination thing parity
 
 - type: entity
@@ -73,5 +68,5 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      FirstAidKnowledge: 25
+      SkillMedicine: 25
       # TODO

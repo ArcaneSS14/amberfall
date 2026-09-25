@@ -19,7 +19,7 @@ namespace Content.IntegrationTests.Tests._Trauma;
 public sealed class BodyTest : GameTest
 {
     public static EntProtoId Urist = "MobHuman";
-    public static EntProtoId<OrganChipComponent> TestChip = "SkillChipLaser";
+    public static EntProtoId<OrganChipComponent> TestChip = "SkillChipKnife";
     public static ProtoId<PolymorphPrototype> HumanoidPolymorph = "Bananamen";
 
     [SidedDependency(Side.Server)] private BodySystem _body = default!;

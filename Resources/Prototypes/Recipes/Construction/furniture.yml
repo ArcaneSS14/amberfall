@@ -12,9 +12,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0 # most basic chair
+    SkillCarpentry: 0 # most basic chair
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -30,9 +30,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -48,9 +48,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -66,9 +66,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -84,9 +84,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -102,9 +102,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -120,9 +120,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -138,9 +138,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -156,9 +156,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0 # fucking wood chair
+    SkillCarpentry: 0 # fucking wood chair
   practical:
-    CarvingKnowledge: 1
+    SkillCarpentry: 1
   # </Trauma>
 
 - type: construction
@@ -174,9 +174,9 @@
   - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    FurnitureKnowledge: 2 # meat....
+    SkillCarpentry: 2 # meat....
   # </Trauma>
 
 - type: construction
@@ -192,9 +192,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MechanicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -210,9 +210,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -228,7 +228,7 @@
   - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   # </Trauma>
 
 - type: construction
@@ -244,9 +244,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    CarvingKnowledge: 1
+    SkillCarpentry: 1
   # </Trauma>
 
 - type: construction
@@ -263,9 +263,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -282,9 +282,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 #tables
@@ -301,9 +301,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -319,9 +319,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -337,9 +337,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -355,9 +355,9 @@
   - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -373,9 +373,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -391,9 +391,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -409,9 +409,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -427,9 +427,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    CarvingKnowledge: 1
+    SkillCarpentry: 1
   # </Trauma>
 
 - type: construction
@@ -445,9 +445,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -464,9 +464,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -483,9 +483,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -502,9 +502,9 @@
   - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -521,9 +521,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -540,9 +540,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -559,9 +559,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -578,9 +578,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    FurnitureKnowledge: 2
+    SkillCarpentry: 2
   # </Trauma>
 
 - type: construction
@@ -597,9 +597,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    FurnitureKnowledge: 2
+    SkillCarpentry: 2
   # </Trauma>
 
 - type: construction
@@ -616,9 +616,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    FurnitureKnowledge: 2
+    SkillCarpentry: 2
   # </Trauma>
 
 - type: construction
@@ -635,9 +635,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    FurnitureKnowledge: 2
+    SkillCarpentry: 2
   # </Trauma>
 
 - type: construction
@@ -653,9 +653,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 - type: construction
@@ -671,9 +671,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    CarvingKnowledge: 1
+    SkillCarpentry: 1
   # </Trauma>
 
 #bedroom
@@ -690,9 +690,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -708,10 +708,10 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
-    FirstAidKnowledge: 0 # :)
+    SkillCarpentry: 0
+    SkillMedicine: 0 # :)
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -727,10 +727,10 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
-    CarvingKnowledge: 1
+    SkillSewing: 1
+    SkillCarpentry: 1
   # </Trauma>
 
 - type: construction
@@ -746,9 +746,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    CarvingKnowledge: 1
+    SkillCarpentry: 1
   # </Trauma>
 
 #racks
@@ -765,9 +765,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   # </Trauma>
 
 #misc
@@ -784,9 +784,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    CookingKnowledge: 0
-    FabricationKnowledge: 0
-    FurnitureKnowledge: 0
+    SkillCooking: 0
+    SkillCrafting: 0
+    SkillCarpentry: 0
   # </Trauma>
 
 - type: construction
@@ -801,9 +801,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -818,9 +818,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -835,9 +835,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -852,9 +852,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -869,9 +869,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -886,9 +886,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -903,9 +903,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -920,9 +920,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -937,9 +937,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -954,9 +954,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -971,9 +971,9 @@
   canBuildInImpassable: true
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -989,9 +989,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    CarvingKnowledge: 1
+    SkillCarpentry: 1
   # </Trauma>
 
 - type: construction
@@ -1008,9 +1008,9 @@
     - !type:WallmountCondition
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    CarvingKnowledge: 1
+    SkillCarpentry: 1
   # </Trauma>
 
 - type: construction
@@ -1027,7 +1027,7 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    FurnitureKnowledge: 0
+    SkillCarpentry: 0
   practical:
-    CarvingKnowledge: 2
+    SkillCarpentry: 2
   # </Trauma>

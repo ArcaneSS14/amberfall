@@ -8,9 +8,9 @@
   canBuildInImpassable: false
   # <Trauma>
   theory:
-    ElectronicsKnowledge: 0
+    SkillEngineering: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -23,9 +23,9 @@
   canBuildInImpassable: false
   # <Trauma>
   theory:
-    ElectronicsKnowledge: 0
+    SkillEngineering: 0
   practical:
-    MechanicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 # Switching
@@ -41,7 +41,7 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    ElectronicsKnowledge: 0
+    SkillEngineering: 0
   useQuality: false
   # </Trauma>
 
@@ -60,7 +60,7 @@
   hide: true #TODO: Fix the lightswitch, issue #34659. Until then, keep hidden so people don't build it and get confused.
   # <Trauma>
   theory:
-    ElectronicsKnowledge: 0
+    SkillEngineering: 0
   useQuality: false
   # </Trauma>
 
@@ -78,7 +78,7 @@
     - !type:WallmountCondition
   # <Trauma>
   theory:
-    ElectronicsKnowledge: 0
+    SkillEngineering: 0
   useQuality: false
   # </Trauma>
 
@@ -96,7 +96,7 @@
     - !type:WallmountCondition
   # <Trauma>
   theory:
-    ElectronicsKnowledge: 0 # most basic signal source
+    SkillEngineering: 0 # most basic signal source
   useQuality: false
   # </Trauma>
 
@@ -116,7 +116,7 @@
   hide: true #TODO: Fix the lightswitch, issue #34659. Until then, keep hidden so people don't build it and get confused.
   # <Trauma>
   theory:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   useQuality: false
   # </Trauma>
 
@@ -135,7 +135,7 @@
     - !type:WallmountCondition
   # <Trauma>
   theory:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   useQuality: false
   # </Trauma>
 
@@ -154,6 +154,6 @@
     - !type:WallmountCondition
   # <Trauma>
   theory:
-    ElectronicsKnowledge: 0
+    SkillEngineering: 0
   useQuality: false
   # </Trauma>

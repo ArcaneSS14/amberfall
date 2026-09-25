@@ -11,7 +11,7 @@
   conditions:
   - !type:TileNotBlocked
   theory:
-    FabricationKnowledge: 0
-    FurnitureKnowledge: 0
+    SkillCrafting: 0
+    SkillCarpentry: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1

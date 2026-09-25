@@ -9,10 +9,10 @@
   targetNode: stack
   objectType: Item
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    MetalworkingKnowledge: 1
-    FabricationKnowledge: 1
+    SkillBlacksmithing: 1
+    SkillCrafting: 1
   useQuality: false
 
 - type: construction
@@ -22,8 +22,8 @@
   targetNode: stack
   objectType: Item
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    MetalworkingKnowledge: 1
-    FabricationKnowledge: 1
+    SkillBlacksmithing: 1
+    SkillCrafting: 1
   useQuality: false

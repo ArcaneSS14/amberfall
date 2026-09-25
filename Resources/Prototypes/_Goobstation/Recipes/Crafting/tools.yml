@@ -7,7 +7,7 @@
   targetNode: hammer
   objectType: Item
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    WeaponsKnowledge: 2
-    MetalworkingKnowledge: 1
+    SkillWeaponsmithing: 2
+    SkillBlacksmithing: 1

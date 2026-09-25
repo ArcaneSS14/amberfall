@@ -215,6 +215,9 @@ public abstract partial class SharedKnowledgeSystem : CommonKnowledgeSystem
         var name = Factory.GetComponentName<KnowledgeComponent>();
         foreach (var proto in ProtoMan.EnumeratePrototypes<EntityPrototype>())
         {
+            if (proto.Abstract)
+                continue;
+
             // TODO: replace with TryComp after engine update
             if (!proto.TryGetComponent<KnowledgeComponent>(name, out var comp))
                 continue;
@@ -639,6 +642,14 @@ public abstract partial class SharedKnowledgeSystem : CommonKnowledgeSystem
         var skills = new Dictionary<EntProtoId, int>();
         if (GetContainer(target) is not {} brain)
             return skills;
+
+        // A missing character skill is untrained, not unavailable. Special access
+        // knowledge still has to be explicitly granted to unlock its recipes.
+        foreach (var (id, comp) in AllKnowledges)
+        {
+            if (comp.CharacterSkill)
+                skills[id] = 0;
+        }
 
         foreach (var (id, unit) in brain.Comp.KnowledgeDict)
         {

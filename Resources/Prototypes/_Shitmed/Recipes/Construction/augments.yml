@@ -10,7 +10,7 @@
   category: construction-category-utilities
   canBuildInImpassable: false
   theory:
-    ElectronicsKnowledge: 2
+    SkillEngineering: 2
 
 - type: construction
   id: AugmentRechargerAPC
@@ -20,7 +20,7 @@
   category: construction-category-utilities
   canBuildInImpassable: false
   theory:
-    ElectronicsKnowledge: 2
+    SkillEngineering: 2
 
 - type: construction
   id: AugmentRechargerStation
@@ -30,7 +30,7 @@
   category: construction-category-utilities
   canBuildInImpassable: false
   theory:
-    ElectronicsKnowledge: 2
+    SkillEngineering: 2
 
 # Arm
 
@@ -42,7 +42,7 @@
   category: construction-category-utilities
   canBuildInImpassable: false
   theory:
-    ElectronicsKnowledge: 2
+    SkillEngineering: 2
 
 - type: construction
   id: AugmentBotanyPanel
@@ -52,7 +52,7 @@
   category: construction-category-utilities
   canBuildInImpassable: false
   theory:
-    ElectronicsKnowledge: 2
+    SkillEngineering: 2
 
 - type: construction
   id: AugmentSurgicalPanel
@@ -62,7 +62,7 @@
   category: construction-category-utilities
   canBuildInImpassable: false
   theory:
-    ElectronicsKnowledge: 2
+    SkillEngineering: 2
 
 - type: construction
   id: AugmentStrength
@@ -72,6 +72,6 @@
   category: construction-category-utilities
   canBuildInImpassable: false
   theory:
-    ElectronicsKnowledge: 2
+    SkillEngineering: 2
   practical:
-    ElectronicsKnowledge: 3
+    SkillEngineering: 3

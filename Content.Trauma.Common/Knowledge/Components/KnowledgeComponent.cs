@@ -99,6 +99,19 @@ public sealed partial class KnowledgeComponent : Component
     public int[]? Costs = null;
 
     /// <summary>
+    /// Whether this knowledge is a character skill rather than a language,
+    /// martial art, or internal access token.
+    /// </summary>
+    [DataField]
+    public bool CharacterSkill;
+
+    /// <summary>
+    /// Whether this skill can be selected in the character editor.
+    /// </summary>
+    [DataField]
+    public bool LobbySelectable;
+
+    /// <summary>
     /// Determines if the skill can be learned by doing or if it needs formal training.
     /// </summary>
     [DataField]

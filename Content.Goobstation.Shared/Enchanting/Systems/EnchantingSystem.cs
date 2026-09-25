@@ -31,7 +31,7 @@ public sealed partial class EnchantingSystem : EntitySystem
     private HashSet<Entity<EnchanterComponent>> _enchanters = new();
     private HashSet<Entity<EnchantedComponent>> _enchantedItems = new();
 
-    private static readonly EntProtoId MagicalLiteracy = "MagicalLiteracyKnowledge";
+    private static readonly EntProtoId ArcanaSkill = "SkillArcana";
 
     public override void Initialize()
     {
@@ -61,7 +61,7 @@ public sealed partial class EnchantingSystem : EntitySystem
             return;
 
         var mastery = 0;
-        if (_knowledge.GetKnowledge(args.Examiner, MagicalLiteracy) is { } skill)
+        if (_knowledge.GetKnowledge(args.Examiner, ArcanaSkill) is { } skill)
             mastery = _knowledge.GetMastery(skill.Comp);
 
         using (args.PushGroup(nameof(EnchantedComponent)))

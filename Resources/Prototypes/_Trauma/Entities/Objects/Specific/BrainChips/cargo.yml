@@ -7,11 +7,10 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      StrengthKnowledge: 25
-      ToughnessKnowledge: 25
-      MeleeKnowledge: 25
-      KnowledgeWeaponsMining: 60 # gotta keep the miners under control
-      FurnitureKnowledge: 10 # crates
+      SkillAthletics: 25
+      SkillUnarmed: 25
+      SkillMining: 60 # gotta keep the miners under control
+      SkillCarpentry: 10 # crates
       # TODO: piloting and probably mech
 
 - type: entity
@@ -21,9 +20,8 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      StrengthKnowledge: 25
-      ToughnessKnowledge: 25
-      FurnitureKnowledge: 10
+      SkillAthletics: 25
+      SkillCarpentry: 10
       # TODO: piloting
 
 - type: entity
@@ -33,11 +31,9 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      StrengthKnowledge: 25
-      ToughnessKnowledge: 25
-      KnowledgeWeaponsKnife: 25 # fuck the carp up
-      KnowledgeWeaponsMining: 50
-      AthleticsKnowledge: 25
+      SkillAthletics: 25
+      SkillKnives: 25 # fuck the carp up
+      SkillMining: 50
       # TODO: (low?) piloting
 
 - type: entity
@@ -48,4 +44,4 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      KnowledgeWeaponsMining: 50 # brings a salv up to 100
+      SkillMining: 50 # brings a salv up to 100

@@ -81,11 +81,6 @@
 # Books
 
 - type: latheRecipe
-  id: BookJanitor
-  parent: BaseBookRecipe
-  result: BookJanitor
-
-- type: latheRecipe
   id: BookFabrication
   parent: BaseBookRecipe
   result: BookFabrication

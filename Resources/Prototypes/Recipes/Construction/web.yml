@@ -12,9 +12,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    SpiderCraftKnowledge: 0
+    SpiderWebAccessKnowledge: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   useQuality: false
   # </Trauma>
 
@@ -32,9 +32,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    SpiderCraftKnowledge: 0
+    SpiderWebAccessKnowledge: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -51,9 +51,9 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    SpiderCraftKnowledge: 0
+    SpiderWebAccessKnowledge: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -67,9 +67,9 @@
   canBuildInImpassable: false
   # <Trauma>
   theory:
-    SpiderCraftKnowledge: 0
+    SpiderWebAccessKnowledge: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -84,9 +84,9 @@
   canBuildInImpassable: false
   # <Trauma>
   theory:
-    SpiderCraftKnowledge: 0
+    SpiderWebAccessKnowledge: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -102,7 +102,7 @@
     - !type:TileNotBlocked
   # <Trauma>
   theory:
-    SpiderCraftKnowledge: 0
+    SpiderWebAccessKnowledge: 0
   practical:
-    TailoringKnowledge: 2
+    SkillSewing: 2
   # </Trauma>

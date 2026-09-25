@@ -49,7 +49,9 @@ public partial record struct KnowledgeProfile
             if (!proto.HasIndex(id))
                 continue;
 
-            profile.Mastery[id] = change;
+            // Several old specializations now share one skill. Keep the highest purchased level.
+            if (!profile.Mastery.TryGetValue(id, out var existing) || change > existing)
+                profile.Mastery[id] = change;
         }
         return profile;
     }

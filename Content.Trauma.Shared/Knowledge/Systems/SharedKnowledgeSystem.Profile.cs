@@ -63,8 +63,12 @@ public abstract partial class SharedKnowledgeSystem
     {
         foreach (var (id, mastery) in profile.Mastery)
         {
-            if (SkillCost(id, mastery) is not { } cost || points < cost)
-                return; // were done here, outdated profile in DB
+            // Old profiles can still contain skills that are no longer selectable.
+            if (SkillCost(id, mastery) is not { } cost)
+                continue;
+
+            if (points < cost)
+                return;
 
             if (RaiseMastery(ent, id, mastery, popup: false) == null)
             {
@@ -81,7 +85,7 @@ public abstract partial class SharedKnowledgeSystem
         var total = 0;
         foreach (var (id, mastery) in profile.Mastery)
         {
-            total += SkillCost(id, mastery) ?? 0; // this should never have locked skills so ignore if it happens
+            total += SkillCost(id, mastery) ?? 0; // Hidden or outdated skills do not consume lobby points.
         }
         return total;
     }
@@ -91,7 +95,7 @@ public abstract partial class SharedKnowledgeSystem
     /// Returns null if the skill cannot be picked.
     /// </summary>
     public int[]? SkillCosts(EntProtoId id)
-        => AllKnowledges.TryGetValue(id, out var comp) && comp.Costs is { } costs
+        => AllKnowledges.TryGetValue(id, out var comp) && comp.CharacterSkill && comp.LobbySelectable && comp.Costs is { } costs
             ? costs
             : null;
 

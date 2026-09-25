@@ -1,0 +1,286 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Character skills. Their effects can be added independently of these definitions.
+- type: knowledgeCategory
+  id: CraftingSkills
+  name: knowledge-category-skills-crafting
+
+- type: knowledgeCategory
+  id: PracticalSkills
+  name: knowledge-category-skills-practical
+
+- type: knowledgeCategory
+  id: CombatSkills
+  name: knowledge-category-skills-combat
+
+- type: knowledgeCategory
+  id: MagicSkills
+  name: knowledge-category-skills-magic
+
+- type: knowledgeCategory
+  id: GatheringSkills
+  name: knowledge-category-skills-gathering
+
+- type: knowledgeCategory
+  id: AttributeSkills
+  name: knowledge-category-skills-attributes
+
+- type: entity
+  abstract: true
+  parent: BaseKnowledge
+  id: BaseSkill
+  components:
+  - type: Knowledge
+    characterSkill: true
+    lobbySelectable: false
+
+- type: entity
+  abstract: true
+  parent: BaseSkill
+  id: BaseCraftingSkill
+  components:
+  - type: Knowledge
+    category: CraftingSkills
+    color: "#0ba881"
+
+- type: entity
+  abstract: true
+  parent: BaseSkill
+  id: BasePracticalSkill
+  components:
+  - type: Knowledge
+    category: PracticalSkills
+    color: "#16e720"
+
+- type: entity
+  abstract: true
+  parent: BaseSkill
+  id: BaseCombatSkill
+  components:
+  - type: Knowledge
+    category: CombatSkills
+    color: "#f71818"
+
+- type: entity
+  abstract: true
+  parent: BaseSkill
+  id: BaseMagicSkill
+  components:
+  - type: Knowledge
+    category: MagicSkills
+    color: "#c01dcf"
+
+- type: entity
+  abstract: true
+  parent: BaseSkill
+  id: BaseGatheringSkill
+  components:
+  - type: Knowledge
+    category: GatheringSkills
+    color: "#f39b29"
+
+- type: entity
+  abstract: true
+  parent: BaseSkill
+  id: BaseAttributeSkill
+  components:
+  - type: Knowledge
+    category: AttributeSkills
+    color: "#d9b56f"
+    lobbySelectable: true
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillCrafting
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillWeaponsmithing
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillArmorsmithing
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillBlacksmithing
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillSmelting
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillCarpentry
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillMasonry
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillTrapmaking
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillEngineering
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillCooking
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillSewing
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillSkincrafting
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillPottery
+
+- type: entity
+  parent: BaseCraftingSkill
+  id: SkillAlchemy
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillAthletics
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillClimbing
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillLiteracy
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillSwimming
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillPickpocketing
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillSneaking
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillLockpicking
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillRiding
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillMusic
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillMedicine
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillTracking
+
+- type: entity
+  parent: BasePracticalSkill
+  id: SkillHunting
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillKnives
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillSwords
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillPolearms
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillMaces
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillAxes
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillWhipsAndFlails
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillArchery
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillCrossbows
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillWrestling
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillUnarmed
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillShields
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillSlings
+
+- type: entity
+  parent: BaseCombatSkill
+  id: SkillStaves
+
+- type: entity
+  parent: BaseMagicSkill
+  id: SkillArcyneArmament
+
+- type: entity
+  parent: BaseMagicSkill
+  id: SkillMiracles
+
+- type: entity
+  parent: BaseMagicSkill
+  id: SkillHemomancy
+
+- type: entity
+  parent: BaseMagicSkill
+  id: SkillArcana
+
+- type: entity
+  parent: BaseMagicSkill
+  id: SkillDruidism
+
+- type: entity
+  parent: BaseGatheringSkill
+  id: SkillFarming
+
+- type: entity
+  parent: BaseGatheringSkill
+  id: SkillMining
+
+- type: entity
+  parent: BaseGatheringSkill
+  id: SkillFishing
+
+- type: entity
+  parent: BaseGatheringSkill
+  id: SkillButchering
+
+- type: entity
+  parent: BaseGatheringSkill
+  id: SkillLumberjacking

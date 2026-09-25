@@ -24,11 +24,4 @@ public sealed partial class MeleeKnowledgeSystem : EntitySystem
         var level = _knowledge.GetLevel(ent.Owner);
         args.Multipliers *= ent.Comp.Curve.GetCurve(level);
     }
-
-    [SubscribeLocalEvent]
-    private void OnGetMeleeDamage(Entity<MeleeDamageKnowledgeComponent> ent, ref GetUserMeleeDamageEvent args)
-    {
-        var level = _knowledge.GetLevel(ent.Owner);
-        args.Damage *= ent.Comp.Curve.GetCurve(level);
-    }
 }
