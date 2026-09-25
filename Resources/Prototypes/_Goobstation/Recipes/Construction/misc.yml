@@ -7,6 +7,6 @@
   category: construction-category-misc
   objectType: Item
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    CarvingKnowledge: 2
+    SkillCarpentry: 2

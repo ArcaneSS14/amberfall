@@ -7,20 +7,13 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      MeleeKnowledge: 25
-      ShootingKnowledge: 25
+      SkillUnarmed: 25
       # NT basic training
       # batoong and laser focused, with some alt weapons, the rest is just to be better than tiders
-      KnowledgeWeaponsNonLethal: 40
-      KnowledgeWeaponsLaser: 40
-      KnowledgeWeaponsBludgeon: 30
-      KnowledgeWeaponsKnife: 30
-      KnowledgeWeaponsRifle: 25
-      KnowledgeWeaponsShotgun: 25
-      KnowledgeWeaponsSniper: 25
-      KnowledgeWeaponsSword: 20
-      KnowledgeWeaponsPolearm: 20
-      KnowledgeWeaponsHeavy: 20
+      SkillMaces: 40
+      SkillKnives: 30
+      SkillSwords: 20
+      SkillPolearms: 20
 
 - type: entity
   parent: BaseSkillChipSecurity
@@ -29,10 +22,8 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      MeleeKnowledge: 60
-      ShootingKnowledge: 60
-      KnowledgeWeaponsNonLethal: 60
-      KnowledgeWeaponsRifle: 40
+      SkillUnarmed: 60
+      SkillMaces: 60
 
 - type: entity
   parent: BaseSkillChipSecurity
@@ -41,9 +32,8 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      FirstAidKnowledge: 50
-      SurgeryKnowledge: 25
-      KnowledgeWeaponsNonLethal: 5 # actual self defence only chud
+      SkillMedicine: 50
+      SkillMaces: 5 # actual self defence only chud
 
 - type: entity
   parent: BaseSkillChipSecurity
@@ -52,8 +42,7 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      KnowledgeWeaponsPistol: 50 # Six shots. I've got six shots.
-      KnowledgeWeaponsNonLethal: 20 # discourage det actively arresting people
+      SkillMaces: 20 # discourage det actively arresting people
       # TODO: something for detecting
 
 - type: entity
@@ -63,9 +52,8 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      MeleeKnowledge: 20
-      ShootingKnowledge: 20
-      KnowledgeWeaponsNonLethal: 20 # anti raider tech
+      SkillUnarmed: 20
+      SkillMaces: 20 # anti raider tech
     # TODO: xp gain boost
 
 - type: entity
@@ -81,10 +69,6 @@
   # TODO: area DRM
   - type: KnowledgeGrantOnWear
     skills:
-      MeleeKnowledge: 50
-      ShootingKnowledge: 50
-      WeaponsKnowledge: 50
-      KnowledgeWeaponsShotgun: 50 # the shotgun doesn't miss
-      KnowledgeWeaponsHeavy: 30 # only sec member that should be decent with a rocket launcher
-      FirstAidKnowledge: 25 # Brigmedic isn't real
-      SurgeryKnowledge: 20
+      SkillUnarmed: 50
+      SkillWeaponsmithing: 50
+      SkillMedicine: 25 # Brigmedic isn't real

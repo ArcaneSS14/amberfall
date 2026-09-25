@@ -7,7 +7,7 @@
   targetNode: final
   objectType: Item
   theory:
-    FabricationKnowledge: 2
+    SkillCrafting: 2
   practical:
-    MetalworkingKnowledge: 1
-    ElectronicsKnowledge: 1
+    SkillBlacksmithing: 1
+    SkillEngineering: 1

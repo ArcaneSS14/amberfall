@@ -10,9 +10,9 @@
   canRotate: true
   canBuildInImpassable: true
   theory:
-    WallsKnowledge: 0
+    SkillMasonry: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
 
 - type: construction
   id: BarricadeSteel
@@ -24,11 +24,11 @@
   canRotate: true
   canBuildInImpassable: true
   theory:
-    FabricationKnowledge: 0
-    WallsKnowledge: 0
+    SkillCrafting: 0
+    SkillMasonry: 0
   practical:
-    WallsKnowledge: 1 # good cading is hard
-    MetalworkingKnowledge: 4
+    SkillMasonry: 1 # good cading is hard
+    SkillBlacksmithing: 4
 
 - type: construction
   id: BarricadeSteelFolding
@@ -40,11 +40,11 @@
   canRotate: true
   canBuildInImpassable: true
   theory:
-    FabricationKnowledge: 0
-    WallsKnowledge: 0
+    SkillCrafting: 0
+    SkillMasonry: 0
   practical:
-    WallsKnowledge: 2
-    MetalworkingKnowledge: 4
+    SkillMasonry: 2
+    SkillBlacksmithing: 4
 
 - type: construction
   id: BarricadePlasteel
@@ -56,11 +56,11 @@
   canRotate: true
   canBuildInImpassable: true
   theory:
-    FabricationKnowledge: 1
-    WallsKnowledge: 0
+    SkillCrafting: 1
+    SkillMasonry: 0
   practical:
-    WallsKnowledge: 2
-    MetalworkingKnowledge: 4
+    SkillMasonry: 2
+    SkillBlacksmithing: 4
 
 - type: construction
   id: BarricadePlasteelFolding
@@ -72,11 +72,11 @@
   canRotate: true
   canBuildInImpassable: true
   theory:
-    FabricationKnowledge: 1
-    WallsKnowledge: 0
+    SkillCrafting: 1
+    SkillMasonry: 0
   practical:
-    WallsKnowledge: 2
-    MetalworkingKnowledge: 4
+    SkillMasonry: 2
+    SkillBlacksmithing: 4
 
 # Airlocks
 
@@ -91,9 +91,9 @@
   conditions:
     - !type:TileNotBlocked
   theory:
-    AirlocksKnowledge: 1
+    SkillEngineering: 1
   practical:
-    MechanicsKnowledge: 2
+    SkillEngineering: 2
 
 - type: construction
   id: AirlockSealedGlass
@@ -106,6 +106,6 @@
   conditions:
     - !type:TileNotBlocked
   theory:
-    AirlocksKnowledge: 1
+    SkillEngineering: 1
   practical:
-    MechanicsKnowledge: 2
+    SkillEngineering: 2

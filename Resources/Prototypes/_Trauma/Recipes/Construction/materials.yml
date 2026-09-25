@@ -6,5 +6,5 @@
   category: construction-category-materials
   objectType: Item
   theory: # TODO should require tools to make
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   useQuality: false

@@ -12,7 +12,7 @@ public sealed partial class RevolutionaryKnowledgeSystem : EntitySystem
 {
     [Dependency] private SharedKnowledgeSystem _knowledge = default!;
 
-    public static readonly EntProtoId RevolutionaryKnowledge = "RevolutionaryKnowledge";
+    public static readonly EntProtoId RevolutionaryAccess = "RevolutionaryAccessKnowledge";
 
     public override void Initialize()
     {
@@ -28,12 +28,12 @@ public sealed partial class RevolutionaryKnowledgeSystem : EntitySystem
         if (_knowledge.GetContainer(ent) is not { } brain)
             return;
 
-        _knowledge.EnsureKnowledge(brain, RevolutionaryKnowledge, 100, popup: false); // no popup, it's obvious and clashes with other stuff probably
+        _knowledge.EnsureKnowledge(brain, RevolutionaryAccess, 100, popup: false); // no popup, it's obvious and clashes with other stuff probably
     }
 
     private void OnRevShutdown(Entity<RevolutionaryComponent> ent, ref ComponentShutdown args)
     {
         // covers both rev and headrev
-        _knowledge.RemoveKnowledge(ent.Owner, RevolutionaryKnowledge);
+        _knowledge.RemoveKnowledge(ent.Owner, RevolutionaryAccess);
     }
 }

@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: BaseAttributeSkill
+  id: SkillStrength
+
+- type: entity
+  parent: BaseAttributeSkill
+  id: SkillDexterity
+
+- type: entity
+  parent: BaseAttributeSkill
+  id: SkillConstitution
+
+- type: entity
+  parent: BaseAttributeSkill
+  id: SkillIntelligence
+
+- type: entity
+  parent: BaseAttributeSkill
+  id: SkillWisdom
+
+- type: entity
+  parent: BaseAttributeSkill
+  id: SkillCharisma

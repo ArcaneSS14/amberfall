@@ -32,7 +32,7 @@ public abstract partial class SharedMeleeWeaponSystem
     private EntityQuery<InteractionRelayComponent> _relayQuery;
 
     public static readonly ProtoId<TagPrototype> WideSwingIgnore = "WideSwingIgnore"; // for mice
-    public static readonly EntProtoId MeleeKnowledge = "MeleeKnowledge";
+    public static readonly EntProtoId UnarmedSkill = "SkillUnarmed";
 
     private float _shoveRange;
     private float _shoveSpeed;
@@ -80,7 +80,7 @@ public abstract partial class SharedMeleeWeaponSystem
     private void AdjustStaminaDamage(EntityUid user, ref float staminaDamage)
     {
         // TODO: use event for this bruh
-        if (_knowledge.GetKnowledge(user, MeleeKnowledge) is {} melee)
+        if (_knowledge.GetKnowledge(user, UnarmedSkill) is {} melee)
         {
             staminaDamage *= 1 - _knowledge.SharpCurve(melee);
         }

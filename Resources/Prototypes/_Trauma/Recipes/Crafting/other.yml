@@ -17,7 +17,7 @@
   targetNode: finish
   category: construction-category-structures
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   useQuality: false
 
 - type: construction
@@ -29,8 +29,7 @@
   targetNode: finish
   category: construction-category-structures
   theory:
-    ElectronicsKnowledge: 1
-    MechanicsKnowledge: 1
+    SkillEngineering: 1
   useQuality: false
 
 - type: construction
@@ -42,8 +41,7 @@
   targetNode: finish
   category: construction-category-structures
   theory:
-    ElectronicsKnowledge: 1
-    MechanicsKnowledge: 1
+    SkillEngineering: 1
   useQuality: false
 
 - type: construction
@@ -70,7 +68,7 @@
   category: construction-category-tools
   objectType: Item
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   useQuality: false
 
 - type: construction

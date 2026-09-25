@@ -25,7 +25,7 @@ public sealed partial class WeaponClassSystem : EntitySystem
 
     private void OnExamined(Entity<WeaponClassComponent> ent, ref ExaminedEvent args)
     {
-        if (!args.IsInDetailsRange || !ent.Comp.Examinable)
+        if (!args.IsInDetailsRange || !ent.Comp.Examinable || ProtoMan.Index(ent.Comp.Class).Knowledge == null)
             return;
 
         var name = ProtoMan.Index(ent.Comp.Class).Name;
@@ -35,6 +35,8 @@ public sealed partial class WeaponClassSystem : EntitySystem
     private void OnGetMeleeDamage(Entity<WeaponClassComponent> ent, ref GetMeleeDamageEvent args)
     {
         var proto = ProtoMan.Index(ent.Comp.Class);
+        if (proto.Knowledge == null)
+            return;
         var level = GetSkillLevel(proto, args.User);
         args.Damage *= proto.MeleeDamage.GetCurve(level);
     }
@@ -46,6 +48,8 @@ public sealed partial class WeaponClassSystem : EntitySystem
             return; // no actual user welp
 
         var proto = ProtoMan.Index(ent.Comp.Class);
+        if (proto.Knowledge == null)
+            return;
         var level = GetSkillLevel(proto, args.User);
         args.Modifier /= proto.AimSpeed.GetCurve(level);
     }
@@ -54,5 +58,5 @@ public sealed partial class WeaponClassSystem : EntitySystem
         => GetSkillLevel(ProtoMan.Index(ent.Comp.Class), user);
 
     public int GetSkillLevel(WeaponClassPrototype proto, EntityUid user)
-        => _knowledge.GetKnowledgeLevel(user, proto.Knowledge);
+        => proto.Knowledge is { } knowledge ? _knowledge.GetKnowledgeLevel(user, knowledge) : 0;
 }

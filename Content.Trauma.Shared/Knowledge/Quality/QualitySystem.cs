@@ -40,8 +40,8 @@ public sealed partial class QualitySystem : EntitySystem
     [Dependency] private SharedKnowledgeSystem _knowledge = default!;
     [Dependency] private EntityQuery<QualityComponent> _query = default!;
 
-    private static readonly EntProtoId FabricationKnowledge = "FabricationKnowledge";
-    private static readonly ProtoId<KnowledgeCategoryPrototype> CraftingCategory = "Crafting";
+    private static readonly EntProtoId CraftingSkill = "SkillCrafting";
+    private static readonly ProtoId<KnowledgeCategoryPrototype> CraftingCategory = "CraftingSkills";
 
     #region Quality effects
 
@@ -314,7 +314,7 @@ public sealed partial class QualitySystem : EntitySystem
         int lowestDelta = 0;
         int skillDelta = 0;
         EntProtoId? lowestId = null;
-        EntProtoId knowledgeToUse = FabricationKnowledge;
+        EntProtoId knowledgeToUse = CraftingSkill;
         bool setKnowledge = false;
         foreach (var (id, delta) in levelDeltas)
         {

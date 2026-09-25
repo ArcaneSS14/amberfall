@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Internal access tokens for existing recipes. These are not character skills.
+- type: entity
+  parent: BaseKnowledge
+  id: SpiderWebAccessKnowledge
+  name: Spider Webs
+  description: Allows spiders to make webs.
+  components:
+  - type: Knowledge
+    category: Recipes
+    costs: null
+    hidden: true
+
+- type: entity
+  parent: BaseKnowledge
+  id: RevolutionaryAccessKnowledge
+  name: Revolutionary Recipes
+  description: Allows revolutionaries to craft their equipment.
+  components:
+  - type: Knowledge
+    category: Recipes
+    costs: null
+    hidden: true

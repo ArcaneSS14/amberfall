@@ -7,13 +7,10 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      MeleeKnowledge: 10
-      ShootingKnowledge: 50
-      KnowledgeWeaponsSword: 50 # caps bread
-      KnowledgeWeaponsLaser: 50 # and butter
-      LiteracyKnowledge: 50 # your whole job is to delegate and lead :godo:
-      StrengthKnowledge: 20
-      ToughnessKnowledge: 10
+      SkillUnarmed: 10
+      SkillSwords: 50 # caps bread
+      SkillLiteracy: 50 # your whole job is to delegate and lead :godo:
+      SkillAthletics: 20
   # TODO: nuke disk serial parity, also add some funny thing when looking at FishNukeDisk
 
 - type: entity
@@ -23,5 +20,5 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      LiteracyKnowledge: 50
-      KnowledgeWeaponsSword: 10 # john caneblade
+      SkillLiteracy: 50
+      SkillSwords: 10 # john caneblade

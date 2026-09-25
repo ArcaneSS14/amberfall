@@ -7,10 +7,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
-    ToysKnowledge: 0 # billions must honk
+    SkillCrafting: 0
   practical:
-    ToysKnowledge: 1
+    SkillCrafting: 1
   # </Trauma>
 
 - type: construction
@@ -22,10 +21,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
-    ToysKnowledge: 0 # billions must ...
+    SkillCrafting: 0
   practical:
-    ToysKnowledge: 1
+    SkillCrafting: 1
   # </Trauma>
 
 - type: construction
@@ -37,10 +35,10 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    CarvingKnowledge: 2
-    ArmorKnowledge: 2
+    SkillCarpentry: 2
+    SkillArmorsmithing: 2
   # </Trauma>
 
 - type: construction
@@ -52,10 +50,10 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    CarvingKnowledge: 2
-    ArmorKnowledge: 2
+    SkillCarpentry: 2
+    SkillArmorsmithing: 2
   # </Trauma>
 
 - type: construction
@@ -69,8 +67,8 @@
   qualityPrototype: ShitCraft
   theory: {} # it's cardboard
   practical:
-    TailoringKnowledge: 0
-    ArmorKnowledge: 0
+    SkillSewing: 0
+    SkillArmorsmithing: 0
   # </Trauma>
 
 - type: construction
@@ -84,8 +82,8 @@
   qualityPrototype: ShitCraft
   theory: {} # it's cardboard
   practical:
-    TailoringKnowledge: 0
-    ArmorKnowledge: 0
+    SkillSewing: 0
+    SkillArmorsmithing: 0
   # </Trauma>
 
 - type: construction
@@ -97,9 +95,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    BananiumKnowledge: 0
+    SkillCrafting: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -111,9 +109,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    BananiumKnowledge: 0
+    SkillCrafting: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -125,9 +123,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    BananiumKnowledge: 0
+    SkillCrafting: 0
   practical:
-    TailoringKnowledge: 1
+    SkillSewing: 1
   # </Trauma>
 
 - type: construction
@@ -139,8 +137,8 @@
   objectType: Item
   # <Trauma>
   theory:
-    TailoringKnowledge: 0
-    ToysKnowledge: 0
+    SkillSewing: 0
+    SkillCrafting: 0
   # </Trauma>
 
 - type: construction
@@ -152,8 +150,8 @@
   objectType: Item
   # <Trauma>
   theory:
-    TailoringKnowledge: 0
-    ToysKnowledge: 0
+    SkillSewing: 0
+    SkillCrafting: 0
   # </Trauma>
 
 - type: construction
@@ -165,8 +163,8 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
-    ElectronicsKnowledge: 1
+    SkillCrafting: 0
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -178,10 +176,10 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 1 # medieval chuds figured it out come on
+    SkillCrafting: 1 # medieval chuds figured it out come on
   practical:
-    FabricationKnowledge: 2
-    TailoringKnowledge: 2
+    SkillCrafting: 2
+    SkillSewing: 2
   # </Trauma>
 
 - type: construction
@@ -193,8 +191,8 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    FabricationKnowledge: 1
-    ElectronicsKnowledge: 1
+    SkillCrafting: 1
+    SkillEngineering: 1
   # </Trauma>

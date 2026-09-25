@@ -81,11 +81,11 @@
     - state: melee
   - type: KnowledgeGrantOnUse
     skills:
-      MeleeKnowledge: 35
-      WeaponsKnowledge: 35
+      SkillUnarmed: 35
+      SkillWeaponsmithing: 35
     experience:
-      MeleeKnowledge: 15
-      WeaponsKnowledge: 15
+      SkillUnarmed: 15
+      SkillWeaponsmithing: 15
     doAfter: 2
 
 # Shooting
@@ -102,32 +102,9 @@
     - state: shooting
   - type: KnowledgeGrantOnUse
     skills:
-      ShootingKnowledge: 35
-      WeaponsKnowledge: 35
+      SkillWeaponsmithing: 35
     experience:
-      ShootingKnowledge: 5
-      WeaponsKnowledge: 4
-    doAfter: 2
-
-# Magic
-
-- type: entity
-  parent: BookSkillbook
-  id: BookJanitor
-  name: WHY I LOVE SOAP AND WHY YOU SHOULD TOO
-  suffix: janitor
-  description: Voxes supposedly love this one, its mostly useless rambling.
-  components:
-  - type: Sprite
-    layers:
-    - state: janitor
-  - type: KnowledgeGrantOnUse
-    skills:
-      ThrowingKnowledge: 25
-      JanitorKnowledge: 25
-    experience:
-      ThrowingKnowledge: 3
-      JanitorKnowledge: 3
+      SkillWeaponsmithing: 4
     doAfter: 2
 
 # Fabrication
@@ -144,9 +121,9 @@
     - state: fabrication
   - type: KnowledgeGrantOnUse
     skills:
-      FabricationKnowledge: 10
+      SkillCrafting: 10
     experience:
-      FabricationKnowledge: 3
+      SkillCrafting: 3
     doAfter: 2
 
 - type: entity
@@ -161,9 +138,9 @@
     - state: fabrication
   - type: KnowledgeGrantOnUse
     skills:
-      FabricationKnowledge: 25
+      SkillCrafting: 25
     experience:
-      FabricationKnowledge: 4
+      SkillCrafting: 4
     doAfter: 2
 
 # Carving
@@ -180,9 +157,9 @@
     - state: fabrication
   - type: KnowledgeGrantOnUse
     skills:
-      CarvingKnowledge: 10
+      SkillCarpentry: 10
     experience:
-      CarvingKnowledge: 3
+      SkillCarpentry: 3
     doAfter: 2
 
 - type: entity
@@ -197,9 +174,9 @@
     - state: fabrication
   - type: KnowledgeGrantOnUse
     skills:
-      CarvingKnowledge: 25
+      SkillCarpentry: 25
     experience:
-      CarvingKnowledge: 4
+      SkillCarpentry: 4
     doAfter: 2
 
 # Blueprints
@@ -212,9 +189,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      DoorsKnowledge: 25
+      SkillCarpentry: 25
     experience:
-      DoorsKnowledge: 5
+      SkillCarpentry: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -228,9 +205,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      AirlocksKnowledge: 25
+      SkillEngineering: 25
     experience:
-      AirlocksKnowledge: 5
+      SkillEngineering: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -244,9 +221,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      ToysKnowledge: 25
+      SkillCrafting: 25
     experience:
-      ToysKnowledge: 5
+      SkillCrafting: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -260,9 +237,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      BananiumKnowledge: 25
+      SkillCrafting: 25
     experience:
-      BananiumKnowledge: 5
+      SkillCrafting: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -276,9 +253,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      BotsKnowledge: 25
+      SkillEngineering: 25
     experience:
-      BotsKnowledge: 5
+      SkillEngineering: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -292,9 +269,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      FurnitureKnowledge: 25
+      SkillCarpentry: 25
     experience:
-      FurnitureKnowledge: 5
+      SkillCarpentry: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -308,9 +285,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      InfrastructureKnowledge: 25
+      SkillEngineering: 25
     experience:
-      InfrastructureKnowledge: 5
+      SkillEngineering: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -324,9 +301,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      ElectronicsKnowledge: 25
+      SkillEngineering: 25
     experience:
-      ElectronicsKnowledge: 5
+      SkillEngineering: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -340,9 +317,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      WallsKnowledge: 25
+      SkillMasonry: 25
     experience:
-      WallsKnowledge: 5
+      SkillMasonry: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -356,9 +333,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      WindowsKnowledge: 25
+      SkillCarpentry: 25
     experience:
-      WindowsKnowledge: 5
+      SkillCarpentry: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -372,9 +349,9 @@
   components:
   - type: KnowledgeGrantOnUse
     skills:
-      SmokeablesKnowledge: 25
+      SkillCrafting: 25
     experience:
-      SmokeablesKnowledge: 5
+      SkillCrafting: 5
     doAfter: 2
   - type: Sprite
     layers:
@@ -384,7 +361,6 @@
   id: RandomSkillbook
   table: !type:GroupSelector
     children:
-    - id: BookJanitor
     - id: BookFabrication
     - id: BookSurvival
     - id: BookDoors

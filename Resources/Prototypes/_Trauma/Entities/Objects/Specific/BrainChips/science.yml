@@ -7,9 +7,8 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      ElectronicsKnowledge: 25
-      FabricationKnowledge: 25
-      MechanicsKnowledge: 25
+      SkillEngineering: 25
+      SkillCrafting: 25
 
 - type: entity
   parent: BaseSkillChipScience
@@ -18,10 +17,8 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      ElectronicsKnowledge: 50
-      FabricationKnowledge: 50
-      MechanicsKnowledge: 50
-      BotsKnowledge: 50
+      SkillEngineering: 50
+      SkillCrafting: 50
       # TODO: mech skill
   # TODO: suplex immovable rods, parity
 
@@ -32,7 +29,7 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      FirstAidKnowledge: 25 # shooting up heroin with monkeys
+      SkillMedicine: 25 # shooting up heroin with monkeys
 
 - type: entity
   parent: BaseSkillChipScience
@@ -41,7 +38,7 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      BotsKnowledge: 20 # not as good as robo
+      SkillEngineering: 20 # not as good as robo
 
 - type: entity
   parent: BaseSkillChipScience
@@ -55,6 +52,5 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      ElectronicsKnowledge: 50
-      BotsKnowledge: 50
+      SkillEngineering: 50
       # TODO: goida mech skill

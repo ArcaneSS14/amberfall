@@ -7,9 +7,9 @@
   category: construction-category-weapons
   objectType: Item
   theory:
-    FabricationKnowledge: 1
+    SkillCrafting: 1
   practical:
-    WeaponsKnowledge: 2
+    SkillWeaponsmithing: 2
 
 - type: construction
   name: recipes-wooden-wand-name
@@ -19,6 +19,6 @@
   category: construction-category-weapons
   objectType: Item
   theory:
-    FabricationKnowledge: 0 # its a fucking stick
+    SkillCrafting: 0 # its a fucking stick
   practical:
-    CarvingKnowledge: 1
+    SkillCarpentry: 1

@@ -12,8 +12,8 @@
   - !type:WallmountCondition
   # <Trauma>
   theory:
-    ElectronicsKnowledge: 0
+    SkillEngineering: 0
   practical:
-    MetalworkingKnowledge: 1
+    SkillBlacksmithing: 1
   useQuality: false
   # </Trauma>

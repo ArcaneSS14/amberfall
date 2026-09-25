@@ -7,19 +7,12 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      KnowledgeWeaponsHeavy: 20 # CE is the heavy weapons guy for NT
-      KnowledgeWeaponsTool: 80 # nailgun in chief
       # TODO: O LORD KILL THIS SLOP
-      FabricationKnowledge: 50
-      DoorsKnowledge: 50
-      AirlocksKnowledge: 50
-      FurnitureKnowledge: 50
-      InfrastructureKnowledge: 50
-      ElectronicsKnowledge: 50
-      WallsKnowledge: 50
-      WindowsKnowledge: 50
-      SmokeablesKnowledge: 100 # lol
-      MetalworkingKnowledge: 50
+      SkillCrafting: 100
+      SkillCarpentry: 50
+      SkillEngineering: 50
+      SkillMasonry: 50
+      SkillBlacksmithing: 50
 
 - type: entity
   parent: BaseSkillChip
@@ -28,18 +21,12 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      KnowledgeWeaponsBludgeon: 20 # axe hit hard
-      KnowledgeWeaponsTool: 40
-      FabricationKnowledge: 25
-      DoorsKnowledge: 25
-      AirlocksKnowledge: 16
-      FurnitureKnowledge: 25
-      InfrastructureKnowledge: 50
-      ElectronicsKnowledge: 25
-      WallsKnowledge: 25
-      WindowsKnowledge: 25
-      SmokeablesKnowledge: 50
-      MetalworkingKnowledge: 25
+      SkillMaces: 20 # axe hit hard
+      SkillCrafting: 50
+      SkillCarpentry: 25
+      SkillEngineering: 50
+      SkillMasonry: 25
+      SkillBlacksmithing: 25
 
 - type: entity
   parent: BaseSkillChip
@@ -48,17 +35,11 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      KnowledgeWeaponsTool: 30
-      FabricationKnowledge: 25
-      DoorsKnowledge: 25
-      AirlocksKnowledge: 16
-      FurnitureKnowledge: 25
-      InfrastructureKnowledge: 25
-      ElectronicsKnowledge: 25
-      WallsKnowledge: 25
-      WindowsKnowledge: 25
-      SmokeablesKnowledge: 50
-      MetalworkingKnowledge: 25
+      SkillCrafting: 50
+      SkillCarpentry: 25
+      SkillEngineering: 25
+      SkillMasonry: 25
+      SkillBlacksmithing: 25
 
 - type: entity
   parent: BaseSkillChip
@@ -67,15 +48,9 @@
   components:
   - type: KnowledgeGrantOnWear
     skills:
-      KnowledgeWeaponsTool: 10
       # TODO: make this just 1 or 2 types
-      FabricationKnowledge: 10
-      DoorsKnowledge: 10
-      AirlocksKnowledge: 10
-      FurnitureKnowledge: 10
-      InfrastructureKnowledge: 10
-      ElectronicsKnowledge: 10
-      WallsKnowledge: 10
-      WindowsKnowledge: 10
-      SmokeablesKnowledge: 50
-      MetalworkingKnowledge: 10
+      SkillCrafting: 50
+      SkillCarpentry: 10
+      SkillEngineering: 10
+      SkillMasonry: 10
+      SkillBlacksmithing: 10

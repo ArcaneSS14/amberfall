@@ -44,8 +44,10 @@ public sealed partial class KnowledgeProfileEditor : BoxContainer
 
     public void SetProfile(ProtoId<SpeciesPrototype> species, KnowledgeProfile profile)
     {
-        _profile = profile;
-        _parent = _proto.Index(_proto.Index(species).Knowledge);
+        var parentId = _proto.Index(species).Knowledge;
+        _parent = _proto.Index(parentId);
+        _profile = new KnowledgeProfile(profile);
+        _knowledge.EnsureProfileValid(parentId, ref _profile);
         ReloadSkills();
         UpdateReset();
     }
@@ -61,7 +63,7 @@ public sealed partial class KnowledgeProfileEditor : BoxContainer
             var proto = _proto.Index(id);
             var name = proto.Name;
             var desc = proto.Description;
-            if (comp.Costs is not { } costs)
+            if (!comp.CharacterSkill || !comp.LobbySelectable || comp.Costs is not { } costs)
                 continue;
 
             var control = new SkillControl(name, costs);

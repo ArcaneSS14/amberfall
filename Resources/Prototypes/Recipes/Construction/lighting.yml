@@ -7,9 +7,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -21,9 +21,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -35,9 +35,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -49,9 +49,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -63,9 +63,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -77,9 +77,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -91,9 +91,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -105,9 +105,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -119,9 +119,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -133,9 +133,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -147,9 +147,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -161,9 +161,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -175,9 +175,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -189,9 +189,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -203,9 +203,9 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>
 
 - type: construction
@@ -217,7 +217,7 @@
   objectType: Item
   # <Trauma>
   theory:
-    FabricationKnowledge: 0
+    SkillCrafting: 0
   practical:
-    ElectronicsKnowledge: 1
+    SkillEngineering: 1
   # </Trauma>

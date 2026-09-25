@@ -145,39 +145,41 @@ public sealed partial class OrganChipSystem : EntitySystem
 
     private void OnGetVerbs(Entity<OrganChipContainerComponent> ent, ref GetVerbsEvent<InteractionVerb> args)
     {
-        if (!args.CanAccess || !args.CanInteract || !args.CanComplexInteract)
-            return;
+        // Amberfall removed
 
-        var name = OrganName(ent);
-        if (ent.Comp.Container.Count == 0)
-        {
-            args.Verbs.Add(new()
-            {
-                Text = $"No {name} chips installed!",
-                Category = ChipsCategory,
-                Disabled = true
-            });
-            return;
-        }
+        // if (!args.CanAccess || !args.CanInteract || !args.CanComplexInteract)
+        //     return;
 
-        var user = args.User;
-        // you remember which skill chip is installing in yourself, for others they are just numbered
-        var known = _body.GetBody(ent.Owner) == user;
+        // var name = OrganName(ent);
+        // if (ent.Comp.Container.Count == 0)
+        // {
+        //     args.Verbs.Add(new()
+        //     {
+        //         Text = $"No {name} chips installed!",
+        //         Category = ChipsCategory,
+        //         Disabled = true
+        //     });
+        //     return;
+        // }
 
-        var i = 0;
-        foreach (var chip in ent.Comp.Container.ContainedEntities)
-        {
-            i++;
-            var chipCopy = chip; // amazing language
-            var canRemove = true; // TODO: make it support self unremovable chips
-            args.Verbs.Add(new()
-            {
-                Text = known ? $"Remove {Name(chip)}" : $"Remove {name} chip {i++}",
-                Category = ChipsCategory,
-                Disabled = !canRemove,
-                Act = () => StartRemovingChip(ent, chipCopy, user)
-            });
-        }
+        // var user = args.User;
+        // // you remember which skill chip is installing in yourself, for others they are just numbered
+        // var known = _body.GetBody(ent.Owner) == user;
+
+        // var i = 0;
+        // foreach (var chip in ent.Comp.Container.ContainedEntities)
+        // {
+        //     i++;
+        //     var chipCopy = chip; // amazing language
+        //     var canRemove = true; // TODO: make it support self unremovable chips
+        //     args.Verbs.Add(new()
+        //     {
+        //         Text = known ? $"Remove {Name(chip)}" : $"Remove {name} chip {i++}",
+        //         Category = ChipsCategory,
+        //         Disabled = !canRemove,
+        //         Act = () => StartRemovingChip(ent, chipCopy, user)
+        //     });
+        // }
     }
 
     private void OnGetVerbs(Entity<OrganChipContainerComponent> ent, ref BodyRelayedEvent<GetVerbsEvent<InteractionVerb>> args)

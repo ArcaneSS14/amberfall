@@ -125,11 +125,14 @@ public sealed class KnowledgeSystem : SharedKnowledgeSystem
         if (knowledgeList is not { } || knowledgeList.Count == 0)
             return null;
 
-        return knowledgeList
+        var visible = knowledgeList
+            .Where(ent => !ent.Comp.Hidden)
             .Select(ent => GetKnowledgeInfo(ent))
             .OrderBy(data => data.Category)
             .ThenBy(data => data.Info.Name)
             .ToList();
+
+        return visible.Count > 0 ? visible : null;
     }
 
     public void OnUpdateExperienceEvent(Entity<KnowledgeHolderComponent> ent, ref UpdateExperienceEvent args)
